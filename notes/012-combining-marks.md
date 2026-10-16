@@ -16,7 +16,7 @@ s | same_as_precomposed | code_points | bytes | on_screen
 é | false | 2 | 3 | 1
 ```
 
-chr(769) is the accent mark. look at the s column, you cant tell the rows apart, but the database can. it compares code points one by one, never how the text looks. the second é is 2 code points, e (1 byte) plus the mark (2 bytes in [UTF-8](./010-utf-8.md)), and length_grapheme counts what you see, 1.
+chr(769) is the accent mark. look at the s column, you cant tell the rows apart, but the database can. by default it compares code points one by one, never how the text looks. the second é is 2 code points, e (1 byte) plus the mark (2 bytes in [UTF-8](./010-utf-8.md)), and length_grapheme counts what you see, 1.
 
 i kept assuming one thing on screen meant one number underneath. [011](./011-why-gujarati-takes-3-bytes.md) already hinted at it with the vowel sign ો, and ગુ is the same story, ગ plus the sign ુ, 2 code points and 6 bytes.
 

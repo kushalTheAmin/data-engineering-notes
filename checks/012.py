@@ -24,3 +24,5 @@ assert len(name + dec[1]) == 5 and len((name + dec[1]).encode()) == 6
 assert db.execute("SELECT length_grapheme(? || chr(769))", [name]).fetchone()[0] == 4
 # source: https://en.wikipedia.org/wiki/Combining_character
 # confirmed: precomposed and combining forms both exist, and comparing strings needs normalization first
+# source: https://duckdb.org/docs/current/sql/expressions/collations.html
+#   by default the BINARY collation is used, so strings are compared based only on their binary contents
