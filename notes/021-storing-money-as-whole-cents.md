@@ -34,7 +34,7 @@ print(sum([10] * 3))
 
 integers add exactly, so 10 + 10 + 10 is 30 every time and nothing gets rounded. you only turn cents back into a price when a human looks at it: 1200 // 100 is 12 (whole number divide) and 1200 % 100 is 0 (the remainder). i assumed money needed some special clever type, but the trick is just moving the point two places once. discounts and splits still need a rounding rule, see below. an exact decimal type is the other option.
 
-some payment APIs work this way: Stripe wants 1099 to charge 10.99 USD, and 10 to charge 10 JPY, since yen has no cents: https://docs.stripe.com/currencies#zero-decimal
+some payment APIs work this way: Stripe wants 1000 to charge 10 USD, and 10 to charge 10 JPY, since yen has no cents: https://docs.stripe.com/currencies#zero-decimal
 
 one gotcha: a 32 bit [integer](./015-integer-sizes.md), one with 4 bytes of room, tops out at 2147483647 cents, which is 21,474,836.47, and in DuckDB an INTEGER total past that errors out. a 64 bit BIGINT fixes it.
 

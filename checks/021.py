@@ -32,5 +32,5 @@ assert con.execute("SELECT sum((p.price * 100)::INTEGER * i.quantity) FROM order
 # source: https://duckdb.org/docs/current/sql/data_types/numeric.html
 #   confirmed: INTEGER range is -2^31 to 2^31 - 1, "Attempts to store values outside of the allowed range will result in an error"
 # source: https://docs.stripe.com/currencies#zero-decimal
-#   confirmed: API amounts are in the minor unit, 1099 charges 10.99 USD, 10 charges 10 JPY (zero-decimal)
+#   confirmed: API amounts are in the minor unit, 1000 charges 10 USD, 10 charges 10 JPY (zero-decimal)
 print("021 ok")
