@@ -4,5 +4,6 @@ every term these notes have built, in plain words, with the note that built it. 
 
 | term | plain meaning | built in |
 |---|---|---|
+| bit | one tiny switch inside a computer, written as 0 or 1 | [002](./notes/002-bits.md) |
 | data | facts written down so you can ask questions about them later | [001](./notes/001-data-is-facts-and-numbers.md) |
 | the shop | the imaginary gujarati snack store every example uses | [001](./notes/001-data-is-facts-and-numbers.md) |

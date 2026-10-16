@@ -34,4 +34,4 @@ a 97
 next up is the smallest thing those numbers are made of.
 
 ---
-prev: nothing, this is the start | next: not written yet
+prev: nothing, this is the start | next: [002 bits, everything is a tiny switch](./002-bits.md)
