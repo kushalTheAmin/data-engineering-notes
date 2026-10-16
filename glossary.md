@@ -6,6 +6,7 @@ every term these notes have built, in plain words, with the note that built it. 
 |---|---|---|
 | ASCII | the old table giving 128 characters a number, English only | [008](./notes/008-ascii-runs-out.md) |
 | binary | counting with only 0 and 1, each place worth double | [003](./notes/003-counting-in-binary.md) |
+| binary point | the dot in binary; places after it are halves, quarters, eighths | [017](./notes/017-fractions-in-binary.md) |
 | bit | one tiny switch inside a computer, written as 0 or 1 | [002](./notes/002-bits.md) |
 | byte | a group of 8 bits, holding 256 possible values | [004](./notes/004-bytes.md) |
 | byte in hex | a byte is always exactly two hex digits, 00 to ff | [006](./notes/006-one-byte-two-hex-digits.md) |

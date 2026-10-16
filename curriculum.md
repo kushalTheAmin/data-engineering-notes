@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 016 showed overflow: past 127 in 8 bits the pattern 01111111 plus 1 becomes 10000000, which reads -128, and DuckDB raises an error instead of wrapping silently. the next brick is fractions in binary, since integers cant hold 6.50
-last visuals: table (counter wrapping), python with output (integer size table), table of place values (negative top place) plus python with output, python with output (sign bit patterns), query and result (two é)
-last exits: stops, stops, forward, forward, stops, stops
-last reactions: i kept picturing an alarm going off, i assumed the sizes would be some careful choice, i expected more machinery than one place getting a minus in front of its price tag, i didnt expect negative numbers to cost a pattern, i kept assuming one thing on screen meant one number underneath, i honestly thought a byte carried 8 bits of the letter, what would you pick, i first guessed give every character 4 bytes, that second one tripped me up, i kept assuming a byte meant one letter everywhere
+baton: 017 showed binary fractions: right of the binary point the places are a half, a quarter, an eighth, so 7.50 is 111.1 and .50 .25 .75 are exact, but 0.10 has no pile of halves that reaches it. the next brick is why 0.1 has no exact binary form
+last visuals: table (binary place values with a point), table (counter wrapping), python with output (integer size table), table of place values (negative top place) plus python with output, python with output (sign bit patterns), query and result (two é)
+last exits: forward, stops, stops, forward, forward, stops, stops
+last reactions: i was surprised how little changed, i kept picturing an alarm going off, i assumed the sizes would be some careful choice, i expected more machinery than one place getting a minus in front of its price tag, i didnt expect negative numbers to cost a pattern, i kept assuming one thing on screen meant one number underneath, i honestly thought a byte carried 8 bits of the letter, what would you pick, i first guessed give every character 4 bytes, that second one tripped me up, i kept assuming a byte meant one letter everywhere
  
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -30,7 +30,7 @@ after this arc: you know what a computer actually stores when it "saves" an orde
 - [x] twos complement: how computers really store a minus (note 014)
 - [x] integer sizes: 8, 16, 32 and 64 bit numbers (note 015)
 - [x] overflow: what happens when a count goes past the top ★ (note 016)
-- [ ] fractions in binary: halves, quarters, eighths
+- [x] fractions in binary: halves, quarters, eighths (note 017)
 - [ ] why 0.1 has no exact binary form ★
 - [ ] floating point: digits plus where the point sits
 - [ ] why 0.1 + 0.2 is not exactly 0.3 ★
