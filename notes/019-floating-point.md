@@ -33,4 +33,4 @@ just past 2 to the 53 the digits cant tell neighbors apart, so +1 vanishes and w
 so 0.1 + 0.2 is next, and why it surprises everyone.
 
 ---
-prev: [018 why 0.1 has no exact binary form](./018-why-0-1-has-no-exact-binary-form.md) | next: not written yet
+prev: [018 why 0.1 has no exact binary form](./018-why-0-1-has-no-exact-binary-form.md) | next: [020 why 0.1 + 0.2 is not exactly 0.3](./020-why-0-1-plus-0-2-is-not-0-3.md)
