@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 014 showed twos complement: the leftmost place is worth -128 instead of +128, so 11111010 is -6, there is one zero, and 8 bits cover -128 to 127. the odd cost is that -128 has no positive twin, so Java Math.abs of the smallest int stays negative. the next brick is integer sizes, since the number of bits decides where that edge sits
-last visuals: table of place values (negative top place) plus python with output, python with output (sign bit patterns), query and result (two é), python with output (bit slots of ગ), range table with python and output
-last exits: forward, forward, stops, stops, stops, stops
-last reactions: i expected more machinery than one place getting a minus in front of its price tag, i didnt expect negative numbers to cost a pattern, i kept assuming one thing on screen meant one number underneath, i honestly thought a byte carried 8 bits of the letter, what would you pick, i first guessed give every character 4 bytes, that second one tripped me up, i kept assuming a byte meant one letter everywhere, i honestly assumed the 2 in a file was just a 2, this made 256 feel a lot less random, i kept reading a b c as letters, i assumed 8 was a law of nature, this clicked for me once i saw binary is the exact same idea, i honestly expected something richer at the bottom, heres the part i didnt expect
+baton: 015 showed integer sizes: 8, 16, 32 and 64 bits give ranges topping out at 127, 32767, 2147483647 and 9223372036854775807, the shops order_id is a 32 bit INTEGER, and a database column has a fixed size while python ints dont. the next brick is overflow, what a count does when it goes past the top
+last visuals: python with output (integer size table), table of place values (negative top place) plus python with output, python with output (sign bit patterns), query and result (two é), python with output (bit slots of ગ)
+last exits: stops, forward, forward, stops, stops, stops
+last reactions: i assumed the sizes would be some careful choice, i expected more machinery than one place getting a minus in front of its price tag, i didnt expect negative numbers to cost a pattern, i kept assuming one thing on screen meant one number underneath, i honestly thought a byte carried 8 bits of the letter, what would you pick, i first guessed give every character 4 bytes, that second one tripped me up, i kept assuming a byte meant one letter everywhere, i honestly assumed the 2 in a file was just a 2, this made 256 feel a lot less random, i kept reading a b c as letters, i assumed 8 was a law of nature, this clicked for me once i saw binary is the exact same idea, i honestly expected something richer at the bottom, heres the part i didnt expect
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -28,7 +28,7 @@ after this arc: you know what a computer actually stores when it "saves" an orde
 - [x] combining marks: when one letter on screen is two numbers ★ (note 012)
 - [x] negative numbers: the sign bit idea (note 013)
 - [x] twos complement: how computers really store a minus (note 014)
-- [ ] integer sizes: 8, 16, 32 and 64 bit numbers
+- [x] integer sizes: 8, 16, 32 and 64 bit numbers (note 015)
 - [ ] overflow: what happens when a count goes past the top ★
 - [ ] fractions in binary: halves, quarters, eighths
 - [ ] why 0.1 has no exact binary form ★

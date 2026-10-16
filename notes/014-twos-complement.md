@@ -35,4 +35,4 @@ thats -6 again. the cost is lopsided, 127 on the plus side but 128 on the minus 
 how many bits a number gets decides where that edge sits, and thats worth its own look.
 
 ---
-prev: [013 negative numbers, the sign bit idea](./013-negative-numbers-sign-bit.md) | next: not written yet
+prev: [013 negative numbers, the sign bit idea](./013-negative-numbers-sign-bit.md) | next: [015 integer sizes, 8, 16, 32 and 64 bit numbers](./015-integer-sizes.md)
