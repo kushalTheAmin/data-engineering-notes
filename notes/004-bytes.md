@@ -59,4 +59,4 @@ its 256. ids run 0 to 255, and zero counts as a value. the tempting answer is 25
 </details>
 
 ---
-prev: [003 counting in binary](./003-counting-in-binary.md) | next: not written yet
+prev: [003 counting in binary](./003-counting-in-binary.md) | next: [005 hexadecimal, counting with sixteen digits](./005-hexadecimal.md)

@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 004 named the byte, 8 bits with 256 values (0 to 255), showed "dhokla" as 6 bytes written in 8 switches each, and that one byte cant hold 300. the next brick is a shorter way to write a byte, hexadecimal, since 8 switches per letter is long to read
-last visuals: python with output (bytes of dhokla), worked table with python, python with output plus agreement block, before/after table with python
-last exits: stops, stops, forward, forward
-last reactions: i assumed 8 was a law of nature, this clicked for me once i saw binary is the exact same idea, i honestly expected something richer at the bottom, heres the part i didnt expect
+baton: 005 built hexadecimal: sixteen digits 0 to f, 4 bits per digit, left place worth 16 and right place worth 1, hex 64 is 100 (the d of dhokla), 0x marks hex. the next brick is a whole byte as exactly two hex digits, and why ff is 255
+last visuals: comparison table (0 to 15 in decimal, binary, hex) with python, python with output (bytes of dhokla), worked table with python, python with output plus agreement block, before/after table with python
+last exits: stops, stops, stops, forward, forward
+last reactions: i kept reading a b c as letters, i assumed 8 was a law of nature, this clicked for me once i saw binary is the exact same idea, i honestly expected something richer at the bottom, heres the part i didnt expect
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -18,7 +18,7 @@ after this arc: you know what a computer actually stores when it "saves" an orde
 - [x] bits: everything is a tiny switch, on or off (note 002)
 - [x] counting in binary (note 003)
 - [x] bytes: 8 bits, 256 possible values ★ (note 004)
-- [ ] hexadecimal: counting with sixteen digits
+- [x] hexadecimal: counting with sixteen digits (note 005)
 - [ ] one byte, two hex digits: why ff is 255 ★
 - [ ] text is numbers: one character, one number
 - [ ] ASCII runs out: 128 characters isnt enough for the world
