@@ -31,11 +31,11 @@ print(sorted(["10", "9", "2"]))
 ['10', '2', '9']
 ```
 
-so the 2 in that file is really the byte 32 in hex, which is the number 50. the space gets a number too, and A and a get different ones, which is why "Asha" and "asha" are not equal in python.
+`ord` gives a characters number, `repr` shows quotes. so the 2 in that file is really the byte 32 in hex, which is the number 50. the space gets one too, and A and a get different ones, which is why "Asha" and "asha" are not equal in python.
 
-the last two lines are the bite. adding "2" and "2" as text glues them into 22, and sorting "10", "9" and "2" as text puts 10 first, because it compares character by character from the left, and the character 1 is 49, before 2 at 50 and 9 at 57. numbers that were saved as text sort wrong all the time, one of the classic CSV surprises.
+the last two lines: adding "2" and "2" as text glues them into 22, and sorting "10", "9" and "2" as text puts 10 first, because it compares character by character from the left, and the character 1 is 49, before 2 at 50 and 9 at 57. numbers that were saved as text sort wrong, one of the classic CSV (rows in plain text) surprises.
 
-i honestly assumed the 2 in a file was just a 2. it isnt, you only see it that way because your screen turns the number back into a shape.
+i assumed the 2 in a file was just a 2. it isnt, you only see it that way because your screen turns the number back into a shape.
 
 ---
 prev: [006 one byte, two hex digits](./006-one-byte-two-hex-digits.md) | next: [008 ascii runs out, 128 spots isnt enough for the world](./008-ascii-runs-out.md)
