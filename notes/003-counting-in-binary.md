@@ -66,4 +66,4 @@ one of the 16 patterns, 0000, is spent on zero, so they cover 0 through 15. the 
 </details>
 
 ---
-prev: [002 bits, everything is a tiny switch](./002-bits.md) | next: not written yet
+prev: [002 bits, everything is a tiny switch](./002-bits.md) | next: [004 bytes, 8 bits and 256 possible values](./004-bytes.md)
