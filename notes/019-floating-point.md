@@ -13,9 +13,9 @@ a float is scientific notation in [binary](./003-counting-in-binary.md), countin
 | fafda | 4.50 | 100.1 | 1.001, right 2 places |
 | kaju katli | 12.00 | 1100 | 1.1, right 3 places |
 
-every number except 0 is written as 1.something, and the slide says how far right to move the point to get it back (negative goes left, for tiny numbers). 64 bits split into 1 for plus or minus, 11 for the slide, 52 for the digits. the 1 before the point is always 1, so it isnt stored (0 and the tiniest numbers are special cases).
+every number except 0 is written as 1.something, and the slide says how far right to move the point to get it back (negative goes left, for tiny numbers). 64 bits split into 1 for plus or minus, 11 for the slide, 52 for the digits. the 1 before the point is always 1, so it isnt stored, making 53 digits (0 and the tiniest numbers are special cases).
 
-i expected a big number to get more digits, but only the slide grows:
+i expected big numbers to get more digits, but only the slide grows:
 
 ```python
 big = 2.0 ** 53
@@ -28,7 +28,7 @@ print(big + 2)
 9007199254740994.0
 ```
 
-just past 2 to the 53 the digits cant tell neighbors apart, so +1 vanishes and whole numbers are 2 apart, then 4 apart. 52 stored digits plus the hidden 1 is the 53. javascript numbers are all floats like this, so ids above 9007199254740991 can get rounded, which is why some APIs send big ids as text: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+just past 2 to the 53 the digits cant tell neighbors apart, so +1 vanishes and whole numbers are 2 apart, then 4 apart. javascripts plain numbers (not BigInt) are floats like this, so ids above 9007199254740991 can get rounded, which is why some APIs send big ids as text: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
 
 so 0.1 + 0.2 is next, and why it surprises everyone.
 

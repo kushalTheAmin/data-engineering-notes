@@ -47,4 +47,6 @@ assert len(str(int(sys.float_info.max))) == 309 and sys.float_info.min == 2.2250
 # source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
 #   confirmed: "One way to transfer large numbers without loss of precision is to serialize them as strings"
 # the wikipedia page above also says: zero and subnormal numbers have no implicit leading 1, the largest normal number is about 1.7976931348623157 x 10^308
+# source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
+#   confirmed: "For larger integers, consider using BigInt", so only the ordinary Number type is a float
 print("019 ok")
