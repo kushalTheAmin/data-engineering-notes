@@ -22,7 +22,7 @@ print(0.1 + 0.2 == 0.3)
 False
 ```
 
-line 1 is the exact sum of the two stored values. line 3 is what typing 0.3 gets you, a neighbor cut slightly low. floats near 0.3 sit about 0.00000000000000005 apart (the 17th place after the point), and line 1 lands exactly halfway between line 3 and line 2. a tie goes to the neighbor whose last stored digit is 0, and thats line 2.
+line 1 is the exact sum of the two stored values. line 3 is what typing 0.3 gets you, a neighbor cut slightly low. floats near 0.3 sit about 0.00000000000000005 apart (the 17th place after the point), and line 1 lands exactly halfway between line 3 and line 2. a tie goes to the neighbor whose last stored binary digit is 0 (not the last digit printed above), and thats line 2.
 
 so 0.1 + 0.2 and 0.3 are two different floats, one slot apart, and == says False. i was surprised its an exact tie, not just a near miss.
 
