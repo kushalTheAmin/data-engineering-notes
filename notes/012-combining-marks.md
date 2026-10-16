@@ -46,4 +46,4 @@ the check says no match, so the same person gets a second account. equality comp
 </details>
 
 ---
-prev: [011 why a gujarati letter takes 3 bytes and g takes 1](./011-why-gujarati-takes-3-bytes.md) | next: not written yet
+prev: [011 why a gujarati letter takes 3 bytes and g takes 1](./011-why-gujarati-takes-3-bytes.md) | next: [013 negative numbers, the sign bit idea](./013-negative-numbers-sign-bit.md)

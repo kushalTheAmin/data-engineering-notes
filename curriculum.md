@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 012 showed a combining mark is a code point with no letter that attaches to the one before, so é can be 1 code point (233) or e plus the accent (2 code points), and equality compares code points so the two differ even though they look the same. length_grapheme counts what you see. the next brick is negative numbers and the sign bit
-last visuals: query and result (two é), python with output (bit slots of ગ), range table with python and output, python with output (code points of a, é, ગ, ઢ), python with output (ascii spots, gujarati dhokla)
-last exits: stops, stops, stops, stops, forward
-last reactions: i kept assuming one thing on screen meant one number underneath, i honestly thought a byte carried 8 bits of the letter, what would you pick, i first guessed give every character 4 bytes, that second one tripped me up, i kept assuming a byte meant one letter everywhere, i honestly assumed the 2 in a file was just a 2, this made 256 feel a lot less random, i kept reading a b c as letters, i assumed 8 was a law of nature, this clicked for me once i saw binary is the exact same idea, i honestly expected something richer at the bottom, heres the part i didnt expect
+baton: 013 showed the sign bit idea: top bit 0 means plus, 1 means minus, the other 7 bits hold the size, so 6 is 00000110 and -6 is 10000110. the cost is two zeros (negative zero) and a range of -127 to 127, 255 values. plain integers use a cleverer scheme that fixes this. the next brick is twos complement
+last visuals: python with output (sign bit patterns), query and result (two é), python with output (bit slots of ગ), range table with python and output, python with output (code points of a, é, ગ, ઢ)
+last exits: forward, stops, stops, stops, stops
+last reactions: i didnt expect negative numbers to cost a pattern, i kept assuming one thing on screen meant one number underneath, i honestly thought a byte carried 8 bits of the letter, what would you pick, i first guessed give every character 4 bytes, that second one tripped me up, i kept assuming a byte meant one letter everywhere, i honestly assumed the 2 in a file was just a 2, this made 256 feel a lot less random, i kept reading a b c as letters, i assumed 8 was a law of nature, this clicked for me once i saw binary is the exact same idea, i honestly expected something richer at the bottom, heres the part i didnt expect
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -26,7 +26,7 @@ after this arc: you know what a computer actually stores when it "saves" an orde
 - [x] utf-8: storing those numbers in 1 to 4 bytes ★ (note 010)
 - [x] why a gujarati letter takes 3 bytes and "g" takes 1 ★ (note 011)
 - [x] combining marks: when one letter on screen is two numbers ★ (note 012)
-- [ ] negative numbers: the sign bit idea
+- [x] negative numbers: the sign bit idea (note 013)
 - [ ] twos complement: how computers really store a minus
 - [ ] integer sizes: 8, 16, 32 and 64 bit numbers
 - [ ] overflow: what happens when a count goes past the top ★
