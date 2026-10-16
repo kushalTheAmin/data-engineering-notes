@@ -20,6 +20,17 @@ assert 750 * 15 / 100 == 112.5 and 750 * 15 // 100 == 112
 # quiz 2: order 105
 assert 2 * 1200 + 2 * 500 + 1 * 300 == 3700 and 3700 // 100 == 37 and 3700 % 100 == 0
 assert 1200 + 500 + 300 == 2000  # the tempting wrong answer: prices added, quantities forgotten (no other natural total gives 3000)
+# a 32 bit INTEGER past the top errors in DuckDB when stored or added (sum() widens to HUGEINT, so an INTEGER total means a stored or added INTEGER)
+for q in ("SELECT 2147483647::INTEGER + 1::INTEGER", "SELECT 2147483648::INTEGER"):
+    try:
+        con.execute(q); raise SystemExit("should have errored")
+    except Exception as e:
+        assert "Overflow" in str(e) or "out of range" in str(e)
+assert con.execute("SELECT 2147483647::BIGINT + 1::BIGINT").fetchone()[0] == 2147483648
+# quiz 2 from the shop data itself
+assert con.execute("SELECT sum((p.price * 100)::INTEGER * i.quantity) FROM order_items i JOIN products p USING (product_id) WHERE i.order_id = 105").fetchone()[0] == 3700
+# source: https://duckdb.org/docs/current/sql/data_types/numeric.html
+#   confirmed: INTEGER range is -2^31 to 2^31 - 1, "Attempts to store values outside of the allowed range will result in an error"
 # source: https://docs.stripe.com/currencies#zero-decimal
 #   confirmed: API amounts are in the minor unit, 1099 charges 10.99 USD, 10 charges 10 JPY (zero-decimal)
 print("021 ok")
