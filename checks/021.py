@@ -19,7 +19,7 @@ assert f"{(2 ** 31 - 1) // 100:,}.{(2 ** 31 - 1) % 100:02d}" == "21,474,836.47"
 assert 750 * 15 / 100 == 112.5 and 750 * 15 // 100 == 112
 # quiz 2: order 105
 assert 2 * 1200 + 2 * 500 + 1 * 300 == 3700 and 3700 // 100 == 37 and 3700 % 100 == 0
-assert 1200 + 500 + 300 == 2000
+assert 1200 + 500 + 300 == 2000  # the tempting wrong answer: prices added, quantities forgotten (no other natural total gives 3000)
 # source: https://docs.stripe.com/currencies#zero-decimal
 #   confirmed: API amounts are in the minor unit, 1099 charges 10.99 USD, 10 charges 10 JPY (zero-decimal)
 print("021 ok")

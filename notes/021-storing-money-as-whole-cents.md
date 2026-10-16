@@ -50,7 +50,7 @@ the exact answer is 112.5 cents, and an integer cant hold half a cent. // just c
 2. order 105 in the shop has 2 kaju katli at 1200 cents, 2 jalebi at 500 and 1 masala chai at 300. whats the total in cents, and how do you show it as a price?
 <details><summary>answer</summary>
 
-2 * 1200 + 2 * 500 + 1 * 300 = 3700 cents. show it with 3700 // 100 for 37 and 3700 % 100 for 00, so 37.00. the tempting answer is 3000 or 2000, from adding the three prices and forgetting quantity. cents fix the rounding, not the multiplying.
+2 * 1200 + 2 * 500 + 1 * 300 = 3700 cents. show it with 3700 // 100 for 37 and 3700 % 100 for 00, so 37.00. the tempting answer is 2000, from adding the three prices and forgetting quantity. cents fix the rounding, not the multiplying.
 
 </details>
 
