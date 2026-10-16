@@ -31,7 +31,7 @@ print(sorted(["10", "9", "2"]))
 ['10', '2', '9']
 ```
 
-`ord` gives a characters number, `repr` shows quotes. so the 2 in that file is really the byte 32 in hex, which is the number 50. the space gets one too, and A and a get different ones, which is why "Asha" and "asha" are not equal in python.
+`ord` gives a characters number, `repr` shows quotes. so the 2 in a typical text file is really the byte 32 in hex, which is the number 50. the space gets one too, and A and a differ, which is why "Asha" and "asha" are not equal in python.
 
 the last two lines: adding "2" and "2" as text glues them into 22, and sorting "10", "9" and "2" as text puts 10 first, because it compares character by character from the left, and the character 1 is 49, before 2 at 50 and 9 at 57. numbers that were saved as text sort wrong, one of the classic CSV (rows in plain text) surprises.
 
