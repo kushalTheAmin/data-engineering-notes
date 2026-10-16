@@ -15,6 +15,7 @@ assert "%x%x" % (1, 2) == "12" == "%x" % 0x12
 # jalebi j is 6a, khandvi k is 6b
 assert int("6a", 16) == 106 == ord("j") and int("6b", 16) == 107 == ord("k")
 assert 6 * 16 == 96 and 96 + 10 == 106 and 96 + 11 == 107
+assert (ord("a"), ord("o"), ord("p")) == (97, 111, 112) and (hex(97), hex(111), hex(112)) == ("0x61", "0x6f", "0x70")
 # #00ff00
 assert [int(h, 16) for h in ("00", "ff", "00")] == [0, 255, 0]
 # 1f2 can split two ways

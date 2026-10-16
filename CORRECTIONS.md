@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+- 006, 2026-10-16: said all six letters start with 6 because of where letters sit, which is only true for a to o (97 to 111); p to z start with 7. also said every hex dump shows two characters per byte, but od -x groups bytes in pairs, so it now says typical. evidence: python, ord("p") == 112 == 0x70; od -x of dhokla prints 6864 6b6f 616c
 - 005, 2026-10-16: the checks file compared the binary column of the table with itself, so it proved nothing. it now compares against the written out patterns, the note text is unchanged. evidence: python, checks/005.py
 - 004, 2026-10-16: said colors on screen stop at 255. deep color displays use 10 or more bits per channel, so it now says usually. evidence: https://en.wikipedia.org/wiki/Color_depth
 - 001, 2026-10-15: said phones, macs and most web servers all count time from the start of 1970. the iphone API defaults to 2001, so it now says linux, macs and javascript. evidence: https://en.wikipedia.org/wiki/Unix_time

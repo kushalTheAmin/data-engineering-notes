@@ -2,9 +2,9 @@
 builds on: [001 data is facts written down](./001-data-is-facts-and-numbers.md), [003 counting in binary](./003-counting-in-binary.md), [004 bytes, 8 bits and 256 possible values](./004-bytes.md), [005 hexadecimal, counting with sixteen digits](./005-hexadecimal.md)
 section: data at the atom level, part 6, ~2 min read
 
-why is ff the same as 255, and why does every byte in a hex dump (a raw listing of a file) show as two characters?
+why is ff the same as 255, and why does each byte in a typical hex dump (a raw listing of a file) show as two characters?
 
-because a [byte](./004-bytes.md), a group of 8 on/off switches called bits, is two [hex](./005-hexadecimal.md) digits, always. hex counts 0 to 9 then a to f (ten to fifteen), 16 digits, and 16 is 2 times 2 times 2 times 2, so one digit covers exactly 4 bits. cut the byte in half, one digit each.
+because a [byte](./004-bytes.md), a group of 8 on/off switches called bits, is two [hex](./005-hexadecimal.md) digits, always. hex has 16 digits, 0 to 9 then a to f, and 16 is 2 times 2 times 2 times 2, so one digit covers exactly 4 bits. cut the byte in half, one digit each.
 
 here are the 6 bytes of "dhokla", a steamed savory cake from the shop, the imaginary snack store these notes use:
 
@@ -17,9 +17,9 @@ here are the 6 bytes of "dhokla", a steamed savory cake from the shop, the imagi
 | l | 01101100 | 0110 = 6 | 1100 = c | 6c |
 | a | 01100001 | 0110 = 6 | 0001 = 1 | 61 |
 
-every row is the same move: split in the middle, read each half as 0 to 15, write one hex digit. all six start with 6 because of where letters sit in the number code from [001](./001-data-is-facts-and-numbers.md).
+every row: split in the middle, read each half as 0 to 15, write one hex digit. all six start with 6 because a to o sit at 97 to 111 in the code from [001](./001-data-is-facts-and-numbers.md), hex 61 to 6f. p to z start with 7.
 
-now ff. 1111 1111 is f twice, and f is 15. the left digit sits in the 16s place, same [place value](./003-counting-in-binary.md) idea, a digit is worth what its spot says, so:
+now ff. 1111 1111 is f twice, and f is 15. the left digit sits in the 16s place, same [place value](./003-counting-in-binary.md) idea, so:
 
 ```python
 print(15 * 16 + 15)
