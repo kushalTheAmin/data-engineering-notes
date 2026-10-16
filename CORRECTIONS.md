@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+010, 2026-10-16: the quiz said strlen counts bytes in DuckDB without saying what DuckDB is, so a reader landing on this note alone could not place it; it now says the database these notes use. evidence: the text of 001 to 009, none of which introduces DuckDB
 - 012, 2026-10-16: said the database compares code points one by one as if always, but that is DuckDBs default (the BINARY collation); other collations can compare differently, so it now says by default. evidence: https://duckdb.org/docs/current/sql/expressions/collations.html
 - 011, 2026-10-16: the checks file cited no source for the utf-8 label bits (110 and 1110 start bytes, 10 continuation bytes) or for duckdb strlen, length and length_grapheme, and had no closing print. note text is unchanged, the checks now cite the pages. evidence: https://en.wikipedia.org/wiki/UTF-8, https://duckdb.org/docs/current/sql/functions/text.html
 - 007, 2026-10-16: said the 2 in that file is the byte 32 in hex, which holds for utf-8 and ascii files but not utf-16; it now says a typical text file. evidence: python, "2".encode("utf-16-le") is b'2\\x00', two bytes
