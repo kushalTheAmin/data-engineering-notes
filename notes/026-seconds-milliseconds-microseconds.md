@@ -60,4 +60,4 @@ seconds read as milliseconds. a 10 digit count is about 1.8 billion, and as mill
 </details>
 
 ---
-prev: [025 unix time, counting seconds from 1970](./025-unix-time.md) | next: not written yet
+prev: [025 unix time, counting seconds from 1970](./025-unix-time.md) | next: [027 dates without times, and times without dates](./027-dates-and-times-apart.md)

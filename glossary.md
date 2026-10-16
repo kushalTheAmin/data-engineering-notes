@@ -17,6 +17,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | combining mark | a code point with no letter, drawn on the letter before it | [012](./notes/012-combining-marks.md) |
 | continuation byte | a UTF-8 byte starting 10, continuing the previous characters bytes | [011](./notes/011-why-gujarati-takes-3-bytes.md) |
 | data | facts written down so you can ask questions about them later | [001](./notes/001-data-is-facts-and-numbers.md) |
+| date | a calendar day with no time of day | [027](./notes/027-dates-and-times-apart.md) |
 | daylight saving | clocks shifting an hour twice a year in many places | [024](./notes/024-utc.md) |
 | epoch | the starting line, 1 January 1970 UTC, that unix time counts from | [025](./notes/025-unix-time.md) |
 | exact decimal | a type keeping decimal digits exactly, like DECIMAL(6, 2) | [022](./notes/022-exact-decimal-types.md) |
@@ -35,6 +36,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | scale | how many of a decimals digits sit after the point | [022](./notes/022-exact-decimal-types.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
 | the shop | the imaginary gujarati snack store every example uses | [001](./notes/001-data-is-facts-and-numbers.md) |
+| time of day | a clock reading with no day attached | [027](./notes/027-dates-and-times-apart.md) |
 | twos complement | binary where the leftmost place is negative, so one zero | [014](./notes/014-twos-complement.md) |
 | Unicode | one agreed table giving every character in every script a number | [009](./notes/009-unicode.md) |
 | unix time | a moment kept as seconds counted since the epoch | [025](./notes/025-unix-time.md) |
