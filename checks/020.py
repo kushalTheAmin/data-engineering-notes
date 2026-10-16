@@ -37,4 +37,6 @@ assert con.execute("SELECT count(*) FROM products").fetchone()[0] == 6
 #   confirmed: math.isclose default rel_tol is 1e-09, "same within about 9 decimal digits"
 # source: https://docs.python.org/3/tutorial/floatingpoint.html
 #   confirmed: summing 0.1 values may not give exactly 0.3, math.isclose is useful for comparing inexact values
+# source: https://en.wikipedia.org/wiki/IEEE_754
+#   confirmed: "round to nearest, ties to even" is the default for binary floating point; an exact tie goes to the neighbor whose last digit is even (0 in binary)
 print("020 ok")
