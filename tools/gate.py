@@ -27,8 +27,8 @@ GREEK = re.compile("[\u0370-\u03ff\u1f00-\u1fff]")
 MATH = re.compile("[\u2211\u220f\u222b\u221a\u221e\u2248\u2202\u2206\u2207]")
 ATTRIBUTION = re.compile(r"claude|anthropic|co-authored-by|\U0001F916", re.I)
 COMMIT_ATTRIBUTION = re.compile(r"claude|anthropic|co-authored-by|generated with|\U0001F916", re.I)
-COMMIT_SUBJECT = re.compile(r"^(note \d{3}: \S.*|curriculum: (split|add) \S.*|log: \S.*)$")
-ALLOWED_CHANGES = re.compile(r"^(notes/\d{3}-[a-z0-9-]+\.md|curriculum\.md|README\.md|glossary\.md|data/shop\.sql)$")
+COMMIT_SUBJECT = re.compile(r"^(note \d{3}: \S.*|curriculum: (split|add) \S.*|log: \S.*|audit \d{3}: \S.*)$")
+ALLOWED_CHANGES = re.compile(r"^(notes/\d{3}-[a-z0-9-]+\.md|checks/\d{3}\.py|curriculum\.md|README\.md|glossary\.md|data/shop\.sql)$")
 
 fails = []
 infos = []
@@ -284,6 +284,35 @@ def check_mermaid(where, body):
             fail(where, "mermaid renderer unavailable, so no mermaid today: pick another visual type")
 
 
+# ---------- verification files ----------
+
+URL = re.compile(r"^https?://\S+\.\S+$")
+
+
+def check_verification(where, n):
+    """checks/NNN.py must exist, assert the notes facts, cite sources as urls, and pass."""
+    path = os.path.join(ROOT, "checks", f"{n:03d}.py")
+    if not os.path.exists(path):
+        fail(where, f"missing checks/{n:03d}.py: every number and fact in the note needs its verification file")
+        return
+    with open(path, encoding="utf-8") as f:
+        src = f.read()
+    if "assert" not in src:
+        fail(f"checks/{n:03d}.py", "has no assert: every number and computable fact in the note gets one")
+    for line in src.split("\n"):
+        m = re.match(r"^\s*#\s*source:\s*(.*)$", line)
+        if m and not URL.match(m.group(1).strip()):
+            fail(f"checks/{n:03d}.py", f"source must be a url that was opened: {line.strip()[:60]}")
+    try:
+        r = subprocess.run([sys.executable, "-I", path], cwd=ROOT, capture_output=True, text=True, timeout=120)
+    except subprocess.TimeoutExpired:
+        fail(f"checks/{n:03d}.py", "ran longer than 120 seconds")
+        return
+    if r.returncode != 0:
+        last = (r.stderr.strip().splitlines() or ["error"])[-1]
+        fail(f"checks/{n:03d}.py", f"a check failed: {last[:120]}")
+
+
 # ---------- per note ----------
 
 def check_note(path, all_names, full, quiz_required, practice=False):
@@ -419,6 +448,7 @@ def check_note(path, all_names, full, quiz_required, practice=False):
             fail(where, "every code block needs a language tag (sql, result, python, output, mermaid, text, csv, json, bash)")
 
     check_quiz(where, lines, quiz_required, practice)
+    check_verification(where, n)
 
     if not full:
         return
@@ -497,7 +527,7 @@ def main():
         changed = {p for p in (diff + untracked + committed).split("\n") if p.strip()}
         for p in sorted(changed):
             if not ALLOWED_CHANGES.match(p):
-                fail(p, "this run may only change notes, curriculum.md, README.md, glossary.md and data/shop.sql")
+                fail(p, "this run may only change notes, checks, curriculum.md, README.md, glossary.md and data/shop.sql")
         full_notes = {os.path.basename(p) for p in changed if p.startswith("notes/")}
     else:
         infos.append("INFO no origin/main: full checks run on the newest note only, git checks skipped")
@@ -571,8 +601,11 @@ def main():
         _, d = git("diff", "origin/main", "--", "data/shop.sql")
         if any(l.startswith("-") and not l.startswith("---") for l in d.split("\n")):
             fail("data/shop.sql", "existing lines were changed or removed: append only")
-        # old notes: only the footer line may change
-        for p in sorted(changed):
+        # old notes: only the footer line may change, unless every commit in this run is an audit fix
+        _, subjects = git("log", "origin/main..HEAD", "--format=%s")
+        subjects = [x for x in subjects.split("\n") if x.strip()]
+        audit_run = bool(subjects) and all(x.startswith("audit ") for x in subjects)
+        for p in ([] if audit_run else sorted(changed)):
             if not p.startswith("notes/") or git("cat-file", "-e", f"origin/main:{p}")[0] != 0:
                 continue
             _, d = git("diff", "origin/main", "--", p)

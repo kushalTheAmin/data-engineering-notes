@@ -15,7 +15,7 @@ data is facts somebody wrote down so they can ask questions about them later. ev
 
 one order is four answers glued together, and every one of them ended up as numbers. heres the part i didnt expect: a computer cant hold "Asha" or "april" at all. it keeps numbers and nothing else.
 
-so each piece goes through a shared rule. names become one number per letter. the 2 was already a number. the time becomes a count of seconds since the very start of 1970 in UTC, the worlds reference clock, which is the starting line phones, macs and most web servers agree on. you can watch the letter rule happen:
+so each piece goes through a shared rule. names become one number per letter. the 2 was already a number. the time becomes a count of seconds since the very start of 1970 in UTC, the worlds reference clock, the starting line linux, macs and javascript all count from. you can watch the letter rule happen:
 
 ```python
 for letter in "Asha":
