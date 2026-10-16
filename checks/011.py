@@ -34,3 +34,8 @@ import duckdb
 assert duckdb.sql("SELECT length_grapheme('ઢોકળા')").fetchone()[0] == 3
 # 2 byte label 110 leaves 5 + 6 = 11 free bits
 assert 5 + 6 == 11 and "é".encode()[0] >> 5 == 0b110
+# source: https://en.wikipedia.org/wiki/UTF-8
+#   two byte form is 110xxxxx 10xxxxxx, three byte form is 1110xxxx 10xxxxxx 10xxxxxx; the start of a code point can be found by backing up at most three bytes
+# source: https://duckdb.org/docs/current/sql/functions/text.html
+#   strlen(string): number of bytes; length(string): number of characters; length_grapheme(string): number of grapheme clusters
+print("011 ok")
