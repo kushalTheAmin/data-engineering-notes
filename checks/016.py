@@ -32,4 +32,6 @@ assert 2 ** 31 - 1 == 2147483647
 #   Dec 1 2014, YouTube said views passed 2,147,483,647 (32-bit signed max) and moved to 64-bit integers
 # source: https://www.postgresql.org/docs/current/datatype-numeric.html
 #   storing values outside smallint, integer, bigint ranges results in an error
+# source: https://duckdb.org/docs/current/sql/data_types/numeric.html
+#   TINYINT is 1 byte, -2^7 to 2^7 - 1; values outside the allowed range result in an error
 print("016 ok")
