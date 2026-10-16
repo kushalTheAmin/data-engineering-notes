@@ -56,4 +56,4 @@ fafda | 4.50
 </details>
 
 ---
-prev: [019 floating point, digits plus where the point sits](./019-floating-point.md) | next: not written yet
+prev: [019 floating point, digits plus where the point sits](./019-floating-point.md) | next: [021 storing money as whole cents](./021-storing-money-as-whole-cents.md)
