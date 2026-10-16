@@ -20,4 +20,9 @@ assert 256 ** 2 == 65536 and 65536 ** 2 == 4294967296  # doubling bits squares t
 #   smallint 2 bytes, integer 4 bytes, bigint 8 bytes, with the ranges above; out of range raises an error
 # source: https://docs.python.org/3/reference/datamodel.html
 #   python int is an unlimited range, subject to available memory
+# source: https://duckdb.org/docs/current/sql/data_types/numeric.html
+#   INTEGER is 4 bytes, from -2^31 to 2^31 - 1; BIGINT is 8 bytes, from -2^63 to 2^63 - 1; values outside the range raise an error
+# source: https://duckdb.org/docs/current/internals/storage.html
+#   DuckDB uses lightweight compression, by default only for persistent databases
+# the postgres page above lists bigint storage size as 8 bytes
 print("015 ok")
