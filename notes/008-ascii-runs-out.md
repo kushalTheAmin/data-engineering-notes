@@ -31,7 +31,7 @@ even é, one accent away from english, has no spot. the gujarati word is 5 chara
 
 the obvious fix is to use the other 128 values in the byte, and countries did exactly that, each with its own table. so one byte, 233, shows as é in one table and й in another. i kept assuming a byte meant one letter everywhere, it doesnt.
 
-thats why old files and emails turn into garbage when opened with the wrong table, and why you still see broken text in a CSV someone exported from an old system. you need one table for everyone, which is where the next note goes.
+thats why old files and emails turn into garbage when opened with the wrong table, and why you still see broken text in a CSV, a plain text file of rows, someone exported from an old system. you need one table for everyone, which is where the next note goes.
 
 ---
 prev: [007 text is numbers, one character and one number](./007-text-is-numbers.md) | next: [009 unicode, one number for every character](./009-unicode.md)

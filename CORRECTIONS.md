@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+- 008, 2026-10-16: used CSV without saying what it is, so a reader landing on this note alone could not follow; it now says a CSV is a plain text file of rows. evidence: the text of 007, the only place CSV was explained
 - 007, 2026-10-16: used ord, repr and CSV without saying what they are; one line now glosses each. evidence: the text of 001, which is the only place ord was explained
 - 006, 2026-10-16: said all six letters start with 6 because of where letters sit, which is only true for a to o (97 to 111); p to z start with 7. also said every hex dump shows two characters per byte, but od -x groups bytes in pairs, so it now says typical. evidence: python, ord("p") == 112 == 0x70; od -x of dhokla prints 6864 6b6f 616c
 - 005, 2026-10-16: the checks file compared the binary column of the table with itself, so it proved nothing. it now compares against the written out patterns, the note text is unchanged. evidence: python, checks/005.py
