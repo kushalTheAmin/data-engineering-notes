@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: nothing yet. note 001 starts the journey with what data is and why a computer can only keep numbers, and it introduces the shop from data/shop.sql
-last visuals: none yet
-last exits: none yet
-last reactions: none yet
+baton: 001 introduced the shop and showed one order turned into numbers: letters to 65 115 104 97, dhokla to 100 104 111 107 108 97, the time to seconds since 1970 UTC, and that numbers dont carry their own meaning. the next brick answers what those numbers are physically made of: the smallest thing a computer stores
+last visuals: before/after table with python
+last exits: forward
+last reactions: heres the part i didnt expect
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -14,7 +14,7 @@ log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept faile
 ## arc 1: data at the atom level
 after this arc: you know what a computer actually stores when it "saves" an order
 
-- [ ] data is facts written down, and a computer can only keep numbers
+- [x] data is facts written down, and a computer can only keep numbers (note 001)
 - [ ] bits: everything is a tiny switch, on or off
 - [ ] counting in binary
 - [ ] bytes: 8 bits, 256 possible values ★
