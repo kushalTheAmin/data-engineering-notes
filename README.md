@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 25
+notes so far: 26
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -34,3 +34,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [023 true and false, the boolean](./notes/023-true-and-false-the-boolean.md): asking if an order is delivered gives back true or false, one bit of information that still costs a byte
 - [024 UTC, the worlds reference clock](./notes/024-utc.md): order 101 says 09:15, but 09:15 where? one moment reads 13:15, 09:15 or 18:45 depending on the clock
 - [025 unix time, counting seconds from 1970](./notes/025-unix-time.md): one moment, 13:15 UTC on 1 April, is the same number 1775049300 on every clock
+- [026 seconds, milliseconds, microseconds: one moment, three numbers](./notes/026-seconds-milliseconds-microseconds.md): the same count times 1000 per row, and reading the wrong unit gives January 1970

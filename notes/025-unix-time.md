@@ -34,4 +34,4 @@ so what: [003](./003-counting-in-binary.md) mentioned the 2038 bug. a counter wi
 why do so many systems count in thousandths of a second? next one.
 
 ---
-prev: [024 UTC, the worlds reference clock](./024-utc.md) | next: not written yet
+prev: [024 UTC, the worlds reference clock](./024-utc.md) | next: [026 seconds, milliseconds, microseconds](./026-seconds-milliseconds-microseconds.md)

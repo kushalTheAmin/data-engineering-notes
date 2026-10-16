@@ -3,11 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 025 showed one moment, 13:15 UTC on 1 April, as the single count 1775049300 on every clock, seconds since 1970 UTC, with 2038 as the 32 bit overflow. the next brick is the same moment in seconds, milliseconds and microseconds, three different numbers
-last visuals: python with output (one moment, one count on three clocks), table (one moment on three clocks) plus quiz, query and result (status = delivered) plus small python with output, query and result (decimal vs double test) plus small query, query and result (prices as cents) plus small python with output, python with output (exact stored values of 0.1 + 0.2), table of shop prices as digits plus slide with python output, worked trace table (doubling 0.1) plus python with output, table (places after the point) plus python with output
-last exits: forward, forward, stops, stops, stops, stops, forward, stops, forward, stops, stops, forward, forward
-last reactions: i assumed a timestamp carried its time zone around with it, i expected a big city to be the reference but the reference clock belongs to no city, i figured one lonely bit would cost one lonely bit, i assumed there had to be a catch, i assumed money needed some special clever type, i expected the two cut off errors to cancel but its an exact tie, i expected a big number to get more digits, it felt unfair that a short number gets an endless pattern, i expected a new set of rules for fractions but its the same doubling past the dot, i kept picturing an alarm going off, i assumed the sizes would be some careful choice, i expected more machinery than one place getting a minus in front of its price tag, i didnt expect negative numbers to cost a pattern, i kept assuming one thing on screen meant one number underneath, i honestly thought a byte carried 8 bits of the letter
-
+baton: 026 showed one moment, 13:15 UTC on 1 April, as 1775049300 seconds, 1775049300000 milliseconds and 1775049300000000 microseconds, each 1000 times the one above, with the unit not stored in the number; reading it with the wrong unit gives January 1970 or the year 58219. the next brick is dates without times, and times without dates
+last visuals: table (one moment in three units) plus python with output, python with output (one moment, one count on three clocks), table (one moment on three clocks) plus quiz, query and result (status = delivered) plus small python with output, query and result (decimal vs double test) plus small query, query and result (prices as cents) plus small python with output
+last exits: stops, forward, forward, stops, stops
+last reactions: i expected the number to carry its unit somewhere, i assumed a timestamp carried its time zone around with it, i expected a big city to be the reference but the reference clock belongs to no city, i figured one lonely bit would cost one lonely bit, i assumed there had to be a catch, i assumed money needed some special clever type, i expected the two cut off errors to cancel but its an exact tie, i expected a big number to get more digits, it felt unfair that a short number gets an endless pattern, i expected a new set of rules for fractions but its the same doubling past the dot
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
 
@@ -39,7 +38,7 @@ after this arc: you know what a computer actually stores when it "saves" an orde
 - [x] true and false: the boolean (note 023)
 - [x] UTC: the worlds reference clock ★ (note 024)
 - [x] unix time: counting seconds from 1970 (note 025)
-- [ ] seconds, milliseconds, microseconds: one moment, three numbers ★
+- [x] seconds, milliseconds, microseconds: one moment, three numbers ★ (note 026)
 - [ ] dates without times, and times without dates
 - [ ] time zones: offsets from UTC ★
 - [ ] daylight saving: the hour that happens twice ★
