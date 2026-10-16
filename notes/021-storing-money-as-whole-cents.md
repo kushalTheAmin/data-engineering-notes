@@ -55,4 +55,4 @@ the exact answer is 112.5 cents, and an integer cant hold half a cent. // just c
 </details>
 
 ---
-prev: [020 why 0.1 + 0.2 is not exactly 0.3](./020-why-0-1-plus-0-2-is-not-0-3.md) | next: not written yet
+prev: [020 why 0.1 + 0.2 is not exactly 0.3](./020-why-0-1-plus-0-2-is-not-0-3.md) | next: [022 exact decimal types](./022-exact-decimal-types.md)

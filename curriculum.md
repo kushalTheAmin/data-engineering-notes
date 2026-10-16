@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 021 showed money goes in as whole cents, an integer, so 10 + 10 + 10 is exactly 30 while 0.10 added three times is 0.30000000000000004; it also said a 32 bit integer tops out at 21,474,836.47 and a percentage like 15 percent off 750 cents leaves half a cent that needs a rounding rule. the next brick is exact decimal types, where the database keeps the digits and the scale for you (the shop prices are already DECIMAL(6, 2))
-last visuals: query and result (prices as cents) plus small python with output, python with output (exact stored values of 0.1 + 0.2), table of shop prices as digits plus slide with python output, worked trace table (doubling 0.1) plus python with output, table (places after the point) plus python with output, table (counter wrapping)
-last exits: stops, stops, forward, stops, forward, stops, stops, forward, forward, stops
-last reactions: i assumed money needed some special clever type, i expected the two cut off errors to cancel but its an exact tie, i expected a big number to get more digits, it felt unfair that a short number gets an endless pattern, i expected a new set of rules for fractions but its the same doubling past the dot, i kept picturing an alarm going off, i assumed the sizes would be some careful choice, i expected more machinery than one place getting a minus in front of its price tag, i didnt expect negative numbers to cost a pattern, i kept assuming one thing on screen meant one number underneath, i honestly thought a byte carried 8 bits of the letter
+baton: 022 showed DECIMAL(6, 2) keeps digits exactly (stored as an integer plus a scale of 2), so the 020 test passes 6 of 6 products, 12345.67 errors because the top is 9999.99, and price * 0.15 grows the scale to 4 (1.1250) and a cast back to 2 places rounds the tie up (1.13). the next brick is the boolean, true and false, a value that only has two states
+last visuals: query and result (decimal vs double test) plus small query, query and result (prices as cents) plus small python with output, python with output (exact stored values of 0.1 + 0.2), table of shop prices as digits plus slide with python output, worked trace table (doubling 0.1) plus python with output, table (places after the point) plus python with output
+last exits: stops, stops, stops, forward, stops, forward, stops, stops, forward, forward
+last reactions: i assumed there had to be a catch, i assumed money needed some special clever type, i expected the two cut off errors to cancel but its an exact tie, i expected a big number to get more digits, it felt unfair that a short number gets an endless pattern, i expected a new set of rules for fractions but its the same doubling past the dot, i kept picturing an alarm going off, i assumed the sizes would be some careful choice, i expected more machinery than one place getting a minus in front of its price tag, i didnt expect negative numbers to cost a pattern, i kept assuming one thing on screen meant one number underneath, i honestly thought a byte carried 8 bits of the letter
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -35,7 +35,7 @@ after this arc: you know what a computer actually stores when it "saves" an orde
 - [x] floating point: digits plus where the point sits (note 019)
 - [x] why 0.1 + 0.2 is not exactly 0.3 ★ (note 020)
 - [x] storing money as whole cents ★ (note 021)
-- [ ] exact decimal types: exact digits up to the scale you choose ★
+- [x] exact decimal types: exact digits up to the scale you choose ★ (note 022)
 - [ ] true and false: the boolean
 - [ ] UTC: the worlds reference clock ★
 - [ ] unix time: counting seconds from 1970
