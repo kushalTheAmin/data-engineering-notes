@@ -50,4 +50,4 @@ same loop as 003, with `digits.index` turning f into 15. 100 is the number for "
 i kept reading a, b, c as letters, they are just digits that ran out of numerals. you see this daily: every commit id in git, the tool that keeps a history of code, like ceeaa63, is written in hex.
 
 ---
-prev: [004 bytes, 8 bits and 256 possible values](./004-bytes.md) | next: not written yet
+prev: [004 bytes, 8 bits and 256 possible values](./004-bytes.md) | next: [006 one byte, two hex digits](./006-one-byte-two-hex-digits.md)
