@@ -61,4 +61,4 @@ the exact values are 1.1250 and 0.6750, and the cast rounds the tie up. chopping
 </details>
 
 ---
-prev: [021 storing money as whole cents](./021-storing-money-as-whole-cents.md) | next: not written yet
+prev: [021 storing money as whole cents](./021-storing-money-as-whole-cents.md) | next: [023 true and false, the boolean](./023-true-and-false-the-boolean.md)
