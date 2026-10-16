@@ -34,4 +34,4 @@ the obvious fix is to use the other 128 values in the byte, and countries did ex
 thats why old files and emails turn into garbage when opened with the wrong table, and why you still see broken text in a CSV someone exported from an old system. you need one table for everyone, which is where the next note goes.
 
 ---
-prev: [007 text is numbers, one character and one number](./007-text-is-numbers.md) | next: not written yet
+prev: [007 text is numbers, one character and one number](./007-text-is-numbers.md) | next: [009 unicode, one number for every character](./009-unicode.md)
