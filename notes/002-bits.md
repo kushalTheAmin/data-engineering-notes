@@ -41,4 +41,4 @@ as numbers:  000 = 0     001 = 1      010 = 2      ...
 that second agreement is counting in binary, numbers written with only 0 and 1.
 
 ---
-prev: [001 data is facts written down](./001-data-is-facts-and-numbers.md) | next: not written yet
+prev: [001 data is facts written down](./001-data-is-facts-and-numbers.md) | next: [003 counting in binary](./003-counting-in-binary.md)
