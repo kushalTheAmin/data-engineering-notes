@@ -16,6 +16,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | combining mark | a code point with no letter, drawn on the letter before it | [012](./notes/012-combining-marks.md) |
 | continuation byte | a UTF-8 byte starting 10, continuing the previous characters bytes | [011](./notes/011-why-gujarati-takes-3-bytes.md) |
 | data | facts written down so you can ask questions about them later | [001](./notes/001-data-is-facts-and-numbers.md) |
+| float | binary digits plus a count of how far to slide the point | [019](./notes/019-floating-point.md) |
 | grapheme | one unit as seen on screen, possibly several code points | [012](./notes/012-combining-marks.md) |
 | hexadecimal | counting with sixteen digits, a to f standing for ten to fifteen | [005](./notes/005-hexadecimal.md) |
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |

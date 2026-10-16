@@ -73,4 +73,4 @@ the tempting answer is fewer, from thinking cents like .50 are messy.
 </details>
 
 ---
-prev: [017 fractions in binary, halves, quarters, eighths](./017-fractions-in-binary.md) | next: not written yet
+prev: [017 fractions in binary, halves, quarters, eighths](./017-fractions-in-binary.md) | next: [019 floating point, digits plus where the point sits](./019-floating-point.md)

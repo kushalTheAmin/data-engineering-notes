@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 018 showed that doubling 0.1 gives digits 0 0 0 1 1 then back to the same start, so 0.0 0011 0011 forever, and that a fraction ends only if its bottom is made of twos alone; a computer cuts the loop off and keeps a close neighbor. the next brick is how floating point stores digits plus where the point sits
-last visuals: worked trace table (doubling 0.1) plus python with output, table (places after the point) plus python with output, table (counter wrapping), python with output (integer size table), table of place values (negative top place) plus python with output, python with output (sign bit patterns), query and result (two é)
-last exits: stops, forward, stops, stops, forward, forward, stops, stops
-last reactions: it felt unfair that a short number gets an endless pattern, i expected a new set of rules for fractions but its the same doubling past the dot, i kept picturing an alarm going off, i assumed the sizes would be some careful choice, i expected more machinery than one place getting a minus in front of its price tag, i didnt expect negative numbers to cost a pattern, i kept assuming one thing on screen meant one number underneath, i honestly thought a byte carried 8 bits of the letter, what would you pick, i first guessed give every character 4 bytes, that second one tripped me up, i kept assuming a byte meant one letter everywhere
+baton: 019 showed a float is binary scientific notation: digits that always start 1., plus a slide count for the point, in 64 bits split 1 for sign, 11 for the slide, 52 for the digits; the digits stay fixed so past 2 to the 53 whole numbers are 2 apart. the next brick is why 0.1 + 0.2 is not exactly 0.3, using the cut off 0.1 from 018 and this format
+last visuals: table of shop prices as digits plus slide with python output, worked trace table (doubling 0.1) plus python with output, table (places after the point) plus python with output, table (counter wrapping), python with output (integer size table), table of place values (negative top place) plus python with output, python with output (sign bit patterns), query and result (two é)
+last exits: forward, stops, forward, stops, stops, forward, forward, stops, stops
+last reactions: i expected a big number to get more digits, it felt unfair that a short number gets an endless pattern, i expected a new set of rules for fractions but its the same doubling past the dot, i kept picturing an alarm going off, i assumed the sizes would be some careful choice, i expected more machinery than one place getting a minus in front of its price tag, i didnt expect negative numbers to cost a pattern, i kept assuming one thing on screen meant one number underneath, i honestly thought a byte carried 8 bits of the letter, what would you pick, i first guessed give every character 4 bytes, that second one tripped me up, i kept assuming a byte meant one letter everywhere
  
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -32,7 +32,7 @@ after this arc: you know what a computer actually stores when it "saves" an orde
 - [x] overflow: what happens when a count goes past the top ★ (note 016)
 - [x] fractions in binary: halves, quarters, eighths (note 017)
 - [x] why 0.1 has no exact binary form ★ (note 018)
-- [ ] floating point: digits plus where the point sits
+- [x] floating point: digits plus where the point sits (note 019)
 - [ ] why 0.1 + 0.2 is not exactly 0.3 ★
 - [ ] storing money as whole cents ★
 - [ ] exact decimal types: exact digits up to the scale you choose ★
