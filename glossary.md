@@ -18,6 +18,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | hexadecimal | counting with sixteen digits, a to f standing for ten to fifteen | [005](./notes/005-hexadecimal.md) |
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |
 | negative zero | a second zero pattern, with the sign bit set | [013](./notes/013-negative-numbers-sign-bit.md) |
+| overflow | a result too big for its bit size, wrapping or erroring | [016](./notes/016-overflow.md) |
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
 | the shop | the imaginary gujarati snack store every example uses | [001](./notes/001-data-is-facts-and-numbers.md) |

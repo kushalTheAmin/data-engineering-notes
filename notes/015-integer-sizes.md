@@ -27,4 +27,4 @@ the shops order_id is declared INTEGER, which is 32 bit in both Postgres and Duc
 one gotcha: the size is fixed per column, not per value. a 3 stored in a 64 bit column still takes 8 bytes, and python ints dont have this limit at all, which is why a script can look fine and a database column still overflows.
 
 ---
-prev: [014 twos complement, how computers really store a minus](./014-twos-complement.md) | next: not written yet
+prev: [014 twos complement, how computers really store a minus](./014-twos-complement.md) | next: [016 overflow, what happens when a count goes past the top](./016-overflow.md)
