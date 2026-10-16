@@ -28,7 +28,7 @@ MATH = re.compile("[\u2211\u220f\u222b\u221a\u221e\u2248\u2202\u2206\u2207]")
 ATTRIBUTION = re.compile(r"claude|anthropic|co-authored-by|\U0001F916", re.I)
 COMMIT_ATTRIBUTION = re.compile(r"claude|anthropic|co-authored-by|generated with|\U0001F916", re.I)
 COMMIT_SUBJECT = re.compile(r"^(note \d{3}: \S.*|curriculum: (split|add) \S.*|log: \S.*|audit \d{3}: \S.*)$")
-ALLOWED_CHANGES = re.compile(r"^(notes/\d{3}-[a-z0-9-]+\.md|checks/\d{3}\.py|curriculum\.md|README\.md|glossary\.md|data/shop\.sql)$")
+ALLOWED_CHANGES = re.compile(r"^(notes/\d{3}-[a-z0-9-]+\.md|checks/\d{3}\.py|curriculum\.md|README\.md|glossary\.md|data/shop\.sql|CORRECTIONS\.md)$")
 
 fails = []
 infos = []
@@ -595,6 +595,8 @@ def main():
     if len(terms) != len(set(terms)):
         fail("glossary.md", "a term appears twice")
     scan_file("data/shop.sql")
+    if os.path.exists(os.path.join(ROOT, "CORRECTIONS.md")):
+        scan_file("CORRECTIONS.md")
 
     if has_origin:
         # shop.sql is append only
