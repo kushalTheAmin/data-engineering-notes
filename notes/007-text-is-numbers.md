@@ -38,4 +38,4 @@ the last two lines are the bite. adding "2" and "2" as text glues them into 22, 
 i honestly assumed the 2 in a file was just a 2. it isnt, you only see it that way because your screen turns the number back into a shape.
 
 ---
-prev: [006 one byte, two hex digits](./006-one-byte-two-hex-digits.md) | next: not written yet
+prev: [006 one byte, two hex digits](./006-one-byte-two-hex-digits.md) | next: [008 ascii runs out, 128 spots isnt enough for the world](./008-ascii-runs-out.md)

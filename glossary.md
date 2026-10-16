@@ -4,6 +4,7 @@ every term these notes have built, in plain words, with the note that built it. 
 
 | term | plain meaning | built in |
 |---|---|---|
+| ASCII | the old table giving 128 characters a number, English only | [008](./notes/008-ascii-runs-out.md) |
 | binary | counting with only 0 and 1, each place worth double | [003](./notes/003-counting-in-binary.md) |
 | bit | one tiny switch inside a computer, written as 0 or 1 | [002](./notes/002-bits.md) |
 | byte | a group of 8 bits, holding 256 possible values | [004](./notes/004-bytes.md) |
