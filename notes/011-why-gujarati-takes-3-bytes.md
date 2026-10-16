@@ -66,4 +66,4 @@ fafda | 11
 </details>
 
 ---
-prev: [010 utf-8, storing those numbers in 1 to 4 bytes](./010-utf-8.md) | next: not written yet
+prev: [010 utf-8, storing those numbers in 1 to 4 bytes](./010-utf-8.md) | next: [012 combining marks, when one letter on screen is two numbers](./012-combining-marks.md)
