@@ -45,4 +45,4 @@ SELECT max(order_id)::TINYINT + 21::TINYINT AS newest FROM orders
 </details>
 
 ---
-prev: [015 integer sizes, 8, 16, 32 and 64 bit numbers](./015-integer-sizes.md) | next: not written yet
+prev: [015 integer sizes, 8, 16, 32 and 64 bit numbers](./015-integer-sizes.md) | next: [017 fractions in binary, halves, quarters, eighths](./017-fractions-in-binary.md)
