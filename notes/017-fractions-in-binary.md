@@ -37,4 +37,4 @@ print(Decimal(0.1))
 0.75 is exact, 0.1 is only a close neighbor. the next one is why.
 
 ---
-prev: [016 overflow, what happens when a count goes past the top](./016-overflow.md) | next: not written yet
+prev: [016 overflow, what happens when a count goes past the top](./016-overflow.md) | next: [018 why 0.1 has no exact binary form](./018-why-0-1-has-no-exact-binary-form.md)
