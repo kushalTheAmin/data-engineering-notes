@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+- 010, 2026-10-16: the checks file had no source for the utf-8 byte ranges, the ascii match or duckdb strlen counting bytes, and the 009 quiz query was never run by its checks. note text is unchanged, the checks now cite the pages and 009 runs the query (kaju katli and khandvi both 107). evidence: https://en.wikipedia.org/wiki/UTF-8, https://duckdb.org/docs/current/sql/functions/text.html
 - 009, 2026-10-16: the opening question asked if one table means byte 233 never means two things again, but Unicode only hands out numbers and the note itself says how they sit in bytes is a separate question; it now says the number 233. evidence: python, bytes([233]).decode("latin-1") is é but bytes([233]).decode("cp1251") is й, so a byte still depends on the encoding
 - 008, 2026-10-16: said every gujarati letter has a number far past 127 right after saying it has no spot, with no hint where the number comes from; it now says the numbers come from pythons bigger table, next note. evidence: python, ord("ગ") == 2711, which is not in the 128 character ascii table
 - 008, 2026-10-16: used CSV without saying what it is, so a reader landing on this note alone could not follow; it now says a CSV is a plain text file of rows. evidence: the text of 007, the only place CSV was explained

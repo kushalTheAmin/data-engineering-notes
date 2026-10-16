@@ -32,4 +32,9 @@ assert len("é") == 1 and len("é".encode()) == 2
 assert 10 // len("é".encode()) == 5 and 10 // len("d".encode()) == 10
 con = shop()
 assert con.execute("SELECT strlen(name), strlen(name || 'é') FROM products WHERE name = 'jalebi'").fetchall() == [(6, 8)]
+# source: https://en.wikipedia.org/wiki/UTF-8
+#   encodes code points in one to four bytes; U+0000-007F one, 0080-07FF two, 0800-FFFF three, 10000-10FFFF four;
+#   first 128 code points use one byte with the same value as ASCII; surrogates U+D800 to U+DFFF are not legal
+# source: https://duckdb.org/docs/current/sql/functions/text.html
+#   strlen(string): number of bytes in string
 print("010 ok")
