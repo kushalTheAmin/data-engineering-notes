@@ -26,7 +26,12 @@ r = dict(con.execute("SELECT name, (price * 0.15)::DECIMAL(6, 2) FROM products W
 assert str(r["khandvi"]) == "1.13" and str(r["fafda"]) == "0.68"
 assert 7.50 * 15 // 100 == 1.0 and 112 == 750 * 15 // 100  # chop in cents gives 1.12
 assert 450 * 15 // 100 == 67  # fafda chopped is 0.67
+# extra digits on the right are rounded when cast to a narrower scale
+assert str(con.execute("SELECT 1.234::DECIMAL(6, 2)").fetchone()[0]) == "1.23" and str(con.execute("SELECT 1.236::DECIMAL(6, 2)").fetchone()[0]) == "1.24"
+# DECIMAL width 5 to 9 is stored in 4 bytes (a plain 32 bit integer), and price * 0.15 has scale 4
+assert con.execute("SELECT typeof(price * 0.15) FROM products LIMIT 1").fetchone()[0] == "DECIMAL(9,4)"
 # source: https://duckdb.org/docs/current/sql/data_types/numeric.html
+#   confirmed: "Internally, decimals are represented as integers depending on their specified WIDTH", widths 5-9 use INT32 (4 bytes); WIDTH is how many digits can be held, DECIMAL(3, 2) fits 1.23 but not 12.3
 #   confirmed: DECIMAL(width, scale) stored as integers sized by width; add, subtract, multiply are exact
 # source: https://www.postgresql.org/docs/current/datatype-numeric.html
 #   confirmed: numeric is exact, recommended for money, slower than integer or float types, too many digits before the point errors
