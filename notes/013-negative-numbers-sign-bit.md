@@ -49,14 +49,14 @@ SELECT name, CAST(price AS INTEGER) AS whole FROM products WHERE name = 'kaju ka
 name | whole
 kaju katli | 12
 ```
-12 is 1100 in binary, so 0001100 in the 7 size bits, and the sign bit is 1: 10001100. the tempting answer is 11001100, from putting the sign on the front of 1100 without padding the size to 7 bits.
+12 is 1100 in binary, so 0001100 in the 7 size bits, and the sign bit is 1: 10001100. the tempting answer is 11100, from putting the sign on the front of 1100 without padding the size to 7 bits.
 
 </details>
 
 2. a program compares 10000000 and 00000000 as numbers, then as raw bit patterns. what does each comparison say?
 <details><summary>answer</summary>
 
-as numbers they are equal, both are zero. as raw patterns they differ, so a byte-by-byte compare says not equal. the tempting answer is that the first one is smaller, from reading the leading 1 as a bigger number.
+as numbers they are equal, both are zero. as raw patterns they differ, so a byte-by-byte compare says not equal. the tempting answer is that the first one is bigger, from reading the leading 1 as a big number.
 
 </details>
 

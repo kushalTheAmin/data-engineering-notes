@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+013, 2026-10-16: quiz 1 gave 11001100 as the tempting wrong answer but said it came from putting the sign in front of 1100, which gives 11100; quiz 2 said the tempting answer was the first number is smaller while blaming the leading 1 looking bigger, which points to bigger. both now match their reasons. evidence: python, '1' + '1100' == '11100' and int('10000000'[1:], 2) == 0
 012, 2026-10-16: said a search or a join on a name typed two ways misses, but join is a SQL term no earlier note explains; it now says a search or a lookup. evidence: grep of notes/ and glossary.md, join appears only in 012
 010, 2026-10-16: the quiz said strlen counts bytes in DuckDB without saying what DuckDB is, so a reader landing on this note alone could not place it; it now says the database these notes use. evidence: the text of 001 to 009, none of which introduces DuckDB
 - 012, 2026-10-16: said the database compares code points one by one as if always, but that is DuckDBs default (the BINARY collation); other collations can compare differently, so it now says by default. evidence: https://duckdb.org/docs/current/sql/expressions/collations.html
