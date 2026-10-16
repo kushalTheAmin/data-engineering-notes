@@ -2,7 +2,7 @@
 builds on: [007 text is numbers, one character and one number](./007-text-is-numbers.md), [008 ascii runs out, 128 spots isnt enough for the world](./008-ascii-runs-out.md)
 section: data at the atom level, part 9, ~2 min read
 
-can one table hold the letters of every language, so byte 233 never means two different things again?
+can one table hold the letters of every language, so the number 233 never means two different things again?
 
 yes, its called Unicode: one table where every [character](./007-text-is-numbers.md), one letter, digit or symbol, gets its own number, a code point. the shop, the imaginary snack store these notes run on, can finally spell dhokla, a steamed savory cake, in gujarati.
 
