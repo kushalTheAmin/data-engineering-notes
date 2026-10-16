@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+- 008, 2026-10-16: said the gujarati word is 5 characters, but on screen it shows 3 units because vowel signs count on their own (011 says so); it now says python counts 5 characters and vowel signs count on their own. evidence: python, duckdb length_grapheme('ઢોકળા') is 3 while len is 5, https://duckdb.org/docs/current/sql/functions/text.html
 - 010, 2026-10-16: the checks file had no source for the utf-8 byte ranges, the ascii match or duckdb strlen counting bytes, and the 009 quiz query was never run by its checks. note text is unchanged, the checks now cite the pages and 009 runs the query (kaju katli and khandvi both 107). evidence: https://en.wikipedia.org/wiki/UTF-8, https://duckdb.org/docs/current/sql/functions/text.html
 - 009, 2026-10-16: the opening question asked if one table means byte 233 never means two things again, but Unicode only hands out numbers and the note itself says how they sit in bytes is a separate question; it now says the number 233. evidence: python, bytes([233]).decode("latin-1") is é but bytes([233]).decode("cp1251") is й, so a byte still depends on the encoding
 - 008, 2026-10-16: said every gujarati letter has a number far past 127 right after saying it has no spot, with no hint where the number comes from; it now says the numbers come from pythons bigger table, next note. evidence: python, ord("ગ") == 2711, which is not in the 128 character ascii table

@@ -27,7 +27,7 @@ except UnicodeEncodeError:
 ascii cant store dhokla in gujarati
 ```
 
-even é, one accent away from english, has no spot. the gujarati word is 5 characters and every one of them has a number far past 127 in pythons bigger table (next note), so ascii simply refuses.
+even é, one accent away from english, has no spot. python counts 5 characters in the gujarati word (vowel signs count on their own) and every one of them has a number far past 127 in pythons bigger table (next note), so ascii simply refuses.
 
 the obvious fix is to use the other 128 values in the byte, and countries did exactly that, each with its own table. so one byte, 233, shows as é in one table and й in another. i kept assuming a byte meant one letter everywhere, it doesnt.
 

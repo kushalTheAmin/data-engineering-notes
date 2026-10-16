@@ -12,4 +12,8 @@ except UnicodeEncodeError:
 assert [bytes([233]).decode(e) for e in ["latin-1", "cp1251"]] == ["é", "й"]
 # ascii is a 7 bit code with 128 characters; other countries used the spare half of the byte differently
 # source: https://en.wikipedia.org/wiki/ASCII
+import duckdb
+assert duckdb.sql("SELECT length_grapheme('ઢોકળા')").fetchone()[0] == 3 != len(w)
+# source: https://duckdb.org/docs/current/sql/functions/text.html
+#   length_grapheme(string): number of grapheme clusters in string, so 3 units on screen against 5 characters
 print("008 ok")
