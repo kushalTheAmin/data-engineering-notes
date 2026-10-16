@@ -39,4 +39,4 @@ print(sum(flags))
 5 delivered out of 7. the same page says Postgres also accepts yes, no, on, off, 1 and 0 as boolean input, so a messy file saying "yes" can quietly load as true. you might want that, you might not.
 
 ---
-prev: [022 exact decimal types](./022-exact-decimal-types.md) | next: not written yet
+prev: [022 exact decimal types](./022-exact-decimal-types.md) | next: [024 UTC, the worlds reference clock](./024-utc.md)
