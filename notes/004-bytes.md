@@ -2,7 +2,7 @@
 builds on: [001 data is facts written down](./001-data-is-facts-and-numbers.md), [002 bits, everything is a tiny switch](./002-bits.md), [003 counting in binary](./003-counting-in-binary.md)
 section: data at the atom level, part 4, ~2 min read
 
-why does a dotted ip address, the number a device goes by online, like 192.168.1.1, never have a part over 255? colors on screen stop at 255 too.
+why does a dotted ip address, the number a device goes by online, like 192.168.1.1, never have a part over 255? colors on screen usually stop at 255 too.
 
 a byte is a group of 8 [bits](./002-bits.md), the tiny on/off switches, handled as one unit.
 

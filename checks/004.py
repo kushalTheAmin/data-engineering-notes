@@ -18,6 +18,10 @@ assert len("1000".encode()) == 4
 assert len(range(0, 256)) == 256
 # source: https://www.computerhope.com/jargon/d/dotted-quad-notation.htm
 #   an IPv4 address is four numbers from 0 to 255 separated by dots, one byte each
+# source: https://en.wikipedia.org/wiki/Color_depth
+#   24 bit color almost always uses 8 bits each of R, G, B (16,777,216 colors); deep color uses 10 or more bits per channel
+# source: https://en.wikipedia.org/wiki/Dot-decimal_notation
+#   IPv4 dotted decimal is four octets, each 0 to 255
 # source: https://www.catb.org/jargon/html/B/byte.html
 #   older machines used other byte sizes (6, 7 or 9 bits); 8 became the standard
 print("004 ok")
