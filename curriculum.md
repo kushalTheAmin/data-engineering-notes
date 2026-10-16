@@ -1,0 +1,808 @@
+# curriculum
+
+the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
+
+## THREAD
+baton: nothing yet. note 001 starts the journey with what data is and why a computer can only keep numbers, and it introduces the shop from data/shop.sql
+last visuals: none yet
+last exits: none yet
+last reactions: none yet
+
+## NOTES
+log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
+
+## arc 1: data at the atom level
+after this arc: you know what a computer actually stores when it "saves" an order
+
+- [ ] data is facts written down, and a computer can only keep numbers
+- [ ] bits: everything is a tiny switch, on or off
+- [ ] counting in binary
+- [ ] bytes: 8 bits, 256 possible values ★
+- [ ] hexadecimal: counting with sixteen digits
+- [ ] one byte, two hex digits: why ff is 255 ★
+- [ ] text is numbers: one character, one number
+- [ ] ASCII runs out: 128 characters isnt enough for the world
+- [ ] unicode: one number for every character in every script ★
+- [ ] utf-8: storing those numbers in 1 to 4 bytes ★
+- [ ] why a gujarati letter takes 3 bytes and "g" takes 1 ★
+- [ ] combining marks: when one letter on screen is two numbers ★
+- [ ] negative numbers: the sign bit idea
+- [ ] twos complement: how computers really store a minus
+- [ ] integer sizes: 8, 16, 32 and 64 bit numbers
+- [ ] overflow: what happens when a count goes past the top ★
+- [ ] fractions in binary: halves, quarters, eighths
+- [ ] why 0.1 has no exact binary form ★
+- [ ] floating point: digits plus where the point sits
+- [ ] why 0.1 + 0.2 is not exactly 0.3 ★
+- [ ] storing money as whole cents ★
+- [ ] exact decimal types: exact digits up to the scale you choose ★
+- [ ] true and false: the boolean
+- [ ] UTC: the worlds reference clock ★
+- [ ] unix time: counting seconds from 1970
+- [ ] seconds, milliseconds, microseconds: one moment, three numbers ★
+- [ ] dates without times, and times without dates
+- [ ] time zones: offsets from UTC ★
+- [ ] daylight saving: the hour that happens twice ★
+- [ ] store in UTC, show in local time ★
+- [ ] null: a marker for a missing value ★
+- [ ] null is not zero and not empty text ★
+- [ ] kilobytes to terabytes: how big data gets
+- [ ] capstone: one shop order decoded down to bytes
+
+## arc 2: memory, disks and files
+after this arc: you know where data lives, why reading it is slow, and how to peek at it
+
+- [ ] the processor: the part that does the work
+- [ ] memory vs disk: one forgets when the power goes off, one remembers
+- [ ] disk is slow: memory vs SSD vs spinning disk, in real numbers ★
+- [ ] 1000 or 1024: why your drive looks smaller than the box said
+- [ ] a file is a named list of bytes
+- [ ] folders and paths
+- [ ] text files vs binary files
+- [ ] line endings: the invisible characters that break files ★
+- [ ] reading start to end vs jumping to a spot ★
+- [ ] disks read in blocks, never single bytes
+- [ ] torn writes: what a half finished write leaves behind ★
+- [ ] writing safely: write a new file, then rename it ★
+- [ ] compression: making files smaller by spotting repeats
+- [ ] compression trades processor time for disk space
+- [ ] the terminal: running programs by typing
+- [ ] processes and the operating system: programs while they run
+- [ ] the working directory: where the terminal is standing
+- [ ] absolute vs relative paths ★
+- [ ] head and tail: looking at the start and end of a file
+- [ ] wc: counting lines
+- [ ] grep: finding the lines that match
+- [ ] standard input and output: how programs pass text along
+- [ ] pipes: chaining small programs together ★
+- [ ] redirecting output into a file
+- [ ] capstone: the life of one saved order, memory to disk and back
+
+## arc 3: giving data a shape
+after this arc: you can read and write the text formats data and config actually travel in
+
+- [ ] structure: why a pile of text is hard to ask questions of
+- [ ] CSV: rows and columns separated by commas
+- [ ] quoting: commas inside values ★
+- [ ] quotes inside quotes, and newlines inside values ★
+- [ ] the header row: naming the columns
+- [ ] JSON: records with names on every value
+- [ ] JSON types: strings, numbers, booleans, null, objects and arrays ★
+- [ ] nesting: records and lists inside records
+- [ ] JSON lines: one record per line ★
+- [ ] flattening nested objects into columns ★
+- [ ] exploding lists into many rows ★
+- [ ] XML: the older cousin you will still meet
+- [ ] YAML: indentation as structure
+- [ ] YAML traps: when no means false ★
+- [ ] schema: the agreement about shape
+- [ ] data types in a schema
+- [ ] required vs optional fields ★
+- [ ] capstone: the shop orders as raw text, CSV and JSON side by side
+
+## arc 4: tables, keys and relationships
+after this arc: you can look at four tables and see how they connect, before writing any SQL
+
+- [ ] a table: rows are records, columns are fields
+- [ ] every column holds one type
+- [ ] why a shared spreadsheet breaks when many people use it
+- [ ] a database: a program that guards your data files
+- [ ] schema on write vs schema on read ★
+- [ ] a network: computers sending bytes to each other
+- [ ] addresses and ports: the right program on the right machine
+- [ ] client and server: you ask, the database answers
+- [ ] primary key: one unique id per row ★
+- [ ] natural keys vs made up ids ★
+- [ ] update anomalies: change it in one place, miss the other ★
+- [ ] insert and delete anomalies: losing facts by accident
+- [ ] splitting into tables: each fact lives in one place
+- [ ] relationships: one customer, many orders
+- [ ] foreign key: a column that points at another tables key ★
+- [ ] what a foreign key stops: rows pointing at nothing
+- [ ] composite keys: a key made of two columns ★
+- [ ] why many to many cant live in either table
+- [ ] junction tables: the table in the middle ★
+- [ ] entity relationship diagrams: boxes and lines
+- [ ] crows feet: reading one and many on the lines
+- [ ] capstone: the whole shop as four connected tables
+
+## arc 5: asking questions with SQL
+after this arc: you can pull exactly the rows and columns you want from one table
+
+- [ ] SQL: you describe the result, the database figures out how ★
+- [ ] a database in one file: setting up DuckDB
+- [ ] your first query against the shop
+- [ ] SELECT and FROM: picking columns
+- [ ] SELECT star: everything, and why you rarely want it
+- [ ] WHERE: keeping only the rows that match ★
+- [ ] comparisons: equal, not equal, bigger, smaller
+- [ ] AND and OR
+- [ ] NOT and parentheses: the precedence trap ★
+- [ ] IN: matching against a list
+- [ ] BETWEEN: ranges that include both ends ★
+- [ ] LIKE: matching text patterns
+- [ ] three valued logic: true, false and unknown ★
+- [ ] IS NULL and IS NOT NULL
+- [ ] COALESCE: a fallback when a value is NULL
+- [ ] ORDER BY: sorting by one or more columns
+- [ ] no ORDER BY, no promised order ★
+- [ ] where NULLs land when you sort ★
+- [ ] LIMIT and OFFSET: paging through rows
+- [ ] DISTINCT: removing duplicate rows
+- [ ] computed columns and AS
+- [ ] CASE WHEN: if and else inside a query ★
+- [ ] text functions: lower, upper, length, trim
+- [ ] concatenating text, and taking pieces of it
+- [ ] date parts: pulling out the year, month and day
+- [ ] truncating timestamps to a day or a month ★
+- [ ] adding and subtracting intervals ★
+- [ ] the difference between two dates
+- [ ] NULLIF and dividing by zero
+- [ ] integer division: when 7 / 2 gives 3 ★
+- [ ] CAST: changing a values type
+- [ ] casts that fail, and TRY_CAST ★
+- [ ] the order SQL really runs in: FROM, WHERE, SELECT, ORDER BY, LIMIT ★
+- [ ] one language, many dialects: why SQL differs between databases
+- [ ] capstone: one query traced clause by clause
+
+## arc 6: summarizing data
+after this arc: you can turn thousands of rows into the few numbers someone actually asked for
+
+- [ ] aggregate functions: many rows in, one value out
+- [ ] COUNT star vs COUNT of a column: nulls dont count ★
+- [ ] COUNT DISTINCT
+- [ ] SUM and AVG
+- [ ] what NULLs do to SUM and AVG ★
+- [ ] MIN and MAX
+- [ ] GROUP BY: one group per value ★
+- [ ] grouping by more than one column
+- [ ] the GROUP BY rule: every column is grouped or aggregated ★
+- [ ] HAVING: filtering whole groups
+- [ ] WHERE vs HAVING: before grouping vs after ★
+- [ ] conditional aggregation: counting several things in one pass ★
+- [ ] medians and percentiles ★
+- [ ] pivoting: turning rows into columns
+- [ ] ROLLUP: subtotals and grand totals
+- [ ] the full run order with GROUP BY and HAVING ★
+- [ ] capstone: orders per customer, traced from rows to groups
+
+## arc 7: combining tables with joins
+after this arc: you can answer questions whose answers live across several tables, without double counting
+
+- [ ] why joins: the answer lives in more than one table
+- [ ] inner join traced by hand ★
+- [ ] ON: how a join decides which rows match
+- [ ] table aliases
+- [ ] left join: keep every row from the left table ★
+- [ ] the nulls a left join creates
+- [ ] a WHERE that quietly turns a left join into an inner join ★
+- [ ] right and full outer joins
+- [ ] joining three tables
+- [ ] fan out: when a join multiplies rows ★
+- [ ] double counting: why sums after a fan out lie ★
+- [ ] joining on columns that can be NULL ★
+- [ ] anti join: rows with no match ★
+- [ ] self join
+- [ ] cross join: every row with every row
+- [ ] joining on a range: matching a date to a period
+- [ ] joins plus GROUP BY: revenue per customer ★
+- [ ] practice: five join questions on the shop, checking row counts ★
+- [ ] capstone: the shop revenue report from four tables
+
+## arc 8: bigger queries
+after this arc: you can write the multi step queries real reports need
+
+- [ ] subquery in WHERE ★
+- [ ] subquery in FROM
+- [ ] scalar subqueries: one value inside a query
+- [ ] correlated subqueries: a query that depends on the outer row ★
+- [ ] EXISTS and NOT EXISTS: semi joins and anti joins as questions ★
+- [ ] NOT IN and the NULL trap ★
+- [ ] CTEs: naming each step with WITH ★
+- [ ] views: a saved query with a name ★
+- [ ] UNION and UNION ALL ★
+- [ ] INTERSECT and EXCEPT
+- [ ] window functions: a total next to every row ★
+- [ ] OVER: the window a function looks through
+- [ ] PARTITION BY: a separate window per group ★
+- [ ] ROW_NUMBER: numbering rows in order ★
+- [ ] RANK vs DENSE_RANK: what ties do ★
+- [ ] running totals ★
+- [ ] window frames: ROWS BETWEEN ★
+- [ ] the default frame trap: why adding ORDER BY turns MAX into a running max ★
+- [ ] LAG and LEAD: looking at the row before ★
+- [ ] top N per group ★
+- [ ] removing duplicates with ROW_NUMBER ★
+- [ ] gaps and islands: date minus row number stays constant inside a streak ★
+- [ ] gaps and islands: grouping each island into one streak row ★
+- [ ] date spines: filling in days with no orders ★
+- [ ] sessionizing clicks with LAG and a running sum ★
+- [ ] retention cohorts: who came back next month ★
+- [ ] recursive CTEs: following a chain of rows
+- [ ] arrays and UNNEST: lists inside a cell
+- [ ] querying JSON inside a column
+- [ ] practice: ten interview style SQL questions on the shop ★
+- [ ] capstone: each customers first order and the days between orders
+
+## arc 9: changing data safely
+after this arc: you can change data and know exactly what happens when two people do it at once
+
+- [ ] containers: a program packed with everything it needs ★
+- [ ] running Postgres in a container on your laptop
+- [ ] a database server: Postgres, where most app data lives
+- [ ] connections and sessions: one conversation with the database
+- [ ] CREATE TABLE
+- [ ] temporary tables
+- [ ] NOT NULL and DEFAULT: required columns and fallback values ★
+- [ ] UNIQUE and CHECK: rules every value must pass ★
+- [ ] key constraints the database enforces for you ★
+- [ ] where ids come from: sequences and auto increment ★
+- [ ] INSERT
+- [ ] INSERT from a SELECT
+- [ ] UPDATE, and why the WHERE matters so much ★
+- [ ] DELETE ★
+- [ ] upsert: insert, or update if the row is already there ★
+- [ ] ALTER TABLE: adding a column
+- [ ] DROP and TRUNCATE
+- [ ] transactions: all or nothing ★
+- [ ] COMMIT and ROLLBACK
+- [ ] ACID: four promises a database makes ★
+- [ ] ACID consistency: the rules still hold after every change
+- [ ] isolation: two people at the same time ★
+- [ ] durability: surviving a crash
+- [ ] the write ahead log: write down the plan before the change ★
+- [ ] replaying the log after a crash
+- [ ] lost updates ★
+- [ ] dirty reads ★
+- [ ] non repeatable reads ★
+- [ ] phantoms ★
+- [ ] isolation levels: read committed ★
+- [ ] repeatable read: rows dont change under you mid transaction ★
+- [ ] serializable: as if one at a time, and retrying the failures ★
+- [ ] row locks and table locks
+- [ ] SELECT FOR UPDATE: locking on purpose ★
+- [ ] deadlocks ★
+- [ ] changing a column type on a big table ★
+- [ ] MVCC: every row keeps versions ★
+- [ ] transaction snapshots: what your transaction is allowed to see ★
+- [ ] backups: a copy you can restore from
+- [ ] point in time recovery: a backup plus the replayed log
+- [ ] capstone: placing an order as one transaction
+
+## arc 10: designing tables
+after this arc: you can design the tables for a new feature and defend every choice
+
+- [ ] modeling: deciding the tables before writing them
+- [ ] entities and attributes
+- [ ] one to one: when two tables share a key
+- [ ] normal forms: the rules behind splitting tables ★
+- [ ] functional dependency: when one column decides another ★
+- [ ] first normal form: one value per cell ★
+- [ ] second normal form ★
+- [ ] third normal form ★
+- [ ] denormalization: copying data on purpose ★
+- [ ] choosing column types well ★
+- [ ] naming conventions
+- [ ] created_at and updated_at ★
+- [ ] soft deletes: marking a row gone instead of removing it ★
+- [ ] schemas as namespaces: folders for tables
+- [ ] capstone: modeling product reviews for the shop
+
+## arc 11: tricks that make data fast
+after this arc: you know the handful of ideas every database, index and big data tool is built on
+
+- [ ] big O in plain words: how work grows as data grows ★
+- [ ] the shapes of growth: flat, straight line, curving up ★
+- [ ] a loop inside a loop: why some code gets slow so fast ★
+- [ ] binary search: finding one item in sorted data by halving ★
+- [ ] sorting: how merge sort splits and merges ★
+- [ ] why sorting costs more than one pass over the data
+- [ ] hash functions: turning anything into a number in a fixed range ★
+- [ ] hash tables: how a dictionary finds a key without searching ★
+- [ ] collisions: when two keys land in the same spot
+- [ ] trees: data that branches
+- [ ] balanced trees: why the depth stays small ★
+- [ ] the trade off: faster reads usually mean slower writes ★
+- [ ] capstone: the same lookup done three ways, scan, halving and hash
+
+## arc 12: inside a database server
+after this arc: you know what happens inside Postgres between sending a query and getting rows back, and why some queries are slow
+
+- [ ] how Postgres keeps a table on disk: rows packed into pages
+- [ ] full table scan: reading every page ★
+- [ ] index: a sorted shortcut ★
+- [ ] B tree: pages that point to pages ★
+- [ ] one lookup traced through a B tree ★
+- [ ] how a B tree stays balanced as rows arrive
+- [ ] composite indexes: sorted by the first column, then the second ★
+- [ ] the leftmost prefix rule ★
+- [ ] covering index
+- [ ] what indexes cost: slower writes, more disk ★
+- [ ] selectivity: when an index doesnt help ★
+- [ ] queries that cant use the index: functions on a column ★
+- [ ] the query planner ★
+- [ ] statistics: how the planner guesses row counts
+- [ ] nested loop join ★
+- [ ] hash join ★
+- [ ] merge join
+- [ ] reading EXPLAIN: the plan as a tree ★
+- [ ] EXPLAIN ANALYZE: the planners guesses vs what really happened ★
+- [ ] the buffer pool: keeping hot pages in memory
+- [ ] vacuum: how Postgres cleans up old row versions ★
+- [ ] capstone: one query from SQL text to rows on disk
+
+## arc 13: talking over a network
+after this arc: you can explain how data travels between machines safely, and what an API really is
+
+- [ ] DNS: turning names into addresses
+- [ ] URLs and query parameters
+- [ ] request and response ★
+- [ ] HTTP methods: GET, POST and friends ★
+- [ ] HTTP headers: notes attached to a request
+- [ ] status codes: what 200, 404 and 500 mean ★
+- [ ] APIs: a program built to be asked questions ★
+- [ ] JSON over HTTP: what an API answer looks like
+- [ ] API keys: a password for programs ★
+- [ ] tokens that expire: access tokens and refresh tokens ★
+- [ ] OAuth in one picture: getting a token without sharing a password ★
+- [ ] encryption: locking data so only a key opens it ★
+- [ ] public and private keys: locking without sharing a secret ★
+- [ ] cryptographic hashes: fingerprints you cant reverse ★
+- [ ] certificates: proving whose public key it is
+- [ ] encryption in transit: TLS and https
+- [ ] latency and bandwidth: slow vs narrow ★
+- [ ] capstone: one shop order fetched from an imaginary API, hop by hop
+
+## arc 14: python for data work
+after this arc: you can write, run and test real python scripts that move data between files, APIs and a database
+
+- [ ] modules and imports: using code from other files
+- [ ] running a python script from the terminal
+- [ ] packages and venvs: other peoples code, kept per project
+- [ ] git: commits as snapshots of your code ★
+- [ ] git branches: trying something without breaking main
+- [ ] pushing and pulling: sharing code through a remote
+- [ ] pull requests and merge conflicts ★
+- [ ] errors in scripts: catching them without hiding them ★
+- [ ] with: opening and closing things safely ★
+- [ ] classes in one picture: data and functions together
+- [ ] functions as values: passing and returning functions
+- [ ] decorators: the @ shorthand for wrapping a function ★
+- [ ] reading a CSV in python, row by row
+- [ ] reading JSON in python
+- [ ] environment variables: settings that live outside the code ★
+- [ ] calling an API from python ★
+- [ ] practice: dedupe and count orders in plain python ★
+- [ ] a dataframe: a table in memory
+- [ ] filter, select and sort in pandas, next to the SQL
+- [ ] groupby in pandas ★
+- [ ] merging dataframes: joins again ★
+- [ ] connecting python to a database
+- [ ] connection pools: why opening a connection is expensive
+- [ ] parameters, never string building: SQL injection ★
+- [ ] bulk loading: COPY instead of one INSERT per row ★
+- [ ] generators: one row at a time ★
+- [ ] data bigger than memory: reading in chunks ★
+- [ ] dates and time zones in python ★
+- [ ] logging: leaving a trail for later
+- [ ] tests: code that checks your code ★
+- [ ] testing a transformation with a tiny input table ★
+- [ ] SQL or dataframe: picking the tool ★
+- [ ] capstone: a tested script that loads a CSV into a table
+
+## arc 15: cleaning messy data
+after this arc: you can take data from the real world and make it trustworthy
+
+- [ ] why real data is messy: where the mess comes from
+- [ ] garbled text: bytes read with the wrong encoding ★
+- [ ] standardizing text: case, spaces, spelling ★
+- [ ] parsing dates written ten different ways ★
+- [ ] missing values in the wild: blanks, "N/A" and 9999 ★
+- [ ] type problems: numbers stored as text ★
+- [ ] units and currencies
+- [ ] exact duplicates vs near duplicates ★
+- [ ] matching records: exact keys vs fuzzy matching ★
+- [ ] similarity scores: how close is close enough
+- [ ] outliers: wrong, or just rare ★
+- [ ] regular expressions: character classes, repeats and anchors
+- [ ] capture groups: pulling pieces out of messy text
+- [ ] never clean in place: keep the raw copy ★
+- [ ] capstone: a messy export of shop orders, cleaned step by step
+
+## arc 16: databases built for analysis
+after this arc: you know why analytics databases store data sideways, and how that makes big questions cheap
+
+- [ ] OLTP vs OLAP: running the app vs answering questions ★
+- [ ] row storage: whole rows together
+- [ ] column storage: whole columns together ★
+- [ ] why column storage makes SUM fast ★
+- [ ] why columns compress so well
+- [ ] run length encoding ★
+- [ ] dictionary encoding ★
+- [ ] Parquet: a file stored by column ★
+- [ ] row groups and min max stats: skipping data you dont need ★
+- [ ] Avro: rows with the schema attached
+- [ ] partitioning files by date ★
+- [ ] partition pruning ★
+- [ ] the data warehouse ★
+- [ ] capstone: the same question on a row store and a column store
+
+## arc 17: modeling for analytics
+after this arc: you can design the tables a dashboard reads from
+
+- [ ] fact tables: the measurements ★
+- [ ] grain: what one row means ★
+- [ ] additive measures: safe to sum
+- [ ] semi additive measures: balances you cant sum over time ★
+- [ ] non additive measures: ratios and averages ★
+- [ ] dimension tables: the context ★
+- [ ] the four step design: process, grain, dimensions, facts ★
+- [ ] star schema ★
+- [ ] snowflake schema
+- [ ] surrogate keys in the warehouse ★
+- [ ] the date dimension
+- [ ] slowly changing dimensions: what if a customer moves ★
+- [ ] SCD type 1: overwrite
+- [ ] SCD type 2: a new row for every change ★
+- [ ] valid from, valid to and the current flag ★
+- [ ] joining a fact to the right version of a dimension ★
+- [ ] the unknown member: facts that arrive before their dimension ★
+- [ ] transaction fact tables
+- [ ] periodic snapshot fact tables ★
+- [ ] accumulating snapshot fact tables ★
+- [ ] factless fact tables: recording that something happened
+- [ ] role playing dimensions: one date table, three meanings
+- [ ] bridge tables: many to many in a star
+- [ ] conformed dimensions ★
+- [ ] one big table vs a star ★
+- [ ] modeling event data for product analytics ★
+- [ ] data vault in one picture
+- [ ] practice: model shop returns from a one paragraph request ★
+- [ ] capstone: the shop as a star schema
+
+## arc 18: the cloud in plain words
+after this arc: you know what "in the cloud" means when someone says the data lives there
+
+- [ ] the cloud: renting someone elses computers
+- [ ] regions and zones: where the computers are
+- [ ] virtual machines and serverless functions
+- [ ] managed services: paying someone to run the database
+- [ ] private networks and firewalls in the cloud
+- [ ] identities: users and service accounts
+- [ ] roles and policies: what an identity may do ★
+- [ ] paying for what you use: how cloud bills work ★
+- [ ] object storage: files in buckets ★
+- [ ] how a bucket differs from a disk ★
+- [ ] reading and writing a bucket from python ★
+- [ ] capstone: the shop moved to the cloud, piece by piece
+
+## arc 19: moving data with pipelines
+after this arc: you can design a pipeline that survives reruns, late data and changing sources
+
+- [ ] a pipeline: getting data from where it is to where its useful
+- [ ] events: something happened, at a time
+- [ ] sources: databases, files, APIs and events
+- [ ] extract, transform, load ★
+- [ ] ETL vs ELT ★
+- [ ] full extract vs incremental extract ★
+- [ ] the high water mark: remembering where you left off ★
+- [ ] why updated_at high water marks miss deletes ★
+- [ ] pulling from an API: pagination ★
+- [ ] rate limits: what a 429 response tells you
+- [ ] retries with exponential backoff: which errors to retry and how long to wait ★
+- [ ] files dropped by partners: landing zones
+- [ ] managed connectors: Fivetran and Airbyte
+- [ ] change data capture: reading the database change log ★
+- [ ] what a change event looks like: before, after and operation
+- [ ] staging tables ★
+- [ ] append loads ★
+- [ ] overwrite loads: replacing a whole partition ★
+- [ ] merge loads: applying a batch of changes with MERGE ★
+- [ ] idempotency: running twice gives the same result ★
+- [ ] making a load idempotent: delete then insert, or merge ★
+- [ ] duplicates from reruns and retries: dedup keys ★
+- [ ] backfills: rerunning the past ★
+- [ ] late arriving data ★
+- [ ] schema drift: when the source changes shape ★
+- [ ] batch sizes and micro batches
+- [ ] practice: an incremental load you can run twice safely ★
+- [ ] capstone: a daily orders pipeline end to end
+
+## arc 20: data quality
+after this arc: you catch bad data before someone makes a decision with it
+
+- [ ] what bad data looks like
+- [ ] warehouses accept keys but dont enforce them ★
+- [ ] null checks and uniqueness checks
+- [ ] orphan checks: foreign keys that point at nothing ★
+- [ ] range checks and accepted values
+- [ ] row counts and reconciliation ★
+- [ ] freshness: is the data late ★
+- [ ] volume anomalies: when today looks nothing like yesterday ★
+- [ ] where checks go in a pipeline ★
+- [ ] quarantine bad rows or stop the pipeline ★
+- [ ] data diffs: comparing a table before and after a change ★
+- [ ] data contracts ★
+- [ ] capstone: a quality gate on the orders pipeline
+
+## arc 21: orchestration
+after this arc: you can run many pipelines on a schedule, in the right order, and know when one breaks
+
+- [ ] scheduling: cron in one line
+- [ ] tasks and dependencies
+- [ ] DAG: a graph with no loops ★
+- [ ] retries and timeouts ★
+- [ ] task states: success, failed, skipped
+- [ ] tasks hand data over through storage ★
+- [ ] sensors: waiting for data to land
+- [ ] Jinja: templates that fill in text
+- [ ] Airflow: a DAG written as a python file ★
+- [ ] operators and tasks in Airflow
+- [ ] connections and hooks: credentials outside the DAG
+- [ ] the Airflow scheduler and workers
+- [ ] logical dates: how an orchestrator replays the past ★
+- [ ] catchup and backfills in Airflow ★
+- [ ] assets: scheduling by data instead of by task
+- [ ] other orchestrators: Dagster and Prefect
+- [ ] alerting: who finds out, and how
+- [ ] capstone: the orders pipeline as a DAG
+
+## arc 22: transformations in the warehouse
+after this arc: you can turn raw tables into clean, tested, documented tables people trust
+
+- [ ] layers: raw, cleaned, business ready ★
+- [ ] dbt: SQL files as a pipeline ★
+- [ ] ref: how dbt knows what runs first ★
+- [ ] sources and source freshness ★
+- [ ] staging models
+- [ ] materializations: view, table, incremental ★
+- [ ] incremental models: only process whats new ★
+- [ ] incremental strategies: merge, delete and insert, microbatch ★
+- [ ] incremental model traps: late rows and full refreshes ★
+- [ ] dbt snapshots: keeping history for you
+- [ ] tests in dbt ★
+- [ ] dbt unit tests: fixed input, expected output ★
+- [ ] macros: reusable SQL snippets
+- [ ] docs and the lineage graph
+- [ ] practice: a dbt project on the shop with sources, marts and tests ★
+- [ ] capstone: raw orders to a revenue table, layer by layer
+
+## arc 23: when one machine isnt enough
+after this arc: you know what changes when data lives on many machines
+
+- [ ] scale up vs scale out ★
+- [ ] replication: copies of the same data ★
+- [ ] leader and followers
+- [ ] replication lag ★
+- [ ] reading your own writes ★
+- [ ] sharding: splitting rows across machines ★
+- [ ] choosing a shard key ★
+- [ ] hot spots ★
+- [ ] network partitions: when machines cant reach each other ★
+- [ ] CAP: when the network breaks, pick consistency or availability ★
+- [ ] what CAP does not say ★
+- [ ] eventual consistency ★
+- [ ] clocks drift: why two machines disagree on the time ★
+- [ ] ordering without clocks: logical clocks
+- [ ] consensus: getting machines to agree
+- [ ] leader election
+- [ ] capstone: the shop running on three machines
+
+## arc 24: other kinds of databases
+after this arc: you can pick the right kind of database for a job
+
+- [ ] key value stores
+- [ ] document databases ★
+- [ ] wide column stores: not the same as column storage ★
+- [ ] search indexes: the inverted index ★
+- [ ] graph databases
+- [ ] time series databases
+- [ ] caches: a fast copy in memory
+- [ ] cache invalidation: when the copy goes stale ★
+- [ ] unstructured data: documents, images and audio
+- [ ] machine learning models in one picture
+- [ ] embeddings: turning text into a list of numbers ★
+- [ ] vector databases: searching by meaning ★
+- [ ] picking a database for the job ★
+- [ ] capstone: the shop data spread across the right stores
+
+## arc 25: distributed processing
+after this arc: you can reason about a job that runs on a hundred machines
+
+- [ ] parallelism: many workers, one job ★
+- [ ] Spark partitions: splitting data across workers ★
+- [ ] map: work on each piece alone
+- [ ] reduce: combine the pieces
+- [ ] shuffle: moving data so matching keys meet ★
+- [ ] why shuffles are expensive ★
+- [ ] HDFS and MapReduce: where big data started
+- [ ] Spark: the driver and the executors ★
+- [ ] dataframes in Spark
+- [ ] Spark SQL and the dataframe API build the same plan ★
+- [ ] lazy evaluation: transformations vs actions ★
+- [ ] jobs, stages and tasks ★
+- [ ] narrow vs wide transformations ★
+- [ ] repartition vs coalesce ★
+- [ ] data skew: one worker gets everything ★
+- [ ] salting: spreading a hot key ★
+- [ ] sort merge join: the default for two big tables ★
+- [ ] broadcast join ★
+- [ ] python UDFs: why theyre slow ★
+- [ ] caching in Spark: keeping a reused dataframe in memory
+- [ ] reading the Spark UI
+- [ ] partitionBy: how many files a write makes ★
+- [ ] the small files problem ★
+- [ ] compressed files, and why some cant be split ★
+- [ ] memory spills: when a worker runs out of room
+- [ ] practice: revenue per product in PySpark, then fix a skewed join ★
+- [ ] capstone: units sold per product, traced across three workers
+
+## arc 26: lakes and lakehouses
+after this arc: you know how cheap file storage became a real database
+
+- [ ] the data lake
+- [ ] why a lake turns into a swamp
+- [ ] table formats: data files plus metadata files ★
+- [ ] manifests: the list of files in one version ★
+- [ ] the table catalog: who knows where the current version is ★
+- [ ] optimistic commits: swapping one pointer ★
+- [ ] two writers at once: who wins ★
+- [ ] time travel: reading an old version
+- [ ] schema evolution in table formats ★
+- [ ] copy on write: rewriting files to change rows ★
+- [ ] merge on read: delete files applied at query time ★
+- [ ] compaction ★
+- [ ] Delta Lake, Iceberg and Hudi by name ★
+- [ ] Databricks: Spark, Delta and a catalog as one product ★
+- [ ] the lakehouse ★
+- [ ] capstone: one write to a lakehouse table, traced
+
+## arc 27: streaming
+after this arc: you can process data the moment it happens, and handle events that show up late
+
+- [ ] batch vs streaming ★
+- [ ] the log: an append only list of events ★
+- [ ] Kafka topics
+- [ ] producers and consumers
+- [ ] Kafka partitions and ordering ★
+- [ ] message keys: keeping related events together ★
+- [ ] offsets: a bookmark for each reader ★
+- [ ] consumer groups ★
+- [ ] retention and compacted topics
+- [ ] schemas for events: Avro and a schema registry ★
+- [ ] at most once vs at least once ★
+- [ ] dead letter queues: where bad events go
+- [ ] exactly once: why its hard ★
+- [ ] idempotent producers: retried sends without duplicates ★
+- [ ] Kafka transactions: output and offsets committed together ★
+- [ ] exactly once end to end: the sink matters too ★
+- [ ] stream processors: Flink and Spark streaming
+- [ ] event time vs processing time ★
+- [ ] tumbling windows ★
+- [ ] sliding windows
+- [ ] session windows ★
+- [ ] stream watermarks: deciding a window is done ★
+- [ ] allowed lateness: what to do with stragglers ★
+- [ ] state: remembering between events ★
+- [ ] checkpoints: saving state so a crash loses nothing ★
+- [ ] joining a stream to a table ★
+- [ ] backpressure: when consumers cant keep up ★
+- [ ] Kafka Connect and Debezium: tables into Kafka
+- [ ] change data capture as a stream ★
+- [ ] capstone: live orders per minute
+
+## arc 28: cloud warehouses and cost
+after this arc: you can make a slow, expensive query fast and cheap
+
+- [ ] separating storage from compute ★
+- [ ] Snowflake, BigQuery and Redshift: same idea, different knobs
+- [ ] loading files from a bucket in bulk ★
+- [ ] paying for compute time vs bytes scanned ★
+- [ ] virtual warehouses: sizing and auto suspend ★
+- [ ] clustering and partitioning in the warehouse ★
+- [ ] materialized views ★
+- [ ] result caching
+- [ ] approximate answers: counting distinct users cheaply ★
+- [ ] reading a warehouse query profile ★
+- [ ] zero copy clones and time travel in the warehouse ★
+- [ ] cost traps: the queries that burn money ★
+- [ ] the AWS data services by name: S3, Glue, Athena, EMR, Redshift, Kinesis ★
+- [ ] the same services on Google Cloud and Azure
+- [ ] capstone: making one expensive query cheap
+
+## arc 29: serving data
+after this arc: you know how the data you built reaches people and products
+
+- [ ] dashboards and BI tools: where most data ends up
+- [ ] metrics: one definition of revenue for everyone ★
+- [ ] the semantic layer ★
+- [ ] pre aggregation: choosing which summaries to build ★
+- [ ] reverse ETL: sending data back into the apps
+- [ ] features: the columns a model learns from ★
+- [ ] training sets without peeking at the future ★
+- [ ] serving data to an app through an API ★
+- [ ] pipelines for AI: chunking documents and loading embeddings ★
+- [ ] capstone: one revenue number traced from the dashboard back to the raw order
+
+## arc 30: running data in production
+after this arc: you can ship a pipeline other people depend on, and keep it running
+
+- [ ] deployment environments: dev, staging, prod ★
+- [ ] code review for data code
+- [ ] testing pipelines: more than unit tests ★
+- [ ] CI: checks on every change ★
+- [ ] a GitHub Actions workflow that tests every pull request ★
+- [ ] a Dockerfile, line by line ★
+- [ ] images and registries
+- [ ] docker compose: Postgres and Airflow together ★
+- [ ] Kubernetes in one picture
+- [ ] infrastructure as code ★
+- [ ] secrets: keeping passwords out of code ★
+- [ ] configuration files: one pipeline, many environments
+- [ ] logs and metrics ★
+- [ ] data observability tools: watching every table at once ★
+- [ ] SLAs and SLOs for data: promises about freshness ★
+- [ ] on call and runbooks
+- [ ] a broken dashboard, debugged step by step ★
+- [ ] postmortems: learning without blame
+- [ ] capstone: the production checklist for the orders pipeline
+
+## arc 31: governance, security and privacy
+after this arc: you handle peoples data like its yours
+
+- [ ] PII: data that points at a person ★
+- [ ] least privilege: only the access you need ★
+- [ ] access control: who can see what ★
+- [ ] row and column level security ★
+- [ ] encryption at rest
+- [ ] masking: hiding part of a value
+- [ ] hashing for privacy ★
+- [ ] tokenizing: swapping a value for a stand in
+- [ ] why hashing an email doesnt make it anonymous ★
+- [ ] privacy laws in plain words: GDPR and CCPA ★
+- [ ] retention: keeping data only as long as needed
+- [ ] deletion requests: erasing one person from every copy ★
+- [ ] audit logs: who looked at what
+- [ ] the data catalog: a search engine for your tables
+- [ ] capstone: locking down the shop customer data
+
+## arc 32: thinking like a data engineer
+after this arc: you can design a data platform from a business question and defend every choice
+
+- [ ] start from the question the data has to answer ★
+- [ ] back of the envelope: estimating data size and cost ★
+- [ ] batch or streaming: choosing for a real requirement ★
+- [ ] lambda and kappa architectures
+- [ ] warehouse, lake or lakehouse: choosing ★
+- [ ] build vs buy: managed tools ★
+- [ ] cost vs freshness vs complexity ★
+- [ ] data mesh: who owns the data
+- [ ] migrating a pipeline without breaking anyone ★
+- [ ] writing down a design decision
+- [ ] reading a full data platform diagram ★
+- [ ] the interview loop: SQL, python, modeling, design, behavioral ★
+- [ ] a design interview: requirements before boxes ★
+- [ ] practice: two design interviews out loud, clickstream and Postgres to warehouse ★
+- [ ] the shop pipeline on GitHub as a portfolio ★
+- [ ] the job: data engineer, analytics engineer and analyst
+- [ ] capstone: the whole journey on one map, every arc capstone linked
