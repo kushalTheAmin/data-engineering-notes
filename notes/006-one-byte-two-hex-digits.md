@@ -62,4 +62,4 @@ no. bytes are always two digits, so "1f2" has an odd count and something dropped
 </details>
 
 ---
-prev: [005 hexadecimal, counting with sixteen digits](./005-hexadecimal.md) | next: not written yet
+prev: [005 hexadecimal, counting with sixteen digits](./005-hexadecimal.md) | next: [007 text is numbers, one character and one number](./007-text-is-numbers.md)

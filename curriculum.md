@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 006 showed a byte as exactly two hex digits (first 4 bits, last 4 bits), ff is 15 times 16 plus 15 which is 255, bytes keep a leading zero (05), web colors are three bytes. the next brick is text: each character is stored as one number, like the 100 for d
-last visuals: worked table with python, comparison table (0 to 15 in decimal, binary, hex) with python, python with output (bytes of dhokla), worked table with python, python with output plus agreement block
-last exits: stops, stops, stops, stops, forward
-last reactions: this made 256 feel a lot less random, i kept reading a b c as letters, i assumed 8 was a law of nature, this clicked for me once i saw binary is the exact same idea, i honestly expected something richer at the bottom, heres the part i didnt expect
+baton: 007 showed that a character is one number from an agreed table, the character 2 is 50 (hex 32) not the number 2, A is 65 and a is 97, and numbers saved as text sort wrong. the next brick is that the table only has 128 spots, so it runs out for the worlds languages
+last visuals: comparison table with python, worked table with python, comparison table (0 to 15 in decimal, binary, hex) with python, python with output (bytes of dhokla), worked table with python
+last exits: stops, stops, stops, stops, stops
+last reactions: i honestly assumed the 2 in a file was just a 2, this made 256 feel a lot less random, i kept reading a b c as letters, i assumed 8 was a law of nature, this clicked for me once i saw binary is the exact same idea, i honestly expected something richer at the bottom, heres the part i didnt expect
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -20,7 +20,7 @@ after this arc: you know what a computer actually stores when it "saves" an orde
 - [x] bytes: 8 bits, 256 possible values ★ (note 004)
 - [x] hexadecimal: counting with sixteen digits (note 005)
 - [x] one byte, two hex digits: why ff is 255 ★ (note 006)
-- [ ] text is numbers: one character, one number
+- [x] text is numbers: one character, one number (note 007)
 - [ ] ASCII runs out: 128 characters isnt enough for the world
 - [ ] unicode: one number for every character in every script ★
 - [ ] utf-8: storing those numbers in 1 to 4 bytes ★
