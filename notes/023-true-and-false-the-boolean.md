@@ -4,7 +4,7 @@ section: data at the atom level, part 23, ~2 min read
 
 the shop, the imaginary gujarati snack store these notes run on, keeps its orders in a table, rows with named columns. one column is status, with words like delivered. so what does the database hand back when you ask whether an order is delivered? not a word, and not a number you picked.
 
-it hands back a boolean: a value with exactly two possible states, true or false. thats the whole type.
+it hands back a boolean: a value that is true or false. thats nearly the whole type.
 
 ```sql
 SELECT order_id, status, status = 'delivered' AS delivered FROM orders;
@@ -21,7 +21,7 @@ order_id | status | delivered
 107 | delivered | true
 ```
 
-the third column is a new column the query made on the fly, and every comparison you will ever write gives one of these. a flag column like is_delivered is the same thing saved in the table.
+the third column is a new column the query made on the fly, and every comparison you will ever write gives one of these, unless a value is missing, which gives null, a third answer meaning unknown. SELECT lists columns, FROM names the table, and = asks if two things are equal. a flag column like is_delivered is the same thing saved in the table.
 
 two states is one [bit](./002-bits.md), the on/off switch. i figured a boolean would cost one lonely bit, but computers hand out storage in [bytes](./004-bytes.md), groups of 8 bits, so Postgres, a popular server database, spends 1 whole byte on each boolean: https://www.postgresql.org/docs/current/datatype-boolean.html
 

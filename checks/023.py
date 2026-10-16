@@ -11,6 +11,9 @@ flags = [True, True, True, False, True, False, True]
 assert sum(flags) == 5 and True == 1 and False == 0
 # one bit holds two states, a byte is 8 bits
 assert 2 ** 1 == 2 and 8 == 8
+# comparing with a missing value gives null, a third answer
+assert con.execute("SELECT NULL = 'delivered'").fetchone()[0] is None
 # source: https://www.postgresql.org/docs/current/datatype-boolean.html
+#   confirmed: "a third state, unknown, which is represented by the SQL null value"
 #   confirmed: boolean uses 1 byte; input accepts true/yes/on/1 and false/no/off/0
 print("023 ok")
