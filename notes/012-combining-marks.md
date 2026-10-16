@@ -20,7 +20,7 @@ chr(769) is the accent mark. look at the s column, you cant tell the rows apart,
 
 i kept assuming one thing on screen meant one number underneath. [011](./011-why-gujarati-takes-3-bytes.md) already hinted at it with the vowel sign ો, and ગુ is the same story, ગ plus the sign ુ, 2 code points and 6 bytes.
 
-this bites in real systems: a search or a join on a name typed two ways just misses. the fix is normalizing both to one form before comparing, which is a later note. [source on the idea](https://en.wikipedia.org/wiki/Combining_character)
+this bites in real systems: a search or a lookup on a name typed two ways just misses. the fix is normalizing both to one form before comparing, which is a later note. [source on the idea](https://en.wikipedia.org/wiki/Combining_character)
 
 ### check yourself
 
