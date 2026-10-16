@@ -1,7 +1,8 @@
 # checks for notes/005-hexadecimal.md
 # the table: 0 to 15 in decimal, binary and hex
+table = ["0000","0001","0010","0011","0100","0101","0110","0111","1000","1001","1010","1011","1100","1101","1110","1111"]
 for n in range(16):
-    assert format(n, "04b") == format(n, "04b") and format(n, "x") == "0123456789abcdef"[n]
+    assert format(n, "04b") == table[n] and format(n, "x") == "0123456789abcdef"[n]
 assert format(10, "x") == "a" and format(15, "x") == "f"
 # 4 bits: 2 times 2 times 2 times 2 patterns
 assert 2 * 2 * 2 * 2 == 16 == 2 ** 4
