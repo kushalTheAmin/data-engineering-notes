@@ -53,4 +53,4 @@ a byte tops out at 255 and 2722 is bigger, so it cant fit. Unicode only picks th
 </details>
 
 ---
-prev: [008 ascii runs out, 128 spots isnt enough for the world](./008-ascii-runs-out.md) | next: not written yet
+prev: [008 ascii runs out, 128 spots isnt enough for the world](./008-ascii-runs-out.md) | next: [010 utf-8, storing those numbers in 1 to 4 bytes](./010-utf-8.md)

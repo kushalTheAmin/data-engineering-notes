@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 009 showed Unicode gives every character one number (a code point, like U+0AA2 for ઢ, 2722) with room for 1114112, and keeps ascii numbers the same, but only picks numbers, not how they sit in bytes, and 2722 doesnt fit in one byte. the next brick is utf-8, the way to store those numbers in 1 to 4 bytes
-last visuals: python with output (code points of a, é, ગ, ઢ), python with output (ascii spots, gujarati dhokla), comparison table with python, worked table with python, comparison table (0 to 15 in decimal, binary, hex) with python, python with output (bytes of dhokla), worked table with python
-last exits: stops, forward, stops, stops, stops, stops, stops
-last reactions: that second one tripped me up, i kept assuming a byte meant one letter everywhere, i honestly assumed the 2 in a file was just a 2, this made 256 feel a lot less random, i kept reading a b c as letters, i assumed 8 was a law of nature, this clicked for me once i saw binary is the exact same idea, i honestly expected something richer at the bottom, heres the part i didnt expect
+baton: 010 showed UTF-8 stores each code point in 1 to 4 bytes (0 to 127 in 1, up to 2047 in 2, up to 65535 in 3, the rest in 4), keeps ascii bytes unchanged, and makes character count and byte count disagree, but only gave the ranges and example bytes. the next brick is why a gujarati letter takes 3 bytes and g takes 1, the real cost of that on a whole word
+last visuals: range table with python and output (bytes of d, é, ગ, 🙂), python with output (code points of a, é, ગ, ઢ), python with output (ascii spots, gujarati dhokla), comparison table with python, worked table with python
+last exits: stops, stops, forward, stops, stops
+last reactions: what would you pick, i first guessed give every character 4 bytes, that second one tripped me up, i kept assuming a byte meant one letter everywhere, i honestly assumed the 2 in a file was just a 2, this made 256 feel a lot less random, i kept reading a b c as letters, i assumed 8 was a law of nature, this clicked for me once i saw binary is the exact same idea, i honestly expected something richer at the bottom, heres the part i didnt expect
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -23,7 +23,7 @@ after this arc: you know what a computer actually stores when it "saves" an orde
 - [x] text is numbers: one character, one number (note 007)
 - [x] ASCII runs out: 128 characters isnt enough for the world (note 008)
 - [x] unicode: one number for every character in every script ★ (note 009)
-- [ ] utf-8: storing those numbers in 1 to 4 bytes ★
+- [x] utf-8: storing those numbers in 1 to 4 bytes ★ (note 010)
 - [ ] why a gujarati letter takes 3 bytes and "g" takes 1 ★
 - [ ] combining marks: when one letter on screen is two numbers ★
 - [ ] negative numbers: the sign bit idea

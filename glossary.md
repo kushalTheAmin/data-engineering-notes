@@ -16,3 +16,4 @@ every term these notes have built, in plain words, with the note that built it. 
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
 | the shop | the imaginary gujarati snack store every example uses | [001](./notes/001-data-is-facts-and-numbers.md) |
 | Unicode | one agreed table giving every character in every script a number | [009](./notes/009-unicode.md) |
+| UTF-8 | a way to store each code point as 1 to 4 bytes | [010](./notes/010-utf-8.md) |
