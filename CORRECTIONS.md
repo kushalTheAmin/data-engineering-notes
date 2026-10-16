@@ -3,6 +3,7 @@
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
 - 009, 2026-10-16: the opening question asked if one table means byte 233 never means two things again, but Unicode only hands out numbers and the note itself says how they sit in bytes is a separate question; it now says the number 233. evidence: python, bytes([233]).decode("latin-1") is é but bytes([233]).decode("cp1251") is й, so a byte still depends on the encoding
+- 008, 2026-10-16: said every gujarati letter has a number far past 127 right after saying it has no spot, with no hint where the number comes from; it now says the numbers come from pythons bigger table, next note. evidence: python, ord("ગ") == 2711, which is not in the 128 character ascii table
 - 008, 2026-10-16: used CSV without saying what it is, so a reader landing on this note alone could not follow; it now says a CSV is a plain text file of rows. evidence: the text of 007, the only place CSV was explained
 - 007, 2026-10-16: used ord, repr and CSV without saying what they are; one line now glosses each. evidence: the text of 001, which is the only place ord was explained
 - 006, 2026-10-16: said all six letters start with 6 because of where letters sit, which is only true for a to o (97 to 111); p to z start with 7. also said every hex dump shows two characters per byte, but od -x groups bytes in pairs, so it now says typical. evidence: python, ord("p") == 112 == 0x70; od -x of dhokla prints 6864 6b6f 616c
