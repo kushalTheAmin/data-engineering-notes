@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 27
+notes so far: 28
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -36,3 +36,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [025 unix time, counting seconds from 1970](./notes/025-unix-time.md): one moment, 13:15 UTC on 1 April, is the same number 1775049300 on every clock
 - [026 seconds, milliseconds, microseconds: one moment, three numbers](./notes/026-seconds-milliseconds-microseconds.md): the same count times 1000 per row, and reading the wrong unit gives January 1970
 - [027 dates without times, and times without dates](./notes/027-dates-and-times-apart.md): asking for orders up to 1 April returns 0, because the date means midnight
+- [028 time zones, offsets from UTC](./notes/028-time-zone-offsets.md): 09:15-04:00 and 18:45+05:30 are the same moment, and an offset is still not a time zone

@@ -42,4 +42,4 @@ i assumed a date was a timestamp with the time hidden, but a date has no time at
 so what: this is the classic end-of-month bug, a report for "up to 30 April" that quietly drops everything ordered on the 30th. one more caveat, neither type says which zones clock decided the day, and [024](./024-utc.md) already showed one moment can be two days, so you still need to know the clock.
 
 ---
-prev: [026 seconds, milliseconds, microseconds](./026-seconds-milliseconds-microseconds.md) | next: not written yet
+prev: [026 seconds, milliseconds, microseconds](./026-seconds-milliseconds-microseconds.md) | next: [028 time zones, offsets from UTC](./028-time-zone-offsets.md)
