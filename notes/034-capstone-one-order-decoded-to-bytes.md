@@ -20,7 +20,7 @@ for field in line.split(","):
 delivered             9 bytes  64 65 6c 69 76 65 72 65 64
 ```
 
-3 + 1 + 19 + 9 is 32, plus 3 commas is 35, the size [033](./033-kilobytes-to-terabytes.md) scaled up to terabytes. the 101 is not the number 101, it is the three bytes 31 30 31, the characters 1, 0, 1. as a real number, 101 would be the 32 bit integer 00 00 00 65, and the time would be the count 1775049300. every piece of the line sits on top of an idea from this section:
+3 + 1 + 19 + 9 is 32, plus 3 commas is 35, the size [033](./033-kilobytes-to-terabytes.md) scaled up to terabytes. the 101 is not the number 101, it is the three bytes 31 30 31, the characters 1, 0, 1. as a real number, 101 would be a 32 bit integer, 65 in hex padded to 00 00 00 65 (many machines keep those bytes in reverse), and the time would be the count 1775049300. every piece of the line sits on top of an idea from this section:
 
 | layer | what it settled | notes |
 |---|---|---|
@@ -38,7 +38,7 @@ i expected the line to carry its own meaning. it carries none, 31 30 31 only rea
 
 ### check yourself
 
-1. the 35 bytes are order 101. predict the line size for orders 104 and 106, where the line is order_id, customer_id, ordered_at and status, glued with commas. SELECT picks columns, FROM names the table, WHERE keeps matching rows, strlen counts bytes.
+1. the 35 bytes are order 101. predict the line size for orders 104 and 106, where the line is order_id, customer_id, ordered_at and status, glued with commas. SELECT picks columns, FROM names the table, WHERE keeps matching rows, strlen counts bytes, || glues text together and ::VARCHAR turns a number into text.
 ```sql
 SELECT order_id, strlen(order_id::VARCHAR || ',' || customer_id::VARCHAR || ',' || ordered_at::VARCHAR || ',' || status) AS line_bytes FROM orders WHERE order_id IN (104, 106);
 ```

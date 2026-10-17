@@ -18,6 +18,12 @@ assert fields[2].encode().hex(" ") == "32 30 32 36 2d 30 34 2d 30 31 20 30 39 3a
 assert fields[3].encode().hex(" ") == "64 65 6c 69 76 65 72 65 64"
 # as a 32 bit integer, 101 is 00 00 00 65
 assert (101).to_bytes(4, "big").hex(" ") == "00 00 00 65"
+# many machines (little endian) keep the same four bytes in reverse
+assert (101).to_bytes(4, "little").hex(" ") == "65 00 00 00"
+import sys
+assert sys.byteorder == "little"
+# source: https://en.wikipedia.org/wiki/Endianness
+#   confirmed: little-endian stores the least significant byte first, and is the dominant order on x86 and most current processors
 # 13:15 UTC on 1 April 2026 (09:15 New York, -04:00) is 1775049300
 from datetime import datetime, timezone
 assert int(datetime(2026, 4, 1, 13, 15, tzinfo=timezone.utc).timestamp()) == 1775049300
