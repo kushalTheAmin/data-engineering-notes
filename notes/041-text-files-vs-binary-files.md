@@ -28,7 +28,7 @@ each row is the number, its text bytes and count, then its 4 byte integer and co
 
 the last line is the catch. a0 on its own isnt valid UTF-8, so a text editor opening this file shows junk or gives up. and nothing in a file says which kind it is. 65 00 00 00, the integer for 101, happens to decode as an e followed by three invisible empty characters, so a tool can only guess.
 
-this bites with tools like Parquet, a file format analytics tools read. it is binary, and starts with the 4 bytes PAR1. open it in a text editor and you see no rows, only junk. a csv you can read with your eyes.
+this bites with tools like Parquet, a file format analytics tools read. it is binary, and starts with the 4 bytes PAR1. open it in a text editor and you see mostly junk, not neat rows. a csv you can read with your eyes.
 
 line endings are next, the invisible characters that quietly break text files.
 

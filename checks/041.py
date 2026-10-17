@@ -24,4 +24,12 @@ assert struct.pack("<i", 101).decode("utf-8") == "e\x00\x00\x00"
 assert len(str(10 ** 8).encode()) == 9
 # source: https://parquet.apache.org/docs/file-format/
 #   confirmed: a Parquet file starts with the 4-byte magic number "PAR1"
+# a small parquet file written by duckdb: starts and ends with PAR1, and text values show up among unreadable bytes
+import tempfile
+import duckdb
+pq = os.path.join(tempfile.mkdtemp(), "o.parquet")
+duckdb.sql(f"COPY (SELECT 101 AS order_id, 'delivered' AS status) TO '{pq}' (FORMAT parquet)")
+raw = open(pq, "rb").read()
+assert raw[:4] == b"PAR1" and raw[-4:] == b"PAR1"
+assert b"delivered" in raw and raw.decode("utf-8", "replace").count("\ufffd") > 0
 print("041 ok")
