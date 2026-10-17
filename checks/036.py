@@ -18,4 +18,8 @@ assert len(line) == len(line.encode())
 #   confirmed: volatile memory "retains its contents while powered on but when the power is interrupted, the stored data is quickly lost"; "Most general-purpose random-access memory (RAM) is volatile"
 # source: https://man7.org/linux/man-pages/man2/fsync.2.html
 #   confirmed: fsync() flushes modified in-core data of the file (buffer cache pages) out to the disk device
+# source: https://www.postgresql.org/docs/current/runtime-config-wal.html
+#   confirmed: synchronous_commit on is the default, and "the local behavior of all non-off modes is to wait for local flush of WAL to disk"
+# source: https://www.postgresql.org/docs/current/wal-intro.html
+#   confirmed: changes are logged first, after "WAL records describing the changes have been flushed to permanent storage"; data pages need not be flushed on every commit
 print("036 ok")

@@ -19,7 +19,7 @@ skip step 2 and the disk never gets the line, so after the restart nothing has i
 
 one gotcha: "written" doesnt always mean on disk yet. the computer can hold a fresh write in memory for a moment first, and a program has to ask for a flush (fsync on linux, an operating system) to force it onto the disk. a power cut in that gap loses a save you thought you made.
 
-this is why databases, programs that store your tables, normally put your rows on disk before saying "saved". how much slower that is, is the next one.
+this is why databases, programs that store your tables, normally put your change on disk, in a log, before saying "saved". how much slower that is, is the next one.
 
 ---
 prev: [035 the processor, the part that does the work](./035-the-processor.md) | next: [037 disk is slow, memory vs SSD vs spinning disk in real numbers](./037-disk-is-slow.md)
