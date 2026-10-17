@@ -3,6 +3,7 @@ import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _shop import shop
 from datetime import datetime, timezone
+from datetime import timedelta
 from zoneinfo import ZoneInfo
 con = shop()
 ny, mu = ZoneInfo("America/New_York"), ZoneInfo("Asia/Kolkata")
@@ -17,6 +18,8 @@ for oid, (u, n, m) in want.items():
     assert f(utc) == u and f(utc.astimezone(mu)) == m
 assert datetime(2026, 4, 1, 13, 15, tzinfo=timezone.utc).astimezone(ny).strftime("%z") == "-0400"
 assert datetime(2026, 4, 1, 13, 15, tzinfo=timezone.utc).astimezone(mu).strftime("%z") == "+0530"
+# 09:15 minus -4 hours is 13:15: undoing the offset means subtracting it
+assert (datetime(2026, 4, 1, 9, 15) - timedelta(hours=-4)).strftime("%H:%M") == "13:15"
 # python block
 out = [(u := datetime(2026, 11, 1, h, 30, tzinfo=timezone.utc)).isoformat() + " -> " + u.astimezone(ny).isoformat() for h in [5, 6]]
 assert out == ["2026-11-01T05:30:00+00:00 -> 2026-11-01T01:30:00-04:00", "2026-11-01T06:30:00+00:00 -> 2026-11-01T01:30:00-05:00"]

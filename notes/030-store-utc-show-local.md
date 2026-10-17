@@ -6,7 +6,7 @@ section: data at the atom level, part 30, ~2 min read
 
 the habit: store every moment in [UTC](./024-utc.md), the one reference clock that never shifts, and convert to a local clock only at the last second, when a human is about to look at it.
 
-the shop, the imaginary gujarati snack store these notes run on, keeps ordered_at as New York clock text. below i add Aprils offset of -04:00 to get the UTC column, then show each order on two screens, using Mumbais +05:30 from [028](./028-time-zone-offsets.md). a slice of 3 orders:
+the shop, the imaginary gujarati snack store these notes run on, keeps ordered_at as New York clock text. below i undo Aprils offset of -04:00 (subtract it, so 09:15 becomes 13:15) to get the UTC column, then show each order on two screens, using Mumbais +05:30 from [028](./028-time-zone-offsets.md). a slice of 3 orders:
 
 | order | stored (UTC) | New York screen | Mumbai screen |
 |---|---|---|---|
