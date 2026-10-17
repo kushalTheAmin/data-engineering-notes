@@ -13,9 +13,9 @@ daylight saving is when a place moves its clocks by an hour twice a year. [UTC](
 | 06:30 | 01:30 | -05:00 | 1793514600 |
 | 07:30 | 02:30 | -05:00 | 1793518200 |
 
-look at the middle two rows. same clock text, 01:30, but the unix times differ by 3600 seconds, one full hour. say Asha, a shop customer in Jersey City (same clock as New York), ordered at 01:30 that night. this is a made up order, not a shop row. the text 2026-11-01 01:30:00 is an ambiguous time, a reading that fits two moments, and it cant tell you which one.
+look at the middle two rows. same clock text, but the unix times differ by 3600 seconds, one full hour. say Asha, a shop customer in Jersey City (same clock as New York), ordered at 01:30 that night. this is a made up order, not a shop row. the text 2026-11-01 01:30:00 is an ambiguous time, a reading that fits two moments, and it cant tell you which one.
 
-i figured a clock reading was at least unique inside one city, and it is, except for this one hour a year. the offset is the only thing that separates the two.
+i figured a clock reading was at least unique inside one city, and it is, except one hour a year. only the offset separates the two.
 
 in spring its the reverse: clocks jump from 02:00 to 03:00, so 02:30 on 8 March 2026 never appears on a New York clock at all.
 
