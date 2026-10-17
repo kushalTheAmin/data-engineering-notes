@@ -38,7 +38,7 @@ so what: a report that says "4 customers have a city" is right and "5 customers"
 
 ### check yourself
 
-1. predict both numbers. count(*) counts rows, count(city) counts rows with a city.
+1. predict both numbers. count(*) counts rows, count(city) counts rows with a city, and IN keeps rows whose name is in the list.
 ```sql
 SELECT count(*) AS n, count(city) AS c FROM customers WHERE name IN ('Disha', 'Esha');
 ```
