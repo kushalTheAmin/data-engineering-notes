@@ -42,4 +42,6 @@ assert [s for s, n in rle(statuses) for _ in range(n)] == statuses
 #   for files without many runs, RLE could increase the file size
 # source: https://parquet.apache.org/docs/file-format/data-pages/encodings/
 #   confirmed: Parquet's RLE/bit-packing hybrid encoding stores repeated values more efficiently
+# source: https://en.wikipedia.org/wiki/Data_compression
+#   confirmed: "No information is lost in lossless compression. Lossy compression reduces bits by removing unnecessary or less important information."
 print("047 ok")

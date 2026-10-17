@@ -4,7 +4,7 @@ section: memory, disks and files, part 13, ~2 min read
 
 a file listing the shops order statuses says `delivered` again and again. why store the same word five times? [046](./046-writing-safely.md) copied every byte of such a file.
 
-compression is storing the same information in fewer [bytes](./004-bytes.md) (here one byte is one character), so you can rebuild the original exactly. the simplest version is run length encoding: a run is the same value repeated back to back, and you store the value once with a count.
+lossless compression is storing the same information in fewer [bytes](./004-bytes.md) (here one byte is one character), so you can rebuild the original exactly. lossy kinds, like jpeg, drop detail instead. the simplest version is run length encoding: a run is the same value repeated back to back, and you store the value once with a count.
 
 the shop, the imaginary gujarati snack store these notes run on, has 7 orders, 101 to 107, and each has a status. each status is a line of text in a [file](./039-a-file-is-a-named-list-of-bytes.md), ending with a newline character, which is one byte too. each run becomes `count,word` plus a newline:
 
@@ -36,7 +36,7 @@ in the original order the lone `cancelled` breaks the run, so only 10 bytes save
 
 i expected compression to always shrink things, and it doesnt. a run of one costs `1,cancelled`, 12 bytes with its newline against 10 for the bare word and its newline. no repeats, bigger file.
 
-Parquet, a file format for storing big tables, uses run length encoding to store repeated values, and a column of a table that holds mostly one word is where it shines. the next one is about what this costs.
+Parquet, a file format for storing big tables, uses run length encoding to store repeated values, and a column holding mostly one word is where it shines. the next one is about what this costs.
 
 ---
 prev: [046 writing safely, write a new file then rename it](./046-writing-safely.md) | next: [048 compression trades processor time for disk space](./048-compression-trades-processor-for-space.md)
