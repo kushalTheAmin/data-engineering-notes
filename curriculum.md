@@ -67,7 +67,8 @@ after this arc: you know where data lives, why reading it is slow, and how to pe
 - [x] compression: making files smaller by spotting repeats (note 047)
 - [x] compression trades processor time for disk space (note 048)
 - [x] the terminal: running programs by typing (note 049)
-- [ ] processes and the operating system: programs while they run
+- [ ] processes: a program while it runs
+- [ ] the operating system: the program that shares the machine out
 - [ ] the working directory: where the terminal is standing
 - [ ] absolute vs relative paths ★
 - [ ] head and tail: looking at the start and end of a file
