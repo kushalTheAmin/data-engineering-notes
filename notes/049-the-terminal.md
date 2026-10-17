@@ -13,7 +13,7 @@ $ echo dhokla khandvi
 dhokla khandvi
 ```
 
-echo is a program that prints its arguments back, and the $ is the shell saying ready. the shell cuts your line at spaces, like this in python (shlex is a python module that splits the way a shell does):
+echo prints its arguments back, and the $ is the shell saying ready. the shell cuts your line at spaces, like this in python (shlex is a python module that splits the way a shell does):
 
 ```python
 import shlex
