@@ -27,4 +27,6 @@ assert not os.path.exists(p)
 #   confirmed: os.replace renames src to dst, atomic if successful (POSIX requirement), may fail across filesystems; os.fsync forces write of the file to disk after f.flush()
 # source: https://docs.python.org/3/library/shutil.html
 #   confirmed: shutil.move uses os.rename on the same filesystem, otherwise copies then removes the source
+# source: https://man7.org/linux/man-pages/man2/fsync.2.html
+#   confirmed: fsync() does not necessarily ensure that the entry in the directory containing the file has also reached disk; for that an explicit fsync() on a file descriptor for the directory is also needed
 print("046 ok")

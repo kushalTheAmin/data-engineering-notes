@@ -4,9 +4,9 @@ section: memory, disks and files, part 12, ~2 min read
 
 if any write can tear (get cut off partway), how does anything ever update a file safely? [045](./045-torn-writes.md) left the shops orders file reading `106,deliveg`, and the fix is to never write into the old file at all.
 
-the safe way: write the whole new version to a temporary file in the same [folder](./040-folders-and-paths.md), then rename it over the old name. a rename just changes which [file](./039-a-file-is-a-named-list-of-bytes.md) a name points at, and on linux it is atomic, meaning it happens whole or not at all, never half. the man page for rename promises other programs never find the name missing.
+the safe way: write the whole new version to a temporary file in the same [folder](./040-folders-and-paths.md), then rename it over the old name. a rename just changes which [file](./039-a-file-is-a-named-list-of-bytes.md) a name points at, and on linux it is atomic, meaning it happens whole or not at all, never half. the man page promises no program finds the name missing.
 
-the shop, the imaginary snack store these notes run on, updates order 106 this way. old orders.csv is 96 bytes, the new copy is 98. with 16 byte blocks like 045, here is where the power can die:
+the shop, the imaginary snack store these notes run on, updates order 106 this way. old orders.csv is 96 bytes, the new copy 98. with 16 byte blocks like 045, here is where the power can die:
 
 | power dies | orders.csv | orders.csv.tmp |
 |---|---|---|
@@ -35,9 +35,8 @@ print(open(path).read().strip(), sorted(os.listdir(os.path.dirname(path))))
 106,delivered ['orders.csv']
 ```
 
-i expected the careful way to write a file to be a careful write, and its the opposite, you dont touch the file. the fsync line pushes the new bytes to disk now, instead of leaving them waiting in memory, and it is what makes row 2 true after a power cut. keep the tmp in the same folder, since rename cant move between file systems, roughly separate drives.
+i expected a careful write, and its the opposite, you dont touch the file. the fsync line pushes the new bytes to disk now, instead of leaving them waiting in memory, and it is what makes row 2 true after a power cut. the rename is only sure to reach disk once the folder is fsynced too, else row 3 can come back as the old file, whole. keep the tmp in the same folder, since rename cant move between file systems, roughly separate drives.
 
-python calls it os.replace.
 
 ### check yourself
 
