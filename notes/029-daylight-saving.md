@@ -4,7 +4,7 @@ section: data at the atom level, part 29, ~2 min read
 
 can two different moments show the exact same clock reading in one city? on 1 November 2026 in New York they do. 01:30 happens twice that night.
 
-daylight saving is when a place moves its clocks by an hour twice a year. [UTC](./024-utc.md), the one reference clock, never moves. in the fall New York sets its clock back an hour, so the hour after 01:00 is lived twice, first with an [offset](./028-time-zone-offsets.md) of -04:00 (hours behind UTC), then -05:00. here is that night with the [unix time](./025-unix-time.md), (seconds counted since 1970) of each moment:
+daylight saving is when a place moves its clocks, usually by an hour, twice a year. [UTC](./024-utc.md), the one reference clock, never moves. in the fall New York sets its clock back an hour, so the hour after 01:00 is lived twice, first with an [offset](./028-time-zone-offsets.md) of -04:00 (hours behind UTC), then -05:00. here is that night with the [unix time](./025-unix-time.md), (seconds counted since 1970) of each moment:
 
 | UTC | New York clock | offset | unix time |
 |---|---|---|---|

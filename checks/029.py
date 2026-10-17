@@ -27,4 +27,6 @@ assert str(con.sql("SELECT ordered_at + INTERVAL '5 hours' FROM orders WHERE ord
 assert datetime(2026, 4, 8, 14, 0, tzinfo=timezone.utc).astimezone(ny).strftime("%H:%M %z") == "10:00 -0400"
 # source: https://peps.python.org/pep-0495/
 # confirmed: fold is 0 except for the second occurrence of an ambiguous time, where it is 1
+# source: https://en.wikipedia.org/wiki/Daylight_saving_time
+# confirmed: "A one-hour change is usual, but twenty-minute and two-hour changes have been used in the past. Notable exceptions today include Lord Howe Island with a thirty-minute change"
 print("029 ok")
