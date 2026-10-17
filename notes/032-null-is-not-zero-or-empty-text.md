@@ -67,4 +67,4 @@ the 0 rows are dropped, so it divides 12 by 3 and matches avg(stars). but that f
 </details>
 
 ---
-prev: [031 null, a marker for a missing value](./031-null.md) | next: not written yet
+prev: [031 null, a marker for a missing value](./031-null.md) | next: [033 kilobytes to terabytes, how big data gets](./033-kilobytes-to-terabytes.md)
