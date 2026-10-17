@@ -27,6 +27,10 @@ assert sys.byteorder == "little"
 # 13:15 UTC on 1 April 2026 (09:15 New York, -04:00) is 1775049300
 from datetime import datetime, timezone
 assert int(datetime(2026, 4, 1, 13, 15, tzinfo=timezone.utc).timestamp()) == 1775049300
+# read as UTC instead, 09:15 would be a different count, so the zone matters
+assert int(datetime(2026, 4, 1, 9, 15, tzinfo=timezone.utc).timestamp()) == 1775034900
+from zoneinfo import ZoneInfo
+assert int(datetime(2026, 4, 1, 9, 15, tzinfo=ZoneInfo("America/New_York")).timestamp()) == 1775049300
 # quiz 1: lines of 35 and 33 bytes
 rows = dict(con.execute("SELECT order_id, strlen(order_id::VARCHAR || ',' || customer_id::VARCHAR || ',' || ordered_at::VARCHAR || ',' || status) FROM orders").fetchall())
 assert rows[104] == 35 and rows[106] == 33 and len("cancelled") == 9 and len("pending") == 7

@@ -20,7 +20,7 @@ for field in line.split(","):
 delivered             9 bytes  64 65 6c 69 76 65 72 65 64
 ```
 
-3 + 1 + 19 + 9 is 32, plus 3 commas is 35, the size [033](./033-kilobytes-to-terabytes.md) scaled up to terabytes. the 101 is not the number 101, it is the three bytes 31 30 31, the characters 1, 0, 1. as a real number, 101 would be a 32 bit integer, 65 in hex padded to 00 00 00 65 (many machines keep those bytes in reverse), and the time would be the count 1775049300. every piece of the line sits on top of an idea from this section:
+3 + 1 + 19 + 9 is 32, plus 3 commas is 35, the size [033](./033-kilobytes-to-terabytes.md) scaled up to terabytes. the 101 is not the number 101, it is the three bytes 31 30 31, the characters 1, 0, 1. as a real number, 101 would be a 32 bit integer, 65 in hex padded to 00 00 00 65 (many machines keep those bytes in reverse), and the time, read as New York time, would be the count 1775049300 seconds. every piece of the line sits on top of an idea from this section:
 
 | layer | what it settled | notes |
 |---|---|---|
