@@ -24,7 +24,7 @@ total and item are my names. the real holding spots are called registers, a few 
 
 i assumed the processor knew what an order was. it knows nothing, even the instruction "add" is stored as a number, like everything else in [004](./004-bytes.md).
 
-it ticks several billion times a second (several gigahertz, giga being a billion), and most chips hold several cores, each a full processor of its own. a query over a billion rows is a billion rounds of steps like these, so next time a query feels slow, you know why.
+it ticks several billion times a second (several gigahertz, giga being a billion), and most chips hold several cores, each a full processor of its own. when you run a query that reads a billion rows, it repeats steps like these for each row.
 
 ---
 prev: [034 capstone, one shop order decoded down to bytes](./034-capstone-one-order-decoded-to-bytes.md) | next: not written yet
