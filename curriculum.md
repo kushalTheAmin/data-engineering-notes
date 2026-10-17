@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 030 showed the habit of storing every moment in UTC and converting to a local clock only for display, so order 102 is stored once as 22:40 UTC and reads 18:40 in New York but 2 April 04:10 in Mumbai, and the two 01:30s from 029 become two different stored values. the next brick is a value that is not there at all: null, a marker for a missing value
-last visuals: table (one order, three screens) plus python with output plus quiz, table (one night, four moments), python with output (one moment written with three offsets) plus quiz, query and result (timestamp split into date and time) plus query and result (midnight comparison bug), table (one moment in three units) plus python with output
-last exits: forward, stops, forward, stops, stops
-last reactions: i figured storing the time as the customer saw it was the faithful choice, i figured a clock reading was at least unique inside one city, i kept reading +05:30 as a typo, i assumed a date was a timestamp with the time hidden, i expected the number to carry its unit somewhere, i assumed a timestamp carried its time zone around with it, i expected a big city to be the reference but the reference clock belongs to no city, i figured one lonely bit would cost one lonely bit, i assumed there had to be a catch, i assumed money needed some special clever type
+baton: 031 showed null as a marker for no value: Eshas city is NULL, not text, and count(city) gives 4 while count(*) gives 5 because it skips her. the next brick is why null is not zero and not empty text, the fake values people store instead
+last visuals: query and result (customers with Eshas NULL city) plus query and result (count two ways) plus quiz, table (one order, three screens) plus python with output plus quiz, table (one night, four moments), python with output (one moment written with three offsets) plus quiz, query and result (timestamp split into date and time) plus query and result (midnight comparison bug)
+last exits: stops, forward, stops, forward, stops, stops
+last reactions: i assumed a missing value would at least be counted as something, i figured storing the time as the customer saw it was the faithful choice, i figured a clock reading was at least unique inside one city, i kept reading +05:30 as a typo, i assumed a date was a timestamp with the time hidden, i expected the number to carry its unit somewhere, i assumed a timestamp carried its time zone around with it, i expected a big city to be the reference but the reference clock belongs to no city, i figured one lonely bit would cost one lonely bit, i assumed there had to be a catch, i assumed money needed some special clever type
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
 
@@ -43,7 +43,7 @@ after this arc: you know what a computer actually stores when it "saves" an orde
 - [x] time zones: offsets from UTC ★ (note 028)
 - [x] daylight saving: the hour that happens twice ★ (note 029)
 - [x] store in UTC, show in local time ★ (note 030)
-- [ ] null: a marker for a missing value ★
+- [x] null: a marker for a missing value ★ (note 031)
 - [ ] null is not zero and not empty text ★
 - [ ] kilobytes to terabytes: how big data gets
 - [ ] capstone: one shop order decoded down to bytes
