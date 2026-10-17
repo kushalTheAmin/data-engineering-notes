@@ -28,6 +28,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | file | a name plus a list of bytes in order, kept on disk | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
 | file extension | the letters after the dot in a name, just a label | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
 | float | binary digits plus a count of how far to slide the point | [019](./notes/019-floating-point.md) |
+| folder | a named place on disk holding files and other folders | [040](./notes/040-folders-and-paths.md) |
 | gibibyte | 1024 x 1024 x 1024 bytes, written GiB | [038](./notes/038-1000-or-1024.md) |
 | gigabyte | 1000 megabytes, a billion bytes, written GB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | grapheme | one unit as seen on screen, possibly several code points | [012](./notes/012-combining-marks.md) |
@@ -45,12 +46,14 @@ every term these notes have built, in plain words, with the note that built it. 
 | null | a marker meaning there is no value here, not a value | [031](./notes/031-null.md) |
 | offset | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
 | overflow | a result too big for its bit size, wrapping or erroring | [016](./notes/016-overflow.md) |
+| path | folder names from the top down to a file, joined by slashes | [040](./notes/040-folders-and-paths.md) |
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
 | placeholder value | a made up value, like 0, standing in for missing | [032](./notes/032-null-is-not-zero-or-empty-text.md) |
 | precision | the most digits a decimal can hold in total | [022](./notes/022-exact-decimal-types.md) |
 | processor | the CPU, the part of the computer doing tiny steps on numbers | [035](./notes/035-the-processor.md) |
 | register | a tiny holding spot inside the processor, where it works on numbers | [035](./notes/035-the-processor.md) |
 | repeating fraction | digits past the point that loop forever, so no exact finite form | [018](./notes/018-why-0-1-has-no-exact-binary-form.md) |
+| root | the top folder holding everything else, written as a single slash | [040](./notes/040-folders-and-paths.md) |
 | scale | how many of a decimals digits sit after the point | [022](./notes/022-exact-decimal-types.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
 | SSD | a disk made of chips with no moving parts | [037](./notes/037-disk-is-slow.md) |

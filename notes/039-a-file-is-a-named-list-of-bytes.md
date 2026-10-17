@@ -40,4 +40,4 @@ a file that wont open is often just read with the wrong guess. many tools skip t
 folders are next, because files need somewhere to live.
 
 ---
-prev: [038 1000 or 1024, why your drive looks smaller than the box said](./038-1000-or-1024.md) | next: not written yet
+prev: [038 1000 or 1024, why your drive looks smaller than the box said](./038-1000-or-1024.md) | next: [040 folders and paths](./040-folders-and-paths.md)
