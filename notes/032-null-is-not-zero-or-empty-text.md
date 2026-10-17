@@ -2,9 +2,9 @@
 builds on: [031 null, a marker for a missing value](./031-null.md)
 section: data at the atom level, part 32, ~2 min read
 
-orders 103 and 107 were delivered but nobody rated them. do you store 0 stars for them, or nothing? it feels tiny, but it wrecks the average.
+orders 103 and 107 were delivered but nobody rated them. do you store 0 stars for them, or nothing? it wrecks the average.
 
-[031](./031-null.md) said null is a marker for "no value here", like Eshas missing city (python calls it None). people often reach for a placeholder value instead: a made up one like 0 or '' standing in for "unknown". the shop, the imaginary gujarati snack store these notes run on, now keeps ratings both ways. this is the whole table, 5 rows with named columns. SELECT lists the columns you want and FROM names the table:
+[031](./031-null.md) said null is a marker for "no value here", like Eshas missing city (python calls it None). people often reach for a made up placeholder like 0 or '' instead. the shop, the imaginary gujarati snack store these notes run on, now keeps ratings both ways. this is the whole table, 5 rows with named columns. SELECT lists the columns you want and FROM names the table:
 
 ```sql
 SELECT order_id, stars, stars_zero_filled FROM order_ratings;
@@ -32,7 +32,7 @@ real_avg | zero_avg
 
 i kept reading 0 as "no rating", but 0 is a real rating, so the database counts it. avg skips the nulls, so it divides 12 by 3 orders and gets 4.0. with zeros it divides 12 by 5 and gets 2.4. same orders, a rating that looks like an apology. Postgres docs say avg takes the average of the non-null values: https://www.postgresql.org/docs/current/functions-aggregate.html
 
-empty text has the same trap. '' is real text that happens to have no characters, so count(city) counts it. if you used '' for "no city", a report would say the customer has one.
+empty text has the same trap. '' is real text that happens to have no characters, so count(city) counts it (Oracle is the odd one out and turns '' into null). if you used '' for "no city", a report would say the customer has one.
 
 so what: when the fake value is a real one, a dashboard cant tell "unknown" from "zero". null is annoying but honest, and 0 is only right when the answer really is zero.
 

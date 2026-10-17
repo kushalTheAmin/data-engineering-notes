@@ -16,4 +16,6 @@ assert con.execute("SELECT count(*), count(city) FROM (VALUES ('Edison'), (''), 
 assert con.execute("SELECT avg(stars_zero_filled) FROM order_ratings WHERE stars_zero_filled > 0").fetchone()[0] == 4.0
 # source: https://www.postgresql.org/docs/current/functions-aggregate.html
 #   confirmed: avg computes the average of all the non-null input values
+# source: https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Nulls.html
+#   confirmed: "Oracle Database treats a character value with a length of zero as null."
 print("032 ok")
