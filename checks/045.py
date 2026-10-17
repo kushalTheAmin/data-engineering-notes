@@ -28,4 +28,6 @@ assert d2.decode().split("\n")[5:] == ["106,pendinred", "107,delivere"]
 assert not d2.endswith(b"\n")
 # source: https://www.sqlite.org/atomiccommit.html
 #   confirmed: power failure mid write can leave part modified and part unchanged; in rollback mode (not WAL) SQLite writes the original content of pages to a rollback journal before changing the database file
+# source: https://www.sqlite.org/onefile.html
+#   confirmed: "A database in SQLite is a single disk file"
 print("045 ok")
