@@ -14,11 +14,13 @@ every term these notes have built, in plain words, with the note that built it. 
 | boolean | a value with only two states, true or false | [023](./notes/023-true-and-false-the-boolean.md) |
 | byte | a group of 8 bits, holding 256 possible values | [004](./notes/004-bytes.md) |
 | byte in hex | a byte is always exactly two hex digits, 00 to ff | [006](./notes/006-one-byte-two-hex-digits.md) |
+| carriage return | the 0d character, which sent a typewriter carriage back | [042](./notes/042-line-endings.md) |
 | character | one letter, digit, space or symbol, stored as one number | [007](./notes/007-text-is-numbers.md) |
 | code point | the number Unicode gives one character, written like U+0AA2 | [009](./notes/009-unicode.md) |
 | combining mark | a code point with no letter, drawn on the letter before it | [012](./notes/012-combining-marks.md) |
 | continuation byte | a UTF-8 byte starting 10, continuing the previous characters bytes | [011](./notes/011-why-gujarati-takes-3-bytes.md) |
 | core | one full processor inside a chip, most chips hold several | [035](./notes/035-the-processor.md) |
+| CRLF | a line ending of two characters, 0d then 0a, common on windows | [042](./notes/042-line-endings.md) |
 | data | facts written down so you can ask questions about them later | [001](./notes/001-data-is-facts-and-numbers.md) |
 | date | a calendar day with no time of day | [027](./notes/027-dates-and-times-apart.md) |
 | daylight saving | clocks shifting an hour twice a year in many places | [024](./notes/024-utc.md) |
@@ -37,6 +39,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |
 | kibibyte | 1024 bytes, the unambiguous 1024 based unit, written KiB | [038](./notes/038-1000-or-1024.md) |
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
+| LF | a one character line ending, 0a, common on linux and mac | [042](./notes/042-line-endings.md) |
+| line ending | the characters marking where one line stops, the next starts | [042](./notes/042-line-endings.md) |
 | lookup | fetching one value from a random spot | [037](./notes/037-disk-is-slow.md) |
 | megabyte | 1000 kilobytes, a million bytes, written MB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | memory | the computers working space (RAM), emptied when the power goes off | [036](./notes/036-memory-vs-disk.md) |

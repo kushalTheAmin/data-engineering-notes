@@ -33,4 +33,4 @@ this bites with tools like Parquet, a file format analytics tools read. it is bi
 line endings are next, the invisible characters that quietly break text files.
 
 ---
-prev: [040 folders and paths](./040-folders-and-paths.md) | next: not written yet
+prev: [040 folders and paths](./040-folders-and-paths.md) | next: [042 line endings](./042-line-endings.md)
