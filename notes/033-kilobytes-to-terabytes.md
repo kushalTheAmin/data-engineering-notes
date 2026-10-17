@@ -32,4 +32,4 @@ this is only the text size, real systems store it differently, but multiplying i
 next up, one order decoded all the way down.
 
 ---
-prev: [032 null is not zero and not empty text](./032-null-is-not-zero-or-empty-text.md) | next: not written yet
+prev: [032 null is not zero and not empty text](./032-null-is-not-zero-or-empty-text.md) | next: [034 capstone, one shop order decoded down to bytes](./034-capstone-one-order-decoded-to-bytes.md)

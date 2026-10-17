@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 033 showed one order is a 35 byte line, so a thousand orders is 35 KB, a million 35 MB, a billion 35 GB and a trillion 35 TB, each step times 1000 (and B is bytes, b is bits). the next box is the capstone, one shop order decoded down to bytes, which assembles notes 001 to 033
-last visuals: python with output (one order line scaled by 1000 per row), query and result (ratings, then avg two ways) plus quiz, query and result (customers with Eshas NULL city) plus query and result (count two ways) plus quiz, table (one order, three screens) plus python with output plus quiz, table (one night, four moments)
-last exits: forward, stops, stops, forward, stops
-last reactions: i expected a trillion rows to need a different kind of thinking, i kept reading 0 as no rating, i assumed a missing value would at least be counted as something, i figured storing the time as the customer saw it was the faithful choice, i figured a clock reading was at least unique inside one city, i kept reading +05:30 as a typo, i assumed a date was a timestamp with the time hidden, i expected the number to carry its unit somewhere, i assumed a timestamp carried its time zone around with it, i expected a big city to be the reference but the reference clock belongs to no city
+baton: 034 wrapped up section 1 by decoding order 101 into its 35 bytes (3 for the id, 1 for the customer, 19 for the time, 9 for delivered, 3 commas) and mapping each layer to its notes. the next box starts section 2, memory, disks and files, picking up from those bytes: where they actually live while the shop runs
+last visuals: python with output (order 101 cut at the commas, hex per field) plus table (layers to notes) plus quiz, python with output (one order line scaled by 1000 per row), query and result (ratings, then avg two ways) plus quiz, query and result (customers with Eshas NULL city) plus query and result (count two ways) plus quiz, table (one order, three screens) plus python with output plus quiz
+last exits: stops, forward, stops, stops, forward
+last reactions: i expected the line to carry its own meaning but it carries none, i expected a trillion rows to need a different kind of thinking, i kept reading 0 as no rating, i assumed a missing value would at least be counted as something, i figured storing the time as the customer saw it was the faithful choice, i figured a clock reading was at least unique inside one city, i kept reading +05:30 as a typo, i assumed a date was a timestamp with the time hidden, i expected the number to carry its unit somewhere, i assumed a timestamp carried its time zone around with it, i expected a big city to be the reference but the reference clock belongs to no city
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
 
@@ -46,7 +46,7 @@ after this arc: you know what a computer actually stores when it "saves" an orde
 - [x] null: a marker for a missing value ★ (note 031)
 - [x] null is not zero and not empty text ★ (note 032)
 - [x] kilobytes to terabytes: how big data gets (note 033)
-- [ ] capstone: one shop order decoded down to bytes
+- [x] capstone: one shop order decoded down to bytes (note 034)
 
 ## arc 2: memory, disks and files
 after this arc: you know where data lives, why reading it is slow, and how to peek at it
