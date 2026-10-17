@@ -63,3 +63,18 @@ INSERT INTO order_items VALUES
     (105, 4, 2), (105, 3, 2), (105, 5, 1),
     (106, 2, 2),
     (107, 1, 1), (107, 3, 1);
+
+-- added by note 032: star ratings for delivered orders, kept two ways.
+-- stars leaves unrated orders NULL, stars_zero_filled stores 0 for them
+CREATE TABLE order_ratings (
+    order_id          INTEGER NOT NULL REFERENCES orders (order_id),
+    stars             INTEGER,
+    stars_zero_filled INTEGER NOT NULL
+);
+
+INSERT INTO order_ratings VALUES
+    (101, 5,    5),
+    (102, 4,    4),
+    (103, NULL, 0),
+    (105, 3,    3),
+    (107, NULL, 0);

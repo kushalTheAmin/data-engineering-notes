@@ -60,4 +60,4 @@ leave it null. count(delivery_note) skips nulls, so it counts only real notes. w
 </details>
 
 ---
-prev: [030 store in UTC, show in local time](./030-store-utc-show-local.md) | next: not written yet
+prev: [030 store in UTC, show in local time](./030-store-utc-show-local.md) | next: [032 null is not zero and not empty text](./032-null-is-not-zero-or-empty-text.md)
