@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 35
+notes so far: 36
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -46,3 +46,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 
 ## section 2: memory, disks and files
 - [035 the processor, the part that does the work](./notes/035-the-processor.md): adding up order 101 takes 7 tiny steps, and the processor knows nothing about orders
+- [036 memory vs disk, one forgets and one remembers](./notes/036-memory-vs-disk.md): order 101 survives a power cut only if it was written to disk

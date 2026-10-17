@@ -27,4 +27,4 @@ i assumed the processor knew what an order was. it knows nothing, even the instr
 it ticks several billion times a second (several gigahertz, giga being a billion), and most chips hold several cores, each a full processor of its own. when you run a query that reads a billion rows, it repeats steps like these for each row.
 
 ---
-prev: [034 capstone, one shop order decoded down to bytes](./034-capstone-one-order-decoded-to-bytes.md) | next: not written yet
+prev: [034 capstone, one shop order decoded down to bytes](./034-capstone-one-order-decoded-to-bytes.md) | next: [036 memory vs disk, one forgets and one remembers](./036-memory-vs-disk.md)
