@@ -12,6 +12,8 @@ for n, text_hex, text_len, int_hex in [
     i = struct.pack("<i", n)
     assert t.hex(" ") == text_hex and len(t) == text_len
     assert i.hex(" ") == int_hex and len(i) == 4
+# 034 says many machines keep integer bytes in reverse, so the note says so
+assert struct.pack('<i', 101) == (101).to_bytes(4, 'little') != (101).to_bytes(4, 'big')
 # a0 alone is not valid utf-8
 try:
     struct.pack("<i", 100000).decode("utf-8")

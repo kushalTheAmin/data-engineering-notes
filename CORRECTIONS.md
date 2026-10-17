@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+041, 2026-10-17: showed the integer for 101 as 65 00 00 00 and called it the way 034 showed it, but 034 shows 00 00 00 65 and says many machines keep the bytes in reverse; it now says the bytes are in reverse. evidence: python, (101).to_bytes(4, 'little').hex(' ') is 65 00 00 00 and (101).to_bytes(4, 'big').hex(' ') is 00 00 00 65, the text of 034
 045, 2026-10-17: said SQLite saves a copy of the old data before changing the file, as if in every mode; the source says that describes rollback mode only and write-ahead log mode works by a different mechanism; it now says in its rollback mode. evidence: https://www.sqlite.org/atomiccommit.html ("applies only when SQLite is operating in 'rollback mode'... SQLite still supports atomic commit when write-ahead logging is enabled, but it accomplishes atomic commit by a different mechanism")
 042, 2026-10-17: said a hidden \r makes filters and joins find nothing, but join is a SQL term no earlier note explains; it now says filters and lookups. evidence: grep of notes/ and glossary.md, join is never glossed (same fix as the 012 entry)
 043, 2026-10-17: a stray double comma after spinning disk in the opening paragraph; it is a single comma now. evidence: the text of 043, "on a spinning disk,, and a jump"
