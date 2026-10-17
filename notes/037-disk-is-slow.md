@@ -60,4 +60,4 @@ about 67 times. 1500 is SSD against memory, a different pair. and a query also s
 </details>
 
 ---
-prev: [036 memory vs disk, one forgets and one remembers](./036-memory-vs-disk.md) | next: not written yet
+prev: [036 memory vs disk, one forgets and one remembers](./036-memory-vs-disk.md) | next: [038 1000 or 1024, why your drive looks smaller than the box said](./038-1000-or-1024.md)
