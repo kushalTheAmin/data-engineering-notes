@@ -32,7 +32,7 @@ customers | with_city
 5 | 4
 ```
 
-i assumed a missing value would at least be counted as something. it isnt, count(city) skips it on purpose, and Postgres documents it the same way: https://www.postgresql.org/docs/current/functions-aggregate.html
+i assumed a missing value would at least be counted as something. it isnt, count(city) skips it on purpose, and Postgres, a popular server database, documents it the same way: https://www.postgresql.org/docs/current/functions-aggregate.html
 
 so what: a report that says "4 customers have a city" is right and "5 customers" is also right, depending on which count you wrote. the [boolean](./023-true-and-false-the-boolean.md) note mentioned null as a third answer, unknown, and this is where it comes from.
 
