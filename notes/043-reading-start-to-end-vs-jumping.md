@@ -4,7 +4,7 @@ section: memory, disks and files, part 9, ~2 min read
 
 you want the 6th order in a file. can the computer just go there, like list[5]?
 
-there are two ways to reach a spot. reading start to end takes the bytes in order from position 0. jumping asks for a position directly, which python calls seek. [037](./037-disk-is-slow.md) priced a lookup, one value from a random spot, at 10 milliseconds on a spinning disk, and a jump is that kind of lookup.
+there are two ways to reach a spot. reading start to end takes the bytes in order from position 0. jumping asks for a position directly, which python calls seek. [037](./037-disk-is-slow.md) priced a lookup, one value from a random spot, at 10 milliseconds on a spinning disk,, and a jump is that kind.
 
 the catch is knowing the position. here is the shop, the imaginary gujarati snack store these notes run on, as a file with one `order_id,status` line per order, each ending in the 0a of [042](./042-line-endings.md). positions count from 0, like in [039](./039-a-file-is-a-named-list-of-bytes.md), a file being a named list of bytes:
 
@@ -18,7 +18,7 @@ the catch is knowing the position. here is the shop, the imaginary gujarati snac
 | 6 | 106,pending | 70 | 12 |
 | 7 | 107,delivered | 82 | 14 |
 
-line 6 starts at 70 only because lines 1 to 5 are 14 each. pending is shorter, so line 7 starts at 82, not 84. try jumping with a guess of 14 bytes per line:
+line 6 starts at 70 only because lines 1 to 5 are 14 each. pending is shorter, so line 7 starts at 82, not 84. try jumping to line 7, first with a guess of 14 bytes per line, then to 82:
 
 ```python
 import io
@@ -37,9 +37,9 @@ b'7,delivered\n'
 b'107,delivered\n'
 ```
 
-the guess landed in the middle of a line. nothing in the file lists where lines begin, so the only way to find line 6 is to read lines 1 to 5 and count the 0a bytes. i expected a file to act like a list, and it doesnt, because lines have no fixed size.
+the guess landed mid line. nothing in the file lists where lines begin, so the only way to find line 6 is to read lines 1 to 5 and count the 0a bytes. i expected a file to act like a list, and it doesnt, because lines have no fixed size.
 
-so finding line 1,000,000 of a big csv means reading the 999,999 before it. you can jump only when you already know the position, and keeping track of positions is a job for a later note.
+so line 1,000,000 of a big csv means reading the 999,999 before it. you can jump only when you already know the position, and keeping track of positions is a job for a later note.
 
 ### check yourself
 

@@ -16,6 +16,8 @@ assert starts == [0, 14, 28, 42, 56, 70, 82]
 assert 14 * 6 == 84 and 84 != 82
 data = "".join(lines).encode()
 f = io.BytesIO(data)
+# the guess 14 * 6 is aimed at line 7 (line 6 happens to start at 14 * 5 = 70)
+assert 14 * 5 == starts[5] and 14 * 6 > starts[6]
 f.seek(14 * 6)
 assert f.readline() == b"7,delivered\n"
 f.seek(82)
