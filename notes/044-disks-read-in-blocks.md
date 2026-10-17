@@ -42,4 +42,4 @@ i kept picturing the disk as a list of bytes i could poke one at a time. that pi
 a 1 byte file usually uses a full block on disk too.
 
 ---
-prev: [043 reading start to end vs jumping to a spot](./043-reading-start-to-end-vs-jumping.md) | next: not written yet
+prev: [043 reading start to end vs jumping to a spot](./043-reading-start-to-end-vs-jumping.md) | next: [045 torn writes, what a half finished write leaves behind](./045-torn-writes.md)
