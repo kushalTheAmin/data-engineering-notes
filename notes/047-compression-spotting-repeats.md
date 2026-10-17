@@ -39,4 +39,4 @@ i expected compression to always shrink things, and it doesnt. a run of one cost
 Parquet, a file format for storing big tables, uses run length encoding to store repeated values, and a column of a table that holds mostly one word is where it shines. the next one is about what this costs.
 
 ---
-prev: [046 writing safely, write a new file then rename it](./046-writing-safely.md) | next: not written yet
+prev: [046 writing safely, write a new file then rename it](./046-writing-safely.md) | next: [048 compression trades processor time for disk space](./048-compression-trades-processor-for-space.md)

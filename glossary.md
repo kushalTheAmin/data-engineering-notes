@@ -27,6 +27,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | data | facts written down so you can ask questions about them later | [001](./notes/001-data-is-facts-and-numbers.md) |
 | date | a calendar day with no time of day | [027](./notes/027-dates-and-times-apart.md) |
 | daylight saving | clocks shifting an hour twice a year in many places | [024](./notes/024-utc.md) |
+| decompress | rebuild the original bytes from compressed ones, costing processor work | [048](./notes/048-compression-trades-processor-for-space.md) |
 | disk | storage like an SSD or hard drive, keeping bytes without power | [036](./notes/036-memory-vs-disk.md) |
 | epoch | the starting line, 1 January 1970 UTC, that unix time counts from | [025](./notes/025-unix-time.md) |
 | exact decimal | a type keeping decimal digits exactly, like DECIMAL(6, 2) | [022](./notes/022-exact-decimal-types.md) |

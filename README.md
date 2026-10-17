@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 47
+notes so far: 48
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -58,3 +58,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [045 torn writes, what a half finished write leaves behind](./notes/045-torn-writes.md): a power cut mid save leaves line 6 reading 106,deliveg, new blocks glued to old ones
 - [046 writing safely, write a new file then rename it](./notes/046-writing-safely.md): write order 106s update to a tmp file, rename it over the old one, and a power cut can only hit the tmp
 - [047 compression, making files smaller by spotting repeats](./notes/047-compression-spotting-repeats.md): the status column stores delivered five times, and storing each run once halves it, until a run of one costs more
+- [048 compression trades processor time for disk space](./notes/048-compression-trades-processor-for-space.md): 10 million bytes shrink to 18, but someone still has to build a million lines back
