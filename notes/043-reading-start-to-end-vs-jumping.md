@@ -72,4 +72,4 @@ jump to position 9999980. every line is the same size, so the position is just a
 </details>
 
 ---
-prev: [042 line endings, the invisible characters that break files](./042-line-endings.md) | next: not written yet
+prev: [042 line endings, the invisible characters that break files](./042-line-endings.md) | next: [044 disks read in blocks, never single bytes](./044-disks-read-in-blocks.md)

@@ -11,6 +11,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | binary fraction | binary carried past the point, places worth a half, quarter, eighth | [017](./notes/017-fractions-in-binary.md) |
 | binary point | the dot in a binary number, places to its right halve | [017](./notes/017-fractions-in-binary.md) |
 | bit | one tiny switch inside a computer, written as 0 or 1 | [002](./notes/002-bits.md) |
+| block | a fixed chunk of bytes, often 4096, a disk reads at once | [044](./notes/044-disks-read-in-blocks.md) |
 | boolean | a value with only two states, true or false | [023](./notes/023-true-and-false-the-boolean.md) |
 | byte | a group of 8 bits, holding 256 possible values | [004](./notes/004-bytes.md) |
 | byte in hex | a byte is always exactly two hex digits, 00 to ff | [006](./notes/006-one-byte-two-hex-digits.md) |

@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 043 said a file has no list of where lines begin, so finding line 6 means reading lines 1 to 5 and counting 0a bytes, and a jump only works when you already know the position (fixed size lines make it arithmetic). the next box must say why a disk hands over bytes in blocks, so a jump never fetches just one byte
-last visuals: table (shop order lines with start positions) plus python with output (a guessed jump lands mid line), table (LF vs CRLF line endings, sizes) plus python with output (a hidden carriage return breaks a match), python with output (101 and 100000 as text vs a 4 byte integer), trace table (a path walked in 3 steps) plus a text tree, annotated artifact (the bytes of order101.csv by position) plus python with output (rename keeps the bytes)
-last exits: stops, stops, forward, stops, forward, stops
-last reactions: i expected a file to act like a list and it doesnt, it felt backwards that windows needs two bytes where linux needs one, i assumed binary always meant smaller, i kept picturing folders as boxes and a path reads better as directions, i assumed the .csv was part of what made it a csv and its just a sticker, i assumed the missing space was formatting overhead but its the same bytes divided by a bigger number, i assumed an SSD was close to memory speed, i assumed the difference was size but it is whether it survives power, i assumed the processor knew what an order was, i expected the line to carry its own meaning but it carries none
+baton: 044 said a disk hands over whole blocks, usually 4096 bytes, so asking for one byte fetches its entire block and 2 bytes across a boundary fetch two. the next box must say what a half finished write leaves behind, since a write also goes in blocks
+last visuals: text strip of blocks plus python with output (positions mapped to block numbers), table (shop order lines with start positions) plus python with output (a guessed jump lands mid line), table (LF vs CRLF line endings, sizes) plus python with output (a hidden carriage return breaks a match), python with output (101 and 100000 as text vs a 4 byte integer), trace table (a path walked in 3 steps) plus a text tree
+last exits: stops, stops, stops, forward, stops, forward
+last reactions: i kept picturing the disk as a list of bytes i could poke one at a time, i expected a file to act like a list and it doesnt, it felt backwards that windows needs two bytes where linux needs one, i assumed binary always meant smaller, i kept picturing folders as boxes and a path reads better as directions, i assumed the .csv was part of what made it a csv and its just a sticker, i assumed the missing space was formatting overhead but its the same bytes divided by a bigger number, i assumed an SSD was close to memory speed, i assumed the difference was size but it is whether it survives power, i assumed the processor knew what an order was
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -61,7 +61,7 @@ after this arc: you know where data lives, why reading it is slow, and how to pe
 - [x] text files vs binary files (note 041)
 - [x] line endings: the invisible characters that break files ★ (note 042)
 - [x] reading start to end vs jumping to a spot ★ (note 043)
-- [ ] disks read in blocks, never single bytes
+- [x] disks read in blocks, never single bytes (note 044)
 - [ ] torn writes: what a half finished write leaves behind ★
 - [ ] writing safely: write a new file, then rename it ★
 - [ ] compression: making files smaller by spotting repeats
