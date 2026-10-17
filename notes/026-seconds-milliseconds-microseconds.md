@@ -38,7 +38,7 @@ so what: JavaScript Date.now() gives milliseconds (https://developer.mozilla.org
 
 ### check yourself
 
-1. order 101 is at 09:15:00 and order 102 at 18:40:00 on 1 April, both on the same clock. predict the gap between their milliseconds counts.
+1. order 101 is at 09:15:00 and order 102 at 18:40:00 on 1 April, both on the same clock. predict the gap between their milliseconds counts. SELECT picks what to show, FROM names the table, WHERE keeps matching rows, max and min give the biggest and smallest, and epoch_ms turns a timestamp into its milliseconds count.
 ```sql
 SELECT max(epoch_ms(ordered_at)) - min(epoch_ms(ordered_at)) AS diff_ms FROM orders WHERE order_id IN (101, 102);
 ```
