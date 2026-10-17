@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 40
+notes so far: 41
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -51,3 +51,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [038 1000 or 1024, why your drive looks smaller than the box said](./notes/038-1000-or-1024.md): a 500 GB drive reads 465 on windows, same bytes counted with a different ruler
 - [039 a file is a named list of bytes](./notes/039-a-file-is-a-named-list-of-bytes.md): renaming order101.csv to .jpg changes the name and not one byte
 - [040 folders and paths](./notes/040-folders-and-paths.md): two files are both called orders.csv, and only the whole path says which one
+- [041 text files vs binary files](./notes/041-text-files-vs-binary-files.md): order id 101 takes 3 bytes as text and 4 as a number, and nothing in the file says which it is

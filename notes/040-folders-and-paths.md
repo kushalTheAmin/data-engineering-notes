@@ -30,4 +30,4 @@ i kept picturing folders as boxes, but reading a path as left to right direction
 this bites in real code. a path without the leading / starts from the folder you launched the program from, so open("orders.csv") in python works when you launch it from the exports folder and says file not found on another machine (a server), because you launched it from a different folder.
 
 ---
-prev: [039 a file is a named list of bytes](./039-a-file-is-a-named-list-of-bytes.md) | next: not written yet
+prev: [039 a file is a named list of bytes](./039-a-file-is-a-named-list-of-bytes.md) | next: [041 text files vs binary files](./041-text-files-vs-binary-files.md)

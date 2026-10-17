@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 040 said a folder is a named place on disk holding files and other folders, and a path is the names walked from the root down to a file, so the whole path picks a file and never the name alone. the next box must say how text files differ from binary files
-last visuals: trace table (a path walked in 3 steps) plus a text tree, annotated artifact (the bytes of order101.csv by position) plus python with output (rename keeps the bytes), python with output (1000 vs 1024 per step), python with output (lookup times stretched to days) plus quiz, trace table (order 101 through a power cut), table (order 101 total in 7 tiny steps)
-last exits:  stops, forward, stops, stops, forward
-last reactions:  i kept picturing folders as boxes and a path reads better as directions, i assumed the .csv was part of what made it a csv and its just a sticker, i assumed the missing space was formatting overhead but its the same bytes divided by a bigger number, i assumed an SSD was close to memory speed, i assumed the difference was size but it is whether it survives power, i assumed the processor knew what an order was, i expected the line to carry its own meaning but it carries none, i expected a trillion rows to need a different kind of thinking, i kept reading 0 as no rating, i assumed a missing value would at least be counted as something
+baton: 041 said a text file is bytes that decode as characters and a binary file is any other layout, like a number packed into 4 bytes, and that nothing in a file says which kind it is. the next box must say how a text file marks where one line ends and the next begins
+last visuals: python with output (101 and 100000 as text vs a 4 byte integer), trace table (a path walked in 3 steps) plus a text tree, annotated artifact (the bytes of order101.csv by position) plus python with output (rename keeps the bytes), python with output (1000 vs 1024 per step), python with output (lookup times stretched to days) plus quiz, trace table (order 101 through a power cut), table (order 101 total in 7 tiny steps)
+last exits: forward,  stops, forward, stops, stops, forward
+last reactions: i assumed binary always meant smaller,  i kept picturing folders as boxes and a path reads better as directions, i assumed the .csv was part of what made it a csv and its just a sticker, i assumed the missing space was formatting overhead but its the same bytes divided by a bigger number, i assumed an SSD was close to memory speed, i assumed the difference was size but it is whether it survives power, i assumed the processor knew what an order was, i expected the line to carry its own meaning but it carries none, i expected a trillion rows to need a different kind of thinking, i kept reading 0 as no rating, i assumed a missing value would at least be counted as something
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
 
@@ -57,7 +57,7 @@ after this arc: you know where data lives, why reading it is slow, and how to pe
 - [x] 1000 or 1024: why your drive looks smaller than the box said (note 038)
 - [x] a file is a named list of bytes (note 039)
 - [x] folders and paths (note 040)
-- [ ] text files vs binary files
+- [x] text files vs binary files (note 041)
 - [ ] line endings: the invisible characters that break files ★
 - [ ] reading start to end vs jumping to a spot ★
 - [ ] disks read in blocks, never single bytes
