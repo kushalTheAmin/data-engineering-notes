@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+032, 2026-10-17: said Oracle is the odd one out without saying what Oracle is, and no note it builds on explains it, so a reader landing on this note alone could not place it; it now says Oracle is another database. evidence: grep of notes/ and glossary.md, Oracle is not glossed anywhere before 032; https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Nulls.html
 032, 2026-10-17: said '' is real text so count(city) counts it, as if in every database; Oracle treats a zero length string as null, so it now says Oracle is the odd one out. it also lost two filler phrases to stay under the word limit. evidence: https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Nulls.html ("Oracle Database treats a character value with a length of zero as null")
 030, 2026-10-17: said to add Aprils offset of -04:00 to the New York clock to get UTC, but adding -4 hours to 09:15 gives 05:15; the table shows 13:15 and 028 says to undo the offset. it now says undo it by subtracting, so 09:15 becomes 13:15. evidence: python, 09:15 - timedelta(hours=-4) is 13:15, the text of 028 ("09:15 minus -4 hours is 13:15")
 027, 2026-10-17: the checks file had no source for :: being the casting operator. note text is unchanged, the checks now cite the page. evidence: https://duckdb.org/docs/current/sql/data_types/typecasting.html ("CAST(col AS VARCHAR) or col::VARCHAR explicitly cast the column col to VARCHAR")
