@@ -51,4 +51,4 @@ the 10:00 line. undone, it is 08:00 UTC, and the 07:30 line is 08:30 UTC. the te
 </details>
 
 ---
-prev: [027 dates without times, and times without dates](./027-dates-and-times-apart.md) | next: not written yet
+prev: [027 dates without times, and times without dates](./027-dates-and-times-apart.md) | next: [029 daylight saving, the hour that happens twice](./029-daylight-saving.md)

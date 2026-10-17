@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 028 showed an offset like -04:00 or +05:30 written after a time makes the text carry its own clock, that 09:15-04:00, 18:45+05:30 and 13:15Z are all unix time 1775049300, that offsets can be half hours, and that an offset is not a time zone because New York is -04:00 in April but -05:00 in winter. the next brick is daylight saving, the hour that happens twice
-last visuals: python with output (one moment written with three offsets) plus quiz, query and result (timestamp split into date and time) plus query and result (midnight comparison bug), table (one moment in three units) plus python with output, python with output (one moment, one count on three clocks), table (one moment on three clocks) plus quiz, query and result (status = delivered) plus small python with output, query and result (decimal vs double test) plus small query, query and result (prices as cents) plus small python with output
-last exits: forward, stops, stops, forward, forward, stops, stops
-last reactions: i kept reading +05:30 as a typo, i assumed a date was a timestamp with the time hidden, i expected the number to carry its unit somewhere, i assumed a timestamp carried its time zone around with it, i expected a big city to be the reference but the reference clock belongs to no city, i figured one lonely bit would cost one lonely bit, i assumed there had to be a catch, i assumed money needed some special clever type, i expected the two cut off errors to cancel but its an exact tie, i expected a big number to get more digits, it felt unfair that a short number gets an endless pattern, i expected a new set of rules for fractions but its the same doubling past the dot
+baton: 029 showed that when New York sets its clocks back on 1 November 2026, 01:30 happens twice, an hour (3600 seconds) apart, at offsets -04:00 then -05:00, so clock text without an offset is ambiguous for that hour, and that in spring 02:30 never appears. the next brick is the habit that fixes all of this: store UTC, convert to local only for display
+last visuals: table (one night, four moments), python with output (one moment written with three offsets) plus quiz, query and result (timestamp split into date and time) plus query and result (midnight comparison bug), table (one moment in three units) plus python with output, python with output (one moment, one count on three clocks), table (one moment on three clocks) plus quiz, query and result (status = delivered) plus small python with output
+last exits: stops, forward, stops, stops, forward, forward
+last reactions: i figured a clock reading was at least unique inside one city, i kept reading +05:30 as a typo, i assumed a date was a timestamp with the time hidden, i expected the number to carry its unit somewhere, i assumed a timestamp carried its time zone around with it, i expected a big city to be the reference but the reference clock belongs to no city, i figured one lonely bit would cost one lonely bit, i assumed there had to be a catch, i assumed money needed some special clever type, i expected the two cut off errors to cancel but its an exact tie, i expected a big number to get more digits
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
 
@@ -41,7 +41,7 @@ after this arc: you know what a computer actually stores when it "saves" an orde
 - [x] seconds, milliseconds, microseconds: one moment, three numbers ★ (note 026)
 - [x] dates without times, and times without dates (note 027)
 - [x] time zones: offsets from UTC ★ (note 028)
-- [ ] daylight saving: the hour that happens twice ★
+- [x] daylight saving: the hour that happens twice ★ (note 029)
 - [ ] store in UTC, show in local time ★
 - [ ] null: a marker for a missing value ★
 - [ ] null is not zero and not empty text ★
