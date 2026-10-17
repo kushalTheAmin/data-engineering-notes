@@ -29,7 +29,7 @@ b'delivered\r' False
 
 the split cut at the 0a and left the 0d, written \r, glued to the end of the last column. it looks the same on screen and never equals the clean word.
 
-the classic bug is a windows export landing on a linux server: every last column carries a hidden \r, so filters and joins quietly find nothing. python text mode hides it by turning every ending into \n, so the same file can behave differently in two tools.
+the classic bug is a windows export landing on a linux server: every last column carries a hidden \r, so filters and lookups quietly find nothing. python text mode hides it by turning every ending into \n, so the same file can behave differently in two tools.
 
 ### check yourself
 
