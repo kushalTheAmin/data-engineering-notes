@@ -31,10 +31,12 @@ every term these notes have built, in plain words, with the note that built it. 
 | hexadecimal | counting with sixteen digits, a to f standing for ten to fifteen | [005](./notes/005-hexadecimal.md) |
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
+| lookup | fetching one value from a random spot | [037](./notes/037-disk-is-slow.md) |
 | megabyte | 1000 kilobytes, a million bytes, written MB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | memory | the computers working space (RAM), emptied when the power goes off | [036](./notes/036-memory-vs-disk.md) |
 | microsecond | a millionth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | millisecond | a thousandth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
+| nanosecond | a billionth of a second | [037](./notes/037-disk-is-slow.md) |
 | negative zero | a second zero pattern, with the sign bit set | [013](./notes/013-negative-numbers-sign-bit.md) |
 | null | a marker meaning there is no value here, not a value | [031](./notes/031-null.md) |
 | offset | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
@@ -47,6 +49,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | repeating fraction | digits past the point that loop forever, so no exact finite form | [018](./notes/018-why-0-1-has-no-exact-binary-form.md) |
 | scale | how many of a decimals digits sit after the point | [022](./notes/022-exact-decimal-types.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
+| SSD | a disk made of chips with no moving parts | [037](./notes/037-disk-is-slow.md) |
 | store UTC, show local | keep moments in UTC, convert to local only when displaying | [030](./notes/030-store-utc-show-local.md) |
 | terabyte | 1000 gigabytes, a trillion bytes, written TB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | the shop | the imaginary gujarati snack store every example uses | [001](./notes/001-data-is-facts-and-numbers.md) |

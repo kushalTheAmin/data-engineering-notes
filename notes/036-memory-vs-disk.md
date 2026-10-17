@@ -22,4 +22,4 @@ one gotcha: "written" doesnt always mean on disk yet. the computer can hold a fr
 this is why databases, programs that store your tables, normally put your rows on disk before saying "saved". how much slower that is, is the next one.
 
 ---
-prev: [035 the processor, the part that does the work](./035-the-processor.md) | next: not written yet
+prev: [035 the processor, the part that does the work](./035-the-processor.md) | next: [037 disk is slow, memory vs SSD vs spinning disk in real numbers](./037-disk-is-slow.md)
