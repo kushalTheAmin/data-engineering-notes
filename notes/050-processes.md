@@ -40,7 +40,7 @@ same file, two pids, and stopping a leaves b alone. each process gets its own me
 
 i kept using "program" and "the thing running" as one noun, and the pid is what shows theyre two. the file doesnt change when a process dies, only that copy in memory goes.
 
-the terminal command kill stops a process by its pid, not by program name. python wraps that in a.kill().
+the terminal command kill sends a stop signal to a process by its pid, not by program name. a.kill() in python sends the forced kind.
 
 ---
 prev: [049 the terminal, running programs by typing](./049-the-terminal.md) | next: [051 the operating system, the program that shares the machine out](./051-the-operating-system.md)
