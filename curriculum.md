@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 045 showed a power cut mid write leaves some new blocks and some old ones, so overwriting a file in place can leave a readable but wrong file (line 6 read 106,deliveg). the next box must show the fix: write a whole new file, then swap it in by renaming
-last visuals: table (old, new and on-disk blocks after a cut) plus a hand built python check in the answers, text strip of blocks plus python with output (positions mapped to block numbers), table (shop order lines with start positions) plus python with output (a guessed jump lands mid line), table (LF vs CRLF line endings, sizes) plus python with output (a hidden carriage return breaks a match), python with output (101 and 100000 as text vs a 4 byte integer)
-last exits: forward, stops, stops, stops, forward, stops
-last reactions: i assumed a save either happens or it doesnt but theres a third outcome, i kept picturing the disk as a list of bytes i could poke one at a time, i expected a file to act like a list and it doesnt, it felt backwards that windows needs two bytes where linux needs one, i assumed binary always meant smaller, i kept picturing folders as boxes and a path reads better as directions, i assumed the .csv was part of what made it a csv and its just a sticker, i assumed the missing space was formatting overhead but its the same bytes divided by a bigger number, i assumed an SSD was close to memory speed, i assumed the difference was size but it is whether it survives power
+baton: 046 showed the safe way to update a file: write the whole new version to a tmp file in the same folder, then rename it over the old name, so a reader only ever sees all old or all new (os.replace, with fsync first). the next box starts compression: making files smaller by spotting repeats
+last visuals: table (where a power cut lands in the tmp then rename steps) plus python with output (write tmp, fsync, replace), table (old, new and on-disk blocks after a cut) plus a hand built python check in the answers, text strip of blocks plus python with output (positions mapped to block numbers), table (shop order lines with start positions) plus python with output (a guessed jump lands mid line), table (LF vs CRLF line endings, sizes) plus python with output (a hidden carriage return breaks a match)
+last exits: stops, forward, stops, stops, stops
+last reactions: i expected the careful way to write a file to be a careful write and its the opposite, i assumed a save either happens or it doesnt but theres a third outcome, i kept picturing the disk as a list of bytes i could poke one at a time, i expected a file to act like a list and it doesnt, it felt backwards that windows needs two bytes where linux needs one, i assumed binary always meant smaller, i kept picturing folders as boxes and a path reads better as directions, i assumed the .csv was part of what made it a csv and its just a sticker, i assumed the missing space was formatting overhead but its the same bytes divided by a bigger number, i assumed an SSD was close to memory speed
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -63,7 +63,7 @@ after this arc: you know where data lives, why reading it is slow, and how to pe
 - [x] reading start to end vs jumping to a spot ★ (note 043)
 - [x] disks read in blocks, never single bytes (note 044)
 - [x] torn writes: what a half finished write leaves behind ★ (note 045)
-- [ ] writing safely: write a new file, then rename it ★
+- [x] writing safely: write a new file, then rename it ★ (note 046)
 - [ ] compression: making files smaller by spotting repeats
 - [ ] compression trades processor time for disk space
 - [ ] the terminal: running programs by typing

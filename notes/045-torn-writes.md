@@ -55,4 +55,4 @@ line 6 is the old start glued to the new end, and line 7 loses its last letter a
 </details>
 
 ---
-prev: [044 disks read in blocks, never single bytes](./044-disks-read-in-blocks.md) | next: not written yet
+prev: [044 disks read in blocks, never single bytes](./044-disks-read-in-blocks.md) | next: [046 writing safely, write a new file then rename it](./046-writing-safely.md)
