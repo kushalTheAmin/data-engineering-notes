@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 042 said a line ending is a real character, LF (0a) on linux and mac, CRLF (0d 0a) on windows, and that a tool expecting LF leaves a hidden carriage return on the last column. the next box must say why reading a file start to end is cheap and jumping to a spot is not
-last visuals: table (LF vs CRLF line endings, sizes) plus python with output (a hidden carriage return breaks a match), python with output (101 and 100000 as text vs a 4 byte integer), trace table (a path walked in 3 steps) plus a text tree, annotated artifact (the bytes of order101.csv by position) plus python with output (rename keeps the bytes), python with output (1000 vs 1024 per step)
-last exits: stops, forward, stops, forward, stops
-last reactions: it felt backwards that windows needs two bytes where linux needs one, i assumed binary always meant smaller,  i kept picturing folders as boxes and a path reads better as directions, i assumed the .csv was part of what made it a csv and its just a sticker, i assumed the missing space was formatting overhead but its the same bytes divided by a bigger number, i assumed an SSD was close to memory speed, i assumed the difference was size but it is whether it survives power, i assumed the processor knew what an order was, i expected the line to carry its own meaning but it carries none, i expected a trillion rows to need a different kind of thinking, i kept reading 0 as no rating
+baton: 043 said a file has no list of where lines begin, so finding line 6 means reading lines 1 to 5 and counting 0a bytes, and a jump only works when you already know the position (fixed size lines make it arithmetic). the next box must say why a disk hands over bytes in blocks, so a jump never fetches just one byte
+last visuals: table (shop order lines with start positions) plus python with output (a guessed jump lands mid line), table (LF vs CRLF line endings, sizes) plus python with output (a hidden carriage return breaks a match), python with output (101 and 100000 as text vs a 4 byte integer), trace table (a path walked in 3 steps) plus a text tree, annotated artifact (the bytes of order101.csv by position) plus python with output (rename keeps the bytes)
+last exits: stops, stops, forward, stops, forward, stops
+last reactions: i expected a file to act like a list and it doesnt, it felt backwards that windows needs two bytes where linux needs one, i assumed binary always meant smaller, i kept picturing folders as boxes and a path reads better as directions, i assumed the .csv was part of what made it a csv and its just a sticker, i assumed the missing space was formatting overhead but its the same bytes divided by a bigger number, i assumed an SSD was close to memory speed, i assumed the difference was size but it is whether it survives power, i assumed the processor knew what an order was, i expected the line to carry its own meaning but it carries none
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -60,7 +60,7 @@ after this arc: you know where data lives, why reading it is slow, and how to pe
 - [x] folders and paths (note 040)
 - [x] text files vs binary files (note 041)
 - [x] line endings: the invisible characters that break files ★ (note 042)
-- [ ] reading start to end vs jumping to a spot ★
+- [x] reading start to end vs jumping to a spot ★ (note 043)
 - [ ] disks read in blocks, never single bytes
 - [ ] torn writes: what a half finished write leaves behind ★
 - [ ] writing safely: write a new file, then rename it ★

@@ -48,4 +48,4 @@ just one, order 107. the first six lines each end in a hidden 0d, so none equal 
 </details>
 
 ---
-prev: [041 text files vs binary files](./041-text-files-vs-binary-files.md) | next: not written yet
+prev: [041 text files vs binary files](./041-text-files-vs-binary-files.md) | next: [043 reading start to end vs jumping to a spot](./043-reading-start-to-end-vs-jumping.md)
