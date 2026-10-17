@@ -4,7 +4,7 @@ section: data at the atom level, part 27, ~2 min read
 
 how many orders did the shop, the imaginary gujarati snack store these notes run on, get on or before 1 April? orders 101 and 102 are both on 1 April, so 2. i asked the database the obvious way and it said 0.
 
-a date is a calendar day with nothing else, like Ashas joined_on, 2026-01-05. a time is a clock reading with no day, like 09:15:00. a timestamp, the full moment from [025](./025-unix-time.md), is both glued together. the casting operator :: converts a value to another type, so one timestamp splits into its two halves (a slice of 3 orders):
+a date is a calendar day with nothing else, like Ashas joined_on, 2026-01-05. a time is a clock reading with no day, like 09:15:00. a timestamp, the full moment from [025](./025-unix-time.md), is both glued together. the casting operator :: converts a value to another type, so one timestamp splits into its two halves (a slice of 3 orders). SELECT lists columns, FROM names the table, AS names a result column and count(*) counts rows:
 
 ```sql
 SELECT order_id, ordered_at::DATE AS day, ordered_at::TIME AS clock FROM orders WHERE order_id IN (101, 102, 103);
