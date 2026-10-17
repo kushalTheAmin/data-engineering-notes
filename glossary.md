@@ -5,6 +5,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | term | plain meaning | built in |
 |---|---|---|
 | ambiguous time | a clock reading that happens twice, when clocks go back | [029](./notes/029-daylight-saving.md) |
+| argument | a word after the program name, handed to that program | [049](./notes/049-the-terminal.md) |
 | ASCII | the old table giving 128 characters a number, English only | [008](./notes/008-ascii-runs-out.md) |
 | atomic | happening whole or not at all, never half done | [046](./notes/046-writing-safely.md) |
 | binary | counting with only 0 and 1, each place worth double | [003](./notes/003-counting-in-binary.md) |
@@ -69,10 +70,12 @@ every term these notes have built, in plain words, with the note that built it. 
 | run length encoding | storing each run as the value once plus a count | [047](./notes/047-compression-spotting-repeats.md) |
 | safe write | write a whole new file beside the old, then rename it over | [046](./notes/046-writing-safely.md) |
 | scale | how many of a decimals digits sit after the point | [022](./notes/022-exact-decimal-types.md) |
+| shell | the program inside a terminal that reads your line and runs it | [049](./notes/049-the-terminal.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
 | SSD | a disk made of chips with no moving parts | [037](./notes/037-disk-is-slow.md) |
 | store UTC, show local | keep moments in UTC, convert to local only when displaying | [030](./notes/030-store-utc-show-local.md) |
 | terabyte | 1000 gigabytes, a trillion bytes, written TB | [033](./notes/033-kilobytes-to-terabytes.md) |
+| terminal | a text window where you type a line and the computer replies | [049](./notes/049-the-terminal.md) |
 | text file | a file whose bytes decode as characters, usually with UTF-8 | [041](./notes/041-text-files-vs-binary-files.md) |
 | the shop | the imaginary gujarati snack store every example uses | [001](./notes/001-data-is-facts-and-numbers.md) |
 | time of day | a clock reading with no day attached | [027](./notes/027-dates-and-times-apart.md) |

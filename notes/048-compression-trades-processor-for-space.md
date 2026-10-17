@@ -30,4 +30,4 @@ i assumed smaller was just better, but the saving and the bill come from the sam
 so tools give you a dial. the python library zlib has levels 1 to 9, 1 is fastest with the least compression, 9 is slowest with the most. Parquet, a file format for big tables, lets you pick the codec (the compression method), spread across a compression ratio versus processing cost range.
 
 ---
-prev: [047 compression, making files smaller by spotting repeats](./047-compression-spotting-repeats.md) | next: not written yet
+prev: [047 compression, making files smaller by spotting repeats](./047-compression-spotting-repeats.md) | next: [049 the terminal, running programs by typing](./049-the-terminal.md)
