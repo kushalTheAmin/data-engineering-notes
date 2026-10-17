@@ -68,4 +68,4 @@ shown
 </details>
 
 ---
-prev: [033 kilobytes to terabytes, how big data gets](./033-kilobytes-to-terabytes.md) | next: not written yet
+prev: [033 kilobytes to terabytes, how big data gets](./033-kilobytes-to-terabytes.md) | next: [035 the processor, the part that does the work](./035-the-processor.md)

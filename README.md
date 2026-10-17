@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 34
+notes so far: 35
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -43,3 +43,6 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [032 null is not zero and not empty text](./notes/032-null-is-not-zero-or-empty-text.md): storing 0 stars for unrated orders makes the average 2.4 instead of 4.0
 - [033 kilobytes to terabytes, how big data gets](./notes/033-kilobytes-to-terabytes.md): one order is a 35 byte line, so a million orders is 35 MB and a trillion is 35 TB
 - [034 capstone, one shop order decoded down to bytes](./notes/034-capstone-one-order-decoded-to-bytes.md): order 101 is 35 bytes, and every one of them rests on a note in this section
+
+## section 2: memory, disks and files
+- [035 the processor, the part that does the work](./notes/035-the-processor.md): adding up order 101 takes 7 tiny steps, and the processor knows nothing about orders

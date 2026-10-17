@@ -17,6 +17,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | code point | the number Unicode gives one character, written like U+0AA2 | [009](./notes/009-unicode.md) |
 | combining mark | a code point with no letter, drawn on the letter before it | [012](./notes/012-combining-marks.md) |
 | continuation byte | a UTF-8 byte starting 10, continuing the previous characters bytes | [011](./notes/011-why-gujarati-takes-3-bytes.md) |
+| core | one full processor inside a chip, most chips hold several | [035](./notes/035-the-processor.md) |
 | data | facts written down so you can ask questions about them later | [001](./notes/001-data-is-facts-and-numbers.md) |
 | date | a calendar day with no time of day | [027](./notes/027-dates-and-times-apart.md) |
 | daylight saving | clocks shifting an hour twice a year in many places | [024](./notes/024-utc.md) |
@@ -39,6 +40,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
 | placeholder value | a made up value, like 0, standing in for missing | [032](./notes/032-null-is-not-zero-or-empty-text.md) |
 | precision | the most digits a decimal can hold in total | [022](./notes/022-exact-decimal-types.md) |
+| processor | the CPU, the part of the computer doing tiny steps on numbers | [035](./notes/035-the-processor.md) |
+| register | a tiny holding spot inside the processor, where it works on numbers | [035](./notes/035-the-processor.md) |
 | repeating fraction | digits past the point that loop forever, so no exact finite form | [018](./notes/018-why-0-1-has-no-exact-binary-form.md) |
 | scale | how many of a decimals digits sit after the point | [022](./notes/022-exact-decimal-types.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
