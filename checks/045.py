@@ -26,5 +26,5 @@ d2 = old[:5 * B] + new[5 * B:6 * B]
 assert d2.decode().split("\n")[5:] == ["106,pendinred", "107,delivere"]
 assert not d2.endswith(b"\n")
 # source: https://www.sqlite.org/atomiccommit.html
-#   confirmed: power failure mid write can leave part modified and part unchanged; SQLite journals original data before modifying the database file
+#   confirmed: power failure mid write can leave part modified and part unchanged; in rollback mode (not WAL) SQLite writes the original content of pages to a rollback journal before changing the database file
 print("045 ok")
