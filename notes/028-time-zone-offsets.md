@@ -29,7 +29,7 @@ so what: the written internet standard for timestamps, RFC 3339, defines exactly
 
 ### check yourself
 
-1. order 102 shows 18:40 on a Mumbai clock, which is 5 hours 30 minutes ahead of UTC. predict its UTC time. SELECT picks what to show, FROM names the table, WHERE keeps matching rows, and INTERVAL is a length of time to subtract.
+1. suppose order 102s 18:40 was read off a Mumbai clock, which is 5 hours 30 minutes ahead of UTC. predict its UTC time. SELECT picks what to show, FROM names the table, WHERE keeps matching rows, and INTERVAL is a length of time to subtract.
 ```sql
 SELECT ordered_at - INTERVAL '5 hours 30 minutes' AS utc FROM orders WHERE order_id = 102;
 ```

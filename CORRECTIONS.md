@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+028, 2026-10-17: quiz 1 put order 102 on a Mumbai clock, but 026 reads 101 and 102 on one clock and 029 says the shop clocks are New York time; it now says suppose 102 was read off a Mumbai clock. the answer 13:10 is unchanged. evidence: python, 18:40 - 5:30 == 13:10, the text of 026 (both orders on the same clock) and 029 (the shop clocks are New York time)
 029, 2026-10-17: said daylight saving moves clocks by an hour, but the change is usually an hour, not always; Lord Howe Island moves 30 minutes. it now says usually by an hour. evidence: https://en.wikipedia.org/wiki/Daylight_saving_time ("A one-hour change is usual, but twenty-minute and two-hour changes have been used in the past. Notable exceptions today include Lord Howe Island with a thirty-minute change")
 028, 2026-10-17: the quiz query used SELECT, FROM, WHERE and INTERVAL without saying what they are, so a reader landing on this note alone could not read it; the question now glosses each. evidence: grep of notes/ and glossary.md, SELECT and FROM are glossed only in 023 and 027, and INTERVAL nowhere before 028
 026, 2026-10-17: the quiz query used SELECT, FROM, WHERE, max, min and epoch_ms without saying what they are, and 026 builds on no note that explains them; the question now glosses each. evidence: grep of notes/ and glossary.md, SQL is first glossed in 023 and 026 does not list it under builds on
