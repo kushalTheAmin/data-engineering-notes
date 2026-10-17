@@ -35,7 +35,7 @@ for h in [5, 6]:
 
 i figured storing the time exactly as the customer saw it was the faithful choice. its the lossy one, because the offset is the part you cant recover.
 
-so what: Postgres works this way. its timestamp with time zone type stores UTC internally and converts to the sessions time zone on output, and the original zone is not kept (https://www.postgresql.org/docs/current/datatype-datetime.html). if you need the customers zone later, store it in its own column.
+so what: Postgres, a popular server database, works this way. its timestamp with time zone type stores UTC internally and converts to the sessions time zone on output, and the original zone is not kept (https://www.postgresql.org/docs/current/datatype-datetime.html). if you need the customers zone later, store it in its own column.
 
 ### check yourself
 
