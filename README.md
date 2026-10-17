@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 29
+notes so far: 30
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -38,3 +38,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [027 dates without times, and times without dates](./notes/027-dates-and-times-apart.md): asking for orders up to 1 April returns 0, because the date means midnight
 - [028 time zones, offsets from UTC](./notes/028-time-zone-offsets.md): 09:15-04:00 and 18:45+05:30 are the same moment, and an offset is still not a time zone
 - [029 daylight saving, the hour that happens twice](./notes/029-daylight-saving.md): 01:30 on 1 November 2026 in New York happens twice, an hour apart
+- [030 store in UTC, show in local time](./notes/030-store-utc-show-local.md): order 102 is stored once as 22:40 UTC, and reads 18:40 in New York but 2 April in Mumbai

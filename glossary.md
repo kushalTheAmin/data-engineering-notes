@@ -37,6 +37,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | repeating fraction | digits past the point that loop forever, so no exact finite form | [018](./notes/018-why-0-1-has-no-exact-binary-form.md) |
 | scale | how many of a decimals digits sit after the point | [022](./notes/022-exact-decimal-types.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
+| store UTC, show local | keep moments in UTC, convert to local only when displaying | [030](./notes/030-store-utc-show-local.md) |
 | the shop | the imaginary gujarati snack store every example uses | [001](./notes/001-data-is-facts-and-numbers.md) |
 | time of day | a clock reading with no day attached | [027](./notes/027-dates-and-times-apart.md) |
 | twos complement | binary where the leftmost place is negative, so one zero | [014](./notes/014-twos-complement.md) |

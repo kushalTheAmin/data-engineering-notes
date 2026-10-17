@@ -45,4 +45,4 @@ on 8 April New York is on -04:00, so the real UTC is 14:00 and the report is an 
 </details>
 
 ---
-prev: [028 time zones, offsets from UTC](./028-time-zone-offsets.md) | next: not written yet
+prev: [028 time zones, offsets from UTC](./028-time-zone-offsets.md) | next: [030 store in UTC, show in local time](./030-store-utc-show-local.md)
