@@ -40,7 +40,7 @@ seven. every line gets exactly one extra byte, the 0d, and there are 7 lines. th
 
 </details>
 
-2. same 7 lines in CRLF, but the file has no line break after the last line. you read it as bytes, split at 0a and keep rows whose status equals `delivered` exactly. 5 orders are delivered. how many match, and which?
+2. same 7 lines, orders 101 to 107 in that order, in CRLF, but the file has no line break after the last line. you read it as bytes, split at 0a and keep rows whose status equals `delivered` exactly. 5 orders are delivered, including 107. how many match, and which?
 <details><summary>answer</summary>
 
 just one, order 107. the first six lines each end in a hidden 0d, so none equal `delivered`. the last line has no ending at all, so it is clean. the tempting answers are 5, from trusting the screen, and 0, from assuming every line is broken.

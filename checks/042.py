@@ -18,6 +18,7 @@ lf_size = sum(len(f"{i},{s}") + 1 for i, s in rows)
 crlf_size = sum(len(f"{i},{s}") + 2 for i, s in rows)
 assert crlf_size - lf_size == 7
 # q2: CRLF between lines, no ending after the last
+assert [i for i, _ in rows] == [101, 102, 103, 104, 105, 106, 107] and rows[-1] == (107, "delivered")
 data = "\r\n".join(f"{i},{s}" for i, s in rows).encode()
 hits = [l.split(b",")[0] for l in data.split(b"\n") if l.split(b",")[1] == b"delivered"]
 assert hits == [b"107"]
