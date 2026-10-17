@@ -58,10 +58,13 @@ every term these notes have built, in plain words, with the note that built it. 
 | offset | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
 | overflow | a result too big for its bit size, wrapping or erroring | [016](./notes/016-overflow.md) |
 | path | folder names from the top down to a file, joined by slashes | [040](./notes/040-folders-and-paths.md) |
+| pid | the number the system gives one running process, new each run | [050](./notes/050-processes.md) |
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
 | placeholder value | a made up value, like 0, standing in for missing | [032](./notes/032-null-is-not-zero-or-empty-text.md) |
 | precision | the most digits a decimal can hold in total | [022](./notes/022-exact-decimal-types.md) |
+| process | one running copy of a program, loaded into memory | [050](./notes/050-processes.md) |
 | processor | the CPU, the part of the computer doing tiny steps on numbers | [035](./notes/035-the-processor.md) |
+| program | a file of bytes on disk that can be run | [050](./notes/050-processes.md) |
 | reading start to end | taking a files bytes in order from position 0 | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
 | register | a tiny holding spot inside the processor, where it works on numbers | [035](./notes/035-the-processor.md) |
 | repeating fraction | digits past the point that loop forever, so no exact finite form | [018](./notes/018-why-0-1-has-no-exact-binary-form.md) |

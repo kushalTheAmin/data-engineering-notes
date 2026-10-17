@@ -33,4 +33,4 @@ i expected a separate scary mode of the computer, and its just this: split a lin
 the next one is about what exists once the first word starts running.
 
 ---
-prev: [048 compression trades processor time for disk space](./048-compression-trades-processor-for-space.md) | next: not written yet
+prev: [048 compression trades processor time for disk space](./048-compression-trades-processor-for-space.md) | next: [050 processes, a program while it runs](./050-processes.md)

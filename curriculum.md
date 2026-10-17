@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 049 said the terminal is a text window where a shell splits your typed line at spaces, runs the first word as a program and hands it the rest as arguments, and quotes glue words into one argument. the next box is what exists once that program starts running: a process
-last visuals: annotated terminal line plus python with output (splitting a line into program and arguments), table (raw vs run length encoded for a million delivered lines) plus python with output, python with output (run length encoding of the 7 shop statuses, as ordered vs sorted), table (where a power cut lands in the tmp then rename steps) plus python with output (write tmp, fsync, replace), table (old, new and on-disk blocks after a cut) plus a hand built python check in the answers
-last exits: forward, stops, forward, stops, forward
-last reactions: i expected a separate scary mode of the computer and its just split a line and run the first word, i assumed smaller was just better but the saving and the bill come from the same file, i expected compression to always shrink things and a run of one makes it bigger, i expected the careful way to write a file to be a careful write and its the opposite, i assumed a save either happens or it doesnt but theres a third outcome, i kept picturing the disk as a list of bytes i could poke one at a time, i expected a file to act like a list and it doesnt, it felt backwards that windows needs two bytes where linux needs one, i assumed binary always meant smaller, i kept picturing folders as boxes and a path reads better as directions
+baton: 050 said a process is one running copy of a program, loaded from the file on disk into memory and given its own pid, so one program can run twice and stopping one leaves the other. the next box is the operating system, the program that starts processes and shares the machine between them
+last visuals: table (program vs process) plus python with output (two sleep processes, kill one), annotated terminal line plus python with output (splitting a line into program and arguments), table (raw vs run length encoded for a million delivered lines) plus python with output, python with output (run length encoding of the 7 shop statuses, as ordered vs sorted), table (where a power cut lands in the tmp then rename steps) plus python with output (write tmp, fsync, replace)
+last exits: stops, forward, stops, forward, stops
+last reactions: i kept using program and the thing running as one noun and the pid shows theyre two, i expected a separate scary mode of the computer and its just split a line and run the first word, i assumed smaller was just better but the saving and the bill come from the same file, i expected compression to always shrink things and a run of one makes it bigger, i expected the careful way to write a file to be a careful write and its the opposite, i assumed a save either happens or it doesnt but theres a third outcome, i kept picturing the disk as a list of bytes i could poke one at a time, i expected a file to act like a list and it doesnt, it felt backwards that windows needs two bytes where linux needs one, i assumed binary always meant smaller
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -67,7 +67,7 @@ after this arc: you know where data lives, why reading it is slow, and how to pe
 - [x] compression: making files smaller by spotting repeats (note 047)
 - [x] compression trades processor time for disk space (note 048)
 - [x] the terminal: running programs by typing (note 049)
-- [ ] processes: a program while it runs
+- [x] processes: a program while it runs (note 050)
 - [ ] the operating system: the program that shares the machine out
 - [ ] the working directory: where the terminal is standing
 - [ ] absolute vs relative paths ★

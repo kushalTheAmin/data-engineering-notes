@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 49
+notes so far: 50
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -60,3 +60,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [047 compression, making files smaller by spotting repeats](./notes/047-compression-spotting-repeats.md): the status column stores delivered five times, and storing each run once halves it, until a run of one costs more
 - [048 compression trades processor time for disk space](./notes/048-compression-trades-processor-for-space.md): 10 million bytes shrink to 18, but someone still has to build a million lines back
 - [049 the terminal, running programs by typing](./notes/049-the-terminal.md): echo masala chai is a program and two arguments, and quotes make it one
+- [050 processes, a program while it runs](./notes/050-processes.md): start the same program twice and you get two pids, stop one and the other keeps going
