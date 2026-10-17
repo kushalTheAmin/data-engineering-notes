@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+027, 2026-10-17: the checks file had no source for :: being the casting operator. note text is unchanged, the checks now cite the page. evidence: https://duckdb.org/docs/current/sql/data_types/typecasting.html ("CAST(col AS VARCHAR) or col::VARCHAR explicitly cast the column col to VARCHAR")
 030, 2026-10-17: used Postgres without saying what it is, and no note it builds on explains it, so a reader landing on this note alone could not place it; it now says a popular server database. evidence: grep of notes/ and glossary.md, Postgres is glossed only in 015 and 016, which 030 does not build on
 031, 2026-10-17: used Postgres without saying what it is, and no note it builds on explains it, so a reader landing on this note alone could not place it; it now says a popular server database. evidence: grep of notes/ and glossary.md, Postgres is glossed only in 015 and 016, which 031 does not build on
 029, 2026-10-17: quiz 2 used SELECT, FROM, WHERE, INTERVAL and the shops orders without saying what they are, so a reader landing on this note alone could not read the query; the question now introduces the shop and glosses each. evidence: grep of notes/ and glossary.md, SQL is glossed only in 023, 026 to 028 and 030, and 029 builds on none of them for it; the note never said what the shop is

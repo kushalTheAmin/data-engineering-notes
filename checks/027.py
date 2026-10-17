@@ -14,4 +14,6 @@ assert con.sql("SELECT DATE '2026-04-01' = TIMESTAMP '2026-04-01 00:00:00'").fet
 assert str(con.sql("SELECT joined_on FROM customers WHERE customer_id = 1").fetchone()[0]) == "2026-01-05"
 # orders 101 and 102 are the two on 1 April
 assert [r[0] for r in con.sql("SELECT order_id FROM orders WHERE ordered_at::DATE = DATE '2026-04-01' ORDER BY 1").fetchall()] == [101, 102]
+# source: https://duckdb.org/docs/current/sql/data_types/typecasting.html
+# confirmed: "CAST(col AS VARCHAR) or col::VARCHAR explicitly cast the column col to VARCHAR"
 print("027 ok")
