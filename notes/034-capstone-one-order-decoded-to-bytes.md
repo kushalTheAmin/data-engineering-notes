@@ -38,7 +38,7 @@ i expected the line to carry its own meaning. it carries none, 31 30 31 only rea
 
 ### check yourself
 
-1. the 35 bytes are order 101. predict the line size for orders 104 and 106, where the line is order_id, customer_id, ordered_at and status, glued with commas. SELECT picks columns, FROM names the table, WHERE keeps matching rows, strlen counts bytes, || glues text together and ::VARCHAR turns a number into text.
+1. the 35 bytes are order 101. predict the line size for orders 104 and 106, where the line is order_id, customer_id, ordered_at and status, glued with commas. SELECT picks columns, FROM names the table, WHERE keeps matching rows, IN matches any id in a list, strlen counts bytes, || glues text together and ::VARCHAR turns a number into text.
 ```sql
 SELECT order_id, strlen(order_id::VARCHAR || ',' || customer_id::VARCHAR || ',' || ordered_at::VARCHAR || ',' || status) AS line_bytes FROM orders WHERE order_id IN (104, 106);
 ```
