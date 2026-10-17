@@ -25,7 +25,7 @@ i kept reading +05:30 as a typo. offsets dont have to be whole hours, and India 
 
 one caveat, an offset is not a time zone. -04:00 is what New York uses in April, but in winter it uses -05:00, so the offset alone cant tell you what the clock will say in January. thats the next problem.
 
-so what: the written internet standard for timestamps, RFC 3339, defines exactly this +hh:mm ending (https://www.rfc-editor.org/rfc/rfc3339). a timestamp string without one is a guess you make later, usually wrong.
+so what: the written internet standard for timestamps, RFC 3339, defines exactly this +hh:mm ending (https://www.rfc-editor.org/rfc/rfc3339). a timestamp string without one is a guess you make later.
 
 ### check yourself
 
