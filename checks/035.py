@@ -26,6 +26,7 @@ assert total == sum(p * q for _, p, q in rows)
 #   confirmed: a CPU is the primary processor; clock rates reach several gigahertz;
 #   multi-core chips hold multiple CPUs called cores; registers supply operands and store results;
 #   instructions are represented by a number or sequence of numbers
+#   confirmed: "Several CPUs (denoted cores) can be combined in a single processing chip"; a CPU executes "arithmetic, logic, controlling, and input/output" operations, more than add, multiply and compare
 # giga is a billion: see checks/033.py
 assert 1000 ** 3 == 1_000_000_000
 print("035 ok")
