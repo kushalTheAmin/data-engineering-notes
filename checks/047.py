@@ -34,6 +34,7 @@ assert sizes(sorted(statuses)) == (3, 68, 34)
 assert 68 - 58 == 10 and 68 // 2 == 34
 # a run of one costs more than the bare word
 assert len("1,cancelled\n") == 12 and len("cancelled\n") == 10
+assert len("1,cancelled") == 11 and len("cancelled") == 9
 # lossless: expanding the runs gives the original back
 assert [s for s, n in rle(statuses) for _ in range(n)] == statuses
 # source: https://en.wikipedia.org/wiki/Run-length_encoding

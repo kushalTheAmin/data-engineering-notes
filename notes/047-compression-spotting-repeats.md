@@ -34,7 +34,7 @@ sorted     3 runs 68 bytes -> 34 bytes
 
 in the original order the lone `cancelled` breaks the run, so only 10 bytes saved. sorted, the five delivered sit together, 3 runs, half the size. the catch is that sorting loses which order had which status, so it only works if you keep the order ids somewhere else.
 
-i expected compression to always shrink things, and it doesnt. a run of one costs `1,cancelled`, 12 bytes against 10 for the bare word. no repeats, bigger file.
+i expected compression to always shrink things, and it doesnt. a run of one costs `1,cancelled`, 12 bytes with its newline against 10 for the bare word and its newline. no repeats, bigger file.
 
 Parquet, a file format for storing big tables, uses run length encoding to store repeated values, and a column of a table that holds mostly one word is where it shines. the next one is about what this costs.
 
