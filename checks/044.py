@@ -22,4 +22,6 @@ assert math.ceil(35_000_000 / BLOCK) == 8545 and 35_000_000 // BLOCK == 8544
 #   confirmed: blocked data is read or written a whole block at a time; on Linux the default block size for most file systems is 4096 bytes
 # source: https://en.wikipedia.org/wiki/Disk_sector
 #   confirmed: sectors traditionally 512 bytes on HDDs, newer HDDs and SSDs use 4096 byte sectors; files are stored in whole sectors
+# source: https://en.wikipedia.org/wiki/Disk_sector
+#   confirmed: partitioning schemes are generally designed so files occupy a whole number of sectors, regardless of their actual size; a cluster is the smallest logical amount of disk space that can be allocated to hold a file (so a 1 byte file usually takes a whole block; on ext4 here, a 1 byte file shows 8 blocks of 512 = 4096 bytes)
 print("044 ok")
