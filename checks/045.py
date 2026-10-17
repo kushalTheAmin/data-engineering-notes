@@ -19,7 +19,8 @@ for i, (o, n, d) in exp.items():
     assert (blk(old, i), blk(new, i), blk(disk, i)) == (o, n, d)
 assert len(disk) == 96
 assert disk.split(b"\n")[5] == b"106,deliveg"
-# q1: tear after block 3 leaves old file
+# q1: tear after block 3 leaves old file; block 3 is the same in both
+assert blk(old, 3) == blk(new, 3) == b"ncelled\n105,deli"
 assert new[:4 * B] + old[4 * B:] == old
 # q2: block 5 lands, block 4 does not
 d2 = old[:5 * B] + new[5 * B:6 * B]

@@ -26,15 +26,15 @@ this is why SQLite, a database in one file, saves a copy of the old data before 
 <details><summary>answer</summary>
 
 ```python
-old = b"vered/106,pendin"
-new = b"vered/106,delive"
+old = b"ncelled\n105,deli"
+new = b"ncelled\n105,deli"
 print(old == new)
 ```
 
 ```output
-False
+True
 ```
-blocks 0 to 3 are identical in old and new, so writing them changes nothing and line 6 still says `106,pending`. the tempting answer is a broken line, but a tear only shows if the half written blocks differ.
+that is block 3 in both versions, and blocks 0 to 2 match too, so writing them changes nothing and line 6 still says `106,pending`. the tempting answer is a broken line, but a tear only shows if the half written blocks differ.
 
 </details>
 
