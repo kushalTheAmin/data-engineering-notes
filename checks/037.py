@@ -4,7 +4,7 @@
 # source: https://www.postgresql.org/docs/current/runtime-config-resource.html
 #   confirmed: shared_buffers "Sets the amount of memory the database server uses for shared memory buffers"
 # source: https://en.wikipedia.org/wiki/Hard_disk_drive
-#   confirmed: delays on a hard drive are "mostly related to the mechanical nature of the rotating disks and moving heads"; seek time is how long the head assembly takes to travel to the track
+#   confirmed: delays on a hard drive are "mostly related to the mechanical nature of the rotating disks and moving heads"; the factors listed are seek time (head travel) and rotational latency (waiting for the disk to turn)
 # source: https://en.wikipedia.org/wiki/Cache_(computing)
 #   confirmed: "Database caching can substantially improve the throughput of database applications, for example in the processing of indexes, data dictionaries, and frequently used subsets of data"
 mem, ssd, disk = 100, 150_000, 10_000_000

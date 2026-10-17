@@ -4,7 +4,7 @@ section: memory, disks and files, part 3, ~2 min read
 
 [036](./036-memory-vs-disk.md) said disk keeps your bytes and memory forgets them. so how much slower is disk, really? the numbers look tiny until you stretch them.
 
-a lookup here means fetching one value from a random spot. from an old, widely shared table of latency numbers: memory takes 100 nanoseconds (a billionth of a second), an SSD (a disk made of chips) 150 microseconds, and a spinning hard drive about 10 milliseconds, mostly moving a read head into place. micro and milli were built in [026](./026-seconds-milliseconds-microseconds.md), a millionth and a thousandth of a second.
+a lookup here means fetching one value from a random spot. from an old, widely shared table of latency numbers: memory takes 100 nanoseconds (a billionth of a second), an SSD (a disk made of chips) 150 microseconds, and a spinning hard drive about 10 milliseconds, mostly spinning platters and a read head moving into place. micro and milli were built in [026](./026-seconds-milliseconds-microseconds.md), a millionth and a thousandth of a second.
 
 now say 1 nanosecond lasts 1 second. the shop, the imaginary gujarati snack store these notes run on, wants order 101 from a random spot:
 
