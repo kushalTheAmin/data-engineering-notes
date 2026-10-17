@@ -30,7 +30,7 @@ the 01:50 line. undone it is 05:50 UTC, and the 01:10 line is 06:10 UTC. the tem
 
 </details>
 
-2. the shop clocks are New York time. a report adds 5 hours to every ordered_at to get UTC, because "New York is -05:00". predict its result for order 106, and say what UTC really is.
+2. the shop, the imaginary gujarati snack store these notes run on, keeps its orders on New York clocks. a report adds 5 hours to every ordered_at to get UTC, because "New York is -05:00". predict its result for order 106, and say what UTC really is. SELECT picks what to show, FROM names the table, WHERE keeps matching rows, and INTERVAL is a length of time to add.
 ```sql
 SELECT ordered_at + INTERVAL '5 hours' AS utc FROM orders WHERE order_id = 106;
 ```
