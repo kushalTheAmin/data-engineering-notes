@@ -4,7 +4,7 @@ section: memory, disks and files, part 9, ~2 min read
 
 you want the 6th order in a file. can the computer just go there, like list[5]?
 
-there are two ways to reach a spot. reading start to end takes the bytes in order from position 0. jumping asks for a position directly, which python calls seek. [037](./037-disk-is-slow.md) priced a lookup, one value from a random spot, at 10 milliseconds on a spinning disk,, and a jump is that kind.
+there are two ways to reach a spot. reading start to end takes the bytes in order from position 0. jumping asks for a position directly, which python calls seek. [037](./037-disk-is-slow.md) priced a lookup, one value from a random spot, at 10 milliseconds on a spinning disk, and a jump is that kind.
 
 the catch is knowing the position. here is the shop, the imaginary gujarati snack store these notes run on, as a file with one `order_id,status` line per order, each ending in the 0a of [042](./042-line-endings.md). positions count from 0, like in [039](./039-a-file-is-a-named-list-of-bytes.md), a file being a named list of bytes:
 

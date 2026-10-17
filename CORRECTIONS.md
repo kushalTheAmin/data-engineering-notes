@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+043, 2026-10-17: a stray double comma after spinning disk in the opening paragraph; it is a single comma now. evidence: the text of 043, "on a spinning disk,, and a jump"
 043, 2026-10-17: the jump example used a guess of 14 * 6 = 84 without saying which line it aimed at, so a reader wanting the 6th order would think 84 was the guess for line 6 (it is for line 7; the guess for line 6 is 14 * 5 = 70 and happens to be right); it now says the example jumps to line 7 with the 14 byte guess, then to its real start. the checks now assert 14 * 5 is where line 6 starts and 14 * 6 is past where line 7 starts. evidence: python, sizes 14,14,14,14,14,12,14 give starts 0,14,28,42,56,70,82 and 84 is 2 bytes into line 7
 
 042, 2026-10-17: check yourself question 2 could not be worked from the note alone: it never said the lines run 101 to 107 in order or that the last order, 107, is delivered, which the answer depends on; it now says both. the checks now build the file in that order and assert 107 is the last line and delivered. evidence: python, data/shop.sql orders 101 to 107 give statuses delivered, delivered, delivered, cancelled, delivered, pending, delivered
