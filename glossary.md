@@ -56,6 +56,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | negative zero | a second zero pattern, with the sign bit set | [013](./notes/013-negative-numbers-sign-bit.md) |
 | null | a marker meaning there is no value here, not a value | [031](./notes/031-null.md) |
 | offset | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
+| operating system | the program that starts programs and shares the machine between them | [051](./notes/051-the-operating-system.md) |
 | overflow | a result too big for its bit size, wrapping or erroring | [016](./notes/016-overflow.md) |
 | path | folder names from the top down to a file, joined by slashes | [040](./notes/040-folders-and-paths.md) |
 | pid | the number the system gives one running process, new each run | [050](./notes/050-processes.md) |

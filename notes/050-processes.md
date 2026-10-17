@@ -43,4 +43,4 @@ i kept using "program" and "the thing running" as one noun, and the pid is what 
 the terminal command kill stops a process by its pid, not by program name. python wraps that in a.kill().
 
 ---
-prev: [049 the terminal, running programs by typing](./049-the-terminal.md) | next: not written yet
+prev: [049 the terminal, running programs by typing](./049-the-terminal.md) | next: [051 the operating system, the program that shares the machine out](./051-the-operating-system.md)
