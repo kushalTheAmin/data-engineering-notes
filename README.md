@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 46
+notes so far: 47
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -57,3 +57,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [044 disks read in blocks, never single bytes](./notes/044-disks-read-in-blocks.md): ask for 1 byte and the disk hands over 4096, ask for 2 across a boundary and it hands over 8192
 - [045 torn writes, what a half finished write leaves behind](./notes/045-torn-writes.md): a power cut mid save leaves line 6 reading 106,deliveg, new blocks glued to old ones
 - [046 writing safely, write a new file then rename it](./notes/046-writing-safely.md): write order 106s update to a tmp file, rename it over the old one, and a power cut can only hit the tmp
+- [047 compression, making files smaller by spotting repeats](./notes/047-compression-spotting-repeats.md): the status column stores delivered five times, and storing each run once halves it, until a run of one costs more

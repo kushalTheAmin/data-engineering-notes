@@ -71,4 +71,4 @@ shutil.move falls back to copying, writing straight into orders.csv, so it can t
 </details>
 
 ---
-prev: [045 torn writes, what a half finished write leaves behind](./045-torn-writes.md) | next: not written yet
+prev: [045 torn writes, what a half finished write leaves behind](./045-torn-writes.md) | next: [047 compression, making files smaller by spotting repeats](./047-compression-spotting-repeats.md)
