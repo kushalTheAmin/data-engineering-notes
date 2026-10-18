@@ -40,11 +40,11 @@ one per line: [105, 106]
 
 i expected the outer brackets to be harmless, but they make the whole file one record that is only valid once the last byte arrives. with lines every record stands alone, so one bad line costs one record.
 
-it also means [wc -l](./055-wc-counting-lines.md) (a terminal command that counts line endings) counts records, head -n 2 (prints the first 2 lines) shows 2 whole ones, and adding an order is adding a line at the end.
+it also means [wc -l](./055-wc-counting-lines.md) (a terminal command that counts line endings) counts records, head -n 2 (prints the first 2 lines) shows 2 whole ones, and adding an order is adding a line.
 
-the catch is that a record cant contain a raw line break. json.dumps keeps a newline inside a value as the two characters \n, fine, but pretty printing (indent=2, spreading a record over many lines) breaks the format. a [nested](./068-nesting.md) record still has to fit on its one line.
+the catch is that a record cant contain a raw line break. json.dumps (python data to JSON text) keeps a newline inside a value as the two characters \n, but pretty printing (indent=2, spreading a record over many lines) breaks the format. a [nested](./068-nesting.md) record still has to fit on its one line.
 
-BigQuery, Googles database for big analytics, wants exactly this when you load JSON files, and calls it newline-delimited.
+BigQuery, Googles database for big analytics, wants this when you load JSON files, and calls it newline-delimited.
 
 ### check yourself
 
