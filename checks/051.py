@@ -15,4 +15,6 @@ assert rows.index((0, 0)) + 1 == 5
 # confirmed: Windows, macOS and Linux are operating systems; application code frequently makes system calls to an OS function; most operating systems interrupt a thread (preemptive multitasking) so it cannot monopolize the processor
 # source: https://en.wikipedia.org/wiki/Multi-core_processor
 #   confirmed: a multi-core processor has "two or more separate central processing units (CPUs), called cores"
+# source: https://en.wikipedia.org/wiki/Operating_system
+#   confirmed: "Since programs time share, each program must have independent access to memory", with the kernel's memory manager allocating it
 print("051 ok")
