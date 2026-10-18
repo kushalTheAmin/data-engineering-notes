@@ -4,7 +4,7 @@ section: giving data a shape, part 6, ~2 min read
 
 what if every value in a file carried its own label, so nobody ever had to count commas?
 
-a [csv](./062-csv-rows-and-columns-separated-by-commas.md) (text, one row per line, values split by commas) names its columns once, in the [header row](./065-the-header-row-naming-the-columns.md) on line 1, and [065](./065-the-header-row-naming-the-columns.md) showed code that looks values up by name survives a reordered file. JSON, JavaScript Object Notation, puts the name next to every value instead. a JSON record is curly braces around name: value pairs, the names in double quotes.
+a [csv](./062-csv-rows-and-columns-separated-by-commas.md) (text, usually one row per line, values split by commas) names its columns once, in the [header row](./065-the-header-row-naming-the-columns.md) on line 1, and [065](./065-the-header-row-naming-the-columns.md) showed code that looks values up by name survives a reordered file. JSON, JavaScript Object Notation, puts the name next to every value instead. a JSON record is curly braces around name: value pairs, the names in double quotes.
 
 here is order 101 from the shop, the imaginary gujarati snack store these notes run on, as a csv line and as JSON, plus the same record with the names reordered:
 
