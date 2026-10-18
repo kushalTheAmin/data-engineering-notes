@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 060 assembled section 2 as a seven stage trip for order 106, from a process holding it in memory to a grep and wc count of 5 on the 289 byte, 8 line orders.csv, and noted that header-less output follows from grep delivered. the next box starts section 3, giving text a shape, and must open by picking up this capstone: files so far are just bytes and lines, with no way to tell a column from another
-last visuals: seven stage trip table plus python with output (capstone), before/after table plus python with output (redirect), worked trace table plus python with output (pipes), tiny comparison table plus terminal session (stdin), before/after table plus python with output (grep)
-last exits: forward, stops, stops, forward, stops
-last reactions: i expected saving to be one step and the actual write is the easy part, i assumed the command ran first and the file got touched after and its the other way round, i expected grep to save a file for wc to open and theres no file at all, i assumed grep with no file was an error and its just a program quietly waiting on the keyboard, i assumed it looked at the customer_id column and it has never heard of columns, i assumed wc counted the lines i can see and it counts line endings, i kept counting the header as free and its a line like any other, i assumed .. would stay inside the project and it just climbs one folder, i expected cd to be a program like the others and it cant be, i assumed the two processes just ran side by side and with one core nobody ever does
+baton: 061 showed three made up messages about dhokla orders giving a total of 3 where fixed-position rows (order id, product, quantity, commas between) give the real 6, so structure is an agreement on where each fact sits. the next box must name the usual agreement for rows like these, CSV, and say the rows are what 060s orders.csv already was
+last visuals: trace table plus python with output (structure), seven stage trip table plus python with output (capstone), before/after table plus python with output (redirect), worked trace table plus python with output (pipes), tiny comparison table plus terminal session (stdin)
+last exits: forward, forward, stops, stops, forward
+last reactions: the wrong total came back looking completely normal, i expected saving to be one step and the actual write is the easy part, i assumed the command ran first and the file got touched after and its the other way round, i expected grep to save a file for wc to open and theres no file at all, i assumed grep with no file was an error and its just a program quietly waiting on the keyboard, i assumed it looked at the customer_id column and it has never heard of columns, i assumed wc counted the lines i can see and it counts line endings, i kept counting the header as free and its a line like any other, i assumed .. would stay inside the project and it just climbs one folder, i expected cd to be a program like the others and it cant be, i assumed the two processes just ran side by side and with one core nobody ever does
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -82,7 +82,7 @@ after this arc: you know where data lives, why reading it is slow, and how to pe
 ## arc 3: giving data a shape
 after this arc: you can read and write the text formats data and config actually travel in
 
-- [ ] structure: why a pile of text is hard to ask questions of
+- [x] structure: why a pile of text is hard to ask questions of (note 061)
 - [ ] CSV: rows and columns separated by commas
 - [ ] quoting: commas inside values ★
 - [ ] quotes inside quotes, and newlines inside values ★

@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 60
+notes so far: 61
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -71,3 +71,7 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [058 pipes, chaining small programs together](./notes/058-pipes.md): grep delivered orders.csv | wc -l prints 5 with no file in between, and swapping the order prints nothing
 - [059 redirecting output into a file](./notes/059-redirecting-output-into-a-file.md): grep delivered orders.csv > orders.csv leaves orders.csv empty, because the shell empties it first
 - [060 capstone, the life of one saved order, memory to disk and back](./notes/060-capstone-the-life-of-one-saved-order.md): one pending order, seven stages from memory to a grep and wc count of 5
+
+## section 3: giving data a shape
+
+- [061 structure, why a pile of text is hard to ask questions of](./notes/061-structure-why-text-is-hard-to-ask.md): three messages about dhokla give a total of 3, fixed-position rows give the real 6

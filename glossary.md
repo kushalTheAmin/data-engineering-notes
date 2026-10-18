@@ -88,6 +88,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | standard output | stdout, the channel a process writes to, the screen by default | [057](./notes/057-standard-input-and-output.md) |
 | store UTC, show local | keep moments in UTC, convert to local only when displaying | [030](./notes/030-store-utc-show-local.md) |
 | stream | bytes handed over in order, like a program reading its stdin | [057](./notes/057-standard-input-and-output.md) |
+| structure | an agreement on where each fact sits, so code can find it | [061](./notes/061-structure-why-text-is-hard-to-ask.md) |
 | tail | prints the last lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | terabyte | 1000 gigabytes, a trillion bytes, written TB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | terminal | a text window where you type a line and the computer replies | [049](./notes/049-the-terminal.md) |

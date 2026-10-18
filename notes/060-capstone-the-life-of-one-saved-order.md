@@ -73,4 +73,4 @@ head. it stops after 3 lines, while wc reads every byte to count the 0a characte
 the next section is about giving this text a shape, so a program can tell the columns apart.
 
 ---
-prev: [059 redirecting output into a file](./059-redirecting-output-into-a-file.md) | next: not written yet
+prev: [059 redirecting output into a file](./059-redirecting-output-into-a-file.md) | next: [061 structure, why a pile of text is hard to ask questions of](./061-structure-why-text-is-hard-to-ask.md)
