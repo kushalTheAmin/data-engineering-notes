@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 61
+notes so far: 62
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -75,3 +75,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 ## section 3: giving data a shape
 
 - [061 structure, why a pile of text is hard to ask questions of](./notes/061-structure-why-text-is-hard-to-ask.md): three messages about dhokla give a total of 3, fixed-position rows give the real 6
+- [062 CSV, rows and columns separated by commas](./notes/062-csv-rows-and-columns-separated-by-commas.md): adding two order ids read from a csv gives 101102, because every value arrives as text

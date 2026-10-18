@@ -48,4 +48,4 @@ you may have shipped a total like that. one caveat, the agreement only holds whi
 the usual agreement for rows like these has a name, csv, and it is next.
 
 ---
-prev: [060 capstone, the life of one saved order, memory to disk and back](./060-capstone-the-life-of-one-saved-order.md) | next: not written yet
+prev: [060 capstone, the life of one saved order, memory to disk and back](./060-capstone-the-life-of-one-saved-order.md) | next: [062 CSV, rows and columns separated by commas](./062-csv-rows-and-columns-separated-by-commas.md)
