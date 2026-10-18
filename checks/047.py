@@ -44,4 +44,6 @@ assert [s for s, n in rle(statuses) for _ in range(n)] == statuses
 #   confirmed: Parquet's RLE/bit-packing hybrid encoding stores repeated values more efficiently
 # source: https://en.wikipedia.org/wiki/Data_compression
 #   confirmed: "No information is lost in lossless compression. Lossy compression reduces bits by removing unnecessary or less important information."
+# source: https://en.wikipedia.org/wiki/Data_compression
+#   confirmed: "JPEG image compression works in part by rounding off nonessential bits of information" (lossy)
 print("047 ok")
