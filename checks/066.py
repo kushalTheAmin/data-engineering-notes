@@ -1,5 +1,5 @@
 # checks for notes/066-json-records-with-names-on-every-value.md
-import json, os, sys
+import csv, json, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from _shop import shop
 
@@ -16,6 +16,7 @@ try:
     raise SystemExit("single quotes should fail")
 except json.JSONDecodeError:
     pass
+assert next(csv.reader(['101,1']))[0] == '101'   # csv gives text, json gives a number
 # source: https://www.rfc-editor.org/rfc/rfc8259
 #   confirmed: an object is an unordered collection of zero or more name/value pairs; the abstract calls JSON a lightweight, text-based, language-independent data interchange format; a string begins and ends with quotation marks (double quote, %x22)
 assert type(json.loads(a)["order_id"]) is int

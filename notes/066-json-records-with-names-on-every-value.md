@@ -31,7 +31,7 @@ True
 35 95
 ```
 
-the two orderings come back as the same dictionary, so nothing counts positions. i assumed a JSON record was a csv row with extra punctuation, and the part that matters is that you can read one record alone, with no header up top to go find. and 101 has no quotes, so it comes back as a number, unlike csv.
+the two orderings come back as the same dictionary, so nothing counts positions. i assumed a JSON record was a csv row with extra punctuation, and the part that matters is that you can read one record alone, with no header up top to go find. and 101 has no quotes, so it comes back as a number, unlike splitting a csv, which gives text.
 
 you pay for it. the record is 95 characters against 35 with these spaces, since every record repeats its names. one gotcha: names need double quotes, and single quotes are an error, even though a python dictionary printed with them looks the same.
 
