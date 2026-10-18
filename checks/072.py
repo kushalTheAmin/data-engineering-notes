@@ -21,4 +21,8 @@ assert len(as_json) == 130
 #   confirmed: "The Sitemap protocol format consists of XML tags"
 # source: https://docs.python.org/3/library/xml.etree.elementtree.html
 #   confirmed: ElementTree has fromstring, which parses XML from a string
+# source: https://www.sitemaps.org/protocol.html
+#   confirmed: "in addition to the XML protocol, we support RSS feeds and text files"
+# source: https://www.w3.org/TR/xmlschema11-2/
+#   confirmed: XML Schema datatypes include decimal, float, integer
 print("072 ok")

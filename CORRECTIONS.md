@@ -1,5 +1,7 @@
 # corrections
 
+072, 2026-10-18: said sitemaps are XML, but the sitemap protocol also accepts RSS and text files, and said XML has no number type without saying the separate XML Schema standard adds them. it now says sitemaps are usually XML and that XML Schema can add number types. evidence: https://www.sitemaps.org/protocol.html ("in addition to the XML protocol, we support RSS feeds and text files"); https://www.w3.org/TR/xmlschema11-2/ (built-in datatypes decimal, float, integer)
+
 073, 2026-10-18: said indentation shows nesting and the format drops every bracket, but YAML also has a bracket style (flow sequences and mappings). it now says indentation usually shows nesting and that a bracket style exists too. evidence: https://yaml.org/spec/1.2.2/ (7.4 Flow Collection Styles: 7.4.1 Flow Sequences, 7.4.2 Flow Mappings); python, yaml.safe_load('items: [{product: khandvi, quantity: 1}]') gives {'items': [{'product': 'khandvi', 'quantity': 1}]}
 
 000, 2026-10-18: push conflict on note 072 (another audit trimmed it meanwhile); the unpushed fix was: sitemaps are XML should say usually XML, since the sitemap protocol also allows RSS and text files. evidence: https://www.sitemaps.org/protocol.html
