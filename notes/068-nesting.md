@@ -4,7 +4,7 @@ section: giving data a shape, part 8, ~2 min read
 
 where do the items of an order go in a csv row? order 103 has 2 items, order 105 has 3, and a row has the same columns every time.
 
-in [067](./067-json-types.md) a JSON record held an object (curly braces, name: value pairs) and an array (square brackets, values in order) as values. nesting is those two sitting inside each other, as deep as you like. an array can hold objects, and an object can hold arrays.
+in [067](./067-json-types.md) a JSON record held an object (curly braces, name: value pairs) and an array (square brackets, values in order) as values. nesting is those two sitting inside each other, layer on layer. an array can hold objects, and an object can hold arrays.
 
 here is order 103 from the shop, the imaginary gujarati snack store these notes run on, with each item now an object that carries its quantity. the code reaches "masala chai" one layer per step:
 

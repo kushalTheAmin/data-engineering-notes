@@ -16,4 +16,6 @@ try:
     raise SystemExit("should fail")
 except IndexError:
     pass
+# source: https://www.rfc-editor.org/rfc/rfc8259
+#   confirmed: "An implementation may set limits on the maximum depth of nesting"
 print("068 ok")
