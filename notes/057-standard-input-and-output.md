@@ -4,7 +4,7 @@ section: memory, disks and files, part 23, ~2 min read
 
 in [055](./055-wc-counting-lines.md), wc -l orders.csv printed "8 orders.csv" but wc -l < orders.csv printed just 8. where did the file name go?
 
-every [process](./050-processes.md), a running copy of a program, starts with two text channels already open. standard input, stdin, is where it reads from. standard output, stdout, is where it writes to. a stream is just bytes handed over in order. by default stdin is your keyboard and stdout is the [terminal](./049-the-terminal.md) screen. print() in python writes to stdout.
+every [process](./050-processes.md), a running copy of a program, starts with text channels already open, and two matter here. standard input, stdin, is where it reads from. standard output, stdout, is where it writes to. a stream is just bytes handed over in order. by default stdin is your keyboard and stdout is the [terminal](./049-the-terminal.md) screen. print() in python writes to stdout.
 
 | command | where the program reads | does it see the name |
 | --- | --- | --- |

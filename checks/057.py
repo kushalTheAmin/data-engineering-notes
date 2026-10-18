@@ -15,4 +15,6 @@ assert "delivered" in "order 101 delivered" and "delivered" not in "shipped"
 #   confirmed: "preconnected input and output communication channels", typically connected to the text terminal the shell runs in
 # source: https://docs.python.org/3/library/functions.html#print
 #   confirmed: print writes to sys.stdout when file is not given
+# source: https://en.wikipedia.org/wiki/Standard_streams
+#   confirmed: a program starts with three connections, "standard input (stdin), standard output (stdout) and standard error (stderr)"; the note names only the two that matter here
 print("057 ok")
