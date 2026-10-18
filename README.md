@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 58
+notes so far: 59
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -69,3 +69,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [056 grep, finding the lines that match](./notes/056-grep-finding-matching-lines.md): grep 1 on the orders file returns all 7 orders, because it matches text anywhere, not a column
 - [057 standard input and output, how programs pass text along](./notes/057-standard-input-and-output.md): wc -l with a file name prints it, wc -l < file doesnt, because the program never saw a name
 - [058 pipes, chaining small programs together](./notes/058-pipes.md): grep delivered orders.csv | wc -l prints 5 with no file in between, and swapping the order prints nothing
+- [059 redirecting output into a file](./notes/059-redirecting-output-into-a-file.md): grep delivered orders.csv > orders.csv leaves orders.csv empty, because the shell empties it first

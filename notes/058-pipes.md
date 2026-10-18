@@ -69,4 +69,4 @@ two. the first grep keeps the 5 delivered lines, the second keeps those containi
 </details>
 
 ---
-prev: [057 standard input and output, how programs pass text along](./057-standard-input-and-output.md) | next: not written yet
+prev: [057 standard input and output, how programs pass text along](./057-standard-input-and-output.md) | next: [059 redirecting output into a file](./059-redirecting-output-into-a-file.md)
