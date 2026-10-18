@@ -4,7 +4,7 @@ section: memory, disks and files, part 23, ~2 min read
 
 in [055](./055-wc-counting-lines.md), wc -l orders.csv printed "8 orders.csv" but wc -l < orders.csv printed just 8. where did the file name go?
 
-every [process](./050-processes.md), a running copy of a program, starts with two text channels already open. standard input, stdin, is where it reads from. standard output, stdout, is where it writes to. a stream is just bytes handed over in order. by default stdin is your keyboard and stdout is the [terminal](./049-the-terminal.md) screen. print() in python writes to stdout.
+every [process](./050-processes.md), a running copy of a program, starts with text channels already open, and two matter here. standard input, stdin, is where it reads from. standard output, stdout, is where it writes to. a stream is just bytes handed over in order. by default stdin is your keyboard and stdout is the [terminal](./049-the-terminal.md) screen. print() in python writes to stdout.
 
 | command | where the program reads | does it see the name |
 | --- | --- | --- |
@@ -25,7 +25,7 @@ order 101 delivered
 $
 ```
 
-i assumed grep with no file was an error, and its just a program quietly waiting on the keyboard. "shipped" has no match so nothing came back. the doubled line is my typing, then grep printing the match. ctrl+d tells it the input is over.
+i assumed grep with no file was an error, and its just a program quietly waiting on the keyboard. "shipped" has no match so nothing came back. the doubled line is my typing, then grep printing the match. on linux and mac, ctrl+d at the start of a line tells it the input is over.
 
 so a command that looks frozen may just be missing its file name. its waiting on you.
 
