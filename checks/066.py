@@ -19,4 +19,6 @@ except json.JSONDecodeError:
 # source: https://www.rfc-editor.org/rfc/rfc8259
 #   confirmed: an object is an unordered collection of zero or more name/value pairs; the abstract calls JSON a lightweight, text-based, language-independent data interchange format; a string begins and ends with quotation marks (double quote, %x22)
 assert type(json.loads(a)["order_id"]) is int
+# source: https://www.rfc-editor.org/rfc/rfc4180
+#   confirmed: the header line is optional in csv, so "usually" names its columns in a header row: "There maybe an optional header line appearing as the first line of the file"
 print("066 ok")
