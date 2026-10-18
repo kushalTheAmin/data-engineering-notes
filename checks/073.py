@@ -20,4 +20,6 @@ assert lines[3].index("product") == 4 == lines[4].index("quantity")
 #   confirmed: "To maintain portability, tab characters must not be used in indentation"
 # source: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
 #   confirmed: "Workflow files use YAML syntax"
+# source: https://yaml.org/spec/1.2.2/
+#   confirmed: section 7.4 Flow Collection Styles (7.4.1 Flow Sequences, 7.4.2 Flow Mappings) use brackets
 print("073 ok")

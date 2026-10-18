@@ -1,5 +1,7 @@
 # corrections
 
+073, 2026-10-18: said indentation shows nesting and the format drops every bracket, but YAML also has a bracket style (flow sequences and mappings). it now says indentation usually shows nesting and that a bracket style exists too. evidence: https://yaml.org/spec/1.2.2/ (7.4 Flow Collection Styles: 7.4.1 Flow Sequences, 7.4.2 Flow Mappings); python, yaml.safe_load('items: [{product: khandvi, quantity: 1}]') gives {'items': [{'product': 'khandvi', 'quantity': 1}]}
+
 000, 2026-10-18: push conflict on note 072 (another audit trimmed it meanwhile); the unpushed fix was: sitemaps are XML should say usually XML, since the sitemap protocol also allows RSS and text files. evidence: https://www.sitemaps.org/protocol.html
 
 069, 2026-10-18: said wc -l counts records, but wc -l counts line endings, so a last record with no ending after it is missed (the torn file in this very note has 3 records and 2 endings). it now says wc -l counts records if the last one has an ending too. evidence: python, '{a}\n{b}\n{c}'.count('\n') is 2 for 3 records; note 055 (wc counts 0a bytes, a row without a final one is not counted)

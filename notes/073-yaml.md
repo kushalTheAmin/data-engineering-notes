@@ -4,7 +4,7 @@ section: giving data a shape, part 13, ~2 min read
 
 what if a format just dropped every bracket and every closing tag and let the spaces at the start of each line say what sits inside what?
 
-that is YAML, a text format where indentation shows nesting and a dash starts each list item. [XML](./072-xml.md) (values wrapped in opening and closing tags) cost 190 characters for order 103 from the shop, the imaginary gujarati snack store these notes run on. here is the same order, the one [068](./068-nesting.md) walked through, in YAML, and python counting the leading spaces on each line:
+that is YAML, a text format where indentation usually shows nesting and a dash starts each list item (a bracket style exists too). [XML](./072-xml.md) (values wrapped in opening and closing tags) cost 190 characters for order 103 from the shop, the imaginary gujarati snack store these notes run on. here is the same order, the one [068](./068-nesting.md) walked through, in YAML, and python counting leading spaces:
 
 ```python
 lines = [
@@ -37,9 +37,9 @@ read the spaces column like a map. items: has nothing after its colon, and the l
 
 i kept looking for the brackets to know where the list ends, and it ends when a line steps back out to fewer spaces. 113 characters, against 130 for [JSON](./066-json-records-with-names-on-every-value.md) with python spacing.
 
-the gotcha is that spaces are the syntax. the YAML spec says tab characters must not be used in indentation, so a tab that looks like 4 spaces in your editor is simply not allowed.
+the gotcha is that spaces are the syntax. the YAML spec says tab characters must not be used in indentation, so a tab that looks like 4 spaces in your editor is not allowed.
 
-you will meet YAML mostly as config, the settings files tools read. GitHub Actions workflows are written in it.
+you will meet YAML as config, the settings files tools read. GitHub Actions workflows are written in it.
 
 ---
 prev: [072 XML, the older cousin you will still meet](./072-xml.md) | next: not written yet
