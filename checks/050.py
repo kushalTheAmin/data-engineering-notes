@@ -20,4 +20,6 @@ b.wait()
 #   confirmed: "The operating system keeps its processes separate and allocates the resources they need"
 # source: https://en.wikipedia.org/wiki/Process_identifier
 #   confirmed: a pid is a number used by most operating system kernels "to uniquely identify an active process"
+# source: https://en.wikipedia.org/wiki/Process_(computing)
+#   confirmed: "a process is the execution of those instructions after being loaded from the disk into memory", and several processes may belong to the same program
 print("050 ok")
