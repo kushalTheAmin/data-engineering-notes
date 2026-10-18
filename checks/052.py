@@ -28,4 +28,10 @@ assert subprocess.run(["bash", "-c", "type cd"], capture_output=True, text=True)
 #   confirmed: pwd prints the name of the current/working directory
 # source: https://man7.org/linux/man-pages/man2/chdir.2.html
 #   confirmed: chdir changes the current working directory of the calling process
+# source: https://man7.org/linux/man-pages/man1/ls.1.html
+#   confirmed: "List information about the FILEs (the current directory by default)"
+# source: https://en.wikipedia.org/wiki/Working_directory
+#   confirmed: "Typically, each process has a separate working directory"
+# source: https://pubs.opengroup.org/onlinepubs/9699919799/functions/fork.html
+#   confirmed: "The new process (child process) shall be an exact copy of the calling process (parent process) except as detailed below", and the working directory is not among the exceptions
 print("052 ok")
