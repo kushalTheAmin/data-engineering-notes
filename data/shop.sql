@@ -89,3 +89,14 @@ INSERT INTO order_notes VALUES
     (101, 'extra chutney, less spicy'),
     (102, 'no nuts'),
     (105, 'gift, please wrap');
+
+-- added by note 064: delivery messages, one with a quote mark and one with a newline inside
+CREATE TABLE order_messages (
+    order_id INTEGER NOT NULL REFERENCES orders (order_id),
+    message  VARCHAR NOT NULL
+);
+
+INSERT INTO order_messages VALUES
+    (103, 'less sweet'),
+    (106, 'the "extra crispy" fafda please'),
+    (107, 'call first' || chr(10) || 'leave at the door');

@@ -49,4 +49,4 @@ orders 101 and 105, because their notes contain a comma. 102, "no nuts", is fine
 </details>
 
 ---
-prev: [062 CSV, rows and columns separated by commas](./062-csv-rows-and-columns-separated-by-commas.md) | next: not written yet
+prev: [062 CSV, rows and columns separated by commas](./062-csv-rows-and-columns-separated-by-commas.md) | next: [064 quotes inside quotes, and newlines inside values](./064-quotes-inside-quotes-and-newlines-inside-values.md)
