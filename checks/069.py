@@ -20,6 +20,9 @@ for line in lines.split("\n"):
     except json.JSONDecodeError:
         pass
 assert good == [105, 106]
+# wc -l counts line endings: the torn file above holds 3 records but only 2 endings, so it would print 2
+assert lines.count("\n") == 2 and len(lines.split("\n")) == 3
+assert (lines + "\n").count("\n") == 3
 assert con.execute("SELECT count(*) FROM orders").fetchone()[0] == 7
 cols = con.execute("SELECT count(*) FROM information_schema.columns WHERE table_name = 'orders'").fetchone()[0]
 assert cols == 4
