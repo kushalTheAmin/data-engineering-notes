@@ -96,6 +96,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | run length encoding | storing each run as the value once plus a count | [047](./notes/047-compression-spotting-repeats.md) |
 | safe write | write a whole new file beside the old, then rename it over | [046](./notes/046-writing-safely.md) |
 | scale | how many of a decimals digits sit after the point | [022](./notes/022-exact-decimal-types.md) |
+| schema (file) | a written agreement on which fields every record must have | [075](./notes/075-schema.md) |
 | shell | the program inside a terminal that reads your line and runs it | [049](./notes/049-the-terminal.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
 | SSD | a disk made of chips with no moving parts | [037](./notes/037-disk-is-slow.md) |

@@ -46,4 +46,4 @@ PyYAML sees True. a parser that follows the 1.2 rules sees the text yes, since o
 </details>
 
 ---
-prev: [073 YAML, indentation as structure](./073-yaml.md) | next: not written yet
+prev: [073 YAML, indentation as structure](./073-yaml.md) | next: [075 schema, the agreement about shape](./075-schema.md)

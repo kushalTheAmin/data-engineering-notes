@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 74
+notes so far: 75
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -88,3 +88,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [072 XML, the older cousin you will still meet](./notes/072-xml.md): the same order needs every name written twice, and a list is just the same tag repeated
 - [073 YAML, indentation as structure](./notes/073-yaml.md): the same order drops every bracket and closing tag, and a list item ends when a line steps back out
 - [074 YAML traps, when no means false](./notes/074-yaml-traps.md): gift_wrap: no comes back as False, and quotes turn it back into text
+- [075 schema, the agreement about shape](./notes/075-schema.md): order 104 renamed status to state, the file is still valid JSON, and the schema catches it
