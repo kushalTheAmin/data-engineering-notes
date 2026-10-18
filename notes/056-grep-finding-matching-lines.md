@@ -48,4 +48,4 @@ so my grep 1 matched all 7 orders, because 101 to 107 all have a 1 in the order 
 it also reads the file start to end like [043](./043-reading-start-to-end-vs-jumping.md) described, so on a huge log it takes as long as reading the whole thing. people use it to pull the ERROR lines out of logs. just check how many lines came back before you trust a loose match.
 
 ---
-prev: [055 wc, counting lines](./055-wc-counting-lines.md) | next: not written yet
+prev: [055 wc, counting lines](./055-wc-counting-lines.md) | next: [057 standard input and output, how programs pass text along](./057-standard-input-and-output.md)

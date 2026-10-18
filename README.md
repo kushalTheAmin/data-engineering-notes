@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 56
+notes so far: 57
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -67,3 +67,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [054 head and tail, looking at the start and end of a file](./notes/054-head-and-tail.md): a huge csv, and you only want the columns, so read the first lines and stop
 - [055 wc, counting lines](./notes/055-wc-counting-lines.md): a file with 7 orders says 8 lines, and with its last row cut short of a final newline says 7
 - [056 grep, finding the lines that match](./notes/056-grep-finding-matching-lines.md): grep 1 on the orders file returns all 7 orders, because it matches text anywhere, not a column
+- [057 standard input and output, how programs pass text along](./notes/057-standard-input-and-output.md): wc -l with a file name prints it, wc -l < file doesnt, because the program never saw a name

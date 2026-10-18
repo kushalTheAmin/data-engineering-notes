@@ -82,7 +82,10 @@ every term these notes have built, in plain words, with the note that built it. 
 | shell | the program inside a terminal that reads your line and runs it | [049](./notes/049-the-terminal.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
 | SSD | a disk made of chips with no moving parts | [037](./notes/037-disk-is-slow.md) |
+| standard input | stdin, the channel a process reads from, the keyboard by default | [057](./notes/057-standard-input-and-output.md) |
+| standard output | stdout, the channel a process writes to, the screen by default | [057](./notes/057-standard-input-and-output.md) |
 | store UTC, show local | keep moments in UTC, convert to local only when displaying | [030](./notes/030-store-utc-show-local.md) |
+| stream | bytes handed over in order, like a program reading its stdin | [057](./notes/057-standard-input-and-output.md) |
 | tail | prints the last lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | terabyte | 1000 gigabytes, a trillion bytes, written TB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | terminal | a text window where you type a line and the computer replies | [049](./notes/049-the-terminal.md) |
