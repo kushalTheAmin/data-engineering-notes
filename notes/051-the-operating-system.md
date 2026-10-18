@@ -24,4 +24,4 @@ i assumed the two processes just ran side by side, and with one core nobody ever
 the other half of the job is that a normal program doesnt reach the disk itself. it asks the operating system, "open this file", and the system does it and hands the bytes back.
 
 ---
-prev: [050 processes, a program while it runs](./050-processes.md) | next: not written yet
+prev: [050 processes, a program while it runs](./050-processes.md) | next: [052 the working directory, where the terminal is standing](./052-the-working-directory.md)
