@@ -2,7 +2,7 @@
 builds on: [062 CSV, rows and columns separated by commas](./062-csv-rows-and-columns-separated-by-commas.md)
 section: giving data a shape, part 3, ~2 min read
 
-what happens to a csv row when the value itself has a comma in it? order 101 at the shop, the imaginary gujarati snack store these notes run on, came with the note "extra chutney, less spicy", and a row that should have two values suddenly has three.
+what happens to a csv row (a line of values split by commas) when the value itself has a comma in it? order 101 at the shop, the imaginary gujarati snack store these notes run on, came with the note "extra chutney, less spicy", and a row that should have two values suddenly has three.
 
 [062](./062-csv-rows-and-columns-separated-by-commas.md) split each line on commas, so a comma inside a value looks exactly like a separator. quoting fixes it: wrap the value in double quotes, and a csv reader treats everything until the closing quote as one value. here is a slice of the notes, 3 rows, as the file holds them and as each method reads them:
 
@@ -13,6 +13,7 @@ what happens to a csv row when the value itself has a comma in it? order 101 at 
 | 105,"gift, please wrap" | 3 values | 2 values |
 
 ```python
+# io.StringIO lets a string stand in for a file; csv.reader is python's csv reader
 import csv, io
 line = '101,"extra chutney, less spicy"\n'
 print(line.strip().split(","))
