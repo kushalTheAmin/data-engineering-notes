@@ -41,7 +41,7 @@ this bites in practice, and you often get no error at all. the python csv docs s
 1. a message for order 103 is `less "sweet"`, quote marks included. what does a csv writer put in the file for that row?
 <details><summary>answer</summary>
 
-`103,"less ""sweet"""`. the value has quotes in it, so it gets fenced, and each inner quote is doubled; the last three quotes are the doubled one and the closing fence. the tempting answer is `103,less "sweet"`, which breaks as soon as the quote opens the value, or `103,"less "sweet""`, which is fenced but not doubled and silently reads back wrong. a backslash version is what some other tools use, but not the python csv default.
+`103,"less ""sweet"""`. the value has quotes in it, so it gets fenced, and each inner quote is doubled; the last three quotes are the doubled one and the closing fence. the tempting answer is `103,less "sweet"`, which python reads back fine but the writer does not produce by default, or `103,"less "sweet""`, which is fenced but not doubled and silently reads back wrong. a backslash version is what some other tools use, but not the python csv default.
 
 </details>
 

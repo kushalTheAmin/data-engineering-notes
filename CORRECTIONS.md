@@ -1,5 +1,6 @@
 # corrections
 
+064, 2026-10-18: check yourself 1 said the unfenced line 103,less "sweet" breaks as soon as the quote opens the value, but the quote is mid value there and python reads it back as less "sweet" fine. it now says python reads it back fine but the writer does not produce it by default. evidence: python, next(csv.reader(io.StringIO('103,less "sweet"\n'))) is ['103', 'less "sweet"']; https://docs.python.org/3/library/csv.html (QUOTE_MINIMAL quotes fields containing "special characters such as delimiter, quotechar")
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
 062, 2026-10-18: defined csv as one row per line with no exception, but a quoted value can hold a line break, so one row can span 2 lines (note 064 shows it). it now says one row per line, usually, a quoted value can hold a line break. evidence: python, csv.reader on '1,"a\nb"' returns 1 row from 2 lines; https://docs.python.org/3/library/csv.html ("records can span multiple lines")

@@ -21,6 +21,7 @@ b = io.StringIO()
 csv.writer(b, lineterminator="\n").writerow([103, 'less "sweet"'])
 assert b.getvalue() == '103,"less ""sweet"""\n'
 assert next(csv.reader(io.StringIO('103,"less "sweet""\n')))[1] == 'less sweet""'
+assert next(csv.reader(io.StringIO('103,less "sweet"\n'))) == ['103', 'less "sweet"']   # the unfenced form reads back fine in python, it is just not what the writer outputs
 # check yourself 2
 assert [l.split(",")[0] for l in text.splitlines()] == ['103', '106', '107', 'leave at the door"']
 # source: https://docs.python.org/3/library/csv.html
