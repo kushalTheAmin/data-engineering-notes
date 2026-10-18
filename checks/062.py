@@ -16,4 +16,9 @@ assert all(isinstance(v, str) for r in rows for v in r)
 assert [rows[0][i] for i in (0, 1, 3)] == ['101', '1', 'delivered'] and len(rows[0]) == 4
 # source: https://docs.python.org/3/library/csv.html
 #   confirmed: the csv module reads rows as lists of strings, and the format has no single well defined standard
+try:
+    import pandas  # pandas guesses types, so the "some tools guess types" aside is true
+    assert pandas.read_csv(io.StringIO(text), header=None)[0].sum() == 306
+except ImportError:
+    pass
 print("062 ok")

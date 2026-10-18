@@ -2,7 +2,7 @@
 builds on: [041 text files vs binary files](./041-text-files-vs-binary-files.md), [042 line endings, the invisible characters that break files](./042-line-endings.md), [061 structure, why a pile of text is hard to ask questions of](./061-structure-why-text-is-hard-to-ask.md)
 section: giving data a shape, part 2, ~2 min read
 
-add the first two order ids read from a csv in python and you get 101102, not 203.
+add the first two order ids you split out of a csv in python and you get 101102, not 203.
 
 [061](./061-structure-why-text-is-hard-to-ask.md) said structure is an agreement on where each fact sits. the usual agreement for rows like those is CSV, comma separated values: a [text file](./041-text-files-vs-binary-files.md), one row per [line](./042-line-endings.md), the values in a row split by commas, so a column is just a position. the orders.csv from before was already one.
 
@@ -30,7 +30,7 @@ print(int(rows[0][0]) + int(rows[1][0]))
 203
 ```
 
-look at the quotes around 101. i expected a number to come back as a number, but the file only holds characters, so every value arrives as text, dates included. adding two strings glues them, which is where 101102 came from. turning "101" into an int is your job.
+look at the quotes around 101. i expected a number to come back as a number, but the file only holds characters, so splitting gives you text for every value, dates included. adding two strings glues them, which is where 101102 came from. turning "101" into an int is your job here, though some tools, like pandas, guess types for you.
 
 python has a csv module for this, and its reader hands back lists of strings the same way. one honest caveat: csv has no single strict standard, just a common habit, so files from different programs can differ in small ways.
 
