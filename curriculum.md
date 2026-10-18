@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 057 said every process starts with stdin and stdout, keyboard and screen by default, and that the shell can swap stdin for a file with <, so grep and wc dont care where their input comes from. the next box is pipes, joining one programs output to the next programs input
-last visuals: tiny comparison table plus terminal session (stdin), before/after table plus python with output (grep), annotated terminal session plus python with output (wc -l), annotated terminal session (head and tail on orders.csv), table plus python with output
-last exits: forward, stops, forward, stops, stops
-last reactions: i assumed grep with no file was an error and its just a program quietly waiting on the keyboard, i assumed it looked at the customer_id column and it has never heard of columns, i assumed wc counted the lines i can see and it counts line endings, i kept counting the header as free and its a line like any other, i assumed .. would stay inside the project and it just climbs one folder, i expected cd to be a program like the others and it cant be, i assumed the two processes just ran side by side and with one core nobody ever does, i kept using program and the thing running as one noun and the pid shows theyre two, i expected a separate scary mode of the computer and its just split a line and run the first word, i assumed smaller was just better but the saving and the bill come from the same file
+baton: 058 showed that a pipe joins the stdout of the program on its left to the stdin of the one on its right, so grep delivered orders.csv | wc -l prints 5 with no file in between, and that order matters because a pipe only feeds stdin. the next box is redirecting output into a file with >, the other end of the same idea
+last visuals: worked trace table plus python with output (pipes), tiny comparison table plus terminal session (stdin), before/after table plus python with output (grep), annotated terminal session plus python with output (wc -l), annotated terminal session (head and tail on orders.csv)
+last exits: stops, forward, stops, forward, stops
+last reactions: i expected grep to save a file for wc to open and theres no file at all, i assumed grep with no file was an error and its just a program quietly waiting on the keyboard, i assumed it looked at the customer_id column and it has never heard of columns, i assumed wc counted the lines i can see and it counts line endings, i kept counting the header as free and its a line like any other, i assumed .. would stay inside the project and it just climbs one folder, i expected cd to be a program like the others and it cant be, i assumed the two processes just ran side by side and with one core nobody ever does, i kept using program and the thing running as one noun and the pid shows theyre two, i expected a separate scary mode of the computer and its just split a line and run the first word, i assumed smaller was just better but the saving and the bill come from the same file
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -75,7 +75,7 @@ after this arc: you know where data lives, why reading it is slow, and how to pe
 - [x] wc: counting lines (note 055)
 - [x] grep: finding the lines that match (note 056)
 - [x] standard input and output: how programs pass text along (note 057)
-- [ ] pipes: chaining small programs together ★
+- [x] pipes: chaining small programs together ★ (note 058)
 - [ ] redirecting output into a file
 - [ ] capstone: the life of one saved order, memory to disk and back
 

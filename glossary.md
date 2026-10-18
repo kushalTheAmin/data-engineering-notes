@@ -64,6 +64,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | parent folder | the folder holding this one, written .. in a path | [053](./notes/053-absolute-vs-relative-paths.md) |
 | path | folder names from the top down to a file, joined by slashes | [040](./notes/040-folders-and-paths.md) |
 | pid | the number the system gives one running process, new each run | [050](./notes/050-processes.md) |
+| pipe (shell) | joins one programs output to the next programs input | [058](./notes/058-pipes.md) |
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
 | placeholder value | a made up value, like 0, standing in for missing | [032](./notes/032-null-is-not-zero-or-empty-text.md) |
 | precision | the most digits a decimal can hold in total | [022](./notes/022-exact-decimal-types.md) |

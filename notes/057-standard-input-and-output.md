@@ -32,4 +32,4 @@ so a command that looks frozen may just be missing its file name. its waiting on
 grep and wc dont care where stdin comes from, and a later note uses that to feed one program into another.
 
 ---
-prev: [056 grep, finding the lines that match](./056-grep-finding-matching-lines.md) | next: not written yet
+prev: [056 grep, finding the lines that match](./056-grep-finding-matching-lines.md) | next: [058 pipes, chaining small programs together](./058-pipes.md)
