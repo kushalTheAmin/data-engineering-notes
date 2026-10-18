@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+059, 2026-10-18: said grep never knows the shell swapped its output for a file, but gnu grep checks and stops with an error when the output file is also its input, so it can know. it now says usually never knows, as 057 does for stdin. evidence: python, grep delivered o.csv > o.csv printed "grep: o.csv: input file is also the output", exit code 2; the checks now run it
 058, 2026-10-18: said wc never knows a pipe exists, but a program can inspect its stdin (057 and its isatty source say usually). it now says usually never knows. evidence: https://man7.org/linux/man-pages/man3/isatty.3.html ("tests whether fd is an open file descriptor referring to a terminal"), note 057
 056, 2026-10-18: said a line is the text up to a 0a without saying what kind of number that is, so a reader landing here could not tell. it now says 0a is ten written in hex, as the 055 fix does. evidence: python, 0x0a == 10 and b"\n" == b"\x0a"
 055, 2026-10-18: used 0a without saying what kind of number it is, so a reader landing here could not tell. it now says 0a is ten written in hex. evidence: python, 0x0a == 10 and b'\n' == b'\x0a'

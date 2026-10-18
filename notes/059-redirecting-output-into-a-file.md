@@ -4,7 +4,7 @@ section: memory, disks and files, part 25, ~2 min read
 
 i want only the delivered orders kept in orders.csv, so i type grep delivered orders.csv > orders.csv. do you think the file ends up with the 5 delivered lines?
 
-a redirect, written >, sends the stdout of a program ([057](./057-standard-input-and-output.md), the channel it writes to) into a file instead of the [terminal](./049-the-terminal.md) screen. the shell, the program that runs your line, does the swap, so [grep](./056-grep-finding-matching-lines.md) never knows. a missing file is created, and an existing one is emptied first.
+a redirect, written >, sends the stdout of a program ([057](./057-standard-input-and-output.md), the channel it writes to) into a file instead of the [terminal](./049-the-terminal.md) screen. the shell, the program that runs your line, does the swap, so [grep](./056-grep-finding-matching-lines.md) usually never knows. a missing file is created, and an existing one is emptied first.
 
 here is the shop, the imaginary gujarati snack store these notes run on, with its 8 line orders.csv:
 
