@@ -25,4 +25,4 @@ why is this cheap on a huge file? [043](./043-reading-start-to-end-vs-jumping.md
 tail is for the other end. logs add new lines at the bottom, so tail shows what just happened, and the last row of a data file tells you if the write finished or got cut off mid-line.
 
 ---
-prev: [053 absolute vs relative paths](./053-absolute-vs-relative-paths.md) | next: not written yet
+prev: [053 absolute vs relative paths](./053-absolute-vs-relative-paths.md) | next: [055 wc, counting lines](./055-wc-counting-lines.md)

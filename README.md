@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 54
+notes so far: 55
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -65,3 +65,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [052 the working directory, where the terminal is standing](./notes/052-the-working-directory.md): open orders.csv in python and get the wrong file, because the code never said which folder to stand in
 - [053 absolute vs relative paths](./notes/053-absolute-vs-relative-paths.md): the same ../backup/orders.csv finds the right file from one folder and nothing from another
 - [054 head and tail, looking at the start and end of a file](./notes/054-head-and-tail.md): a huge csv, and you only want the columns, so read the first lines and stop
+- [055 wc, counting lines](./notes/055-wc-counting-lines.md): a file with 7 orders says 8 lines, and with its last row cut short of a final newline says 7

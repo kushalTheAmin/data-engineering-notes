@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 054 said head prints the first lines of a file and tail the last, 10 by default and -n changes it, head stops early so a huge file costs the same, and the header counts as a line. the next box is wc, counting lines
-last visuals: annotated terminal session (head and tail on orders.csv), table plus python with output, annotated terminal session, table (turns on one processor, loader vs report), table (program vs process) plus python with output
-last exits: stops, stops, forward, stops, stops
-last reactions: i kept counting the header as free and its a line like any other, i assumed .. would stay inside the project and it just climbs one folder, i expected cd to be a program like the others and it cant be, i assumed the two processes just ran side by side and with one core nobody ever does, i kept using program and the thing running as one noun and the pid shows theyre two, i expected a separate scary mode of the computer and its just split a line and run the first word, i assumed smaller was just better but the saving and the bill come from the same file, i expected compression to always shrink things and a run of one makes it bigger, i expected the careful way to write a file to be a careful write and its the opposite, i assumed a save either happens or it doesnt but theres a third outcome
+baton: 055 said wc -l counts the 0a bytes, not the lines you can see, so the header counts and a last row with no final 0a is missed (8 vs 7 on orders.csv), and wc -l < file prints just the number. the next box is grep, finding the lines that match
+last visuals: annotated terminal session plus python with output (wc -l), annotated terminal session (head and tail on orders.csv), table plus python with output, annotated terminal session, table (turns on one processor, loader vs report)
+last exits: forward, stops, stops, forward, stops
+last reactions: i assumed wc counted the lines i can see and it counts line endings, i kept counting the header as free and its a line like any other, i assumed .. would stay inside the project and it just climbs one folder, i expected cd to be a program like the others and it cant be, i assumed the two processes just ran side by side and with one core nobody ever does, i kept using program and the thing running as one noun and the pid shows theyre two, i expected a separate scary mode of the computer and its just split a line and run the first word, i assumed smaller was just better but the saving and the bill come from the same file, i expected compression to always shrink things and a run of one makes it bigger, i expected the careful way to write a file to be a careful write and its the opposite
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -72,7 +72,7 @@ after this arc: you know where data lives, why reading it is slow, and how to pe
 - [x] the working directory: where the terminal is standing (note 052)
 - [x] absolute vs relative paths ★ (note 053)
 - [x] head and tail: looking at the start and end of a file (note 054)
-- [ ] wc: counting lines
+- [x] wc: counting lines (note 055)
 - [ ] grep: finding the lines that match
 - [ ] standard input and output: how programs pass text along
 - [ ] pipes: chaining small programs together ★
