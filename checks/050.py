@@ -16,4 +16,8 @@ b.wait()
 # confirmed: the kill command's arguments are process ids (pid), it sends the specified signal to them
 # source: https://en.wikipedia.org/wiki/Process_(computing)
 # confirmed: a process is the instance of a computer program being executed; processes must share parts of their address spaces to communicate, so by default they are separate
+# source: https://en.wikipedia.org/wiki/Process_(computing)
+#   confirmed: "The operating system keeps its processes separate and allocates the resources they need"
+# source: https://en.wikipedia.org/wiki/Process_identifier
+#   confirmed: a pid is a number used by most operating system kernels "to uniquely identify an active process"
 print("050 ok")
