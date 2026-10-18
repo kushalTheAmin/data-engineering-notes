@@ -4,7 +4,7 @@ section: giving data a shape, part 5, ~2 min read
 
 two exports (saved copies) of the same 3 orders, and my code says one of them has no delivered orders. no error, nothing broken.
 
-[062](./062-csv-rows-and-columns-separated-by-commas.md) made a column a position in a csv (a text file, one row per line, values split by commas), and the file itself never named one. the header row does: the first line of the file holds the column names instead of an order, and as [054](./054-head-and-tail.md) found, its a line like any other.
+[062](./062-csv-rows-and-columns-separated-by-commas.md) made a column a position in a csv (a text file, usually one row per line, values split by commas), and the file itself never named one. the header row does: the first line of the file holds the column names instead of an order, and as [054](./054-head-and-tail.md) found, its a line like any other.
 
 a slice of the orders from the shop, the imaginary snack store these notes run on, in two exports. in export a the status is last, in export b it is first. this is what each gives for order 101 (row[3] is the fourth value):
 
