@@ -4,7 +4,7 @@ section: giving data a shape, part 5, ~2 min read
 
 two exports (saved copies) of the same 3 orders, and my code says one of them has no delivered orders. no error, nothing broken.
 
-[062](./062-csv-rows-and-columns-separated-by-commas.md) made a column a position in a csv (a text file, usually one row per line, values split by commas), and the file itself never named one. the header row does: the first line of the file holds the column names instead of an order, and as [054](./054-head-and-tail.md) found, its a line like any other.
+[062](./062-csv-rows-and-columns-separated-by-commas.md) made a column a position in a csv (a text file, usually one row per line, values split by commas), and the file itself never named one. a header row does, if the file has one (the format makes it optional): the first line holds the column names instead of an order, and as [054](./054-head-and-tail.md) found, its a line like any other.
 
 a slice of the orders from the shop, the imaginary snack store these notes run on, in two exports. in export a the status is last, in export b it is first. this is what each gives for order 101 (row[3] is the fourth value):
 
@@ -36,9 +36,9 @@ print(by_name(a), by_name(b))
 
 position 3 in export b is the time, so the count is 0 and nothing complains. a lookup by name works on both, if the names match.
 
-i expected the file to mark the header somehow, and it doesnt. nothing in it says line 1 is names; DictReader just assumes it, and the docs say that row is left out of the results. feed it a file with no header and your first order quietly becomes the column names.
+i expected the file to mark the header, and it doesnt: nothing in it says line 1 is names, DictReader just assumes it, and the docs say that row is left out of the results. with no header, your first order quietly becomes the column names.
 
-a reordered export breaks code that counts positions. the next one puts a name on every value inside the file itself.
+a reordered export breaks code that counts positions. the next one names every value inside the file.
 
 ---
 prev: [064 quotes inside quotes, and newlines inside values](./064-quotes-inside-quotes-and-newlines-inside-values.md) | next: [066 JSON, records with names on every value](./066-json-records-with-names-on-every-value.md)

@@ -26,4 +26,6 @@ assert nh.fieldnames == ["101", "1", "2026-04-01 09:15:00", "delivered"]
 assert len(list(nh)) == 1
 # source: https://docs.python.org/3/library/csv.html
 #   confirmed: if fieldnames is omitted, the first row supplies the names and is omitted from the results
+# source: https://www.rfc-editor.org/rfc/rfc4180
+#   confirmed: the header line is optional in csv; "There maybe an optional header line appearing as the first line of the file"
 print("065 ok")
