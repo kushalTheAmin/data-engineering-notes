@@ -104,6 +104,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | store UTC, show local | keep moments in UTC, convert to local only when displaying | [030](./notes/030-store-utc-show-local.md) |
 | stream | bytes handed over in order, like a program reading its stdin | [057](./notes/057-standard-input-and-output.md) |
 | structure | an agreement on where each fact sits, so code can find it | [061](./notes/061-structure-why-text-is-hard-to-ask.md) |
+| tag | a name in angle brackets, opening or closing an XML value | [072](./notes/072-xml.md) |
 | tail | prints the last lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | terabyte | 1000 gigabytes, a trillion bytes, written TB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | terminal | a text window where you type a line and the computer replies | [049](./notes/049-the-terminal.md) |
@@ -119,3 +120,4 @@ every term these notes have built, in plain words, with the note that built it. 
 | wc | prints a files counts; wc -l counts its 0a line endings | [055](./notes/055-wc-counting-lines.md) |
 | whole cents | money kept as an integer count of cents, price times 100 | [021](./notes/021-storing-money-as-whole-cents.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
+| XML | a text format wrapping each value in opening and closing tags | [072](./notes/072-xml.md) |

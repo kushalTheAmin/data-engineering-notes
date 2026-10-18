@@ -61,4 +61,4 @@ zero rows, so order 108 disappears from the output. a report counting orders fro
 </details>
 
 ---
-prev: [070 flattening nested objects into columns](./070-flattening-nested-objects-into-columns.md) | next: not written yet
+prev: [070 flattening nested objects into columns](./070-flattening-nested-objects-into-columns.md) | next: [072 XML, the older cousin you will still meet](./072-xml.md)
