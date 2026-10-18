@@ -4,7 +4,7 @@ section: memory, disks and files, part 21, ~2 min read
 
 a csv holds 7 orders and the terminal says 8 lines. a copy with every row still there says 7. how can a line count be off by one both ways?
 
-wc -l (wc is short for word count) prints how many lines a file has. it just counts the 0a bytes, the invisible character, called LF, that ends a [line](./042-line-endings.md). you run it in the [terminal](./049-the-terminal.md).
+wc -l (wc is short for word count) prints how many lines a file has. it just counts the 0a bytes (ten, written in hex), the invisible character called LF that ends a [line](./042-line-endings.md). you run it in the [terminal](./049-the-terminal.md).
 
 here it is on the shop, the imaginary gujarati snack store these notes run on. orders.csv is the header plus 7 orders, and cut.csv is the same rows with the final 0a missing:
 
