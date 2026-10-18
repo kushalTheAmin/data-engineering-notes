@@ -50,6 +50,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | header row | the first line of a csv, holding column names instead of data | [065](./notes/065-the-header-row-naming-the-columns.md) |
 | hexadecimal | counting with sixteen digits, a to f standing for ten to fifteen | [005](./notes/005-hexadecimal.md) |
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |
+| JSON | a text format of records, with a name next to every value | [066](./notes/066-json-records-with-names-on-every-value.md) |
 | jump | asking for a file position directly, called seek in python | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
 | kibibyte | 1024 bytes, the unambiguous 1024 based unit, written KiB | [038](./notes/038-1000-or-1024.md) |
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
