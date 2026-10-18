@@ -36,4 +36,4 @@ i assumed the command ran first and the file got touched after, and its the othe
 this is the same worry as [046](./046-writing-safely.md): > writes into the old file with no undo. send the result to a new name, check it, then rename it over the old one.
 
 ---
-prev: [058 pipes, chaining small programs together](./058-pipes.md) | next: not written yet
+prev: [058 pipes, chaining small programs together](./058-pipes.md) | next: [060 capstone, the life of one saved order, memory to disk and back](./060-capstone-the-life-of-one-saved-order.md)
