@@ -31,7 +31,7 @@ rows, header = [], []
 for text in records:
     flat = {}
     for key, value in json.loads(text).items():
-        if isinstance(value, dict):
+        if isinstance(value, dict):  # true when the value is an object
             for inner, v in value.items():
                 flat[key + "_" + inner] = v
         else:
@@ -40,6 +40,7 @@ for text in records:
     for name in flat:
         if name not in header:
             header.append(name)
+# DictWriter writes each dictionary as one csv row; sys.stdout is the screen
 out = csv.DictWriter(sys.stdout, fieldnames=header, lineterminator="\n")
 out.writeheader()
 out.writerows(rows)

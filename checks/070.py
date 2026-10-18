@@ -54,6 +54,8 @@ except ValueError:
 # check yourself 2: city and state make two inner names, csv cannot tell missing from empty text
 assert len({"city": 1, "state": 2}) == 2
 assert list(csv.reader(io.StringIO("5,Esha,\n")))[0][2] == ""
+# source: https://docs.python.org/3/library/csv.html
+#   confirmed: DictWriter extrasaction "If it is set to 'raise', the default value, a ValueError is raised"
 # source: https://pandas.pydata.org/docs/reference/api/pandas.json_normalize.html
 #   confirmed: sep default '.', "Nested records will generate names separated by sep", {'foo': {'bar': 0}} -> foo.bar
 print("070 ok")
