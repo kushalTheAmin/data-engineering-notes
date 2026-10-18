@@ -2,7 +2,7 @@
 builds on: [042 line endings, the invisible characters that break files](./042-line-endings.md), [055 wc, counting lines](./055-wc-counting-lines.md), [062 CSV, rows and columns separated by commas](./062-csv-rows-and-columns-separated-by-commas.md), [063 quoting, commas inside values](./063-quoting-commas-inside-values.md)
 section: giving data a shape, part 4, ~2 min read
 
-a csv file (text, one row per line, values split by commas) with 3 orders in it, and `wc -l`, the line counter, says 4. nothing is broken, so who is lying?
+a csv file (text, usually one row per line, values split by commas) with 3 orders in it, and `wc -l`, the line counter, says 4. nothing is broken, so who is lying?
 
 [063](./063-quoting-commas-inside-values.md) said double quotes around a value are a fence the reader removes, so commas inside stay text. 063 left two cases open. a quote mark inside the fence is written twice, and a reader turns `""` back into one `"`. a [line ending](./042-line-endings.md) inside the fence is just more of the value, not the end of the row.
 
@@ -16,6 +16,7 @@ leave at the door"
 ```
 
 ```python
+# io.StringIO lets a string stand in for a file; csv.reader is python's csv reader
 import csv, io
 text = '103,less sweet\n106,"the ""extra crispy"" fafda please"\n107,"call first\nleave at the door"\n'
 print(len(text.splitlines()))
@@ -41,7 +42,7 @@ this bites in practice, and you often get no error at all. the python csv docs s
 1. a message for order 103 is `less "sweet"`, quote marks included. what does a csv writer put in the file for that row?
 <details><summary>answer</summary>
 
-`103,"less ""sweet"""`. the value has quotes in it, so it gets fenced, and each inner quote is doubled; the last three quotes are the doubled one and the closing fence. the tempting answer is `103,less "sweet"`, which python reads back fine but the writer does not produce by default, or `103,"less "sweet""`, which is fenced but not doubled and silently reads back wrong. a backslash version is what some other tools use, but not the python csv default.
+`103,"less ""sweet"""`. the value has quotes in it, so it gets fenced, and each inner quote is doubled; the last three quotes are the doubled one and the closing fence. the tempting answer is `103,less "sweet"`, which python reads back fine but the writer does not produce by default, or `103,"less "sweet""`, which is fenced but not doubled and silently reads back wrong. a backslash version is not the python csv default.
 
 </details>
 
