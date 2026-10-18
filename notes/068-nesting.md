@@ -30,4 +30,4 @@ in the shop those items live in their own table, order_items, 13 rows tied to or
 the catch is that sizes differ. order 105 has 3 items, so items 2 exists there and raises an IndexError on 103. code that walks a nested record has to expect that.
 
 ---
-prev: [067 JSON types, strings, numbers, booleans, null, objects and arrays](./067-json-types.md) | next: not written yet
+prev: [067 JSON types, strings, numbers, booleans, null, objects and arrays](./067-json-types.md) | next: [069 JSON lines, one record per line](./069-json-lines.md)

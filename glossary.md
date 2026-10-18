@@ -52,6 +52,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |
 | JSON | a text format of records, with a name next to every value | [066](./notes/066-json-records-with-names-on-every-value.md) |
 | JSON array | square brackets around values in order, like a python list | [067](./notes/067-json-types.md) |
+| JSON lines | a text file with one whole JSON record per line | [069](./notes/069-json-lines.md) |
 | JSON object | curly braces around name: value pairs, like a dictionary | [067](./notes/067-json-types.md) |
 | JSON types | the six kinds of value: string, number, boolean, null, object, array | [067](./notes/067-json-types.md) |
 | jump | asking for a file position directly, called seek in python | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
