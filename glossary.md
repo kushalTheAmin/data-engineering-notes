@@ -121,3 +121,4 @@ every term these notes have built, in plain words, with the note that built it. 
 | whole cents | money kept as an integer count of cents, price times 100 | [021](./notes/021-storing-money-as-whole-cents.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
 | XML | a text format wrapping each value in opening and closing tags | [072](./notes/072-xml.md) |
+| YAML | a text format where indentation shows nesting, dashes start list items | [073](./notes/073-yaml.md) |
