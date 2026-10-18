@@ -2,7 +2,7 @@
 builds on: [042 line endings, the invisible characters that break files](./042-line-endings.md), [056 grep, finding the lines that match](./056-grep-finding-matching-lines.md), [060 capstone, the life of one saved order, memory to disk and back](./060-capstone-the-life-of-one-saved-order.md)
 section: giving data a shape, part 1, ~2 min read
 
-how many dhokla did the shop sell? the answer is sitting right there in the text, and my code still got it wrong without a single error.
+how many dhokla were ordered? the answer is sitting right there in the text, and my code still got it wrong without a single error.
 
 [060](./060-capstone-the-life-of-one-saved-order.md) ended with files that are just bytes and lines. [056](./056-grep-finding-matching-lines.md) showed the cost: grep 1 matched all 7 orders because it has never heard of a column. structure is an agreement about where each fact sits, so a program can find it without understanding the sentence.
 
