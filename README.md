@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 65
+notes so far: 66
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -79,3 +79,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [063 quoting, commas inside values](./notes/063-quoting-commas-inside-values.md): a note with a comma in it splits into 3 values by hand and 2 with a csv reader, because quotes fence it
 - [064 quotes inside quotes, and newlines inside values](./notes/064-quotes-inside-quotes-and-newlines-inside-values.md): 3 orders in a csv and wc -l says 4, because one message has a newline inside its quotes
 - [065 the header row, naming the columns](./notes/065-the-header-row-naming-the-columns.md): the same 3 orders with status in a different column count 2 delivered by name and 0 by position
+- [066 JSON, records with names on every value](./notes/066-json-records-with-names-on-every-value.md): the same order with its names in two different orders reads back as one identical dictionary

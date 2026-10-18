@@ -41,4 +41,4 @@ i expected the file to mark the header somehow, and it doesnt. nothing in it say
 a reordered export breaks code that counts positions. the next one puts a name on every value inside the file itself.
 
 ---
-prev: [064 quotes inside quotes, and newlines inside values](./064-quotes-inside-quotes-and-newlines-inside-values.md) | next: not written yet
+prev: [064 quotes inside quotes, and newlines inside values](./064-quotes-inside-quotes-and-newlines-inside-values.md) | next: [066 JSON, records with names on every value](./066-json-records-with-names-on-every-value.md)
