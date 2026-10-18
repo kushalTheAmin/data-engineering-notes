@@ -4,6 +4,7 @@ every term these notes have built, in plain words, with the note that built it. 
 
 | term | plain meaning | built in |
 |---|---|---|
+| absolute path | a path starting with a slash, always begun at the root | [053](./notes/053-absolute-vs-relative-paths.md) |
 | ambiguous time | a clock reading that happens twice, when clocks go back | [029](./notes/029-daylight-saving.md) |
 | argument | a word after the program name, handed to that program | [049](./notes/049-the-terminal.md) |
 | ASCII | the old table giving 128 characters a number, English only | [008](./notes/008-ascii-runs-out.md) |
@@ -58,6 +59,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | offset | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
 | operating system | the program that starts programs and shares the machine between them | [051](./notes/051-the-operating-system.md) |
 | overflow | a result too big for its bit size, wrapping or erroring | [016](./notes/016-overflow.md) |
+| parent folder | the folder holding this one, written .. in a path | [053](./notes/053-absolute-vs-relative-paths.md) |
 | path | folder names from the top down to a file, joined by slashes | [040](./notes/040-folders-and-paths.md) |
 | pid | the number the system gives one running process, new each run | [050](./notes/050-processes.md) |
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
@@ -68,6 +70,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | program | a file of bytes on disk that can be run | [050](./notes/050-processes.md) |
 | reading start to end | taking a files bytes in order from position 0 | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
 | register | a tiny holding spot inside the processor, where it works on numbers | [035](./notes/035-the-processor.md) |
+| relative path | a path with no leading slash, begun at the working directory | [053](./notes/053-absolute-vs-relative-paths.md) |
 | repeating fraction | digits past the point that loop forever, so no exact finite form | [018](./notes/018-why-0-1-has-no-exact-binary-form.md) |
 | root | the top folder holding everything else, written as a single slash | [040](./notes/040-folders-and-paths.md) |
 | run | the same value repeated back to back | [047](./notes/047-compression-spotting-repeats.md) |

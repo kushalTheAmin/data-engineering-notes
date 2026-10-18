@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 052 said the working directory is the folder a process stands in, each process has its own copied from its parent, and a bare name like orders.csv is looked up from it. the next box is absolute vs relative paths, writing paths that do or dont depend on where you stand
-last visuals: annotated terminal session, table (turns on one processor, loader vs report), table (program vs process) plus python with output, annotated terminal line plus python with output, table (raw vs run length encoded) plus python with output
-last exits: forward, stops, stops, forward, stops
-last reactions: i expected cd to be a program like the others and it cant be, i assumed the two processes just ran side by side and with one core nobody ever does, i kept using program and the thing running as one noun and the pid shows theyre two, i expected a separate scary mode of the computer and its just split a line and run the first word, i assumed smaller was just better but the saving and the bill come from the same file, i expected compression to always shrink things and a run of one makes it bigger, i expected the careful way to write a file to be a careful write and its the opposite, i assumed a save either happens or it doesnt but theres a third outcome, i kept picturing the disk as a list of bytes i could poke one at a time, i expected a file to act like a list and it doesnt, it felt backwards that windows needs two bytes where linux needs one, i assumed binary always meant smaller
+baton: 053 said an absolute path starts with a slash and begins at the root, a relative one begins at the working directory, and .. means the parent folder. the next box is head and tail, looking at the start and end of a file
+last visuals: table plus python with output, annotated terminal session, table (turns on one processor, loader vs report), table (program vs process) plus python with output, annotated terminal line plus python with output, table (raw vs run length encoded) plus python with output
+last exits: stops, forward, stops, stops, forward, stops
+last reactions: i assumed .. would stay inside the project and it just climbs one folder, i expected cd to be a program like the others and it cant be, i assumed the two processes just ran side by side and with one core nobody ever does, i kept using program and the thing running as one noun and the pid shows theyre two, i expected a separate scary mode of the computer and its just split a line and run the first word, i assumed smaller was just better but the saving and the bill come from the same file, i expected compression to always shrink things and a run of one makes it bigger, i expected the careful way to write a file to be a careful write and its the opposite, i assumed a save either happens or it doesnt but theres a third outcome, i kept picturing the disk as a list of bytes i could poke one at a time, i expected a file to act like a list and it doesnt, it felt backwards that windows needs two bytes where linux needs one, i assumed binary always meant smaller
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -70,7 +70,7 @@ after this arc: you know where data lives, why reading it is slow, and how to pe
 - [x] processes: a program while it runs (note 050)
 - [x] the operating system: the program that shares the machine out (note 051)
 - [x] the working directory: where the terminal is standing (note 052)
-- [ ] absolute vs relative paths ★
+- [x] absolute vs relative paths ★ (note 053)
 - [ ] head and tail: looking at the start and end of a file
 - [ ] wc: counting lines
 - [ ] grep: finding the lines that match

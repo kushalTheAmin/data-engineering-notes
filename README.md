@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 52
+notes so far: 53
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -63,3 +63,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [050 processes, a program while it runs](./notes/050-processes.md): start the same program twice and you get two pids, stop one and the other keeps going
 - [051 the operating system, the program that shares the machine out](./notes/051-the-operating-system.md): one processor, two jobs, and the report waits for the loader turns
 - [052 the working directory, where the terminal is standing](./notes/052-the-working-directory.md): open orders.csv in python and get the wrong file, because the code never said which folder to stand in
+- [053 absolute vs relative paths](./notes/053-absolute-vs-relative-paths.md): the same ../backup/orders.csv finds the right file from one folder and nothing from another

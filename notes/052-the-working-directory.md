@@ -29,4 +29,4 @@ so a script that works when you run it from the exports folder can fail when som
 the next one is about writing paths that dont care where you stand.
 
 ---
-prev: [051 the operating system, the program that shares the machine out](./051-the-operating-system.md) | next: not written yet
+prev: [051 the operating system, the program that shares the machine out](./051-the-operating-system.md) | next: [053 absolute vs relative paths](./053-absolute-vs-relative-paths.md)
