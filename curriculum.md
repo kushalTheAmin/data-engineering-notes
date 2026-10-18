@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 062 showed a csv is a text file with one row per line and commas between values, so a column is a position, and every value arrives as text: 101 + 102 glued to 101102 until int() was called. the next box must say what happens when a value itself contains a comma, which 061 flagged and 062 left open
-last visuals: annotated text artifact plus python with output (csv), trace table plus python with output (structure), seven stage trip table plus python with output (capstone), before/after table plus python with output (redirect), worked trace table plus python with output (pipes), tiny comparison table plus terminal session (stdin)
-last exits: stops, forward, forward, stops, stops, forward
-last reactions: i expected a number to come back as a number and the file only holds characters, the wrong total came back looking completely normal, i expected saving to be one step and the actual write is the easy part, i assumed the command ran first and the file got touched after and its the other way round, i expected grep to save a file for wc to open and theres no file at all, i assumed grep with no file was an error and its just a program quietly waiting on the keyboard, i assumed it looked at the customer_id column and it has never heard of columns, i assumed wc counted the lines i can see and it counts line endings, i kept counting the header as free and its a line like any other, i assumed .. would stay inside the project and it just climbs one folder, i expected cd to be a program like the others and it cant be, i assumed the two processes just ran side by side and with one core nobody ever does
+baton: 063 showed that wrapping a value in double quotes lets a csv reader keep its commas as text (the quotes are a fence it removes), and that a writer quotes only when needed. the next box must say what happens when the value itself contains a quote mark, and a newline, which 063 left open
+last visuals: tiny comparison table plus python with output (quoting), annotated text artifact plus python with output (csv), trace table plus python with output (structure), seven stage trip table plus python with output (capstone), before/after table plus python with output (redirect), worked trace table plus python with output (pipes), tiny comparison table plus terminal session (stdin)
+last exits: forward, stops, forward, forward, stops, stops, forward
+last reactions: i assumed the quotes were part of the value and theyre only a fence the reader removes, i expected a number to come back as a number and the file only holds characters, the wrong total came back looking completely normal, i expected saving to be one step and the actual write is the easy part, i assumed the command ran first and the file got touched after and its the other way round, i expected grep to save a file for wc to open and theres no file at all, i assumed grep with no file was an error and its just a program quietly waiting on the keyboard, i assumed it looked at the customer_id column and it has never heard of columns, i assumed wc counted the lines i can see and it counts line endings, i kept counting the header as free and its a line like any other, i assumed .. would stay inside the project and it just climbs one folder, i expected cd to be a program like the others and it cant be, i assumed the two processes just ran side by side and with one core nobody ever does
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -84,7 +84,7 @@ after this arc: you can read and write the text formats data and config actually
 
 - [x] structure: why a pile of text is hard to ask questions of (note 061)
 - [x] CSV: rows and columns separated by commas (note 062)
-- [ ] quoting: commas inside values ★
+- [x] quoting: commas inside values ★ (note 063)
 - [ ] quotes inside quotes, and newlines inside values ★
 - [ ] the header row: naming the columns
 - [ ] JSON: records with names on every value

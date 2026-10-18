@@ -35,4 +35,4 @@ look at the quotes around 101. i expected a number to come back as a number, but
 python has a csv module for this, and its reader hands back lists of strings the same way. one honest caveat: csv has no single strict standard, just a common habit, so files from different programs can differ in small ways.
 
 ---
-prev: [061 structure, why a pile of text is hard to ask questions of](./061-structure-why-text-is-hard-to-ask.md) | next: not written yet
+prev: [061 structure, why a pile of text is hard to ask questions of](./061-structure-why-text-is-hard-to-ask.md) | next: [063 quoting, commas inside values](./063-quoting-commas-inside-values.md)

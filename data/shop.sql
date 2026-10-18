@@ -78,3 +78,14 @@ INSERT INTO order_ratings VALUES
     (103, NULL, 0),
     (105, 3,    3),
     (107, NULL, 0);
+
+-- added by note 063: short notes customers left on an order, some with commas inside
+CREATE TABLE order_notes (
+    order_id INTEGER NOT NULL REFERENCES orders (order_id),
+    note     VARCHAR NOT NULL
+);
+
+INSERT INTO order_notes VALUES
+    (101, 'extra chutney, less spicy'),
+    (102, 'no nuts'),
+    (105, 'gift, please wrap');
