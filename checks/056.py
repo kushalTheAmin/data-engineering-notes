@@ -18,4 +18,5 @@ assert sum(1 for r in rows if r[1] == 1) == 3             # customer 1 really ha
 #   confirmed: "grep - print lines that match patterns", "grep searches for patterns in each FILE"
 # source: https://man7.org/linux/man-pages/man1/grep.1.html
 #   confirmed: patterns are read as basic regular expressions by default ("-G ... This is the default"), so . and * are special
+assert 0x0a == 10 and b"\n" == b"\x0a"                   # a 0a is ten written in hex, the LF byte
 print("056 ok")
