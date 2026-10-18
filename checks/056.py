@@ -16,4 +16,8 @@ assert all("1" in str(r[0]) for r in rows)                # every order id has a
 assert sum(1 for r in rows if r[1] == 1) == 3             # customer 1 really has 3 orders
 # source: https://man7.org/linux/man-pages/man1/grep.1.html
 #   confirmed: "grep - print lines that match patterns", "grep searches for patterns in each FILE"
+# source: https://man7.org/linux/man-pages/man1/grep.1.html
+#   confirmed: PATTERNS are matched as basic regular expressions, "This is the default" (-G)
+# source: https://www.gnu.org/software/grep/manual/grep.html
+#   confirmed: "each ordinary character is a regular expression that matches itself", "The period . matches any single character", "* The preceding item is matched zero or more times"
 print("056 ok")

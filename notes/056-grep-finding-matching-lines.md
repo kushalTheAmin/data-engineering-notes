@@ -4,7 +4,7 @@ section: memory, disks and files, part 22, ~2 min read
 
 i wanted customer 1s orders, so i typed grep 1 orders.csv and got all 7 orders back. what did it think i asked for?
 
-grep prints every line that contains the text you give it, and skips the rest. a [line](./042-line-endings.md) is the text up to a 0a. you run it in the [terminal](./049-the-terminal.md), text first, then the file.
+grep prints every line that contains the pattern you give it, and skips the rest. letters and digits match themselves, a few symbols like . and * mean more. a [line](./042-line-endings.md) is the text up to a 0a. you run it in the [terminal](./049-the-terminal.md), text first, then the file.
 
 here is grep delivered orders.csv on the shop, the imaginary gujarati snack store these notes run on. orders.csv is the 8 lines [054](./054-head-and-tail.md) showed, header plus 7 orders:
 
