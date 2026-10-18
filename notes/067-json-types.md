@@ -45,4 +45,4 @@ only the first. the second has quotes, so its a string of 4 characters, n u l l,
 </details>
 
 ---
-prev: [066 JSON, records with names on every value](./066-json-records-with-names-on-every-value.md) | next: not written yet
+prev: [066 JSON, records with names on every value](./066-json-records-with-names-on-every-value.md) | next: [068 nesting, records and lists inside records](./068-nesting.md)

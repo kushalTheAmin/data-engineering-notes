@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 67
+notes so far: 68
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -81,3 +81,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [065 the header row, naming the columns](./notes/065-the-header-row-naming-the-columns.md): the same 3 orders with status in a different column count 2 delivered by name and 0 by position
 - [066 JSON, records with names on every value](./notes/066-json-records-with-names-on-every-value.md): the same order with its names in two different orders reads back as one identical dictionary
 - [067 JSON types, strings, numbers, booleans, null, objects and arrays](./notes/067-json-types.md): one order record holds all six JSON kinds, and python reads true as True and null as None
+- [068 nesting, records and lists inside records](./notes/068-nesting.md): masala chai sits three steps down in order 103, and items 2 exists for order 105 but not 103
