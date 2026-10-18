@@ -25,7 +25,7 @@ order 101 delivered
 $
 ```
 
-i assumed grep with no file was an error, and its just a program quietly waiting on the keyboard. "shipped" has no match so nothing came back. the doubled line is my typing, then grep printing the match. ctrl+d tells it the input is over.
+i assumed grep with no file was an error, and its just a program quietly waiting on the keyboard. "shipped" has no match so nothing came back. the doubled line is my typing, then grep printing the match. on linux and mac, ctrl+d at the start of a line tells it the input is over.
 
 so a command that looks frozen may just be missing its file name. its waiting on you.
 

@@ -19,4 +19,6 @@ assert "delivered" in "order 101 delivered" and "delivered" not in "shipped"
 #   confirmed: a program starts with three connections, "standard input (stdin), standard output (stdout) and standard error (stderr)"; the note names only the two that matter here
 # source: https://man7.org/linux/man-pages/man3/isatty.3.html
 #   confirmed: "tests whether fd is an open file descriptor referring to a terminal", so a program can check, which is why the note says usually
+# source: https://en.wikipedia.org/wiki/End-of-file
+#   confirmed: unix "converts a Control-D character at the start of a line into an end-of-file indicator"; on windows ctrl+z is the usual marker, so the note says linux and mac
 print("057 ok")
