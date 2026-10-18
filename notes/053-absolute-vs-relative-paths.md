@@ -4,7 +4,7 @@ section: memory, disks and files, part 19, ~2 min read
 
 the same path, ../backup/orders.csv, finds the right file from one folder and a file that doesnt exist from another. how does a path know where it starts?
 
-last time the [working directory](./052-the-working-directory.md), the folder a process stands in, decided which orders.csv a bare name meant. now the rule behind it. an absolute [path](./040-folders-and-paths.md), the folder names walked from the top to a file, starts with a slash and always begins at the root, the top folder holding everything. a relative path has no leading slash and begins at the working directory. the .. is not special magic: it just means the parent folder, the one holding this one. (this is the linux and mac way, windows paths start with a drive like C:\ instead.)
+last time the [working directory](./052-the-working-directory.md), the folder a process stands in, decided which orders.csv a bare name meant. now the rule behind it. an absolute [path](./040-folders-and-paths.md), the folder names walked from the top to a file, starts with a slash and always begins at the root, the top folder holding everything. a relative path has no leading slash and begins at the working directory. the .. is not special magic: it means the parent folder, the one holding this one. (this is the linux and mac way, windows absolute paths usually start with a drive like C:\ instead.)
 
 here it is in the shop, the imaginary gujarati snack store these notes run on, with its exports and backup folders:
 

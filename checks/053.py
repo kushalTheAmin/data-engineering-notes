@@ -14,5 +14,5 @@ assert land("/shop/backup", "../exports/orders.csv") != "/shop/backup/exports/or
 # source: https://man7.org/linux/man-pages/man7/path_resolution.7.html
 #   confirmed: a leading slash starts at the root, otherwise at the process working directory, and ".." is the parent directory
 # source: https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats
-#   confirmed: on windows a fully qualified path begins with a drive letter, a volume separator and a separator (C:\), e.g. C:\Documents\Newsletters\Summer2018.pdf
+#   confirmed: on windows a fully qualified path usually begins with a drive letter, a volume separator and a separator (C:\), e.g. C:\Documents\Newsletters\Summer2018.pdf, but UNC paths start with two separators (\\Server2\Share\Test\Foo.txt) and \Program Files\... is relative to the current drive
 print("053 ok")
