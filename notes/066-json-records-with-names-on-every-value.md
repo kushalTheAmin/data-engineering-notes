@@ -38,4 +38,4 @@ you pay for it. the record is 95 characters against 35 with these spaces, since 
 programs still have to agree on the names, just not the order.
 
 ---
-prev: [065 the header row, naming the columns](./065-the-header-row-naming-the-columns.md) | next: not written yet
+prev: [065 the header row, naming the columns](./065-the-header-row-naming-the-columns.md) | next: [067 JSON types, strings, numbers, booleans, null, objects and arrays](./067-json-types.md)
