@@ -17,6 +17,8 @@ assert [(i.find("product").text, i.find("quantity").text) for i in items] == [("
 assert len(text) == 190
 as_json = json.dumps({"order_id": 103, "customer": "Asha", "items": [{"product": "khandvi", "quantity": 1}, {"product": "masala chai", "quantity": 1}]})
 assert len(as_json) == 130
+# JSON writes each name once, XML writes each twice (opening and closing tag)
+assert as_json.count('"customer"') == 1 and text.count("customer") == 2
 # source: https://www.sitemaps.org/protocol.html
 #   confirmed: "The Sitemap protocol format consists of XML tags"
 # source: https://docs.python.org/3/library/xml.etree.elementtree.html
