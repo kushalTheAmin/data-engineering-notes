@@ -12,7 +12,7 @@ every [process](./050-processes.md), a running copy of a program, starts with te
 | wc -l < orders.csv | stdin, filled from the file | no |
 | grep delivered | stdin, the keyboard | no |
 
-the program never knows what is on the other end of stdin. the shell, the program in the terminal that runs your line, can swap the keyboard for a file with < before its name. then wc just reads stdin, with no name to print. thats the answer to the 8.
+the program usually doesnt know or care what is on the other end of stdin. the shell, the program in the terminal that runs your line, can swap the keyboard for a file with < before its name. then wc just reads stdin, with no name to print. thats the answer to the 8.
 
 [grep](./056-grep-finding-matching-lines.md) from 056 does the same. leave off the file name and it reads stdin:
 

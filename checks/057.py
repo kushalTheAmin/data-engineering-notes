@@ -17,4 +17,6 @@ assert "delivered" in "order 101 delivered" and "delivered" not in "shipped"
 #   confirmed: print writes to sys.stdout when file is not given
 # source: https://en.wikipedia.org/wiki/Standard_streams
 #   confirmed: a program starts with three connections, "standard input (stdin), standard output (stdout) and standard error (stderr)"; the note names only the two that matter here
+# source: https://man7.org/linux/man-pages/man3/isatty.3.html
+#   confirmed: "tests whether fd is an open file descriptor referring to a terminal", so a program can check, which is why the note says usually
 print("057 ok")
