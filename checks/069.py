@@ -30,6 +30,13 @@ assert "\n" not in json.dumps({"message": "less sweet\nno onion"})
 assert json.dumps({"message": "a\nb"}) == '{"message": "a\\nb"}'
 assert con.execute("SELECT message FROM order_messages WHERE order_id = 107").fetchone()[0] == "call first\nleave at the door"
 assert "\n" not in json.dumps({"message": "call first\nleave at the door"})
+half1, half2 = '{"order_id": 107, "message": "call first', 'leave at the door"}'
+for piece in (half1, half2):
+    try:
+        json.loads(piece)
+        raise SystemExit("half should fail")
+    except json.JSONDecodeError:
+        pass
 # source: https://docs.cloud.google.com/bigquery/docs/loading-data-cloud-storage-json
 #   confirmed: "JSON data must be newline-delimited, or ndJSON. Each JSON object must be on a separate line in the file."
 print("069 ok")
