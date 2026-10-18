@@ -14,7 +14,10 @@ assert int(rows[0][0]) + int(rows[1][0]) == 203
 assert list(csv.reader(io.StringIO(text))) == rows            # csv module also returns strings
 assert all(isinstance(v, str) for r in rows for v in r)
 assert [rows[0][i] for i in (0, 1, 3)] == ['101', '1', 'delivered'] and len(rows[0]) == 4
+two = '1,"a\nb"\n'   # "usually": a quoted value can hold a line break, so one row spans 2 lines
+assert len(two.splitlines()) == 2 and len(list(csv.reader(io.StringIO(two)))) == 1
 # source: https://docs.python.org/3/library/csv.html
+#   confirmed: line_num "is not the same as the number of records returned, as records can span multiple lines"
 #   confirmed: the csv module reads rows as lists of strings, and the format has no single well defined standard
 try:
     import pandas  # pandas guesses types, so the "some tools guess types" aside is true

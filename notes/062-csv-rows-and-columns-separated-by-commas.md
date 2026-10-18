@@ -4,7 +4,7 @@ section: giving data a shape, part 2, ~2 min read
 
 add the first two order ids you split out of a csv in python and you get 101102, not 203.
 
-[061](./061-structure-why-text-is-hard-to-ask.md) said structure is an agreement on where each fact sits. the usual agreement for rows like those is CSV, comma separated values: a [text file](./041-text-files-vs-binary-files.md), one row per [line](./042-line-endings.md), the values in a row split by commas, so a column is just a position. the orders.csv from before was already one.
+[061](./061-structure-why-text-is-hard-to-ask.md) said structure is an agreement on where each fact sits. the usual agreement for rows like those is CSV, comma separated values: a [text file](./041-text-files-vs-binary-files.md), one row per [line](./042-line-endings.md) (usually, a quoted value can hold a line break), the values in a row split by commas, so a column is just a position. the orders.csv from before was already one.
 
 here is a slice of the orders from the shop, the imaginary gujarati snack store these notes run on, as the file holds them and then as python sees each line after splitting on commas:
 
