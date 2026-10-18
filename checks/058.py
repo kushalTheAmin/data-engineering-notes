@@ -18,4 +18,6 @@ assert not any("delivered" in l for l in ["8 orders.csv"])  # question 1 prints 
 #   confirmed: pipes provide a unidirectional interprocess communication channel; "A pipe has a limited capacity."
 # source: https://man7.org/linux/man-pages/man1/wc.1.html
 #   confirmed: with a FILE given wc reads that file, with no FILE it reads standard input
+# source: https://man7.org/linux/man-pages/man7/pipe.7.html
+#   confirmed: a pipe is an interprocess channel the reader just reads from; the note says usually because a program can inspect its stdin
 print("058 ok")

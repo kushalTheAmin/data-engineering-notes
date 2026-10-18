@@ -41,7 +41,7 @@ print(wc_l(grep("delivered", lines)))
 5
 ```
 
-i expected grep to save a file that wc then opens, and theres no file at all. wc never knows a pipe exists, it just reads stdin, and the system passes the bytes along through a small holding area.
+i expected grep to save a file that wc then opens, and theres no file at all. wc usually never knows a pipe exists, it just reads stdin, and the system passes the bytes along through a small holding area.
 
 a pipe only feeds stdin, so order matters. this is a shell pipe, and a data pipeline later is a bigger idea. people run grep ERROR app.log | wc -l on logs and save nothing in between.
 

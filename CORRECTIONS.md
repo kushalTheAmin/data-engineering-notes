@@ -2,6 +2,7 @@
 
 every fix made to a note after it was published, newest first. if you learned from an older version of a note, this is what changed and why.
 
+058, 2026-10-18: said wc never knows a pipe exists, but a program can inspect its stdin (057 and its isatty source say usually). it now says usually never knows. evidence: https://man7.org/linux/man-pages/man3/isatty.3.html ("tests whether fd is an open file descriptor referring to a terminal"), note 057
 056, 2026-10-18: said a line is the text up to a 0a without saying what kind of number that is, so a reader landing here could not tell. it now says 0a is ten written in hex, as the 055 fix does. evidence: python, 0x0a == 10 and b"\n" == b"\x0a"
 055, 2026-10-18: used 0a without saying what kind of number it is, so a reader landing here could not tell. it now says 0a is ten written in hex. evidence: python, 0x0a == 10 and b'\n' == b'\x0a'
 057, 2026-10-18: said the program never knows what is on the other end of stdin, but a program can ask whether it is a terminal, and python sys.stdin.isatty() is True at a keyboard and False for a file. it now says the program usually doesnt know or care. evidence: https://man7.org/linux/man-pages/man3/isatty.3.html ("tests whether fd is an open file descriptor referring to a terminal")
