@@ -39,7 +39,7 @@ i kept looking for the brackets to know where the list ends, and it ends when a 
 
 the gotcha is that spaces are the syntax. the YAML spec says tab characters must not be used in indentation, so a tab that looks like 4 spaces in your editor is simply not allowed.
 
-you will meet YAML mostly as config, the settings files tools read: GitHub Actions workflow files, which tell GitHub what to run, are written in it.
+you will meet YAML mostly as config, the settings files tools read. GitHub Actions workflows are written in it.
 
 ---
 prev: [072 XML, the older cousin you will still meet](./072-xml.md) | next: not written yet
