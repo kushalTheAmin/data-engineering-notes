@@ -74,4 +74,4 @@ two, city and state, so address becomes {"city": ..., "state": ...}. an empty ce
 </details>
 
 ---
-prev: [069 JSON lines, one record per line](./069-json-lines.md) | next: not written yet
+prev: [069 JSON lines, one record per line](./069-json-lines.md) | next: [071 exploding lists into many rows](./071-exploding-lists-into-many-rows.md)
