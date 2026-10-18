@@ -14,7 +14,7 @@ here is the shop, the imaginary gujarati snack store these notes run on, with it
 | grep delivered orders.csv > delivered.csv | 8 lines | 5 lines |
 | grep delivered orders.csv > orders.csv | 0 lines | 5 lines, untouched |
 
-the shell opens the file for writing before it starts grep, and opening for writing empties it. so grep reads an empty file and finds nothing. python does the same:
+the shell opens the file for writing before it starts grep, and opening for writing empties it. so by the time grep looks, the file is empty and nothing matches. python does the same:
 
 ```python
 import os, tempfile
