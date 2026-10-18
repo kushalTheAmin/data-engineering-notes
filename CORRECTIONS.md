@@ -1,5 +1,7 @@
 # corrections
 
+000, 2026-10-18: push conflict on note 072 (another audit trimmed it meanwhile); the unpushed fix was: sitemaps are XML should say usually XML, since the sitemap protocol also allows RSS and text files. evidence: https://www.sitemaps.org/protocol.html
+
 069, 2026-10-18: said wc -l counts records, but wc -l counts line endings, so a last record with no ending after it is missed (the torn file in this very note has 3 records and 2 endings). it now says wc -l counts records if the last one has an ending too. evidence: python, '{a}\n{b}\n{c}'.count('\n') is 2 for 3 records; note 055 (wc counts 0a bytes, a row without a final one is not counted)
 069, 2026-10-18: the checks never proved check yourself 2, that each half of a record split by a hand typed line break fails to load. note text is unchanged, the checks now run json.loads on both halves and assert both fail. evidence: python, json.loads on each half raises JSONDecodeError
 070, 2026-10-18: used csv.DictWriter and isinstance with no explanation, and the checks had no source for DictWriter raising on an unknown name by default. a code comment now says DictWriter writes each dictionary as a csv row and sys.stdout is the screen, another says isinstance is true for an object, and the checks cite the docs. evidence: https://docs.python.org/3/library/csv.html (extrasaction "If it is set to 'raise', the default value, a ValueError is raised")
