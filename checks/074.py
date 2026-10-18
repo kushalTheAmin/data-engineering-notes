@@ -16,6 +16,7 @@ assert val('gift_wrap: "no"') == "no"
 assert val("gift_wrap: on") is True
 assert val("gift_wrap: yes") is True
 assert val("order_id: 102") == 102 and val('order_id: "102"') == "102"
+assert val('lights: off') is False and val('lights: OFF') is False and val('lights: oFf') == 'oFf'
 assert val("lights: Off") is False and val('lights: "Off"') == "Off"
 assert val("country: NO") is False and val('country: "NO"') == "NO"
 assert val('a: Yes') is True and val('a: ON') is True and val('a: y') == 'y' and val('a: n') == 'n'

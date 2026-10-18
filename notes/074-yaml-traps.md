@@ -34,7 +34,7 @@ the 1.2 spec only treats true and false (also True, TRUE) as booleans, so what y
 1. a settings file says `lights: Off` and PyYAML reads it. what does the program get, and what one change keeps it as text?
 <details><summary>answer</summary>
 
-False, a boolean, because Off in any capitalization is a 1.1 boolean word. writing `lights: "Off"` keeps the text Off. the tempting answer is the text Off, from thinking only lowercase words count.
+False, a boolean, because Off, off and OFF are all 1.1 boolean words (oFf is not, it stays text). writing `lights: "Off"` keeps the text Off. the tempting answer is the text Off, from thinking only lowercase words count.
 
 </details>
 
