@@ -53,4 +53,4 @@ this bites in practice, and you often get no error at all. the python csv docs s
 </details>
 
 ---
-prev: [063 quoting, commas inside values](./063-quoting-commas-inside-values.md) | next: not written yet
+prev: [063 quoting, commas inside values](./063-quoting-commas-inside-values.md) | next: [065 the header row, naming the columns](./065-the-header-row-naming-the-columns.md)
