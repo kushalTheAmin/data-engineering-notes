@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 055 said wc -l counts the 0a bytes, not the lines you can see, so the header counts and a last row with no final 0a is missed (8 vs 7 on orders.csv), and wc -l < file prints just the number. the next box is grep, finding the lines that match
-last visuals: annotated terminal session plus python with output (wc -l), annotated terminal session (head and tail on orders.csv), table plus python with output, annotated terminal session, table (turns on one processor, loader vs report)
-last exits: forward, stops, stops, forward, stops
-last reactions: i assumed wc counted the lines i can see and it counts line endings, i kept counting the header as free and its a line like any other, i assumed .. would stay inside the project and it just climbs one folder, i expected cd to be a program like the others and it cant be, i assumed the two processes just ran side by side and with one core nobody ever does, i kept using program and the thing running as one noun and the pid shows theyre two, i expected a separate scary mode of the computer and its just split a line and run the first word, i assumed smaller was just better but the saving and the bill come from the same file, i expected compression to always shrink things and a run of one makes it bigger, i expected the careful way to write a file to be a careful write and its the opposite
+baton: 056 said grep prints every line containing the text anywhere in it, so grep 1 matched all 7 orders because it has no idea what a column is. the next box is standard input and output, how programs pass text along
+last visuals: before/after table plus python with output (grep), annotated terminal session plus python with output (wc -l), annotated terminal session (head and tail on orders.csv), table plus python with output, annotated terminal session
+last exits: stops, forward, stops, stops, forward
+last reactions: i assumed it looked at the customer_id column and it has never heard of columns, i assumed wc counted the lines i can see and it counts line endings, i kept counting the header as free and its a line like any other, i assumed .. would stay inside the project and it just climbs one folder, i expected cd to be a program like the others and it cant be, i assumed the two processes just ran side by side and with one core nobody ever does, i kept using program and the thing running as one noun and the pid shows theyre two, i expected a separate scary mode of the computer and its just split a line and run the first word, i assumed smaller was just better but the saving and the bill come from the same file, i expected compression to always shrink things and a run of one makes it bigger
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -73,7 +73,7 @@ after this arc: you know where data lives, why reading it is slow, and how to pe
 - [x] absolute vs relative paths ★ (note 053)
 - [x] head and tail: looking at the start and end of a file (note 054)
 - [x] wc: counting lines (note 055)
-- [ ] grep: finding the lines that match
+- [x] grep: finding the lines that match (note 056)
 - [ ] standard input and output: how programs pass text along
 - [ ] pipes: chaining small programs together ★
 - [ ] redirecting output into a file

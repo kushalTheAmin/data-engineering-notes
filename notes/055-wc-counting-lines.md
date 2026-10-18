@@ -35,4 +35,4 @@ the third command hands the file over with <, so wc has no name to print, just t
 this is the first check people run on a file exported from a database: 7 orders should mean 8 lines. a count one short can be a harmless missing final newline or a [torn write](./045-torn-writes.md), a save cut off partway, and tail can show which.
 
 ---
-prev: [054 head and tail, looking at the start and end of a file](./054-head-and-tail.md) | next: not written yet
+prev: [054 head and tail, looking at the start and end of a file](./054-head-and-tail.md) | next: [056 grep, finding the lines that match](./056-grep-finding-matching-lines.md)
