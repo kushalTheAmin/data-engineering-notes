@@ -63,4 +63,4 @@ the record is now 2 lines, and each half alone is not valid JSON, so both fail t
 </details>
 
 ---
-prev: [068 nesting, records and lists inside records](./068-nesting.md) | next: not written yet
+prev: [068 nesting, records and lists inside records](./068-nesting.md) | next: [070 flattening nested objects into columns](./070-flattening-nested-objects-into-columns.md)
