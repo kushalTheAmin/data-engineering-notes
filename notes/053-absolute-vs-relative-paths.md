@@ -47,4 +47,4 @@ no. the absolute path names a folder only your laptop has, so moving it breaks. 
 </details>
 
 ---
-prev: [052 the working directory, where the terminal is standing](./052-the-working-directory.md) | next: not written yet
+prev: [052 the working directory, where the terminal is standing](./052-the-working-directory.md) | next: [054 head and tail, looking at the start and end of a file](./054-head-and-tail.md)

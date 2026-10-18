@@ -41,6 +41,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | gibibyte | 1024 x 1024 x 1024 bytes, written GiB | [038](./notes/038-1000-or-1024.md) |
 | gigabyte | 1000 megabytes, a billion bytes, written GB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | grapheme | one unit as seen on screen, possibly several code points | [012](./notes/012-combining-marks.md) |
+| head | prints the first lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | hexadecimal | counting with sixteen digits, a to f standing for ten to fifteen | [005](./notes/005-hexadecimal.md) |
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |
 | jump | asking for a file position directly, called seek in python | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
@@ -81,6 +82,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
 | SSD | a disk made of chips with no moving parts | [037](./notes/037-disk-is-slow.md) |
 | store UTC, show local | keep moments in UTC, convert to local only when displaying | [030](./notes/030-store-utc-show-local.md) |
+| tail | prints the last lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | terabyte | 1000 gigabytes, a trillion bytes, written TB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | terminal | a text window where you type a line and the computer replies | [049](./notes/049-the-terminal.md) |
 | text file | a file whose bytes decode as characters, usually with UTF-8 | [041](./notes/041-text-files-vs-binary-files.md) |
