@@ -122,3 +122,4 @@ every term these notes have built, in plain words, with the note that built it. 
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
 | XML | a text format wrapping each value in opening and closing tags | [072](./notes/072-xml.md) |
 | YAML | a text format where indentation shows nesting, dashes start list items | [073](./notes/073-yaml.md) |
+| YAML trap | a bare word like no read as a boolean, so quote text | [074](./notes/074-yaml-traps.md) |

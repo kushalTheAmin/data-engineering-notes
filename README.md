@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 73
+notes so far: 74
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -87,3 +87,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [071 exploding lists into many rows](./notes/071-exploding-lists-into-many-rows.md): 2 orders become 4 rows, and order 105 shows up 3 times
 - [072 XML, the older cousin you will still meet](./notes/072-xml.md): the same order needs every name written twice, and a list is just the same tag repeated
 - [073 YAML, indentation as structure](./notes/073-yaml.md): the same order drops every bracket and closing tag, and a list item ends when a line steps back out
+- [074 YAML traps, when no means false](./notes/074-yaml-traps.md): gift_wrap: no comes back as False, and quotes turn it back into text

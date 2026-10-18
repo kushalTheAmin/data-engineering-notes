@@ -42,4 +42,4 @@ the gotcha is that spaces are the syntax. the YAML spec says tab characters must
 you will meet YAML as config, the settings files tools read. GitHub Actions workflows are written in it.
 
 ---
-prev: [072 XML, the older cousin you will still meet](./072-xml.md) | next: not written yet
+prev: [072 XML, the older cousin you will still meet](./072-xml.md) | next: [074 YAML traps, when no means false](./074-yaml-traps.md)
