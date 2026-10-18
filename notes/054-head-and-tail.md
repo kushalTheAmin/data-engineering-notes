@@ -6,7 +6,7 @@ someone sends you a huge csv. do you open the whole thing just to see what the c
 
 head prints the first lines of a file and tail prints the last ones. both give 10 lines unless you add -n and a number. you type them in the [terminal](./049-the-terminal.md), and a bare file name is looked up from the [working directory](./052-the-working-directory.md), the folder you stand in.
 
-here they are on the shop, the imaginary gujarati snack store these notes run on, saved as orders.csv (a text file, one row per line, commas between values). the header line plus 7 orders makes 8 lines, ending in the 0a that [042](./042-line-endings.md) showed:
+here they are on the shop, the imaginary gujarati snack store these notes run on, saved as orders.csv (a text file, usually one row per line, commas between values). the header line plus 7 orders makes 8 lines, ending in the 0a that [042](./042-line-endings.md) showed:
 
 ```text
 $ head -n 3 orders.csv
