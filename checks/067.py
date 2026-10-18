@@ -25,6 +25,8 @@ assert type(json.loads("10")) is int and type(json.loads("10.0")) is float
 assert json.loads("0.1") + json.loads("0.2") != json.loads("0.3")
 # source: https://www.rfc-editor.org/rfc/rfc8259
 #   confirmed: a JSON value must be an object, array, number, or string, or one of false, null, true (lowercase); the literal names must be lowercase; no date type
+# source: https://docs.python.org/3/library/json.html
+#   confirmed: the json-to-python table maps number (int) to int and number (real) to float; the exponent form 1e2 coming back a float is asserted below
 assert json.loads("1e2") == 100.0 and type(json.loads("1e2")) is float
 assert int(10.50 * 100) == 1050
 print("067 ok")

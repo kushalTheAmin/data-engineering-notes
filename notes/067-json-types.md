@@ -26,7 +26,7 @@ stars NoneType None
 
 in the file its lowercase true and null, python spells them True and None, and True in the file is an error. stars is null because 103 has no rating in the shop data.
 
-i expected a date to be its own type, and there isnt one. ordered_at in 066 is just a string, and your code has to know. also JSON only says number: python made 103 an int and 10.5 a float because of the dot, thats python choosing. when a number like 0.1 gets loaded as a float it has the [float problem](./020-why-0-1-plus-0-2-is-not-0-3.md) again, tiny rounding errors in decimals, which is one reason to send money as [whole cents](./021-storing-money-as-whole-cents.md), 1050 instead of 10.50.
+i expected a date to be its own type, and there isnt one. ordered_at in 066 is just a string, and your code has to know. also JSON only says number: python made 103 an int and 10.5 a float because of the dot (an exponent like 1e2 also makes a float), thats python choosing. when a number like 0.1 gets loaded as a float it has the [float problem](./020-why-0-1-plus-0-2-is-not-0-3.md) again, tiny rounding errors in decimals, which is one reason to send money as [whole cents](./021-storing-money-as-whole-cents.md), 1050 instead of 10.50.
 
 ### check yourself
 
