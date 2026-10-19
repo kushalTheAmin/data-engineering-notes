@@ -4,7 +4,7 @@ section: tables, keys and relationships, part 14, ~2 min read
 
 if Asha has 3 orders, does that make her 3 customers? no, and the way the shop tells them apart is called a relationship.
 
-a relationship is how rows in one [table](./079-a-table-rows-are-records-columns-are-fields.md) (a grid of rows) connect to rows in another. the common one is one to many: one row on one side matches many rows on the other. in the shop, the imaginary gujarati snack store, one customer has many orders, and after the [split](./091-splitting-into-tables.md) (a table per kind of thing) each order holds its customers id. all 5 customers and all 7 orders:
+a relationship is how rows in one [table](./079-a-table-rows-are-records-columns-are-fields.md) (a grid of rows) connect to rows in another. a common one is one to many: one row on one side matches many rows on the other. in the shop, the imaginary gujarati snack store, one customer has many orders, and after the [split](./091-splitting-into-tables.md) (a table per kind of thing) each order holds its customers id. all 5 customers and all 7 orders:
 
 ```text
 customers (one)        orders (many)

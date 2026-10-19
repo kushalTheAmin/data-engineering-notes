@@ -1,5 +1,7 @@
 # corrections
 
+092, 2026-10-19: called one to many the common relationship, but the cardinality page only lists it among the common ones, with one to one and many to many. it now says a common one. the checks also now source the one to many definition and that the many side can be zero. evidence: https://en.wikipedia.org/wiki/Cardinality_(data_modeling) ("Common cardinalities include one-to-one, one-to-many, and many-to-many."); https://en.wikipedia.org/wiki/One-to-many_(data_model) ("an owner could own zero, one, or multiple cars")
+
 088, 2026-10-19: said a surrogate key is a number and called NULL empty (which a beginner can read as an empty text), and later said empty emails slip past. a surrogate key is often a number but can be a UUID, and NULL is no value as in 031. it now says a value, usually a number, never NULL, no value, and missing (NULL) emails. evidence: https://en.wikipedia.org/wiki/Surrogate_key ("A surrogate key is frequently a sequential number"; "Some databases provide UUID/GUID as a possible data type"); note 031 ("there is no value here")
 
 087, 2026-10-19: glossed a table as one fact per row, like a spreadsheet column, but in 079 a row is one record holding a fact for every column, and a spreadsheet column is a field. it now says a grid where each row is one record, like a spreadsheet. evidence: note 079 ("each row is one record", "each column is one field")
