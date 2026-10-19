@@ -16,6 +16,7 @@ wide = [
     {"order_id": 106, "name": "Asha",   "city": "Jersey City"},
     {"order_id": 107, "name": "Bhavin", "city": "Edison"},
 ]
+# {...} is a set, it keeps each name once; sorted puts them in order
 print(sorted({r["name"] for r in wide}))
 wide = [r for r in wide if r["order_id"] != 104]
 print(sorted({r["name"] for r in wide}))

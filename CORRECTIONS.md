@@ -1,5 +1,7 @@
 # corrections
 
+090, 2026-10-19: the code used a set ({...} with a for) and sorted with no explanation, and a reader who knows only lists and dictionaries cannot follow it. a code comment now says a set keeps each name once and sorted puts them in order. evidence: python, sorted({r["name"] for r in wide}) prints each name once; https://docs.python.org/3/tutorial/datastructures.html#sets ("A set is an unordered collection with no duplicate elements")
+
 091, 2026-10-19: used the wide table with no gloss, a term only 089 defines, so a reader landing here could not tell what it was. it now says one row per order, city copied in. evidence: note 089 ("one wide table with the customers city copied onto each order row")
 
 092, 2026-10-19: called one to many the common relationship, but the cardinality page only lists it among the common ones, with one to one and many to many. it now says a common one. the checks also now source the one to many definition and that the many side can be zero. evidence: https://en.wikipedia.org/wiki/Cardinality_(data_modeling) ("Common cardinalities include one-to-one, one-to-many, and many-to-many."); https://en.wikipedia.org/wiki/One-to-many_(data_model) ("an owner could own zero, one, or multiple cars")
