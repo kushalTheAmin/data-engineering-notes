@@ -26,4 +26,12 @@ assert text.count("\n") == 3
 assert "\\n" in json.dumps({"m": msgs[2][1]})
 buf = io.StringIO(); w = csv.writer(buf, lineterminator="\n"); w.writerows(msgs)
 assert buf.getvalue().count("\n") == 4
+# JSON text cant hold a raw line break inside a value
+# source: https://www.rfc-editor.org/rfc/rfc8259
+#   confirmed: section 7 says the characters that must be escaped in a string are "quotation mark, reverse solidus, and the control characters (U+0000 through U+001F)"
+try:
+    json.loads('"a\nb"'); assert False
+except json.JSONDecodeError:
+    pass
+assert json.loads(json.dumps("a\nb")) == "a\nb"
 print("078 ok")

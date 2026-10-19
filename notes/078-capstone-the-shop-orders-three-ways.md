@@ -16,6 +16,7 @@ json      {"order_id": 103, "customer": "Asha", "items": [{"product": "khandvi",
 
 ```python
 import csv, io, json
+# io.StringIO lets a string stand in for a file, csv.DictReader reads each row as a dictionary, json.loads turns JSON text into python data
 csv_text = "order_id,customer,product,quantity\n103,Asha,khandvi,1\n103,Asha,masala chai,1\n"
 json_text = '{"order_id": 103, "customer": "Asha", "items": [{"product": "khandvi", "quantity": 1}, {"product": "masala chai", "quantity": 1}]}'
 rows = list(csv.DictReader(io.StringIO(csv_text)))

@@ -1,5 +1,7 @@
 # corrections
 
+078, 2026-10-19: the code used io.StringIO, csv.DictReader and json.loads with no explanation, so a reader landing here could not follow it (063 explains only StringIO and csv.reader). a code comment now says what each does. the checks also now source that JSON text cannot hold a raw line break inside a value. evidence: https://docs.python.org/3/library/csv.html (DictReader maps each row to a dict); https://www.rfc-editor.org/rfc/rfc8259 (control characters U+0000 through U+001F must be escaped); python, json.loads of a string with a raw line break raises JSONDecodeError
+
 076, 2026-10-19: still called JSON Schema a real standard, the same claim 075 already corrected, and said every csv value comes back as text, which is true of plain splitting but not of tools like pandas that guess types. it now says a real written specification and that splitting a line gives text. evidence: https://en.wikipedia.org/wiki/JSON_Schema ("It is specified in an Internet Draft at the IETF"); note 062 ("some tools, like pandas, guess types for you")
 
 072, 2026-10-19: described khandvi as a steamed gram flour roll, but the khandvi page says the batter is cooked down to a thick paste, spread thin and rolled up, with no steaming. it now says a rolled savory snack, the wording note 017 uses. evidence: https://en.wikipedia.org/wiki/Khandvi_(food) ("The batter is cooked down to a thick paste and then spread thinly on a flat surface")
