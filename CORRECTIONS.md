@@ -1,5 +1,7 @@
 # corrections
 
+092, 2026-10-19: said the next note covers the pointer columns name and a rule from the database, but 093 gives the name and says the rule (what it stops) is its own note, which is 094. it now says the next note gives it its name. evidence: note 093 ("what that buys you is its own note")
+
 093, 2026-10-19: check yourself 2 said order_id in a new shipments table is the foreign key, but the note itself says a column with no REFERENCES is a plain integer column. the answer now says it is the foreign key once declared with REFERENCES orders (order_id). question and tempting answer unchanged. evidence: note 093 ("if you leave that phrase out its a plain integer column"); data/shop.sql
 
 094, 2026-10-19: said a pointer must match a real row "at all times", which reads as true at every instant, but Postgres can defer the check to later in the transaction. it now says by the time a change is finished. evidence: https://www.postgresql.org/docs/current/ddl-constraints.html ("checking of foreign-key constraints can also be deferred to later in the transaction")

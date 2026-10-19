@@ -21,7 +21,7 @@ this tells you where the pointer goes. an order has one customer, so one custome
 
 the part i kept missing is that "many" includes 0 and 1. Esha is still one to many, her pile is just empty. the shape is a rule about what is allowed, not a count of what exists right now.
 
-the column holding the pointer needs its own name, and a rule from the database, which the next note covers.
+the column holding the pointer needs its own name, which the next note gives it.
 
 ---
 prev: [091 splitting into tables](./091-splitting-into-tables.md) | next: [093 foreign key](./093-foreign-key.md)
