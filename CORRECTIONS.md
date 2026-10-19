@@ -1,5 +1,7 @@
 # corrections
 
+075, 2026-10-19: called JSON Schema a real standard, but it is specified in an IETF Internet Draft and json-schema.org calls it a vocabulary, not a finished standard. it now says a real written specification. evidence: https://en.wikipedia.org/wiki/JSON_Schema ("It is specified in an Internet Draft at the IETF"); https://json-schema.org/ ("the vocabulary that enables JSON data consistency")
+
 072, 2026-10-18: the opening said the order took one pair of curly braces in JSON, but the JSON for order 103 has 3 pairs (the order and each item). it now says JSON wrote each name once, where XML needs a pair of tags. evidence: python, the JSON text for order 103 has one "customer" and the XML has customer twice (checks/072.py)
 
 074, 2026-10-18: check yourself 1 said Off in any capitalization is a YAML 1.1 boolean word, but only off, Off and OFF are; oFf stays text. it now lists those three and says oFf is text. evidence: https://yaml.org/type/bool.html (regexp on|On|ON|off|Off|OFF); python, yaml.safe_load('a: oFf') gives the string 'oFf'

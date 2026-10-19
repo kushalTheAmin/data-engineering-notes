@@ -25,7 +25,7 @@ for each record:
 
 order 104 is the sneaky one, and it is the empty status from the start. someone renamed status to state, the file is still valid, and code you write that looks up status gets nothing, or an error. the schema rejects it. order 105: a schema also decides about extras. this one refuses them, another could allow them.
 
-i assumed loading a file without an error meant it was fine, and the loader only checks syntax, not shape. JSON Schema is a real standard for writing this down for JSON files.
+i assumed loading a file without an error meant it was fine, and the loader only checks syntax, not shape. JSON Schema is a real written specification for writing this down for JSON files.
 
 what each value should look like, text or number, comes next.
 

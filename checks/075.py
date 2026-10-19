@@ -26,4 +26,6 @@ import json
 json.loads('{"order_id": 104, "customer": "Chirag", "state": "cancelled"}')  # valid JSON, wrong shape
 # source: https://json-schema.org/
 #   confirmed: JSON Schema is described as the vocabulary that enables JSON data consistency, validity, and interoperability
+# source: https://en.wikipedia.org/wiki/JSON_Schema
+#   confirmed: "It is specified in an Internet Draft at the IETF" (a draft specification, not a finished standard)
 print("075 ok")
