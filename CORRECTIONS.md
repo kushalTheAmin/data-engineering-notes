@@ -1,5 +1,7 @@
 # corrections
 
+093, 2026-10-19: said a foreign key holds values of another tables primary key, which reads as always true, but databases also let it point at any unique column. it now says usually. evidence: https://www.postgresql.org/docs/current/ddl-constraints.html ("A foreign key must reference columns that either are a primary key or form a unique constraint"); https://en.wikipedia.org/wiki/Foreign_key ("a foreign key is a set of attributes that references a candidate key")
+
 090, 2026-10-19: the claim that Esha joined in March had no check behind it. the text is unchanged and checks/090.py now asserts it. evidence: python, customers row for Esha has joined_on 2026-03-15 (data/shop.sql)
 
 089, 2026-10-19: said the row typed as "asha " does not match, which is true in most databases but not all: MySQL collations that are PAD SPACE and case insensitive ignore a trailing space, so it now says most databases. check yourself 1 named 0 as the tempting answer, but the question says below 105, so a beginner more likely forgets Dishas row and says 2 Hoboken; the answer now names both slips (numbers unchanged). the set code now has a comment. evidence: https://dev.mysql.com/doc/refman/8.4/en/char.html ("PAD SPACE collations treat trailing spaces as insignificant in comparisons"); python, update of orders 101 and 103 leaves 3 Hoboken rows (checks/089.py)

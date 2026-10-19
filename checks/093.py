@@ -12,4 +12,6 @@ sql = open(os.path.join(os.path.dirname(__file__), "..", "data", "shop.sql")).re
 assert "customer_id INTEGER NOT NULL REFERENCES customers (customer_id)" in sql
 # source: https://learn.microsoft.com/en-us/ef/core/modeling/relationships/conventions
 # confirmed: EF Core discovers a foreign key by name pattern <principal entity type name>Id (e.g. CustomerId), alongside a navigation to that type
+# source: https://www.postgresql.org/docs/current/ddl-constraints.html
+# confirmed: "A foreign key must reference columns that either are a primary key or form a unique constraint, or are columns from a non-partial unique index."
 print("093 ok")

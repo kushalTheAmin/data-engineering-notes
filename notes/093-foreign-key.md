@@ -4,7 +4,7 @@ section: tables, keys and relationships, part 15, ~2 min read
 
 order 104 has a 3 in its customer_id column. 3 what? on its own its just a number, and what makes it mean Chirag is a foreign key.
 
-a foreign key is a column in one [table](./079-a-table-rows-are-records-columns-are-fields.md) (a grid where each row is one record) that holds values of another tables [primary key](./087-primary-key.md) (the column with a unique id per row). in the shop, the imaginary gujarati snack store, orders.customer_id is one. its the pointer column from [092](./092-relationships-one-customer-many-orders.md), the one on the orders side because one customer has many orders. a slice of the orders:
+a foreign key is a column in one [table](./079-a-table-rows-are-records-columns-are-fields.md) (a grid where each row is one record) that usually holds values of another tables [primary key](./087-primary-key.md) (the column with a unique id per row). in the shop, the imaginary gujarati snack store, orders.customer_id is one. its the pointer column from [092](./092-relationships-one-customer-many-orders.md), the one on the orders side because one customer has many orders. a slice of the orders:
 
 ```sql
 SELECT order_id, customer_id FROM orders WHERE order_id IN (101, 103, 104) ORDER BY order_id
