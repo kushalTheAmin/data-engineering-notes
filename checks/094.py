@@ -29,4 +29,6 @@ assert c2.execute("SELECT pid FROM k").fetchall() == [(None,)]
 # source: https://www.postgresql.org/docs/current/ddl-constraints.html
 # confirmed: "declare the referencing column(s) as NOT NULL" if you dont want referencing rows to avoid the foreign key constraint
 # confirmed: ON DELETE CASCADE deletes the referencing rows when a referenced row is deleted, and order items inside an order are the docs example where it fits
+# source: https://www.postgresql.org/docs/current/ddl-constraints.html
+# confirmed: "checking of foreign-key constraints can also be deferred to later in the transaction", so the match is required when the change finishes, not at every instant
 print("094 ok")

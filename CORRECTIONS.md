@@ -1,5 +1,7 @@
 # corrections
 
+094, 2026-10-19: said a pointer must match a real row "at all times", which reads as true at every instant, but Postgres can defer the check to later in the transaction. it now says by the time a change is finished. evidence: https://www.postgresql.org/docs/current/ddl-constraints.html ("checking of foreign-key constraints can also be deferred to later in the transaction")
+
 094, 2026-10-19: said every pointer must match a real row at all times, which reads as always true, but a foreign key column that allows NULL can hold no value and no row is needed. it now says every pointer that holds a value. evidence: https://www.postgresql.org/docs/current/ddl-constraints.html ("If you dont want referencing rows to be able to avoid satisfying the foreign key constraint, declare the referencing column(s) as NOT NULL"); python, duckdb accepts INSERT INTO k VALUES (1, NULL) into a column that references p
 
 093, 2026-10-19: said a foreign key holds values of another tables primary key, which reads as always true, but databases also let it point at any unique column. it now says usually. evidence: https://www.postgresql.org/docs/current/ddl-constraints.html ("A foreign key must reference columns that either are a primary key or form a unique constraint"); https://en.wikipedia.org/wiki/Foreign_key ("a foreign key is a set of attributes that references a candidate key")

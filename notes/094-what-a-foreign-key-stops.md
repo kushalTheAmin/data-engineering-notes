@@ -29,7 +29,7 @@ esha_orders
 0
 ```
 
-so deleting her would go through. i assumed the guard only watched new rows, but it also protects the row being pointed at. the rule is one sentence, every pointer that holds a value must match a real row, at all times.
+so deleting her would go through. i assumed the guard only watched new rows, but it also protects the row being pointed at. the rule is one sentence, every pointer that holds a value must match a real row by the time a change is finished.
 
 Postgres lets you pick what a delete does, and ON DELETE CASCADE deletes the pointing rows along with it. handy for order items inside an order, scary for most else.
 
