@@ -1,5 +1,7 @@
 # corrections
 
+096, 2026-10-19: called kaju katli a cashew fudge, but the page for it never says fudge (it calls it an Indian dessert made of cashews, sugar and ghee, similar to barfi). it now says a cashew sweet. the checks now also source the dhokla and jalebi glosses. evidence: https://en.wikipedia.org/wiki/Kaju_katli ("Kaju katli (lit. 'Cashew slice') is an Indian dessert"); https://en.wikipedia.org/wiki/Dhokla ("fermented batter that is steamed to a cake-like consistency"); https://en.wikipedia.org/wiki/Jalebi ("deep-frying maida flour", "soaked in sugar syrup")
+
 092, 2026-10-19: said the next note covers the pointer columns name and a rule from the database, but 093 gives the name and says the rule (what it stops) is its own note, which is 094. it now says the next note gives it its name. evidence: note 093 ("what that buys you is its own note")
 
 093, 2026-10-19: check yourself 2 said order_id in a new shipments table is the foreign key, but the note itself says a column with no REFERENCES is a plain integer column. the answer now says it is the foreign key once declared with REFERENCES orders (order_id). question and tempting answer unchanged. evidence: note 093 ("if you leave that phrase out its a plain integer column"); data/shop.sql

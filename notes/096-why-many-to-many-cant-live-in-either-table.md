@@ -4,7 +4,7 @@ section: tables, keys and relationships, part 18, ~2 min read
 
 order 101 has dhokla and masala chai on it. so which product_id goes in its row in the orders table? i tried both answers and neither fits.
 
-a many to many relationship is when rows on each side can match many rows on the other. in the shop, the imaginary gujarati snack store, an order holds many products, and a product lands on many orders. (dhokla is a steamed savory cake, kaju katli a cashew fudge, jalebi a fried sweet.) in [092](./092-relationships-one-customer-many-orders.md) the pointer went on the many side, so one [table](./079-a-table-rows-are-records-columns-are-fields.md) cell holds one value. here both sides are many. tried both ways:
+a many to many relationship is when rows on each side can match many rows on the other. in the shop, the imaginary gujarati snack store, an order holds many products, and a product lands on many orders. (dhokla is a steamed savory cake, kaju katli a cashew sweet, jalebi a fried sweet.) in [092](./092-relationships-one-customer-many-orders.md) the pointer went on the many side, so one [table](./079-a-table-rows-are-records-columns-are-fields.md) cell holds one value. here both sides are many. tried both ways:
 
 ```text
 pointer in orders             pointer in products

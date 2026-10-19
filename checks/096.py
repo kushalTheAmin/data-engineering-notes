@@ -26,4 +26,10 @@ except Exception as e:
     assert "onstraint" in str(e) or "duplicate" in str(e).lower()
 # source: https://learn.microsoft.com/en-us/ef/core/modeling/relationships/many-to-many
 # confirmed: many-to-many "cannot be represented in a simple way using just a foreign key. Instead, an additional entity type is needed to join the two sides", mapped to a join table
+# source: https://en.wikipedia.org/wiki/Dhokla
+# confirmed: "made with a fermented batter that is steamed to a cake-like consistency"
+# source: https://en.wikipedia.org/wiki/Kaju_katli
+# confirmed: "Kaju katli (lit. 'Cashew slice') is an Indian dessert", main ingredients cashews, sugar and ghee
+# source: https://en.wikipedia.org/wiki/Jalebi
+# confirmed: made by "deep-frying maida flour ... batter", then "soaked in sugar syrup"
 print("096 ok")
