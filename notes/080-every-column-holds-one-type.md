@@ -17,7 +17,7 @@ INTEGER | VARCHAR | NULL | VARCHAR | DATE
 
 Eshas city is [NULL](./031-null.md), no value, and the column is still text. NULL fits in a column of any type. joined_on is a DATE, a calendar day with no time, like [027](./027-dates-and-times-apart.md) built.
 
-so what happens if a bad value turns up? the database refuses it instead of storing it:
+so what happens if a bad value turns up? here the word free goes into the price column of products, and the database refuses it instead of storing it:
 
 ```sql
 -- fails on purpose
