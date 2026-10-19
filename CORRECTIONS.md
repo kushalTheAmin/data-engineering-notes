@@ -1,5 +1,7 @@
 # corrections
 
+072, 2026-10-19: described khandvi as a steamed gram flour roll, but the khandvi page says the batter is cooked down to a thick paste, spread thin and rolled up, with no steaming. it now says a rolled savory snack, the wording note 017 uses. evidence: https://en.wikipedia.org/wiki/Khandvi_(food) ("The batter is cooked down to a thick paste and then spread thinly on a flat surface")
+
 075, 2026-10-19: called JSON Schema a real standard, but it is specified in an IETF Internet Draft and json-schema.org calls it a vocabulary, not a finished standard. it now says a real written specification. evidence: https://en.wikipedia.org/wiki/JSON_Schema ("It is specified in an Internet Draft at the IETF"); https://json-schema.org/ ("the vocabulary that enables JSON data consistency")
 
 072, 2026-10-18: the opening said the order took one pair of curly braces in JSON, but the JSON for order 103 has 3 pairs (the order and each item). it now says JSON wrote each name once, where XML needs a pair of tags. evidence: python, the JSON text for order 103 has one "customer" and the XML has customer twice (checks/072.py)

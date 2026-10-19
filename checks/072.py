@@ -27,4 +27,6 @@ assert as_json.count('"customer"') == 1 and text.count("customer") == 2
 #   confirmed: "in addition to the XML protocol, we support RSS feeds and text files"
 # source: https://www.w3.org/TR/xmlschema11-2/
 #   confirmed: XML Schema datatypes include decimal, float, integer
+# source: https://en.wikipedia.org/wiki/Khandvi_(food)
+#   confirmed: "The batter is cooked down to a thick paste and then spread thinly on a flat surface", then rolled up (no steaming)
 print("072 ok")
