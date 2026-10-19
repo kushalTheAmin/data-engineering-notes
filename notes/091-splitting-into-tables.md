@@ -40,4 +40,4 @@ across the shop, the wide table wrote a city 7 times, one per order. the split w
 the cost is that an order no longer shows a name by itself, you look up id 1 in the other table. that lookup is called a join, a later note covers it, and first the pointer column needs a proper name.
 
 ---
-prev: [090 insert and delete anomalies](./090-insert-and-delete-anomalies.md) | next: not written yet
+prev: [090 insert and delete anomalies](./090-insert-and-delete-anomalies.md) | next: [092 relationships, one customer, many orders](./092-relationships-one-customer-many-orders.md)

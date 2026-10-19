@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 91
+notes so far: 92
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -107,3 +107,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [089 update anomalies](./notes/089-update-anomalies.md): Ashas city is fixed on order 101 only, and the shop now says she lives in 2 places
 - [090 insert and delete anomalies](./notes/090-insert-and-delete-anomalies.md): cancel Chirags only order and the shop forgets him, while Esha cant be stored at all
 - [091 splitting into tables, each fact lives in one place](./notes/091-splitting-into-tables.md): the city is written 7 times in the wide table and 4 times after the split, and Ashas 3 orders just hold a 1
+- [092 relationships, one customer, many orders](./notes/092-relationships-one-customer-many-orders.md): Asha has 3 orders and is still 1 customer, and Esha has 0 and still fits the same shape
