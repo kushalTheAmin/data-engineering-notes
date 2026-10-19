@@ -4,7 +4,7 @@ section: tables, keys and relationships, part 9, ~2 min read
 
 what if a second Chirag signs up? the name alone cant tell an order which Chirag it belongs to.
 
-a primary key is a column (sometimes two together, a later note) in a [table](./079-a-table-rows-are-records-columns-are-fields.md) (one fact per row, like a spreadsheet column) whose value is different in every row and never [NULL](./031-null.md) (no value), so one value points at exactly one row. in the shop, the imaginary gujarati snack store, the customers table uses customer_id. like the type rule in [080](./080-every-column-holds-one-type.md), the [database](./082-a-database-guards-the-data.md) (the program guarding the data) checks it every time a row is added. INSERT adds a row, and here a second Chirag tries to reuse id 3:
+a primary key is a column (sometimes two together, a later note) in a [table](./079-a-table-rows-are-records-columns-are-fields.md) (a grid where each row is one record, like a spreadsheet) whose value is different in every row and never [NULL](./031-null.md) (no value), so one value points at exactly one row. in the shop, the imaginary gujarati snack store, the customers table uses customer_id. like the type rule in [080](./080-every-column-holds-one-type.md), the [database](./082-a-database-guards-the-data.md) (the program guarding the data) checks it every time a row is added. INSERT adds a row, and here a second Chirag tries to reuse id 3:
 
 ```sql
 -- fails on purpose
