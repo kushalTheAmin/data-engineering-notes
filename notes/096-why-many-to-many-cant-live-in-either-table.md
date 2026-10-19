@@ -20,7 +20,7 @@ you could repeat the row instead, once per product, but then order_id repeats, a
 
 i kept hunting for which side the pointer belongs on, and the answer is neither. the relationship isnt a fact about an order or about a product, its a fact about the pair, like "order 101 has chai". and a pair is something [095](./095-composite-keys.md) already showed a key made of.
 
-the shop already holds those pairs, 13 rows of them in order_items. Entity Framework Core, a .NET database library, says it in its docs too, a foreign key alone cant show many to many, it needs an extra table. the next note builds that table.
+the shop already holds those pairs, 13 rows of them in order_items. Entity Framework Core, a .NET database library, says it in its docs too, a foreign key alone cant show many to many, it needs an extra table. the next note names that table.
 
 ---
 prev: [095 composite keys](./095-composite-keys.md) | next: [097 junction tables](./097-junction-tables.md)

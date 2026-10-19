@@ -1,5 +1,7 @@
 # corrections
 
+096, 2026-10-19: said the next note builds the table of order and product pairs, but the shop already has it (order_items, 13 rows) and 097 only names it a junction table. it now says the next note names that table. evidence: note 097 ("the shop, the imaginary gujarati snack store, already has one")
+
 098, 2026-10-19: said each box lists its columns, but the customers box shows 2 of its 4 columns and the orders box 3 of its 4 (no city, joined_on or status). it now says the boxes are shortened since the real tables have more. evidence: data/shop.sql (customers and orders column lists); python DESCRIBE on both tables returns 4 columns each
 
 096, 2026-10-19: said the same update anomaly as the wide table, a term only 089 defines, so a reader landing here could not tell what it was. it now says one row per order, city copied in. evidence: note 089 ("one wide table with the customers city copied onto each order row")
