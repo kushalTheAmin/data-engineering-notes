@@ -63,4 +63,4 @@ only id 7. the key is fine, the email clashes with id 6. id 8 is accepted. the t
 </details>
 
 ---
-prev: [087 primary key, one unique id per row](./087-primary-key.md) | next: not written yet
+prev: [087 primary key, one unique id per row](./087-primary-key.md) | next: [089 update anomalies](./089-update-anomalies.md)

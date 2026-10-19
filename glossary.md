@@ -135,6 +135,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | twos complement | binary where the leftmost place is negative, so one zero | [014](./notes/014-twos-complement.md) |
 | Unicode | one agreed table giving every character in every script a number | [009](./notes/009-unicode.md) |
 | unix time | a moment kept as seconds counted since the epoch | [025](./notes/025-unix-time.md) |
+| update anomaly | one fact stored in many rows, an update changing only some | [089](./notes/089-update-anomalies.md) |
 | UTC | the one clock everyone measures against, with no daylight saving | [024](./notes/024-utc.md) |
 | UTF-8 | a way to store each code point as 1 to 4 bytes | [010](./notes/010-utf-8.md) |
 | wc | prints a files counts; wc -l counts its 0a line endings | [055](./notes/055-wc-counting-lines.md) |
