@@ -66,4 +66,4 @@ it prints 3, because the line break inside 107s message becomes \n and each reco
 </details>
 
 ---
-prev: [077 required vs optional fields](./077-required-vs-optional-fields.md) | next: not written yet
+prev: [077 required vs optional fields](./077-required-vs-optional-fields.md) | next: [079 a table, rows are records, columns are fields](./079-a-table-rows-are-records-columns-are-fields.md)

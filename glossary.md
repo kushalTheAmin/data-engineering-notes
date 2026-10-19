@@ -40,6 +40,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | exact decimal | a type keeping decimal digits exactly, like DECIMAL(6, 2) | [022](./notes/022-exact-decimal-types.md) |
 | exact tie | an answer halfway between two floats, rounded to the one ending 0 | [020](./notes/020-why-0-1-plus-0-2-is-not-0-3.md) |
 | explode | turning a record holding a list into one row per list item | [071](./notes/071-exploding-lists-into-many-rows.md) |
+| field | one fact every row has a spot for, like city | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | file | a name plus a list of bytes in order, kept on disk | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
 | file extension | the letters after the dot in a name, just a label | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
 | flattening | turning inner names into columns, like address_city, one per name | [070](./notes/070-flattening-nested-objects-into-columns.md) |
@@ -88,6 +89,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | program | a file of bytes on disk that can be run | [050](./notes/050-processes.md) |
 | quoting (csv) | double quotes around a value so commas inside it stay text | [063](./notes/063-quoting-commas-inside-values.md) |
 | reading start to end | taking a files bytes in order from position 0 | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
+| record | one row of a table, one thing the data is about | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | redirect | > sends a programs stdout into a file, emptying it first | [059](./notes/059-redirecting-output-into-a-file.md) |
 | register | a tiny holding spot inside the processor, where it works on numbers | [035](./notes/035-the-processor.md) |
 | relative path | a path with no leading slash, begun at the working directory | [053](./notes/053-absolute-vs-relative-paths.md) |
@@ -108,6 +110,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | store UTC, show local | keep moments in UTC, convert to local only when displaying | [030](./notes/030-store-utc-show-local.md) |
 | stream | bytes handed over in order, like a program reading its stdin | [057](./notes/057-standard-input-and-output.md) |
 | structure | an agreement on where each fact sits, so code can find it | [061](./notes/061-structure-why-text-is-hard-to-ask.md) |
+| table | a grid of rows, every row holding the same columns | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | tag | a name in angle brackets, opening or closing an XML value | [072](./notes/072-xml.md) |
 | tail | prints the last lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | terabyte | 1000 gigabytes, a trillion bytes, written TB | [033](./notes/033-kilobytes-to-terabytes.md) |
