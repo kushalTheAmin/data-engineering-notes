@@ -1,5 +1,7 @@
 # corrections
 
+085, 2026-10-19: said ports run from 0 to 65535 as if all 65536 numbers can carry a connection, but TCP reserves port 0. it now says tcp reserves 0, so a real connection uses 1 and up. the checks also now source that connection refused means no one is listening. evidence: https://en.wikipedia.org/wiki/Port_(computer_networking) ("for TCP, port number 0 is reserved and cannot be used"); https://man7.org/linux/man-pages/man2/connect.2.html (ECONNREFUSED, "found no one listening on the remote address")
+
 084, 2026-10-19: said Postgres messages are a type byte then a length, but the first message a client sends (the startup message) has no type byte. it now says most messages start that way and the first one does not. evidence: https://www.postgresql.org/docs/current/protocol-overview.html ("For historical reasons, the very first message sent by the client (the startup message) has no initial message-type byte")
 
 080, 2026-10-19: showed INSERT INTO products VALUES (7, 'ladoo', 'sweet', 'free') without saying which column the word free lands in, so a reader could not see why it is refused. it now says the word free goes into the price column of products. evidence: python, duckdb raises Conversion Error: Could not convert string "free" to DECIMAL(6,2) (checks/080.py)

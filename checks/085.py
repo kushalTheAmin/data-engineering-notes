@@ -15,4 +15,10 @@ assert 2 ** 16 == 65536 and 2 ** 16 - 1 == 65535
 # confirmed: an IPv4 address is 32 bits, four octets
 # source: https://www.rfc-editor.org/rfc/rfc9293
 # confirmed: TCP source and destination port numbers are 16 bits
+# source: https://en.wikipedia.org/wiki/Port_(computer_networking)
+# confirmed: "for TCP, port number 0 is reserved and cannot be used"
+# source: https://man7.org/linux/man-pages/man2/connect.2.html
+# confirmed: ECONNREFUSED, "A connect() on a stream socket found no one listening on the remote address"
+# source: https://www.rfc-editor.org/rfc/rfc9293
+# confirmed: if the connection does not exist (CLOSED), "a reset is sent in response to any incoming segment except another reset"
 print("085 ok")

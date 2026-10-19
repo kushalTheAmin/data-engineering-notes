@@ -31,7 +31,7 @@ c0 00 02 0a 4
 15 38 2
 ```
 
-two bytes hold 65536 different values, so ports run from 0 to 65535. 192.0.2.10 is a reserved example address, real ones look the same, and you usually type a name that gets looked up as one.
+two bytes hold 65536 different values, so port numbers run from 0 to 65535 (tcp reserves 0, so a real connection uses 1 and up). 192.0.2.10 is a reserved example address, real ones look the same, and you usually type a name that gets looked up as one.
 
 5432 is where Postgres listens unless someone changes it, and 443 is where https traffic goes. those are habits, not laws. i assumed the address alone found the database, but it only gets you to the building.
 
