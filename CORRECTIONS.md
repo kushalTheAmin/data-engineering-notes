@@ -1,5 +1,9 @@
 # corrections
 
+096, 2026-10-19: said the same update anomaly as the wide table, a term only 089 defines, so a reader landing here could not tell what it was. it now says one row per order, city copied in. evidence: note 089 ("one wide table with the customers city copied onto each order row")
+
+094, 2026-10-19: glossed a foreign key as a column holding another tables primary key values, the same always-true wording 093 already narrowed, since a foreign key can also point at a unique column. it now says usually holds. evidence: https://www.postgresql.org/docs/current/ddl-constraints.html ("A foreign key must reference columns that either are a primary key or form a unique constraint"); note 093 and its correction line
+
 096, 2026-10-19: called kaju katli a cashew fudge, but the page for it never says fudge (it calls it an Indian dessert made of cashews, sugar and ghee, similar to barfi). it now says a cashew sweet. the checks now also source the dhokla and jalebi glosses. evidence: https://en.wikipedia.org/wiki/Kaju_katli ("Kaju katli (lit. 'Cashew slice') is an Indian dessert"); https://en.wikipedia.org/wiki/Dhokla ("fermented batter that is steamed to a cake-like consistency"); https://en.wikipedia.org/wiki/Jalebi ("deep-frying maida flour", "soaked in sugar syrup")
 
 092, 2026-10-19: said the next note covers the pointer columns name and a rule from the database, but 093 gives the name and says the rule (what it stops) is its own note, which is 094. it now says the next note gives it its name. evidence: note 093 ("what that buys you is its own note")
