@@ -51,6 +51,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | flattening | turning inner names into columns, like address_city, one per name | [070](./notes/070-flattening-nested-objects-into-columns.md) |
 | float | binary digits plus a count of how far to slide the point | [019](./notes/019-floating-point.md) |
 | folder | a named place on disk holding files and other folders | [040](./notes/040-folders-and-paths.md) |
+| foreign key | a column holding another tables primary key values, a pointer | [093](./notes/093-foreign-key.md) |
 | gibibyte | 1024 x 1024 x 1024 bytes, written GiB | [038](./notes/038-1000-or-1024.md) |
 | gigabyte | 1000 megabytes, a billion bytes, written GB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | grapheme | one unit as seen on screen, possibly several code points | [012](./notes/012-combining-marks.md) |

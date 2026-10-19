@@ -24,4 +24,4 @@ the part i kept missing is that "many" includes 0 and 1. Esha is still one to ma
 the column holding the pointer needs its own name, and a rule from the database, which the next note covers.
 
 ---
-prev: [091 splitting into tables](./091-splitting-into-tables.md) | next: not written yet
+prev: [091 splitting into tables](./091-splitting-into-tables.md) | next: [093 foreign key](./093-foreign-key.md)
