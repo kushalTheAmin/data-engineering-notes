@@ -44,4 +44,4 @@ Postgres and MySQL are databases in this sense (SQLite runs inside the program u
 how do those requests actually reach it? thats a later note.
 
 ---
-prev: [081 why a shared spreadsheet breaks when many people use it](./081-why-a-shared-spreadsheet-breaks.md) | next: not written yet
+prev: [081 why a shared spreadsheet breaks when many people use it](./081-why-a-shared-spreadsheet-breaks.md) | next: [083 schema on write vs schema on read](./083-schema-on-write-vs-schema-on-read.md)
