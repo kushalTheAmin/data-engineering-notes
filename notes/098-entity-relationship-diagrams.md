@@ -38,4 +38,4 @@ no. the ERD only shows that a customer can place orders, the shape. the 3 for As
 </details>
 
 ---
-prev: [097 junction tables, the table in the middle](./097-junction-tables.md) | next: not written yet
+prev: [097 junction tables, the table in the middle](./097-junction-tables.md) | next: [099 crows feet, reading one and many on the lines](./099-crows-feet-reading-one-and-many.md)

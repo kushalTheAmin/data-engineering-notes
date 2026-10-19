@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 98
+notes so far: 99
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -114,3 +114,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [096 why many to many cant live in either table](./notes/096-why-many-to-many-cant-live-in-either-table.md): order 101 has 2 products and dhokla is on 3 orders, so a pointer column on either side runs out of room
 - [097 junction tables, the table in the middle](./notes/097-junction-tables.md): order_items holds one row per order and product pair, with the quantity sitting on the pair
 - [098 entity relationship diagrams, boxes and lines](./notes/098-entity-relationship-diagrams.md): one box per table and one line per foreign key, and not a single row of data in the picture
+- [099 crows feet, reading one and many on the lines](./notes/099-crows-feet-reading-one-and-many.md): the marks on a line end say how many rows match, and the circle is the zero

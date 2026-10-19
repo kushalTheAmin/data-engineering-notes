@@ -31,6 +31,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | continuation byte | a UTF-8 byte starting 10, continuing the previous characters bytes | [011](./notes/011-why-gujarati-takes-3-bytes.md) |
 | core | one full processor inside a chip, most chips hold several | [035](./notes/035-the-processor.md) |
 | CRLF | a line ending of two characters, 0d then 0a, common on windows | [042](./notes/042-line-endings.md) |
+| crows feet | line end marks on an ERD showing how many rows match | [099](./notes/099-crows-feet-reading-one-and-many.md) |
 | CSV | a text file, usually one row per line, values split by commas | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
 | data | facts written down so you can ask questions about them later | [001](./notes/001-data-is-facts-and-numbers.md) |
 | data type | the kind of value a field allows, like text or number | [076](./notes/076-data-types-in-a-schema.md) |
