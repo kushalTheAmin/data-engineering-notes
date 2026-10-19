@@ -47,4 +47,4 @@ i assumed the safe write from 046 would cover this, and it doesnt. that fixes a 
 every editor works on a stale copy and nothing checks. you only notice when someone asks why 106 is still pending. what you want is one program standing between everyone and the file, taking each change one at a time. thats what a database is.
 
 ---
-prev: [080 every column holds one type](./080-every-column-holds-one-type.md) | next: not written yet
+prev: [080 every column holds one type](./080-every-column-holds-one-type.md) | next: [082 a database, a program that guards your data](./082-a-database-guards-the-data.md)

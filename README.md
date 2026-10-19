@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 81
+notes so far: 82
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -97,3 +97,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [079 a table, rows are records, columns are fields](./notes/079-a-table-rows-are-records-columns-are-fields.md): Esha has no city, and a table row still has a city spot, holding NULL
 - [080 every column holds one type](./notes/080-every-column-holds-one-type.md): Eshas city is NULL and the column is still text, and a price column refuses the word free
 - [081 why a shared spreadsheet breaks when many people use it](./notes/081-why-a-shared-spreadsheet-breaks.md): Asha and Bhavin each fix one row of the same file, both save, and 106 is pending again
+- [082 a database, a program that guards your data](./notes/082-a-database-guards-the-data.md): what if nobody could save the file at all, and both Asha and Bhavins fixes survive
