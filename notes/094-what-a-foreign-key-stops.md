@@ -36,4 +36,4 @@ Postgres lets you pick what a delete does, and ON DELETE CASCADE deletes the poi
 the shop file already uses one more trick on order_items, a key made of two columns, and a later note takes that apart.
 
 ---
-prev: [093 foreign key](./093-foreign-key.md) | next: not written yet
+prev: [093 foreign key](./093-foreign-key.md) | next: [095 composite keys](./095-composite-keys.md)
