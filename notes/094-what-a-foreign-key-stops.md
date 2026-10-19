@@ -4,7 +4,7 @@ section: tables, keys and relationships, part 16, ~2 min read
 
 can you add an order for customer 9 when the shop, the imaginary gujarati snack store, only has 5 customers? the database says no, and thats the whole job of a foreign key.
 
-once a [foreign key](./093-foreign-key.md) (a column holding another tables primary key values) is declared, the [database](./082-a-database-guards-the-data.md) (the program guarding the data) refuses any row whose pointer matches nothing. a row like that is an orphan row. here is the insert, with a customer_id that doesnt exist:
+once a [foreign key](./093-foreign-key.md) (a column that usually holds another tables primary key values) is declared, the [database](./082-a-database-guards-the-data.md) (the program guarding the data) refuses any row whose pointer matches nothing. a row like that is an orphan row. here is the insert, with a customer_id that doesnt exist:
 
 ```sql
 -- fails on purpose
