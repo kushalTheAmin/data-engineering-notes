@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 93
+notes so far: 94
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -109,3 +109,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [091 splitting into tables, each fact lives in one place](./notes/091-splitting-into-tables.md): the city is written 7 times in the wide table and 4 times after the split, and Ashas 3 orders just hold a 1
 - [092 relationships, one customer, many orders](./notes/092-relationships-one-customer-many-orders.md): Asha has 3 orders and is still 1 customer, and Esha has 0 and still fits the same shape
 - [093 foreign key](./notes/093-foreign-key.md): order 104 holds a 3, and the foreign key is what makes that 3 mean Chirag
+- [094 what a foreign key stops, rows pointing at nothing](./notes/094-what-a-foreign-key-stops.md): an order for customer 9 is refused, and so is deleting Chirag while order 104 points at him

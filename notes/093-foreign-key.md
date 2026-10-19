@@ -63,4 +63,4 @@ shipment_id is the primary key, it identifies a shipment. order_id is the foreig
 </details>
 
 ---
-prev: [092 relationships, one customer, many orders](./092-relationships-one-customer-many-orders.md) | next: not written yet
+prev: [092 relationships, one customer, many orders](./092-relationships-one-customer-many-orders.md) | next: [094 what a foreign key stops](./094-what-a-foreign-key-stops.md)
