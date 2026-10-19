@@ -55,4 +55,4 @@ order 103 with product 5 twice, once with quantity 1 and once with 9, because th
 </details>
 
 ---
-prev: [094 what a foreign key stops](./094-what-a-foreign-key-stops.md) | next: not written yet
+prev: [094 what a foreign key stops](./094-what-a-foreign-key-stops.md) | next: [096 why many to many cant live in either table](./096-why-many-to-many-cant-live-in-either-table.md)
