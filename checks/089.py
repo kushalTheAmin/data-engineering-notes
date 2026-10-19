@@ -19,6 +19,8 @@ assert sum(c == "Hoboken" for c in rows.values()) == 3
 assert [o for o, c in rows.items() if got[o][0] == "Asha" and c == "Jersey City"] == [106]
 # q2: a trailing space breaks the match
 assert "asha " != "Asha"
+# source: https://dev.mysql.com/doc/refman/8.4/en/char.html
+# confirmed: "PAD SPACE collations treat trailing spaces as insignificant in comparisons"; MySQL collations are PAD SPACE other than UCA 9.0.0 and higher
 # source: https://en.wikipedia.org/wiki/Database_normalization
 # confirmed: "to reduce data redundancy and improve data integrity"
 print("089 ok")

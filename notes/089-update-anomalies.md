@@ -20,6 +20,7 @@ rows = [{"order_id": 101, "customer": "Asha", "city": "Jersey City"},
         {"order_id": 103, "customer": "Asha", "city": "Jersey City"},
         {"order_id": 106, "customer": "Asha", "city": "Jersey City"}]
 rows[0]["city"] = "Hoboken"
+# {...} is a set, it keeps each city once; sorted puts them in order
 print(sorted({r["city"] for r in rows if r["customer"] == "Asha"}))
 ```
 
@@ -36,14 +37,14 @@ the next one is the mirror problem, losing facts you meant to keep.
 1. the flat table above is only a slice. the full table also holds Dishas order 105 (Hoboken), and Asha has her 3 rows. someone runs an update that sets city to Hoboken for Ashas orders below 105. how many rows now say Hoboken, and how many of Ashas rows still say Jersey City?
 <details><summary>answer</summary>
 
-3 rows say Hoboken (101 and 103 from the update, plus Dishas 105), and 1 of Ashas rows still says Jersey City, order 106. the tempting answer is 0, from assuming "update Asha" means all of Asha.
+3 rows say Hoboken (101 and 103 from the update, plus Dishas 105), and 1 of Ashas rows still says Jersey City, order 106. the tempting answers are 2 Hoboken, forgetting Dishas row, and 0 Jersey City left, from reading the update as all of Asha.
 
 </details>
 
 2. a dev says "i fixed it for good, my UPDATE changes every row where customer is Asha". one order was typed with the customer as "asha " with a trailing space. what happens, and why is a careful UPDATE still not enough?
 <details><summary>answer</summary>
 
-that row doesnt match, so it keeps the old city. the update only reaches copies it can find, and a fact copied many times will eventually have one it cant. storing the city once leaves nothing to miss.
+that row doesnt match in most databases (some MySQL collations ignore case and trailing spaces), so it keeps the old city. the update only reaches copies it can find, and a fact copied many times will eventually have one it cant. storing the city once leaves nothing to miss.
 
 </details>
 
