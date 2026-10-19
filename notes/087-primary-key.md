@@ -60,4 +60,4 @@ two rows, because city isnt a key. WHERE customer_id = 3 gives at most one.
 </details>
 
 ---
-prev: [086 client and server, you ask, the database answers](./086-client-and-server.md) | next: not written yet
+prev: [086 client and server, you ask, the database answers](./086-client-and-server.md) | next: [088 natural keys vs made up ids](./088-natural-keys-vs-made-up-ids.md)

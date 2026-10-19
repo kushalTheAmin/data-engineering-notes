@@ -70,11 +70,13 @@ every term these notes have built, in plain words, with the note that built it. 
 | line ending | the characters marking where one line stops, the next starts | [042](./notes/042-line-endings.md) |
 | lookup | fetching one value from a random spot | [037](./notes/037-disk-is-slow.md) |
 | lost update | two saves of one file, the later one erases the earlier change | [081](./notes/081-why-a-shared-spreadsheet-breaks.md) |
+| made up id | a number handed out by the database, meaningless outside it | [088](./notes/088-natural-keys-vs-made-up-ids.md) |
 | megabyte | 1000 kilobytes, a million bytes, written MB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | memory | the computers working space (RAM), emptied when the power goes off | [036](./notes/036-memory-vs-disk.md) |
 | microsecond | a millionth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | millisecond | a thousandth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | nanosecond | a billionth of a second | [037](./notes/037-disk-is-slow.md) |
+| natural key | a real world value that already tells rows apart, like an email | [088](./notes/088-natural-keys-vs-made-up-ids.md) |
 | negative zero | a second zero pattern, with the sign bit set | [013](./notes/013-negative-numbers-sign-bit.md) |
 | nesting | an object or array sitting inside another one, as deep as needed | [068](./notes/068-nesting.md) |
 | network | a way to move bytes from one computer to another | [084](./notes/084-a-network.md) |
