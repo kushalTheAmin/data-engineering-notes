@@ -20,7 +20,7 @@ look at the middle. the wire never sees the word delivered, only 64 65 6c 69 76 
 
 i expected something smarter, like shared memory between machines. its not, the receiver gets a copy of the bytes and the two sides must agree beforehand how to read them.
 
-one caveat, real messages get cut into small chunks on the way and put back together, but the programs still just see bytes. Postgres sends and receives its own byte format, a message type byte then a length, not readable text like my toy. the network doesnt care, bytes are bytes.
+one caveat, real messages get cut into small chunks on the way and put back together, but the programs still just see bytes. Postgres sends and receives its own byte format, where most messages start with a type byte then a length (the very first one a client sends has no type byte), not readable text like my toy. the network doesnt care, bytes are bytes.
 
 ---
 prev: [083 schema on write vs schema on read](./083-schema-on-write-vs-schema-on-read.md) | next: [085 addresses and ports](./085-addresses-and-ports.md)
