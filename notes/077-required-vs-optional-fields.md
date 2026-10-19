@@ -69,4 +69,4 @@ optional, at least until the old files are rewritten. required would reject all 
 </details>
 
 ---
-prev: [076 data types in a schema](./076-data-types-in-a-schema.md) | next: not written yet
+prev: [076 data types in a schema](./076-data-types-in-a-schema.md) | next: [078 capstone, the shop orders as raw text, CSV and JSON side by side](./078-capstone-the-shop-orders-three-ways.md)
