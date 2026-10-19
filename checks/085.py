@@ -21,4 +21,6 @@ assert 2 ** 16 == 65536 and 2 ** 16 - 1 == 65535
 # confirmed: ECONNREFUSED, "A connect() on a stream socket found no one listening on the remote address"
 # source: https://www.rfc-editor.org/rfc/rfc9293
 # confirmed: if the connection does not exist (CLOSED), "a reset is sent in response to any incoming segment except another reset"
+# source: https://www.rfc-editor.org/rfc/rfc1034
+# confirmed: a resolver does "Host name to host address translation" (section 5.2.1), so a typed name is looked up as an address
 print("085 ok")

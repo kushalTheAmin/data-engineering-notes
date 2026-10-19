@@ -1,5 +1,7 @@
 # corrections
 
+085, 2026-10-19: note text unchanged. the checks had no source for a typed name being looked up as an address; they now do. evidence: https://www.rfc-editor.org/rfc/rfc1034 ("Host name to host address translation")
+
 086, 2026-10-19: note text unchanged. the checks had no source for 127.0.0.1 meaning this same machine; they now do. evidence: https://www.rfc-editor.org/rfc/rfc5735 ("This block is assigned for use as the Internet host loopback address")
 
 084, 2026-10-19: note text unchanged. the checks had no source for real messages being cut into chunks on the way; they now cite TCP segmentation. evidence: https://www.rfc-editor.org/rfc/rfc9293 ("packetizing that stream of bytes into TCP segments")
