@@ -39,7 +39,7 @@ both fixes survived. Asha and Bhavin never held a copy, they each asked for one 
 
 caveat, if both change the same row, the later request still wins. the difference is that it only touches the row it names, so nobody loses work they never edited.
 
-Postgres and MySQL are databases in this sense, and real ones do far more than this toy: crashes, speed, many requests at once. but "one program guards the files" is the part everything else hangs on.
+Postgres and MySQL are databases in this sense (SQLite runs inside the program using it, so it is the exception), and real ones do far more than this toy: crashes, speed, many requests at once. but "one program guards the files" is the part everything else hangs on.
 
 how do those requests actually reach it? thats a later note.
 

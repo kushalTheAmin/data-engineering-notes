@@ -20,4 +20,6 @@ assert db.rows == [{'order_id': 106, 'status': 'delivered'}, {'order_id': 107, '
 #   confirmed: clients connect to the server process, which manages the database files and does the work for them
 # source: https://dev.mysql.com/doc/refman/8.4/en/mysqld.html
 #   confirmed: mysqld is the MySQL server that manages access to the database
+# source: https://www.sqlite.org/serverless.html
+#   confirmed: "Most SQL database engines are implemented as a separate server process", and SQLite is serverless
 print("082 ok")
