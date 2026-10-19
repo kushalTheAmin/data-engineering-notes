@@ -12,4 +12,11 @@ assert [r["city"] for r in rows] == ["Jersey City", "Hoboken", None]
 assert all(r.keys() == rows[0].keys() for r in rows)
 # source: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html
 #   confirmed: a DataFrame is "Two-dimensional, size-mutable, potentially heterogeneous tabular data"
+# a database table keeps the same columns in every row, and name cannot hold NULL
+import duckdb
+try:
+    con.execute("INSERT INTO customers VALUES (9, NULL, NULL, DATE '2026-04-01')"); assert False
+except duckdb.ConstraintException:
+    pass
+con.execute("INSERT INTO customers VALUES (9, 'Test', NULL, DATE '2026-04-01')")  # city allows NULL
 print("079 ok")
