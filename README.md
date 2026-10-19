@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 76
+notes so far: 77
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -90,3 +90,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [074 YAML traps, when no means false](./notes/074-yaml-traps.md): gift_wrap: no comes back as False, and quotes turn it back into text
 - [075 schema, the agreement about shape](./notes/075-schema.md): order 104 renamed status to state, the file is still valid JSON, and the schema catches it
 - [076 data types in a schema](./notes/076-data-types-in-a-schema.md): a quantity of "3" in quotes passes the names check, and doubling it gives 33
+- [077 required vs optional fields](./notes/077-required-vs-optional-fields.md): Esha has no city and is still a valid customer, but a missing name and a null are not the same thing

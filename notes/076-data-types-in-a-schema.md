@@ -35,4 +35,4 @@ in a [csv](./062-csv-rows-and-columns-separated-by-commas.md) quotes dont carry 
 JSON Schema, the real standard 075 mentioned, has a keyword (a reserved word in the schema file) called type that does this check.
 
 ---
-prev: [075 schema, the agreement about shape](./075-schema.md) | next: not written yet
+prev: [075 schema, the agreement about shape](./075-schema.md) | next: [077 required vs optional fields](./077-required-vs-optional-fields.md)
