@@ -25,4 +25,6 @@ assert client.recv(100).decode() == "delivered"
 # confirmed: "An SMTP session is initiated when a client opens a connection to a server and the server responds with an opening message"
 # source: https://man7.org/linux/man-pages/man2/connect.2.html
 # confirmed: ECONNREFUSED, "A connect() on a stream socket found no one listening on the remote address"
+# source: https://www.rfc-editor.org/rfc/rfc5735
+# confirmed: "127.0.0.0/8 - This block is assigned for use as the Internet host loopback address."
 print("086 ok")
