@@ -4,7 +4,7 @@ section: tables, keys and relationships, part 3, ~2 min read
 
 two people each fix one row of the same shared file, both save, and one fix is just gone. no error, no warning. how?
 
-in [080](./080-every-column-holds-one-type.md) a [table](./079-a-table-rows-are-records-columns-are-fields.md) fixed what goes in each column. but a table kept as a plain [file](./039-a-file-is-a-named-list-of-bytes.md), like a spreadsheet or csv on a shared drive, has no guard, and saving it means writing the whole file back. the shop, the imaginary gujarati snack store these notes run on, keeps a slice of orders that way: 106 pending and 107 delivered. Asha and Bhavin both open it, each gets their own copy in memory, and each fixes a different row.
+in [080](./080-every-column-holds-one-type.md) a [table](./079-a-table-rows-are-records-columns-are-fields.md) fixed what goes in each column. but a table kept as a plain [file](./039-a-file-is-a-named-list-of-bytes.md), like a spreadsheet or csv on a shared drive, has no guard of its own, and saving it means writing the whole file back. a program like Excel may open a second copy read-only, but nothing in the plain file stops a save. the shop, the imaginary gujarati snack store these notes run on, keeps a slice of orders that way: 106 pending and 107 delivered. Asha and Bhavin both open it, each gets their own copy in memory, and each fixes a different row.
 
 | step | Asha has | Bhavin has | file on disk |
 |---|---|---|---|
@@ -44,7 +44,7 @@ print(open(path).read().strip())
 
 i assumed the safe write from 046 would cover this, and it doesnt. that fixes a torn file, every save here is whole and clean, it just replaces the other one. the name is a lost update, last save wins.
 
-every editor works on a stale copy and nothing checks. you only notice when someone asks why 106 is still pending. what you want is one program standing between everyone and the file, taking each change one at a time. thats what a database is.
+every editor works on a stale copy and nothing checks. you only notice when someone asks why 106 is still pending. what you want is one program standing between everyone and the file, applying each change to the current data. thats what a database is.
 
 ---
 prev: [080 every column holds one type](./080-every-column-holds-one-type.md) | next: [082 a database, a program that guards your data](./082-a-database-guards-the-data.md)

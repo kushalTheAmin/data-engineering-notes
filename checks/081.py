@@ -21,4 +21,6 @@ save(asha)
 assert open(path).read() == "106,delivered\n107,delivered\n"
 save(bhavin)
 assert open(path).read().strip() == "106,pending\n107,returned"
+# source: https://learn.microsoft.com/en-us/previous-versions/office/developer/office-2010/ms260757(v=office.14)
+#   confirmed: if the file cannot be opened in read/write mode, "Microsoft Excel will open the file as read-only"
 print("081 ok")
