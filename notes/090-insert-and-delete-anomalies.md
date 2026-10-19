@@ -33,4 +33,4 @@ the second list is the delete anomaly. 104 was Chirags only order (cancelled in 
 Wikipedias page on database normalization (storing each fact once) shows the same two failures, with a teacher who cant be recorded until assigned a course.
 
 ---
-prev: [089 update anomalies](./089-update-anomalies.md) | next: not written yet
+prev: [089 update anomalies](./089-update-anomalies.md) | next: [091 splitting into tables](./091-splitting-into-tables.md)
