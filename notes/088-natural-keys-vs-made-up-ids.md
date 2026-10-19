@@ -4,7 +4,7 @@ section: tables, keys and relationships, part 10, ~2 min read
 
 the customer already has an email, so say nobody else shares it, so why would i invent a number to identify them? i assumed the real thing had to be the better key.
 
-a natural key is a value from the real world that already tells rows apart, like an email. a made up id (a surrogate key) is a number, usually handed out by the database, that means nothing outside it. either can be the [primary key](./087-primary-key.md) (a column unique in every row, never NULL, meaning empty). pretend the shop, the imaginary gujarati snack store, tracked orders by email, copied into each order. Asha has orders 101, 103 and 106, then she changes her email:
+a natural key is a value from the real world that already tells rows apart, like an email. a made up id (a surrogate key) is a value, usually a number handed out by the database, that means nothing outside it. either can be the [primary key](./087-primary-key.md) (a column unique in every row, never NULL, no value). pretend the shop, the imaginary gujarati snack store, tracked orders by email, copied into each order. Asha has orders 101, 103 and 106, then she changes her email:
 
 ```python
 asha = {"customer_id": 1, "email": "asha@example.com"}
@@ -28,7 +28,7 @@ by id: [101, 103, 106]
 
 the orders never moved, but what they pointed at changed, so now they point at nobody (a database can also refuse such a change, a later note). a key made of a real world fact breaks when that fact changes. the id says nothing about Asha, so nothing in her life changes it. that meaninglessness felt like cheating to me at first, and its the whole point.
 
-the catch: an id doesnt stop the same person signing up twice, you just get ids 6 and 7 for one email. so keep the email as a UNIQUE NOT NULL column too (unique but not the key), or empty emails slip past as in 087. Postgres, a popular database, even has identity columns that hand out the next id for you, per its docs.
+the catch: an id doesnt stop the same person signing up twice, you just get ids 6 and 7 for one email. so keep the email as a UNIQUE NOT NULL column too (unique but not the key), or missing (NULL) emails slip past as in 087. Postgres, a popular database, has identity columns that hand out the next id for you, per its docs.
 
 
 ### check yourself

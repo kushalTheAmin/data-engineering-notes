@@ -1,5 +1,7 @@
 # corrections
 
+088, 2026-10-19: said a surrogate key is a number and called NULL empty (which a beginner can read as an empty text), and later said empty emails slip past. a surrogate key is often a number but can be a UUID, and NULL is no value as in 031. it now says a value, usually a number, never NULL, no value, and missing (NULL) emails. evidence: https://en.wikipedia.org/wiki/Surrogate_key ("A surrogate key is frequently a sequential number"; "Some databases provide UUID/GUID as a possible data type"); note 031 ("there is no value here")
+
 087, 2026-10-19: glossed a table as one fact per row, like a spreadsheet column, but in 079 a row is one record holding a fact for every column, and a spreadsheet column is a field. it now says a grid where each row is one record, like a spreadsheet. evidence: note 079 ("each row is one record", "each column is one field")
 
 089, 2026-10-19: check yourself question 1 said the flat table above has Dishas order 105, but the table shown has no row 105 (it shows 101, 103, 106 and 102). it now says the table above is a slice and the full table also holds order 105. numbers and answer unchanged. evidence: the table in note 089 and data/shop.sql (Disha is customer 4 in Hoboken)

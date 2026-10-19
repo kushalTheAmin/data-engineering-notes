@@ -33,4 +33,7 @@ con.execute("INSERT INTO c2 VALUES (8, 'h@example.com')")
 assert con.execute("SELECT count(*) FROM c2").fetchone()[0] == 2
 # source: https://www.postgresql.org/docs/current/ddl-identity-columns.html
 # confirmed: "An identity column is a special column that is generated automatically from an implicit sequence. It can be used to generate key values."
+# source: https://en.wikipedia.org/wiki/Surrogate_key
+# confirmed: "A surrogate key is frequently a sequential number." and "Some databases provide UUID/GUID as a possible data type for surrogate keys."
+# confirmed: "The surrogate key is not derived from application data, unlike a natural (or business) key."
 print("088 ok")
