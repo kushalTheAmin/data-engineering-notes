@@ -7,10 +7,11 @@ con = shop()
 got = con.execute("SELECT typeof(customer_id), typeof(name), city, typeof(city), typeof(joined_on) FROM customers WHERE customer_id = 5").fetchall()
 assert got == [("INTEGER", "VARCHAR", None, "VARCHAR", "DATE")]
 try:
-    con.execute("SELECT CAST('free' AS DECIMAL(6, 2)) AS price")
+    con.execute("INSERT INTO products VALUES (7, 'ladoo', 'sweet', 'free')")
     raise SystemExit("should have failed")
 except Exception as e:
     assert "Could not convert" in str(e)
+assert con.execute("SELECT count(*) FROM products").fetchone()[0] == 6
 # source: https://www.sqlite.org/datatype3.html
 #   confirmed: "the datatype of a value is associated with the value itself, not with its container"
 print("080 ok")

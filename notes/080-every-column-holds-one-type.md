@@ -21,7 +21,7 @@ so what happens if a bad value turns up? the database refuses it instead of stor
 
 ```sql
 -- fails on purpose
-SELECT CAST('free' AS DECIMAL(6, 2)) AS price
+INSERT INTO products VALUES (7, 'ladoo', 'sweet', 'free')
 ```
 
 i expected the type to belong to each value, the way it does in python. in a table it belongs to the column, and values have to fit it.
