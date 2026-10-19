@@ -1,5 +1,7 @@
 # corrections
 
+084, 2026-10-19: note text unchanged. the checks had no source for real messages being cut into chunks on the way; they now cite TCP segmentation. evidence: https://www.rfc-editor.org/rfc/rfc9293 ("packetizing that stream of bytes into TCP segments")
+
 086, 2026-10-19: note text unchanged. the checks had no source for bind port 0 picking a free port, for some protocols having the server greet first, or for connection refused meaning nobody listens; they now do. evidence: https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-bind ("if the port is specified as zero, the service provider assigns a unique port"); https://www.rfc-editor.org/rfc/rfc5321 ("the server responds with an opening message")
 
 085, 2026-10-19: said ports run from 0 to 65535 as if all 65536 numbers can carry a connection, but TCP reserves port 0. it now says tcp reserves 0, so a real connection uses 1 and up. the checks also now source that connection refused means no one is listening. evidence: https://en.wikipedia.org/wiki/Port_(computer_networking) ("for TCP, port number 0 is reserved and cannot be used"); https://man7.org/linux/man-pages/man2/connect.2.html (ECONNREFUSED, "found no one listening on the remote address")
