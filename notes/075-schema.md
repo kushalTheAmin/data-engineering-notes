@@ -30,4 +30,4 @@ i assumed loading a file without an error meant it was fine, and the loader only
 what each value should look like, text or number, comes next.
 
 ---
-prev: [074 YAML traps, when no means false](./074-yaml-traps.md) | next: not written yet
+prev: [074 YAML traps, when no means false](./074-yaml-traps.md) | next: [076 data types in a schema](./076-data-types-in-a-schema.md)

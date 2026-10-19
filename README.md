@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 75
+notes so far: 76
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -89,3 +89,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [073 YAML, indentation as structure](./notes/073-yaml.md): the same order drops every bracket and closing tag, and a list item ends when a line steps back out
 - [074 YAML traps, when no means false](./notes/074-yaml-traps.md): gift_wrap: no comes back as False, and quotes turn it back into text
 - [075 schema, the agreement about shape](./notes/075-schema.md): order 104 renamed status to state, the file is still valid JSON, and the schema catches it
+- [076 data types in a schema](./notes/076-data-types-in-a-schema.md): a quantity of "3" in quotes passes the names check, and doubling it gives 33
