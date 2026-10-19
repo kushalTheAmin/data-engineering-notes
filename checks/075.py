@@ -28,4 +28,6 @@ json.loads('{"order_id": 104, "customer": "Chirag", "state": "cancelled"}')  # v
 #   confirmed: JSON Schema is described as the vocabulary that enables JSON data consistency, validity, and interoperability
 # source: https://en.wikipedia.org/wiki/JSON_Schema
 #   confirmed: "It is specified in an Internet Draft at the IETF" (a draft specification, not a finished standard)
+# source: https://json-schema.org/understanding-json-schema/reference/object
+#   confirmed: "By default any additional properties are allowed" and additionalProperties set to false means no additional properties will be allowed
 print("075 ok")
