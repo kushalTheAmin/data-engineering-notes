@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 89
+notes so far: 90
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -105,3 +105,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [087 primary key, one unique id per row](./notes/087-primary-key.md): a second Chirag signs up with id 3 and the database just says no
 - [088 natural keys vs made up ids](./notes/088-natural-keys-vs-made-up-ids.md): Asha changes her email and 3 orders keyed by it point at nobody, while the id still finds all 3
 - [089 update anomalies](./notes/089-update-anomalies.md): Ashas city is fixed on order 101 only, and the shop now says she lives in 2 places
+- [090 insert and delete anomalies](./notes/090-insert-and-delete-anomalies.md): cancel Chirags only order and the shop forgets him, while Esha cant be stored at all

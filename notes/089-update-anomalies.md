@@ -48,4 +48,4 @@ that row doesnt match, so it keeps the old city. the update only reaches copies 
 </details>
 
 ---
-prev: [088 natural keys vs made up ids](./088-natural-keys-vs-made-up-ids.md) | next: not written yet
+prev: [088 natural keys vs made up ids](./088-natural-keys-vs-made-up-ids.md) | next: [090 insert and delete anomalies](./090-insert-and-delete-anomalies.md)

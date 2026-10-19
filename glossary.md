@@ -37,6 +37,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | date | a calendar day with no time of day | [027](./notes/027-dates-and-times-apart.md) |
 | daylight saving | clocks shifting an hour twice a year in many places | [024](./notes/024-utc.md) |
 | decompress | rebuild the original bytes from compressed ones, costing processor work | [048](./notes/048-compression-trades-processor-for-space.md) |
+| delete anomaly | removing one fact also removes another that lived only in that row | [090](./notes/090-insert-and-delete-anomalies.md) |
 | disk | storage like an SSD or hard drive, keeping bytes without power | [036](./notes/036-memory-vs-disk.md) |
 | doubled quote | two quotes in a row inside a quoted value, meaning one quote | [064](./notes/064-quotes-inside-quotes-and-newlines-inside-values.md) |
 | embedded newline | a line ending inside a quoted csv value, not ending the row | [064](./notes/064-quotes-inside-quotes-and-newlines-inside-values.md) |
@@ -57,6 +58,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | head | prints the first lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | header row | the first line of a csv, holding column names instead of data | [065](./notes/065-the-header-row-naming-the-columns.md) |
 | hexadecimal | counting with sixteen digits, a to f standing for ten to fifteen | [005](./notes/005-hexadecimal.md) |
+| insert anomaly | a fact cant be stored until an unrelated fact exists | [090](./notes/090-insert-and-delete-anomalies.md) |
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |
 | JSON | a text format of records, with a name next to every value | [066](./notes/066-json-records-with-names-on-every-value.md) |
 | JSON array | square brackets around values in order, like a python list | [067](./notes/067-json-types.md) |
