@@ -1,5 +1,7 @@
 # corrections
 
+090, 2026-10-19: the claim that Esha joined in March had no check behind it. the text is unchanged and checks/090.py now asserts it. evidence: python, customers row for Esha has joined_on 2026-03-15 (data/shop.sql)
+
 089, 2026-10-19: said the row typed as "asha " does not match, which is true in most databases but not all: MySQL collations that are PAD SPACE and case insensitive ignore a trailing space, so it now says most databases. check yourself 1 named 0 as the tempting answer, but the question says below 105, so a beginner more likely forgets Dishas row and says 2 Hoboken; the answer now names both slips (numbers unchanged). the set code now has a comment. evidence: https://dev.mysql.com/doc/refman/8.4/en/char.html ("PAD SPACE collations treat trailing spaces as insignificant in comparisons"); python, update of orders 101 and 103 leaves 3 Hoboken rows (checks/089.py)
 
 090, 2026-10-19: the code used a set ({...} with a for) and sorted with no explanation, and a reader who knows only lists and dictionaries cannot follow it. a code comment now says a set keeps each name once and sorted puts them in order. evidence: python, sorted({r["name"] for r in wide}) prints each name once; https://docs.python.org/3/tutorial/datastructures.html#sets ("A set is an unordered collection with no duplicate elements")

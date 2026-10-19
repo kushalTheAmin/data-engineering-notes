@@ -13,6 +13,7 @@ assert rows == [(101,"Asha","Jersey City"),(102,"Bhavin","Edison"),(103,"Asha","
 assert con.execute("SELECT count(*) FROM customers WHERE name='Esha'").fetchone()[0] == 1
 assert con.execute("SELECT count(*) FROM orders WHERE customer_id=5").fetchone()[0] == 0
 assert "Esha" not in {r[1] for r in rows}
+assert str(con.execute("SELECT joined_on FROM customers WHERE name='Esha'").fetchone()[0]) == '2026-03-15'  # joined in March
 # chirag has exactly one order, 104, cancelled
 assert con.execute("SELECT order_id, status FROM orders WHERE customer_id=3").fetchall() == [(104,"cancelled")]
 assert con.execute("SELECT count(*) FROM customers").fetchone()[0] == 5
