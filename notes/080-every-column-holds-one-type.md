@@ -29,4 +29,4 @@ i expected the type to belong to each value, the way it does in python. in a tab
 this is the opposite of a csv or a JSON record, where each value just arrives as it is. SQLite is a known exception, it lets the type ride with the value, so a text word can sit in a number column unless you add a rule.
 
 ---
-prev: [079 a table, rows are records, columns are fields](./079-a-table-rows-are-records-columns-are-fields.md) | next: not written yet
+prev: [079 a table, rows are records, columns are fields](./079-a-table-rows-are-records-columns-are-fields.md) | next: [081 why a shared spreadsheet breaks when many people use it](./081-why-a-shared-spreadsheet-breaks.md)
