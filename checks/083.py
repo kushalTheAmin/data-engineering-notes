@@ -13,6 +13,11 @@ try:
     raise SystemExit("should have failed")
 except TypeError as e:
     assert str(e) == "unsupported operand type(s) for +: 'int' and 'str'"
+assert con.execute("SELECT count(*) FROM order_items WHERE order_id = 105").fetchone()[0] == 3
 total = con.execute("SELECT sum(quantity) FROM order_items WHERE order_id = 105").fetchone()[0]
 assert total == 5 and total - 2 == 3
+# source: https://www.mongodb.com/docs/manual/core/schema-validation/
+#   confirmed: "MongoDB uses a flexible schema model. By default, documents in a collection don't need the same fields or data types"
+# source: https://www.sqlite.org/stricttables.html
+#   confirmed: "SQLite strives to be flexible regarding the datatype of the content that it stores"
 print("083 ok")
