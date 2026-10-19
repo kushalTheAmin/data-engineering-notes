@@ -4,7 +4,7 @@ section: tables, keys and relationships, part 13, ~2 min read
 
 so where should Ashas city live? the last two notes ([089](./089-update-anomalies.md) and [090](./090-insert-and-delete-anomalies.md)) all came from copying it onto every order row, and the fix is one cut.
 
-splitting into tables means each kind of thing gets its own [table](./079-a-table-rows-are-records-columns-are-fields.md) (a grid of rows), and other tables keep only its id. the shop, the imaginary gujarati snack store, is already built this way. before, a slice of the wide table:
+splitting into tables means each kind of thing gets its own [table](./079-a-table-rows-are-records-columns-are-fields.md) (a grid of rows), and other tables keep only its id. the shop, the imaginary gujarati snack store, is already built this way. before, a slice of the wide table (one row per order, city copied in):
 
 | order_id | name | city |
 |---|---|---|
