@@ -10,6 +10,8 @@ assert con.execute("SELECT count(*) FROM orders WHERE customer_id = 1").fetchone
 # orders.customer_id is the foreign key to customers
 fk = con.execute("SELECT constraint_column_names, referenced_table FROM duckdb_constraints() WHERE table_name = 'orders' AND constraint_type = 'FOREIGN KEY'").fetchall()
 assert [(list(c), t) for c, t in fk] == [(["customer_id"], "customers")]
+# the diagram boxes show fewer columns than the real tables have
+assert len(con.execute("DESCRIBE customers").fetchall()) == 4 and len(con.execute("DESCRIBE orders").fetchall()) == 4
 # source: https://mermaid.js.org/syntax/entityRelationshipDiagram.html
 # confirmed: mermaid erDiagram attribute keys can be PK, FK or UK (primary, foreign, unique key)
 # source: https://www.pgadmin.org/docs/pgadmin4/latest/erd_tool.html

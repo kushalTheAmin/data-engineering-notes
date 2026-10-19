@@ -15,7 +15,7 @@ an ERD is a picture with one box per [table](./079-a-table-rows-are-records-colu
 +----------------------+      +--------------------------+
 ```
 
-each box lists its columns. PK marks the [primary key](./087-primary-key.md) (the unique id column) and FK marks a [foreign key](./093-foreign-key.md) (a column pointing at another tables key). the line joins the two tables, and it goes exactly where the FK is, from orders.customer_id to customers.customer_id. the word on it, places, says what the link means: a customer places orders.
+each box lists columns, shortened here since the real tables have more. PK marks the [primary key](./087-primary-key.md) (the unique id column) and FK marks a [foreign key](./093-foreign-key.md) (a column pointing at another tables key). the line joins the two tables, and it goes exactly where the FK is, from orders.customer_id to customers.customer_id. the word on it, places, says what the link means: a customer places orders.
 
 what clicked for me is that nothing in this picture is data. no Asha, no 101. its the shape of the database. i expected a diagram to show the data, and it lets you read the design before you ever see a row. the little marks on the line ends say how many, and that gets its own note.
 

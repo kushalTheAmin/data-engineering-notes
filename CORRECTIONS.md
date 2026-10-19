@@ -1,5 +1,7 @@
 # corrections
 
+098, 2026-10-19: said each box lists its columns, but the customers box shows 2 of its 4 columns and the orders box 3 of its 4 (no city, joined_on or status). it now says the boxes are shortened since the real tables have more. evidence: data/shop.sql (customers and orders column lists); python DESCRIBE on both tables returns 4 columns each
+
 096, 2026-10-19: said the same update anomaly as the wide table, a term only 089 defines, so a reader landing here could not tell what it was. it now says one row per order, city copied in. evidence: note 089 ("one wide table with the customers city copied onto each order row")
 
 094, 2026-10-19: glossed a foreign key as a column holding another tables primary key values, the same always-true wording 093 already narrowed, since a foreign key can also point at a unique column. it now says usually holds. evidence: https://www.postgresql.org/docs/current/ddl-constraints.html ("A foreign key must reference columns that either are a primary key or form a unique constraint"); note 093 and its correction line
