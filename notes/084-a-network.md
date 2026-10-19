@@ -23,4 +23,4 @@ i expected something smarter, like shared memory between machines. its not, the 
 one caveat, real messages get cut into small chunks on the way and put back together, but the programs still just see bytes. Postgres sends and receives its own byte format, a message type byte then a length, not readable text like my toy. the network doesnt care, bytes are bytes.
 
 ---
-prev: [083 schema on write vs schema on read](./083-schema-on-write-vs-schema-on-read.md) | next: not written yet
+prev: [083 schema on write vs schema on read](./083-schema-on-write-vs-schema-on-read.md) | next: [085 addresses and ports](./085-addresses-and-ports.md)

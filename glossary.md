@@ -5,6 +5,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | term | plain meaning | built in |
 |---|---|---|
 | absolute path | a path starting with a slash, always begun at the root | [053](./notes/053-absolute-vs-relative-paths.md) |
+| address (network) | a number naming one machine on a network, 4 bytes in IPv4 | [085](./notes/085-addresses-and-ports.md) |
 | ambiguous time | a clock reading that happens twice, when clocks go back | [029](./notes/029-daylight-saving.md) |
 | argument | a word after the program name, handed to that program | [049](./notes/049-the-terminal.md) |
 | ASCII | the old table giving 128 characters a number, English only | [008](./notes/008-ascii-runs-out.md) |
@@ -87,6 +88,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | pipe (shell) | joins one programs output to the next programs input | [058](./notes/058-pipes.md) |
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
 | placeholder value | a made up value, like 0, standing in for missing | [032](./notes/032-null-is-not-zero-or-empty-text.md) |
+| port | a number picking which program on a machine gets the bytes | [085](./notes/085-addresses-and-ports.md) |
 | precision | the most digits a decimal can hold in total | [022](./notes/022-exact-decimal-types.md) |
 | process | one running copy of a program, loaded into memory | [050](./notes/050-processes.md) |
 | processor | the CPU, the part of the computer doing tiny steps on numbers | [035](./notes/035-the-processor.md) |

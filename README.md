@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 84
+notes so far: 85
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -100,3 +100,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [082 a database, a program that guards your data](./notes/082-a-database-guards-the-data.md): what if nobody could save the file at all, and both Asha and Bhavins fixes survive
 - [083 schema on write vs schema on read](./notes/083-schema-on-write-vs-schema-on-read.md): a quantity of "two" is rejected at the door by one and crashes the reader in the other
 - [084 a network, computers sending bytes to each other](./notes/084-a-network.md): Asha taps a button and the database is on another machine, so what physically crosses
+- [085 addresses and ports, the right program on the right machine](./notes/085-addresses-and-ports.md): the bytes reached the server, but a dozen programs live there, so who gets them
