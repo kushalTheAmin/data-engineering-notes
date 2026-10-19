@@ -55,4 +55,4 @@ read, keep the raw events so nothing is rejected while the shape keeps moving, b
 </details>
 
 ---
-prev: [082 a database, a program that guards your data](./082-a-database-guards-the-data.md) | next: not written yet
+prev: [082 a database, a program that guards your data](./082-a-database-guards-the-data.md) | next: [084 a network, computers sending bytes to each other](./084-a-network.md)

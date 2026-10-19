@@ -75,6 +75,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | nanosecond | a billionth of a second | [037](./notes/037-disk-is-slow.md) |
 | negative zero | a second zero pattern, with the sign bit set | [013](./notes/013-negative-numbers-sign-bit.md) |
 | nesting | an object or array sitting inside another one, as deep as needed | [068](./notes/068-nesting.md) |
+| network | a way to move bytes from one computer to another | [084](./notes/084-a-network.md) |
 | null | a marker meaning there is no value here, not a value | [031](./notes/031-null.md) |
 | offset | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
 | operating system | the program that starts programs and shares the machine between them | [051](./notes/051-the-operating-system.md) |
