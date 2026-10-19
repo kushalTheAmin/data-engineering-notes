@@ -30,9 +30,9 @@ print(3 * 2, "3" * 2)
 
 i expected the quote marks to be harmless decoration, and they change what the value is. python repeats text instead of multiplying it, so "3" doubles into 33 with no error anywhere. the names check from 075 passes it, only a type check catches it.
 
-in a [csv](./062-csv-rows-and-columns-separated-by-commas.md) quotes dont carry a kind, every value comes back as text, so there the question you ask becomes whether the text can be read as a number. "3" can, "three" cant.
+in a [csv](./062-csv-rows-and-columns-separated-by-commas.md) quotes dont carry a kind, splitting a line gives every value as text, so there the question you ask becomes whether the text can be read as a number. "3" can, "three" cant.
 
-JSON Schema, the real standard 075 mentioned, has a keyword (a reserved word in the schema file) called type that does this check.
+JSON Schema, the real written specification 075 mentioned, has a keyword (a reserved word in the schema file) called type that does this check.
 
 ---
 prev: [075 schema, the agreement about shape](./075-schema.md) | next: [077 required vs optional fields](./077-required-vs-optional-fields.md)

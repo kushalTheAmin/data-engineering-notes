@@ -22,4 +22,6 @@ except ValueError:
     pass
 # source: https://json-schema.org/understanding-json-schema/reference/type
 #   confirmed: the type keyword specifies the data type a schema should expect, with types like number and string
+# source: https://en.wikipedia.org/wiki/JSON_Schema
+#   confirmed: "It is specified in an Internet Draft at the IETF"
 print("076 ok")
