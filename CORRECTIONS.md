@@ -1,5 +1,7 @@
 # corrections
 
+089, 2026-10-19: check yourself question 1 said the flat table above has Dishas order 105, but the table shown has no row 105 (it shows 101, 103, 106 and 102). it now says the table above is a slice and the full table also holds order 105. numbers and answer unchanged. evidence: the table in note 089 and data/shop.sql (Disha is customer 4 in Hoboken)
+
 085, 2026-10-19: note text unchanged. the checks had no source for a typed name being looked up as an address; they now do. evidence: https://www.rfc-editor.org/rfc/rfc1034 ("Host name to host address translation")
 
 086, 2026-10-19: note text unchanged. the checks had no source for 127.0.0.1 meaning this same machine; they now do. evidence: https://www.rfc-editor.org/rfc/rfc5735 ("This block is assigned for use as the Internet host loopback address")

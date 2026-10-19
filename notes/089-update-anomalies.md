@@ -33,7 +33,7 @@ the next one is the mirror problem, losing facts you meant to keep.
 
 ### check yourself
 
-1. the flat table above has Ashas 3 rows and Dishas order 105 (Hoboken). someone runs an update that sets city to Hoboken for Ashas orders below 105. how many rows now say Hoboken, and how many of Ashas rows still say Jersey City?
+1. the flat table above is only a slice. the full table also holds Dishas order 105 (Hoboken), and Asha has her 3 rows. someone runs an update that sets city to Hoboken for Ashas orders below 105. how many rows now say Hoboken, and how many of Ashas rows still say Jersey City?
 <details><summary>answer</summary>
 
 3 rows say Hoboken (101 and 103 from the update, plus Dishas 105), and 1 of Ashas rows still says Jersey City, order 106. the tempting answer is 0, from assuming "update Asha" means all of Asha.
