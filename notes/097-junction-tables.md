@@ -57,4 +57,4 @@ order_items, on the (104, 1) row. a column on products would discount dhokla on 
 </details>
 
 ---
-prev: [096 why many to many cant live in either table](./096-why-many-to-many-cant-live-in-either-table.md) | next: not written yet
+prev: [096 why many to many cant live in either table](./096-why-many-to-many-cant-live-in-either-table.md) | next: [098 entity relationship diagrams, boxes and lines](./098-entity-relationship-diagrams.md)
