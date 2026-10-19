@@ -58,7 +58,7 @@ order_id
 2. a new table shipments has columns shipment_id, order_id and courier. which column is its primary key, which is a foreign key, and what does the foreign key point at?
 <details><summary>answer</summary>
 
-shipment_id is the primary key, it identifies a shipment. order_id is the foreign key, pointing at orders.order_id. the tempting answer is that order_id is the key because it has "id" in its name, but a name doesnt decide it, what the column does does.
+shipment_id is the primary key, it identifies a shipment. order_id is the foreign key once the table is declared with REFERENCES orders (order_id), pointing at orders.order_id. the tempting answer is that order_id is the key because it has "id" in its name, but a name doesnt decide it, what the column does does.
 
 </details>
 
