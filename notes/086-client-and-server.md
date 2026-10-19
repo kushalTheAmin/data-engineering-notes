@@ -32,4 +32,4 @@ the server had to be listening before the client could knock, and it never start
 client and server are roles, not machines. your laptop can run both at once, and a web server is a server to the browser but a client when it asks the database for rows. at my react and .NET day job the browser is the client and the API is the server, and the API is then a client of the database. i thought a server meant a big special computer, but it only means the side that waits.
 
 ---
-prev: [085 addresses and ports, the right program on the right machine](./085-addresses-and-ports.md) | next: not written yet
+prev: [085 addresses and ports, the right program on the right machine](./085-addresses-and-ports.md) | next: [087 primary key, one unique id per row](./087-primary-key.md)

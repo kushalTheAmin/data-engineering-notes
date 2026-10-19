@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 86
+notes so far: 87
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -102,3 +102,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [084 a network, computers sending bytes to each other](./notes/084-a-network.md): Asha taps a button and the database is on another machine, so what physically crosses
 - [085 addresses and ports, the right program on the right machine](./notes/085-addresses-and-ports.md): the bytes reached the server, but a dozen programs live there, so who gets them
 - [086 client and server, you ask, the database answers](./notes/086-client-and-server.md): the server listens first and the client always knocks first, and Ashas phone and Bhavins phone are two clients of one program
+- [087 primary key, one unique id per row](./notes/087-primary-key.md): a second Chirag signs up with id 3 and the database just says no

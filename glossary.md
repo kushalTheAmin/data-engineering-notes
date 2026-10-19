@@ -91,6 +91,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | placeholder value | a made up value, like 0, standing in for missing | [032](./notes/032-null-is-not-zero-or-empty-text.md) |
 | port | a number picking which program on a machine gets the bytes | [085](./notes/085-addresses-and-ports.md) |
 | precision | the most digits a decimal can hold in total | [022](./notes/022-exact-decimal-types.md) |
+| primary key | a column that is unique in every row and never NULL | [087](./notes/087-primary-key.md) |
 | process | one running copy of a program, loaded into memory | [050](./notes/050-processes.md) |
 | processor | the CPU, the part of the computer doing tiny steps on numbers | [035](./notes/035-the-processor.md) |
 | program | a file of bytes on disk that can be run | [050](./notes/050-processes.md) |
