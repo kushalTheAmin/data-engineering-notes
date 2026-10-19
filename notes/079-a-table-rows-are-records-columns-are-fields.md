@@ -38,4 +38,4 @@ that sameness lets a database table, or a pandas DataFrame (pandas is a python l
 what kind of value goes in each spot, text or a number, is next.
 
 ---
-prev: [078 capstone, the shop orders as raw text, CSV and JSON side by side](./078-capstone-the-shop-orders-three-ways.md) | next: not written yet
+prev: [078 capstone, the shop orders as raw text, CSV and JSON side by side](./078-capstone-the-shop-orders-three-ways.md) | next: [080 every column holds one type](./080-every-column-holds-one-type.md)

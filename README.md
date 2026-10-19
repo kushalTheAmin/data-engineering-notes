@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 79
+notes so far: 80
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -95,3 +95,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 
 ## section 4: tables, keys and relationships
 - [079 a table, rows are records, columns are fields](./notes/079-a-table-rows-are-records-columns-are-fields.md): Esha has no city, and a table row still has a city spot, holding NULL
+- [080 every column holds one type](./notes/080-every-column-holds-one-type.md): Eshas city is NULL and the column is still text, and a price column refuses the word free
