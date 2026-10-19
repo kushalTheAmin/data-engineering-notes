@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 096 showed order 101 holds 2 products and dhokla sits on 3 orders, so a pointer column on either side needs several values in one cell, and repeating the row breaks the primary key. the relationship is a fact about the pair, and order_items already holds those 13 pairs. the next box is the junction table, the table in the middle
-last visuals: annotated text diagram of both pointer attempts (many to many), query and result plus a fails-on-purpose insert (composite keys), two fails-on-purpose queries plus a count result (what a foreign key stops), query and result pairs (foreign key), annotated text diagram of customers to orders piles (relationships)
-last exits: forward (many to many), stops (composite keys), forward (what a foreign key stops), stops (foreign key), forward (relationships)
-last reactions: i kept hunting for which side the pointer belongs on and the honest answer is neither, i assumed every table needed one id column of its own and this one gets by with none, i assumed the guard only watched new rows and it protects the row being pointed at too, the numbers alone dont say they are pointers, the database only knows once told, the part i kept missing is that many includes 0 and 1, i expected splitting to need something clever, and it was just stop copying and leave a pointer, i expected the insert side to be the harmless one, and it fails just as badly, i assumed this bug needed two people saving at once and one careful person alone can cause it, i assumed a made up id would feel like cheating, a number that means nothing, and the meaninglessness is the whole point, i expected the key to be some special extra and its two rules on a column, i assumed a server meant a big special computer and it only means the side that waits
+baton: 097 showed order_items is the junction table, one row per pair with a foreign key to each side, and quantity lives on the pair. the next box is entity relationship diagrams, drawing those tables as boxes and the pointers as lines
+last visuals: mermaid flowchart plus query and result (junction tables), annotated text diagram of both pointer attempts (many to many), query and result plus a fails-on-purpose insert (composite keys), two fails-on-purpose queries plus a count result (what a foreign key stops), query and result pairs (foreign key)
+last exits: stops (junction tables), forward (many to many), stops (composite keys), forward (what a foreign key stops), stops (foreign key)
+last reactions: i would have guessed quantity belongs on the product or the order and it only makes sense on the pair, i kept hunting for which side the pointer belongs on and the honest answer is neither, i assumed every table needed one id column of its own and this one gets by with none, i assumed the guard only watched new rows and it protects the row being pointed at too, the numbers alone dont say they are pointers, the database only knows once told, the part i kept missing is that many includes 0 and 1, i expected splitting to need something clever, and it was just stop copying and leave a pointer, i expected the insert side to be the harmless one, and it fails just as badly, i assumed this bug needed two people saving at once and one careful person alone can cause it, i assumed a made up id would feel like cheating, a number that means nothing, and the meaninglessness is the whole point, i expected the key to be some special extra and its two rules on a column, i assumed a server meant a big special computer and it only means the side that waits
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
 
@@ -121,7 +121,7 @@ after this arc: you can look at four tables and see how they connect, before wri
 - [x] what a foreign key stops: rows pointing at nothing (note 094)
 - [x] composite keys: a key made of two columns ★ (note 095)
 - [x] why many to many cant live in either table (note 096)
-- [ ] junction tables: the table in the middle ★
+- [x] junction tables: the table in the middle ★ (note 097)
 - [ ] entity relationship diagrams: boxes and lines
 - [ ] crows feet: reading one and many on the lines
 - [ ] capstone: the whole shop as four connected tables

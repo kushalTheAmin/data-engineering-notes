@@ -68,6 +68,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | JSON object | curly braces around name: value pairs, like a dictionary | [067](./notes/067-json-types.md) |
 | JSON types | the six kinds of value: string, number, boolean, null, object, array | [067](./notes/067-json-types.md) |
 | jump | asking for a file position directly, called seek in python | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
+| junction table | a table with one row per pair, pointing at both sides | [097](./notes/097-junction-tables.md) |
 | kibibyte | 1024 bytes, the unambiguous 1024 based unit, written KiB | [038](./notes/038-1000-or-1024.md) |
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | LF | a one character line ending, 0a, common on linux and mac | [042](./notes/042-line-endings.md) |

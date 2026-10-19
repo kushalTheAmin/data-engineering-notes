@@ -23,4 +23,4 @@ i kept hunting for which side the pointer belongs on, and the honest answer is n
 the shop already holds those pairs, 13 rows of them in order_items. Entity Framework Core, a .NET database library, says it in its docs too, a foreign key alone cant show many to many, it needs an extra table. the next note builds that table.
 
 ---
-prev: [095 composite keys](./095-composite-keys.md) | next: not written yet
+prev: [095 composite keys](./095-composite-keys.md) | next: [097 junction tables](./097-junction-tables.md)

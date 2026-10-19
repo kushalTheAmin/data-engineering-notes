@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 96
+notes so far: 97
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -112,3 +112,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [094 what a foreign key stops, rows pointing at nothing](./notes/094-what-a-foreign-key-stops.md): an order for customer 9 is refused, and so is deleting Chirag while order 104 points at him
 - [095 composite keys, a key made of two columns](./notes/095-composite-keys.md): order_items has no id column, and the pair of order and product is what must never repeat
 - [096 why many to many cant live in either table](./notes/096-why-many-to-many-cant-live-in-either-table.md): order 101 has 2 products and dhokla is on 3 orders, so a pointer column on either side runs out of room
+- [097 junction tables, the table in the middle](./notes/097-junction-tables.md): order_items holds one row per order and product pair, with the quantity sitting on the pair
