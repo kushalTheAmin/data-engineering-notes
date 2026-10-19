@@ -40,4 +40,4 @@ the bug this explains: "connection refused" usually means the machine answered a
 the next one is who starts the conversation, the asker or the answerer.
 
 ---
-prev: [084 a network, computers sending bytes to each other](./084-a-network.md) | next: not written yet
+prev: [084 a network, computers sending bytes to each other](./084-a-network.md) | next: [086 client and server](./086-client-and-server.md)
