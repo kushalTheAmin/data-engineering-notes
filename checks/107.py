@@ -20,5 +20,7 @@ assert con.execute("SELECT count(*) FROM customers WHERE city = 'Jersey City'").
 # a null column fails all six tests, so Esha (null city) is never kept
 assert con.execute("SELECT count(*) FROM customers WHERE name = 'Esha' AND (city = 'a' OR city <> 'a' OR city > 'a' OR city < 'z' OR city >= 'a' OR city <= 'z')").fetchone()[0] == 0
 # source: https://duckdb.org/docs/current/sql/expressions/comparison_operators
-# confirmed: "Whenever either of the input arguments is NULL, the output of the comparison is NULL." and WHERE keeps only true rows (https://duckdb.org/docs/current/sql/query_syntax/where: "specifies any filters to apply to the data")
+# confirmed: "Whenever either of the input arguments is NULL, the output of the comparison is NULL."
+# source: https://www.postgresql.org/docs/current/queries-table-expressions.html
+# confirmed: WHERE keeps a row only when the condition is true: "if the result is false or null) it is discarded."
 print("107 ok")

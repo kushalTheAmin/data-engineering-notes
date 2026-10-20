@@ -50,7 +50,7 @@ jalebi
 masala chai
 ```
 
-NOT flips only the category test, then AND applies the price test, so non-snacks under 6 come back. the tempting reading is NOT (snack AND under 6), which would return everything except fafda, 5 rows, but that needs parentheses written in.
+NOT flips only the category test, then AND applies the price test, so non-snacks under 6 come back. the tempting reading is NOT (snack AND under 6), which would return everything except fafda, 4 of those 5 rows, but that needs parentheses written in.
 
 </details>
 
