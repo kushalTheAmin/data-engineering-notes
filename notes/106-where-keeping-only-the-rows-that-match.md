@@ -75,4 +75,4 @@ customer_id
 </details>
 
 ---
-prev: [105 SELECT star, every column, and why you rarely want it](./105-select-star-every-column.md) | next: not written yet
+prev: [105 SELECT star, every column, and why you rarely want it](./105-select-star-every-column.md) | next: [107 comparisons, equal, not equal, bigger, smaller](./107-comparisons-equal-not-equal-bigger-smaller.md)

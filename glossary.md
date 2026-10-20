@@ -26,6 +26,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | column | a fixed position in every row, like position 3 for status | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
 | column type | one data type chosen for a whole column, every value fits it | [080](./notes/080-every-column-holds-one-type.md) |
 | combining mark | a code point with no letter, drawn on the letter before it | [012](./notes/012-combining-marks.md) |
+| comparison | a column, a test like >= and a value, true or false | [107](./notes/107-comparisons-equal-not-equal-bigger-smaller.md) |
 | composite key | a primary key of two columns, only the pair is unique | [095](./notes/095-composite-keys.md) |
 | compression | storing the same information in fewer bytes, rebuildable exactly | [047](./notes/047-compression-spotting-repeats.md) |
 | connection | an open line from your program to a database | [102](./notes/102-a-database-in-one-file.md) |
