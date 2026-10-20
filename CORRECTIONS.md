@@ -1,5 +1,7 @@
 # corrections
 
+109, 2026-10-20: check yourself 2 asked a reader to work the answer without running it, but gave only Chirag's join date, so nobody could tell whether Bhavin (Edison) passes the date test. it now gives all three join dates. evidence: python, Asha 2026-01-05, Bhavin 2026-01-20, Chirag 2026-02-11 in data/shop.sql (checks/109.py)
+
 106, 2026-10-20: said the order of work is FROM, WHERE, SELECT, which reads as the literal steps every database runs, but the page only says it logically, and 101 says the database figures out how. it now says logically, with one line that the real steps may be shuffled but the answer is the same. evidence: https://duckdb.org/docs/current/sql/query_syntax/where ("Logically the WHERE clause is applied immediately after the FROM clause")
 
 107, 2026-10-20: note text unchanged. the claim that a null column fails every test, = and <> included, was only asserted for <>. the checks now assert all six tests against Esha's null city and cite the DuckDB page. evidence: python, Esha is kept by none of the six tests (checks/107.py); https://duckdb.org/docs/current/sql/expressions/comparison_operators ("the output of the comparison is NULL")

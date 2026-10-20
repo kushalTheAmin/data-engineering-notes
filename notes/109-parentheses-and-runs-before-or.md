@@ -55,7 +55,7 @@ AND goes first, so it is drink OR (sweet AND over 10). masala chai is a drink, s
 
 </details>
 
-2. customers Asha and Chirag live in Jersey City, Bhavin in Edison. Chirag joined on 2026-02-11. how many rows does this return, and would parentheses around the two city tests change it?
+2. customers Asha and Chirag live in Jersey City, Bhavin in Edison. they joined on 2026-01-05 (Asha), 2026-01-20 (Bhavin) and 2026-02-11 (Chirag). how many rows does this return, and would parentheses around the two city tests change it?
 
 ```sql
 SELECT name FROM customers WHERE city = 'Jersey City' OR city = 'Edison' AND joined_on < DATE '2026-02-01'

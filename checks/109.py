@@ -17,6 +17,8 @@ assert float(prices["kaju katli"]) == 12.0 and float(prices["masala chai"]) == 3
 w = "city = 'Jersey City' OR city = 'Edison' AND joined_on < DATE '2026-02-01'"
 assert q("customers", w) == ["Asha", "Bhavin", "Chirag"]
 assert q("customers", "(city = 'Jersey City' OR city = 'Edison') AND joined_on < DATE '2026-02-01'") == ["Asha", "Bhavin"]
+jd = dict(con.execute("SELECT name, joined_on FROM customers").fetchall())
+assert [str(jd[n]) for n in ("Asha", "Bhavin", "Chirag")] == ["2026-01-05", "2026-01-20", "2026-02-11"]
 # python has the same rule: and binds tighter than or
 for x, y, z in [(True, False, False), (True, True, False), (False, True, True), (False, False, True)]:
     assert (x or y and z) == (x or (y and z))
