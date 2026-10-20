@@ -35,7 +35,7 @@ order 103 was placed at 12:05 on 3 April, after the high end of 3 April at 00:00
 
 ### check yourself
 
-1. the shop has dhokla 6.00, khandvi 7.50, jalebi 5.00, kaju katli 12.00, masala chai 3.00, fafda 4.50. how many rows does this return, and which product is the edge case?
+1. the shop has dhokla 6.00, khandvi 7.50, jalebi 5.00, kaju katli 12.00, masala chai 3.00, fafda 4.50. how many rows does this return, and which products are the edge cases?
 
 ```sql
 SELECT name FROM products WHERE price NOT BETWEEN 4.50 AND 6.00
