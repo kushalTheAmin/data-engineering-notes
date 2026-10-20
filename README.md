@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 117
+notes so far: 118
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -136,3 +136,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [115 IS NULL and IS NOT NULL](./notes/115-is-null-and-is-not-null.md): city = NULL returns zero rows even for Esha, while IS NULL finds her and IS NOT NULL returns the other 4
 - [116 COALESCE, a fallback when a value is NULL](./notes/116-coalesce-a-fallback-when-a-value-is-null.md): COALESCE returns the first non-null value so Eshas city shows unknown, and filling stars with 0 drops the average from 4.0 to 2.4
 - [117 ORDER BY, sorting by one or more columns](./notes/117-order-by-sorting-by-one-or-more-columns.md): ORDER BY category, price DESC groups the menu by category and puts the priciest first only inside each, so kaju katli at 12.00 sits fifth
+- [118 no ORDER BY, no promised order](./notes/118-no-order-by-no-promised-order.md): a query with no ORDER BY may return rows in any order, and rows tied on the sort column have no promised order either
