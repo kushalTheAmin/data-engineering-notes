@@ -4,7 +4,7 @@ section: asking questions with SQL, part 14, ~2 min read
 
 Esha has no city. so is `city = 'Hoboken'` true or false for her? neither, and that third answer has rules.
 
-three valued logic means a test comes out true, false or unknown, and a [null](./031-null.md) (a missing value) makes it unknown. [110](./110-not-flipping-a-condition.md) and [113](./113-like-matching-text-patterns.md) lost Esha this way, so here are the rules. you know python skips the rest of `False and anything`, and unknown works alike: it means could be either, so if both give one answer, that answer is known. for [AND and OR](./108-and-or-combining-two-tests.md), the rows with an unknown:
+three valued logic means a test comes out true, false or unknown, and a [null](./031-null.md) (a missing value) makes it unknown. [110](./110-not-flipping-a-condition.md) and [113](./113-like-matching-text-patterns.md) lost Esha this way, so here are the rules. python skips the rest of `False and anything`, since the answer is False anyway, and unknown works alike: it means could be either, so if both give one answer, you know that answer. for [AND and OR](./108-and-or-combining-two-tests.md), the rows with an unknown:
 
 ```text
 a       | b       | a AND b | a OR b
