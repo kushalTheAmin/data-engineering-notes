@@ -27,4 +27,6 @@ assert con.execute("SELECT count(*) FROM customers").fetchone()[0] == 5
 # confirmed: an index is "a data structure that improves the speed of data retrieval operations on a database table"
 # source: https://duckdb.org/why_duckdb
 # confirmed: "DuckDB does not run as a separate process, but completely embedded within a host process."
+# source: https://www.sqlite.org/lang_select.html
+# confirmed: if a SELECT has no ORDER BY clause, "the order in which the rows are returned is undefined"
 print("101 ok")
