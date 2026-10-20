@@ -1,5 +1,7 @@
 # corrections
 
+102, 2026-10-20: said DuckDB runs inside your own program with no server, but the checks had no source for it. the text is unchanged and the checks now cite the DuckDB page. evidence: https://duckdb.org/why_duckdb ("DuckDB does not run as a separate process, but completely embedded within a host process.")
+
 101, 2026-10-20: said DuckDB runs inside your own program, no separate server, with no source behind it. the text is unchanged and the checks now cite the DuckDB page. evidence: https://duckdb.org/why_duckdb ("there is no DBMS server software to install, update and maintain")
 
 099, 2026-10-20: check yourself 2 named o{ as the tempting answer, but the question only offers || or |o, so a beginner would not pick o{. the tempting answer is now || (nothing changes because most orders have a customer). evidence: the question text offers only || and |o; https://mermaid.js.org/syntax/entityRelationshipDiagram.html (|o is zero or one)

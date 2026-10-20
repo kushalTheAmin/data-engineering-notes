@@ -27,4 +27,6 @@ assert len(duckdb.connect(":memory:").execute("SELECT * FROM duckdb_tables()").f
 # confirmed: in read-write mode one process can both read and write the database
 # source: https://www.sqlite.org/onefile.html
 # confirmed: a database in SQLite is a single disk file
+# source: https://duckdb.org/why_duckdb
+# confirmed: "there is no DBMS server software to install, update and maintain" and "completely embedded within a host process"
 print("102 ok")
