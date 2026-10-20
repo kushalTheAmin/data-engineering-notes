@@ -1,5 +1,7 @@
 # corrections
 
+106, 2026-10-20: said the match is exact text so 'Delivered' returns zero rows, which reads as true of every database, but MySQL compares text without caring about capitals by default. it now says in DuckDB, with a one line MySQL caveat. evidence: https://dev.mysql.com/doc/refman/8.4/en/case-sensitivity.html ("nonbinary string comparisons are case-insensitive by default"); python, duckdb returns [] for 'Delivered' (checks/106.py)
+
 105, 2026-10-20: note text unchanged. the dhokla gloss had no source in the checks; it now cites Wikipedia. evidence: https://en.wikipedia.org/wiki/Dhokla ("a savoury sponge dish")
 
 103, 2026-10-20: said python hands rows back as a list of tuples, a word no earlier note explains, and a reader who knows only lists and dictionaries cannot follow it. it now says tuples are lists that cannot be changed. the checks now source that. evidence: https://docs.python.org/3/tutorial/datastructures.html ("Tuples are immutable"); note 105 (tuple, a fixed list)

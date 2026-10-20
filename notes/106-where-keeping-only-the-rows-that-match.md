@@ -31,7 +31,7 @@ order_id
 
 status is not in the answer, and it still worked. WHERE is the if inside the loop from 101. it looks at the whole row, keeps or skips it, and only then does [SELECT](./104-select-and-from-picking-columns.md) (which columns to keep) pick from the survivors. so the order of work is FROM (which table to read), WHERE, SELECT, even though you write SELECT first.
 
-rows 104 and 106 are gone, not blanked. the match is exact text, so 'Delivered' with a capital D matches nothing and you get zero rows, not an error.
+rows 104 and 106 are gone, not blanked. in DuckDB the match is exact text, so 'Delivered' with a capital D matches nothing and you get zero rows, not an error (MySQL ignores capitals by default, so check your database).
 
 i assumed the filter could only see what i was about to get back, and it sees the whole row.
 

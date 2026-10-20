@@ -20,4 +20,6 @@ cust = [r[0] for r in con.execute("SELECT customer_id FROM orders WHERE status =
 assert cust == [1, 2, 1, 4, 2] and len(cust) == 5 and len(set(cust)) == 3
 # source: https://duckdb.org/docs/current/sql/query_syntax/where
 # confirmed: WHERE specifies filters to apply to the data, and logically it is applied immediately after the FROM clause
+# source: https://dev.mysql.com/doc/refman/8.4/en/case-sensitivity.html
+# confirmed: "nonbinary string comparisons are case-insensitive by default" in MySQL, so the exact match claim is DuckDB only
 print("106 ok")
