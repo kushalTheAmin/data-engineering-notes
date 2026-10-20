@@ -6,6 +6,7 @@ every term these notes have built, in plain words, with the note that built it. 
 |---|---|---|
 | absolute path | a path starting with a slash, always begun at the root | [053](./notes/053-absolute-vs-relative-paths.md) |
 | address (network) | a number naming one machine on a network, 4 bytes in IPv4 | [085](./notes/085-addresses-and-ports.md) |
+| alias | a name you give a result column with AS | [122](./notes/122-computed-columns-and-as.md) |
 | ambiguous time | a clock reading that happens twice, when clocks go back | [029](./notes/029-daylight-saving.md) |
 | AND | joins two tests, keeping a row only if both are true | [108](./notes/108-and-or-combining-two-tests.md) |
 | argument | a word after the program name, handed to that program | [049](./notes/049-the-terminal.md) |
@@ -32,6 +33,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | comparison | a column, a test like >= and a value, true or false | [107](./notes/107-comparisons-equal-not-equal-bigger-smaller.md) |
 | composite key | a primary key of two columns, only the pair is unique | [095](./notes/095-composite-keys.md) |
 | compression | storing the same information in fewer bytes, rebuildable exactly | [047](./notes/047-compression-spotting-repeats.md) |
+| computed column | an expression in SELECT, worked out fresh for each row | [122](./notes/122-computed-columns-and-as.md) |
 | connection | an open line from your program to a database | [102](./notes/102-a-database-in-one-file.md) |
 | continuation byte | a UTF-8 byte starting 10, continuing the previous characters bytes | [011](./notes/011-why-gujarati-takes-3-bytes.md) |
 | core | one full processor inside a chip, most chips hold several | [035](./notes/035-the-processor.md) |

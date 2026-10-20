@@ -54,4 +54,4 @@ one edge: a test against a missing value is unknown, neither true nor false ([11
 i sorted with [ORDER BY](./117-order-by-sorting-by-one-or-more-columns.md) (sorting the result) on purpose. the docs of Postgres, a server database, say without it rows come back in whatever order is fastest, and DISTINCT doesnt change that. counting the distinct values is a later note.
 
 ---
-prev: [120 LIMIT and OFFSET, paging through rows](./120-limit-and-offset-paging-through-rows.md) | next: not written yet
+prev: [120 LIMIT and OFFSET, paging through rows](./120-limit-and-offset-paging-through-rows.md) | next: [122 computed columns and AS](./122-computed-columns-and-as.md)
