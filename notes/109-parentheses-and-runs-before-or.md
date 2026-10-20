@@ -74,4 +74,4 @@ Chirag
 </details>
 
 ---
-prev: [108 AND and OR, combining two tests](./108-and-or-combining-two-tests.md) | next: not written yet
+prev: [108 AND and OR, combining two tests](./108-and-or-combining-two-tests.md) | next: [110 NOT, flipping a condition](./110-not-flipping-a-condition.md)
