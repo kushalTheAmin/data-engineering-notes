@@ -137,7 +137,8 @@ after this arc: you can pull exactly the rows and columns you want from one tabl
 - [x] WHERE: keeping only the rows that match ★ (note 106)
 - [x] comparisons: equal, not equal, bigger, smaller (note 107)
 - [x] AND and OR (note 108)
-- [ ] NOT and parentheses: the precedence trap ★
+- [ ] parentheses: AND runs before OR, the precedence trap ★
+- [ ] NOT: flipping a condition ★
 - [ ] IN: matching against a list
 - [ ] BETWEEN: ranges that include both ends ★
 - [ ] LIKE: matching text patterns
