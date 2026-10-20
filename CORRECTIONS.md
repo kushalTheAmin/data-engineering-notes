@@ -1,5 +1,7 @@
 # corrections
 
+117, 2026-10-20: note text unchanged. the jalebi (sweet snack soaked in sugar syrup) and khandvi (rolled gram flour snack) glosses had no source in the checks. they now cite Wikipedia. evidence: https://en.wikipedia.org/wiki/Jalebi ("a common sweet snack"); https://en.wikipedia.org/wiki/Khandvi_(food) ("tightly rolled bite-sized pieces", "primarily made of gram flour and yogurt")
+
 114, 2026-10-20: said "you know python skips the rest of False and anything", but no earlier note teaches that, so a reader who knows only basic code had to take it on trust. it now says python skips it since the answer is False anyway. evidence: grep of notes 001 to 113 finds no note that explains it (023 and 108 never mention it); python, False and 1 / 0 is False (checks/114.py)
 
 112, 2026-10-20: check yourself 1 asked which product is the edge case, but two products sit on the ends (dhokla 6.00 and fafda 4.50) and the answer names both. it now asks which products are the edge cases. evidence: python, prices equal to 4.50 or 6.00 in data/shop.sql are fafda and dhokla (checks/112.py)
