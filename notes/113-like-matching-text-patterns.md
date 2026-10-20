@@ -33,4 +33,4 @@ zero rows and no error, because the khandvi in the table is lowercase and LIKE c
 and NOT LIKE has the [null](./031-null.md) gap from [110](./110-not-flipping-a-condition.md). `city NOT LIKE 'J%'` returns Bhavin and Disha, but not Esha, whose city is missing.
 
 ---
-prev: [112 BETWEEN, ranges that include both ends](./112-between-ranges-that-include-both-ends.md) | next: not written yet
+prev: [112 BETWEEN, ranges that include both ends](./112-between-ranges-that-include-both-ends.md) | next: [114 three valued logic, true, false and unknown](./114-three-valued-logic-true-false-and-unknown.md)
