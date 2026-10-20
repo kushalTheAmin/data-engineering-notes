@@ -47,4 +47,4 @@ landing exactly on the line is a classic quiet bug. a report of "orders over 100
 one caveat: a row where the column is [null](./031-null.md) (a missing value) fails every one of these tests, = and <> included.
 
 ---
-prev: [106 WHERE, keeping only the rows that match](./106-where-keeping-only-the-rows-that-match.md) | next: not written yet
+prev: [106 WHERE, keeping only the rows that match](./106-where-keeping-only-the-rows-that-match.md) | next: [108 AND and OR, combining two tests](./108-and-or-combining-two-tests.md)
