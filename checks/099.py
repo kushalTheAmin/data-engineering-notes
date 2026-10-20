@@ -17,5 +17,8 @@ assert con.execute("SELECT is_nullable FROM information_schema.columns WHERE tab
 assert len(["||", "|o", "}|", "}o"]) == 4
 # source: https://mermaid.js.org/syntax/entityRelationshipDiagram.html
 # confirmed: Mermaid uses crow's foot notation; |o zero or one, || exactly one, }o zero or more, }| one or more; right side mirrors as o{ and |{
+# confirmed: "the outermost character represents a maximum value, and the innermost character represents a minimum value", so |o is max one, min zero
+# source: https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model
+# confirmed: crow's foot notation: "the ring represents zero, the dash represents one, the crow's foot represents many"; "the inner component represents the minimum, and the outer component represents the maximum"
 # confirmed: docs example "PROPERTY ||--|{ ROOM" shows the same ||--o{ style shape
 print("099 ok")

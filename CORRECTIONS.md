@@ -1,5 +1,7 @@
 # corrections
 
+099, 2026-10-20: said a bar means at least one, but in || and |o the bar is the upper limit (exactly one, or zero or one), so |o read as bar plus circle contradicted itself. it now says the mark touching the box is the most (bar 1, fork many) and the other the least (bar 1, circle 0). also glossed ERD, which only 098 defines, and the first check yourself said the mark at the order_items end was }o when the note's own right end form is o{. evidence: https://mermaid.js.org/syntax/entityRelationshipDiagram.html ("The outermost character represents a maximum value, and the innermost character represents a minimum value"); https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model ("The inner component of the notation represents the minimum, and the outer component represents the maximum")
+
 096, 2026-10-19: said the next note builds the table of order and product pairs, but the shop already has it (order_items, 13 rows) and 097 only names it a junction table. it now says the next note names that table. evidence: note 097 ("the shop, the imaginary gujarati snack store, already has one")
 
 098, 2026-10-19: said each box lists its columns, but the customers box shows 2 of its 4 columns and the orders box 3 of its 4 (no city, joined_on or status). it now says the boxes are shortened since the real tables have more. evidence: data/shop.sql (customers and orders column lists); python DESCRIBE on both tables returns 4 columns each
