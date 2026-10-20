@@ -4,7 +4,7 @@ section: asking questions with SQL, part 10, ~2 min read
 
 i asked the shop for customers not in Jersey City, expecting the 3 who are left, and got 2. NOT looks like the easy one.
 
-NOT flips a condition (a test that comes out true, false or unknown), so a row that failed now passes [WHERE](./106-where-keeping-only-the-rows-that-match.md) (the filter clause). it goes in front of a test like a [comparison](./107-comparisons-equal-not-equal-bigger-smaller.md), and `NOT price = 6` means the same as `price <> 6` (not equal). the shop, the imaginary gujarati snack store these notes run on, has 5 customers, and Esha has no city, her city is [null](./031-null.md) (a missing value). python first:
+NOT flips a condition (a test that comes out true, false or unknown), so a row that was false now passes [WHERE](./106-where-keeping-only-the-rows-that-match.md) (the filter clause). it goes in front of a test like a [comparison](./107-comparisons-equal-not-equal-bigger-smaller.md), and `NOT price = 6` means the same as `price <> 6` (not equal). the shop, the imaginary gujarati snack store these notes run on, has 5 customers, and Esha has no city, her city is [null](./031-null.md) (a missing value). python first:
 
 ```python
 rows = [("Asha", "Jersey City"), ("Bhavin", "Edison"), ("Chirag", "Jersey City"), ("Disha", "Hoboken"), ("Esha", None)]
