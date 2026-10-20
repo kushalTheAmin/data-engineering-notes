@@ -28,7 +28,7 @@ jalebi | 5.00
 
 its the same idea as cutting a python list with a slice, skip two rows and take two. so for pages of two, you skip (page number minus one) times two rows, and OFFSET 4 gives the last page, fafda and masala chai. this OFFSET counts rows to skip, not a clock offset like in [028](./028-time-zone-offsets.md).
 
-the part that surprised me in the Postgres docs (Postgres is a server database): LIMIT without [ORDER BY](./117-order-by-sorting-by-one-or-more-columns.md) gives an unpredictable subset, because rows have [no promised order](./118-no-order-by-no-promised-order.md). page 1 and page 2 could even overlap or miss rows. also the skipped rows still get computed, so per the same docs a huge OFFSET gets slow.
+the part that surprised me in the Postgres docs (Postgres is a server database): LIMIT without [ORDER BY](./117-order-by-sorting-by-one-or-more-columns.md) gives an unpredictable subset, because rows have [no promised order](./118-no-order-by-no-promised-order.md). page 1 and page 2 could even overlap or miss rows. also the skipped rows still get computed, so per the same docs a huge OFFSET can get slow.
 
 ---
 prev: [119 where NULLs land when you sort](./119-where-nulls-land-when-you-sort.md) | next: [121 DISTINCT, removing duplicate rows](./121-distinct-removing-duplicate-rows.md)

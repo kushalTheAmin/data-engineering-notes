@@ -15,3 +15,4 @@ assert len(q("SELECT name FROM products ORDER BY price DESC LIMIT 10")) == 6
 # source: https://www.postgresql.org/docs/current/queries-limit.html
 # confirmed: "no more than that many rows will be returned (but possibly fewer, if the query itself yields fewer rows)"
 # confirmed: LIMIT without ORDER BY gives an unpredictable subset; rows skipped by OFFSET still have to be computed, so a large OFFSET might be inefficient
+# confirmed: "The rows skipped by an OFFSET clause still have to be computed inside the server; therefore a large OFFSET might be inefficient" (so can get slow, not always)
