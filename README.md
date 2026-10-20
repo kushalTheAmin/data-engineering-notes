@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 101
+notes so far: 102
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -120,3 +120,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 ## section 5: asking questions with SQL
 
 - [101 SQL, you describe the result, the database figures out how](./notes/101-sql-you-describe-the-result.md): the python loop says how to find Jersey City customers, the SQL only says which, and the database picks the steps
+- [102 a database in one file, setting up DuckDB](./notes/102-a-database-in-one-file.md): DuckDB runs inside your program and keeps everything in a single file you connect to by path

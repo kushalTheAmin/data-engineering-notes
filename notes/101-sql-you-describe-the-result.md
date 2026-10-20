@@ -67,4 +67,4 @@ one row, holding a NULL. the row exists, only its city is missing. the tempting 
 </details>
 
 ---
-prev: [100 capstone, the whole shop as four connected tables](./100-capstone-the-whole-shop-as-four-connected-tables.md) | next: not written yet
+prev: [100 capstone, the whole shop as four connected tables](./100-capstone-the-whole-shop-as-four-connected-tables.md) | next: [102 a database in one file, setting up DuckDB](./102-a-database-in-one-file.md)
