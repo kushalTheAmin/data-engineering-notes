@@ -53,4 +53,4 @@ the |o mark, zero or one customer per order. a guest order has none, and no orde
 </details>
 
 ---
-prev: [098 entity relationship diagrams, boxes and lines](./098-entity-relationship-diagrams.md) | next: not written yet
+prev: [098 entity relationship diagrams, boxes and lines](./098-entity-relationship-diagrams.md) | next: [100 capstone, the whole shop as four connected tables](./100-capstone-the-whole-shop-as-four-connected-tables.md)
