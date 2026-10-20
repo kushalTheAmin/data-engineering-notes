@@ -160,6 +160,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | UTC | the one clock everyone measures against, with no daylight saving | [024](./notes/024-utc.md) |
 | UTF-8 | a way to store each code point as 1 to 4 bytes | [010](./notes/010-utf-8.md) |
 | wc | prints a files counts; wc -l counts its 0a line endings | [055](./notes/055-wc-counting-lines.md) |
+| WHERE | the clause keeping only rows whose condition is true, checked before SELECT | [106](./notes/106-where-keeping-only-the-rows-that-match.md) |
 | whole cents | money kept as an integer count of cents, price times 100 | [021](./notes/021-storing-money-as-whole-cents.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
 | XML | a text format wrapping each value in opening and closing tags | [072](./notes/072-xml.md) |

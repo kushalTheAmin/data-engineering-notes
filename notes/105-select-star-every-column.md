@@ -38,4 +38,4 @@ i expected the broken version to be the one that crashes, and it was the one tha
 so star is for you, peeking at a table you just met. anything you save and run again, like a script, should list its columns, which also means it only carries what it needs.
 
 ---
-prev: [104 SELECT and FROM, picking columns](./104-select-and-from-picking-columns.md) | next: not written yet
+prev: [104 SELECT and FROM, picking columns](./104-select-and-from-picking-columns.md) | next: [106 WHERE, keeping only the rows that match](./106-where-keeping-only-the-rows-that-match.md)
