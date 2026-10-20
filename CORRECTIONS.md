@@ -1,5 +1,7 @@
 # corrections
 
+105, 2026-10-20: note text unchanged. the dhokla gloss had no source in the checks; it now cites Wikipedia. evidence: https://en.wikipedia.org/wiki/Dhokla ("a savoury sponge dish")
+
 103, 2026-10-20: said python hands rows back as a list of tuples, a word no earlier note explains, and a reader who knows only lists and dictionaries cannot follow it. it now says tuples are lists that cannot be changed. the checks now source that. evidence: https://docs.python.org/3/tutorial/datastructures.html ("Tuples are immutable"); note 105 (tuple, a fixed list)
 
 105, 2026-10-20: note text unchanged. the checks said the DuckDB select page confirms that star gives columns in table order, but that page does not say it. they now cite the star expression page ("select all columns that are projected in the FROM clause") and the Postgres table basics page ("The number and order of the columns is fixed"), and the order itself is asserted in python (checks/105.py). evidence: https://duckdb.org/docs/current/sql/expressions/star.html; https://www.postgresql.org/docs/current/ddl-basics.html

@@ -29,4 +29,6 @@ except duckdb.BinderException:
 # confirmed: "The * expression can be used in a SELECT statement to select all columns that are projected in the FROM clause."
 # source: https://www.postgresql.org/docs/current/ddl-basics.html
 # confirmed: "The number and order of the columns is fixed, and each column has a name." (the order itself is asserted above)
+# source: https://en.wikipedia.org/wiki/Dhokla
+# confirmed: "a savoury sponge dish" made from a fermented batter that is steamed to a cake-like consistency
 print("105 ok")
