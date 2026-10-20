@@ -13,6 +13,7 @@ assert q("products", "name LIKE 'k_a%'") == ["khandvi"]
 assert "kaju katli"[2] == "j"
 assert q("products", "name LIKE 'K%'") == []
 assert q("products", "name ILIKE 'K%'") == ["khandvi", "kaju katli"]
+# the note names the customers table, which this note never showed before
 assert q("customers", "city NOT LIKE 'J%'") == ["Bhavin", "Disha"]
 assert con.execute("SELECT city FROM customers WHERE name = 'Esha'").fetchone()[0] is None
 # source: https://www.postgresql.org/docs/current/functions-matching.html

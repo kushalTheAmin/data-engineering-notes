@@ -1,5 +1,7 @@
 # corrections
 
+113, 2026-10-20: the last paragraph used city NOT LIKE on Bhavin, Disha and Esha without saying which table, and this note only shows the products table. it now says on the customers table. evidence: note 113 shows only products; customers and their cities are in data/shop.sql (Bhavin Edison, Disha Hoboken, Esha null)
+
 114, 2026-10-20: note text unchanged. the check meant to prove python skips the rest of False and anything used 1 / 1, which would pass even if python did not skip it. it now uses 1 / 0, which would raise. evidence: python, False and 1 / 0 is False, while 1 / 0 alone raises ZeroDivisionError (checks/114.py)
 
 115, 2026-10-20: note text unchanged. the claim that IS NULL never comes out unknown was only shown on the one table. the checks now assert true or false for a null and a value, and cite the Postgres operator table. evidence: python, NULL IS NULL is true, 1 IS NULL is false, NULL IS NOT NULL is false, 1 IS NOT NULL is true (checks/115.py); https://www.postgresql.org/docs/current/functions-comparison.html ("datatype IS NULL → boolean Test whether value is null")
