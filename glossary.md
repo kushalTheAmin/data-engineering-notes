@@ -108,6 +108,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | process | one running copy of a program, loaded into memory | [050](./notes/050-processes.md) |
 | processor | the CPU, the part of the computer doing tiny steps on numbers | [035](./notes/035-the-processor.md) |
 | program | a file of bytes on disk that can be run | [050](./notes/050-processes.md) |
+| query | one request sent to a database, naming the result you want | [101](./notes/101-sql-you-describe-the-result.md) |
 | quoting (csv) | double quotes around a value so commas inside it stay text | [063](./notes/063-quoting-commas-inside-values.md) |
 | reading start to end | taking a files bytes in order from position 0 | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
 | record | one row of a table, one thing the data is about | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
@@ -130,6 +131,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | shell | the program inside a terminal that reads your line and runs it | [049](./notes/049-the-terminal.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
 | splitting into tables | one table per kind of thing, other tables keep only its id | [091](./notes/091-splitting-into-tables.md) |
+| SQL | the language you send a database to ask for rows | [101](./notes/101-sql-you-describe-the-result.md) |
 | SSD | a disk made of chips with no moving parts | [037](./notes/037-disk-is-slow.md) |
 | standard input | stdin, the channel a process reads from, the keyboard by default | [057](./notes/057-standard-input-and-output.md) |
 | standard output | stdout, the channel a process writes to, the screen by default | [057](./notes/057-standard-input-and-output.md) |

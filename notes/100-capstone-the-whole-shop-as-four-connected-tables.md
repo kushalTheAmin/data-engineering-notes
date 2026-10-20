@@ -72,4 +72,4 @@ one row. cancelled is just a status value on the orders row, and its item row st
 </details>
 
 ---
-prev: [099 crows feet, reading one and many on the lines](./099-crows-feet-reading-one-and-many.md) | next: not written yet
+prev: [099 crows feet, reading one and many on the lines](./099-crows-feet-reading-one-and-many.md) | next: [101 SQL, you describe the result, the database figures out how](./101-sql-you-describe-the-result.md)

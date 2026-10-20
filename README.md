@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 100
+notes so far: 101
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -116,3 +116,7 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [098 entity relationship diagrams, boxes and lines](./notes/098-entity-relationship-diagrams.md): one box per table and one line per foreign key, and not a single row of data in the picture
 - [099 crows feet, reading one and many on the lines](./notes/099-crows-feet-reading-one-and-many.md): the marks on a line end say how many rows match, and the circle is the zero
 - [100 capstone, the whole shop as four connected tables](./notes/100-capstone-the-whole-shop-as-four-connected-tables.md): customers, orders, order_items and products in one picture, 5, 7, 13 and 6 rows, and the fix behind each step
+
+## section 5: asking questions with SQL
+
+- [101 SQL, you describe the result, the database figures out how](./notes/101-sql-you-describe-the-result.md): the python loop says how to find Jersey City customers, the SQL only says which, and the database picks the steps
