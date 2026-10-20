@@ -4,7 +4,7 @@ section: asking questions with SQL, part 20, ~2 min read
 
 how does an app show you "page 2" of a long list without loading the whole thing? i guessed it was something clever, and its two small words.
 
-LIMIT says how many rows to return, OFFSET says how many rows to skip first. here is the menu of the shop, the imaginary gujarati snack store these notes run on, priciest first, two rows per page (dhokla is a steamed savory cake, kaju katli and jalebi are sweets, a slice of the products [table](./079-a-table-rows-are-records-columns-are-fields.md)):
+LIMIT says the most rows to return (fewer come back if the table runs out), OFFSET says how many rows to skip first. here is the menu of the shop, the imaginary gujarati snack store these notes run on, priciest first, two rows per page (dhokla is a steamed savory cake, kaju katli and jalebi are sweets, a slice of the products [table](./079-a-table-rows-are-records-columns-are-fields.md)):
 
 ```sql
 SELECT name, price FROM products ORDER BY price DESC LIMIT 2
