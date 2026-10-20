@@ -17,4 +17,6 @@ assert con.execute("SELECT count(*) FROM customers").fetchone()[0] == 5
 # source: https://en.wikipedia.org/wiki/SQL
 # confirmed: SQL is a set-based, declarative language; implementations are incompatible between vendors in places
 # (dialects), and it has an ISO standard
+# source: https://duckdb.org/why_duckdb
+# confirmed: "DuckDB does not run as a separate process, but completely embedded within a host process."
 print("101 ok")
