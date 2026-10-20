@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 116 showed COALESCE returns the first non-null value in its list, as a python loop, and that COALESCE(stars, 0) inside avg gives 2.4 instead of 4.0 because the filled zeros count. the next box is ORDER BY, sorting by one or more columns
-last visuals: python block with output plus query and result (COALESCE), query and result (IS NULL), text truth table plus query and result (three valued logic), query and result plus a second query with an empty result (LIKE), query and result plus a second query and result with a missing order (BETWEEN)
-last exits: forward (COALESCE), stops (IS NULL), forward (three valued logic), stops (LIKE), stops (BETWEEN)
-last reactions: i figured COALESCE was a cosmetic wrapper, and it quietly changed what avg divides by,  i assumed IS was just a fussy spelling of =, and it turns out to be a different kind of test, one that cant be unknown, i assumed unknown would spread like a stain through everything it touches, and it only spreads when the other side cant settle it, i typed a capital K and got zero rows with no error, so LIKE is exact about letters, i kept reading BETWEEN like python range where the last number is left out, and here nothing is left out, i expected a list to be forgiving about nulls, and a null in the list is where it bites, i assumed NOT was a clean mirror where every row lands on one side, and a null row lands on neither, i expected the database to read left to right like i do, and it quietly grabs the AND first, i kept reading AND as adding more rows, and it can only shrink the answer, i kept feeling that a single = must be assigning something, and in a WHERE it only asks equal
+baton: 117 showed ORDER BY sorts by the first column fully and a second column only breaks ties, with DESC flipping just the column it follows, on the products table (ORDER BY category, price DESC). the next box is about what you get with no ORDER BY, where no order is promised
+last visuals: query and result plus a small python sorted block (ORDER BY), python block with output plus query and result (COALESCE), query and result (IS NULL), text truth table plus query and result (three valued logic), query and result plus a second query with an empty result (LIKE), query and result plus a second query and result with a missing order (BETWEEN)
+last exits: stops (ORDER BY), forward (COALESCE), stops (IS NULL), forward (three valued logic), stops (LIKE), stops (BETWEEN)
+last reactions: i kept assuming a second sort column gets applied to the whole result, and it only breaks ties, i figured COALESCE was a cosmetic wrapper, and it quietly changed what avg divides by,  i assumed IS was just a fussy spelling of =, and it turns out to be a different kind of test, one that cant be unknown, i assumed unknown would spread like a stain through everything it touches, and it only spreads when the other side cant settle it, i typed a capital K and got zero rows with no error, so LIKE is exact about letters, i kept reading BETWEEN like python range where the last number is left out, and here nothing is left out, i expected a list to be forgiving about nulls, and a null in the list is where it bites, i assumed NOT was a clean mirror where every row lands on one side, and a null row lands on neither, i expected the database to read left to right like i do, and it quietly grabs the AND first, i kept reading AND as adding more rows, and it can only shrink the answer, i kept feeling that a single = must be assigning something, and in a WHERE it only asks equal
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
 
@@ -145,7 +145,7 @@ after this arc: you can pull exactly the rows and columns you want from one tabl
 - [x] three valued logic: true, false and unknown ★ (note 114)
 - [x] IS NULL and IS NOT NULL (note 115)
 - [x] COALESCE: a fallback when a value is NULL (note 116)
-- [ ] ORDER BY: sorting by one or more columns
+- [x] ORDER BY: sorting by one or more columns (note 117)
 - [ ] no ORDER BY, no promised order ★
 - [ ] where NULLs land when you sort ★
 - [ ] LIMIT and OFFSET: paging through rows

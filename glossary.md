@@ -45,6 +45,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | daylight saving | clocks shifting an hour twice a year in many places | [024](./notes/024-utc.md) |
 | decompress | rebuild the original bytes from compressed ones, costing processor work | [048](./notes/048-compression-trades-processor-for-space.md) |
 | delete anomaly | removing one fact also removes another that lived only in that row | [090](./notes/090-insert-and-delete-anomalies.md) |
+| DESC | sort direction: biggest first, instead of the default smallest first | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
 | disk | storage like an SSD or hard drive, keeping bytes without power | [036](./notes/036-memory-vs-disk.md) |
 | doubled quote | two quotes in a row inside a quoted value, meaning one quote | [064](./notes/064-quotes-inside-quotes-and-newlines-inside-values.md) |
 | DuckDB | a database that runs inside your program, keeping data in one file | [102](./notes/102-a-database-in-one-file.md) |
@@ -108,6 +109,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | operating system | the program that starts programs and shares the machine between them | [051](./notes/051-the-operating-system.md) |
 | optional field | a field a record may leave out without being rejected | [077](./notes/077-required-vs-optional-fields.md) |
 | OR | joins two tests, keeping a row if either is true | [108](./notes/108-and-or-combining-two-tests.md) |
+| ORDER BY | sorts the returned rows by a column, later columns only break ties | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
 | orphan row | a row whose foreign key matches no row in the other table | [094](./notes/094-what-a-foreign-key-stops.md) |
 | overflow | a result too big for its bit size, wrapping or erroring | [016](./notes/016-overflow.md) |
 | parent folder | the folder holding this one, written .. in a path | [053](./notes/053-absolute-vs-relative-paths.md) |
