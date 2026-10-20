@@ -15,6 +15,10 @@ assert cols("customers") == ["customer_id", "name", "city", "joined_on"]
 assert cols("orders") == ["order_id", "customer_id", "ordered_at", "status"]
 assert cols("order_items") == ["order_id", "product_id", "quantity"]
 assert cols("products") == ["product_id", "name", "category", "price"]
+# the shop holds 7 tables: these 4 core ones plus 3 side tables that each point at orders
+assert [r[0] for r in con.execute("SELECT table_name FROM information_schema.tables ORDER BY 1").fetchall()] == ["customers", "order_items", "order_messages", "order_notes", "order_ratings", "orders", "products"]
+for t in ("order_ratings", "order_notes", "order_messages"):
+    assert con.execute(f"SELECT referenced_table FROM duckdb_constraints() WHERE table_name = '{t}' AND constraint_type = 'FOREIGN KEY'").fetchall() == [("orders",)]
 # Esha has no orders, fafda sits on no item
 assert con.execute("SELECT count(*) FROM orders WHERE customer_id = 5").fetchone()[0] == 0
 assert con.execute("SELECT count(*) FROM order_items WHERE product_id = 6").fetchone()[0] == 0

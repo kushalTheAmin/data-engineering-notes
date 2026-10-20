@@ -1,5 +1,9 @@
 # corrections
 
+101, 2026-10-20: said the shop ended the last section as four tables, but data/shop.sql holds 7. it now says four core tables. evidence: python, information_schema lists 7 tables (checks/100.py)
+
+100, 2026-10-20: said the whole shop is four tables you can draw from memory, but the shop also has order_ratings (032), order_notes (063) and order_messages (064), each with a foreign key to orders. it now says the core of the shop, four core tables, and adds a line naming the three side tables. evidence: python, information_schema lists 7 tables and each side table references orders (checks/100.py); data/shop.sql
+
 100, 2026-10-20: said the whole shop fits in four lines of text, but the picture is a relationship line plus a column grid of 5 lines (a header and 4 column rows), so no count of four fits. it now says one small block of text. evidence: python, the note's text block has 1 relationship line and a 5 line grid
 
 099, 2026-10-20: said a bar means at least one, but in || and |o the bar is the upper limit (exactly one, or zero or one), so |o read as bar plus circle contradicted itself. it now says the mark touching the box is the most (bar 1, fork many) and the other the least (bar 1, circle 0). also glossed ERD, which only 098 defines, and the first check yourself said the mark at the order_items end was }o when the note's own right end form is o{. evidence: https://mermaid.js.org/syntax/entityRelationshipDiagram.html ("The outermost character represents a maximum value, and the innermost character represents a minimum value"); https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model ("The inner component of the notation represents the minimum, and the outer component represents the maximum")

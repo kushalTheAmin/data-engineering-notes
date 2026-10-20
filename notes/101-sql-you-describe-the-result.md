@@ -4,7 +4,7 @@ section: asking questions with SQL, part 1, ~2 min read
 
 which customers live in Jersey City? in python you would write a loop, and i kept looking for the loop in the SQL version, and there isnt one.
 
-SQL is the language you send to a [database](./082-a-database-guards-the-data.md) to ask for rows, and one request is called a query. you describe the result you want, and the database works out the steps. the shop, the imaginary gujarati snack store, ended [the last section](./100-capstone-the-whole-shop-as-four-connected-tables.md) as four tables, and this is the first question put to one of them:
+SQL is the language you send to a [database](./082-a-database-guards-the-data.md) to ask for rows, and one request is called a query. you describe the result you want, and the database works out the steps. the shop, the imaginary gujarati snack store, ended [the last section](./100-capstone-the-whole-shop-as-four-connected-tables.md) as four core tables, and this is the first question put to one of them:
 
 ```sql
 SELECT name FROM customers WHERE city = 'Jersey City'
@@ -37,7 +37,7 @@ print(found)
 ['Asha', 'Chirag']
 ```
 
-the python says how: top down, check each row, keep a list. the SQL never says where to start. because you only described the result, the database is free to use a shortcut on a bigger table, like a lookup it keeps on the side, as long as the same rows come out (their order isnt promised). on these 5 rows it probably just reads them all.
+the python says how: top down, check each row, keep a list. the SQL never says where to start. because you only described the result, the database is free to use a shortcut on a bigger table, like a lookup it keeps on the side, as long as the same rows come out (their order isnt promised). on these 5 rows it probably reads them all.
 
 SQL also changes rows, but asking comes first. you send the query as text from a [client](./086-client-and-server.md) (the asking side) and rows come back. Postgres, MySQL, SQLite and DuckDB are all databases that take SQL, each with its own dialect in places. the notes use DuckDB, which runs inside your own program, no separate server.
 

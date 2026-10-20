@@ -2,9 +2,9 @@
 builds on: [079 a table, rows are records, columns are fields](./079-a-table-rows-are-records-columns-are-fields.md), [080 every column holds one type](./080-every-column-holds-one-type.md), [081 why a shared spreadsheet breaks when many people use it](./081-why-a-shared-spreadsheet-breaks.md), [082 a database, a program that guards your data](./082-a-database-guards-the-data.md), [083 schema on write vs schema on read](./083-schema-on-write-vs-schema-on-read.md), [084 a network, computers sending bytes to each other](./084-a-network.md), [085 addresses and ports, the right program on the right machine](./085-addresses-and-ports.md), [086 client and server, you ask, the database answers](./086-client-and-server.md), [087 primary key, one unique id per row](./087-primary-key.md), [088 natural keys vs made up ids](./088-natural-keys-vs-made-up-ids.md), [089 update anomalies](./089-update-anomalies.md), [090 insert and delete anomalies](./090-insert-and-delete-anomalies.md), [091 splitting into tables, each fact lives in one place](./091-splitting-into-tables.md), [092 relationships, one customer, many orders](./092-relationships-one-customer-many-orders.md), [093 foreign key](./093-foreign-key.md), [094 what a foreign key stops, rows pointing at nothing](./094-what-a-foreign-key-stops.md), [095 composite keys, a key made of two columns](./095-composite-keys.md), [096 why many to many cant live in either table](./096-why-many-to-many-cant-live-in-either-table.md), [097 junction tables, the table in the middle](./097-junction-tables.md), [098 entity relationship diagrams, boxes and lines](./098-entity-relationship-diagrams.md), [099 crows feet, reading one and many on the lines](./099-crows-feet-reading-one-and-many.md)
 section: tables, keys and relationships, wrap up, ~3 min read
 
-can you draw the whole shop from memory, which tables exist and what points at what? by now you can, and it fits in one small block of text.
+can you draw the core of the shop from memory, which tables exist and what points at what? by now you can, and it fits in one small block of text.
 
-the shop is the imaginary gujarati snack store these notes run on. it ends this section as four [tables](./079-a-table-rows-are-records-columns-are-fields.md) (grids of rows), drawn the way [098](./098-entity-relationship-diagrams.md) and [099](./099-crows-feet-reading-one-and-many.md) showed, with PK for primary key and FK for [foreign key](./093-foreign-key.md) (a column pointing at another tables key):
+the shop is the imaginary gujarati snack store these notes run on. it ends this section with four core [tables](./079-a-table-rows-are-records-columns-are-fields.md) (grids of rows), drawn the way [098](./098-entity-relationship-diagrams.md) and [099](./099-crows-feet-reading-one-and-many.md) showed, with PK for primary key and FK for [foreign key](./093-foreign-key.md) (a column pointing at another tables key):
 
 ```text
 customers ||--o{ orders ||--o{ order_items }o--|| products
@@ -26,6 +26,8 @@ SELECT (SELECT count(*) FROM customers) AS customers, (SELECT count(*) FROM orde
 customers | orders | order_items | products
 5 | 7 | 13 | 6
 ```
+
+the shop also has three small side tables (order_ratings, order_notes and order_messages), each pointing at orders, so these four are its core.
 
 every note here fixed one way the last shape broke:
 
