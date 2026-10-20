@@ -23,4 +23,8 @@ assert con.execute("SELECT count(*) FROM customers WHERE name = 'Esha' AND (city
 # confirmed: "Whenever either of the input arguments is NULL, the output of the comparison is NULL."
 # source: https://www.postgresql.org/docs/current/queries-table-expressions.html
 # confirmed: WHERE keeps a row only when the condition is true: "if the result is false or null) it is discarded."
+# source: https://en.wikipedia.org/wiki/Dhokla
+# confirmed: "a savoury sponge dish", "fermented batter that is steamed to a cake-like consistency"
+# source: https://en.wikipedia.org/wiki/Kaju_katli
+# confirmed: "Kaju katli (lit. 'Cashew slice') is an Indian dessert"
 print("107 ok")

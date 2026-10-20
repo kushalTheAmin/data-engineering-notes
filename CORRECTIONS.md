@@ -1,5 +1,7 @@
 # corrections
 
+107, 2026-10-20: note text unchanged. the dhokla (a steamed savory cake) and kaju katli (a cashew sweet) glosses had no source in the checks. they now cite Wikipedia. evidence: https://en.wikipedia.org/wiki/Dhokla ("a savoury sponge dish", "steamed to a cake-like consistency"); https://en.wikipedia.org/wiki/Kaju_katli ("an Indian dessert")
+
 110, 2026-10-20: check yourself 1 listed 5 products, then said the wrong reading of NOT would return everything except fafda, 5 rows. in that list it is 4 rows (5 is the count in the whole 6 product shop). it now says 4 of those 5 rows. the checks now also source that WHERE keeps only true rows and that NULL OR NULL is NULL. evidence: python, NOT (snack AND under 6) over the 5 listed products leaves dhokla, jalebi, kaju katli, masala chai (checks/110.py); https://www.postgresql.org/docs/current/queries-table-expressions.html ("if the result is false or null) it is discarded")
 
 107, 2026-10-20: note text unchanged. the claim that a null row fails every test cited a DuckDB WHERE page that does not say WHERE keeps only true rows. the checks now cite the Postgres page that does. evidence: https://www.postgresql.org/docs/current/queries-table-expressions.html ("If the result of the condition is true, the row is kept in the output table")
