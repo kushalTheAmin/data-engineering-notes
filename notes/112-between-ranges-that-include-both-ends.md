@@ -71,4 +71,4 @@ both ends are real join dates, and both rows are kept. guessing only Chirag or o
 </details>
 
 ---
-prev: [111 IN, matching against a list](./111-in-matching-against-a-list.md) | next: not written yet
+prev: [111 IN, matching against a list](./111-in-matching-against-a-list.md) | next: [113 LIKE, matching text patterns](./113-like-matching-text-patterns.md)

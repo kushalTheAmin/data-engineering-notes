@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 112 showed BETWEEN keeps both ends, price BETWEEN 4.50 AND 6.00 returns dhokla, jalebi and fafda, and that a date as the high end of a timestamp range is midnight, so order 103 at 12:05 on 3 April drops out. the next box is LIKE, matching text patterns
-last visuals: query and result plus a second query and result with a missing order (BETWEEN), trace table plus query and result and a second query with an empty result (IN), python block and output plus query and result (NOT), two query and result pairs, with and without parentheses (parentheses and precedence), per product test table plus three queries and results (AND and OR)
-last exits: stops (BETWEEN), stops (IN), stops (NOT), stops (parentheses and precedence), forward (AND and OR)
-last reactions: i kept reading BETWEEN like python range where the last number is left out, and here nothing is left out, i expected a list to be forgiving about nulls, and a null in the list is where it bites, i assumed NOT was a clean mirror where every row lands on one side, and a null row lands on neither, i expected the database to read left to right like i do, and it quietly grabs the AND first, i kept reading AND as adding more rows, and it can only shrink the answer, i kept feeling that a single = must be assigning something, and in a WHERE it only asks equal, i assumed the filter could only see what i was about to get back, and it sees the whole row, i expected the broken version to be the one that crashes and it was the one that looked fine, i assumed picking one column would give me the distinct values, i expected loading data to need some special import tool, and it is just running a text file
+baton: 113 showed LIKE matches text patterns, % for any run of characters and _ for exactly one, that LIKE 'K%' returns zero rows because case matters (ILIKE ignores it), and that NOT LIKE drops a null city like Esha. the next box is whatever follows LIKE in the arc
+last visuals: query and result plus a second query with an empty result (LIKE), query and result plus a second query and result with a missing order (BETWEEN), trace table plus query and result and a second query with an empty result (IN), python block and output plus query and result (NOT), two query and result pairs, with and without parentheses (parentheses and precedence)
+last exits: stops (LIKE), stops (BETWEEN), stops (IN), stops (NOT), stops (parentheses and precedence)
+last reactions: i typed a capital K and got zero rows with no error, so LIKE is exact about letters, i kept reading BETWEEN like python range where the last number is left out, and here nothing is left out, i expected a list to be forgiving about nulls, and a null in the list is where it bites, i assumed NOT was a clean mirror where every row lands on one side, and a null row lands on neither, i expected the database to read left to right like i do, and it quietly grabs the AND first, i kept reading AND as adding more rows, and it can only shrink the answer, i kept feeling that a single = must be assigning something, and in a WHERE it only asks equal, i assumed the filter could only see what i was about to get back, and it sees the whole row, i expected the broken version to be the one that crashes and it was the one that looked fine, i assumed picking one column would give me the distinct values, i expected loading data to need some special import tool, and it is just running a text file
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
 
@@ -141,7 +141,7 @@ after this arc: you can pull exactly the rows and columns you want from one tabl
 - [x] NOT: flipping a condition ★ (note 110)
 - [x] IN: matching against a list (note 111)
 - [x] BETWEEN: ranges that include both ends ★ (note 112)
-- [ ] LIKE: matching text patterns
+- [x] LIKE: matching text patterns (note 113)
 - [ ] three valued logic: true, false and unknown ★
 - [ ] IS NULL and IS NOT NULL
 - [ ] COALESCE: a fallback when a value is NULL

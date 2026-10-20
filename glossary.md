@@ -69,6 +69,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | head | prints the first lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | header row | the first line of a csv, holding column names instead of data | [065](./notes/065-the-header-row-naming-the-columns.md) |
 | hexadecimal | counting with sixteen digits, a to f standing for ten to fifteen | [005](./notes/005-hexadecimal.md) |
+| ILIKE | LIKE that ignores upper and lower case | [113](./notes/113-like-matching-text-patterns.md) |
 | IN | keeps a row if its value equals any item in a list | [111](./notes/111-in-matching-against-a-list.md) |
 | insert anomaly | a fact cant be stored until an unrelated fact exists | [090](./notes/090-insert-and-delete-anomalies.md) |
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |
@@ -82,6 +83,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | kibibyte | 1024 bytes, the unambiguous 1024 based unit, written KiB | [038](./notes/038-1000-or-1024.md) |
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | LF | a one character line ending, 0a, common on linux and mac | [042](./notes/042-line-endings.md) |
+| LIKE | keeps text matching a pattern, % any run, _ one character | [113](./notes/113-like-matching-text-patterns.md) |
 | line ending | the characters marking where one line stops, the next starts | [042](./notes/042-line-endings.md) |
 | lookup | fetching one value from a random spot | [037](./notes/037-disk-is-slow.md) |
 | lost update | two saves of one file, the later one erases the earlier change | [081](./notes/081-why-a-shared-spreadsheet-breaks.md) |
@@ -169,6 +171,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | wc | prints a files counts; wc -l counts its 0a line endings | [055](./notes/055-wc-counting-lines.md) |
 | WHERE | the clause keeping only rows whose condition is true, checked before SELECT | [106](./notes/106-where-keeping-only-the-rows-that-match.md) |
 | whole cents | money kept as an integer count of cents, price times 100 | [021](./notes/021-storing-money-as-whole-cents.md) |
+| wildcard | a pattern character standing in for other characters | [113](./notes/113-like-matching-text-patterns.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
 | XML | a text format wrapping each value in opening and closing tags | [072](./notes/072-xml.md) |
 | YAML | a text format where indentation shows nesting, dashes start list items | [073](./notes/073-yaml.md) |
