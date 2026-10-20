@@ -11,6 +11,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | argument | a word after the program name, handed to that program | [049](./notes/049-the-terminal.md) |
 | ASCII | the old table giving 128 characters a number, English only | [008](./notes/008-ascii-runs-out.md) |
 | atomic | happening whole or not at all, never half done | [046](./notes/046-writing-safely.md) |
+| BETWEEN | a test keeping values from a low to a high end, inclusive | [112](./notes/112-between-ranges-that-include-both-ends.md) |
 | binary | counting with only 0 and 1, each place worth double | [003](./notes/003-counting-in-binary.md) |
 | binary file | a file whose bytes are not characters, like packed numbers | [041](./notes/041-text-files-vs-binary-files.md) |
 | binary fraction | binary carried past the point, places worth a half, quarter, eighth | [017](./notes/017-fractions-in-binary.md) |

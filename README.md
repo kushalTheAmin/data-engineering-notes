@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 111
+notes so far: 112
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -130,3 +130,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [109 parentheses, and AND runs before OR](./notes/109-parentheses-and-runs-before-or.md): asking for snacks or sweets under 6 returns khandvi at 7.50, because AND goes first and parentheses fix it
 - [110 NOT, flipping a condition](./notes/110-not-flipping-a-condition.md): NOT city = 'Jersey City' returns 2 customers not 3, because Eshas null city makes the test unknown and NOT unknown is still unknown
 - [111 IN, matching against a list](./notes/111-in-matching-against-a-list.md): IN is the OR chain written once, and NOT IN with a NULL in the list returns zero rows
+- [112 BETWEEN, ranges that include both ends](./notes/112-between-ranges-that-include-both-ends.md): BETWEEN keeps both ends so dhokla at 6.00 and fafda at 4.50 are in, and a date as the high end of a timestamp range drops the last day
