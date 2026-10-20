@@ -1,5 +1,7 @@
 # corrections
 
+111, 2026-10-20: said NOT IN gives null, not true, when a null sits in the list, which reads as always, but the docs say only when no item equals the value (an IN that finds an equal item stays true). it now says when no item equals the value and a null sits in the list. the checks cited the subquery page for the list form; they now cite the page that covers lists, and assert the column form and the equal item case. evidence: https://www.postgresql.org/docs/current/functions-comparisons.html ("if there are no equal right-hand values and at least one right-hand expression yields null, the result of the NOT IN construct will be null, not true as one might naively expect"); python, 'Edison' IN ('Edison', NULL) is true
+
 110, 2026-10-20: called Postgres a popular server database, but popular has no source. it now says a server database, and the checks cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model")
 
 108, 2026-10-20: said a condition is true or false per row, but a row with a null value gives unknown (note 110), so it now says true or false unless a value is null. the checks now also source the dhokla and kaju katli glosses. evidence: https://www.postgresql.org/docs/current/functions-logical.html ("SQL uses a three-valued logic system with true, false, and null, which represents unknown"); note 110

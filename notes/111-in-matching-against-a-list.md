@@ -38,7 +38,7 @@ SELECT name FROM customers WHERE city NOT IN ('Edison', NULL)
 name
 ```
 
-zero rows, even though Asha, Chirag and Disha are clearly not in Edison. you rarely type a NULL by hand, but a list pulled from a column with a missing value does the same thing. the Postgres docs say NOT IN gives null, not true, when a null sits in the list.
+zero rows, even though Asha, Chirag and Disha are clearly not in Edison. you rarely type a NULL by hand, but a list pulled from a column with a missing value does the same thing. the Postgres docs say NOT IN gives null, not true, when no item equals the value and a null sits in the list.
 
 ---
 prev: [110 NOT, flipping a condition](./110-not-flipping-a-condition.md) | next: [112 BETWEEN, ranges that include both ends](./112-between-ranges-that-include-both-ends.md)

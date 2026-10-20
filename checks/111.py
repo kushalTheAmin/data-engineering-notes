@@ -13,6 +13,13 @@ rows = con.execute("SELECT name, city FROM customers ORDER BY customer_id").fetc
 assert rows == [("Asha", "Jersey City"), ("Bhavin", "Edison"), ("Chirag", "Jersey City"), ("Disha", "Hoboken"), ("Esha", None)]
 assert [n for n, c in rows if c in ("Jersey City", "Hoboken")] == ["Asha", "Chirag", "Disha"]
 assert con.execute("SELECT NULL = 'Jersey City'").fetchone()[0] is None
+# a list pulled from a column with a missing value does the same thing
+assert q("city NOT IN (SELECT city FROM customers WHERE name IN ('Bhavin', 'Esha'))") == []
+assert q("city NOT IN (SELECT city FROM customers WHERE name = 'Bhavin')") == ["Asha", "Chirag", "Disha"]
+# an equal item is found, so the null does not matter: IN stays true
+assert con.execute("SELECT 'Edison' IN ('Edison', NULL), 'Asha' IN ('Edison', NULL), 'Asha' NOT IN ('Edison', NULL)").fetchone() == (True, None, None)
+# source: https://www.postgresql.org/docs/current/functions-comparisons.html
+# confirmed: "if there are no equal right-hand values and at least one right-hand expression yields null, the result of the NOT IN construct will be null, not true as one might naively expect"
 # source: https://www.postgresql.org/docs/current/functions-subquery.html
-# confirmed: NOT IN gives null, not true, when no equal value is found and at least one right-hand value is null; IN with a null left side gives null
+# confirmed: the same sentence for expression NOT IN (subquery), which is the column form
 print("111 ok")
