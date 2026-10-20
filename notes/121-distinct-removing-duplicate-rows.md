@@ -17,7 +17,7 @@ snack
 sweet
 ```
 
-the 6 categories were snack, snack, sweet, sweet, drink, snack, so six rows became three. now the part i got wrong, on the orders table, customer and status, first as is and then with DISTINCT:
+the 6 category values were snack, snack, sweet, sweet, drink, snack, so six rows became three. now the part i got wrong, on the orders table, customer and status, first as is and then with DISTINCT:
 
 ```sql
 SELECT customer_id, status FROM orders ORDER BY customer_id, status

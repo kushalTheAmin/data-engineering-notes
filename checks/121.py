@@ -18,3 +18,4 @@ assert q("SELECT NULL = NULL")[0][0] is None
 assert len(q("SELECT DISTINCT x FROM (VALUES (NULL), (NULL)) t(x)")) == 1
 # source: https://www.postgresql.org/docs/current/sql-select.html
 # confirmed: SELECT DISTINCT removes all duplicate rows from the result; without ORDER BY rows come back in whatever order the system finds fastest to produce
+assert len(set(cats)) == 3  # 6 category values, only 3 categories

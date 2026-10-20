@@ -1,5 +1,7 @@
 # corrections
 
+121, 2026-10-20: said the 6 categories were snack, snack, sweet, sweet, drink, snack, but there are only 3 categories, those are 6 category values. it now says the 6 category values. evidence: python, 6 category values and 3 distinct ones in data/shop.sql (checks/121.py)
+
 120, 2026-10-20: said a huge OFFSET gets slow, which reads as always, but the docs say only that it might be inefficient. it now says a huge OFFSET can get slow. evidence: https://www.postgresql.org/docs/current/queries-limit.html ("a large OFFSET might be inefficient")
 
 117, 2026-10-20: said ORDER BY runs last, but note 120 shows LIMIT running after ORDER BY. it now says ORDER BY runs after WHERE and SELECT. evidence: note 120 (LIMIT 2 after ORDER BY price DESC); https://www.postgresql.org/docs/current/queries-order.html ("After a query has produced an output table (after the select list has been processed) it can optionally be sorted")
