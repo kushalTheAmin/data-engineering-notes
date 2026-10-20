@@ -25,4 +25,8 @@ assert q("category = 'snack' AND category = 'sweet'") == []
 assert q("category = 'snack' OR category = 'sweet'") == ["dhokla", "khandvi", "jalebi", "kaju katli", "fafda"]
 # source: https://duckdb.org/docs/current/sql/expressions/logical_operators
 # confirmed: AND is true only if both operands are true, OR if at least one is
+# source: https://en.wikipedia.org/wiki/Dhokla
+# confirmed: "a savoury sponge dish", "fermented batter that is steamed to a cake-like consistency"
+# source: https://en.wikipedia.org/wiki/Kaju_katli
+# confirmed: "Kaju katli (lit. 'Cashew slice') is an Indian dessert"
 print("108 ok")
