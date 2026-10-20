@@ -51,4 +51,4 @@ nope. you get one result row per table row, six, with snack three times. a plain
 this is the usual first surprise when someone asks "what categories do we sell" and gets a wall of repeats.
 
 ---
-prev: [103 your first query against the shop](./103-your-first-query-against-the-shop.md) | next: not written yet
+prev: [103 your first query against the shop](./103-your-first-query-against-the-shop.md) | next: [105 SELECT star, every column, and why you rarely want it](./105-select-star-every-column.md)

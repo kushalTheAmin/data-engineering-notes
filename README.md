@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 104
+notes so far: 105
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -123,3 +123,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [102 a database in one file, setting up DuckDB](./notes/102-a-database-in-one-file.md): DuckDB runs inside your program and keeps everything in a single file you connect to by path
 - [103 your first query against the shop](./notes/103-your-first-query-against-the-shop.md): the shop loads into a DuckDB file by running its SQL text, and SELECT name, price FROM products returns six rows
 - [104 SELECT and FROM, picking columns](./notes/104-select-and-from-picking-columns.md): FROM names the table, SELECT picks columns in the order you write them, and rows never drop, so SELECT category repeats snack three times
+- [105 SELECT star, every column, and why you rarely want it](./notes/105-select-star-every-column.md): a label that printed snack one day and 6.00 the next, with no error, because of one star
