@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 110
+notes so far: 111
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -129,3 +129,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [108 AND and OR, combining two tests](./notes/108-and-or-combining-two-tests.md): asking for snacks and sweets with AND returns zero rows, because one row has one category and english and means OR
 - [109 parentheses, and AND runs before OR](./notes/109-parentheses-and-runs-before-or.md): asking for snacks or sweets under 6 returns khandvi at 7.50, because AND goes first and parentheses fix it
 - [110 NOT, flipping a condition](./notes/110-not-flipping-a-condition.md): NOT city = 'Jersey City' returns 2 customers not 3, because Eshas null city makes the test unknown and NOT unknown is still unknown
+- [111 IN, matching against a list](./notes/111-in-matching-against-a-list.md): IN is the OR chain written once, and NOT IN with a NULL in the list returns zero rows

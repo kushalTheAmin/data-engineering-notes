@@ -71,4 +71,4 @@ the answer is 4. a test or its opposite feels like it must cover every row, but 
 </details>
 
 ---
-prev: [109 parentheses, and AND runs before OR](./109-parentheses-and-runs-before-or.md) | next: not written yet
+prev: [109 parentheses, and AND runs before OR](./109-parentheses-and-runs-before-or.md) | next: [111 IN, matching against a list](./111-in-matching-against-a-list.md)
