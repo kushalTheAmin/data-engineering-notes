@@ -23,7 +23,7 @@ on the right end they mirror, so }o becomes o{. each end is a pair, the mark tou
 
 i assumed the circle was decoration, but its the 0, because Esha, customer 5, has no orders at all and the circle is why thats legal. thats the "many includes 0" of [092](./092-relationships-one-customer-many-orders.md).
 
-the marks describe the design, not rows. orders.customer_id is NOT NULL, so every order must have a customer and the mark is ||. if it allowed [NULL](./031-null.md), the mark would be |o, zero or one customer.
+the marks describe the design, not rows. orders.customer_id is NOT NULL (the database refuses an empty value there), so every order must have a customer and the mark is ||. if it allowed [NULL](./031-null.md), the mark would be |o, zero or one customer.
 
 Mermaid, a text-to-diagram tool, draws exactly these marks, and its docs use the same ||--o{ shape.
 

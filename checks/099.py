@@ -20,5 +20,7 @@ assert len(["||", "|o", "}|", "}o"]) == 4
 # confirmed: "the outermost character represents a maximum value, and the innermost character represents a minimum value", so |o is max one, min zero
 # source: https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model
 # confirmed: crow's foot notation: "the ring represents zero, the dash represents one, the crow's foot represents many"; "the inner component represents the minimum, and the outer component represents the maximum"
-# confirmed: docs example "PROPERTY ||--|{ ROOM" shows the same ||--o{ style shape
+# confirmed: the docs first example is "CUSTOMER ||--o{ ORDER : places", the same ||--o{ shape as the note
+# source: https://www.postgresql.org/docs/current/ddl-constraints.html
+# confirmed: a NOT NULL constraint simply specifies that a column must not assume the null value
 print("099 ok")
