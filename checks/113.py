@@ -23,4 +23,8 @@ assert con.execute("SELECT city FROM customers WHERE name = 'Esha'").fetchone()[
 # confirmed: "The key word ILIKE can be used instead of LIKE to make the match case-insensitive", so plain LIKE in Postgres is case-sensitive; DuckDB says the same of ILIKE and its LIKE is asserted case-sensitive above
 # source: https://en.wikipedia.org/wiki/Khandvi_(food)
 # confirmed: khandvi is a savory snack of Gujarati cuisine whose main ingredient is gram flour (page: Khandvi (food))
+# source: https://en.wikipedia.org/wiki/Gram_flour
+# confirmed: "Chickpea flour, common varieties include besan or gram flour", so the note says chickpea flour, the name 103 and 104 use
+# source: https://en.wikipedia.org/wiki/Kaju_katli
+# confirmed: kaju katli "is an Indian dessert" whose main ingredients are cashews, sugar and ghee
 print("113 ok")

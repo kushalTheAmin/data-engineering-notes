@@ -16,7 +16,7 @@ khandvi
 kaju katli
 ```
 
-khandvi is a gram flour snack and kaju katli a cashew sweet. put the % in front and it is endswith, so `LIKE '%a'` gives dhokla and fafda. put one on both sides and it is pythons `in`, so `LIKE '%ch%'` finds masala chai. the other wildcard is _, exactly one character, so `LIKE 'k_a%'` returns only khandvi: kaju also starts with k, but its third letter is j.
+khandvi is a chickpea flour snack and kaju katli a cashew sweet. put the % in front and it is endswith, so `LIKE '%a'` gives dhokla and fafda. put one on both sides and it is pythons `in`, so `LIKE '%ch%'` finds masala chai. the other wildcard is _, exactly one character, so `LIKE 'k_a%'` returns only khandvi: kaju also starts with k, but its third letter is j.
 
 now the part that surprised me. you would expect an error if you type a capital K:
 
