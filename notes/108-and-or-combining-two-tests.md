@@ -45,4 +45,4 @@ an empty result with no error is the same quiet failure as the capital D typo in
 mixing AND and OR in one WHERE has a nasty trap of its own, thats the next one.
 
 ---
-prev: [107 comparisons, equal, not equal, bigger, smaller](./107-comparisons-equal-not-equal-bigger-smaller.md) | next: not written yet
+prev: [107 comparisons, equal, not equal, bigger, smaller](./107-comparisons-equal-not-equal-bigger-smaller.md) | next: [109 parentheses, and AND runs before OR](./109-parentheses-and-runs-before-or.md)

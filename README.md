@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 108
+notes so far: 109
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -127,3 +127,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [106 WHERE, keeping only the rows that match](./notes/106-where-keeping-only-the-rows-that-match.md): you can filter on a column you never select, and a capital D typo returns zero rows with no error
 - [107 comparisons, equal, not equal, bigger, smaller](./notes/107-comparisons-equal-not-equal-bigger-smaller.md): price >= 6 keeps dhokla at exactly 6.00 and price > 6 drops it, with no error
 - [108 AND and OR, combining two tests](./notes/108-and-or-combining-two-tests.md): asking for snacks and sweets with AND returns zero rows, because one row has one category and english and means OR
+- [109 parentheses, and AND runs before OR](./notes/109-parentheses-and-runs-before-or.md): asking for snacks or sweets under 6 returns khandvi at 7.50, because AND goes first and parentheses fix it
