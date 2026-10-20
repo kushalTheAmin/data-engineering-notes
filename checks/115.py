@@ -19,4 +19,7 @@ assert (None == None) is True
 assert con.execute("SELECT NULL IS NULL, 1 IS NULL, NULL IS NOT NULL, 1 IS NOT NULL").fetchone() == (True, False, False, True)
 # source: https://www.postgresql.org/docs/current/functions-comparison.html
 # confirmed: "datatype IS NULL → boolean  Test whether value is null" and IS NOT NULL likewise, so they return a plain boolean; IS NULL / IS NOT NULL test for a null; "Do not write expression = NULL because NULL is not 'equal to' NULL"
+assert q("city IS NOT DISTINCT FROM NULL") == ["Esha"]
+# source: https://www.postgresql.org/docs/current/functions-comparison.html
+# confirmed: IS [NOT] DISTINCT FROM "effectively act as though null were a normal data value, rather than unknown"; NULL IS NOT DISTINCT FROM NULL is t
 print("115 ok")

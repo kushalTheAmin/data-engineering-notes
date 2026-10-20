@@ -19,7 +19,7 @@ Disha | NULL | false | true
 Esha | NULL | true | false
 ```
 
-the `= NULL` column is unknown for all 5 rows, Esha included, because "is this equal to something missing" has no answer. so a WHERE on it returns zero rows. `IS NULL` never comes out unknown, only true or false, which makes it the one test that can actually see a null. `WHERE city IS NULL` returns Esha, `WHERE city IS NOT NULL` returns the other 4.
+the `= NULL` column is unknown for all 5 rows, Esha included, because "is this equal to something missing" has no answer. so a WHERE on it returns zero rows. `IS NULL` never comes out unknown, only true or false, which makes it a test that can actually see a null (`IS DISTINCT FROM` is another). `WHERE city IS NULL` returns Esha, `WHERE city IS NOT NULL` returns the other 4.
 
 i assumed IS was just a fussy spelling of =, and it turns out to be a different kind of test, one that cant be unknown.
 
