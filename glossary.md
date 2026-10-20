@@ -102,6 +102,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | negative zero | a second zero pattern, with the sign bit set | [013](./notes/013-negative-numbers-sign-bit.md) |
 | nesting | an object or array sitting inside another one, as deep as needed | [068](./notes/068-nesting.md) |
 | network | a way to move bytes from one computer to another | [084](./notes/084-a-network.md) |
+| no promised order | without ORDER BY, rows may come back in any order | [118](./notes/118-no-order-by-no-promised-order.md) |
 | NOT | flips a test, but a null stays unknown and is dropped | [110](./notes/110-not-flipping-a-condition.md) |
 | null | a marker meaning there is no value here, not a value | [031](./notes/031-null.md) |
 | offset | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
