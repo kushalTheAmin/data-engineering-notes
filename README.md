@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 119
+notes so far: 120
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -138,3 +138,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [117 ORDER BY, sorting by one or more columns](./notes/117-order-by-sorting-by-one-or-more-columns.md): ORDER BY category, price DESC groups the menu by category and puts the priciest first only inside each, so kaju katli at 12.00 sits fifth
 - [118 no ORDER BY, no promised order](./notes/118-no-order-by-no-promised-order.md): a query with no ORDER BY may return rows in any order, and rows tied on the sort column have no promised order either
 - [119 where NULLs land when you sort](./notes/119-where-nulls-land-when-you-sort.md): DuckDB puts nulls last even on DESC, Postgres treats null as biggest so DESC puts them first, and NULLS FIRST or NULLS LAST settles it
+- [120 LIMIT and OFFSET, paging through rows](./notes/120-limit-and-offset-paging-through-rows.md): LIMIT 2 OFFSET 2 on the menu by price gives page 2, dhokla and jalebi, and it only means something with ORDER BY

@@ -70,4 +70,4 @@ Esha moves to the top, since Postgres sorts null as larger and DESC puts larger 
 </details>
 
 ---
-prev: [118 no ORDER BY, no promised order](./118-no-order-by-no-promised-order.md) | next: not written yet
+prev: [118 no ORDER BY, no promised order](./118-no-order-by-no-promised-order.md) | next: [120 LIMIT and OFFSET, paging through rows](./120-limit-and-offset-paging-through-rows.md)

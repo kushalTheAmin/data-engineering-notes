@@ -88,6 +88,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | LF | a one character line ending, 0a, common on linux and mac | [042](./notes/042-line-endings.md) |
 | LIKE | keeps text matching a pattern, % any run, _ one character | [113](./notes/113-like-matching-text-patterns.md) |
+| LIMIT | keeps only the first n rows of the result | [120](./notes/120-limit-and-offset-paging-through-rows.md) |
 | line ending | the characters marking where one line stops, the next starts | [042](./notes/042-line-endings.md) |
 | lookup | fetching one value from a random spot | [037](./notes/037-disk-is-slow.md) |
 | lost update | two saves of one file, the later one erases the earlier change | [081](./notes/081-why-a-shared-spreadsheet-breaks.md) |
@@ -107,7 +108,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | null | a marker meaning there is no value here, not a value | [031](./notes/031-null.md) |
 | NULLS FIRST | the ORDER BY option that puts missing values at the start | [119](./notes/119-where-nulls-land-when-you-sort.md) |
 | NULLS LAST | the ORDER BY option that puts missing values at the end | [119](./notes/119-where-nulls-land-when-you-sort.md) |
-| offset | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
+| OFFSET (rows) | skips this many result rows before returning any | [120](./notes/120-limit-and-offset-paging-through-rows.md) |
+| offset (time zones) | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
 | one to many | one row on one side matches many rows on the other | [092](./notes/092-relationships-one-customer-many-orders.md) |
 | operating system | the program that starts programs and shares the machine between them | [051](./notes/051-the-operating-system.md) |
 | optional field | a field a record may leave out without being rejected | [077](./notes/077-required-vs-optional-fields.md) |
