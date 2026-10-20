@@ -76,4 +76,4 @@ neither is broken, both orders are legal because no order was asked for. the tem
 </details>
 
 ---
-prev: [117 ORDER BY, sorting by one or more columns](./117-order-by-sorting-by-one-or-more-columns.md) | next: not written yet
+prev: [117 ORDER BY, sorting by one or more columns](./117-order-by-sorting-by-one-or-more-columns.md) | next: [119 where NULLs land when you sort](./119-where-nulls-land-when-you-sort.md)

@@ -105,6 +105,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | no promised order | without ORDER BY, rows may come back in any order | [118](./notes/118-no-order-by-no-promised-order.md) |
 | NOT | flips a test, but a null stays unknown and is dropped | [110](./notes/110-not-flipping-a-condition.md) |
 | null | a marker meaning there is no value here, not a value | [031](./notes/031-null.md) |
+| NULLS FIRST | the ORDER BY option that puts missing values at the start | [119](./notes/119-where-nulls-land-when-you-sort.md) |
+| NULLS LAST | the ORDER BY option that puts missing values at the end | [119](./notes/119-where-nulls-land-when-you-sort.md) |
 | offset | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
 | one to many | one row on one side matches many rows on the other | [092](./notes/092-relationships-one-customer-many-orders.md) |
 | operating system | the program that starts programs and shares the machine between them | [051](./notes/051-the-operating-system.md) |

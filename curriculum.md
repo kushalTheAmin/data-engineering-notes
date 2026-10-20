@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 118 showed that with no ORDER BY the rows may come back in any order (the products table came back in stored order in DuckDB, which is not a promise), and that rows tied on the sort column have no promised order either. the next box is where NULLs land when you sort
-last visuals: python block with output plus a small query and result (no ORDER BY), query and result plus a small python sorted block (ORDER BY), python block with output plus query and result (COALESCE), query and result (IS NULL), text truth table plus query and result (three valued logic)
-last exits: stops (no ORDER BY), stops (ORDER BY), forward (COALESCE), stops (IS NULL), forward (three valued logic), stops (LIKE)
-last reactions: i expected a boring default, and its really whatever was fastest, i kept assuming a second sort column gets applied to the whole result, and it only breaks ties, i figured COALESCE was a cosmetic wrapper, and it quietly changed what avg divides by, i assumed IS was just a fussy spelling of =, and it turns out to be a different kind of test, one that cant be unknown, i assumed unknown would spread like a stain through everything it touches, and it only spreads when the other side cant settle it, i typed a capital K and got zero rows with no error, so LIKE is exact about letters, i kept reading BETWEEN like python range where the last number is left out, and here nothing is left out, i expected a list to be forgiving about nulls, and a null in the list is where it bites, i assumed NOT was a clean mirror where every row lands on one side, and a null row lands on neither, i expected the database to read left to right like i do, and it quietly grabs the AND first
+baton: 119 showed that DuckDB puts nulls last on both ASC and DESC while Postgres treats null as biggest (first on DESC), and that NULLS FIRST or NULLS LAST settles it. the next box is LIMIT and OFFSET, paging through rows
+last visuals: query and result twice (NULLS FIRST), python block with output plus a small query and result (no ORDER BY), query and result plus a small python sorted block (ORDER BY), python block with output plus query and result (COALESCE), query and result (IS NULL), text truth table plus query and result (three valued logic)
+last exits: stops (NULLs when you sort), stops (no ORDER BY), stops (ORDER BY), forward (COALESCE), stops (IS NULL), forward (three valued logic), stops (LIKE)
+last reactions: i assumed every database agrees on where nulls go, and they dont, i expected a boring default, and its really whatever was fastest, i kept assuming a second sort column gets applied to the whole result, and it only breaks ties, i figured COALESCE was a cosmetic wrapper, and it quietly changed what avg divides by, i assumed IS was just a fussy spelling of =, and it turns out to be a different kind of test, one that cant be unknown, i assumed unknown would spread like a stain through everything it touches, and it only spreads when the other side cant settle it, i typed a capital K and got zero rows with no error, so LIKE is exact about letters, i kept reading BETWEEN like python range where the last number is left out, and here nothing is left out, i expected a list to be forgiving about nulls, and a null in the list is where it bites, i assumed NOT was a clean mirror where every row lands on one side, and a null row lands on neither, i expected the database to read left to right like i do, and it quietly grabs the AND first
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
 
@@ -147,7 +147,7 @@ after this arc: you can pull exactly the rows and columns you want from one tabl
 - [x] COALESCE: a fallback when a value is NULL (note 116)
 - [x] ORDER BY: sorting by one or more columns (note 117)
 - [x] no ORDER BY, no promised order ★ (note 118)
-- [ ] where NULLs land when you sort ★
+- [x] where NULLs land when you sort ★ (note 119)
 - [ ] LIMIT and OFFSET: paging through rows
 - [ ] DISTINCT: removing duplicate rows
 - [ ] computed columns and AS
