@@ -58,6 +58,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | float | binary digits plus a count of how far to slide the point | [019](./notes/019-floating-point.md) |
 | folder | a named place on disk holding files and other folders | [040](./notes/040-folders-and-paths.md) |
 | foreign key | a column holding another tables primary key values, a pointer | [093](./notes/093-foreign-key.md) |
+| FROM | the clause naming the table a query reads from | [104](./notes/104-select-and-from-picking-columns.md) |
 | gibibyte | 1024 x 1024 x 1024 bytes, written GiB | [038](./notes/038-1000-or-1024.md) |
 | gigabyte | 1000 megabytes, a billion bytes, written GB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | grapheme | one unit as seen on screen, possibly several code points | [012](./notes/012-combining-marks.md) |
@@ -129,6 +130,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | schema (file) | a written agreement on which fields every record must have | [075](./notes/075-schema.md) |
 | schema on read | storing anything as it arrives, checking shape only when used | [083](./notes/083-schema-on-write-vs-schema-on-read.md) |
 | schema on write | checking shape as data goes in, rejecting what doesnt fit | [083](./notes/083-schema-on-write-vs-schema-on-read.md) |
+| SELECT | the clause naming which columns to keep, in the order written | [104](./notes/104-select-and-from-picking-columns.md) |
 | server | a program that listens on a port and answers requests | [086](./notes/086-client-and-server.md) |
 | shell | the program inside a terminal that reads your line and runs it | [049](./notes/049-the-terminal.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |

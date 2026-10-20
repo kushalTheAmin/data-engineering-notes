@@ -36,4 +36,4 @@ the gotcha: run that load line a second time on the same file and it errors with
 a database dump from Postgres works the same way by default: a text file of SQL commands that rebuilds the database when you feed it back in. i expected loading data to need some special import tool, and it is just running a text file.
 
 ---
-prev: [102 a database in one file, setting up DuckDB](./102-a-database-in-one-file.md) | next: not written yet
+prev: [102 a database in one file, setting up DuckDB](./102-a-database-in-one-file.md) | next: [104 SELECT and FROM, picking columns](./104-select-and-from-picking-columns.md)
