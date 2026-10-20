@@ -1,5 +1,7 @@
 # corrections
 
+105, 2026-10-20: note text unchanged. the checks said the DuckDB select page confirms that star gives columns in table order, but that page does not say it. they now cite the star expression page ("select all columns that are projected in the FROM clause") and the Postgres table basics page ("The number and order of the columns is fixed"), and the order itself is asserted in python (checks/105.py). evidence: https://duckdb.org/docs/current/sql/expressions/star.html; https://www.postgresql.org/docs/current/ddl-basics.html
+
 101, 2026-10-20: note text unchanged. the checks had no source for result order not being promised. they now cite SQLite. evidence: https://www.sqlite.org/lang_select.html ("the order in which the rows are returned is undefined")
 
 104, 2026-10-20: called fafda a crunchy chickpea strip, but the page never says strip (the same wording audit 103 already fixed in note 103); it now says a crunchy chickpea flour snack. also said SELECT never drops rows, which is not true of WHERE (note 101) or SELECT DISTINCT; it now says a plain SELECT list never drops rows, WHERE does that. the checks now source the jalebi, kaju katli, masala chai, khandvi and fafda glosses. evidence: https://en.wikipedia.org/wiki/Fafda (gram flour, deep-fried till crispy, no strip); python, SELECT DISTINCT category returns 3 rows and WHERE category = 'snack' returns 3 of 6 (checks/104.py)

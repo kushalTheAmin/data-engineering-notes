@@ -25,6 +25,8 @@ except duckdb.BinderException:
     pass
 # source: https://duckdb.org/docs/current/sql/statements/alter_table.html
 # confirmed: ALTER TABLE ... DROP COLUMN removes a column from a table
-# source: https://duckdb.org/docs/current/sql/query_syntax/select.html
-# confirmed: the star expression selects all columns, in the order they appear in the table
+# source: https://duckdb.org/docs/current/sql/expressions/star.html
+# confirmed: "The * expression can be used in a SELECT statement to select all columns that are projected in the FROM clause."
+# source: https://www.postgresql.org/docs/current/ddl-basics.html
+# confirmed: "The number and order of the columns is fixed, and each column has a name." (the order itself is asserted above)
 print("105 ok")
