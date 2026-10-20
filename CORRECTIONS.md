@@ -1,5 +1,7 @@
 # corrections
 
+110, 2026-10-20: called Postgres a popular server database, but popular has no source. it now says a server database, and the checks cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model")
+
 108, 2026-10-20: said a condition is true or false per row, but a row with a null value gives unknown (note 110), so it now says true or false unless a value is null. the checks now also source the dhokla and kaju katli glosses. evidence: https://www.postgresql.org/docs/current/functions-logical.html ("SQL uses a three-valued logic system with true, false, and null, which represents unknown"); note 110
 
 107, 2026-10-20: note text unchanged. the dhokla (a steamed savory cake) and kaju katli (a cashew sweet) glosses had no source in the checks. they now cite Wikipedia. evidence: https://en.wikipedia.org/wiki/Dhokla ("a savoury sponge dish", "steamed to a cake-like consistency"); https://en.wikipedia.org/wiki/Kaju_katli ("an Indian dessert")

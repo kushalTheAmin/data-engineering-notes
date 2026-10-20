@@ -33,7 +33,7 @@ i assumed NOT was a clean mirror where every row lands on one side, and a null r
 
 this bites in real reports: "orders where status is not delivered" quietly loses rows with a null status, if the column allows nulls (the shops doesnt). nothing errors.
 
-NOT also grabs only the one test right after it, and runs before [AND](./108-and-or-combining-two-tests.md), so you flip a group with [parentheses](./109-parentheses-and-runs-before-or.md). the Postgres docs (a popular server database) list NOT above AND.
+NOT also grabs only the one test right after it, and runs before [AND](./108-and-or-combining-two-tests.md), so you flip a group with [parentheses](./109-parentheses-and-runs-before-or.md). the Postgres docs (a server database) list NOT above AND.
 
 ### check yourself
 

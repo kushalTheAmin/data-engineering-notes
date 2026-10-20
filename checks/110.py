@@ -28,4 +28,6 @@ assert con.execute("SELECT (NOT (NULL = 1)) IS NULL, (NULL OR NULL) IS NULL").fe
 # confirmed: "If the result of the condition is true, the row is kept in the output table, otherwise (i.e., if the result is false or null) it is discarded."
 # source: https://duckdb.org/docs/current/sql/expressions/logical_operators
 # confirmed: truth tables give NOT NULL as NULL and NULL OR NULL as NULL
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "In database jargon, PostgreSQL uses a client/server model."
 print("110 ok")
