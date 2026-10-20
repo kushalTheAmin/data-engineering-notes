@@ -28,7 +28,7 @@ price | name
 4.50 | fafda
 ```
 
-in python terms, for every row dictionary you build a new one with only the keys you listed, in that order. product_id and category never make it out. the table itself is untouched, the query only decides what you see. (dhokla is a steamed savory cake, khandvi a rolled gram flour snack, jalebi a syrupy sweet, kaju katli a cashew sweet, masala chai spiced tea, fafda a crunchy chickpea strip.)
+in python terms, for every row dictionary you build a new one with only the keys you listed, in that order. product_id and category never make it out. the table itself is untouched, the query only decides what you see. (dhokla is a steamed savory cake, khandvi a rolled gram flour snack, jalebi a syrupy sweet, kaju katli a cashew sweet, masala chai spiced tea, fafda a crunchy chickpea flour snack.)
 
 now the part i got wrong. i assumed picking one column would give me the distinct values:
 
@@ -46,7 +46,7 @@ drink
 snack
 ```
 
-nope. you get one result row per table row, six, with snack three times. SELECT keeps or drops columns, it never drops rows, so if you only want each category once you need something else, and a later note covers it.
+nope. you get one result row per table row, six, with snack three times. a plain SELECT list keeps or drops columns, it never drops rows (WHERE does that), so if you only want each category once you need something else, and a later note covers it.
 
 this is the usual first surprise when someone asks "what categories do we sell" and gets a wall of repeats.
 
