@@ -1,5 +1,7 @@
 # corrections
 
+117, 2026-10-20: the python example used `sorted` with a `lambda` key and compared pairs, but no earlier note teaches lambda or sort keys, so a reader who knows only functions and lists could not follow it. it now says the key is a one line function that turns a row into a pair, compared first item first. the checks now assert pair comparison. evidence: grep of notes 001 to 116 finds no lambda or key=; python, (1, 9) < (2, 0) and (1, 2) < (1, 3) (checks/117.py)
+
 118, 2026-10-20: said the stored order of the rows is something DuckDB isnt promising, but DuckDB does promise to keep the stored order for a plain read of one table (SELECT from a single table); it is SQL itself that promises no order. it now says DuckDB keeps it for a plain read of one table, but SQL doesnt promise it. evidence: https://duckdb.org/docs/current/sql/dialect/order_preservation ("For many operations, DuckDB preserves the order of rows"; FROM with a single table, SELECT and WHERE "guarantee that the original row order is preserved")
 
 115, 2026-10-20: called IS NULL the one test that can see a null, but IS DISTINCT FROM also treats null as a normal value. it now says a test that can see a null, with IS DISTINCT FROM named as another. evidence: python, city IS NOT DISTINCT FROM NULL returns Esha (checks/115.py); https://www.postgresql.org/docs/current/functions-comparison.html ("these predicates effectively act as though null were a normal data value, rather than unknown")

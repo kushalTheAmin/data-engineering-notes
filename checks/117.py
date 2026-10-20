@@ -16,6 +16,8 @@ py = [("khandvi", "snack", 7.5), ("jalebi", "sweet", 5.0), ("dhokla", "snack", 6
 assert sorted(py, key=lambda r: (r[1], -r[2])) == [("khandvi", "snack", 7.5), ("dhokla", "snack", 6.0), ("jalebi", "sweet", 5.0)]
 # source: https://www.postgresql.org/docs/current/queries-order.html
 # confirmed: the sort runs after the query has produced its output rows; ASC is the default; with several sort expressions, later ones sort rows that tie on earlier ones
+# python compares pairs first item first, second only on a tie
+assert (1, 9) < (2, 0) and (1, 2) < (1, 3)
 # source: https://en.wikipedia.org/wiki/Dhokla
 # confirmed: dhokla is a savoury sponge dish steamed to a cake-like consistency
 # source: https://en.wikipedia.org/wiki/Kaju_katli
