@@ -25,11 +25,11 @@ True
 [('Asha', 'Jersey City'), ('Bhavin', 'Edison')]
 ```
 
-the first connection made the file and wrote two rows, then closed. the second connection is a brand new one, and the rows are still there, because they were saved on [disk](./036-memory-vs-disk.md) and not left in memory (the working space that forgets at power off).
+the first connection made the file, wrote two rows and closed. in the SQL, CREATE TABLE makes an empty table (VARCHAR means text), INSERT INTO adds rows, and SELECT * reads back every column. the second connection is a brand new one, and the rows are still there, because they were saved on [disk](./036-memory-vs-disk.md) and not left in memory (the working space that forgets at power off).
 
-the gotcha: connect with no path, or with ":memory:", and DuckDB keeps everything in memory, so it all vanishes when the program ends. a query that worked and a table that is gone the next morning is usually this. also, only one process at a time may write to a file.
+the gotcha: connect with no path, or with ":memory:", and DuckDB keeps everything in memory, so it all vanishes when the program ends. also, only one running program at a time may write to a file.
 
-i expected a database file to be some sealed special thing, but it is a file like any other, and you can copy it to a friend. SQLite, another database, works the same way, a single file. the next note puts the real shop into one of these and asks it something.
+i expected a sealed special thing, but it is a file like any other, and you can copy it to a friend. SQLite, another database, works the same way, a single file. the next note puts the real shop into one of these and asks it something.
 
 ---
 prev: [101 SQL, you describe the result, the database figures out how](./101-sql-you-describe-the-result.md) | next: [103 your first query against the shop](./103-your-first-query-against-the-shop.md)

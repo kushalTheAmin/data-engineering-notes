@@ -25,6 +25,10 @@ assert len(duckdb.connect(":memory:").execute("SELECT * FROM duckdb_tables()").f
 # confirmed: in-memory mode (":memory:" or no file) loses all data when the process finishes; a path opens or creates a database file
 # source: https://duckdb.org/docs/current/connect/concurrency.html
 # confirmed: in read-write mode one process can both read and write the database
+# source: https://duckdb.org/install/?environment=python
+# confirmed: the page shows the command pip install duckdb
+# source: https://duckdb.org/docs/current/connect/concurrency.html
+# confirmed: "Read-write mode: one process can both read and write to the database."; writing from several processes goes through a separate server (Quack), not the file
 # source: https://www.sqlite.org/onefile.html
 # confirmed: a database in SQLite is a single disk file
 # source: https://duckdb.org/why_duckdb

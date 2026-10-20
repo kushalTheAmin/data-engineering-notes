@@ -10,7 +10,7 @@ crows feet is the notation for those end marks, named after the three-pronged fo
 customers ||--------o{ orders
 ```
 
-you read them by standing on a row and reading the mark at the far end. stand on Asha, look to the orders end: o{ says zero or more orders. stand on order 101, look to the customers end: || says exactly one customer. the four marks, as they look on the left end of a line:
+you read them by standing on a row and reading the mark at the far end. stand on Asha, look to the orders end: o{ says zero or more orders. stand on order 101, look to the customers end: || says exactly one customer. the four marks, on the left end of a line:
 
 ```text
 ||   exactly one
@@ -21,7 +21,7 @@ you read them by standing on a row and reading the mark at the far end. stand on
 
 on the right end they mirror, so }o becomes o{. each end is a pair, the mark touching the box is the most (bar 1, fork many), the other the least (bar 1, circle 0).
 
-i assumed the circle was decoration, but its the 0, and carries the most information, because Esha, customer 5, has no orders at all and the circle is why thats legal. thats the "many includes 0" of [092](./092-relationships-one-customer-many-orders.md).
+i assumed the circle was decoration, but its the 0, because Esha, customer 5, has no orders at all and the circle is why thats legal. thats the "many includes 0" of [092](./092-relationships-one-customer-many-orders.md).
 
 the marks describe the design, not rows. orders.customer_id is NOT NULL, so every order must have a customer and the mark is ||. if it allowed [NULL](./031-null.md), the mark would be |o, zero or one customer.
 
