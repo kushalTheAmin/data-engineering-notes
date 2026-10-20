@@ -22,4 +22,5 @@ assert sorted(py, key=lambda r: (r[1], -r[2])) == [("khandvi", "snack", 7.5), ("
 # confirmed: kaju katli page is categorised Indian desserts and Cashew dishes
 # source: https://en.wikipedia.org/wiki/Fafda
 # confirmed: fafda is rolled, flattened and deep-fried till crispy
+# jalebi gloss (syrupy sweet) as in notes 103/104 usage; Jalebi page lists syrup
 print("117 ok")

@@ -20,7 +20,7 @@ kaju katli | sweet | 12.00
 jalebi | sweet | 5.00
 ```
 
-read it as category first, always. drink, snack, sweet, in alphabetical order, and every row of a category sits together. only inside the 3 snacks (khandvi, a rolled chickpea flour snack, dhokla, a steamed savory cake, and fafda, a crunchy chickpea flour snack) does price get a vote, 7.50, 6.00, 4.50, because DESC flips just that column. kaju katli, a cashew sweet, at 12.00 is the priciest product overall but sits fifth, since sweet comes last alphabetically, and category is sorted first. jalebi, a syrupy sweet, follows it.
+read it as category first, always: drink, snack, sweet, each category together. only inside the 3 snacks (khandvi, a rolled chickpea flour snack, dhokla, a steamed savory cake, and fafda, a crunchy chickpea flour snack) does price get a vote, 7.50, 6.00, 4.50, because DESC flips just that column. kaju katli, a cashew sweet, at 12.00 (jalebi is a syrupy sweet) is the priciest product overall but sits fifth, since sweet comes last alphabetically, and category is sorted first.
 
 in python this is a [list of rows](./079-a-table-rows-are-records-columns-are-fields.md) with a sort key that is a pair (the minus sign is the DESC trick, flipping prices so biggest sorts first):
 
