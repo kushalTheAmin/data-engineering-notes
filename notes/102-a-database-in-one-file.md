@@ -32,4 +32,4 @@ the gotcha: connect with no path, or with ":memory:", and DuckDB keeps everythin
 i expected a database file to be some sealed special thing, but it is a file like any other, and you can copy it to a friend. SQLite, another database, works the same way, a single file. the next note puts the real shop into one of these and asks it something.
 
 ---
-prev: [101 SQL, you describe the result, the database figures out how](./101-sql-you-describe-the-result.md) | next: not written yet
+prev: [101 SQL, you describe the result, the database figures out how](./101-sql-you-describe-the-result.md) | next: [103 your first query against the shop](./103-your-first-query-against-the-shop.md)

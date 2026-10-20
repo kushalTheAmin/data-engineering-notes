@@ -134,6 +134,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
 | splitting into tables | one table per kind of thing, other tables keep only its id | [091](./notes/091-splitting-into-tables.md) |
 | SQL | the language you send a database to ask for rows | [101](./notes/101-sql-you-describe-the-result.md) |
+| SQL dump | a text file of SQL commands that rebuilds a database when run | [103](./notes/103-your-first-query-against-the-shop.md) |
 | SSD | a disk made of chips with no moving parts | [037](./notes/037-disk-is-slow.md) |
 | standard input | stdin, the channel a process reads from, the keyboard by default | [057](./notes/057-standard-input-and-output.md) |
 | standard output | stdout, the channel a process writes to, the screen by default | [057](./notes/057-standard-input-and-output.md) |
