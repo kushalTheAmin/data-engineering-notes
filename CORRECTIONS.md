@@ -1,5 +1,7 @@
 # corrections
 
+107, 2026-10-20: note text unchanged. the claim that a null column fails every test, = and <> included, was only asserted for <>. the checks now assert all six tests against Esha's null city and cite the DuckDB page. evidence: python, Esha is kept by none of the six tests (checks/107.py); https://duckdb.org/docs/current/sql/expressions/comparison_operators ("the output of the comparison is NULL")
+
 106, 2026-10-20: said the match is exact text so 'Delivered' returns zero rows, which reads as true of every database, but MySQL compares text without caring about capitals by default. it now says in DuckDB, with a one line MySQL caveat. evidence: https://dev.mysql.com/doc/refman/8.4/en/case-sensitivity.html ("nonbinary string comparisons are case-insensitive by default"); python, duckdb returns [] for 'Delivered' (checks/106.py)
 
 105, 2026-10-20: note text unchanged. the dhokla gloss had no source in the checks; it now cites Wikipedia. evidence: https://en.wikipedia.org/wiki/Dhokla ("a savoury sponge dish")

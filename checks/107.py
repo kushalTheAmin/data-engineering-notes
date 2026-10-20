@@ -17,4 +17,8 @@ assert con.execute("SELECT count(*) FROM products WHERE price != 6").fetchone()[
 # confirmed: Postgres lists <> as not equal and says != is an alias converted to <> early in parsing
 assert con.execute("SELECT count(*) FROM customers WHERE city <> 'Jersey City'").fetchone()[0] == 2  # Esha (null city) fails <> too
 assert con.execute("SELECT count(*) FROM customers WHERE city = 'Jersey City'").fetchone()[0] == 2
+# a null column fails all six tests, so Esha (null city) is never kept
+assert con.execute("SELECT count(*) FROM customers WHERE name = 'Esha' AND (city = 'a' OR city <> 'a' OR city > 'a' OR city < 'z' OR city >= 'a' OR city <= 'z')").fetchone()[0] == 0
+# source: https://duckdb.org/docs/current/sql/expressions/comparison_operators
+# confirmed: "Whenever either of the input arguments is NULL, the output of the comparison is NULL." and WHERE keeps only true rows (https://duckdb.org/docs/current/sql/query_syntax/where: "specifies any filters to apply to the data")
 print("107 ok")
