@@ -20,4 +20,11 @@ assert list(range(1, 3)) == [1, 2]
 # confirmed: a BETWEEN b AND c is equivalent to a >= b AND a <= c, so both ends are included; NOT BETWEEN is the negation
 # source: https://duckdb.org/docs/current/sql/expressions/comparison_operators
 # confirmed: DuckDB supports BETWEEN and NOT BETWEEN with the same meaning
+assert con.execute("SELECT TIMESTAMP '2026-04-03' = TIMESTAMP '2026-04-03 00:00:00', (SELECT ordered_at FROM orders WHERE order_id = 103) > TIMESTAMP '2026-04-03'").fetchone() == (True, True)
+# same fact as note 027 (a date compared to a timestamp becomes midnight); no docs page states it in words, so the assert above is the proof
+assert q("products", "price BETWEEN 6.00 AND 4.50") == []
+# source: https://www.postgresql.org/docs/current/functions-comparison.html
+# confirmed: BETWEEN does not swap the ends, so a low end above the high end gives an empty range (the low end goes first)
+# source: https://en.wikipedia.org/wiki/Fafda
+# confirmed: "a popular Indian snack native to the western state of Gujarat", made from gram flour and deep-fried till crispy
 print("112 ok")
