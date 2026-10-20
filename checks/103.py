@@ -42,4 +42,6 @@ with tempfile.TemporaryDirectory() as d:
 # confirmed: "Chickpea flour, common varieties include besan or gram flour."
 # source: https://www.postgresql.org/docs/current/app-pgdump.html
 # confirmed: pg_dump script dumps are plain-text files of the SQL commands needed to rebuild the database, restored by feeding them to psql
+# source: https://docs.python.org/3/tutorial/datastructures.html
+# confirmed: tuples are immutable sequences (see Tuples and Sequences)
 print("103 ok")
