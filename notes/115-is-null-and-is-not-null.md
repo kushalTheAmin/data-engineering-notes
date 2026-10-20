@@ -26,4 +26,4 @@ i assumed IS was just a fussy spelling of =, and it turns out to be a different 
 unlike NOT in [110](./110-not-flipping-a-condition.md), these two split the table with nobody lost: 1 row plus 4 rows is the 5 you started with. the Postgres docs say to not write `expression = NULL`, and python is why it tempts you, since `None == None` is True there.
 
 ---
-prev: [114 three valued logic, true, false and unknown](./114-three-valued-logic-true-false-and-unknown.md) | next: not written yet
+prev: [114 three valued logic, true, false and unknown](./114-three-valued-logic-true-false-and-unknown.md) | next: [116 COALESCE, a fallback when a value is NULL](./116-coalesce-a-fallback-when-a-value-is-null.md)

@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 115
+notes so far: 116
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -134,3 +134,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [113 LIKE, matching text patterns](./notes/113-like-matching-text-patterns.md): LIKE 'k%' finds khandvi and kaju katli, and a capital K returns zero rows with no error
 - [114 three valued logic, true, false and unknown](./notes/114-three-valued-logic-true-false-and-unknown.md): Esha has no city, so a test on it is unknown, and a false settles an AND while a true settles an OR
 - [115 IS NULL and IS NOT NULL](./notes/115-is-null-and-is-not-null.md): city = NULL returns zero rows even for Esha, while IS NULL finds her and IS NOT NULL returns the other 4
+- [116 COALESCE, a fallback when a value is NULL](./notes/116-coalesce-a-fallback-when-a-value-is-null.md): COALESCE returns the first non-null value so Eshas city shows unknown, and filling stars with 0 drops the average from 4.0 to 2.4

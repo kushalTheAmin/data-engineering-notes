@@ -24,6 +24,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | carriage return | the 0d character, which sent a typewriter carriage back | [042](./notes/042-line-endings.md) |
 | character | one letter, digit, space or symbol, stored as one number | [007](./notes/007-text-is-numbers.md) |
 | client | a program that sends a request and waits for the answer | [086](./notes/086-client-and-server.md) |
+| COALESCE | returns the first value in its list that is not null | [116](./notes/116-coalesce-a-fallback-when-a-value-is-null.md) |
 | code point | the number Unicode gives one character, written like U+0AA2 | [009](./notes/009-unicode.md) |
 | column | a fixed position in every row, like position 3 for status | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
 | column type | one data type chosen for a whole column, every value fits it | [080](./notes/080-every-column-holds-one-type.md) |
