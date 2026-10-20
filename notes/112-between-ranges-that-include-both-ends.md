@@ -17,7 +17,7 @@ jalebi | 5.00
 fafda | 4.50
 ```
 
-dhokla, a steamed savory cake, costs exactly 6.00 and fafda, a crunchy gram flour snack, exactly 4.50, and both are in. so `price BETWEEN 4.50 AND 6.00` is the same as `price >= 4.50 AND price <= 6.00`. the low end goes first, and NOT BETWEEN flips the test.
+dhokla, a steamed savory cake, costs exactly 6.00 and fafda, a crunchy chickpea flour snack, exactly 4.50, and both are in. so `price BETWEEN 4.50 AND 6.00` is the same as `price >= 4.50 AND price <= 6.00`. the low end goes first, and NOT BETWEEN flips the test.
 
 i kept reading BETWEEN like a loop with range(), where the last number is left out. here nothing is left out, so you can trust the ends, and dates are the place it bites. a [date with no time](./027-dates-and-times-apart.md) in a range is read as midnight that day:
 

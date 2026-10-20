@@ -24,7 +24,9 @@ assert con.execute("SELECT TIMESTAMP '2026-04-03' = TIMESTAMP '2026-04-03 00:00:
 # same fact as note 027 (a date compared to a timestamp becomes midnight); no docs page states it in words, so the assert above is the proof
 assert q("products", "price BETWEEN 6.00 AND 4.50") == []
 # source: https://www.postgresql.org/docs/current/functions-comparison.html
-# confirmed: BETWEEN does not swap the ends, so a low end above the high end gives an empty range (the low end goes first)
+# confirmed: BETWEEN SYMMETRIC "is like BETWEEN except there is no requirement that the argument to the left of AND be less than or equal to the argument on the right" and swaps them, so plain BETWEEN does not (its table shows 2 BETWEEN 3 AND 1 is f): the low end goes first
 # source: https://en.wikipedia.org/wiki/Fafda
 # confirmed: "a popular Indian snack native to the western state of Gujarat", made from gram flour and deep-fried till crispy
+# source: https://en.wikipedia.org/wiki/Gram_flour
+# confirmed: "Chickpea flour, common varieties include besan or gram flour", so chickpea flour and gram flour are the same flour
 print("112 ok")
