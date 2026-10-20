@@ -1,5 +1,7 @@
 # corrections
 
+114, 2026-10-20: note text unchanged. the check meant to prove python skips the rest of False and anything used 1 / 1, which would pass even if python did not skip it. it now uses 1 / 0, which would raise. evidence: python, False and 1 / 0 is False, while 1 / 0 alone raises ZeroDivisionError (checks/114.py)
+
 115, 2026-10-20: note text unchanged. the claim that IS NULL never comes out unknown was only shown on the one table. the checks now assert true or false for a null and a value, and cite the Postgres operator table. evidence: python, NULL IS NULL is true, 1 IS NULL is false, NULL IS NOT NULL is false, 1 IS NOT NULL is true (checks/115.py); https://www.postgresql.org/docs/current/functions-comparison.html ("datatype IS NULL → boolean Test whether value is null")
 
 113, 2026-10-20: called khandvi a gram flour snack, but 103 and 104 call that flour chickpea flour, and a reader from zero does not know the two names are one flour. it now says chickpea flour. kaju katli a cashew sweet had no source in the checks; they now cite Wikipedia. evidence: https://en.wikipedia.org/wiki/Gram_flour ("Chickpea flour, common varieties include besan or gram flour"); https://en.wikipedia.org/wiki/Kaju_katli ("an Indian dessert", main ingredients cashews, sugar, ghee)

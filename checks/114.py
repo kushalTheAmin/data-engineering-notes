@@ -16,7 +16,7 @@ assert rows["NULL"] == (None, None)
 # the order of the sides does not matter
 assert con.execute("SELECT (true AND NULL::BOOLEAN) IS NULL, (false AND NULL::BOOLEAN), (true OR NULL::BOOLEAN)").fetchone() == (True, False, True)
 # python shortcut
-assert (False and 1 / 1) is False
+assert (False and 1 / 0) is False  # 1 / 0 would raise if python did not skip it
 assert con.execute("SELECT joined_on FROM customers WHERE name = 'Esha'").fetchone()[0].isoformat() == "2026-03-15"
 assert con.execute("SELECT joined_on FROM customers WHERE name = 'Disha'").fetchone()[0].isoformat() == "2026-03-02"
 r = con.execute("SELECT name, city = 'Hoboken', joined_on < DATE '2026-03-01', city = 'Hoboken' AND joined_on < DATE '2026-03-01' FROM customers WHERE name IN ('Disha', 'Esha') ORDER BY customer_id").fetchall()
