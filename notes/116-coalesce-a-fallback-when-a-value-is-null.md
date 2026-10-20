@@ -41,7 +41,7 @@ skips_nulls | filled_with_0
 
 i figured COALESCE was a cosmetic wrapper, and it quietly changed what avg, the average, divides by: 12 over 3 ratings is 4.0, 12 over 5 is 2.4. thats the same wrecked average as the zero filled column in 032, made at query time instead.
 
-COALESCE is in the SQL standard, so Postgres has it too, meant for defaults at display time. use it on the last step, not before you count or average. the next one is sorting, which has its own null surprise.
+COALESCE is in the SQL standard, so Postgres has it too, meant for defaults at display time. use it on the last step, not before you count or average. the next one is sorting.
 
 ---
 prev: [115 IS NULL and IS NOT NULL](./115-is-null-and-is-not-null.md) | next: [117 ORDER BY, sorting by one or more columns](./117-order-by-sorting-by-one-or-more-columns.md)
