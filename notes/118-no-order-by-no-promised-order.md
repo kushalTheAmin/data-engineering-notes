@@ -4,7 +4,7 @@ section: asking questions with SQL, part 18, ~2 min read
 
 i assumed a query with no ORDER BY hands rows back in table order, every time. would you have trusted that too?
 
-it isnt a promise. without [ORDER BY](./117-order-by-sorting-by-one-or-more-columns.md) (the clause that sorts rows), a [query](./101-sql-you-describe-the-result.md) may return rows in any order it likes. here is the products [table](./079-a-table-rows-are-records-columns-are-fields.md) of the shop, the imaginary gujarati snack store these notes run on, in DuckDB, the database these notes run their SQL in:
+it isnt a promise. without [ORDER BY](./117-order-by-sorting-by-one-or-more-columns.md) (the clause that sorts rows), SQL lets a [query](./101-sql-you-describe-the-result.md) return rows in any order it likes. here is the products [table](./079-a-table-rows-are-records-columns-are-fields.md) of the shop, the imaginary gujarati snack store these notes run on, in DuckDB, the database these notes run their SQL in:
 
 ```sql
 SELECT name, category FROM products
@@ -20,7 +20,7 @@ masala chai | drink
 fafda | snack
 ```
 
-tidy here, but thats just the order the rows were stored, and DuckDB isnt promising it. think of the table as a bag of rows (a list has an order, a bag doesnt), and two ways of pulling them out are both correct (dhokla, a steamed savory cake, khandvi and fafda, chickpea flour snacks, jalebi, a syrupy sweet, kaju katli, a cashew sweet):
+tidy here, but thats only the stored order. DuckDB keeps it for a plain read of one table, but SQL doesnt promise it. think of the table as a bag of rows (a list has an order, a bag doesnt), and two ways of pulling them out are both correct (dhokla, a steamed savory cake, khandvi and fafda, chickpea flour snacks, jalebi, a syrupy sweet, kaju katli, a cashew sweet):
 
 ```python
 rows = ["dhokla", "khandvi", "jalebi", "kaju katli", "masala chai", "fafda"]

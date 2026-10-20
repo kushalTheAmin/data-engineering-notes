@@ -1,5 +1,7 @@
 # corrections
 
+118, 2026-10-20: said the stored order of the rows is something DuckDB isnt promising, but DuckDB does promise to keep the stored order for a plain read of one table (SELECT from a single table); it is SQL itself that promises no order. it now says DuckDB keeps it for a plain read of one table, but SQL doesnt promise it. evidence: https://duckdb.org/docs/current/sql/dialect/order_preservation ("For many operations, DuckDB preserves the order of rows"; FROM with a single table, SELECT and WHERE "guarantee that the original row order is preserved")
+
 115, 2026-10-20: called IS NULL the one test that can see a null, but IS DISTINCT FROM also treats null as a normal value. it now says a test that can see a null, with IS DISTINCT FROM named as another. evidence: python, city IS NOT DISTINCT FROM NULL returns Esha (checks/115.py); https://www.postgresql.org/docs/current/functions-comparison.html ("these predicates effectively act as though null were a normal data value, rather than unknown")
 
 116, 2026-10-20: ended by promising that the next note on sorting has its own null surprise, but note 117 shows no nulls at all. it now just says the next one is sorting. evidence: note 117 text and its products table, which has no null

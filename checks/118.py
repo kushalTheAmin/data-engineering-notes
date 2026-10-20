@@ -20,6 +20,8 @@ assert [r[0] for r in snacks] == ["dhokla", "khandvi", "fafda"]
 # postgres is a server database: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model")
 # source: https://www.postgresql.org/docs/current/queries-order.html
 # confirmed: "If sorting is not chosen, the rows will be returned in an unspecified order. The actual order in that case will depend on the scan and join plan types and the order on disk, but it must not be relied on."
+# source: https://duckdb.org/docs/current/sql/dialect/order_preservation
+# confirmed: "For many operations, DuckDB preserves the order of rows"; FROM with a single table, SELECT and WHERE "guarantee that the original row order is preserved"
 # source: https://www.postgresql.org/docs/current/sql-select.html
 # confirmed: "If ORDER BY is not given, the rows are returned in whatever order the system finds fastest to produce."
 # source: https://en.wikipedia.org/wiki/Dhokla
