@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 114 showed a test comes out true, false or unknown, that a false settles an AND and a true settles an OR even when the other side is unknown, and that Esha is kept by NOT (city = 'Hoboken' AND joined before March) because that AND is false. the next box is IS NULL and IS NOT NULL, asking for the unknown rows on purpose
-last visuals: text truth table plus query and result (three valued logic), query and result plus a second query with an empty result (LIKE), query and result plus a second query and result with a missing order (BETWEEN), trace table plus query and result and a second query with an empty result (IN), python block and output plus query and result (NOT)
-last exits: forward (three valued logic), stops (LIKE), stops (BETWEEN), stops (IN), stops (NOT)
-last reactions: i assumed unknown would spread like a stain through everything it touches, and it only spreads when the other side cant settle it, i typed a capital K and got zero rows with no error, so LIKE is exact about letters, i kept reading BETWEEN like python range where the last number is left out, and here nothing is left out, i expected a list to be forgiving about nulls, and a null in the list is where it bites, i assumed NOT was a clean mirror where every row lands on one side, and a null row lands on neither, i expected the database to read left to right like i do, and it quietly grabs the AND first, i kept reading AND as adding more rows, and it can only shrink the answer, i kept feeling that a single = must be assigning something, and in a WHERE it only asks equal, i assumed the filter could only see what i was about to get back, and it sees the whole row, i expected the broken version to be the one that crashes and it was the one that looked fine, i assumed picking one column would give me the distinct values, i expected loading data to need some special import tool, and it is just running a text file
+baton: 115 showed `city = NULL` is unknown for all 5 customers so WHERE returns nothing, while IS NULL is never unknown and returns Esha, and IS NOT NULL returns the other 4. the next box is COALESCE, a fallback when a value is NULL
+last visuals: query and result, three tests side by side (IS NULL), text truth table plus query and result (three valued logic), query and result plus a second query with an empty result (LIKE), query and result plus a second query and result with a missing order (BETWEEN), trace table plus query and result and a second query with an empty result (IN)
+last exits: stops (IS NULL), forward (three valued logic), stops (LIKE), stops (BETWEEN), stops (IN)
+last reactions: i assumed IS was just a fussy spelling of =, and it turns out to be a different kind of test, one that cant be unknown, i assumed unknown would spread like a stain through everything it touches, and it only spreads when the other side cant settle it, i typed a capital K and got zero rows with no error, so LIKE is exact about letters, i kept reading BETWEEN like python range where the last number is left out, and here nothing is left out, i expected a list to be forgiving about nulls, and a null in the list is where it bites, i assumed NOT was a clean mirror where every row lands on one side, and a null row lands on neither, i expected the database to read left to right like i do, and it quietly grabs the AND first, i kept reading AND as adding more rows, and it can only shrink the answer, i kept feeling that a single = must be assigning something, and in a WHERE it only asks equal, i assumed the filter could only see what i was about to get back, and it sees the whole row
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
 
@@ -143,7 +143,7 @@ after this arc: you can pull exactly the rows and columns you want from one tabl
 - [x] BETWEEN: ranges that include both ends ★ (note 112)
 - [x] LIKE: matching text patterns (note 113)
 - [x] three valued logic: true, false and unknown ★ (note 114)
-- [ ] IS NULL and IS NOT NULL
+- [x] IS NULL and IS NOT NULL (note 115)
 - [ ] COALESCE: a fallback when a value is NULL
 - [ ] ORDER BY: sorting by one or more columns
 - [ ] no ORDER BY, no promised order ★

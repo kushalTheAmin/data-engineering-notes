@@ -66,4 +66,4 @@ Disha only. Esha joined exactly on 2026-03-15, so her date test is false, and un
 </details>
 
 ---
-prev: [113 LIKE, matching text patterns](./113-like-matching-text-patterns.md) | next: not written yet
+prev: [113 LIKE, matching text patterns](./113-like-matching-text-patterns.md) | next: [115 IS NULL and IS NOT NULL](./115-is-null-and-is-not-null.md)

@@ -73,6 +73,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | IN | keeps a row if its value equals any item in a list | [111](./notes/111-in-matching-against-a-list.md) |
 | insert anomaly | a fact cant be stored until an unrelated fact exists | [090](./notes/090-insert-and-delete-anomalies.md) |
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |
+| IS NOT NULL | the test that is true when a value is present, never unknown | [115](./notes/115-is-null-and-is-not-null.md) |
+| IS NULL | the test that is true when a value is missing, never unknown | [115](./notes/115-is-null-and-is-not-null.md) |
 | JSON | a text format of records, with a name next to every value | [066](./notes/066-json-records-with-names-on-every-value.md) |
 | JSON array | square brackets around values in order, like a python list | [067](./notes/067-json-types.md) |
 | JSON lines | a text file with one whole JSON record per line | [069](./notes/069-json-lines.md) |
