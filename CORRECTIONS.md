@@ -1,5 +1,7 @@
 # corrections
 
+113, 2026-10-20: note text unchanged. the claim that LIKE compares letters exactly in Postgres was only asserted for DuckDB. the checks now cite the Postgres page that says ILIKE exists to make the match case-insensitive. evidence: https://www.postgresql.org/docs/current/functions-matching.html ("The key word ILIKE can be used instead of LIKE to make the match case-insensitive")
+
 112, 2026-10-20: note text unchanged. the midnight reading of a date in a range, the low end going first, and the fafda gloss had no proof in the checks. they now assert midnight in python, cite the Postgres page that says BETWEEN does not swap its ends (an empty range), and cite Wikipedia for fafda. evidence: https://www.postgresql.org/docs/current/functions-comparison.html ("does not swap the values" so the range is empty); https://en.wikipedia.org/wiki/Fafda; python, TIMESTAMP '2026-04-03' = TIMESTAMP '2026-04-03 00:00:00' is true
 
 110, 2026-10-20: the opening said NOT makes a row that failed now pass, but the note itself later shows a null row is unknown and stays out after NOT. it now says a row that was false now passes. evidence: note 110 own Esha example; https://www.postgresql.org/docs/current/functions-logical.html

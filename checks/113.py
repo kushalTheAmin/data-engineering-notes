@@ -19,6 +19,8 @@ assert con.execute("SELECT city FROM customers WHERE name = 'Esha'").fetchone()[
 # confirmed: _ matches any single character, % any sequence of zero or more characters; ILIKE is the case-insensitive form
 # source: https://duckdb.org/docs/current/sql/functions/pattern_matching
 # confirmed: DuckDB LIKE uses the same _ and % wildcards, and ILIKE matches case-insensitively
+# source: https://www.postgresql.org/docs/current/functions-matching.html
+# confirmed: "The key word ILIKE can be used instead of LIKE to make the match case-insensitive", so plain LIKE in Postgres is case-sensitive; DuckDB says the same of ILIKE and its LIKE is asserted case-sensitive above
 # source: https://en.wikipedia.org/wiki/Khandvi_(food)
 # confirmed: khandvi is a savory snack of Gujarati cuisine whose main ingredient is gram flour (page: Khandvi (food))
 print("113 ok")
