@@ -1,5 +1,7 @@
 # corrections
 
+099, 2026-10-20: check yourself 2 named o{ as the tempting answer, but the question only offers || or |o, so a beginner would not pick o{. the tempting answer is now || (nothing changes because most orders have a customer). evidence: the question text offers only || and |o; https://mermaid.js.org/syntax/entityRelationshipDiagram.html (|o is zero or one)
+
 101, 2026-10-20: said the shop ended the last section as four tables, but data/shop.sql holds 7. it now says four core tables. evidence: python, information_schema lists 7 tables (checks/100.py)
 
 100, 2026-10-20: said the whole shop is four tables you can draw from memory, but the shop also has order_ratings (032), order_notes (063) and order_messages (064), each with a foreign key to orders. it now says the core of the shop, four core tables, and adds a line naming the three side tables. evidence: python, information_schema lists 7 tables and each side table references orders (checks/100.py); data/shop.sql

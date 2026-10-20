@@ -48,7 +48,7 @@ n
 2. the shop adds guest checkout, so orders.customer_id can be NULL. which mark goes at the customers end, || or |o?
 <details><summary>answer</summary>
 
-the |o mark, zero or one customer per order. a guest order has none, and no order has two. the tempting answer is o{, but one order still cant have many customers.
+the |o mark, zero or one customer per order. a guest order has none, and no order has two. the tempting answer is ||, from thinking most orders have a customer so nothing needs to change, but a guest order has none.
 
 </details>
 
