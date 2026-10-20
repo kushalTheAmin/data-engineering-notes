@@ -15,6 +15,8 @@ assert [x[2] for x in r] == [False, False, False, False, True]
 assert [x[3] for x in r] == [True, True, True, True, False]
 assert len(r) == 5
 assert (None == None) is True
+# IS NULL and IS NOT NULL give true or false, never unknown, for a null and for a value
+assert con.execute("SELECT NULL IS NULL, 1 IS NULL, NULL IS NOT NULL, 1 IS NOT NULL").fetchone() == (True, False, False, True)
 # source: https://www.postgresql.org/docs/current/functions-comparison.html
-# confirmed: IS NULL / IS NOT NULL test for a null; "Do not write expression = NULL because NULL is not 'equal to' NULL"
+# confirmed: "datatype IS NULL → boolean  Test whether value is null" and IS NOT NULL likewise, so they return a plain boolean; IS NULL / IS NOT NULL test for a null; "Do not write expression = NULL because NULL is not 'equal to' NULL"
 print("115 ok")
