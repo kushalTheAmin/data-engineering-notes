@@ -31,3 +31,4 @@ assert (1, 9) < (2, 0) and (1, 2) < (1, 3)
 # source: https://en.wikipedia.org/wiki/Gram_flour
 # confirmed: "Chickpea flour, common varieties include besan or gram flour"
 print("117 ok")
+# ORDER BY comes after WHERE and SELECT, but LIMIT (note 120) comes after ORDER BY, so it is not last: https://www.postgresql.org/docs/current/queries-limit.html

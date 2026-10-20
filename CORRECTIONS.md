@@ -1,5 +1,7 @@
 # corrections
 
+117, 2026-10-20: said ORDER BY runs last, but note 120 shows LIMIT running after ORDER BY. it now says ORDER BY runs after WHERE and SELECT. evidence: note 120 (LIMIT 2 after ORDER BY price DESC); https://www.postgresql.org/docs/current/queries-order.html ("After a query has produced an output table (after the select list has been processed) it can optionally be sorted")
+
 120, 2026-10-20: said LIMIT says how many rows to return, which reads as always exactly that many, but it is a maximum and fewer come back when the table runs out. it now says the most rows to return, with fewer coming back if the table runs out. evidence: python, LIMIT 10 on the 6 product rows returns 6 (checks/120.py); https://www.postgresql.org/docs/current/queries-limit.html ("no more than that many rows will be returned (but possibly fewer, if the query itself yields fewer rows)")
 
 117, 2026-10-20: the python example used `sorted` with a `lambda` key and compared pairs, but no earlier note teaches lambda or sort keys, so a reader who knows only functions and lists could not follow it. it now says the key is a one line function that turns a row into a pair, compared first item first. the checks now assert pair comparison. evidence: grep of notes 001 to 116 finds no lambda or key=; python, (1, 9) < (2, 0) and (1, 2) < (1, 3) (checks/117.py)

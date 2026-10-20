@@ -33,7 +33,7 @@ print(sorted(rows, key=lambda r: (r[1], -r[2])))
 [('khandvi', 'snack', 7.5), ('dhokla', 'snack', 6.0), ('jalebi', 'sweet', 5.0)]
 ```
 
-i kept assuming a second sort column gets applied to the whole result, and it never does, it only breaks ties left by the first one. ORDER BY runs last, after [WHERE](./106-where-keeping-only-the-rows-that-match.md) has dropped rows and [SELECT](./104-select-and-from-picking-columns.md) has picked columns, so it sorts only what is left.
+i kept assuming a second sort column gets applied to the whole result, and it never does, it only breaks ties left by the first one. ORDER BY runs after [WHERE](./106-where-keeping-only-the-rows-that-match.md) has dropped rows and [SELECT](./104-select-and-from-picking-columns.md) has picked columns, so it sorts only what is left.
 
 ---
 prev: [116 COALESCE, a fallback when a value is NULL](./116-coalesce-a-fallback-when-a-value-is-null.md) | next: [118 no ORDER BY, no promised order](./118-no-order-by-no-promised-order.md)
