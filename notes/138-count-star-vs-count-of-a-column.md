@@ -65,4 +65,4 @@ both counts are 5, so it claims every order was rated. it should be 3 out of 5, 
 </details>
 
 ---
-prev: [137 aggregate functions, many rows in, one value out](./137-aggregate-functions-many-rows-in-one-value-out.md) | next: not written yet
+prev: [137 aggregate functions, many rows in, one value out](./137-aggregate-functions-many-rows-in-one-value-out.md) | next: [139 COUNT DISTINCT, counting different values](./139-count-distinct-counting-different-values.md)

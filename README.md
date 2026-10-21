@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 138
+notes so far: 139
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -160,3 +160,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 
 - [137 aggregate functions, many rows in, one value out](./notes/137-aggregate-functions-many-rows-in-one-value-out.md): count, sum and max turn 13 order_items rows into one row, and summing zero rows gives NULL, not 0
 - [138 COUNT star vs COUNT of a column](./notes/138-count-star-vs-count-of-a-column.md): count(*) counts rows, count(stars) skips the nulls, so the same 5 ratings give 5 or 3
+- [139 COUNT DISTINCT, counting different values](./notes/139-count-distinct-counting-different-values.md): 7 orders but count(DISTINCT customer_id) is 4, and unlike SELECT DISTINCT it skips nulls
