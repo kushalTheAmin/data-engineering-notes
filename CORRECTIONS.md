@@ -1,5 +1,7 @@
 # corrections
 
+142, 2026-10-21: note text unchanged. the check cited the masala chai Wikipedia page for flavoured Indian tea, but the page says a beverage originating from India whose name translates roughly to mixed-spice tea. the source line now says that. evidence: https://en.wikipedia.org/wiki/Masala_chai ("a popular beverage originating from India", name translates roughly to "mixed-spice tea")
+
 142, 2026-10-21: said min and max on text give first and last alphabetically, but DuckDB sorts text by its binary contents, so a capital letter comes before any lowercase one and min of a, B, c is B. it now says first and last in sort order, and DuckDB puts capital letters before lowercase. evidence: python, min and max over a, B, c in DuckDB give (B, c) (checks/142.py); https://duckdb.org/docs/2.0/sql/expressions/collations.html ("By default, the BINARY collation is used. That means that strings are ordered and compared based only on their binary contents.")
 
 138, 2026-10-21: the last paragraph named Postgres without saying what it is, so a reader landing on this note alone could not place it, while 139 to 142 all gloss it. it now says the docs of Postgres, a server database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model")

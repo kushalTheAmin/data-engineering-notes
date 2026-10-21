@@ -30,6 +30,6 @@ assert best == 12.0
 # source: https://en.wikipedia.org/wiki/Dhokla
 # confirmed: dhokla is "steamed to a cake-like consistency"
 # source: https://en.wikipedia.org/wiki/Masala_chai
-# confirmed: flavoured Indian tea (spiced tea redirects to this page)
+# confirmed: masala chai is "a popular beverage originating from India", its name translating roughly to "mixed-spice tea", so spiced tea
 # source: https://duckdb.org/docs/2.0/sql/expressions/collations.html
 # confirmed: "By default, the BINARY collation is used. That means that strings are ordered and compared based only on their binary contents."
