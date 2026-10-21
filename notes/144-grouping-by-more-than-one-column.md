@@ -54,4 +54,4 @@ customer_id | status | n
 </details>
 
 ---
-prev: [143 GROUP BY, one group per value](./143-group-by-one-group-per-value.md) | next: not written yet
+prev: [143 GROUP BY, one group per value](./143-group-by-one-group-per-value.md) | next: [145 the GROUP BY rule, every column is grouped or aggregated](./145-the-group-by-rule-every-column-is-grouped-or-aggregated.md)
