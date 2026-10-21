@@ -19,6 +19,15 @@ assert q("SELECT date_diff('month', DATE '2026-01-31', DATE '2026-02-01')") == [
 # confirmed: date_diff(part, startdate, enddate) is "the number of part boundaries between startdate and enddate"
 # source: https://www.postgresql.org/docs/current/functions-datetime.html
 # confirmed: date '2001-10-01' - date '2001-09-28' gives 3 (days elapsed)
+# over calendar gaps 0 to 5 days, the readings differ only at a gap of 2 days with delivery later in the day
+dis = set()
+for gap in range(6):
+    for ph in range(24):
+        for dh in range(24):
+            p, v = datetime.datetime(2026, 4, 1, ph), datetime.datetime(2026, 4, 1 + gap, dh)
+            if (v - p <= datetime.timedelta(days=2)) != ((v.date() - p.date()).days <= 2):
+                dis.add((gap, dh > ph))
+assert dis == {(2, True)}
 # date_diff day vs elapsed time disagree on "within 2 days" only when the delivery clock time is later than the order clock time
 for ph in range(24):
     for dh in range(24):

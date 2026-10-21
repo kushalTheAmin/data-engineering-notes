@@ -30,9 +30,9 @@ days
 2
 ```
 
-so if you want elapsed time, subtract the timestamps and read the interval. if you want calendar days apart, like "how many days late is this", use date_diff or cast to dates first. months work the same way, so Jan 31 to Feb 1 is 1 month by date_diff.
+for elapsed time, subtract the timestamps. if you want calendar days apart, like "how many days late is this", use date_diff or cast to dates first. months work the same way, so Jan 31 to Feb 1 is 1 month by date_diff.
 
-this bites in reports like "orders delivered within 2 days", where the two readings quietly disagree whenever the delivery comes later in the day than the order did.
+this bites in reports like "orders delivered within 2 days", where the two readings disagree for a delivery two calendar days after the order, if it comes later in the day than the order did.
 
 ---
 prev: [128 adding and subtracting intervals](./128-adding-and-subtracting-intervals.md) | next: [130 NULLIF and dividing by zero](./130-nullif-and-dividing-by-zero.md)
