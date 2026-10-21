@@ -45,4 +45,4 @@ the gotcha is that SQL counts from 1 (for starts of 1 or more), python counts fr
 this is how you trim a messy code down to its first few characters. if a label in your report ever shows NULL, look for a null in one of the pieces. the concat function skips nulls instead, in Postgres and DuckDB.
 
 ---
-prev: [124 text functions, lower, upper, length and trim](./124-text-functions-lower-upper-length-and-trim.md) | next: not written yet
+prev: [124 text functions, lower, upper, length and trim](./124-text-functions-lower-upper-length-and-trim.md) | next: [126 date parts, pulling out the year, month and day](./126-date-parts-pulling-out-the-year-month-and-day.md)

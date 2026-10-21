@@ -46,6 +46,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | data type | the kind of value a field allows, like text or number | [076](./notes/076-data-types-in-a-schema.md) |
 | database | a program that owns the data files, changing them only on request | [082](./notes/082-a-database-guards-the-data.md) |
 | date | a calendar day with no time of day | [027](./notes/027-dates-and-times-apart.md) |
+| date part | one piece of a date, like its year, as a number | [126](./notes/126-date-parts-pulling-out-the-year-month-and-day.md) |
 | daylight saving | clocks shifting an hour twice a year in many places | [024](./notes/024-utc.md) |
 | decompress | rebuild the original bytes from compressed ones, costing processor work | [048](./notes/048-compression-trades-processor-for-space.md) |
 | delete anomaly | removing one fact also removes another that lived only in that row | [090](./notes/090-insert-and-delete-anomalies.md) |
