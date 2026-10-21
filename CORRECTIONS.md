@@ -1,5 +1,7 @@
 # corrections
 
+133, 2026-10-21: defined TRY_CAST as if every database has it, but Postgres has no TRY_CAST. it now says DuckDB has it and Postgres, a server database, doesnt. evidence: https://www.postgresql.org/docs/current/bookindex.html (the full index of the Postgres docs has no TRY_CAST entry)
+
 132, 2026-10-21: said CSV exports are full of text that looks like numbers without saying what CSV is, so a reader landing on this note could not follow. it now says text files with values split by commas. evidence: https://en.wikipedia.org/wiki/Comma-separated_values ("a plain text data format for storing tabular data where the fields (values) of a record are separated by a comma"); glossary.md CSV entry
 
 133, 2026-10-21: said DECIMAL(6, 2) means a number with 2 digits after the point, which left out the 6, so the later answer about a number that does not fit the type had nothing to rest on. it now says at most 6 digits, 2 of them after the point. the checks now assert that 9999.99 fits and 12345.67 gives null. evidence: python, TRY_CAST('12345.67' AS DECIMAL(6, 2)) is NULL; note 022 (at most 6 digits in total, 2 after the point)

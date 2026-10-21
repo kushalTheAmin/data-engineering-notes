@@ -4,7 +4,7 @@ section: asking questions with SQL, part 33, ~2 min read
 
 what does CAST do when the text isnt a number at all? it doesnt return something weird, it blows up the whole query.
 
-TRY_CAST(value AS type) is [CAST](./132-cast-changing-a-values-type.md) (change a values type) that returns [null](./031-null.md), the missing-value marker, when the value cant be converted.
+TRY_CAST(value AS type) is [CAST](./132-cast-changing-a-values-type.md) (change a values type) that returns [null](./031-null.md), the missing-value marker, when the value cant be converted. DuckDB has it, Postgres, a server database, doesnt.
 
 the shop, the imaginary gujarati snack store these notes run on, got a supplier price list typed by hand, so every price is text. jalebi says n/a, and kaju katli says 12,00, a comma as the decimal mark. the whole list is 5 rows.
 

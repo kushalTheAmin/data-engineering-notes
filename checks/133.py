@@ -17,6 +17,10 @@ assert [r[0] for r in con.execute("SELECT name FROM price_export WHERE TRY_CAST(
 assert con.execute("SELECT TRY_CAST('12.5' AS INTEGER), TRY_CAST('twelve' AS INTEGER)").fetchone() == (13, None)
 # source: https://duckdb.org/docs/current/sql/data_types/typecasting.html
 # confirmed: "TRY_CAST can be used to convert the value into NULL instead of throwing an error"
+# source: https://www.postgresql.org/docs/current/bookindex.html
+# confirmed: the full index of the Postgres docs has no TRY_CAST entry (it lists COALESCE and date_trunc), so Postgres has no TRY_CAST
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model"
 assert con.execute("SELECT TRY_CAST('99999' AS DECIMAL(6, 2))").fetchone() == (None,)
 # DECIMAL(6, 2): at most 6 digits in total, 2 after the point (see note 022)
 assert con.execute("SELECT TRY_CAST('9999.99' AS DECIMAL(6, 2)), TRY_CAST('12345.67' AS DECIMAL(6, 2))").fetchone()[1] is None
