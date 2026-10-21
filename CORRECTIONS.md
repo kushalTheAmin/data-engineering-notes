@@ -1,5 +1,7 @@
 # corrections
 
+135, 2026-10-21: said every time a note said in DuckDB, that was a dialect warning, but note 113 says in DuckDB and in Postgres about LIKE being case exact, so no difference between the two. it now says that is often a dialect warning. the checks now also cite the MySQL pages for MySQL having LIMIT, no FETCH FIRST, and being a client/server system. evidence: note 113 ("in DuckDB and in Postgres"); https://dev.mysql.com/doc/refman/8.4/en/select.html (syntax block has LIMIT, no FETCH FIRST); https://dev.mysql.com/doc/refman/8.4/en/what-is-mysql.html ("client/server system")
+
 134, 2026-10-21: note text unchanged. the logical order of clauses, the claim that Postgres is a server database and the dhokla, khandvi and fafda glosses had no source in the checks. they now cite the Postgres and Wikipedia pages. evidence: https://www.postgresql.org/docs/current/sql-select.html (FROM, WHERE, output expressions, ORDER BY, LIMIT in that processing order); https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); https://en.wikipedia.org/wiki/Khandvi_(food) ("tightly rolled", "primarily made of gram flour and yogurt")
 
 133, 2026-10-21: defined TRY_CAST as if every database has it, but Postgres has no TRY_CAST. it now says DuckDB has it and Postgres, a server database, doesnt. evidence: https://www.postgresql.org/docs/current/bookindex.html (the full index of the Postgres docs has no TRY_CAST entry)

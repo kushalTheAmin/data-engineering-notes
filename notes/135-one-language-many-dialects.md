@@ -33,7 +33,7 @@ SELECT TOP 2 name, price FROM products ORDER BY price DESC;
 
 i assumed a standard meant everyone follows it, and LIMIT, the one i use daily, isnt even in it. the Postgres docs call LIMIT and OFFSET Postgres-specific syntax that MySQL also uses.
 
-and this was the fourth time. [131](./131-integer-division-when-7-divided-by-2-gives-3.md) had / differ, [125](./125-concatenating-text-and-taking-pieces-of-it.md) had || differ, [119](./119-where-nulls-land-when-you-sort.md) had nulls sorting differently. every time a note said "in DuckDB", that was a dialect warning.
+and this was the fourth time. [131](./131-integer-division-when-7-divided-by-2-gives-3.md) had / differ, [125](./125-concatenating-text-and-taking-pieces-of-it.md) had || differ, [119](./119-where-nulls-land-when-you-sort.md) had nulls sorting differently. when a note says "in DuckDB", that is often a dialect warning.
 
 so when you move a query between databases, the core survives and the edges are what you recheck, and a tutorial for one database is only a tutorial for that one.
 

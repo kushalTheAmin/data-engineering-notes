@@ -17,4 +17,8 @@ except Exception as e:
 # confirmed: "The clauses LIMIT and OFFSET are PostgreSQL-specific syntax, also used by MySQL. The SQL:2008 standard has introduced the clauses OFFSET ... FETCH {FIRST|NEXT} ..."; PostgreSQL supports both
 # source: https://learn.microsoft.com/en-us/sql/t-sql/queries/top-transact-sql
 # confirmed: SQL Server limits rows with TOP (expression); applies to SQL Server and Azure SQL
+# source: https://dev.mysql.com/doc/refman/8.4/en/select.html
+# confirmed: MySQL SELECT syntax has [LIMIT {[offset,] row_count | row_count OFFSET offset}] and no FETCH FIRST clause
+# source: https://dev.mysql.com/doc/refman/8.4/en/what-is-mysql.html
+# confirmed: "The MySQL Database Software is a client/server system"
 print("135 ok")
