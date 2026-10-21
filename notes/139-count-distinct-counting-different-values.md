@@ -43,7 +43,7 @@ rows_in | with_city | cities
 5 | 4 | 3
 ```
 
-4 cities filled in, but Jersey City appears twice, so 3 different ones. i assumed the null would count as its own value, since SELECT DISTINCT city in 121 keeps one null row. count(DISTINCT) skips it, just like count(column) did.
+4 cities filled in, but Jersey City appears twice, so 3 different ones. i assumed the null would count as its own value, since DISTINCT in 121 collapses nulls into one kept row. count(DISTINCT) skips it, just like count(column) did.
 
 so what: this is how you ask "how many customers" or "how many products sold" and not "how many rows". the docs of Postgres, a server database, say it directly, count(distinct f1) yields the number of distinct non-null values of f1.
 

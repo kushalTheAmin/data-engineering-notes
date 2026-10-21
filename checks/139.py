@@ -14,6 +14,6 @@ assert (len(ids), len(seen)) == (7, 4)
 assert ids.count(1) == 3 and ids.count(2) == 2
 assert q("SELECT count(*), count(DISTINCT customer_id) FROM orders") == [(7, 4)]
 assert q("SELECT count(*), count(city), count(DISTINCT city) FROM customers") == [(5, 4, 3)]
-assert (None,) in q("SELECT DISTINCT city FROM customers")
+assert q("SELECT DISTINCT city FROM customers").count((None,)) == 1
 # source: https://www.postgresql.org/docs/current/sql-expressions.html
 # confirmed: "count(distinct f1) yields the number of distinct non-null values of f1"
