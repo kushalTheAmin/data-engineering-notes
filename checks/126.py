@@ -15,4 +15,6 @@ assert q("SELECT count(DISTINCT extract(year FROM ordered_at)) FROM orders") == 
 # source: https://www.postgresql.org/docs/current/functions-datetime.html
 # confirmed: EXTRACT(field FROM source) retrieves subfields such as year, month, day from date/time values
 # source: https://duckdb.org/docs/current/sql/functions/date
-# confirmed: DuckDB date functions include extract(part FROM date), month(date) and year(date)
+# confirmed: extract(part FROM date) "Get subfield from a date."
+# source: https://duckdb.org/docs/current/sql/functions/datepart
+# confirmed: month(date) "Month." and year(date) "Year."
