@@ -52,7 +52,7 @@ even_part
 
 </details>
 
-2. in Postgres, april 4 has cancelled = 1 and placed = 2 in two integer columns. what does cancelled / placed return, and what is one fix?
+2. in Postgres, a day has cancelled = 1 and placed = 2 in two integer columns. what does cancelled / placed return, and what is one fix?
 <details><summary>answer</summary>
 
 0, because both sides are integers so the 0.5 is cut off. the tempting answer is 0.5. a fix is making one side a decimal, for example 1.0 * cancelled / placed.

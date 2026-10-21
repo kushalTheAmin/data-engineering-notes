@@ -1,5 +1,7 @@
 # corrections
 
+131, 2026-10-21: the second question said april 4 has cancelled = 1 and placed = 2, but in the shop april 4 has placed 1 and cancelled 1 (note 130 shows it), and 1 / 1 is 1 even in Postgres, not 0. it now says a day has cancelled = 1 and placed = 2. evidence: python, daily_orders row for 2026-04-04 is (1, 1); note 130 slice
+
 130, 2026-10-21: note text unchanged. the nan on 0 / 0 had no source. the checks now cite the DuckDB configuration page. evidence: https://duckdb.org/docs/current/configuration/overview (ieee_floating_point_ops, default true, "returning NAN instead of errors/NULL")
 
 129, 2026-10-21: said the elapsed-time and date_diff readings of within 2 days disagree whenever the delivery comes later in the day than the order did, but that only holds for a delivery two calendar days after the order (one day later or three days later, both readings agree). it now says they disagree for a delivery two calendar days after the order, if it comes later in the day. the earlier fix tested only a fixed 2 day gap. evidence: python, over calendar gaps 0 to 5 and every pair of hours the readings differ only at gap 2 with the later clock time (checks/129.py)
