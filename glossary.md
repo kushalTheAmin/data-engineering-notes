@@ -24,6 +24,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | byte in hex | a byte is always exactly two hex digits, 00 to ff | [006](./notes/006-one-byte-two-hex-digits.md) |
 | carriage return | the 0d character, which sent a typewriter carriage back | [042](./notes/042-line-endings.md) |
 | CASE WHEN | an if, elif, else per row, the first true test wins | [123](./notes/123-case-when-if-and-else-inside-a-query.md) |
+| CAST | converts a value to another type, written CAST(x AS type) | [132](./notes/132-cast-changing-a-values-type.md) |
 | character | one letter, digit, space or symbol, stored as one number | [007](./notes/007-text-is-numbers.md) |
 | client | a program that sends a request and waits for the answer | [086](./notes/086-client-and-server.md) |
 | COALESCE | returns the first value in its list that is not null | [116](./notes/116-coalesce-a-fallback-when-a-value-is-null.md) |

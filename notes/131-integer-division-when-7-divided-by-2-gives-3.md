@@ -60,4 +60,4 @@ even_part
 </details>
 
 ---
-prev: [130 NULLIF and dividing by zero](./130-nullif-and-dividing-by-zero.md) | next: not written yet
+prev: [130 NULLIF and dividing by zero](./130-nullif-and-dividing-by-zero.md) | next: [132 CAST, changing a values type](./132-cast-changing-a-values-type.md)
