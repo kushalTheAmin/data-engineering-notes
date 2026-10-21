@@ -35,3 +35,6 @@ assert 2 ** 31 - 1 == 2147483647
 # source: https://duckdb.org/docs/current/sql/data_types/numeric.html
 #   TINYINT is 1 byte, -2^7 to 2^7 - 1; values outside the allowed range result in an error
 print("016 ok")
+
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database; the note no longer calls it popular, which no page here supports

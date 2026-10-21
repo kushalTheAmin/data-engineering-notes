@@ -17,7 +17,7 @@ the add did nothing odd, the 1s just carried left until they hit the leftmost pl
 
 thats the quiet kind of bug, and you can hit it in any language that wraps. in 2014 YouTube said "Gangnam Style" passed 2147483647 views, the top of a 32 bit integer, and moved to 64 bit: https://en.wikipedia.org/wiki/Gangnam_Style
 
-databases are stricter. DuckDB, the database these notes use, raises an error instead, and Postgres, a popular server database, does too. TINYINT is DuckDBs 8 bit integer:
+databases are stricter. DuckDB, the database these notes use, raises an error instead, and Postgres, a server database, does too. TINYINT is DuckDBs 8 bit integer:
 
 ```sql
 -- fails on purpose
