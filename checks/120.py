@@ -16,3 +16,11 @@ assert len(q("SELECT name FROM products ORDER BY price DESC LIMIT 10")) == 6
 # confirmed: "no more than that many rows will be returned (but possibly fewer, if the query itself yields fewer rows)"
 # confirmed: LIMIT without ORDER BY gives an unpredictable subset; rows skipped by OFFSET still have to be computed, so a large OFFSET might be inefficient
 # confirmed: "The rows skipped by an OFFSET clause still have to be computed inside the server; therefore a large OFFSET might be inefficient" (so can get slow, not always)
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "In database jargon, PostgreSQL uses a client/server model."
+# source: https://en.wikipedia.org/wiki/Dhokla
+# confirmed: dhokla is a savoury sponge dish steamed to a cake-like consistency
+# source: https://en.wikipedia.org/wiki/Kaju_katli
+# confirmed: kaju katli is an Indian dessert made from cashews
+# source: https://en.wikipedia.org/wiki/Jalebi
+# confirmed: "a common sweet snack", fried batter "soaked in sugar syrup"

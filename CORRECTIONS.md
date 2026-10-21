@@ -1,5 +1,7 @@
 # corrections
 
+120, 2026-10-21: note text unchanged. the dhokla, kaju katli and jalebi glosses and the claim that Postgres is a server database had no source in the checks. they now cite Wikipedia and the Postgres docs. evidence: https://en.wikipedia.org/wiki/Jalebi ("a common sweet snack", "soaked in sugar syrup"); https://en.wikipedia.org/wiki/Kaju_katli; https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model")
+
 119, 2026-10-21: note text unchanged. the claim that Postgres is a server database had no source in the checks. it now cites the Postgres docs. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model")
 
 121, 2026-10-20: said the 6 categories were snack, snack, sweet, sweet, drink, snack, but there are only 3 categories, those are 6 category values. it now says the 6 category values. evidence: python, 6 category values and 3 distinct ones in data/shop.sql (checks/121.py)
