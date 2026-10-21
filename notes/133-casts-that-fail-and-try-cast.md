@@ -79,4 +79,4 @@ not null, a is 13. DuckDB reads 12.5 as a number and rounds it, the way [132](./
 </details>
 
 ---
-prev: [132 CAST, changing a values type](./132-cast-changing-a-values-type.md) | next: not written yet
+prev: [132 CAST, changing a values type](./132-cast-changing-a-values-type.md) | next: [134 the order SQL really runs in](./134-the-order-sql-really-runs-in.md)

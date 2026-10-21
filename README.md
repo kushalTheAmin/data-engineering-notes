@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 133
+notes so far: 134
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -152,3 +152,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [131 integer division, when 7 / 2 gives 3](./notes/131-integer-division-when-7-divided-by-2-gives-3.md): DuckDB / gives 3.5 and // gives 3, while Postgres makes / on two integers drop the fraction
 - [132 CAST, changing a values type](./notes/132-cast-changing-a-values-type.md): CAST(7.50 AS INTEGER) gives 8 in DuckDB, not pythons 7, and the text '9' sorts after '10' until you cast it
 - [133 casts that fail, and TRY_CAST](./notes/133-casts-that-fail-and-try-cast.md): CAST on n/a kills the whole query, TRY_CAST returns null instead, and 12,00 with a comma quietly becomes null too
+- [134 the order SQL really runs in](./notes/134-the-order-sql-really-runs-in.md): a query runs FROM, WHERE, SELECT, ORDER BY, LIMIT, so an AS name works in ORDER BY but not in a Postgres WHERE
