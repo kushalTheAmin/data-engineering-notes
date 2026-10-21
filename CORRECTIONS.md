@@ -1,5 +1,7 @@
 # corrections
 
+138, 2026-10-21: the second question said someone wrote count(stars_zero_filled) * 100.0 / count(*) and asked what it returns, but the query shown was the fixed count(stars) one, so a reader running it got 60.0, not the 100.0 the answer gave. the question now shows the broken query, the answer says it returns 100.0 and the fix gives 60.0. the checks now assert the broken query too. evidence: python, count(stars_zero_filled) * 100.0 / count(*) over order_ratings is 100.0, count(stars) version is 60.0 (checks/138.py)
+
 136, 2026-10-21: note text unchanged. the jalebi, kaju katli, dhokla and khandvi glosses and the fafda chickpea flour gloss had no source in the checks. they now cite the Wikipedia pages. evidence: https://en.wikipedia.org/wiki/Jalebi ("soaked in sugar syrup"); https://en.wikipedia.org/wiki/Kaju_katli ("Kaju means cashew"); https://en.wikipedia.org/wiki/Dhokla ("steamed to a cake-like consistency", rice with Bengal gram, a variety of chickpea); https://en.wikipedia.org/wiki/Fafda ("gram flour, oil, carom seeds")
 
 134, 2026-10-21: said the database may shuffle the real steps and the answer stays the same, but no page backs that and the Postgres SELECT page only lists the processing steps. the sentence is removed. Postgres is now glossed as a server database at its first mention in the opening line instead of three paragraphs later. evidence: https://www.postgresql.org/docs/current/sql-select.html (lists FROM, WHERE, output expressions, ORDER BY, LIMIT in processing order, no claim about reordering)

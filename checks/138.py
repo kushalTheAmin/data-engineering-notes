@@ -13,6 +13,7 @@ assert q("SELECT count(*), count(stars) FROM order_ratings WHERE stars IS NULL")
 assert q("SELECT count(*), count(stars), count(stars_zero_filled) FROM order_ratings WHERE order_id >= 105") == [(2, 1, 2)]
 assert q("SELECT count(stars_zero_filled) * 100.0 / count(*) FROM order_ratings") == [(100.0,)]
 assert q("SELECT count(stars) * 100.0 / count(*) FROM order_ratings") == [(60.0,)]
+assert q("SELECT count(stars_zero_filled) * 100.0 / count(*) AS pct_rated FROM order_ratings") == [(100.0,)]
 assert 3 * 100.0 / 5 == 60.0
 # source: https://www.postgresql.org/docs/current/functions-aggregate.html
 # confirmed: count(*) "Computes the number of input rows"; count("any") "Computes the number of input rows in which the input value is not null"

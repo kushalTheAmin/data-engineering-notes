@@ -50,17 +50,17 @@ order 107 has null stars, so only 105 counts for c. z counts both, because 0 is 
 
 </details>
 
-2. the owner wants the share of delivered orders that were rated, as a percent. someone wrote count(stars_zero_filled) * 100.0 / count(*). what does it return, and what should it be?
+2. the owner wants the share of delivered orders that were rated, as a percent. someone wrote the query below. what does it return, and what should it be?
 ```sql
-SELECT count(stars) * 100.0 / count(*) AS pct_rated FROM order_ratings
+SELECT count(stars_zero_filled) * 100.0 / count(*) AS pct_rated FROM order_ratings
 ```
 <details><summary>answer</summary>
 
 ```result
 pct_rated
-60.0
+100.0
 ```
-the broken one returns 100.0, since both counts are 5. the fixed one is 3 out of 5, so 60.0. the tempting answer is that they match, because both columns look like ratings.
+both counts are 5, so it claims every order was rated. it should be 3 out of 5, so count(stars) gives 60.0. the tempting answer is 60.0 already, because both columns look like ratings.
 
 </details>
 
