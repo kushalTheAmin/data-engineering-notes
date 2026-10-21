@@ -35,7 +35,7 @@ fafda | 4.50 | 5 | 4.50
 
 i assumed casting to integer chopped off the decimals like python does, and in DuckDB it rounds. 7.50 becomes 8, 4.50 becomes 5. VARCHAR (text) keeps every digit, it just stops being a number.
 
-this bites with text that looks like numbers, which CSV exports are full of. as text, '9' is less than '10' comes out false, because text compares one [character](./007-text-is-numbers.md) at a time and 9 beats 1:
+this bites with text that looks like numbers, which CSV exports (text files with values split by commas) are full of. as text, '9' is less than '10' comes out false, because text compares one [character](./007-text-is-numbers.md) at a time and 9 beats 1:
 
 ```sql
 SELECT '9' < '10' AS as_text, CAST('9' AS INTEGER) < CAST('10' AS INTEGER) AS as_numbers

@@ -13,4 +13,6 @@ assert "9" > "10" and 9 < 10
 assert len(rows) == 3
 # source: https://duckdb.org/docs/current/sql/data_types/typecasting.html
 # confirmed: explicit casts use CAST, casting a decimal to an integer rounds ("The number will be rounded"), anything can be cast to VARCHAR
+# source: https://en.wikipedia.org/wiki/Comma-separated_values
+# confirmed: CSV is "a plain text data format for storing tabular data where the fields (values) of a record are separated by a comma"
 print("132 ok")
