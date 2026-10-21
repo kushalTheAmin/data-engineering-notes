@@ -18,3 +18,6 @@ assert round(disk / ssd) == 67
 assert 1000 * disk / 1_000_000_000 == 10
 assert round(disk / ssd, 1) == 66.7
 print("037 ok")
+
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database; the note no longer calls it popular, which no page here supports

@@ -27,7 +27,7 @@ memory hands it over in under two minutes, the SSD makes you wait almost two day
 
 caveat: the table is old and drives have improved, so read it as the size of the gap. and it prices a jump to a random spot; a later note covers reading along a file.
 
-this is why databases keep a chunk of memory for frequently used data, PostgreSQL, a popular server database, has a setting for it called shared_buffers.
+this is why databases keep a chunk of memory for frequently used data, PostgreSQL, a server database, has a setting for it called shared_buffers.
 
 ### check yourself
 
