@@ -2,9 +2,9 @@
 builds on: [104 SELECT and FROM, picking columns](./104-select-and-from-picking-columns.md), [106 WHERE, keeping only the rows that match](./106-where-keeping-only-the-rows-that-match.md), [117 ORDER BY, sorting by one or more columns](./117-order-by-sorting-by-one-or-more-columns.md), [120 LIMIT and OFFSET, paging through rows](./120-limit-and-offset-paging-through-rows.md), [122 computed columns and AS](./122-computed-columns-and-as.md)
 section: asking questions with SQL, part 34, ~2 min read
 
-why can ORDER BY use a name you made with AS, when Postgres refuses the same name in WHERE? i assumed SQL runs top to bottom as you write it, so SELECT goes first.
+why can ORDER BY use a name you made with AS, when Postgres, a server database, refuses the same name in WHERE? i assumed SQL runs top to bottom as you write it, so SELECT goes first.
 
-it doesnt. a query runs its clauses in a fixed logical order, FROM, WHERE, SELECT, ORDER BY, LIMIT, whatever order you type them in (the database may shuffle the real steps, the answer stays the same). here is a query on the products of the shop, the imaginary gujarati snack store these notes run on, (dhokla and khandvi are steamed and rolled chickpea snacks, fafda a crunchy one), and what is left after each clause:
+it doesnt. a query runs its clauses in a fixed logical order, FROM, WHERE, SELECT, ORDER BY, LIMIT, whatever order you type them in. here is a query on the products of the shop, the imaginary gujarati snack store these notes run on, (dhokla and khandvi are steamed and rolled chickpea snacks, fafda a crunchy one), and what is left after each clause:
 
 | step | clause | rows left | what is there |
 |---|---|---|---|
@@ -24,7 +24,7 @@ fafda | 3.50
 dhokla | 5.00
 ```
 
-[FROM](./104-select-and-from-picking-columns.md) names the table, [WHERE](./106-where-keeping-only-the-rows-that-match.md) drops rows, [SELECT](./104-select-and-from-picking-columns.md) picks and builds columns, [ORDER BY](./117-order-by-sorting-by-one-or-more-columns.md) sorts, [LIMIT](./120-limit-and-offset-paging-through-rows.md) cuts. at step 2 sale_price doesnt exist yet, which is why the docs of Postgres, a server database, say an [AS name](./122-computed-columns-and-as.md) works in ORDER BY but not in WHERE (there you write the expression out again). DuckDB is friendlier, as 122 said, so dont count on it elsewhere.
+[FROM](./104-select-and-from-picking-columns.md) names the table, [WHERE](./106-where-keeping-only-the-rows-that-match.md) drops rows, [SELECT](./104-select-and-from-picking-columns.md) picks and builds columns, [ORDER BY](./117-order-by-sorting-by-one-or-more-columns.md) sorts, [LIMIT](./120-limit-and-offset-paging-through-rows.md) cuts. at step 2 sale_price doesnt exist yet, which is why the docs of Postgres say an [AS name](./122-computed-columns-and-as.md) works in ORDER BY but not in WHERE (there you write the expression out again). DuckDB is friendlier, as 122 said, so dont count on it elsewhere.
 
 i expected SELECT to be first, and its third. LIMIT being last matters too: cutting 2 rows before sorting would sort whatever 2 survived, not the cheapest 2.
 
