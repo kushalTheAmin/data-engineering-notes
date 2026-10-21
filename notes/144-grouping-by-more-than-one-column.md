@@ -21,7 +21,7 @@ customer_id | status | n
 
 7 orders became 5 groups. Asha split into two rows, 2 delivered and 1 pending, so the stuck one is finally visible. each [aggregate](./137-aggregate-functions-many-rows-in-one-value-out.md) (many rows in, one value out) now runs per pair, and the counts add back up to 7.
 
-i assumed i would get a row for every customer and status combo, 4 customers times 3 statuses is 12. only the pairs that exist in the data show up, so Bhavin and cancelled has no row, not even a zero.
+i assumed i would get a row for every customer and status combo, 4 customers with orders times 3 statuses is 12. only the pairs that exist in the data show up, so customer 2 and cancelled has no row, not even a zero.
 
 the order of the columns in GROUP BY doesnt change the groups, same 5 pairs either way. it only matters in [ORDER BY](./117-order-by-sorting-by-one-or-more-columns.md) (sorting the rows), where it decides which column sorts first.
 

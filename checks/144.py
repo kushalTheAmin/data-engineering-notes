@@ -9,7 +9,8 @@ assert q("SELECT customer_id, count(*) FROM orders GROUP BY customer_id ORDER BY
 pairs = q("SELECT customer_id, status, count(*) FROM orders GROUP BY customer_id, status ORDER BY 1, 2")
 assert pairs == [(1, "delivered", 2), (1, "pending", 1), (2, "delivered", 2), (3, "cancelled", 1), (4, "delivered", 1)]
 assert len(pairs) == 5 and sum(n for _, _, n in pairs) == 7
-# 4 customers with orders times 3 statuses
+# 4 customers with orders times 3 statuses (the customers table has 5 rows, one never ordered)
+assert q("SELECT count(*) FROM customers") == [(5,)]
 assert q("SELECT count(DISTINCT customer_id) FROM orders") == [(4,)]
 assert q("SELECT count(DISTINCT status) FROM orders") == [(3,)]
 assert 4 * 3 == 12

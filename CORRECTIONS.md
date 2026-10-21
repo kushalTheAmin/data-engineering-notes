@@ -1,5 +1,7 @@
 # corrections
 
+144, 2026-10-21: said 4 customers times 3 statuses is 12, but the shop has 5 customers and only 4 have orders, so a reader landing here could count 15. it also named Bhavin without saying who that is, when the note only knows customer ids. it now says 4 customers with orders, and customer 2 and cancelled has no row. evidence: python, SELECT count(*) FROM customers is 5 and count(DISTINCT customer_id) FROM orders is 4 (checks/144.py); customer 2 is Bhavin in data/shop.sql
+
 143, 2026-10-21: note text unchanged. the claims that GROUP BY collapses rows with the same value, that WHERE runs before the grouping, that groups come in no promised order and that all nulls land in one group had no source in the checks. they now cite the Postgres and SQL Server pages. evidence: https://www.postgresql.org/docs/current/sql-select.html ("WHERE filters individual rows before the application of GROUP BY"); https://learn.microsoft.com/en-us/sql/t-sql/queries/select-group-by-transact-sql ("The GROUP BY clause doesn't order the result set"; "treats all NULL values as equal and collects them into a single group")
 
 142, 2026-10-21: note text unchanged. the check cited the masala chai Wikipedia page for flavoured Indian tea, but the page says a beverage originating from India whose name translates roughly to mixed-spice tea. the source line now says that. evidence: https://en.wikipedia.org/wiki/Masala_chai ("a popular beverage originating from India", name translates roughly to "mixed-spice tea")
