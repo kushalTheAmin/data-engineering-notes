@@ -38,4 +38,4 @@ and this was the fourth time. [131](./131-integer-division-when-7-divided-by-2-g
 so when you move a query between databases, the core survives and the edges are what you recheck, and a tutorial for one database is only a tutorial for that one.
 
 ---
-prev: [134 the order SQL really runs in](./134-the-order-sql-really-runs-in.md) | next: not written yet
+prev: [134 the order SQL really runs in](./134-the-order-sql-really-runs-in.md) | next: [136 capstone, one query traced clause by clause](./136-capstone-one-query-traced-clause-by-clause.md)

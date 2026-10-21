@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 135
+notes so far: 136
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -154,3 +154,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [133 casts that fail, and TRY_CAST](./notes/133-casts-that-fail-and-try-cast.md): CAST on n/a kills the whole query, TRY_CAST returns null instead, and 12,00 with a comma quietly becomes null too
 - [134 the order SQL really runs in](./notes/134-the-order-sql-really-runs-in.md): a query runs FROM, WHERE, SELECT, ORDER BY, LIMIT, so an AS name works in ORDER BY but not in a Postgres WHERE
 - [135 one language, many dialects](./notes/135-one-language-many-dialects.md): the first 2 rows is FETCH FIRST in the standard, LIMIT in Postgres and DuckDB, TOP in SQL Server
+- [136 capstone, one query traced clause by clause](./notes/136-capstone-one-query-traced-clause-by-clause.md): one query with 5 clauses, and the rows left after each one, with every note of the section on the map
