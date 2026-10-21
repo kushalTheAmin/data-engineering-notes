@@ -86,4 +86,4 @@ sweet | kaju katli | 12.00
 </details>
 
 ---
-prev: [144 grouping by more than one column](./144-grouping-by-more-than-one-column.md) | next: not written yet
+prev: [144 grouping by more than one column](./144-grouping-by-more-than-one-column.md) | next: [146 HAVING, filtering whole groups](./146-having-filtering-whole-groups.md)

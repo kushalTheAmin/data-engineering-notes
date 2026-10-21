@@ -89,6 +89,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | GROUP BY | makes one group per different value, then one aggregate row each | [143](./notes/143-group-by-one-group-per-value.md) |
 | GROUP BY rule | every SELECT column must be grouped or inside an aggregate | [145](./notes/145-the-group-by-rule-every-column-is-grouped-or-aggregated.md) |
 | grouping by several columns | one group per different combination of the values, only combinations that exist | [144](./notes/144-grouping-by-more-than-one-column.md) |
+| HAVING | a filter on groups, run after GROUP BY, testing an aggregate | [146](./notes/146-having-filtering-whole-groups.md) |
 | head | prints the first lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | header row | the first line of a csv, holding column names instead of data | [065](./notes/065-the-header-row-naming-the-columns.md) |
 | hexadecimal | counting with sixteen digits, a to f standing for ten to fifteen | [005](./notes/005-hexadecimal.md) |
