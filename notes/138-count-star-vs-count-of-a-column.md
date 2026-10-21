@@ -17,7 +17,7 @@ rows_in | rated | zero_filled
 5 | 3 | 5
 ```
 
-same 5 rows, three answers. stars_zero_filled has no nulls to skip, so its count claims all 5 orders were rated. thats the 0 trap from 032 again, just in a count this time.
+same 5 rows, three counts, and the middle one is the odd one out. stars_zero_filled has no nulls to skip, so its count claims all 5 orders were rated. thats the 0 trap from 032 again, just in a count this time.
 
 now only the rows where [stars IS NULL](./115-is-null-and-is-not-null.md) (the test for a missing value):
 
@@ -32,7 +32,7 @@ rows_in | rated
 
 i figured counting only nulls would give NULL, like sum did on no rows in 137. but count never returns null, it gives 0.
 
-so what: count(*) minus count(column) is how many values are missing, a cheap check people run on a fresh table. Postgres docs define them the same way, count(*) counts input rows and count of a column counts rows where the value is not null. the next one is about counting different values, not rows.
+so what: count(*) minus count(column) is how many values are missing, which makes a cheap check on a fresh table. Postgres docs define them the same way, count(*) counts input rows and count of a column counts rows where the value is not null. the next one is about counting different values, not rows.
 
 ### check yourself
 
