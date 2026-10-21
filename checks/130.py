@@ -31,6 +31,8 @@ except ZeroDivisionError:
 # confirmed: NULLIF(value1, value2) returns a null value if value1 equals value2, otherwise value1; described as the inverse of the COALESCE example
 # source: https://www.postgresql.org/docs/current/errcodes-appendix.html
 # confirmed: the error codes list includes division_by_zero, so Postgres raises an error on division by zero
+# source: https://duckdb.org/docs/current/configuration/overview
+# confirmed: ieee_floating_point_ops (default true) "Use IEE754-compliant floating point operations (returning NAN instead of errors/NULL)"
 # source: https://docs.python.org/3/library/exceptions.html
 # confirmed: ZeroDivisionError is a built-in arithmetic error
 print("130 ok")
