@@ -21,3 +21,5 @@ assert q("SELECT name, CASE WHEN city = 'Jersey City' THEN 'local' ELSE 'far' EN
 assert q("SELECT city = 'Jersey City' FROM customers WHERE name = 'Esha'") == [(None,)]
 # source: https://www.postgresql.org/docs/current/functions-conditional.html
 # confirmed: CASE is similar to if/else; the first true condition wins and the rest is not processed; with no ELSE and no true condition the result is null
+# source: https://www.postgresql.org/docs/current/features-sql-standard.html
+# confirmed: the list of SQL standard features Postgres supports has "F261 Core CASE expression" with "F261-02 Core Searched CASE", so CASE WHEN is standard SQL

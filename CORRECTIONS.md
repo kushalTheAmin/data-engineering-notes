@@ -1,5 +1,7 @@
 # corrections
 
+123, 2026-10-21: note text unchanged. the claim that CASE is standard SQL had no source in the checks. it now cites the Postgres list of standard features. evidence: https://www.postgresql.org/docs/current/features-sql-standard.html ("F261 Core CASE expression", "F261-02 Core Searched CASE")
+
 124, 2026-10-21: said strlen gives the 3 bytes as if it works in every database, but strlen is DuckDB only and Postgres counts bytes with octet_length. it now says in DuckDB strlen gives the 3, and Postgres has octet_length for that. the DuckDB length and strlen claims also had no source in the checks; they now cite the DuckDB and Postgres docs. evidence: https://duckdb.org/docs/current/sql/functions/text ("strlen(string): Number of bytes in string"); https://www.postgresql.org/docs/current/functions-string.html (octet_length "Returns number of bytes in the string", no strlen entry)
 
 122, 2026-10-21: called khandvi a rolled gram flour snack, but a reader from zero does not know gram flour is chickpea flour, and the other snack is called chickpea flour. it now says chickpea flour. evidence: https://en.wikipedia.org/wiki/Gram_flour ("Chickpea flour, common varieties include besan or gram flour"); correction 113 made the same fix for the same reason
