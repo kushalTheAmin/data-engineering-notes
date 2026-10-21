@@ -66,4 +66,4 @@ avg(stars) is right, 4.0 for the 3 people who rated. sum over count(*) gives 2.4
 </details>
 
 ---
-prev: [140 SUM and AVG, adding up and averaging](./140-sum-and-avg-adding-up-and-averaging.md) | next: not written yet
+prev: [140 SUM and AVG, adding up and averaging](./140-sum-and-avg-adding-up-and-averaging.md) | next: [142 MIN and MAX, the smallest and biggest value](./142-min-and-max-the-smallest-and-biggest-value.md)
