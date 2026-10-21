@@ -30,7 +30,7 @@ plain | truncated
 
 the date in the query, DATE '2026-04-01' (a calendar day, no clock), is read as midnight, so no order matches it exactly. no error, just zero. truncating first fixes it.
 
-this is how daily and monthly reports decide which orders belong together. DuckDB (the database these notes run in) returns a timestamp even when you give date_trunc a date. Postgres, another popular database, has date_trunc too. a later note counts per day with it.
+this is how daily and monthly reports decide which orders belong together. DuckDB (the database these notes run in) returns a timestamp even when you give date_trunc a date. Postgres, another database, has date_trunc too. a later note counts per day with it.
 
 ### check yourself
 

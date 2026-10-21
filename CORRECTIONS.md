@@ -1,5 +1,7 @@
 # corrections
 
+127, 2026-10-21: called Postgres popular, but no page backs popular and correction 110 already dropped the word for the same reason. it now says another database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); correction 110 removed the same unsourced word
+
 125, 2026-10-21: said gluing onto a null with || gives null as if every database does it, but MySQL reads || as logical OR unless PIPES_AS_CONCAT is on. it now says in DuckDB, with a one line MySQL caveat (a filler sentence was cut to stay under the word limit). the checks now assert the DuckDB null and cite the DuckDB, MySQL and Postgres pages. evidence: https://dev.mysql.com/doc/refman/8.4/en/logical-operators.html ("Logical OR", "If the PIPES_AS_CONCAT SQL mode is enabled, || signifies the SQL-standard string concatenation operator"); https://duckdb.org/docs/current/sql/functions/text ("Any NULL input results in NULL")
 
 126, 2026-10-21: note text unchanged. the check cited the DuckDB date page for month(x) and year(x), but that page does not list them. it now cites the datepart page. evidence: https://duckdb.org/docs/current/sql/functions/datepart (month(date) "Month.", year(date) "Year.")

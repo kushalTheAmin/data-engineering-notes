@@ -27,3 +27,6 @@ assert q("SELECT count(*) FROM orders WHERE date_trunc('day', ordered_at) = TIME
 # confirmed: date_trunc(part, date) "Truncate to specified precision. Always returns a TIMESTAMP, even when the input is a DATE."
 # source: https://www.postgresql.org/docs/current/functions-datetime.html
 # confirmed: Postgres documents date_trunc, e.g. date_trunc('hour', timestamp '2001-02-16 20:38:40') gives 2001-02-16 20:00:00
+
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database; the note no longer calls it popular, which no page here supports
