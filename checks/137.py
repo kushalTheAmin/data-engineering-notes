@@ -10,6 +10,8 @@ assert q("SELECT count(*), sum(quantity), max(quantity) FROM order_items") == [(
 assert (len(rows), sum(r[0] for r in rows), max(r[0] for r in rows)) == (13, 20, 3)
 assert q("SELECT count(*), sum(quantity) FROM order_items WHERE order_id = 999") == [(0, None)]
 assert q("SELECT count(*) FROM orders WHERE order_id = 999") == [(0,)]
+# not every aggregate other than count gives null on no rows: regr_count and approx_count_distinct give 0
+assert q("SELECT regr_count(quantity, quantity), approx_count_distinct(quantity) FROM order_items WHERE order_id = 999") == [(0, 0)]
 # source: https://www.postgresql.org/docs/current/functions-aggregate.html
 # confirmed: "except for count, these functions return a null value when no rows are selected. In particular, sum of no rows returns null, not zero"
 # source: https://www.postgresql.org/docs/current/tutorial-arch.html
