@@ -17,4 +17,14 @@ assert q("SELECT name, 0 - price AS price FROM products ORDER BY price LIMIT 1")
 # confirmed: output column name usable in ORDER BY and GROUP BY "but not in the WHERE or HAVING clauses"; ORDER BY prefers the output name on a clash
 # source: https://www.postgresql.org/docs/current/queries-order.html
 # confirmed: a sort expression can be the label of an output column
+# source: https://www.postgresql.org/docs/current/sql-select.html
+# confirmed: the processing steps run FROM, WHERE, then the output (SELECT) expressions, then ORDER BY ("the returned rows are sorted"), then LIMIT
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model"
+# source: https://en.wikipedia.org/wiki/Dhokla
+# confirmed: dhokla is "a savoury sponge dish" made with a batter "steamed to a cake-like consistency", the batter mixes rice with Bengal gram, a variety of chickpea
+# source: https://en.wikipedia.org/wiki/Khandvi_(food)
+# confirmed: khandvi has "tightly rolled bite-sized pieces" and is "primarily made of gram flour and yogurt"
+# source: https://en.wikipedia.org/wiki/Fafda
+# confirmed: fafda is a snack of the Gujarat region
 print("134 ok")

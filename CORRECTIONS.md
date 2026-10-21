@@ -1,5 +1,7 @@
 # corrections
 
+134, 2026-10-21: note text unchanged. the logical order of clauses, the claim that Postgres is a server database and the dhokla, khandvi and fafda glosses had no source in the checks. they now cite the Postgres and Wikipedia pages. evidence: https://www.postgresql.org/docs/current/sql-select.html (FROM, WHERE, output expressions, ORDER BY, LIMIT in that processing order); https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); https://en.wikipedia.org/wiki/Khandvi_(food) ("tightly rolled", "primarily made of gram flour and yogurt")
+
 133, 2026-10-21: defined TRY_CAST as if every database has it, but Postgres has no TRY_CAST. it now says DuckDB has it and Postgres, a server database, doesnt. evidence: https://www.postgresql.org/docs/current/bookindex.html (the full index of the Postgres docs has no TRY_CAST entry)
 
 132, 2026-10-21: said CSV exports are full of text that looks like numbers without saying what CSV is, so a reader landing on this note could not follow. it now says text files with values split by commas. evidence: https://en.wikipedia.org/wiki/Comma-separated_values ("a plain text data format for storing tabular data where the fields (values) of a record are separated by a comma"); glossary.md CSV entry
