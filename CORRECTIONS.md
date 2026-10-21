@@ -1,5 +1,7 @@
 # corrections
 
+133, 2026-10-21: said DECIMAL(6, 2) means a number with 2 digits after the point, which left out the 6, so the later answer about a number that does not fit the type had nothing to rest on. it now says at most 6 digits, 2 of them after the point. the checks now assert that 9999.99 fits and 12345.67 gives null. evidence: python, TRY_CAST('12345.67' AS DECIMAL(6, 2)) is NULL; note 022 (at most 6 digits in total, 2 after the point)
+
 131, 2026-10-21: said integer division keeps only the whole part and that python has it too, then showed Postgres cutting toward zero, so a reader would expect python to give -2 for -5 // 2. python rounds down and gives -3. it now says the python // rounds down instead, so -5 // 2 is -3. evidence: python, -5 // 2 is -3; https://docs.python.org/3/library/stdtypes.html ("The result is always rounded towards minus infinity: 1//2 is 0, (-1)//2 is -1")
 
 129, 2026-10-21: the first query listed the orders table twice as a and b, a table alias and self-join no earlier note teaches, so a reader from zero could not follow it. it now says the table appears twice, as a and b, one order in each. the checks now assert the query itself. evidence: grep of notes 001 to 128 finds no table alias or join query; python, the query returns (1 day 17:25, 2) (checks/129.py)

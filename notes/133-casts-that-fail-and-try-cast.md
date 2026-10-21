@@ -13,7 +13,7 @@ the shop, the imaginary gujarati snack store these notes run on, got a supplier 
 SELECT CAST(price_text AS DECIMAL(6, 2)) FROM price_export
 ```
 
-DECIMAL(6, 2) means a number with 2 digits after the point. one bad value and DuckDB, the database these notes run queries in, stops with a conversion error. no rows at all, not even the good ones. now TRY_CAST:
+DECIMAL(6, 2) means a number with at most 6 digits, 2 of them after the point. one bad value and DuckDB, the database these notes run queries in, stops with a conversion error. no rows at all, not even the good ones. now TRY_CAST:
 
 ```sql
 SELECT name, price_text, TRY_CAST(price_text AS DECIMAL(6, 2)) AS price FROM price_export ORDER BY product_id

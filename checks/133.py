@@ -18,4 +18,7 @@ assert con.execute("SELECT TRY_CAST('12.5' AS INTEGER), TRY_CAST('twelve' AS INT
 # source: https://duckdb.org/docs/current/sql/data_types/typecasting.html
 # confirmed: "TRY_CAST can be used to convert the value into NULL instead of throwing an error"
 assert con.execute("SELECT TRY_CAST('99999' AS DECIMAL(6, 2))").fetchone() == (None,)
+# DECIMAL(6, 2): at most 6 digits in total, 2 after the point (see note 022)
+assert con.execute("SELECT TRY_CAST('9999.99' AS DECIMAL(6, 2)), TRY_CAST('12345.67' AS DECIMAL(6, 2))").fetchone()[1] is None
+assert con.execute("SELECT TRY_CAST('9999.99' AS DECIMAL(6, 2))").fetchone()[0] is not None
 print("133 ok")
