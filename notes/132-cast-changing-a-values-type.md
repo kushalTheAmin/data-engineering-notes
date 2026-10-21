@@ -49,4 +49,4 @@ false | true
 so if a number column sorts weirdly, check its type first. what happens when the text isnt a number at all? the next one covers it.
 
 ---
-prev: [131 integer division, when 7 / 2 gives 3](./131-integer-division-when-7-divided-by-2-gives-3.md) | next: not written yet
+prev: [131 integer division, when 7 / 2 gives 3](./131-integer-division-when-7-divided-by-2-gives-3.md) | next: [133 casts that fail, and TRY_CAST](./133-casts-that-fail-and-try-cast.md)

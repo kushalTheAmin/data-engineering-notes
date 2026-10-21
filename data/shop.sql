@@ -130,3 +130,17 @@ INSERT INTO daily_orders VALUES
     (DATE '2026-04-07', 0, 0),
     (DATE '2026-04-08', 1, 0),
     (DATE '2026-04-09', 1, 0);
+
+-- added by note 133: a supplier price list typed by hand as text. jalebi says n/a, kaju katli uses a comma as the decimal mark
+CREATE TABLE price_export (
+    product_id INTEGER PRIMARY KEY,
+    name       VARCHAR NOT NULL,
+    price_text VARCHAR NOT NULL
+);
+
+INSERT INTO price_export VALUES
+    (1, 'dhokla',      '6.00'),
+    (2, 'khandvi',     '7.50'),
+    (3, 'jalebi',      'n/a'),
+    (4, 'kaju katli',  '12,00'),
+    (5, 'masala chai', '3.00');
