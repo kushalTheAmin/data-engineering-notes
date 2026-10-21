@@ -100,3 +100,15 @@ INSERT INTO order_messages VALUES
     (103, 'less sweet'),
     (106, 'the "extra crispy" fafda please'),
     (107, 'call first' || chr(10) || 'leave at the door');
+
+-- added by note 124: names exactly as typed into the signup form, stray spaces and capitals included
+CREATE TABLE signups (
+    signup_id  INTEGER PRIMARY KEY,
+    typed_name VARCHAR NOT NULL
+);
+
+INSERT INTO signups VALUES
+    (1, 'Asha'),
+    (2, 'bhavin '),
+    (3, 'CHIRAG '),
+    (4, 'Disha');

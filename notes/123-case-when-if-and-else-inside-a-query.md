@@ -77,4 +77,4 @@ far. her test is unknown ([114](./114-three-valued-logic-true-false-and-unknown.
 </details>
 
 ---
-prev: [122 computed columns and AS](./122-computed-columns-and-as.md) | next: not written yet
+prev: [122 computed columns and AS](./122-computed-columns-and-as.md) | next: [124 text functions, lower, upper, length and trim](./124-text-functions-lower-upper-length-and-trim.md)

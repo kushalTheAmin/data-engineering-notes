@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 123
+notes so far: 124
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -142,3 +142,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [121 DISTINCT, removing duplicate rows](./notes/121-distinct-removing-duplicate-rows.md): SELECT DISTINCT category turns 6 rows into 3, and DISTINCT on customer and status turns 7 rows into 5 because it compares the whole row
 - [122 computed columns and AS](./notes/122-computed-columns-and-as.md): SELECT name, price - 1 AS sale_price builds a new column per row without touching the table, and DuckDB lets WHERE use it where Postgres doesnt
 - [123 CASE WHEN, if and else inside a query](./notes/123-case-when-if-and-else-inside-a-query.md): CASE WHEN price < 5 THEN 'cheap' labels each product per row, the first true test wins, and with no ELSE a row that matches nothing gets null
+- [124 text functions, lower, upper, length and trim](./notes/124-text-functions-lower-upper-length-and-trim.md): a trailing space makes WHERE typed_name = 'CHIRAG' find nothing, length shows it, and lower(trim(...)) cleans it in the result

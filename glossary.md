@@ -68,6 +68,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | folder | a named place on disk holding files and other folders | [040](./notes/040-folders-and-paths.md) |
 | foreign key | a column holding another tables primary key values, a pointer | [093](./notes/093-foreign-key.md) |
 | FROM | the clause naming the table a query reads from | [104](./notes/104-select-and-from-picking-columns.md) |
+| function | SQL that takes a value and returns a new one | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | gibibyte | 1024 x 1024 x 1024 bytes, written GiB | [038](./notes/038-1000-or-1024.md) |
 | gigabyte | 1000 megabytes, a billion bytes, written GB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | grapheme | one unit as seen on screen, possibly several code points | [012](./notes/012-combining-marks.md) |
@@ -90,12 +91,14 @@ every term these notes have built, in plain words, with the note that built it. 
 | junction table | a table with one row per pair, pointing at both sides | [097](./notes/097-junction-tables.md) |
 | kibibyte | 1024 bytes, the unambiguous 1024 based unit, written KiB | [038](./notes/038-1000-or-1024.md) |
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
+| length | how many characters a text has, spaces included, not bytes | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | LF | a one character line ending, 0a, common on linux and mac | [042](./notes/042-line-endings.md) |
 | LIKE | keeps text matching a pattern, % any run, _ one character | [113](./notes/113-like-matching-text-patterns.md) |
 | LIMIT | keeps only the first n rows of the result | [120](./notes/120-limit-and-offset-paging-through-rows.md) |
 | line ending | the characters marking where one line stops, the next starts | [042](./notes/042-line-endings.md) |
 | lookup | fetching one value from a random spot | [037](./notes/037-disk-is-slow.md) |
 | lost update | two saves of one file, the later one erases the earlier change | [081](./notes/081-why-a-shared-spreadsheet-breaks.md) |
+| lower | a function turning every letter to lower case | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | made up id | a number handed out by the database, meaningless outside it | [088](./notes/088-natural-keys-vs-made-up-ids.md) |
 | many to many | rows on each side can match many rows on the other | [096](./notes/096-why-many-to-many-cant-live-in-either-table.md) |
 | megabyte | 1000 kilobytes, a million bytes, written MB | [033](./notes/033-kilobytes-to-terabytes.md) |
@@ -177,11 +180,13 @@ every term these notes have built, in plain words, with the note that built it. 
 | three valued logic | a test is true, false or unknown, and a null gives unknown | [114](./notes/114-three-valued-logic-true-false-and-unknown.md) |
 | time of day | a clock reading with no day attached | [027](./notes/027-dates-and-times-apart.md) |
 | torn write | a write cut off partway, leaving some new blocks and some old | [045](./notes/045-torn-writes.md) |
+| trim | a function cutting spaces off both ends of text | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | twos complement | binary where the leftmost place is negative, so one zero | [014](./notes/014-twos-complement.md) |
 | Unicode | one agreed table giving every character in every script a number | [009](./notes/009-unicode.md) |
 | unix time | a moment kept as seconds counted since the epoch | [025](./notes/025-unix-time.md) |
 | unknown | the third test result, from a null, that WHERE drops | [114](./notes/114-three-valued-logic-true-false-and-unknown.md) |
 | update anomaly | one fact stored in many rows, an update changing only some | [089](./notes/089-update-anomalies.md) |
+| upper | a function turning every letter to upper case | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | UTC | the one clock everyone measures against, with no daylight saving | [024](./notes/024-utc.md) |
 | UTF-8 | a way to store each code point as 1 to 4 bytes | [010](./notes/010-utf-8.md) |
 | wc | prints a files counts; wc -l counts its 0a line endings | [055](./notes/055-wc-counting-lines.md) |
