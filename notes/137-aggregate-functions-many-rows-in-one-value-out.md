@@ -30,7 +30,7 @@ rows_in | total_qty
 0 | NULL
 ```
 
-counting nothing gives 0, but summing nothing gives a [null](./031-null.md) (a missing value), not 0. the docs of Postgres, a popular server database, say exactly this, every aggregate except count returns null when no rows are selected. a report for a day with no sales shows None unless you wrap it in [COALESCE](./116-coalesce-a-fallback-when-a-value-is-null.md) (a fallback for nulls).
+counting nothing gives 0, but summing nothing gives a [null](./031-null.md) (a missing value), not 0. the docs of Postgres, a server database, say exactly this, every aggregate except count returns null when no rows are selected. a report for a day with no sales shows None unless you wrap it in [COALESCE](./116-coalesce-a-fallback-when-a-value-is-null.md) (a fallback for nulls).
 
 ---
 prev: [136 capstone, one query traced clause by clause](./136-capstone-one-query-traced-clause-by-clause.md) | next: not written yet

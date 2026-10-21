@@ -12,3 +12,5 @@ assert q("SELECT count(*), sum(quantity) FROM order_items WHERE order_id = 999")
 assert q("SELECT count(*) FROM orders WHERE order_id = 999") == [(0,)]
 # source: https://www.postgresql.org/docs/current/functions-aggregate.html
 # confirmed: "except for count, these functions return a null value when no rows are selected. In particular, sum of no rows returns null, not zero"
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model"
