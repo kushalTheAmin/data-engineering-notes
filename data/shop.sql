@@ -112,3 +112,21 @@ INSERT INTO signups VALUES
     (2, 'bhavin '),
     (3, 'CHIRAG '),
     (4, 'Disha');
+
+-- added by note 130: orders placed and cancelled per day, april 1 to 9, counted from orders. april 2, 5 and 7 had no orders
+CREATE TABLE daily_orders (
+    day       DATE PRIMARY KEY,
+    placed    INTEGER NOT NULL,
+    cancelled INTEGER NOT NULL
+);
+
+INSERT INTO daily_orders VALUES
+    (DATE '2026-04-01', 2, 0),
+    (DATE '2026-04-02', 0, 0),
+    (DATE '2026-04-03', 1, 0),
+    (DATE '2026-04-04', 1, 1),
+    (DATE '2026-04-05', 0, 0),
+    (DATE '2026-04-06', 1, 0),
+    (DATE '2026-04-07', 0, 0),
+    (DATE '2026-04-08', 1, 0),
+    (DATE '2026-04-09', 1, 0);

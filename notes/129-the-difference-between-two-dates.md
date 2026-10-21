@@ -35,4 +35,4 @@ so if you want elapsed time, subtract the timestamps and read the interval. if y
 this bites in reports like "orders delivered within 2 days", where the two readings quietly disagree whenever the delivery comes later in the day than the order did.
 
 ---
-prev: [128 adding and subtracting intervals](./128-adding-and-subtracting-intervals.md) | next: not written yet
+prev: [128 adding and subtracting intervals](./128-adding-and-subtracting-intervals.md) | next: [130 NULLIF and dividing by zero](./130-nullif-and-dividing-by-zero.md)
