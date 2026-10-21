@@ -19,3 +19,5 @@ assert 3 * 100.0 / 5 == 60.0
 assert len(set(q("SELECT count(*), count(stars), count(stars_zero_filled) FROM order_ratings")[0])) == 2
 # source: https://www.postgresql.org/docs/current/functions-aggregate.html
 # confirmed: count(*) "Computes the number of input rows"; count("any") "Computes the number of input rows in which the input value is not null"
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model"

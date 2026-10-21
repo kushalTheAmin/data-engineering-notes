@@ -1,5 +1,7 @@
 # corrections
 
+138, 2026-10-21: the last paragraph named Postgres without saying what it is, so a reader landing on this note alone could not place it, while 139 to 142 all gloss it. it now says the docs of Postgres, a server database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model")
+
 138, 2026-10-21: said same 5 rows, three answers, but the three counts are 5, 3 and 5, only two different numbers. it now says three counts, and the middle one is the odd one out. it also said people run count(*) minus count(column) as a check on a fresh table, which no page backs. it now says it makes a cheap check, which follows from the arithmetic. evidence: python, the counts are (5, 3, 5) and len(set(...)) is 2 (checks/138.py)
 
 139, 2026-10-21: said note 121 shows SELECT DISTINCT city keeping one null row, but 121 only shows DISTINCT on category and on customer_id with status, and says in prose that two nulls collapse into one in a DISTINCT. it now says DISTINCT in 121 collapses nulls into one kept row. evidence: notes/121-distinct-removing-duplicate-rows.md has no city query; python, SELECT DISTINCT city FROM customers returns one NULL row (checks/139.py)

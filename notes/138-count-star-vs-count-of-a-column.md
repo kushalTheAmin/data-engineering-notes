@@ -32,7 +32,7 @@ rows_in | rated
 
 i figured counting only nulls would give NULL, like sum did on no rows in 137. but count never returns null, it gives 0.
 
-so what: count(*) minus count(column) is how many values are missing, which makes a cheap check on a fresh table. Postgres docs define them the same way, count(*) counts input rows and count of a column counts rows where the value is not null. the next one is about counting different values, not rows.
+so what: count(*) minus count(column) is how many values are missing, which makes a cheap check on a fresh table. the docs of Postgres, a server database, define them the same way, count(*) counts input rows and count of a column counts rows where the value is not null. the next one is about counting different values, not rows.
 
 ### check yourself
 
