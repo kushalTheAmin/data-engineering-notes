@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 142
+notes so far: 143
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -164,3 +164,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [140 SUM and AVG, adding up and averaging](./notes/140-sum-and-avg-adding-up-and-averaging.md): the 6 product prices sum to 38.00 and average 6.33, a price no product has, because avg is just sum over count
 - [141 what NULLs do to SUM and AVG](./notes/141-what-nulls-do-to-sum-and-avg.md): sum and avg skip null rows, so avg divides by 3 not 5, and all null gives NULL
 - [142 MIN and MAX, the smallest and biggest value](./notes/142-min-and-max-the-smallest-and-biggest-value.md): max(price) returns 12.00 but not the product, for that you sort and take one row
+- [143 GROUP BY, one group per value](./notes/143-group-by-one-group-per-value.md): 6 products become 3 rows, one per category, and a null city gets its own group

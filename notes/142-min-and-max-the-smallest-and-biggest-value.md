@@ -33,4 +33,4 @@ like sum and avg in [141](./141-what-nulls-do-to-sum-and-avg.md), min and max sk
 so what: max over a timestamp column, like max(ordered_at) on orders, is the quick way to ask when the newest row landed. here it is 2026-04-09 13:45:00.
 
 ---
-prev: [141 what NULLs do to SUM and AVG](./141-what-nulls-do-to-sum-and-avg.md) | next: not written yet
+prev: [141 what NULLs do to SUM and AVG](./141-what-nulls-do-to-sum-and-avg.md) | next: [143 GROUP BY, one group per value](./143-group-by-one-group-per-value.md)
