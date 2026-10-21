@@ -28,3 +28,5 @@ assert len(q("SELECT name, price - 1 AS sale_price FROM products WHERE sale_pric
 # confirmed: "primarily made of gram flour and yogurt", "tightly rolled bite-sized pieces"
 # source: https://en.wikipedia.org/wiki/Fafda
 # confirmed: "gram flour, oil, carom seeds" mixed into a dough, "deep-fried till they turn crispy"
+# source: https://en.wikipedia.org/wiki/Gram_flour
+# confirmed: "Chickpea flour, common varieties include besan or gram flour", so gram flour and chickpea flour are one flour

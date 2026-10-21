@@ -1,5 +1,7 @@
 # corrections
 
+122, 2026-10-21: called khandvi a rolled gram flour snack, but a reader from zero does not know gram flour is chickpea flour, and the other snack is called chickpea flour. it now says chickpea flour. evidence: https://en.wikipedia.org/wiki/Gram_flour ("Chickpea flour, common varieties include besan or gram flour"); correction 113 made the same fix for the same reason
+
 103, 2026-10-21: called khandvi a rolled gram flour snack, but a reader from zero does not know gram flour is chickpea flour, and the other snack is called chickpea flour. it now says chickpea flour. evidence: https://en.wikipedia.org/wiki/Gram_flour ("Chickpea flour, common varieties include besan or gram flour"); correction 113 made the same fix for the same reason
 
 104, 2026-10-21: called khandvi a rolled gram flour snack, but a reader from zero does not know gram flour is chickpea flour, and the other snack is called chickpea flour. it now says chickpea flour. evidence: https://en.wikipedia.org/wiki/Gram_flour ("Chickpea flour, common varieties include besan or gram flour"); correction 113 made the same fix for the same reason

@@ -2,7 +2,7 @@
 builds on: [079 a table, rows are records, columns are fields](./079-a-table-rows-are-records-columns-are-fields.md), [104 SELECT and FROM, picking columns](./104-select-and-from-picking-columns.md), [105 SELECT star, every column, and why you rarely want it](./105-select-star-every-column.md), [106 WHERE, keeping only the rows that match](./106-where-keeping-only-the-rows-that-match.md), [117 ORDER BY, sorting by one or more columns](./117-order-by-sorting-by-one-or-more-columns.md)
 section: asking questions with SQL, part 22, ~2 min read
 
-can a query show a column that isnt in the table? say the shop, the imaginary gujarati snack store these notes run on, wants 1 off every product, and nobody wants to edit the products [table](./079-a-table-rows-are-records-columns-are-fields.md) (a grid of rows) to do it (dhokla is a steamed savory cake, kaju katli a cashew sweet, khandvi a rolled gram flour snack, fafda a crunchy chickpea flour snack).
+can a query show a column that isnt in the table? say the shop, the imaginary gujarati snack store these notes run on, wants 1 off every product, and nobody wants to edit the products [table](./079-a-table-rows-are-records-columns-are-fields.md) (a grid of rows) to do it (dhokla is a steamed savory cake, kaju katli a cashew sweet, khandvi a rolled chickpea flour snack, fafda a crunchy chickpea flour snack).
 
 a computed column is an expression (a bit of arithmetic) in the [SELECT](./104-select-and-from-picking-columns.md) list, like `price - 1`, worked out fresh for every row, and AS gives it a name. in python it is building a new dictionary per row with one extra key, `{"name": r["name"], "sale_price": r["price"] - 1}`. first without a name:
 
