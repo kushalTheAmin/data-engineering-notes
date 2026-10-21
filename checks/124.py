@@ -20,3 +20,7 @@ assert q("SELECT length('ગ'), strlen('ગ')") == [(1, 3)]
 assert len("ગ") == 1 and len("ગ".encode()) == 3
 # source: https://www.postgresql.org/docs/current/functions-string.html
 # confirmed: btrim removes the longest string containing only characters in characters (a space by default) from the start and end of string
+# source: https://duckdb.org/docs/current/sql/functions/text
+# confirmed: length(string) "Number of characters in string."; strlen(string) "Number of bytes in string."; trim(string[, characters]) characters "defaults to space"
+# source: https://www.postgresql.org/docs/current/functions-string.html
+# confirmed: length(text) "Returns the number of characters in the string."; octet_length "Returns number of bytes in the string."; the page has no strlen

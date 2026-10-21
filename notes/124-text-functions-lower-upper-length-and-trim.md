@@ -36,7 +36,7 @@ signup_id | lowered | uppered
 
 now `WHERE lower(trim(typed_name)) = 'chirag'` finds row 3. the stored rows are untouched, the cleaning only exists in the result.
 
-two gotchas. trim removes spaces and nothing else by default (the docs of Postgres, a server database, say so, and in DuckDB, the database these notes run in, a tab survives too). and length counts characters, not bytes: `length('ગ')` is 1 though [UTF-8](./011-why-gujarati-takes-3-bytes.md) stores it in 3 bytes. strlen gives the 3.
+two gotchas. trim removes spaces and nothing else by default (the docs of Postgres, a server database, say so, and in DuckDB, the database these notes run in, a tab survives too). and length counts characters, not bytes: `length('ગ')` is 1 though [UTF-8](./011-why-gujarati-takes-3-bytes.md) stores it in 3 bytes. in DuckDB strlen gives the 3 (Postgres: octet_length).
 
 ---
 prev: [123 CASE WHEN, if and else inside a query](./123-case-when-if-and-else-inside-a-query.md) | next: [125 concatenating text, and taking pieces of it](./125-concatenating-text-and-taking-pieces-of-it.md)
