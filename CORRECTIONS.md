@@ -1,5 +1,7 @@
 # corrections
 
+135, 2026-10-21: said every database follows the standard loosely, said this was the fourth dialect difference, and listed only TOP for SQL Server. no page says every, and notes 122 (header names, alias in WHERE) and 133 (TRY_CAST) show more differences than the three listed, so it now says almost no database follows it fully and this was far from the first time. SQL Server also takes the standard FETCH FIRST after an OFFSET, so the table says so. evidence: https://en.wikipedia.org/wiki/SQL ("virtually no implementations in existence adhere to it fully"); https://learn.microsoft.com/en-us/sql/t-sql/queries/select-order-by-clause-transact-sql (syntax: OFFSET n ROWS [ FETCH { FIRST | NEXT } n ROWS ONLY ]); notes 122 and 133
+
 137, 2026-10-21: said the Postgres docs say every aggregate except count returns null when no rows are selected. the page says it of the general purpose aggregates it lists (sum, max and so on), and regr_count and approx_count_distinct give 0 on no rows, so every was too wide. it now says except for count the everyday aggregates like sum and max return null. evidence: python, regr_count and approx_count_distinct on no rows both give 0 in DuckDB (checks/137.py); https://www.postgresql.org/docs/current/functions-aggregate.html ("except for count, these functions return a null value when no rows are selected")
 
 138, 2026-10-21: the second question said someone wrote count(stars_zero_filled) * 100.0 / count(*) and asked what it returns, but the query shown was the fixed count(stars) one, so a reader running it got 60.0, not the 100.0 the answer gave. the question now shows the broken query, the answer says it returns 100.0 and the fix gives 60.0. the checks now assert the broken query too. evidence: python, count(stars_zero_filled) * 100.0 / count(*) over order_ratings is 100.0, count(stars) version is 60.0 (checks/138.py)
@@ -347,3 +349,4 @@ every fix made to a note after it was published, newest first. if you learned fr
 
 ## audit log
 audit runs that could not finish, newest first. format: YYYY-MM-DD HH:MM: what happened
+2026-10-21 12:00: dev.mysql.com returned 403 (technical difficulties page), so the two MySQL source lines in checks/135.py were not rechecked this run; all other sources were

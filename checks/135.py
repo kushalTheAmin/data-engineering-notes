@@ -21,4 +21,8 @@ except Exception as e:
 # confirmed: MySQL SELECT syntax has [LIMIT {[offset,] row_count | row_count OFFSET offset}] and no FETCH FIRST clause
 # source: https://dev.mysql.com/doc/refman/8.4/en/what-is-mysql.html
 # confirmed: "The MySQL Database Software is a client/server system"
+# source: https://en.wikipedia.org/wiki/SQL
+# confirmed: "Despite the existence of standards, virtually no implementations in existence adhere to it fully, and most SQL code requires at least some changes before being ported to different database systems"
+# source: https://learn.microsoft.com/en-us/sql/t-sql/queries/select-order-by-clause-transact-sql
+# confirmed: SQL Server syntax is OFFSET {n} {ROW | ROWS} [ FETCH {FIRST | NEXT} {n} {ROW | ROWS} ONLY ], so FETCH FIRST comes after an OFFSET, and the offset can be 0
 print("135 ok")
