@@ -1,5 +1,7 @@
 # corrections
 
+136, 2026-10-21: note text unchanged. the jalebi, kaju katli, dhokla and khandvi glosses and the fafda chickpea flour gloss had no source in the checks. they now cite the Wikipedia pages. evidence: https://en.wikipedia.org/wiki/Jalebi ("soaked in sugar syrup"); https://en.wikipedia.org/wiki/Kaju_katli ("Kaju means cashew"); https://en.wikipedia.org/wiki/Dhokla ("steamed to a cake-like consistency", rice with Bengal gram, a variety of chickpea); https://en.wikipedia.org/wiki/Fafda ("gram flour, oil, carom seeds")
+
 134, 2026-10-21: said the database may shuffle the real steps and the answer stays the same, but no page backs that and the Postgres SELECT page only lists the processing steps. the sentence is removed. Postgres is now glossed as a server database at its first mention in the opening line instead of three paragraphs later. evidence: https://www.postgresql.org/docs/current/sql-select.html (lists FROM, WHERE, output expressions, ORDER BY, LIMIT in processing order, no claim about reordering)
 
 137, 2026-10-21: called Postgres a popular server database, but no page backs popular and correction 110 already dropped the word for the same reason. it now says a server database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); correction 110 removed the same unsourced word

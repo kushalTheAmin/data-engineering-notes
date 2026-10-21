@@ -21,4 +21,14 @@ assert q("SELECT name, category, price FROM products ORDER BY product_id")[3] ==
 # confirmed: "PostgreSQL uses a client/server model"
 # source: https://en.wikipedia.org/wiki/Fafda
 # confirmed: fafda is a snack of the Gujarat region
+# source: https://en.wikipedia.org/wiki/Jalebi
+# confirmed: jalebi is fried batter "soaked in sugar syrup"
+# source: https://en.wikipedia.org/wiki/Kaju_katli
+# confirmed: kaju katli is "an Indian dessert" and "Kaju means cashew"
+# source: https://en.wikipedia.org/wiki/Dhokla
+# confirmed: dhokla is made with a batter "steamed to a cake-like consistency", the batter mixes rice with Bengal gram, a variety of chickpea
+# source: https://en.wikipedia.org/wiki/Khandvi_(food)
+# confirmed: khandvi has "tightly rolled bite-sized pieces" and is "primarily made of gram flour and yogurt"
+# source: https://en.wikipedia.org/wiki/Fafda
+# confirmed: fafda is made of "gram flour, oil, carom seeds" and "deep-fried till they turn crispy"
 print("136 ok")
