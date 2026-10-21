@@ -39,4 +39,4 @@ now `WHERE lower(trim(typed_name)) = 'chirag'` finds row 3. the stored rows are 
 two gotchas. trim removes spaces and nothing else by default (the docs of Postgres, a server database, say so, and in DuckDB, the database these notes run in, a tab survives too). and length counts characters, not bytes: `length('ગ')` is 1 though [UTF-8](./011-why-gujarati-takes-3-bytes.md) stores it in 3 bytes. strlen gives the 3.
 
 ---
-prev: [123 CASE WHEN, if and else inside a query](./123-case-when-if-and-else-inside-a-query.md) | next: not written yet
+prev: [123 CASE WHEN, if and else inside a query](./123-case-when-if-and-else-inside-a-query.md) | next: [125 concatenating text, and taking pieces of it](./125-concatenating-text-and-taking-pieces-of-it.md)

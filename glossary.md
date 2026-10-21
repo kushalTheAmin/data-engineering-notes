@@ -35,6 +35,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | composite key | a primary key of two columns, only the pair is unique | [095](./notes/095-composite-keys.md) |
 | compression | storing the same information in fewer bytes, rebuildable exactly | [047](./notes/047-compression-spotting-repeats.md) |
 | computed column | an expression in SELECT, worked out fresh for each row | [122](./notes/122-computed-columns-and-as.md) |
+| concatenate | glue two pieces of text into one, written with two bars | [125](./notes/125-concatenating-text-and-taking-pieces-of-it.md) |
 | connection | an open line from your program to a database | [102](./notes/102-a-database-in-one-file.md) |
 | continuation byte | a UTF-8 byte starting 10, continuing the previous characters bytes | [011](./notes/011-why-gujarati-takes-3-bytes.md) |
 | core | one full processor inside a chip, most chips hold several | [035](./notes/035-the-processor.md) |
@@ -170,6 +171,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | store UTC, show local | keep moments in UTC, convert to local only when displaying | [030](./notes/030-store-utc-show-local.md) |
 | stream | bytes handed over in order, like a program reading its stdin | [057](./notes/057-standard-input-and-output.md) |
 | structure | an agreement on where each fact sits, so code can find it | [061](./notes/061-structure-why-text-is-hard-to-ask.md) |
+| substr | cuts a piece of text by start and count, counting from 1 | [125](./notes/125-concatenating-text-and-taking-pieces-of-it.md) |
 | table | a grid of rows, every row holding the same columns | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | tag | a name in angle brackets, opening or closing an XML value | [072](./notes/072-xml.md) |
 | tail | prints the last lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
