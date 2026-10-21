@@ -37,3 +37,6 @@ assert con.execute("SELECT count(*) FROM c2").fetchone()[0] == 2
 # confirmed: "A surrogate key is frequently a sequential number." and "Some databases provide UUID/GUID as a possible data type for surrogate keys."
 # confirmed: "The surrogate key is not derived from application data, unlike a natural (or business) key."
 print("088 ok")
+
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database; the note no longer calls it popular, which no page here supports

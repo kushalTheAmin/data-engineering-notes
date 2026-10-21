@@ -28,7 +28,7 @@ by id: [101, 103, 106]
 
 the orders never moved, but what they pointed at changed, so now they point at nobody (a database can also refuse such a change, a later note). a key made of a real world fact breaks when that fact changes. the id says nothing about Asha, so nothing in her life changes it. that meaninglessness felt like cheating to me at first, and its the whole point.
 
-the catch: an id doesnt stop the same person signing up twice, you just get ids 6 and 7 for one email. so keep the email as a UNIQUE NOT NULL column too (unique but not the key), or missing (NULL) emails slip past as in 087. Postgres, a popular database, has identity columns that hand out the next id for you, per its docs.
+the catch: an id doesnt stop the same person signing up twice, you just get ids 6 and 7 for one email. so keep the email as a UNIQUE NOT NULL column too (unique but not the key), or missing (NULL) emails slip past as in 087. Postgres, a database, has identity columns that hand out the next id for you, per its docs.
 
 
 ### check yourself
