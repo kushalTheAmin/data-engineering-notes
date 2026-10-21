@@ -15,6 +15,8 @@ assert q("SELECT count(*) FROM order_ratings") == [(5,)]
 assert q("SELECT min(stars), max(stars) FROM order_ratings") == [(3, 5)]
 assert q("SELECT min(stars), max(stars) FROM order_ratings WHERE stars IS NULL") == [(None, None)]
 assert q("SELECT max(ordered_at) FROM orders") == [(datetime(2026, 4, 9, 13, 45),)]
+# text sorts by binary contents in DuckDB, so a capital comes before a lowercase letter
+assert q("SELECT min(x), max(x) FROM (VALUES ('a'), ('B'), ('c')) t(x)") == [('B', 'c')]
 # python loop shape: best so far
 best = None
 for p in [6.0, 7.5, 5.0, 12.0, 3.0, 4.5]:
@@ -29,3 +31,5 @@ assert best == 12.0
 # confirmed: dhokla is "steamed to a cake-like consistency"
 # source: https://en.wikipedia.org/wiki/Masala_chai
 # confirmed: flavoured Indian tea (spiced tea redirects to this page)
+# source: https://duckdb.org/docs/2.0/sql/expressions/collations.html
+# confirmed: "By default, the BINARY collation is used. That means that strings are ordered and compared based only on their binary contents."

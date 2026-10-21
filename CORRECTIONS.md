@@ -1,5 +1,7 @@
 # corrections
 
+142, 2026-10-21: said min and max on text give first and last alphabetically, but DuckDB sorts text by its binary contents, so a capital letter comes before any lowercase one and min of a, B, c is B. it now says first and last in sort order, and DuckDB puts capital letters before lowercase. evidence: python, min and max over a, B, c in DuckDB give (B, c) (checks/142.py); https://duckdb.org/docs/2.0/sql/expressions/collations.html ("By default, the BINARY collation is used. That means that strings are ordered and compared based only on their binary contents.")
+
 138, 2026-10-21: the last paragraph named Postgres without saying what it is, so a reader landing on this note alone could not place it, while 139 to 142 all gloss it. it now says the docs of Postgres, a server database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model")
 
 138, 2026-10-21: said same 5 rows, three answers, but the three counts are 5, 3 and 5, only two different numbers. it now says three counts, and the middle one is the odd one out. it also said people run count(*) minus count(column) as a check on a fresh table, which no page backs. it now says it makes a cheap check, which follows from the arithmetic. evidence: python, the counts are (5, 3, 5) and len(set(...)) is 2 (checks/138.py)

@@ -4,7 +4,7 @@ section: summarizing data, part 6, ~2 min read
 
 SQL will hand you the highest price in one word. but can it hand you the product that has that price?
 
-min and max are [aggregate functions](./137-aggregate-functions-many-rows-in-one-value-out.md) (many rows in, one value out) that return the smallest and the biggest value in a column. in python it is a loop keeping a best so far. they work on anything that can be put in order, so numbers, text (first and last alphabetically) and dates (earliest and latest). on products, the table of the shop, the imaginary snack store these notes use:
+min and max are [aggregate functions](./137-aggregate-functions-many-rows-in-one-value-out.md) (many rows in, one value out) that return the smallest and the biggest value in a column. in python it is a loop keeping a best so far. they work on anything that can be put in order, so numbers, text (first and last in sort order, and DuckDB puts capital letters before lowercase) and dates (earliest and latest). on products, the table of the shop, the imaginary snack store these notes use:
 
 ```sql
 SELECT min(price) AS cheapest, max(price) AS priciest, min(name) AS first_name, max(name) AS last_name FROM products
