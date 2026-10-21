@@ -15,6 +15,10 @@ assert con.execute("SELECT 1 // 2").fetchone()[0] == 0
 assert con.execute("SELECT (-5) // 2").fetchone()[0] == -2
 # a rate of 1 cancelled out of 2 placed
 assert 1 // 2 == 0 and 1 / 2 == 0.5
+# python's // rounds down, unlike the truncation above
+assert -5 // 2 == -3
+# source: https://docs.python.org/3/library/stdtypes.html
+# confirmed: "The result is always rounded towards minus infinity: 1//2 is 0, (-1)//2 is -1"
 assert con.execute("SELECT 3 / 2.0").fetchone()[0] == 1.5
 # source: https://www.postgresql.org/docs/current/functions-math.html
 # confirmed: for integral types, division truncates the result towards zero; 5 / 2 gives 2, (-5) / 2 gives -2, 5.0 / 2 gives 2.5

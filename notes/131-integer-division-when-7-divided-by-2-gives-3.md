@@ -30,9 +30,9 @@ SELECT 3 / 2;     -- 1
 SELECT 3 / 2.0;   -- 1.5
 ```
 
-make either side a decimal and you get the fraction back. it also cuts toward zero, so (-5) / 2 is -2, not -3.
+make either side a decimal and you get the fraction back. it also cuts toward zero, so (-5) / 2 is -2, not -3. the python // rounds down instead, so -5 // 2 is -3.
 
-this is a real classic bug. a rate like cancelled / placed from [130](./130-nullif-and-dividing-by-zero.md) comes out as 0 in Postgres for any day where fewer orders were cancelled than placed, and nothing errors. when i port a query between databases, this is the first division i check.
+this is a classic bug. a rate like cancelled / placed from [130](./130-nullif-and-dividing-by-zero.md) comes out as 0 in Postgres for any day where fewer orders were cancelled than placed, and nothing errors. when i port a query between databases, this is the first division i check.
 
 ### check yourself
 
