@@ -1,5 +1,7 @@
 # corrections
 
+119, 2026-10-21: note text unchanged. the claim that Postgres is a server database had no source in the checks. it now cites the Postgres docs. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model")
+
 121, 2026-10-20: said the 6 categories were snack, snack, sweet, sweet, drink, snack, but there are only 3 categories, those are 6 category values. it now says the 6 category values. evidence: python, 6 category values and 3 distinct ones in data/shop.sql (checks/121.py)
 
 120, 2026-10-20: said a huge OFFSET gets slow, which reads as always, but the docs say only that it might be inefficient. it now says a huge OFFSET can get slow. evidence: https://www.postgresql.org/docs/current/queries-limit.html ("a large OFFSET might be inefficient")
