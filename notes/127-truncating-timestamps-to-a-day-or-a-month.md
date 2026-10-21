@@ -65,4 +65,4 @@ no. truncating to the day sets the clock to 00:00:00, so the left side is 2026-0
 </details>
 
 ---
-prev: [126 date parts, pulling out the year, month and day](./126-date-parts-pulling-out-the-year-month-and-day.md) | next: not written yet
+prev: [126 date parts, pulling out the year, month and day](./126-date-parts-pulling-out-the-year-month-and-day.md) | next: [128 adding and subtracting intervals](./128-adding-and-subtracting-intervals.md)
