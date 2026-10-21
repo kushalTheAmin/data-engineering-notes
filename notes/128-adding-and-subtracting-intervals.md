@@ -88,4 +88,4 @@ no. the first step snaps down to February 28, and subtracting a month from that 
 </details>
 
 ---
-prev: [127 truncating timestamps to a day or a month](./127-truncating-timestamps-to-a-day-or-a-month.md) | next: not written yet
+prev: [127 truncating timestamps to a day or a month](./127-truncating-timestamps-to-a-day-or-a-month.md) | next: [129 the difference between two dates](./129-the-difference-between-two-dates.md)
