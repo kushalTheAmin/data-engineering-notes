@@ -48,4 +48,4 @@ rows_in | with_city | cities
 so what: this is how you ask "how many customers" or "how many products sold" and not "how many rows". the docs of Postgres, a server database, say it directly, count(distinct f1) yields the number of distinct non-null values of f1.
 
 ---
-prev: [138 COUNT star vs COUNT of a column](./138-count-star-vs-count-of-a-column.md) | next: not written yet
+prev: [138 COUNT star vs COUNT of a column](./138-count-star-vs-count-of-a-column.md) | next: [140 SUM and AVG, adding up and averaging](./140-sum-and-avg-adding-up-and-averaging.md)
