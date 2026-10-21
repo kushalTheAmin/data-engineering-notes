@@ -17,3 +17,6 @@ assert con.execute("SELECT NULL = 'delivered'").fetchone()[0] is None
 #   confirmed: "a third state, unknown, which is represented by the SQL null value"
 #   confirmed: boolean uses 1 byte; input accepts true/yes/on/1 and false/no/off/0
 print("023 ok")
+
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database; the note no longer calls it popular, which no page here supports

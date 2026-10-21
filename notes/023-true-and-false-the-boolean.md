@@ -23,7 +23,7 @@ order_id | status | delivered
 
 the third column is a new column the query made on the fly, and every comparison you will ever write gives one of these, unless a value is missing, which gives null, a third answer meaning unknown. SELECT lists columns, FROM names the table, and = asks if two things are equal. a flag column like is_delivered is the same thing saved in the table.
 
-two states is one [bit](./002-bits.md), the on/off switch. i figured a boolean would cost one lonely bit, but computers hand out storage in [bytes](./004-bytes.md), groups of 8 bits, so Postgres, a popular server database, spends 1 whole byte on each boolean: https://www.postgresql.org/docs/current/datatype-boolean.html
+two states is one [bit](./002-bits.md), the on/off switch. i figured a boolean would cost one lonely bit, but computers hand out storage in [bytes](./004-bytes.md), groups of 8 bits, so Postgres, a server database, spends 1 whole byte on each boolean: https://www.postgresql.org/docs/current/datatype-boolean.html
 
 and code that counts is happy with that, python treats True as 1 and False as 0:
 
