@@ -15,3 +15,6 @@ assert sum(1 for x in q("SELECT city FROM customers") if x[0] is None) == 1
 # confirmed: nulls sort as if larger than any non-null value; NULLS FIRST is the default for DESC, NULLS LAST otherwise
 # source: https://duckdb.org/docs/current/sql/query_syntax/orderby.html
 # confirmed: DuckDB default is NULLS LAST, kept even for DESC, whereas PostgreSQL places NULLs first on DESC
+
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "In database jargon, PostgreSQL uses a client/server model."
