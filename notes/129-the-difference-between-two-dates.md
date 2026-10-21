@@ -6,7 +6,7 @@ order 102 came in on april 1 at 18:40 and order 103 on april 3 at 12:05. how man
 
 in [128](./128-adding-and-subtracting-intervals.md) i moved a timestamp (a day plus a clock time) with an [interval](./128-adding-and-subtracting-intervals.md), a length of time. this goes the other way: subtract two moments and you get the gap between them. python does the same when you subtract two datetimes.
 
-the shop, the imaginary gujarati snack store these notes run on, has an orders [table](./079-a-table-rows-are-records-columns-are-fields.md) (a grid of rows). here are orders 102 and 103 as a [computed column](./122-computed-columns-and-as.md) (a calculation in SELECT), two ways:
+the shop, the imaginary gujarati snack store these notes run on, has an orders [table](./079-a-table-rows-are-records-columns-are-fields.md) (a grid of rows). here are orders 102 and 103 as a [computed column](./122-computed-columns-and-as.md) (a calculation in SELECT), two ways. the table appears twice, as a and b, one order in each:
 
 ```sql
 SELECT b.ordered_at - a.ordered_at AS gap, date_diff('day', a.ordered_at, b.ordered_at) AS day_diff FROM orders a, orders b WHERE a.order_id = 102 AND b.order_id = 103
@@ -19,7 +19,7 @@ gap | day_diff
 
 the minus gives the real gap, 1 day and 17 hours 25 minutes. date_diff gives 2. i assumed it counted full days that passed, and it counts how many midnights you cross. april 2 and april 3 both start inside that window, so 2.
 
-with plain [dates](./027-dates-and-times-apart.md) (calendar days, no clock) there is nothing to argue about:
+with plain [dates](./027-dates-and-times-apart.md) (calendar days, no clock) it is simple:
 
 ```sql
 SELECT DATE '2026-04-03' - DATE '2026-04-01' AS days
@@ -30,7 +30,7 @@ days
 2
 ```
 
-for elapsed time, subtract the timestamps. if you want calendar days apart, like "how many days late is this", use date_diff or cast to dates first. months work the same way, so Jan 31 to Feb 1 is 1 month by date_diff.
+for elapsed time, subtract the timestamps. if you want calendar days apart, use date_diff or cast to dates first. months work the same way, so Jan 31 to Feb 1 is 1 month by date_diff.
 
 this bites in reports like "orders delivered within 2 days", where the two readings disagree for a delivery two calendar days after the order, if it comes later in the day than the order did.
 

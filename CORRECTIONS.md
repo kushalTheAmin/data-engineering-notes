@@ -1,5 +1,7 @@
 # corrections
 
+129, 2026-10-21: the first query listed the orders table twice as a and b, a table alias and self-join no earlier note teaches, so a reader from zero could not follow it. it now says the table appears twice, as a and b, one order in each. the checks now assert the query itself. evidence: grep of notes 001 to 128 finds no table alias or join query; python, the query returns (1 day 17:25, 2) (checks/129.py)
+
 131, 2026-10-21: the second question said april 4 has cancelled = 1 and placed = 2, but in the shop april 4 has placed 1 and cancelled 1 (note 130 shows it), and 1 / 1 is 1 even in Postgres, not 0. it now says a day has cancelled = 1 and placed = 2. evidence: python, daily_orders row for 2026-04-04 is (1, 1); note 130 slice
 
 130, 2026-10-21: note text unchanged. the nan on 0 / 0 had no source. the checks now cite the DuckDB configuration page. evidence: https://duckdb.org/docs/current/configuration/overview (ieee_floating_point_ops, default true, "returning NAN instead of errors/NULL")

@@ -14,6 +14,7 @@ assert q("SELECT date_diff('day', TIMESTAMP '2026-04-01 18:40:00', TIMESTAMP '20
 # midnights crossed: april 2 and april 3 start inside the window
 assert (b.date() - a.date()).days == 2
 assert q("SELECT DATE '2026-04-03' - DATE '2026-04-01'") == [(2,)]
+assert q("SELECT b.ordered_at - a.ordered_at, date_diff('day', a.ordered_at, b.ordered_at) FROM orders a, orders b WHERE a.order_id = 102 AND b.order_id = 103") == [(gap, 2)]
 assert q("SELECT date_diff('month', DATE '2026-01-31', DATE '2026-02-01')") == [(1,)]
 # source: https://duckdb.org/docs/current/sql/functions/date
 # confirmed: date_diff(part, startdate, enddate) is "the number of part boundaries between startdate and enddate"
