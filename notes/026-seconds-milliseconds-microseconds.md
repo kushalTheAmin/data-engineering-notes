@@ -34,7 +34,7 @@ year 58219 is out of range
 
 seconds read as milliseconds land 20 days after the start. milliseconds read as seconds point at the year 58219, which python refuses to show.
 
-so what: JavaScript Date.now() gives milliseconds (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) and Postgres, a popular server database, stores timestamps down to 1 microsecond (https://www.postgresql.org/docs/current/datatype-datetime.html). a busy shop can get several orders inside one second, and whole seconds cant order them well.
+so what: JavaScript Date.now() gives milliseconds (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) and Postgres, a server database, stores timestamps down to 1 microsecond (https://www.postgresql.org/docs/current/datatype-datetime.html). a busy shop can get several orders inside one second, and whole seconds cant order them well.
 
 ### check yourself
 

@@ -26,3 +26,6 @@ assert 1.8e9 / 1000 / 86400 < 21
 #   confirmed: timestamp resolution is 1 microsecond
 print("026 ok")
 assert datetime.fromtimestamp(10 ** 9, timezone.utc).year == 2001 and datetime.fromtimestamp(10 ** 10 - 1, timezone.utc).year == 2286
+
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database; the note no longer calls it popular, which no page here supports
