@@ -1,5 +1,7 @@
 # corrections
 
+104, 2026-10-21: called khandvi a rolled gram flour snack, but a reader from zero does not know gram flour is chickpea flour, and the other snack is called chickpea flour. it now says chickpea flour. evidence: https://en.wikipedia.org/wiki/Gram_flour ("Chickpea flour, common varieties include besan or gram flour"); correction 113 made the same fix for the same reason
+
 122, 2026-10-21: note text unchanged. the dhokla, kaju katli, khandvi and fafda glosses and the claim that Postgres is a server database had no source in the checks. they now cite Wikipedia and the Postgres docs. evidence: https://en.wikipedia.org/wiki/Khandvi_(food) ("primarily made of gram flour and yogurt"); https://en.wikipedia.org/wiki/Fafda ("gram flour, oil, carom seeds", "deep-fried till they turn crispy"); https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model")
 
 121, 2026-10-21: note text unchanged. the claim that Postgres is a server database had no source in the checks. it now cites the Postgres docs. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model")

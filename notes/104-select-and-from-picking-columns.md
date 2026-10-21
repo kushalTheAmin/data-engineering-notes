@@ -28,7 +28,7 @@ price | name
 4.50 | fafda
 ```
 
-in python terms, for every row dictionary you build a new one with only the keys you listed, in that order. product_id and category never make it out. the table itself is untouched, the query only decides what you see. (dhokla is a steamed savory cake, khandvi a rolled gram flour snack, jalebi a syrupy sweet, kaju katli a cashew sweet, masala chai spiced tea, fafda a crunchy chickpea flour snack.)
+in python terms, for every row dictionary you build a new one with only the keys you listed, in that order. product_id and category never make it out. the table itself is untouched, the query only decides what you see. (dhokla is a steamed savory cake, khandvi a rolled chickpea flour snack, jalebi a syrupy sweet, kaju katli a cashew sweet, masala chai spiced tea, fafda a crunchy chickpea flour snack.)
 
 now the part i got wrong. i assumed picking one column would give me the distinct values:
 
