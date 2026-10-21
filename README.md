@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 136
+notes so far: 137
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -155,3 +155,7 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [134 the order SQL really runs in](./notes/134-the-order-sql-really-runs-in.md): a query runs FROM, WHERE, SELECT, ORDER BY, LIMIT, so an AS name works in ORDER BY but not in a Postgres WHERE
 - [135 one language, many dialects](./notes/135-one-language-many-dialects.md): the first 2 rows is FETCH FIRST in the standard, LIMIT in Postgres and DuckDB, TOP in SQL Server
 - [136 capstone, one query traced clause by clause](./notes/136-capstone-one-query-traced-clause-by-clause.md): one query with 5 clauses, and the rows left after each one, with every note of the section on the map
+
+## section 6: summarizing data
+
+- [137 aggregate functions, many rows in, one value out](./notes/137-aggregate-functions-many-rows-in-one-value-out.md): count, sum and max turn 13 order_items rows into one row, and summing zero rows gives NULL, not 0
