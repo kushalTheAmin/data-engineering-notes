@@ -83,6 +83,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | ILIKE | LIKE that ignores upper and lower case | [113](./notes/113-like-matching-text-patterns.md) |
 | IN | keeps a row if its value equals any item in a list | [111](./notes/111-in-matching-against-a-list.md) |
 | insert anomaly | a fact cant be stored until an unrelated fact exists | [090](./notes/090-insert-and-delete-anomalies.md) |
+| integer division | dividing whole numbers and keeping only the whole part | [131](./notes/131-integer-division-when-7-divided-by-2-gives-3.md) |
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |
 | interval | a length of time, like 2 days, you add to a date | [128](./notes/128-adding-and-subtracting-intervals.md) |
 | IS NOT NULL | the test that is true when a value is present, never unknown | [115](./notes/115-is-null-and-is-not-null.md) |

@@ -37,4 +37,4 @@ three zero days among the 9 turn the whole average into nan. with NULLIF avg, th
 Postgres doesnt return anything here, it raises a division_by_zero error and your query fails, so the guard is the same habit in both databases, just for different reasons. NULLIF lets you decide an empty day is NULL, instead of the database deciding.
 
 ---
-prev: [129 the difference between two dates](./129-the-difference-between-two-dates.md) | next: not written yet
+prev: [129 the difference between two dates](./129-the-difference-between-two-dates.md) | next: [131 integer division, when 7 / 2 gives 3](./131-integer-division-when-7-divided-by-2-gives-3.md)

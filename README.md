@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 130
+notes so far: 131
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -149,3 +149,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [128 adding and subtracting intervals](./notes/128-adding-and-subtracting-intervals.md): ordered_at + INTERVAL 2 DAY moves a timestamp and keeps the clock, and 1 month is not 30 days, so Jan 31 plus 1 month lands on Feb 28
 - [129 the difference between two dates](./notes/129-the-difference-between-two-dates.md): 102 to 103 is 1 day and 17 hours apart, and date_diff still says 2
 - [130 NULLIF and dividing by zero](./notes/130-nullif-and-dividing-by-zero.md): NULLIF(placed, 0) turns a zero into NULL so a rate comes out NULL, while a raw 0 / 0 gives nan in DuckDB and one nan wrecks avg
+- [131 integer division, when 7 / 2 gives 3](./notes/131-integer-division-when-7-divided-by-2-gives-3.md): DuckDB / gives 3.5 and // gives 3, while Postgres makes / on two integers drop the fraction
