@@ -35,3 +35,5 @@ assert (b - a).total_seconds() == 3 * 3600
 # source: https://www.postgresql.org/docs/current/datatype-datetime.html
 # confirmed: timestamptz is stored internally as UTC, shown in the session time zone, and the original zone is not retained
 print("030 ok")
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database; the note no longer calls it popular, which no page here supports

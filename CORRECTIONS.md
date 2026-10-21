@@ -2,6 +2,8 @@
 
 128, 2026-10-21: called Postgres another popular database, but no page backs popular and correction 110 already dropped the word for the same reason. it now says another database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); correction 110 removed the same unsourced word
 
+030, 2026-10-21: called Postgres a popular server database, but no page backs popular and correction 110 already dropped the word for the same reason (correction 030 of 2026-10-17 had added it). it now says a server database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); correction 110 removed the same unsourced word
+
 016, 2026-10-21: called Postgres popular, but no page backs popular and correction 110 already dropped the word for the same reason. it now says a server database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); correction 110 removed the same unsourced word
 
 037, 2026-10-21: called Postgres popular, but no page backs popular and correction 110 already dropped the word for the same reason. it now says a server database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); correction 110 removed the same unsourced word
