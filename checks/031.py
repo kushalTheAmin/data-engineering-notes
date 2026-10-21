@@ -13,3 +13,6 @@ assert row["city"] is None
 # source: https://www.postgresql.org/docs/current/functions-aggregate.html
 #   confirmed: count(*) computes the number of input rows; count("any") counts rows in which the input value is not null
 print("031 ok")
+
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database; the note no longer calls it popular, which no page here supports
