@@ -7,6 +7,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | absolute path | a path starting with a slash, always begun at the root | [053](./notes/053-absolute-vs-relative-paths.md) |
 | address (network) | a number naming one machine on a network, 4 bytes in IPv4 | [085](./notes/085-addresses-and-ports.md) |
 | aggregate function | reads many rows, returns one value, like count, sum or max | [137](./notes/137-aggregate-functions-many-rows-in-one-value-out.md) |
+| aggregates skip nulls | sum, avg and count(column) ignore null rows entirely | [141](./notes/141-what-nulls-do-to-sum-and-avg.md) |
 | alias | a name you give a result column with AS | [122](./notes/122-computed-columns-and-as.md) |
 | ambiguous time | a clock reading that happens twice, when clocks go back | [029](./notes/029-daylight-saving.md) |
 | AND | joins two tests, keeping a row only if both are true | [108](./notes/108-and-or-combining-two-tests.md) |

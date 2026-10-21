@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 140
+notes so far: 141
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -162,3 +162,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [138 COUNT star vs COUNT of a column](./notes/138-count-star-vs-count-of-a-column.md): count(*) counts rows, count(stars) skips the nulls, so the same 5 ratings give 5 or 3
 - [139 COUNT DISTINCT, counting different values](./notes/139-count-distinct-counting-different-values.md): 7 orders but count(DISTINCT customer_id) is 4, and unlike SELECT DISTINCT it skips nulls
 - [140 SUM and AVG, adding up and averaging](./notes/140-sum-and-avg-adding-up-and-averaging.md): the 6 product prices sum to 38.00 and average 6.33, a price no product has, because avg is just sum over count
+- [141 what NULLs do to SUM and AVG](./notes/141-what-nulls-do-to-sum-and-avg.md): sum and avg skip null rows, so avg divides by 3 not 5, and all null gives NULL

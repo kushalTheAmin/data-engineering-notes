@@ -49,4 +49,4 @@ total | average | n
 this time 6.0 is exactly the price of dhokla, so sometimes avg hits a real row. so what: avg hides outliers like that 12.00, so when you see one, look at the rows behind it.
 
 ---
-prev: [139 COUNT DISTINCT, counting different values](./139-count-distinct-counting-different-values.md) | next: not written yet
+prev: [139 COUNT DISTINCT, counting different values](./139-count-distinct-counting-different-values.md) | next: [141 what NULLs do to SUM and AVG](./141-what-nulls-do-to-sum-and-avg.md)
