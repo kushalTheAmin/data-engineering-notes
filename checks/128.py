@@ -40,3 +40,5 @@ assert q("SELECT (DATE '2026-01-31' + INTERVAL 1 MONTH) - INTERVAL 1 MONTH") == 
 # confirmed: Postgres examples use quoted intervals, e.g. date '2001-09-28' + interval '1 hour'
 # source: https://docs.python.org/3/library/datetime.html
 # confirmed: timedelta takes days, seconds, microseconds, milliseconds, minutes, hours, weeks (no months)
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database; the note no longer calls it popular, which no page here supports

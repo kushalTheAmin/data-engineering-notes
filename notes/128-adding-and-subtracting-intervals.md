@@ -35,7 +35,7 @@ plus_month | plus_30_days
 
 i assumed 1 month was just a nickname for 30 days. it isnt. it means the same day number next month, and when that day doesnt exist it lands on the last day of that month. a day count is exact, a month count is not. DuckDB also turns a date plus an interval into a timestamp, hence the 00:00:00.
 
-this bites in real jobs, like "every month on the 31st", where the two readings differ. Postgres, another popular database, writes it with quotes, `INTERVAL '2 days'`, and DuckDB accepts that form too.
+this bites in real jobs, like "every month on the 31st", where the two readings differ. Postgres, another database, writes it with quotes, `INTERVAL '2 days'`, and DuckDB accepts that form too.
 
 ### check yourself
 
