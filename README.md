@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 126
+notes so far: 127
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -145,3 +145,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [124 text functions, lower, upper, length and trim](./notes/124-text-functions-lower-upper-length-and-trim.md): a trailing space makes WHERE typed_name = 'CHIRAG' find nothing, length shows it, and lower(trim(...)) cleans it in the result
 - [125 concatenating text, and taking pieces of it](./notes/125-concatenating-text-and-taking-pieces-of-it.md): gluing name and city gives NULL for Esha because one null piece nulls the whole label, and substr counts from 1 where python counts from 0
 - [126 date parts, pulling out the year, month and day](./notes/126-date-parts-pulling-out-the-year-month-and-day.md): extract(month FROM ordered_at) gives the number 4 not April, WHERE can filter on it, and month alone forgets the year
+- [127 truncating timestamps to a day or a month](./notes/127-truncating-timestamps-to-a-day-or-a-month.md): date_trunc('month', x) chops a timestamp to the first of its month and keeps the year, but the result is still a timestamp, so a plain date only matches at midnight

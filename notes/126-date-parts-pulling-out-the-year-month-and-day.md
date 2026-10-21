@@ -37,4 +37,4 @@ the catch is that month alone forgets the year. March 2026 and March 2027 both g
 DuckDB and Postgres both take `extract(month FROM x)`. DuckDB also has short forms like `month(x)`.
 
 ---
-prev: [125 concatenating text, and taking pieces of it](./125-concatenating-text-and-taking-pieces-of-it.md) | next: not written yet
+prev: [125 concatenating text, and taking pieces of it](./125-concatenating-text-and-taking-pieces-of-it.md) | next: [127 truncating timestamps to a day or a month](./127-truncating-timestamps-to-a-day-or-a-month.md)
