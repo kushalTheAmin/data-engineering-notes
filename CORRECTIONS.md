@@ -1,5 +1,7 @@
 # corrections
 
+130, 2026-10-21: note text unchanged. the check had no source for DuckDB giving nan on 0 / 0 or for avg skipping NULLs. it now cites both pages. evidence: https://duckdb.org/docs/current/configuration/overview (ieee_floating_point_ops "returning NAN instead of errors/NULL", default true); https://duckdb.org/docs/current/sql/functions/aggregates (avg "Calculates the average of all non-null values")
+
 129, 2026-10-21: said the elapsed-time and date_diff readings of within 2 days disagree whenever the delivery comes later in the day than the order did, but that only holds when the delivery is dated exactly two days after the order (same day, one day or three days later never disagree). it now says for a delivery dated two days after the order. the python sentence about subtracting datetimes was cut to stay under the word limit. correction 129 above had dropped the evening wording but left this out. evidence: python, over gaps of 0 to 5 days and every pair of hours, the readings differ exactly when gap is 2 and delivery hour is later (checks/129.py)
 
 129, 2026-10-21: said the elapsed-time and date_diff readings of within 2 days disagree for anything placed late in the evening, but they disagree whenever the delivery clock time is later than the order clock time (an evening order only disagrees if delivered later that evening). it now says whenever the delivery comes later in the day than the order did. evidence: python, over every order hour and delivery hour the two readings differ exactly when the delivery hour is later (checks/129.py)

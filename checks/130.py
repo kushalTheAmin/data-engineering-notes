@@ -33,4 +33,9 @@ except ZeroDivisionError:
 # confirmed: the error codes list includes division_by_zero, so Postgres raises an error on division by zero
 # source: https://docs.python.org/3/library/exceptions.html
 # confirmed: ZeroDivisionError is a built-in arithmetic error
+# source: https://duckdb.org/docs/current/configuration/overview
+# confirmed: ieee_floating_point_ops "Use IEE754-compliant floating point operations (returning NAN instead of errors/NULL)", default true, so 0 / 0 gives nan in DuckDB
+# source: https://duckdb.org/docs/current/sql/functions/aggregates
+# confirmed: avg "Calculates the average of all non-null values", and general aggregates "ignore NULLs"
+assert con.execute("SELECT 5 / NULL").fetchone()[0] is None
 print("130 ok")
