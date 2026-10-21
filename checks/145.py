@@ -29,3 +29,5 @@ assert q("SELECT count(DISTINCT category) FROM products") == [(3,)]
 assert r[0] == ("drink", "masala chai", Decimal("3.00"))
 # source: https://dev.mysql.com/doc/refman/8.0/en/group-by-handling.html
 # confirmed: ONLY_FULL_GROUP_BY is enabled by default; when disabled "the server is free to choose any value from each group" and the values are nondeterministic
+# source: https://dev.mysql.com/doc/refman/8.4/en/what-is-mysql.html
+# confirmed: "The MySQL Database Software is a client/server system"
