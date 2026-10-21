@@ -93,4 +93,4 @@ the 2 unrated orders form one group, so n is 2, but count(stars) skips nulls so 
 </details>
 
 ---
-prev: [142 MIN and MAX, the smallest and biggest value](./142-min-and-max-the-smallest-and-biggest-value.md) | next: not written yet
+prev: [142 MIN and MAX, the smallest and biggest value](./142-min-and-max-the-smallest-and-biggest-value.md) | next: [144 grouping by more than one column](./144-grouping-by-more-than-one-column.md)
