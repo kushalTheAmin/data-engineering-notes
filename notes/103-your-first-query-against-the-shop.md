@@ -29,7 +29,7 @@ masala chai | 3.00
 fafda | 4.50
 ```
 
-six rows, one per product, two columns. dhokla is a steamed savory cake, khandvi a rolled gram flour snack, and fafda a crunchy chickpea flour snack. in python, `con.execute(...).fetchall()` hands these back as a list of tuples (lists that cannot be changed), and the price arrives as `Decimal('6.00')`, not 6.0, because the column is an [exact decimal](./022-exact-decimal-types.md) (digits kept exactly, no float rounding).
+six rows, one per product, two columns. dhokla is a steamed savory cake, khandvi a rolled chickpea flour snack, and fafda a crunchy chickpea flour snack. in python, `con.execute(...).fetchall()` hands these back as a list of tuples (lists that cannot be changed), and the price arrives as `Decimal('6.00')`, not 6.0, because the column is an [exact decimal](./022-exact-decimal-types.md) (digits kept exactly, no float rounding).
 
 the gotcha: run that load line a second time on the same file and it errors with `Table with name "customers" already exists`, because the first run saved everything. load once, after that just connect.
 
