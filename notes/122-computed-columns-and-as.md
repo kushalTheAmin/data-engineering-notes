@@ -41,4 +41,4 @@ the name is yours, and [ORDER BY](./117-order-by-sorting-by-one-or-more-columns.
 one gotcha: DuckDB lets [WHERE](./106-where-keeping-only-the-rows-that-match.md) (the row filter) use sale_price too, but the Postgres docs say an output name works in ORDER BY, not in WHERE, there you write `price - 1` again. so if you move databases, that query breaks.
 
 ---
-prev: [121 DISTINCT, removing duplicate rows](./121-distinct-removing-duplicate-rows.md) | next: not written yet
+prev: [121 DISTINCT, removing duplicate rows](./121-distinct-removing-duplicate-rows.md) | next: [123 CASE WHEN, if and else inside a query](./123-case-when-if-and-else-inside-a-query.md)
