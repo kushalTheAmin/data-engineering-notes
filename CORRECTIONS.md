@@ -1,5 +1,9 @@
 # corrections
 
+125, 2026-10-21: said gluing onto a null with || gives null as if every database does it, but MySQL reads || as logical OR unless PIPES_AS_CONCAT is on. it now says in DuckDB, with a one line MySQL caveat (a filler sentence was cut to stay under the word limit). the checks now assert the DuckDB null and cite the DuckDB, MySQL and Postgres pages. evidence: https://dev.mysql.com/doc/refman/8.4/en/logical-operators.html ("Logical OR", "If the PIPES_AS_CONCAT SQL mode is enabled, || signifies the SQL-standard string concatenation operator"); https://duckdb.org/docs/current/sql/functions/text ("Any NULL input results in NULL")
+
+126, 2026-10-21: note text unchanged. the check cited the DuckDB date page for month(x) and year(x), but that page does not list them. it now cites the datepart page. evidence: https://duckdb.org/docs/current/sql/functions/datepart (month(date) "Month.", year(date) "Year.")
+
 123, 2026-10-21: note text unchanged. the claim that CASE is standard SQL had no source in the checks. it now cites the Postgres list of standard features. evidence: https://www.postgresql.org/docs/current/features-sql-standard.html ("F261 Core CASE expression", "F261-02 Core Searched CASE")
 
 124, 2026-10-21: said strlen gives the 3 bytes as if it works in every database, but strlen is DuckDB only and Postgres counts bytes with octet_length. it now says in DuckDB strlen gives the 3, and Postgres has octet_length for that. the DuckDB length and strlen claims also had no source in the checks; they now cite the DuckDB and Postgres docs. evidence: https://duckdb.org/docs/current/sql/functions/text ("strlen(string): Number of bytes in string"); https://www.postgresql.org/docs/current/functions-string.html (octet_length "Returns number of bytes in the string", no strlen entry)

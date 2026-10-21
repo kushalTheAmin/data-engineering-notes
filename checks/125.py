@@ -23,3 +23,10 @@ assert q("SELECT concat('a', NULL, 'b')") == [("ab",)]
 # source: https://en.wikipedia.org/wiki/Dhokla
 # confirmed: dhokla is a savoury sponge dish steamed to a cake-like consistency (seen in the check for note 122)
 assert q("SELECT name || ' from ' || coalesce(city, '?') AS label FROM customers WHERE name = 'Esha'") == [("Esha from ?",)]
+# source: https://duckdb.org/docs/current/sql/functions/text
+# confirmed: "Any NULL input results in NULL" for the || operator; concat "NULL inputs are skipped"
+assert q("SELECT 'a' || NULL") == [(None,)]
+# source: https://dev.mysql.com/doc/refman/8.4/en/logical-operators.html
+# confirmed: in MySQL || is logical OR; "If the PIPES_AS_CONCAT SQL mode is enabled, || signifies the SQL-standard string concatenation operator"
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model"

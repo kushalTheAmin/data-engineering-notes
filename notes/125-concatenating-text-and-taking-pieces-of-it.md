@@ -21,7 +21,7 @@ Disha from Hoboken
 NULL
 ```
 
-Esha has no city, a [null](./031-null.md) (a missing value), and gluing onto a null with `||` gives null. i assumed it would keep her name and skip the city, and it doesnt (python would raise an error, SQL quietly returns null). wrap the city in [COALESCE](./116-coalesce-a-fallback-when-a-value-is-null.md) (a fallback for nulls) and she gets one:
+Esha has no city, a [null](./031-null.md) (a missing value), and in DuckDB gluing onto a null with `||` gives null (MySQL reads `||` as OR unless a setting is on). i assumed it would keep her name and skip the city, and it doesnt (python would raise an error, SQL quietly returns null). wrap the city in [COALESCE](./116-coalesce-a-fallback-when-a-value-is-null.md) (a fallback for nulls) and she gets one:
 
 ```sql
 SELECT name || ' from ' || coalesce(city, '?') AS label FROM customers WHERE name = 'Esha'
@@ -42,7 +42,7 @@ substr('dhokla', 2, 3)  ->  start at 2, take 3  ->  hok
 
 the gotcha is that SQL counts from 1 (for starts of 1 or more), python counts from 0, so the same cut in python is `"dhokla"[1:4]`. Postgres, a server database, counts from 1 too, its docs have `substring('Thomas' from 2 for 3)` giving hom.
 
-this is how you trim a messy code down to its first few characters. if a label in your report ever shows NULL, look for a null in one of the pieces. the concat function skips nulls instead, in Postgres and DuckDB.
+if a label in your report ever shows NULL, look for a null in one of the pieces. the concat function skips nulls instead, in Postgres and DuckDB.
 
 ---
 prev: [124 text functions, lower, upper, length and trim](./124-text-functions-lower-upper-length-and-trim.md) | next: [126 date parts, pulling out the year, month and day](./126-date-parts-pulling-out-the-year-month-and-day.md)
