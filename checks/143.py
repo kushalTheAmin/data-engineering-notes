@@ -21,3 +21,7 @@ for name, category, price in products:
     groups.setdefault(category, []).append(price)
 assert {k: (len(v), sum(v) / len(v)) for k, v in groups.items()} == {"snack": (3, 6.0), "sweet": (2, 8.5), "drink": (1, 3.0)}
 
+# source: https://www.postgresql.org/docs/current/sql-select.html
+# confirmed: "GROUP BY will condense into a single row all selected rows that share the same values for the grouped expressions"; "WHERE filters individual rows before the application of GROUP BY"
+# source: https://learn.microsoft.com/en-us/sql/t-sql/queries/select-group-by-transact-sql
+# confirmed: "SQL removes rows that don't meet the conditions in the WHERE clause before it performs any grouping operation"; "The GROUP BY clause doesn't order the result set"; "treats all NULL values as equal and collects them into a single group"
