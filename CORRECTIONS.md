@@ -1,5 +1,7 @@
 # corrections
 
+129, 2026-10-21: said the elapsed-time and date_diff readings of within 2 days disagree for anything placed late in the evening, but they disagree whenever the delivery clock time is later than the order clock time (an evening order only disagrees if delivered later that evening). it now says whenever the delivery comes later in the day than the order did. evidence: python, over every order hour and delivery hour the two readings differ exactly when the delivery hour is later (checks/129.py)
+
 128, 2026-10-21: called Postgres another popular database, but no page backs popular and correction 110 already dropped the word for the same reason. it now says another database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); correction 110 removed the same unsourced word
 
 030, 2026-10-21: called Postgres a popular server database, but no page backs popular and correction 110 already dropped the word for the same reason (correction 030 of 2026-10-17 had added it). it now says a server database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); correction 110 removed the same unsourced word
