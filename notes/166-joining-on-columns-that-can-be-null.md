@@ -74,4 +74,4 @@ each of the 3 named cities pairs with itself. the NULL row pairs with nothing, n
 </details>
 
 ---
-prev: [165 double counting, why sums after a fan out lie](./165-double-counting-why-sums-after-a-fan-out-lie.md) | next: not written yet
+prev: [165 double counting, why sums after a fan out lie](./165-double-counting-why-sums-after-a-fan-out-lie.md) | next: [167 anti join, rows with no match](./167-anti-join-rows-with-no-match.md)
