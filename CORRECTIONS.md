@@ -1,5 +1,7 @@
 # corrections
 
+152, 2026-10-22: said Asha has 2 delivered and 1 pending and her total is 3, without saying she is customer 1, while the tables only show ids, so a reader landing here alone could not match the name to the rows (151 got the same fix). it now says Asha, customer 1. the checks now assert it. evidence: python, SELECT name FROM customers WHERE customer_id = 1 gives Asha (checks/152.py); data/shop.sql
+
 153, 2026-10-22: the first question asked which wrong row you would get if HAVING ran after LIMIT, but LIMIT would keep only customer 3 with n = 1 and HAVING would then drop it, so you get no rows, not a wrong row. the answer now says no rows at all. the checks now assert that. evidence: python, a LIMIT 1 over groups sorted by n then customer_id, followed by n >= 2, returns [] in DuckDB (checks/153.py)
 
 151, 2026-10-22: said Chirag has total 1 but 0 and 0, and that Asha is one row, without saying which customer ids they are, while the tables only show ids, so a reader landing here alone could not match the names to the rows. it now says customer 3, Chirag, and Asha, customer 1. the checks now assert both ids. evidence: python, SELECT customer_id, name FROM customers gives (1, Asha) and (3, Chirag) (checks/151.py); data/shop.sql

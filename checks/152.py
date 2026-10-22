@@ -24,3 +24,4 @@ assert len({(r[0], r[1]) for r in r if r[0] is not None and r[1] is not None}) =
 assert len([x for x in r if x[0] is not None and x[1] is None]) == 4 and len([x for x in r if x[0] is None]) == 1
 # swapped order: delivered subtotal is 5
 assert ('delivered', None, 5) in s
+assert q("SELECT name FROM customers WHERE customer_id = 1") == [("Asha",)]
