@@ -16,7 +16,7 @@ section: combining tables with joins, part 2, ~2 min read
 
 1 kept, 4 thrown away. repeat for all 7 orders: 7 times 5 is 35 checks, 7 survivors. i kept picturing a direct jump to the row with id 4, but the plain version just tries every row and keeps the ones that match.
 
-the part that bites is the other direction. flip it around and ask which customers appear:
+the part that bites is the other direction. flip it around and ask which customers appear ([DISTINCT](./121-distinct-removing-duplicate-rows.md) keeps one copy of each name):
 
 ```sql
 SELECT DISTINCT customers.name FROM customers JOIN orders ON customers.customer_id = orders.customer_id ORDER BY customers.name

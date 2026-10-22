@@ -24,3 +24,5 @@ assert q("SELECT count(*) FROM orders JOIN (SELECT * FROM customers UNION ALL SE
 assert q("SELECT o.order_id, c.name FROM orders o JOIN customers c ON o.customer_id = c.customer_id ORDER BY 1") == q("SELECT o.order_id, c.name FROM orders o INNER JOIN customers c ON o.customer_id = c.customer_id ORDER BY 1")
 # source: https://www.postgresql.org/docs/current/sql-select.html
 # confirmed: join_type is "[ INNER ] JOIN", so INNER is optional and plain JOIN is the inner join
+# source: https://duckdb.org/docs/2.0/sql/query_syntax/from.html
+# confirmed: "A join that is not OUTER is INNER (only rows that get paired are returned)", and its example writes a plain JOIN

@@ -1,5 +1,6 @@
 # corrections
 
+156, 2026-10-22: used DISTINCT without saying what it does, and said a plain JOIN is an inner join in DuckDB with a source only for Postgres. it now says DISTINCT keeps one copy of each name and links 121, and the checks cite the DuckDB page. evidence: https://duckdb.org/docs/2.0/sql/query_syntax/from.html ("A join that is not OUTER is INNER (only rows that get paired are returned)"); notes/121-distinct-removing-duplicate-rows.md
 154, 2026-10-22: the first answer said average items per order is 2.86 (20 over 7), but that is DuckDB only, since Postgres divides two integers as integer division and gives 2. it now says so and points to 131. evidence: https://www.postgresql.org/docs/current/functions-math.html ("for integral types, division truncates the result towards zero", 5 / 2 gives 2); python, SQLite 20/7 gives 2 and DuckDB 20 / 7 gives 2.857 (checks/154.py)
 
 153, 2026-10-22: the second answer said moving the WHERE into HAVING would error, which reads as true everywhere, but SQLite runs that query and returns rows. it now says it errors in DuckDB and some databases accept it. 147 says the same. the checks now assert the SQLite result. evidence: python, sqlite3 SELECT customer_id FROM orders GROUP BY customer_id HAVING status <> 'cancelled' returns [(1,)] (checks/153.py); notes/147-where-vs-having-before-grouping-or-after.md
