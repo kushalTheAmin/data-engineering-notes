@@ -65,4 +65,4 @@ sorted that is 4.50, 6.00, 7.50 at positions 0, 1, 2. 0.9 of the way is position
 </details>
 
 ---
-prev: [149 median, the middle value after sorting](./149-median-the-middle-value-after-sorting.md) | next: not written yet
+prev: [149 median, the middle value after sorting](./149-median-the-middle-value-after-sorting.md) | next: [151 pivoting, turning rows into columns](./151-pivoting-turning-rows-into-columns.md)

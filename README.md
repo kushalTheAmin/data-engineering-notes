@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 150
+notes so far: 151
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -172,3 +172,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [148 conditional aggregation, counting several things in one pass](./notes/148-conditional-aggregation-counting-several-things-in-one-pass.md): sum(CASE WHEN ...) gives total, delivered and pending per customer in one query, and count(CASE ... ELSE 0) wrongly counts all 7 rows
 - [149 median, the middle value after sorting](./notes/149-median-the-middle-value-after-sorting.md): the 6 prices have median 5.50 against an avg of 6.33, because an even count averages the two middles
 - [150 percentiles, the medians cousins](./notes/150-percentiles-the-medians-cousins.md): the 90th percentile of the 6 prices is 9.75, halfway between 7.50 and 12.00, a position and not 90% of the max
+- [151 pivoting, turning rows into columns](./notes/151-pivoting-turning-rows-into-columns.md): one sum(CASE ...) per status turns 5 long rows into one row per customer, and a status you forget to type silently disappears
