@@ -29,4 +29,4 @@ DuckDB, the database these notes run in, says the table "orders" was not found a
 so pick the nickname once and use it in SELECT, ON and WHERE alike. you will also need aliases when a table joins to itself, because then the real name would be ambiguous (two copies, one name).
 
 ---
-prev: [157 ON, how a join decides which rows match](./157-on-how-a-join-decides-which-rows-match.md) | next: not written yet
+prev: [157 ON, how a join decides which rows match](./157-on-how-a-join-decides-which-rows-match.md) | next: [159 left join, keep every row from the left table](./159-left-join-keep-every-row-from-the-left-table.md)
