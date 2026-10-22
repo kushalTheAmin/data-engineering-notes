@@ -45,4 +45,4 @@ so 104 was Chirag, in Jersey City. i figured pulling in a second table would mak
 you never write that loop. the database often finds a faster way, and the rows come out the same. the docs of Postgres, a popular database, call the literal loop a nested loop join.
 
 ---
-prev: [154 capstone, orders per customer traced from rows to groups](./154-capstone-orders-per-customer-traced-from-rows-to-groups.md) | next: not written yet
+prev: [154 capstone, orders per customer traced from rows to groups](./154-capstone-orders-per-customer-traced-from-rows-to-groups.md) | next: [156 inner join traced by hand](./156-inner-join-traced-by-hand.md)
