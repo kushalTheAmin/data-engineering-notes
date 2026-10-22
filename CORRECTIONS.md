@@ -1,5 +1,7 @@
 # corrections
 
+145, 2026-10-22: the second question said the query below errored on name, but the query shown already has name in the GROUP BY and runs, so a reader running it saw no error. it now says name alone errors and the query below adds it. the checks now assert that name alone errors. evidence: python, SELECT category, name, min(price) FROM products GROUP BY category errors in DuckDB (checks/145.py)
+
 144, 2026-10-22: note text unchanged. the claim in the second answer that WHERE runs before the grouping and removes the pending order had no source in the checks. it now cites the Postgres SELECT page. evidence: https://www.postgresql.org/docs/current/sql-select.html ("WHERE filters individual rows before the application of GROUP BY")
 
 147, 2026-10-22: note text unchanged. the claim that some databases accept a HAVING test on an ungrouped column and pick an arbitrary value had no source in the checks. it now cites the MySQL page. evidence: https://dev.mysql.com/doc/refman/8.0/en/group-by-handling.html ("permits the select list, HAVING condition, or ORDER BY list to refer to nonaggregated columns"; "the server is free to choose any value from each group"); python, sqlite returns rows for that query

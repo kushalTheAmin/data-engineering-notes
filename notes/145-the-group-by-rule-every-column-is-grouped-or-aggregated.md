@@ -66,7 +66,7 @@ it runs, 5 rows. the rule only covers what SELECT shows, and a grouped column ca
 
 </details>
 
-2. you want the cheapest product per category. the query below errored on name, so you add name to the GROUP BY. how many rows come back?
+2. you want the cheapest product per category. name alone errors, so the query below adds name to the GROUP BY. how many rows come back?
 ```sql
 SELECT category, name, min(price) AS lowest FROM products GROUP BY category, name ORDER BY category, name
 ```

@@ -39,3 +39,9 @@ except Exception as e:
 # confirmed: ONLY_FULL_GROUP_BY is enabled by default; when disabled "the server is free to choose any value from each group" and the values are nondeterministic
 # source: https://dev.mysql.com/doc/refman/8.4/en/what-is-mysql.html
 # confirmed: "The MySQL Database Software is a client/server system"
+# check yourself 2 wording: name alone errors
+try:
+    q("SELECT category, name, min(price) FROM products GROUP BY category")
+    raise SystemExit("should have failed")
+except Exception as e:
+    assert "must appear in the GROUP BY clause" in str(e)
