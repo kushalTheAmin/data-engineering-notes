@@ -18,7 +18,7 @@ print((prices[mid - 1] + prices[mid]) / 2)
 5.5
 ```
 
-that pick fits an even count only. 6 values have no single middle, so you average the two in the middle, 5.0 and 6.0. i figured the middle of an even list would just pick one, and it quietly makes up a number. in [SQL](./101-sql-you-describe-the-result.md) (the language for asking a database for rows) it is one word, an [aggregate](./137-aggregate-functions-many-rows-in-one-value-out.md) (many rows in, one value out):
+that pick fits an even count only. 6 values have no single middle, so you average the two in the middle, 5.0 and 6.0. i figured an even list would just pick one middle, but it makes up a number. in [SQL](./101-sql-you-describe-the-result.md) (the language for asking a database for rows) it is one word, an [aggregate](./137-aggregate-functions-many-rows-in-one-value-out.md) (many rows in, one value out):
 
 ```sql
 SELECT median(price) AS middle, avg(price) AS average FROM products
@@ -44,7 +44,7 @@ sweet | 8.50
 
 snack has 3 products, an odd count, so the median is a real price: dhokla (a steamed savory cake) at 6.00. sweet has 2, 5.00 and 12.00, so 8.50, which nothing costs.
 
-so what: imagine kaju katli (a cashew sweet) cost 120.00, and avg jumps to 24.33 while the median stays 5.50. when a few huge values would skew an average, the median is the number to look at.
+so what: imagine kaju katli (a cashew sweet) cost 120.00, and avg jumps to 24.33 while the median stays 5.50. when a few huge values skew an average, look at the median.
 
 one dialect note ([135](./135-one-language-many-dialects.md), each database has its own spelling): DuckDB has a one-word median, as do some other databases, but Postgres, a server database, has none and spells it this longer way, where 0.5 means halfway through the sorted values:
 
