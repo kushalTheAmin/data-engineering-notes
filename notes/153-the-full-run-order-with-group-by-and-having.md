@@ -35,7 +35,7 @@ the gotcha: SELECT runs after HAVING, so n doesnt exist yet at step 4. the docs 
 
 ### check yourself
 
-1. predict the single row. then say which wrong row you would get if HAVING ran after LIMIT.
+1. predict the single row. then say what you would get if HAVING ran after LIMIT.
 ```sql
 SELECT customer_id, count(*) AS n FROM orders GROUP BY customer_id HAVING count(*) >= 2 ORDER BY n, customer_id LIMIT 1
 ```
@@ -45,7 +45,7 @@ SELECT customer_id, count(*) AS n FROM orders GROUP BY customer_id HAVING count(
 customer_id | n
 2 | 2
 ```
-HAVING drops customers 3 and 4 (one order each) before the sort, so the smallest survivor is customer 2. if LIMIT ran earlier, the sort would put customer 3 with n = 1 first. the tempting answer is 3 | 1, from sorting all 4 groups.
+HAVING drops customers 3 and 4 (one order each) before the sort, so the smallest survivor is customer 2. if LIMIT ran first, the sort would put customer 3 with n = 1 first, LIMIT would keep only it, and HAVING would then drop it, so you would get no rows at all. the tempting answer is 3 | 1, from sorting all 4 groups.
 
 </details>
 
