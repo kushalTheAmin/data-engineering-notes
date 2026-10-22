@@ -218,6 +218,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | UTF-8 | a way to store each code point as 1 to 4 bytes | [010](./notes/010-utf-8.md) |
 | wc | prints a files counts; wc -l counts its 0a line endings | [055](./notes/055-wc-counting-lines.md) |
 | WHERE | the clause keeping only rows whose condition is true, checked before SELECT | [106](./notes/106-where-keeping-only-the-rows-that-match.md) |
+| WHERE vs HAVING | WHERE tests single rows before grouping, HAVING tests groups after | [147](./notes/147-where-vs-having-before-grouping-or-after.md) |
 | whole cents | money kept as an integer count of cents, price times 100 | [021](./notes/021-storing-money-as-whole-cents.md) |
 | wildcard | a pattern character standing in for other characters | [113](./notes/113-like-matching-text-patterns.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |

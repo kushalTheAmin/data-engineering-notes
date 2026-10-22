@@ -64,4 +64,4 @@ customer_id
 </details>
 
 ---
-prev: [145 the GROUP BY rule, every column is grouped or aggregated](./145-the-group-by-rule-every-column-is-grouped-or-aggregated.md) | next: not written yet
+prev: [145 the GROUP BY rule, every column is grouped or aggregated](./145-the-group-by-rule-every-column-is-grouped-or-aggregated.md) | next: [147 WHERE vs HAVING, before grouping or after](./147-where-vs-having-before-grouping-or-after.md)
