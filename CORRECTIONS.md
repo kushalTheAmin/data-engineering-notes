@@ -2,7 +2,7 @@
 
 149, 2026-10-22: note text unchanged. the dhokla gloss (a steamed savory cake) and the kaju katli gloss (a cashew sweet) had no source in the checks. they now cite the Wikipedia pages. evidence: https://en.wikipedia.org/wiki/Dhokla ("a savoury sponge dish", batter "steamed to a cake-like consistency"); https://en.wikipedia.org/wiki/Kaju_katli ("Kaju means cashew")
 
-150, 2026-10-22: said the Google SRE book without saying what SRE is, and the kaju katli gloss had no source in the checks. it now says Google's site reliability engineering book, and the checks cite the Wikipedia page. evidence: https://en.wikipedia.org/wiki/Kaju_katli ("Kaju katli (lit. 'Cashew slice') is an Indian dessert."; "Kaju means cashew")
+150, 2026-10-22: said the Google SRE book without saying what SRE is, and the kaju katli gloss had no source in the checks. it now says the Google site reliability engineering book, and the checks cite the Wikipedia page. evidence: https://en.wikipedia.org/wiki/Kaju_katli ("Kaju katli (lit. 'Cashew slice') is an Indian dessert."; "Kaju means cashew")
 
 152, 2026-10-22: said Asha has 2 delivered and 1 pending and her total is 3, without saying she is customer 1, while the tables only show ids, so a reader landing here alone could not match the name to the rows (151 got the same fix). it now says Asha, customer 1. the checks now assert it. evidence: python, SELECT name FROM customers WHERE customer_id = 1 gives Asha (checks/152.py); data/shop.sql
 

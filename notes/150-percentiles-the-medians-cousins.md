@@ -32,7 +32,7 @@ p50 | p90 | p90_real
 
 p50 is the median again. i kept reading 90th percentile as 90% of the biggest value, which would be 10.80, but the 90% is about position in the sorted list. like an even-count median, it can be a price nobody charges. in DuckDB (what these notes run in), quantile_cont (continuous) blends neighbors, quantile_disc (discrete) picks a real value, here 12.00.
 
-so what: if you only watch the average you miss the slow ones. Google's site reliability engineering book has a section on worrying about the slowest requests, and says most requests being near the mean is "hopeful thinking".
+so what: if you only watch the average you miss the slow ones. the Google site reliability engineering book has a section on worrying about the slowest requests, and says most requests being near the mean is "hopeful thinking".
 
 [Postgres](./135-one-language-many-dialects.md) (a server database) spells it like this:
 
