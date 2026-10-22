@@ -13,6 +13,8 @@ assert q("SELECT c.name, z.zone FROM customers c LEFT JOIN delivery_zones z ON c
 # the catch-all row exists, and customers has exactly one NULL city
 assert q("SELECT count(*) FROM delivery_zones WHERE city IS NULL") == [(1,)]
 assert q("SELECT count(*) FROM customers WHERE city IS NULL") == [(1,)]
+# the zones table has 4 rows: 3 named cities and the catch-all
+assert q("SELECT count(*) FROM delivery_zones") == [(4,)]
 assert q("SELECT count(*) FROM delivery_zones a JOIN delivery_zones b ON a.city = b.city") == [(3,)]
 # a second NULL zone row fans Esha out to 2 rows
 con.execute("INSERT INTO delivery_zones VALUES (NULL, 'review')")
@@ -20,3 +22,7 @@ assert q("SELECT count(*) FROM customers c JOIN delivery_zones z ON c.city IS NO
 
 # source: https://www.postgresql.org/docs/current/functions-comparison.html
 # confirmed on that page: "NULL IS DISTINCT FROM NULL → f (rather than NULL)", so IS NOT DISTINCT FROM treats two NULLs as equal in Postgres
+# source: https://www.postgresql.org/docs/current/queries-table-expressions.html
+# confirmed on that page: an inner join gives "a row for each row in T2 that satisfies the join condition", so a pair whose test is unknown (NULL = NULL) is not kept
+# source: https://duckdb.org/docs/2.0/sql/expressions/comparison_operators.html
+# confirmed on that page: "IS NOT DISTINCT FROM | equal, including NULL | NULL IS NOT DISTINCT FROM NULL | true", so DuckDB has it too
