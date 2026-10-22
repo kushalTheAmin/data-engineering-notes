@@ -4,7 +4,7 @@ section: combining tables with joins, part 5, ~2 min read
 
 Esha is a customer in the shop (the imaginary gujarati snack store these notes run on), and every join on matching ids so far lost her. how do you ask for customers and their orders without losing the ones who ordered nothing?
 
-a left join is an [inner join](./156-inner-join-traced-by-hand.md) (keeps only pairs where the match holds) that also keeps every row of the left table. the left table is the one written before the word JOIN. here is the loop from [155](./155-why-joins-the-answer-lives-in-more-than-one-table.md), with one extra step, on a slice of two customers:
+a left join is an [inner join](./156-inner-join-traced-by-hand.md) (keeps only pairs where the match holds) that also keeps every row of the left table. the left table is the one written before the word JOIN. here is the loop from [155](./155-why-joins-the-answer-lives-in-more-than-one-table.md), with the left table on the outside and one extra step, on a slice of two customers:
 
 ```python
 customers = [{"customer_id": 4, "name": "Disha"}, {"customer_id": 5, "name": "Esha"}]
