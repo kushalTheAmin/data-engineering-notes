@@ -34,3 +34,5 @@ assert q("SELECT customer_id, count(*) AS n FROM orders WHERE status = 'delivere
 # confirmed: PostgreSQL uses a client/server model
 # a test on a grouped column runs in HAVING too
 assert q("SELECT customer_id FROM orders GROUP BY customer_id HAVING customer_id = 1") == [(1,)]
+# source: https://dev.mysql.com/doc/refman/8.0/en/group-by-handling.html
+# confirmed: with ONLY_FULL_GROUP_BY disabled, "the select list, HAVING condition, or ORDER BY list" may refer to nonaggregated columns not in the GROUP BY, and "the server is free to choose any value from each group"

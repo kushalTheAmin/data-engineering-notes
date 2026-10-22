@@ -1,5 +1,7 @@
 # corrections
 
+147, 2026-10-22: note text unchanged. the claim that some databases accept a HAVING test on an ungrouped column and pick an arbitrary value had no source in the checks. it now cites the MySQL page. evidence: https://dev.mysql.com/doc/refman/8.0/en/group-by-handling.html ("permits the select list, HAVING condition, or ORDER BY list to refer to nonaggregated columns"; "the server is free to choose any value from each group"); python, sqlite returns rows for that query
+
 146, 2026-10-22: used TIMESTAMP in the max example without saying what it is, so a reader landing here alone could not place it, while 127 and 128 gloss it. it now says TIMESTAMP is a day plus a clock time. the checks now cite the DuckDB page. evidence: https://duckdb.org/docs/2.0/sql/data_types/timestamp.html ("they combine DATE and TIME information"); python, typeof(ordered_at) is TIMESTAMP (checks/146.py)
 
 143, 2026-10-22: note text unchanged. the 5 shop customers, the 5 order_ratings with stars 5, 4, NULL, 3, NULL and the 3 products WHERE price > 5 drops were stated but not asserted in the checks. they are now. evidence: python, count(*) FROM customers is 5, stars by order_id are 5, 4, NULL, 3, NULL, products at or under 5 are jalebi, masala chai, fafda (checks/143.py)
