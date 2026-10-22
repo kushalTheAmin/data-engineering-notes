@@ -20,3 +20,6 @@ assert [items[o] for o in (101, 103, 106)] == [2, 2, 1] and 2 + 2 + 1 == 5 and 5
 a = "FROM orders o JOIN order_fees f ON o.order_id = f.order_id JOIN order_items oi ON o.order_id = oi.order_id WHERE o.customer_id = 1"
 assert q("SELECT sum(f.fee) " + a) == [(D("10.00"),)]
 assert q("SELECT sum(DISTINCT f.fee) " + a) == [(D("2.00"),)]
+# 7 fees in total, and summing a many side column in this join is safe: quantity totals 20 either way
+assert q("SELECT count(*) FROM order_fees") == [(7,)]
+assert q("SELECT sum(oi.quantity) FROM order_fees f JOIN order_items oi ON f.order_id = oi.order_id") == q("SELECT sum(quantity) FROM order_items") == [(20,)]
