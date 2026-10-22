@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 152
+notes so far: 153
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -174,3 +174,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [150 percentiles, the medians cousins](./notes/150-percentiles-the-medians-cousins.md): the 90th percentile of the 6 prices is 9.75, halfway between 7.50 and 12.00, a position and not 90% of the max
 - [151 pivoting, turning rows into columns](./notes/151-pivoting-turning-rows-into-columns.md): one sum(CASE ...) per status turns 5 long rows into one row per customer, and a status you forget to type silently disappears
 - [152 ROLLUP, subtotals and grand totals](./notes/152-rollup-subtotals-and-grand-totals.md): ROLLUP (customer_id, status) turns 5 groups into 10 rows, with Asha at 3 and the shop at 7 as NULL rows
+- [153 the full run order with GROUP BY and HAVING](./notes/153-the-full-run-order-with-group-by-and-having.md): WHERE, GROUP BY, HAVING, then SELECT, ORDER BY and LIMIT, so LIMIT counts groups

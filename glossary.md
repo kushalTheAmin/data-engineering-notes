@@ -81,6 +81,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | folder | a named place on disk holding files and other folders | [040](./notes/040-folders-and-paths.md) |
 | foreign key | a column holding another tables primary key values, a pointer | [093](./notes/093-foreign-key.md) |
 | FROM | the clause naming the table a query reads from | [104](./notes/104-select-and-from-picking-columns.md) |
+| full run order (of a query) | FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY, LIMIT | [153](./notes/153-the-full-run-order-with-group-by-and-having.md) |
 | function | SQL that takes a value and returns a new one | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | gibibyte | 1024 x 1024 x 1024 bytes, written GiB | [038](./notes/038-1000-or-1024.md) |
 | gigabyte | 1000 megabytes, a billion bytes, written GB | [033](./notes/033-kilobytes-to-terabytes.md) |
