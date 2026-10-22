@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 160
+notes so far: 161
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -185,3 +185,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [158 table aliases, short nicknames for tables](./notes/158-table-aliases-short-nicknames-for-tables.md): a nickname like o for orders shrinks the ON line, and the full name stops working in that query
 - [159 left join, keep every row from the left table](./notes/159-left-join-keep-every-row-from-the-left-table.md): a left join keeps Esha with a NULL order, 8 rows where the inner join gave 7
 - [160 the nulls a left join creates](./notes/160-the-nulls-a-left-join-creates.md): count(*) says Esha placed 1 order, count(o.order_id) says 0
+- [161 a WHERE that quietly turns a left join into an inner join](./notes/161-a-where-that-quietly-turns-a-left-join-into-an-inner-join.md): a WHERE on the orders side drops Esha and Chirag, 5 rows, while the same test in ON keeps all 7

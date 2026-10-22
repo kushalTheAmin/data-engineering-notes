@@ -24,4 +24,4 @@ only the last row disagrees. [count(*)](./138-count-star-vs-count-of-a-column.md
 so after a left join, count a column from the right table, one that is never NULL in the real table, like its primary key. count(*) answers "how many rows", and you wanted "how many orders".
 
 ---
-prev: [159 left join, keep every row from the left table](./159-left-join-keep-every-row-from-the-left-table.md) | next: not written yet
+prev: [159 left join, keep every row from the left table](./159-left-join-keep-every-row-from-the-left-table.md) | next: [161 a WHERE that quietly turns a left join into an inner join](./161-a-where-that-quietly-turns-a-left-join-into-an-inner-join.md)
