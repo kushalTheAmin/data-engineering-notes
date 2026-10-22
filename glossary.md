@@ -107,6 +107,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | IS NOT NULL | the test that is true when a value is present, never unknown | [115](./notes/115-is-null-and-is-not-null.md) |
 | IS NULL | the test that is true when a value is missing, never unknown | [115](./notes/115-is-null-and-is-not-null.md) |
 | join | pairing rows of two tables where a foreign key equals the id | [155](./notes/155-why-joins-the-answer-lives-in-more-than-one-table.md) |
+| join null | a null a left join fills in for a missing partner | [160](./notes/160-the-nulls-a-left-join-creates.md) |
 | JSON | a text format of records, with a name next to every value | [066](./notes/066-json-records-with-names-on-every-value.md) |
 | JSON array | square brackets around values in order, like a python list | [067](./notes/067-json-types.md) |
 | JSON lines | a text file with one whole JSON record per line | [069](./notes/069-json-lines.md) |

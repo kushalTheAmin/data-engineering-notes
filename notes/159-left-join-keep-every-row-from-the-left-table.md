@@ -65,4 +65,4 @@ no. a left join keeps every left row at least once, and a customer with 3 matche
 </details>
 
 ---
-prev: [158 table aliases, short nicknames for tables](./158-table-aliases-short-nicknames-for-tables.md) | next: not written yet
+prev: [158 table aliases, short nicknames for tables](./158-table-aliases-short-nicknames-for-tables.md) | next: [160 the nulls a left join creates](./160-the-nulls-a-left-join-creates.md)
