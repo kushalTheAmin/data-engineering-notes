@@ -34,3 +34,7 @@ assert sorted([5, 4, 3]) == [3, 4, 5] and sorted([0, 0, 3, 4, 5])[2] == 3
 # confirmed: "MEDIAN is an inverse distribution function that assumes a continuous distribution model", so the one-word median is not DuckDB only; the Postgres aggregate page lists no median function, only percentile_cont
 # source: https://www.postgresql.org/docs/current/tutorial-arch.html
 # confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database
+# source: https://en.wikipedia.org/wiki/Dhokla
+# confirmed: dhokla is "a savoury sponge dish" made with a fermented batter "steamed to a cake-like consistency"
+# source: https://en.wikipedia.org/wiki/Kaju_katli
+# confirmed: "Kaju katli (lit. 'Cashew slice') is an Indian dessert." and "Kaju means cashew"
