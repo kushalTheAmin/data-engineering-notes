@@ -28,9 +28,9 @@ print(kept)
 {1: 3, 2: 2}
 ```
 
-i kept reading HAVING as a fussy second WHERE, but a [WHERE](./106-where-keeping-only-the-rows-that-match.md) (keeps rows that match) looks at single rows, and a single row has no count yet, so the count can only be tested after the groups exist.
+i kept reading HAVING as a fussy second WHERE, but a [WHERE](./106-where-keeping-only-the-rows-that-match.md) (keeps rows that match) looks at single rows, and a single row has no count yet, so the test must wait for the groups.
 
-one thing i didnt expect: the aggregate in HAVING doesnt have to be one you SELECT. HAVING max(ordered_at) > TIMESTAMP '2026-04-05 00:00:00' keeps customers 1, 2 and 4 and shows only the count. the orders behind it, a slice, customer then time: 1 on april 8, 2 on april 9, 3 on april 4, 4 on april 6.
+one thing i didnt expect: the aggregate in HAVING doesnt have to be one you SELECT. HAVING max(ordered_at) > TIMESTAMP '2026-04-05 00:00:00' keeps customers 1, 2 and 4 and shows only the count (a TIMESTAMP is a day plus a clock time). their latest orders: customer 1 on april 8, 2 on april 9, 3 on april 4, 4 on april 6.
 
 so what: "customers with 2 or more orders", "products sold in at least 10 orders", duplicate hunting with HAVING count(*) > 1, since any id that shows up twice has a count above 1.
 

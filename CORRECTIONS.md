@@ -1,5 +1,7 @@
 # corrections
 
+146, 2026-10-22: used TIMESTAMP in the max example without saying what it is, so a reader landing here alone could not place it, while 127 and 128 gloss it. it now says TIMESTAMP is a day plus a clock time. the checks now cite the DuckDB page. evidence: https://duckdb.org/docs/2.0/sql/data_types/timestamp.html ("they combine DATE and TIME information"); python, typeof(ordered_at) is TIMESTAMP (checks/146.py)
+
 143, 2026-10-22: note text unchanged. the 5 shop customers, the 5 order_ratings with stars 5, 4, NULL, 3, NULL and the 3 products WHERE price > 5 drops were stated but not asserted in the checks. they are now. evidence: python, count(*) FROM customers is 5, stars by order_id are 5, 4, NULL, 3, NULL, products at or under 5 are jalebi, masala chai, fafda (checks/143.py)
 
 146, 2026-10-22: note text unchanged. the claims that HAVING filters groups after GROUP BY builds them and that WHERE looks at single rows had no source in the checks. they now cite the Postgres SELECT page. evidence: https://www.postgresql.org/docs/current/sql-select.html ("WHERE filters individual rows before the application of GROUP BY, while HAVING filters group rows created by GROUP BY")
