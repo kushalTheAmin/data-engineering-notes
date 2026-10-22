@@ -21,6 +21,10 @@ for name, category, price in products:
     groups.setdefault(category, []).append(price)
 assert {k: (len(v), sum(v) / len(v)) for k, v in groups.items()} == {"snack": (3, 6.0), "sweet": (2, 8.5), "drink": (1, 3.0)}
 
+# prose: 5 shop customers; quiz 2 ratings in order_id order
+assert q("SELECT count(*) FROM customers") == [(5,)]
+assert q("SELECT stars FROM order_ratings ORDER BY order_id") == [(5,), (4,), (None,), (3,), (None,)]
+assert q("SELECT name FROM products WHERE price <= 5 ORDER BY product_id") == [("jalebi",), ("masala chai",), ("fafda",)]
 # source: https://www.postgresql.org/docs/current/sql-select.html
 # confirmed: "GROUP BY will condense into a single row all selected rows that share the same values for the grouped expressions"; "WHERE filters individual rows before the application of GROUP BY"
 # source: https://learn.microsoft.com/en-us/sql/t-sql/queries/select-group-by-transact-sql

@@ -1,5 +1,7 @@
 # corrections
 
+143, 2026-10-22: note text unchanged. the 5 shop customers, the 5 order_ratings with stars 5, 4, NULL, 3, NULL and the 3 products WHERE price > 5 drops were stated but not asserted in the checks. they are now. evidence: python, count(*) FROM customers is 5, stars by order_id are 5, 4, NULL, 3, NULL, products at or under 5 are jalebi, masala chai, fafda (checks/143.py)
+
 146, 2026-10-22: note text unchanged. the claims that HAVING filters groups after GROUP BY builds them and that WHERE looks at single rows had no source in the checks. they now cite the Postgres SELECT page. evidence: https://www.postgresql.org/docs/current/sql-select.html ("WHERE filters individual rows before the application of GROUP BY, while HAVING filters group rows created by GROUP BY")
 
 145, 2026-10-22: the rule said every column in SELECT must be grouped or inside an aggregate, with no exception, but Postgres lets you select an ungrouped column when the primary key of its table is in the GROUP BY. it now says Postgres bends the rule that way and DuckDB, which the note runs on, does not. the checks now assert DuckDB errors on that query. evidence: https://www.postgresql.org/docs/current/sql-select.html ("A functional dependency exists if the grouped columns (or a subset thereof) are the primary key of the table containing the ungrouped column"); python, SELECT customer_id, name, count(*) FROM customers GROUP BY customer_id errors in DuckDB (checks/145.py)
