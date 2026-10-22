@@ -2,7 +2,7 @@
 builds on: [031 null, a marker for a missing value](./031-null.md), [143 GROUP BY, one group per value](./143-group-by-one-group-per-value.md), [155 why joins, the answer lives in more than one table](./155-why-joins-the-answer-lives-in-more-than-one-table.md), [156 inner join traced by hand](./156-inner-join-traced-by-hand.md), [157 ON, how a join decides which rows match](./157-on-how-a-join-decides-which-rows-match.md), [158 table aliases, short nicknames for tables](./158-table-aliases-short-nicknames-for-tables.md)
 section: combining tables with joins, part 5, ~2 min read
 
-Esha is a customer in the shop (the imaginary gujarati snack store these notes run on), and every join so far lost her. how do you ask for customers and their orders without losing the ones who ordered nothing?
+Esha is a customer in the shop (the imaginary gujarati snack store these notes run on), and every join on matching ids so far lost her. how do you ask for customers and their orders without losing the ones who ordered nothing?
 
 a left join is an [inner join](./156-inner-join-traced-by-hand.md) (keeps only pairs where the match holds) that also keeps every row of the left table. the left table is the one written before the word JOIN. here is the loop from [155](./155-why-joins-the-answer-lives-in-more-than-one-table.md), with one extra step, on a slice of two customers:
 

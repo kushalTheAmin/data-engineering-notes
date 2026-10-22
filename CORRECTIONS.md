@@ -1,5 +1,7 @@
 # corrections
 
+159, 2026-10-22: said every join so far lost Esha, but 157 shows ON true keeps all 35 pairs, Esha included. it now says every join on matching ids. the checks now assert both. evidence: python, orders JOIN customers ON true WHERE name = 'Esha' gives 7 rows and the id match gives 0 (checks/159.py); notes/157-on-how-a-join-decides-which-rows-match.md
+
 158, 2026-10-22: note text unchanged. the claim that AS is optional before a table alias had no source in the checks. they now cite the Postgres page. evidence: https://www.postgresql.org/docs/current/queries-table-expressions.html ("The AS key word is optional noise")
 
 158, 2026-10-22: said the ON line is 45 characters of orders.customer_id = customers.customer_id, but those words alone are 42, and 45 counts the word ON and its space. it now writes the line with ON in front, so the 45 (and the 32 for the short version) can be counted. evidence: python, len of "ON orders.customer_id = customers.customer_id" is 45 and without ON is 42 (checks/158.py)

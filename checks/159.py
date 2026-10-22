@@ -33,5 +33,8 @@ assert q(f"SELECT count(*) FROM orders o LEFT JOIN {six} c ON c.customer_id = o.
 # Asha has 3 orders, so 3 rows; one row per customer needs GROUP BY
 assert q("SELECT count(*) FROM orders WHERE customer_id = 1") == [(3,)]
 assert q("SELECT count(*) FROM (SELECT c.customer_id FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id GROUP BY c.customer_id)") == [(5,)]
+# a join that matches on ids loses Esha, but ON true (157) keeps her
+assert q("SELECT count(*) FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE c.name = 'Esha'") == [(0,)]
+assert q("SELECT count(*) FROM orders o JOIN customers c ON true WHERE c.name = 'Esha'") == [(7,)]
 # source: https://www.postgresql.org/docs/current/queries-table-expressions.html
 # confirmed: LEFT OUTER JOIN adds a row with null values in the right columns for each left row with no match, so there is at least one row per left row. the docs write [ INNER ] JOIN and LEFT [ OUTER ] JOIN in the syntax (OUTER optional) at https://www.postgresql.org/docs/current/sql-select.html
