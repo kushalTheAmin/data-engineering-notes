@@ -1,5 +1,7 @@
 # corrections
 
+148, 2026-10-22: note text unchanged. the claims that count skips nulls, that a CASE with no ELSE gives null and that sum skips nulls were not sourced in the checks, and the old source line said the Postgres page covers sum with no non-null input when the page only says it of no rows. they now cite the Postgres pages and the line says what the page really covers. evidence: https://www.postgresql.org/docs/current/functions-aggregate.html ("Computes the number of input rows in which the input value is not null"; "Computes the sum of the non-null input values"); https://www.postgresql.org/docs/current/functions-conditional.html ("If the ELSE clause is omitted and no condition is true, the result is null."); python, sum over customer 3 CASE gives NULL in DuckDB (checks/148.py)
+
 145, 2026-10-22: the second question said the query below errored on name, but the query shown already has name in the GROUP BY and runs, so a reader running it saw no error. it now says name alone errors and the query below adds it. the checks now assert that name alone errors. evidence: python, SELECT category, name, min(price) FROM products GROUP BY category errors in DuckDB (checks/145.py)
 
 144, 2026-10-22: note text unchanged. the claim in the second answer that WHERE runs before the grouping and removes the pending order had no source in the checks. it now cites the Postgres SELECT page. evidence: https://www.postgresql.org/docs/current/sql-select.html ("WHERE filters individual rows before the application of GROUP BY")

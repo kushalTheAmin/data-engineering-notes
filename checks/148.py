@@ -15,4 +15,7 @@ assert q("SELECT count(*) FROM orders WHERE status = 'delivered'") == [(5,)]
 assert q("SELECT customer_id, sum(CASE WHEN status = 'delivered' THEN 1 END) FROM orders WHERE customer_id IN (2, 3) GROUP BY customer_id ORDER BY customer_id") == [(2, 2), (3, None)]
 assert q("SELECT status FROM orders WHERE customer_id = 3") == [("cancelled",)]
 # source: https://www.postgresql.org/docs/current/functions-aggregate.html
-# confirmed (sum with no non-null input gives null; asserted above for DuckDB): "except for count, these functions return a null value when no rows are selected. In particular, sum of no rows returns null, not zero", and coalesce can substitute zero
+# confirmed: count(any) "Computes the number of input rows in which the input value is not null"; sum "Computes the sum of the non-null input values"; "except for count, these functions return a null value when no rows are selected. In particular, sum of no rows returns null, not zero as one might expect"; "The coalesce function can be used to substitute zero"
+# the page speaks of no rows; customer 3 has a row whose CASE is null, so no non-null input, asserted above for DuckDB
+# source: https://www.postgresql.org/docs/current/functions-conditional.html
+# confirmed: "If the ELSE clause is omitted and no condition is true, the result is null."
