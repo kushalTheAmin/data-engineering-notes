@@ -20,7 +20,7 @@ ids_match | and_jersey_city | always_true
 
 the middle one adds a second test with AND, so a pair needs both, and only the 4 orders from Asha and Chirag (both in Jersey City) remain. the last one never says no, so all 35 pairs come out, every order next to every customer. i assumed ON had to be an equals between ids, and it takes whatever test you hand it.
 
-the bite is that nothing errors. compare the wrong columns, or lose the id test in an edit, and you get a plausible looking table that is too big or too small. the Postgres docs describe the always true case as a cross join, a Cartesian product: N rows times M rows. so when a joined count looks off, check the ON first.
+the bite is that nothing errors. compare the wrong columns, or lose the id test in an edit, and you get a plausible looking table that is too big or too small. the Postgres docs (a server database) describe the always true case as a cross join, a Cartesian product: N rows times M rows. so when a joined count looks off, check the ON first.
 
 ---
 prev: [156 inner join traced by hand](./156-inner-join-traced-by-hand.md) | next: [158 table aliases, short nicknames for tables](./158-table-aliases-short-nicknames-for-tables.md)

@@ -16,3 +16,5 @@ assert q("SELECT name, count(*) " + base + " AND customers.city = 'Jersey City' 
 assert q("SELECT count(*) " + base + " WHERE customers.city = 'Jersey City'") == [(4,)]
 # source: https://www.postgresql.org/docs/current/queries-table-expressions.html
 # confirmed: a cross join gives "a Cartesian product" with N * M rows, and "FROM T1 CROSS JOIN T2 is equivalent to FROM T1 INNER JOIN T2 ON TRUE"
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model." (the note calls Postgres a server database)
