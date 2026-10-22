@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 162
+notes so far: 163
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -187,3 +187,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [160 the nulls a left join creates](./notes/160-the-nulls-a-left-join-creates.md): count(*) says Esha placed 1 order, count(o.order_id) says 0
 - [161 a WHERE that quietly turns a left join into an inner join](./notes/161-a-where-that-quietly-turns-a-left-join-into-an-inner-join.md): a WHERE on the orders side drops Esha and Chirag, 5 rows, while the same test in ON keeps all 7
 - [162 right and full outer joins](./notes/162-right-and-full-outer-joins.md): a full join of customers and signups gives 7 rows, 5 plus 4 minus 2 matches, and the stray spaces leave Bhavin and Chirag alone on both sides
+- [163 joining three tables](./notes/163-joining-three-tables.md): orders, order_items and products chain as two joins in a row, each ON only sees tables written above it, and the chain gives 13 rows

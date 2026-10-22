@@ -58,4 +58,4 @@ with right join, `signups s RIGHT JOIN customers c` gives the 5 customer rows, s
 a full join also compares two lists: a NULL on one side means the other list lacks that row.
 
 ---
-prev: [161 a WHERE that quietly turns a left join into an inner join](./161-a-where-that-quietly-turns-a-left-join-into-an-inner-join.md) | next: not written yet
+prev: [161 a WHERE that quietly turns a left join into an inner join](./161-a-where-that-quietly-turns-a-left-join-into-an-inner-join.md) | next: [163 joining three tables](./163-joining-three-tables.md)
