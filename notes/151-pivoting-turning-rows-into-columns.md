@@ -47,4 +47,4 @@ Chirag has total 1 but 0 and 0, his cancelled order has no column. a count(*) to
 so what: DuckDB, the database these notes run on, has a PIVOT statement that finds the values itself, `PIVOT orders ON status USING count(*) GROUP BY customer_id`, so a new status becomes a new column. the next one is about getting subtotal rows too.
 
 ---
-prev: [150 percentiles, the medians cousins](./150-percentiles-the-medians-cousins.md) | next: not written yet
+prev: [150 percentiles, the medians cousins](./150-percentiles-the-medians-cousins.md) | next: [152 ROLLUP, subtotals and grand totals](./152-rollup-subtotals-and-grand-totals.md)
