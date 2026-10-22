@@ -30,5 +30,7 @@ assert sorted([5, 4, 3]) == [3, 4, 5] and sorted([0, 0, 3, 4, 5])[2] == 3
 # confirmed: median(x) is "the middle value of the set. For even value counts, quantitative values are averaged"; also lists quantile_cont(x, 0.5) as its formula
 # source: https://www.postgresql.org/docs/current/functions-aggregate.html
 # confirmed: percentile_cont(fraction) WITHIN GROUP (ORDER BY ...) "computes the continuous percentile, a value corresponding to the specified fraction within the ordered set"
+# source: https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/MEDIAN.html
+# confirmed: "MEDIAN is an inverse distribution function that assumes a continuous distribution model", so the one-word median is not DuckDB only; the Postgres aggregate page lists no median function, only percentile_cont
 # source: https://www.postgresql.org/docs/current/tutorial-arch.html
 # confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database

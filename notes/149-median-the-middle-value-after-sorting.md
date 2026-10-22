@@ -46,7 +46,7 @@ snack has 3 products, an odd count, so the median is a real price: dhokla (a ste
 
 so what: imagine kaju katli (a cashew sweet) cost 120.00, and avg jumps to 24.33 while the median stays 5.50. when a few huge values would skew an average, the median is the number to look at.
 
-one dialect note ([135](./135-one-language-many-dialects.md), each database has its own spelling): the one-word median is a DuckDB shortcut. Postgres, a server database, spells it this longer way, where 0.5 means halfway through the sorted values:
+one dialect note ([135](./135-one-language-many-dialects.md), each database has its own spelling): DuckDB has a one-word median, as do some other databases, but Postgres, a server database, has none and spells it this longer way, where 0.5 means halfway through the sorted values:
 
 ```text
 -- Postgres
