@@ -61,4 +61,4 @@ customer_id | n
 </details>
 
 ---
-prev: [146 HAVING, filtering whole groups](./146-having-filtering-whole-groups.md) | next: not written yet
+prev: [146 HAVING, filtering whole groups](./146-having-filtering-whole-groups.md) | next: [148 conditional aggregation, counting several things in one pass](./148-conditional-aggregation-counting-several-things-in-one-pass.md)

@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 147
+notes so far: 148
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -169,3 +169,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [145 the GROUP BY rule, every column is grouped or aggregated](./notes/145-the-group-by-rule-every-column-is-grouped-or-aggregated.md): selecting status while grouping by customer errors because Ashas group holds three statuses, so every SELECT column must be grouped or aggregated
 - [146 HAVING, filtering whole groups](./notes/146-having-filtering-whole-groups.md): HAVING count(*) >= 2 keeps customers 1 and 2 of the 4 groups, and it can test an aggregate you never SELECT
 - [147 WHERE vs HAVING, before grouping or after](./notes/147-where-vs-having-before-grouping-or-after.md): WHERE count(*) errors because no count exists before grouping, and WHERE status = 'delivered' makes Asha count 2, not 3
+- [148 conditional aggregation, counting several things in one pass](./notes/148-conditional-aggregation-counting-several-things-in-one-pass.md): sum(CASE WHEN ...) gives total, delivered and pending per customer in one query, and count(CASE ... ELSE 0) wrongly counts all 7 rows

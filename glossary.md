@@ -40,6 +40,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | compression | storing the same information in fewer bytes, rebuildable exactly | [047](./notes/047-compression-spotting-repeats.md) |
 | computed column | an expression in SELECT, worked out fresh for each row | [122](./notes/122-computed-columns-and-as.md) |
 | concatenate | glue two pieces of text into one, written with two bars | [125](./notes/125-concatenating-text-and-taking-pieces-of-it.md) |
+| conditional aggregation | a CASE inside an aggregate, so each row counts toward chosen totals | [148](./notes/148-conditional-aggregation-counting-several-things-in-one-pass.md) |
 | connection | an open line from your program to a database | [102](./notes/102-a-database-in-one-file.md) |
 | continuation byte | a UTF-8 byte starting 10, continuing the previous characters bytes | [011](./notes/011-why-gujarati-takes-3-bytes.md) |
 | core | one full processor inside a chip, most chips hold several | [035](./notes/035-the-processor.md) |
