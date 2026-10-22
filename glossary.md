@@ -81,6 +81,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | folder | a named place on disk holding files and other folders | [040](./notes/040-folders-and-paths.md) |
 | foreign key | a column holding another tables primary key values, a pointer | [093](./notes/093-foreign-key.md) |
 | FROM | the clause naming the table a query reads from | [104](./notes/104-select-and-from-picking-columns.md) |
+| full join | a join keeping unmatched rows from both tables, nulls fill the gaps | [162](./notes/162-right-and-full-outer-joins.md) |
 | full run order (of a query) | FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY, LIMIT | [153](./notes/153-the-full-run-order-with-group-by-and-having.md) |
 | function | SQL that takes a value and returns a new one | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | gibibyte | 1024 x 1024 x 1024 bytes, written GiB | [038](./notes/038-1000-or-1024.md) |
@@ -186,6 +187,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | relative path | a path with no leading slash, begun at the working directory | [053](./notes/053-absolute-vs-relative-paths.md) |
 | repeating fraction | digits past the point that loop forever, so no exact finite form | [018](./notes/018-why-0-1-has-no-exact-binary-form.md) |
 | required field | a field name every record must have, or it is rejected | [077](./notes/077-required-vs-optional-fields.md) |
+| right join | a left join with the tables swapped, keeps every right row | [162](./notes/162-right-and-full-outer-joins.md) |
 | ROLLUP | a GROUP BY that adds subtotal rows and a grand total | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | root | the top folder holding everything else, written as a single slash | [040](./notes/040-folders-and-paths.md) |
 | row | one record of a csv, usually one line, split into values | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |

@@ -86,4 +86,4 @@ n
 </details>
 
 ---
-prev: [160 the nulls a left join creates](./160-the-nulls-a-left-join-creates.md) | next: not written yet
+prev: [160 the nulls a left join creates](./160-the-nulls-a-left-join-creates.md) | next: [162 right and full outer joins](./162-right-and-full-outer-joins.md)
