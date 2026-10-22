@@ -27,3 +27,7 @@ except Exception as e:
 # dhokla is a steamed savory cake, a food description, nothing to compute
 # 097: order_items has a composite key of order_id and product_id, one row per pair
 assert q("SELECT count(*) FROM (SELECT order_id, product_id FROM order_items GROUP BY 1,2)") == [(13,)]
+# orders and products share no column name, so orders JOIN products has nothing to match on directly
+oc = {r[0] for r in q("SELECT column_name FROM information_schema.columns WHERE table_name = 'orders'")}
+pc = {r[0] for r in q("SELECT column_name FROM information_schema.columns WHERE table_name = 'products'")}
+assert not (oc & pc)

@@ -1,6 +1,6 @@
 # corrections
 
-165, 2026-10-22: note text unchanged. the claims that the shop has 7 fees and that summing quantity is safe in this join were not asserted. the checks now assert 7 fee rows and that the joined sum of quantity equals the plain sum, 20. evidence: python, sum(quantity) over order_fees JOIN order_items is 20 and over order_items alone is 20 (checks/165.py)
+163, 2026-10-22: said that after fixing the ON lines for the swapped order the inner join rows come out the same, but orders and products share no column, so the swapped order (orders, products, order_items) has no sensible ON to fix, and the check only tried products first, a different order. it now says orders and products share no column to match on, so keep order_items in the middle. the checks now assert the two tables share no column name. evidence: python, information_schema columns of orders and products have no name in common (checks/163.py)
 
 162, 2026-10-22: said a right join keeps only the unmatched right rows, which reads as if matched right rows are dropped. a right join keeps every right row, matched or not, and in this shop gives all 4 signups. it now says a right join keeps every row of the second table. the checks now assert 4 rows, 2 of them matched. evidence: https://www.postgresql.org/docs/current/queries-table-expressions.html ("the result table will always have a row for each row in T2"); python, customers RIGHT JOIN signups gives 4 rows (checks/162.py)
 

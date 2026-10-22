@@ -26,9 +26,9 @@ what bit me is that each [ON](./157-on-how-a-join-decides-which-rows-match.md) (
 SELECT o.order_id, p.name FROM orders o JOIN products p ON oi.product_id = p.product_id JOIN order_items oi ON o.order_id = oi.order_id
 ```
 
-DuckDB, the database these notes run in, says "oi" was not found, since it isnt joined yet at that ON. fix the ONs for the new order and the inner join rows come out the same.
+DuckDB, the database these notes run in, says "oi" was not found, since it isnt joined yet at that ON. orders and products share no column, so keep order_items in the middle, as in the first query.
 
-run the chain on all 7 orders and you get 13 rows, one per row of order_items, 6 more than orders has. the next one is about why.
+run the chain on all 7 orders and you get 13 rows, one per row of order_items, 6 more than orders has.
 
 ---
 prev: [162 right and full outer joins](./162-right-and-full-outer-joins.md) | next: [164 fan out, when a join multiplies rows](./164-fan-out-when-a-join-multiplies-rows.md)
