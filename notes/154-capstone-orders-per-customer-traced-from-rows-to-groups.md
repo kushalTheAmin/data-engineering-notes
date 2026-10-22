@@ -52,7 +52,7 @@ SELECT round(sum(quantity) / count(DISTINCT order_id), 2) AS a, round(avg(quanti
 a | b
 2.86 | 1.54
 ```
-a is right: 20 items over 7 orders. b is the average per row, and a row is one product in an order, 13 of them. the tempting answer is b, because avg sounds like the average of everything.
+a is right: 20 items over 7 orders (in DuckDB; Postgres cuts 20 / 7 to 2, as in [131](./131-integer-division-when-7-divided-by-2-gives-3.md)). b is the average per row, and a row is one product in an order, 13 of them. the tempting answer is b, because avg sounds like the average of everything.
 
 </details>
 

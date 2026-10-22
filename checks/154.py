@@ -19,3 +19,7 @@ assert round(20 / 7, 2) == 2.86 and round(20 / 13, 2) == 1.54
 # check yourself 2
 assert q("SELECT count(DISTINCT customer_id) FROM orders") == [(4,)]
 assert q("SELECT customer_id FROM orders GROUP BY customer_id HAVING count(*) >= 0 ORDER BY 1") == [(1,), (2,), (3,), (4,)]
+# Postgres divides two integers as integer division, so 20 / 7 is 2 there; DuckDB / and sqlite show both sides
+assert q("SELECT 20 // 7, 20 / 7 > 2.8") == [(2, True)]
+# source: https://www.postgresql.org/docs/current/functions-math.html
+# confirmed: "Division (for integral types, division truncates the result towards zero)", 5 / 2 gives 2

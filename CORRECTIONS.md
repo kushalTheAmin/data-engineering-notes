@@ -1,5 +1,7 @@
 # corrections
 
+154, 2026-10-22: the first answer said average items per order is 2.86 (20 over 7), but that is DuckDB only, since Postgres divides two integers as integer division and gives 2. it now says so and points to 131. evidence: https://www.postgresql.org/docs/current/functions-math.html ("for integral types, division truncates the result towards zero", 5 / 2 gives 2); python, SQLite 20/7 gives 2 and DuckDB 20 / 7 gives 2.857 (checks/154.py)
+
 153, 2026-10-22: the second answer said moving the WHERE into HAVING would error, which reads as true everywhere, but SQLite runs that query and returns rows. it now says it errors in DuckDB and some databases accept it. 147 says the same. the checks now assert the SQLite result. evidence: python, sqlite3 SELECT customer_id FROM orders GROUP BY customer_id HAVING status <> 'cancelled' returns [(1,)] (checks/153.py); notes/147-where-vs-having-before-grouping-or-after.md
 
 149, 2026-10-22: note text unchanged. the dhokla gloss (a steamed savory cake) and the kaju katli gloss (a cashew sweet) had no source in the checks. they now cite the Wikipedia pages. evidence: https://en.wikipedia.org/wiki/Dhokla ("a savoury sponge dish", batter "steamed to a cake-like consistency"); https://en.wikipedia.org/wiki/Kaju_katli ("Kaju means cashew")
