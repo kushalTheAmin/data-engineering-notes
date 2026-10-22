@@ -182,7 +182,8 @@ after this arc: you can turn thousands of rows into the few numbers someone actu
 - [x] HAVING: filtering whole groups (note 146)
 - [x] WHERE vs HAVING: before grouping vs after ★ (note 147)
 - [x] conditional aggregation: counting several things in one pass ★ (note 148)
-- [ ] medians and percentiles ★
+- [ ] median: the middle value after sorting ★
+- [ ] percentiles: the medians cousins, like the 90th ★
 - [ ] pivoting: turning rows into columns
 - [ ] ROLLUP: subtotals and grand totals
 - [ ] the full run order with GROUP BY and HAVING ★
