@@ -44,7 +44,7 @@ customer_id | n | latest
 
 or add status to the GROUP BY, which is [144](./144-grouping-by-more-than-one-column.md) again.
 
-so what: MySQL, a server database, has a mode, ONLY_FULL_GROUP_BY, that is on by default. switch it off and the server picks any value from each group, and its docs call that nondeterministic (it can differ run to run).
+so what: MySQL, a server database, has a mode, ONLY_FULL_GROUP_BY, that is on by default. switch it off and the server picks any value from each group, and its docs call that nondeterministic (it can differ run to run). Postgres, another server database, bends the rule too, it accepts an ungrouped column when the [primary key](./087-primary-key.md) (a column unique in every row) of its table is grouped, but DuckDB does not.
 
 ### check yourself
 

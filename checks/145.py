@@ -27,6 +27,14 @@ r = q("SELECT category, name, min(price) FROM products GROUP BY category, name O
 assert len(r) == 6 and q("SELECT count(DISTINCT name) FROM products") == [(6,)]
 assert q("SELECT count(DISTINCT category) FROM products") == [(3,)]
 assert r[0] == ("drink", "masala chai", Decimal("3.00"))
+# DuckDB does not accept an ungrouped column even when the primary key is grouped
+try:
+    q("SELECT customer_id, name, count(*) FROM customers GROUP BY customer_id")
+    raise SystemExit("should have failed")
+except Exception as e:
+    assert "must appear in the GROUP BY clause" in str(e)
+# source: https://www.postgresql.org/docs/current/sql-select.html
+# confirmed: "A functional dependency exists if the grouped columns (or a subset thereof) are the primary key of the table containing the ungrouped column"; "PostgreSQL recognizes functional dependency (allowing columns to be omitted from GROUP BY) only when a table's primary key is included in the GROUP BY list"
 # source: https://dev.mysql.com/doc/refman/8.0/en/group-by-handling.html
 # confirmed: ONLY_FULL_GROUP_BY is enabled by default; when disabled "the server is free to choose any value from each group" and the values are nondeterministic
 # source: https://dev.mysql.com/doc/refman/8.4/en/what-is-mysql.html
