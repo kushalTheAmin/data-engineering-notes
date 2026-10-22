@@ -16,3 +16,5 @@ assert 'Esha' not in [x[1] for x in r]
 assert q("SELECT count(*) FROM orders WHERE customer_id = 5") == [(0,)]
 # source: https://www.postgresql.org/docs/current/planner-optimizer.html
 # confirmed: the docs name the nested loop join, where the right relation is scanned once for every row of the left, and also list merge and hash joins
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model"

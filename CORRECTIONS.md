@@ -1,5 +1,7 @@
 # corrections
 
+155, 2026-10-22: called Postgres a popular database, but no page backs popular and correction 110 already dropped the word for the same reason. it now says a server database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); correction 110 removed the same unsourced word
+
 154, 2026-10-22: called Chirag him while 147 says they about the same customer. it now says them. evidence: notes/147-where-vs-having-before-grouping-or-after.md ("customer 3 isnt a group with 0, they have no group at all")
 156, 2026-10-22: used DISTINCT without saying what it does, and said a plain JOIN is an inner join in DuckDB with a source only for Postgres. it now says DISTINCT keeps one copy of each name and links 121, and the checks cite the DuckDB page. evidence: https://duckdb.org/docs/2.0/sql/query_syntax/from.html ("A join that is not OUTER is INNER (only rows that get paired are returned)"); notes/121-distinct-removing-duplicate-rows.md
 154, 2026-10-22: the first answer said average items per order is 2.86 (20 over 7), but that is DuckDB only, since Postgres divides two integers as integer division and gives 2. it now says so and points to 131. evidence: https://www.postgresql.org/docs/current/functions-math.html ("for integral types, division truncates the result towards zero", 5 / 2 gives 2); python, SQLite 20/7 gives 2 and DuckDB 20 / 7 gives 2.857 (checks/154.py)

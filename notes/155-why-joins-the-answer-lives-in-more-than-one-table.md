@@ -42,7 +42,7 @@ order_id | name | city
 
 so 104 was Chirag, in Jersey City. i figured pulling in a second table would make the result bigger, but its 7 rows, the same as orders, because each order finds exactly one customer. Esha is missing again, nobody points at her.
 
-you never write that loop. the database often finds a faster way, and the rows come out the same. the docs of Postgres, a popular database, call the literal loop a nested loop join.
+you never write that loop. the database often finds a faster way, and the rows come out the same. the docs of Postgres, a server database, call the literal loop a nested loop join.
 
 ---
 prev: [154 capstone, orders per customer traced from rows to groups](./154-capstone-orders-per-customer-traced-from-rows-to-groups.md) | next: [156 inner join traced by hand](./156-inner-join-traced-by-hand.md)
