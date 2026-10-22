@@ -210,6 +210,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | subtotal | the total for one group, shown as an extra row | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | sum | adds up all the values in a column into one value | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
 | table | a grid of rows, every row holding the same columns | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
+| table alias | a short name for a table, valid for one query only | [158](./notes/158-table-aliases-short-nicknames-for-tables.md) |
 | tag | a name in angle brackets, opening or closing an XML value | [072](./notes/072-xml.md) |
 | tail | prints the last lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | terabyte | 1000 gigabytes, a trillion bytes, written TB | [033](./notes/033-kilobytes-to-terabytes.md) |

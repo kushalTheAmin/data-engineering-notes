@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 157
+notes so far: 158
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -182,3 +182,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [155 why joins, the answer lives in more than one table](./notes/155-why-joins-the-answer-lives-in-more-than-one-table.md): the city of order 104 lives in customers, and a join is a loop inside a loop that pairs 7 orders with their 7 customers
 - [156 inner join traced by hand](./notes/156-inner-join-traced-by-hand.md): 7 orders and 5 customers make 35 pairs, only 7 survive, and Esha never shows up
 - [157 ON, how a join decides which rows match](./notes/157-on-how-a-join-decides-which-rows-match.md): the same join keeps 7 pairs on an id match, 4 with a city test added, and all 35 when ON is true
+- [158 table aliases, short nicknames for tables](./notes/158-table-aliases-short-nicknames-for-tables.md): a nickname like o for orders shrinks the ON line, and the full name stops working in that query
