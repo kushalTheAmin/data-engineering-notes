@@ -29,3 +29,5 @@ assert q("SELECT status, count(*) FROM orders GROUP BY status ORDER BY 1") == [(
 assert [(c, n) for c, s, n in pairs if s == "delivered"] == [(1, 2), (2, 2), (4, 1)]
 # check yourself 2
 assert q("SELECT customer_id, status, count(*) FROM orders WHERE status <> 'pending' GROUP BY customer_id, status ORDER BY 1, 2") == [(1, "delivered", 2), (2, "delivered", 2), (3, "cancelled", 1), (4, "delivered", 1)]
+# source: https://www.postgresql.org/docs/current/sql-select.html
+# confirmed: "WHERE filters individual rows before the application of GROUP BY, while HAVING filters group rows created by GROUP BY"
