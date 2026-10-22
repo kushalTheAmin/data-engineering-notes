@@ -4,7 +4,7 @@ section: combining tables with joins, part 7, ~2 min read
 
 i wrote a left join to keep every customer, added one WHERE on the orders side, and Esha vanished again. the join was fine, so what ate her row?
 
-a WHERE on a right table column runs after the join, so it also tests the NULLs the join filled in, and drops those rows. in [160](./160-the-nulls-a-left-join-creates.md) Eshas order side was NULL. now `o.status = 'delivered'` meets that NULL, comes out [unknown](./114-three-valued-logic-true-false-and-unknown.md) (neither true nor false), and [WHERE](./106-where-keeping-only-the-rows-that-match.md) keeps only true. the shop (the imaginary gujarati snack store these notes run on), a [left join](./159-left-join-keep-every-row-from-the-left-table.md) (keeps every left row), same test in two places:
+a WHERE comparison on a right table column runs after the join, so it also tests the NULLs the join filled in, and drops those rows. in [160](./160-the-nulls-a-left-join-creates.md) Eshas order side was NULL. now `o.status = 'delivered'` meets that NULL, comes out [unknown](./114-three-valued-logic-true-false-and-unknown.md) (neither true nor false), and [WHERE](./106-where-keeping-only-the-rows-that-match.md) keeps only true. the shop (the imaginary gujarati snack store these notes run on), a [left join](./159-left-join-keep-every-row-from-the-left-table.md) (keeps every left row), same test in two places:
 
 ```sql
 SELECT c.name, o.order_id FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id WHERE o.status = 'delivered' ORDER BY c.name, o.order_id
@@ -38,7 +38,7 @@ Esha | NULL
 
 7 rows. a customer with no delivered order simply has no match, so the left join keeps them with NULL. i assumed a filter was a filter wherever i put it, and with a left join the spot decides what survives. the Postgres docs say it plainly: ON is processed before the join, WHERE after, and it only matters for outer joins.
 
-so a right side condition in WHERE quietly makes your left join an inner join.
+so a right side comparison in WHERE quietly makes your left join an inner join. only IS NULL asks for the filled in rows instead.
 
 ### check yourself
 

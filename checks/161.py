@@ -24,5 +24,7 @@ assert q("SELECT order_id FROM orders WHERE status = 'cancelled'") == [(104,)]
 assert q("SELECT count(*) FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id WHERE c.city = 'Jersey City'") == [(4,)]
 assert q("SELECT count(*) FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE c.city = 'Jersey City'") == [(4,)]
 assert q("SELECT count(*) FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id AND c.city = 'Jersey City'") == [(7,)]
+# a right side WHERE that is IS NULL keeps the filled-in rows instead of dropping them
+assert q(base + " WHERE o.order_id IS NULL") == [('Esha', None)]
 # source: https://www.postgresql.org/docs/current/queries-table-expressions.html
 # confirmed: "a restriction placed in the ON clause is processed before the join, while a restriction placed in the WHERE clause is processed after the join. That does not matter with inner joins, but it matters a lot with outer joins."
