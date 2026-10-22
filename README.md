@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 164
+notes so far: 165
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -189,3 +189,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [162 right and full outer joins](./notes/162-right-and-full-outer-joins.md): a full join of customers and signups gives 7 rows, 5 plus 4 minus 2 matches, and the stray spaces leave Bhavin and Chirag alone on both sides
 - [163 joining three tables](./notes/163-joining-three-tables.md): orders, order_items and products chain as two joins in a row, each ON only sees tables written above it, and the chain gives 13 rows
 - [164 fan out, when a join multiplies rows](./notes/164-fan-out-when-a-join-multiplies-rows.md): joining 7 orders to their items gives 13 rows, because an order with 3 items is kept 3 times
+- [165 double counting, why sums after a fan out lie](./notes/165-double-counting-why-sums-after-a-fan-out-lie.md): 7 delivery fees add to 15.00, but summed after joining to order_items they give 31.00, and sum(DISTINCT) gives 5.00

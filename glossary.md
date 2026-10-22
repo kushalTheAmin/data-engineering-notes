@@ -64,6 +64,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | dialect | one databases own version of SQL, with its own spellings and rules | [135](./notes/135-one-language-many-dialects.md) |
 | disk | storage like an SSD or hard drive, keeping bytes without power | [036](./notes/036-memory-vs-disk.md) |
 | DISTINCT | keeps one copy of each repeated row in a query result | [121](./notes/121-distinct-removing-duplicate-rows.md) |
+| double counting | a sum repeating a value because a fan out copied its row | [165](./notes/165-double-counting-why-sums-after-a-fan-out-lie.md) |
 | doubled quote | two quotes in a row inside a quoted value, meaning one quote | [064](./notes/064-quotes-inside-quotes-and-newlines-inside-values.md) |
 | DuckDB | a database that runs inside your program, keeping data in one file | [102](./notes/102-a-database-in-one-file.md) |
 | embedded newline | a line ending inside a quoted csv value, not ending the row | [064](./notes/064-quotes-inside-quotes-and-newlines-inside-values.md) |

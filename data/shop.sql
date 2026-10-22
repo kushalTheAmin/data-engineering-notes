@@ -144,3 +144,18 @@ INSERT INTO price_export VALUES
     (3, 'jalebi',      'n/a'),
     (4, 'kaju katli',  '12,00'),
     (5, 'masala chai', '3.00');
+
+-- added by note 165: a flat delivery fee per order, one row per order. cancelled order 104 was never delivered, so its fee is 0.00
+CREATE TABLE order_fees (
+    order_id INTEGER PRIMARY KEY REFERENCES orders (order_id),
+    fee      DECIMAL(4, 2) NOT NULL
+);
+
+INSERT INTO order_fees VALUES
+    (101, 2.00),
+    (102, 3.00),
+    (103, 2.00),
+    (104, 0.00),
+    (105, 3.00),
+    (106, 2.00),
+    (107, 3.00);

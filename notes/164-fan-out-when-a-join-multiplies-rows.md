@@ -78,4 +78,4 @@ the join made 13 rows, but only 7 different order ids. adding a WHERE wouldnt fi
 </details>
 
 ---
-prev: [163 joining three tables](./163-joining-three-tables.md) | next: not written yet
+prev: [163 joining three tables](./163-joining-three-tables.md) | next: [165 double counting, why sums after a fan out lie](./165-double-counting-why-sums-after-a-fan-out-lie.md)
