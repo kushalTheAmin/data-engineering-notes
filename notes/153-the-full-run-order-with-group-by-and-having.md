@@ -57,4 +57,4 @@ it would error. after grouping, a group can hold several statuses and status is 
 </details>
 
 ---
-prev: [152 ROLLUP, subtotals and grand totals](./152-rollup-subtotals-and-grand-totals.md) | next: not written yet
+prev: [152 ROLLUP, subtotals and grand totals](./152-rollup-subtotals-and-grand-totals.md) | next: [154 capstone, orders per customer traced from rows to groups](./154-capstone-orders-per-customer-traced-from-rows-to-groups.md)
