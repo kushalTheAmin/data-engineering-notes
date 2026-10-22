@@ -399,4 +399,5 @@ every fix made to a note after it was published, newest first. if you learned fr
 
 ## audit log
 audit runs that could not finish, newest first. format: YYYY-MM-DD HH:MM: what happened
+2026-10-22 09:10: gate failed before any change (8 FAIL: checks 008, 011, 026 to 030 and 041) because pip installs duckdb 2.0.0, and 1.5.6 fails the same way, where relation.fetchone() was removed; no note was audited
 2026-10-21 12:00: dev.mysql.com returned 403 (technical difficulties page), so the two MySQL source lines in checks/135.py were not rechecked this run; all other sources were
