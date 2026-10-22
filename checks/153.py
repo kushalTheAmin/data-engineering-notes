@@ -22,6 +22,12 @@ try:
     raise SystemExit("should fail")
 except Exception as e:
     assert not isinstance(e, SystemExit)
+# sqlite runs the same HAVING status test, so the note says DuckDB errors
+import sqlite3
+sl = sqlite3.connect(":memory:")
+sl.execute("create table orders(order_id, customer_id, status)")
+sl.executemany("insert into orders values (?, ?, ?)", [(1, 1, 'delivered'), (2, 1, 'pending'), (3, 3, 'cancelled')])
+assert sl.execute("SELECT customer_id FROM orders GROUP BY customer_id HAVING status <> 'cancelled'").fetchall() == [(1,)]
 # DuckDB accepts an AS name in HAVING
 assert q("SELECT customer_id, count(*) AS n FROM orders GROUP BY customer_id HAVING n >= 2 ORDER BY 1") == [(1, 3), (2, 2)]
 # source: https://www.postgresql.org/docs/current/sql-select.html

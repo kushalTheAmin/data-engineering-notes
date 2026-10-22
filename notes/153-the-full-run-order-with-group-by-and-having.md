@@ -52,7 +52,7 @@ HAVING drops customers 3 and 4 (one order each) before the sort, so the smallest
 2. in step 2, what would change if the WHERE were moved into HAVING as `HAVING status <> 'cancelled'`?
 <details><summary>answer</summary>
 
-it would error. after grouping, a group can hold several statuses and status is neither grouped nor aggregated, the rule from [145](./145-the-group-by-rule-every-column-is-grouped-or-aggregated.md). the tempting answer is that it gives the same rows, from treating the two filters as the same thing.
+in DuckDB it would error (some databases accept it, but then status is an arbitrary pick). after grouping, a group can hold several statuses and status is neither grouped nor aggregated, the rule from [145](./145-the-group-by-rule-every-column-is-grouped-or-aggregated.md). the tempting answer is that it gives the same rows, from treating the two filters as the same thing.
 
 </details>
 
