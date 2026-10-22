@@ -4,7 +4,7 @@ section: combining tables with joins, part 4, ~2 min read
 
 i gave orders a nickname, kept typing orders.order_id, and the query broke. why would a rename make the old name stop working?
 
-the ON line from [157](./157-on-how-a-join-decides-which-rows-match.md) is 45 characters of orders.customer_id = customers.customer_id, and a real join repeats table names everywhere. a table alias is a short name you give a table for one query, written right after it in FROM. its the same idea as the [column alias](./122-computed-columns-and-as.md) (a name for a result column), just for a table. here is the shop (the imaginary gujarati snack store these notes run on), first 3 rows of the join from [155](./155-why-joins-the-answer-lives-in-more-than-one-table.md), with o for orders and c for customers:
+the ON line from [157](./157-on-how-a-join-decides-which-rows-match.md), ON orders.customer_id = customers.customer_id, is 45 characters, and a real join repeats table names everywhere. a table alias is a short name you give a table for one query, written right after it in FROM. its the same idea as the [column alias](./122-computed-columns-and-as.md) (a name for a result column), just for a table. here is the shop (the imaginary gujarati snack store these notes run on), first 3 rows of the join from [155](./155-why-joins-the-answer-lives-in-more-than-one-table.md), with o for orders and c for customers:
 
 ```sql
 SELECT o.order_id, c.name, c.city FROM orders o JOIN customers c ON o.customer_id = c.customer_id ORDER BY o.order_id LIMIT 3

@@ -1,5 +1,6 @@
 # corrections
 
+158, 2026-10-22: said the ON line is 45 characters of orders.customer_id = customers.customer_id, but those words alone are 42, and 45 counts the word ON and its space. it now writes the line with ON in front, so the 45 (and the 32 for the short version) can be counted. evidence: python, len of "ON orders.customer_id = customers.customer_id" is 45 and without ON is 42 (checks/158.py)
 155, 2026-10-22: called Postgres a popular database, but no page backs popular and correction 110 already dropped the word for the same reason. it now says a server database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); correction 110 removed the same unsourced word
 
 154, 2026-10-22: called Chirag him while 147 says they about the same customer. it now says them. evidence: notes/147-where-vs-having-before-grouping-or-after.md ("customer 3 isnt a group with 0, they have no group at all")

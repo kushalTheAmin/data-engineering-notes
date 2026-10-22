@@ -4,7 +4,8 @@ sys.path.insert(0, os.path.dirname(__file__))
 from _shop import shop
 con = shop()
 q = lambda s: con.execute(s).fetchall()
-assert len("ON orders.customer_id = customers.customer_id") == 45
+# the quoted ON line includes the word ON
+assert len("ON orders.customer_id = customers.customer_id") == 45 and len("orders.customer_id = customers.customer_id") == 42
 assert len("ON o.customer_id = c.customer_id") == 32
 assert q("SELECT o.order_id, c.name, c.city FROM orders o JOIN customers c ON o.customer_id = c.customer_id ORDER BY o.order_id LIMIT 3") == [(101, 'Asha', 'Jersey City'), (102, 'Bhavin', 'Edison'), (103, 'Asha', 'Jersey City')]
 # AS is optional
