@@ -27,7 +27,7 @@ customer_id | orders | delivered | latest
 4 | 1 | 1 | 2026-04-06 19:10:00
 ```
 
-the sum(CASE ...) is [148](./148-conditional-aggregation-counting-several-things-in-one-pass.md), an if per row that adds 1 for each delivered order. nothing is filtered out, so Chirag shows a 0 here, where a WHERE in [147](./147-where-vs-having-before-grouping-or-after.md) left him with no line. customer 1 is Asha, 2 is Bhavin, 3 is Chirag, 4 is Disha. Esha, customer 5, has no order rows, and a group is made from rows, so she gets no line. i expected a missing customer to show up as a zero, but you cant count rows that dont exist.
+the sum(CASE ...) is [148](./148-conditional-aggregation-counting-several-things-in-one-pass.md), an if per row that adds 1 for each delivered order. nothing is filtered out, so Chirag shows a 0 here, where a WHERE in [147](./147-where-vs-having-before-grouping-or-after.md) left them with no line. customer 1 is Asha, 2 is Bhavin, 3 is Chirag, 4 is Disha. Esha, customer 5, has no order rows, and a group is made from rows, so she gets no line. i expected a missing customer to show up as a zero, but you cant count rows that dont exist.
 
 the pieces, each with its note:
 - counting: [count(*) vs count(column)](./138-count-star-vs-count-of-a-column.md), [count distinct](./139-count-distinct-counting-different-values.md)
