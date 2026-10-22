@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 154
+notes so far: 155
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -176,3 +176,7 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [152 ROLLUP, subtotals and grand totals](./notes/152-rollup-subtotals-and-grand-totals.md): ROLLUP (customer_id, status) turns 5 groups into 10 rows, with Asha at 3 and the shop at 7 as NULL rows
 - [153 the full run order with GROUP BY and HAVING](./notes/153-the-full-run-order-with-group-by-and-having.md): WHERE, GROUP BY, HAVING, then SELECT, ORDER BY and LIMIT, so LIMIT counts groups
 - [154 capstone, orders per customer traced from rows to groups](./notes/154-capstone-orders-per-customer-traced-from-rows-to-groups.md): 7 orders become 4 customer lines, and Esha gets none because a group is built from rows
+
+## section 7: combining tables with joins
+
+- [155 why joins, the answer lives in more than one table](./notes/155-why-joins-the-answer-lives-in-more-than-one-table.md): the city of order 104 lives in customers, and a join is a loop inside a loop that pairs 7 orders with their 7 customers

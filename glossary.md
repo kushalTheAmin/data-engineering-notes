@@ -105,6 +105,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | interval | a length of time, like 2 days, you add to a date | [128](./notes/128-adding-and-subtracting-intervals.md) |
 | IS NOT NULL | the test that is true when a value is present, never unknown | [115](./notes/115-is-null-and-is-not-null.md) |
 | IS NULL | the test that is true when a value is missing, never unknown | [115](./notes/115-is-null-and-is-not-null.md) |
+| join | pairing rows of two tables where a foreign key equals the id | [155](./notes/155-why-joins-the-answer-lives-in-more-than-one-table.md) |
 | JSON | a text format of records, with a name next to every value | [066](./notes/066-json-records-with-names-on-every-value.md) |
 | JSON array | square brackets around values in order, like a python list | [067](./notes/067-json-types.md) |
 | JSON lines | a text file with one whole JSON record per line | [069](./notes/069-json-lines.md) |
