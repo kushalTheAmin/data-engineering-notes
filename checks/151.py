@@ -16,3 +16,5 @@ assert q("PIVOT orders ON status USING count(*) GROUP BY customer_id ORDER BY cu
 # confirmed: "The PIVOT statement allows distinct values within a column to be separated into their own columns" and a simplified syntax "that automatically detects the columns to create"
 # customer 2 has no cancelled order, so 144 had no row for the pair and the wide table shows 0
 assert (2, 'cancelled') not in [(r[0], r[1]) for r in long_rows]
+# customer 3 is Chirag and customer 1 is Asha
+assert q("SELECT customer_id, name FROM customers WHERE customer_id IN (1, 3) ORDER BY 1") == [(1, 'Asha'), (3, 'Chirag')]

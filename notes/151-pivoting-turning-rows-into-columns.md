@@ -26,9 +26,9 @@ customer_id | delivered | pending | cancelled
 4 | 1 | 0 | 0
 ```
 
-in python it is one dictionary per customer with a counter per status. Asha is one row now: 2 delivered, 1 pending. and customer 2 with cancelled, a pair that had no row in [144](./144-grouping-by-more-than-one-column.md), is now a 0.
+in python it is one dictionary per customer with a counter per status. Asha, customer 1, is one row: 2 delivered, 1 pending. and customer 2 with cancelled, a pair that had no row in [144](./144-grouping-by-more-than-one-column.md), is now a 0.
 
-i assumed the columns would appear by themselves from whatever statuses the data holds. they dont, you type every one. leave a status out and its orders disappear from the columns, with no error:
+i assumed the columns would appear by themselves from whatever statuses the data holds. they dont, you type every one. leave a status out and its orders disappear from the columns, silently:
 
 ```sql
 SELECT customer_id, sum(CASE WHEN status = 'delivered' THEN 1 ELSE 0 END) AS delivered, sum(CASE WHEN status = 'pending' THEN 1 ELSE 0 END) AS pending, count(*) AS total FROM orders GROUP BY customer_id ORDER BY customer_id
@@ -42,7 +42,7 @@ customer_id | delivered | pending | total
 4 | 1 | 0 | 1
 ```
 
-Chirag has total 1 but 0 and 0, his cancelled order has no column. a count(*) total beside them catches it.
+customer 3, Chirag, has total 1 but 0 and 0, his cancelled one has no column. a count(*) total beside them catches it.
 
 so what: DuckDB, the database these notes run on, has a PIVOT statement that finds the values itself, `PIVOT orders ON status USING count(*) GROUP BY customer_id`, so a new status becomes a new column. the next one is about getting subtotal rows too.
 

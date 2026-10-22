@@ -1,5 +1,7 @@
 # corrections
 
+151, 2026-10-22: said Chirag has total 1 but 0 and 0, and that Asha is one row, without saying which customer ids they are, while the tables only show ids, so a reader landing here alone could not match the names to the rows. it now says customer 3, Chirag, and Asha, customer 1. the checks now assert both ids. evidence: python, SELECT customer_id, name FROM customers gives (1, Asha) and (3, Chirag) (checks/151.py); data/shop.sql
+
 150, 2026-10-22: the opening said the price 90% of the way up is not 12.00, but quantile_disc in the same note returns 12.00 for that same 0.9, so the claim was only true of the blending kind. it now says by blending the neighbors it is not 12.00. evidence: python, quantile_cont(price, 0.9) is 9.75 and quantile_disc(price, 0.9) is 12.00 in DuckDB (checks/150.py)
 
 149, 2026-10-22: said the one-word median is a DuckDB shortcut, which reads as if only DuckDB has it. Oracle has MEDIAN too, while Postgres has none. it now says DuckDB has it, as do some other databases, but Postgres has none. evidence: https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/MEDIAN.html ("MEDIAN is an inverse distribution function that assumes a continuous distribution model"); https://www.postgresql.org/docs/current/functions-aggregate.html lists no median
