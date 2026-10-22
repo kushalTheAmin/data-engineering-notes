@@ -1,5 +1,7 @@
 # corrections
 
+158, 2026-10-22: note text unchanged. the claim that AS is optional before a table alias had no source in the checks. they now cite the Postgres page. evidence: https://www.postgresql.org/docs/current/queries-table-expressions.html ("The AS key word is optional noise")
+
 158, 2026-10-22: said the ON line is 45 characters of orders.customer_id = customers.customer_id, but those words alone are 42, and 45 counts the word ON and its space. it now writes the line with ON in front, so the 45 (and the 32 for the short version) can be counted. evidence: python, len of "ON orders.customer_id = customers.customer_id" is 45 and without ON is 42 (checks/158.py)
 155, 2026-10-22: called Postgres a popular database, but no page backs popular and correction 110 already dropped the word for the same reason. it now says a server database. the checks now cite the Postgres page that says it uses a client/server model. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model"); correction 110 removed the same unsourced word
 
