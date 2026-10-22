@@ -1,5 +1,7 @@
 # corrections
 
+150, 2026-10-22: said the Google SRE book without saying what SRE is, and the kaju katli gloss had no source in the checks. it now says Google's site reliability engineering book, and the checks cite the Wikipedia page. evidence: https://en.wikipedia.org/wiki/Kaju_katli ("Kaju katli (lit. 'Cashew slice') is an Indian dessert."; "Kaju means cashew")
+
 152, 2026-10-22: said Asha has 2 delivered and 1 pending and her total is 3, without saying she is customer 1, while the tables only show ids, so a reader landing here alone could not match the name to the rows (151 got the same fix). it now says Asha, customer 1. the checks now assert it. evidence: python, SELECT name FROM customers WHERE customer_id = 1 gives Asha (checks/152.py); data/shop.sql
 
 153, 2026-10-22: the first question asked which wrong row you would get if HAVING ran after LIMIT, but LIMIT would keep only customer 3 with n = 1 and HAVING would then drop it, so you get no rows, not a wrong row. the answer now says no rows at all. the checks now assert that. evidence: python, a LIMIT 1 over groups sorted by n then customer_id, followed by n >= 2, returns [] in DuckDB (checks/153.py)

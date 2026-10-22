@@ -32,4 +32,6 @@ assert round(0.9 * 9, 1) == 8.1
 # confirmed: section "Worrying About Your Tail" covers the slowest requests; footnote says "the idea that most of your requests are near the mean is just hopeful thinking."
 # source: https://www.postgresql.org/docs/current/tutorial-arch.html
 # confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database
+# source: https://en.wikipedia.org/wiki/Kaju_katli
+# confirmed: "Kaju katli (lit. 'Cashew slice') is an Indian dessert." and "Kaju means cashew"
 print("150 ok")
