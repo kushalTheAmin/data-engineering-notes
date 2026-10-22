@@ -24,7 +24,7 @@ the ON shrank to 32 characters, and AS is optional here, so `orders AS o` works 
 SELECT orders.order_id FROM orders o JOIN customers c ON o.customer_id = c.customer_id
 ```
 
-DuckDB, the database these notes run in, says the table "orders" was not found and suggests "o". the nickname replaces the real name for that query, it doesnt sit beside it. i assumed both would work, since nothing was deleted. the Postgres docs say the same, a table behind an alias cant be reached by its original name.
+DuckDB, the database these notes run in, says the table "orders" was not found and suggests "o". the nickname replaces the real name for that query, it doesnt sit beside it. i assumed both would work, since nothing was deleted. the Postgres docs (a server database) say the same, a table behind an alias cant be reached by its original name.
 
 so pick the nickname once and use it in SELECT, ON and WHERE alike. you will also need aliases when a table joins to itself, because then the real name would be ambiguous (two copies, one name).
 

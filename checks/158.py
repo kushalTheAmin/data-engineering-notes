@@ -17,3 +17,5 @@ except Exception as e:
     assert 'Referenced table "orders" not found' in str(e) and 'Candidate tables: "o"' in str(e)
 # source: https://www.postgresql.org/docs/current/queries-table-expressions.html
 # confirmed: "it is not allowed to refer to the table by the original name elsewhere in the query", and aliases are necessary when joining a table to itself. the same page says "The AS key word is optional noise" for table aliases
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model." (the note calls Postgres a server database)
