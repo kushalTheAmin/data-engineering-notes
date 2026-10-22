@@ -159,3 +159,15 @@ INSERT INTO order_fees VALUES
     (105, 3.00),
     (106, 2.00),
     (107, 3.00);
+
+-- added by note 166: a delivery zone per city. the last row has a NULL city, a catch-all for addresses nobody filled in
+CREATE TABLE delivery_zones (
+    city VARCHAR,
+    zone VARCHAR NOT NULL
+);
+
+INSERT INTO delivery_zones VALUES
+    ('Jersey City', 'north'),
+    ('Edison',      'south'),
+    ('Hoboken',     'north'),
+    (NULL,          'unassigned');

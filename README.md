@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 165
+notes so far: 166
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -190,3 +190,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [163 joining three tables](./notes/163-joining-three-tables.md): orders, order_items and products chain as two joins in a row, each ON only sees tables written above it, and the chain gives 13 rows
 - [164 fan out, when a join multiplies rows](./notes/164-fan-out-when-a-join-multiplies-rows.md): joining 7 orders to their items gives 13 rows, because an order with 3 items is kept 3 times
 - [165 double counting, why sums after a fan out lie](./notes/165-double-counting-why-sums-after-a-fan-out-lie.md): 7 delivery fees add to 15.00, but summed after joining to order_items they give 31.00, and sum(DISTINCT) gives 5.00
+- [166 joining on columns that can be NULL](./notes/166-joining-on-columns-that-can-be-null.md): NULL never matches NULL in a join, so Esha drops out of an inner join on city (4 rows), and IS NOT DISTINCT FROM brings her back (5 rows)

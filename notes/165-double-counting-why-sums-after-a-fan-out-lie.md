@@ -67,4 +67,4 @@ all three of her fees are 2.00, so DISTINCT keeps one. it collapsed three real o
 </details>
 
 ---
-prev: [164 fan out, when a join multiplies rows](./164-fan-out-when-a-join-multiplies-rows.md) | next: not written yet
+prev: [164 fan out, when a join multiplies rows](./164-fan-out-when-a-join-multiplies-rows.md) | next: [166 joining on columns that can be NULL](./166-joining-on-columns-that-can-be-null.md)
