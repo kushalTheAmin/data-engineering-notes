@@ -152,6 +152,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | overflow | a result too big for its bit size, wrapping or erroring | [016](./notes/016-overflow.md) |
 | parent folder | the folder holding this one, written .. in a path | [053](./notes/053-absolute-vs-relative-paths.md) |
 | path | folder names from the top down to a file, joined by slashes | [040](./notes/040-folders-and-paths.md) |
+| percentile | the value some fraction of the way through the sorted column | [150](./notes/150-percentiles-the-medians-cousins.md) |
 | pid | the number the system gives one running process, new each run | [050](./notes/050-processes.md) |
 | pipe (shell) | joins one programs output to the next programs input | [058](./notes/058-pipes.md) |
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
