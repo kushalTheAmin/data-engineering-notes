@@ -25,3 +25,5 @@ assert [(c, str(t)[:10]) for c, t in q("SELECT customer_id, max(ordered_at) FROM
 # check yourself 2
 assert q("SELECT customer_id FROM orders GROUP BY customer_id HAVING max(ordered_at) > TIMESTAMP '2026-04-08 12:00:00' ORDER BY 1") == [(2,)]
 assert str(q("SELECT max(ordered_at) FROM orders WHERE customer_id = 1")[0][0]) == "2026-04-08 10:00:00"
+# source: https://www.postgresql.org/docs/current/sql-select.html
+# confirmed: "HAVING eliminates group rows that do not satisfy the condition"; "WHERE filters individual rows before the application of GROUP BY, while HAVING filters group rows created by GROUP BY"
