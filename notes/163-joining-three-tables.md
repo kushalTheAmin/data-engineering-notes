@@ -31,4 +31,4 @@ DuckDB, the database these notes run in, says "oi" was not found, since it isnt 
 run the chain on all 7 orders and you get 13 rows, one per row of order_items, 6 more than orders has. the next one is about why.
 
 ---
-prev: [162 right and full outer joins](./162-right-and-full-outer-joins.md) | next: not written yet
+prev: [162 right and full outer joins](./162-right-and-full-outer-joins.md) | next: [164 fan out, when a join multiplies rows](./164-fan-out-when-a-join-multiplies-rows.md)
