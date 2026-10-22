@@ -2,7 +2,7 @@
 builds on: [149 median, the middle value after sorting](./149-median-the-middle-value-after-sorting.md), [137 aggregate functions, many rows in, one value out](./137-aggregate-functions-many-rows-in-one-value-out.md), [135 one language, many dialects](./135-one-language-many-dialects.md), [101 SQL, you describe the result](./101-sql-you-describe-the-result.md)
 section: summarizing data, part 14, ~2 min read
 
-kaju katli (a cashew sweet) costs 12.00, the most in the shop, so what price sits 90% of the way up the sorted prices? its not 12.00, and its not any price on the menu.
+kaju katli (a cashew sweet) costs 12.00, the most in the shop, so what price sits 90% of the way up the sorted prices? by blending the neighbors its not 12.00, and its not any price on the menu.
 
 a percentile is the value some fraction of the way through a sorted column (here, all the prices in order). the [median](./149-median-the-middle-value-after-sorting.md) (the middle of the sorted values) is just the 0.5 one, and the 90th percentile is 0.9. in python, on the 6 prices of the shop, the imaginary gujarati snack store these notes run on:
 

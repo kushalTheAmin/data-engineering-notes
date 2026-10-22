@@ -14,6 +14,8 @@ assert pos == 4.5 and prices[low] == 7.5 and prices[low + 1] == 12.0
 assert prices[low] + (pos - low) * (prices[low + 1] - prices[low]) == 9.75
 assert 9.75 not in prices
 assert round(0.9 * 12.00, 2) == 10.80
+# the blended answer is not 12.00, the discrete one is
+assert q("SELECT quantile_cont(price, 0.9) <> 12.00, quantile_disc(price, 0.9) = 12.00 FROM products") == [(True, True)]
 assert q("SELECT quantile_cont(price, 0.5), quantile_cont(price, 0.9), quantile_disc(price, 0.9) FROM products") == [(Dec("5.50"), Dec("9.75"), Dec("12.00"))]
 assert q("SELECT median(price) FROM products") == [(Dec("5.50"),)]
 # check yourself
