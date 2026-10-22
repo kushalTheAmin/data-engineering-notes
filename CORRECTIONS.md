@@ -1,5 +1,7 @@
 # corrections
 
+159, 2026-10-22: said the Postgres docs without saying what Postgres is, so a reader landing here alone could not place it, while 155, 152 and 153 gloss it. it now says Postgres docs (a server database). the checks now cite the page. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model."); notes/155-why-joins-the-answer-lives-in-more-than-one-table.md says "Postgres, a server database"
+
 158, 2026-10-22: said the Postgres docs without saying what Postgres is, so a reader landing here alone could not place it, while 155, 152 and 153 gloss it. it now says Postgres docs (a server database). the checks now cite the page. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model."); notes/155-why-joins-the-answer-lives-in-more-than-one-table.md says "Postgres, a server database"
 
 157, 2026-10-22: said the Postgres docs without saying what Postgres is, so a reader landing here alone could not place it, while 155, 152 and 153 gloss it. it now says Postgres docs (a server database). the checks now cite the page. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model."); notes/155-why-joins-the-answer-lives-in-more-than-one-table.md says "Postgres, a server database"

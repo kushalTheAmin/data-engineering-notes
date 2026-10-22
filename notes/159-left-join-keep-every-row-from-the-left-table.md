@@ -44,7 +44,7 @@ Esha | NULL
 
 8 rows, one more than the 7 an inner join gave. i expected the missing partner to stop the row from existing, but the row stays and only the order side is empty.
 
-left means first in the query text, not the left of the screen. write `orders o LEFT JOIN customers c` and you get 7 rows, because every order has a customer. the Postgres docs call it a LEFT OUTER JOIN, and OUTER is optional.
+left means first in the query text, not the left of the screen. write `orders o LEFT JOIN customers c` and you get 7 rows, because every order has a customer. the Postgres docs (a server database) call it a LEFT OUTER JOIN, and OUTER is optional.
 
 this is how a report keeps customers with zero orders, and those NULLs need handling, which is the next problem.
 

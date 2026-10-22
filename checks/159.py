@@ -38,3 +38,5 @@ assert q("SELECT count(*) FROM orders o JOIN customers c ON c.customer_id = o.cu
 assert q("SELECT count(*) FROM orders o JOIN customers c ON true WHERE c.name = 'Esha'") == [(7,)]
 # source: https://www.postgresql.org/docs/current/queries-table-expressions.html
 # confirmed: LEFT OUTER JOIN adds a row with null values in the right columns for each left row with no match, so there is at least one row per left row. the docs write [ INNER ] JOIN and LEFT [ OUTER ] JOIN in the syntax (OUTER optional) at https://www.postgresql.org/docs/current/sql-select.html
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model." (the note calls Postgres a server database)
