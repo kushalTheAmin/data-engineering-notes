@@ -67,4 +67,4 @@ customer 3 has one cancelled order, so every CASE inside their group is null, an
 </details>
 
 ---
-prev: [147 WHERE vs HAVING, before grouping or after](./147-where-vs-having-before-grouping-or-after.md) | next: not written yet
+prev: [147 WHERE vs HAVING, before grouping or after](./147-where-vs-having-before-grouping-or-after.md) | next: [149 median, the middle value after sorting](./149-median-the-middle-value-after-sorting.md)
