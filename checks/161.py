@@ -28,3 +28,7 @@ assert q("SELECT count(*) FROM customers c LEFT JOIN orders o ON c.customer_id =
 assert q(base + " WHERE o.order_id IS NULL") == [('Esha', None)]
 # source: https://www.postgresql.org/docs/current/queries-table-expressions.html
 # confirmed: "a restriction placed in the ON clause is processed before the join, while a restriction placed in the WHERE clause is processed after the join. That does not matter with inner joins, but it matters a lot with outer joins."
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model." (the note calls Postgres a server database)
+# source: https://www.postgresql.org/docs/current/queries-table-expressions.html
+# confirmed: "If the result of the condition is true, the row is kept in the output table, otherwise (i.e., if the result is false or null) it is discarded." (WHERE keeps only true)
