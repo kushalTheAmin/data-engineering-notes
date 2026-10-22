@@ -56,4 +56,4 @@ four rows. the join first pairs each order with its customer, then WHERE keeps t
 </details>
 
 ---
-prev: [155 why joins, the answer lives in more than one table](./155-why-joins-the-answer-lives-in-more-than-one-table.md) | next: not written yet
+prev: [155 why joins, the answer lives in more than one table](./155-why-joins-the-answer-lives-in-more-than-one-table.md) | next: [157 ON, how a join decides which rows match](./157-on-how-a-join-decides-which-rows-match.md)
