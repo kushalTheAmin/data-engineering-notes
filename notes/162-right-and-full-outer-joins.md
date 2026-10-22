@@ -4,7 +4,7 @@ section: combining tables with joins, part 8, ~2 min read
 
 a left join protects one side. what if the rows you care about sit unmatched on both?
 
-a full join is a [left join](./159-left-join-keep-every-row-from-the-left-table.md) (keeps every row of the first table) that also keeps unmatched right rows, with [NULL](./031-null.md) (a missing value) on the left. a right join keeps only the unmatched right rows, so it is a left join with the two tables swapped. the shop (the imaginary gujarati snack store these notes run on) has its 5 customers and a signups table (names as typed into the form). here is 159s loop plus one more loop, matching on name:
+a full join is a [left join](./159-left-join-keep-every-row-from-the-left-table.md) (keeps every row of the first table) that also keeps unmatched right rows, with [NULL](./031-null.md) (a missing value) on the left. a right join keeps every row of the second table, so it is a left join with the two tables swapped. the shop (the imaginary gujarati snack store these notes run on) has its 5 customers and a signups table (names as typed into the form). here is 159s loop plus one more loop, matching on name:
 
 ```python
 customers = ["Asha", "Bhavin", "Chirag", "Disha", "Esha"]
