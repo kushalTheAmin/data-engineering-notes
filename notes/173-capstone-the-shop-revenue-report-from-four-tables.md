@@ -9,7 +9,7 @@ the answer is a chain of left joins (each keeps every row from the table written
 ```text
 customers                                        5 rows
 LEFT JOIN orders, status test inside ON  [157, 161]   7 rows  (Chirag and Esha get NULL)
-LEFT JOIN order_items                    [163, 164]  13 rows  (orders fan out into items)
+LEFT JOIN order_items                    [163, 164]  13 rows  (fan out into item rows)
 LEFT JOIN products                       [163]       13 rows  (one price per item)
 GROUP BY name, sum quantity * price      [171]        5 rows
 ```
@@ -27,7 +27,7 @@ Disha | 1 | 5 | 37.00
 Esha | 0 | 0 | 0.00
 ```
 
-the status test sits in the ON, so cancelled and pending orders never join, but the customer stays. every join after it is a left join too, or Esha dies at the next one. count(DISTINCT) counts orders, not the 13 joined rows (11 items plus a filler row each for Chirag and Esha), and coalesce turns the NULL sums into 0. i expected the last join to be the tricky one, and its the ON on the first one that decides who survives.
+the status test sits in the ON, so cancelled and pending orders never join, but the customer stays. every join after it is a left join too, or Esha dies at the next one. count(DISTINCT) counts orders, not the 13 joined rows (11 order_items rows plus a filler row each for Chirag and Esha), and coalesce turns the NULL sums into 0. the items column adds up quantity, so Asha shows 6 items from 4 rows. i expected the last join to be the tricky one, and its the ON on the first one that decides who survives.
 
 the pieces, each with its note:
 - why and how: [why joins](./155-why-joins-the-answer-lives-in-more-than-one-table.md), [inner join](./156-inner-join-traced-by-hand.md), [ON](./157-on-how-a-join-decides-which-rows-match.md), [aliases](./158-table-aliases-short-nicknames-for-tables.md)
@@ -54,7 +54,7 @@ Chirag | 0
 Disha | 3
 Esha | 0
 ```
-it counts joined rows, one per item, so Asha shows 4 for 2 orders and Disha 3 for 1. the tempting answer is the same as before, since the column is still named orders.
+it counts joined rows, one per order_items row, so Asha shows 4 for 2 orders and Disha 3 for 1. the tempting answer is the same as before, since the column is still named orders.
 
 </details>
 

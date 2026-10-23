@@ -24,3 +24,5 @@ assert D("28.50") + D("28.00") + D("37.00") == D("93.50") and D("18.00") + D("15
 assert D("43.50") + D("28.00") + D("18.00") + D("37.00") == D("126.50")
 # the 13 rows after the order_items join are 11 real items plus a filler row each for chirag and esha
 assert q("SELECT count(oi.product_id), count(*) - count(oi.product_id) " + i2) == [(11, 2)]
+# the items column adds up quantity: asha has 4 joined rows holding 6 units
+assert q("SELECT count(oi.product_id), sum(oi.quantity) " + i2 + " WHERE c.name = 'Asha'") == [(4, 6)]
