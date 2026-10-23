@@ -68,4 +68,4 @@ dhokla now passes price < 6, and the view picked it up with no change to itself.
 </details>
 
 ---
-prev: [180 CTEs, naming each step with WITH](./180-ctes-naming-each-step-with-with.md) | next: not written yet
+prev: [180 CTEs, naming each step with WITH](./180-ctes-naming-each-step-with-with.md) | next: [182 UNION and UNION ALL](./182-union-and-union-all.md)
