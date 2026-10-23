@@ -50,7 +50,7 @@ Bhavin
 Esha
 ```
 
-a NULL never matches, so Esha is back, nothing matched her. filtering the NULL out of the list with `city IS NOT NULL` also works, but Esha stays dropped.
+a NULL never matches with =, so Esha is back, nothing matched her. filtering the NULL out of the list with `city IS NOT NULL` also works, but Esha stays dropped.
 
 ### check yourself
 
