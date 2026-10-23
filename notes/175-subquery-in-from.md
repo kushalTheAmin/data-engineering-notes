@@ -73,4 +73,4 @@ only Asha (2), Bhavin (2) and Disha (1) have a delivered order, so 5 divided by 
 </details>
 
 ---
-prev: [174 subquery in WHERE](./174-subquery-in-where.md) | next: not written yet
+prev: [174 subquery in WHERE](./174-subquery-in-where.md) | next: [176 scalar subqueries, one value inside a query](./176-scalar-subqueries-one-value-inside-a-query.md)

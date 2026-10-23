@@ -202,6 +202,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | run | the same value repeated back to back | [047](./notes/047-compression-spotting-repeats.md) |
 | run length encoding | storing each run as the value once plus a count | [047](./notes/047-compression-spotting-repeats.md) |
 | safe write | write a whole new file beside the old, then rename it over | [046](./notes/046-writing-safely.md) |
+| scalar subquery | a subquery returning one row and one column, used as a value | [176](./notes/176-scalar-subqueries-one-value-inside-a-query.md) |
 | scale | how many of a decimals digits sit after the point | [022](./notes/022-exact-decimal-types.md) |
 | schema (file) | a written agreement on which fields every record must have | [075](./notes/075-schema.md) |
 | schema on read | storing anything as it arrives, checking shape only when used | [083](./notes/083-schema-on-write-vs-schema-on-read.md) |
