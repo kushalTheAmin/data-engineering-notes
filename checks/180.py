@@ -14,3 +14,6 @@ assert q("WITH orders AS (SELECT * FROM orders WHERE status = 'delivered') SELEC
 assert q("WITH delivered AS (SELECT * FROM orders WHERE status = 'delivered') SELECT count(*) AS n FROM orders") == [(7,)]
 # source: https://www.postgresql.org/docs/current/queries-with.html
 # confirmed: WITH queries (CTEs) can be thought of as defining temporary tables that exist just for one query
+# source: https://www.postgresql.org/docs/current/sql-select.html
+# confirmed: "the WITH query hides any real table of the same name for the purposes of the primary query"
+# the docs wording is hedged: "can be thought of as defining temporary tables", not "is a temporary table"

@@ -29,7 +29,7 @@ Asha | 3
 Bhavin | 2
 ```
 
-i assumed WITH was a new feature, but it is the same inner query with a label. Postgres (a popular server database) calls it a temporary table that exists just for one query. the label can even reuse a real tables name, and for the rest of the statement it wins.
+i assumed WITH was a new feature, but it is the same inner query with a label. Postgres (a server database) says it can be thought of as a temporary table that exists just for one query. the label can even reuse a real tables name, and for the rest of the statement it wins.
 
 ### check yourself
 
