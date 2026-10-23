@@ -157,6 +157,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | no promised order | without ORDER BY, rows may come back in any order | [118](./notes/118-no-order-by-no-promised-order.md) |
 | NOT | flips a test, but a null stays unknown and is dropped | [110](./notes/110-not-flipping-a-condition.md) |
 | NOT EXISTS | true when the inner query returns no rows at all | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
+| NOT IN | keeps non-matches, but one NULL in the list empties the result | [179](./notes/179-not-in-and-the-null-trap.md) |
 | null | a marker meaning there is no value here, not a value | [031](./notes/031-null.md) |
 | NULLIF | hands back null when two values are equal, else the first | [130](./notes/130-nullif-and-dividing-by-zero.md) |
 | NULLS FIRST | the ORDER BY option that puts missing values at the start | [119](./notes/119-where-nulls-land-when-you-sort.md) |

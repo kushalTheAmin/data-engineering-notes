@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 178
+notes so far: 179
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -206,3 +206,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [176 scalar subqueries, one value inside a query](./notes/176-scalar-subqueries-one-value-inside-a-query.md): a subquery that returns one row and one column works like a number, so price > (SELECT avg(price) ...) keeps khandvi and kaju katli, and zero inner rows quietly gives an empty result
 - [177 correlated subqueries, a query that depends on the outer row](./notes/177-correlated-subqueries-a-query-that-depends-on-the-outer-row.md): the inner query uses a column of the outer row, so cheaper than its own category average keeps 2 products where the shop wide average keeps 4
 - [178 EXISTS and NOT EXISTS, asking whether a matching row exists](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md): EXISTS only asks whether the inner query found a row, so Asha with 2 delivered orders shows once, and NOT EXISTS gives Chirag (cancelled only) and Esha
+- [179 NOT IN and the NULL trap](./notes/179-not-in-and-the-null-trap.md): city NOT IN a list that includes a NULL returns zero rows, while NOT EXISTS gives Bhavin and Esha

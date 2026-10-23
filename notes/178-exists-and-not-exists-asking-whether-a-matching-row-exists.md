@@ -87,4 +87,4 @@ yes, Asha stays. she has delivered orders too, but one match (her pending order 
 </details>
 
 ---
-prev: [177 correlated subqueries, a query that depends on the outer row](./177-correlated-subqueries-a-query-that-depends-on-the-outer-row.md) | next: not written yet
+prev: [177 correlated subqueries, a query that depends on the outer row](./177-correlated-subqueries-a-query-that-depends-on-the-outer-row.md) | next: [179 NOT IN and the NULL trap](./179-not-in-and-the-null-trap.md)
