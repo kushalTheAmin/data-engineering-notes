@@ -2,7 +2,7 @@
 builds on: [106 WHERE, keeping only the rows that match](./106-where-keeping-only-the-rows-that-match.md), [111 IN, matching against a list](./111-in-matching-against-a-list.md), [164 fan out, when a join multiplies rows](./164-fan-out-when-a-join-multiplies-rows.md), [173 capstone, the shop revenue report from four tables](./173-capstone-the-shop-revenue-report-from-four-tables.md)
 section: bigger queries, part 1, ~2 min read
 
-which customers have a delivered order? [173](./173-capstone-the-shop-revenue-report-from-four-tables.md) answered everything with joins, but this one doesnt need a join at all, it needs a query inside a query.
+which customers have a delivered order? [173](./173-capstone-the-shop-revenue-report-from-four-tables.md) answered everything with joins (matching rows across two tables), but this one doesnt need a join at all, it needs a query inside a query.
 
 a subquery is a SELECT written in parentheses inside another query. in WHERE, after [IN](./111-in-matching-against-a-list.md) (matches a value against a list), the inner query makes the list. the shop is the imaginary gujarati snack store these notes run on, and the easiest way to picture it is the inner query running first:
 
