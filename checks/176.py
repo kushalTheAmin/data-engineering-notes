@@ -26,3 +26,6 @@ assert q("SELECT name FROM products WHERE price < (SELECT avg(price) FROM produc
 assert 4 + 2 == 6 and q("SELECT count(*) FROM products WHERE price = (SELECT avg(price) FROM products)") == [(0,)]
 # source: https://www.postgresql.org/docs/current/sql-expressions.html
 # confirmed (4.2.11): "A scalar subquery is an ordinary SELECT query in parentheses that returns exactly one row with one column"; "It is an error to use a query that returns more than one row or more than one column"; "if, during a particular execution, the subquery returns no rows, there is no error; the scalar result is taken to be null"
+# source: https://duckdb.org/docs/stable/sql/expressions/subqueries.html
+# confirmed: "If a scalar subquery returns more than a single value, an error is raised"; uncorrelated subqueries are "entirely self-contained and can be run without the parent query"
+# the Postgres page above also says "The SELECT query is executed and the single returned value is used in the surrounding value expression"
