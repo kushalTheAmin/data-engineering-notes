@@ -25,7 +25,7 @@ customer_id
 4
 ```
 
-in python these are two sets, `a & b` and `a - b`. like plain [UNION](./182-union-and-union-all.md) (stacks two queries, drops repeats), both also drop repeated rows, so Bhavin shows once even with 2 delivered orders.
+in python these are two sets, `a & b` and `a - b`. like plain [UNION](./182-union-and-union-all.md) (stacks two queries, drops repeats), plain INTERSECT and EXCEPT also drop repeated rows, so Bhavin shows once even with 2 delivered orders.
 
 i expected swapping the two queries to give the same rows. it doesnt. flip EXCEPT and you get customer 3, Chirag, whose only order was cancelled. INTERSECT is the one that doesnt care about order.
 

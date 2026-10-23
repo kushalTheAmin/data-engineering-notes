@@ -26,3 +26,11 @@ assert q("SELECT city FROM customers EXCEPT SELECT city FROM customers WHERE cus
 assert len(q("SELECT city FROM customers EXCEPT SELECT city FROM customers WHERE customer_id = 5")) == 3
 # source: https://www.postgresql.org/docs/current/queries-union.html
 # confirmed: INTERSECT returns rows in both results, EXCEPT returns rows in the first but not the second, duplicates eliminated unless ALL is used
+# plain INTERSECT and EXCEPT drop repeats, the ALL forms keep them
+assert q(f"{D} INTERSECT ALL {N}") == [(1,)]
+assert q(f"{D} EXCEPT ALL {N} ORDER BY customer_id") == [(1,), (2,), (2,), (4,)]
+# source: https://www.postgresql.org/docs/current/queries-union.html
+# confirmed: "Duplicate rows are eliminated unless INTERSECT ALL is used." and "Again, duplicates are eliminated unless EXCEPT ALL is used."
+# source: https://en.wikipedia.org/wiki/Set_operations_(SQL)
+# confirmed: "For purposes of duplicate removal the INTERSECT operator does not distinguish between NULLs." and "For purposes of row elimination and duplicate removal, the EXCEPT operator does not distinguish between NULLs."
+assert q("SELECT city FROM customers INTERSECT SELECT city FROM customers WHERE customer_id = 5") == [(None,)]
