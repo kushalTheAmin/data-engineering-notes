@@ -71,4 +71,4 @@ columns match by position and both are text, so the second row puts a city under
 </details>
 
 ---
-prev: [181 views, a saved query with a name](./181-views-a-saved-query-with-a-name.md) | next: not written yet
+prev: [181 views, a saved query with a name](./181-views-a-saved-query-with-a-name.md) | next: [183 INTERSECT and EXCEPT](./183-intersect-and-except.md)

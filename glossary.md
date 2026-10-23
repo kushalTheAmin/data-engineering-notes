@@ -77,6 +77,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | epoch | the starting line, 1 January 1970 UTC, that unix time counts from | [025](./notes/025-unix-time.md) |
 | exact decimal | a type keeping decimal digits exactly, like DECIMAL(6, 2) | [022](./notes/022-exact-decimal-types.md) |
 | exact tie | an answer halfway between two floats, rounded to the one ending 0 | [020](./notes/020-why-0-1-plus-0-2-is-not-0-3.md) |
+| EXCEPT | keeps first query rows missing from the second, order matters | [183](./notes/183-intersect-and-except.md) |
 | EXISTS | true when the inner query returns at least one row | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
 | explode | turning a record holding a list into one row per list item | [071](./notes/071-exploding-lists-into-many-rows.md) |
 | fan out | a join keeping a left row once per matching right row | [164](./notes/164-fan-out-when-a-join-multiplies-rows.md) |
@@ -111,6 +112,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | insert anomaly | a fact cant be stored until an unrelated fact exists | [090](./notes/090-insert-and-delete-anomalies.md) |
 | integer division | dividing whole numbers and keeping only the whole part | [131](./notes/131-integer-division-when-7-divided-by-2-gives-3.md) |
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |
+| INTERSECT | keeps only rows that appear in both queries | [183](./notes/183-intersect-and-except.md) |
 | interval | a length of time, like 2 days, you add to a date | [128](./notes/128-adding-and-subtracting-intervals.md) |
 | IS NOT DISTINCT FROM | an equals that counts two nulls as the same, so they match | [166](./notes/166-joining-on-columns-that-can-be-null.md) |
 | IS NOT NULL | the test that is true when a value is present, never unknown | [115](./notes/115-is-null-and-is-not-null.md) |

@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 182
+notes so far: 183
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -210,3 +210,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [180 CTEs, naming each step with WITH](./notes/180-ctes-naming-each-step-with-with.md): the 175 inner query moved to the top and named per_customer, so it is used twice, as a table and inside an average, and gives Asha and Bhavin
 - [181 views, a saved query with a name](./notes/181-views-a-saved-query-with-a-name.md): a view stores the query, not rows, so the delivered count went 5 to 6 after one order update without touching the view
 - [182 UNION and UNION ALL](./notes/182-union-and-union-all.md): stacking delivered and not delivered customer ids gives 7 rows with UNION ALL and 4 with UNION
+- [183 INTERSECT and EXCEPT](./notes/183-intersect-and-except.md): delivered ids against the rest give Asha for INTERSECT, Bhavin and Disha for EXCEPT, and Chirag when the sides swap
