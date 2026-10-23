@@ -35,7 +35,7 @@ Bhavin
 Disha
 ```
 
-Asha has 2 delivered orders and still shows up once. EXISTS only asks whether there is one, so it can stop at the first match. a join repeats her, the [fan out](./164-fan-out-when-a-join-multiplies-rows.md) (a left row copied per match), and give 5 rows. keeping matched left rows once each is called a semi join.
+Asha has 2 delivered orders and shows up once. EXISTS only asks whether there is one, so it can stop at the first match. a join (rows matched across tables) repeats her, the [fan out](./164-fan-out-when-a-join-multiplies-rows.md) (a left row copied per match), and gives 5 rows. keeping matched left rows once each is called a semi join.
 
 flip it and you get the [anti join](./167-anti-join-rows-with-no-match.md) (keeps left rows with no match), written as the question you mean:
 
@@ -49,7 +49,7 @@ Chirag
 Esha
 ```
 
-Chirag has an order, but it was cancelled, so he lands next to Esha. what the inner SELECT lists never matters: SELECT 1, SELECT * and SELECT NULL all behave the same. i kept hunting for what the inner query hands back, and the answer is nothing, only whether anything came.
+Chirag ordered, but it was cancelled, so he lands next to Esha. what the inner SELECT lists never matters: SELECT 1, SELECT * and SELECT NULL all behave the same. i kept hunting for what the inner query hands back, and the answer is nothing, only whether anything came.
 
 ### check yourself
 

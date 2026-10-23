@@ -24,3 +24,5 @@ assert q("SELECT name FROM customers c WHERE EXISTS (SELECT 1 FROM orders o WHER
 assert q("SELECT name FROM customers c WHERE EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.customer_id AND o.status <> 'delivered') ORDER BY name") == [("Asha",), ("Chirag",)]
 # source: https://www.postgresql.org/docs/current/functions-subquery.html
 # confirmed: EXISTS is true if the subquery returns at least one row, false if none; the subquery is generally run only long enough to find whether a row exists; the output list is normally unimportant
+# source: https://en.wikipedia.org/wiki/Semijoin
+# confirmed: "The result is the set of all tuples in R for which there is a tuple in S that is equal on their common attribute names. The difference from a natural join is that other columns of S do not appear."
