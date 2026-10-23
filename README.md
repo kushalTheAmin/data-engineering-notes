@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 171
+notes so far: 172
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -196,3 +196,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [169 cross join, every row with every row](./notes/169-cross-join-every-row-with-every-row.md): 5 customers crossed with 6 products give 30 pairs, the loop inside a loop with no if, and only 10 of those pairs were ever ordered
 - [170 joining on a range, matching a date to a period](./notes/170-joining-on-a-range-matching-a-date-to-a-period.md): a BETWEEN join drops order 103 because a timestamp at noon is after a date end at midnight, and a CAST to date fixes it
 - [171 joins plus GROUP BY, revenue per customer](./notes/171-joins-plus-group-by-revenue-per-customer.md): the joins run first and GROUP BY sums quantity times price, Asha is 43.50, Esha drops out, and Chirag still shows 18.00 for a cancelled order until a WHERE removes it
+- [172 practice, five join questions on the shop, checking row counts](./notes/172-practice-five-join-questions-on-the-shop-checking-row-counts.md): five tasks on predicting the row count of a join before running it, from 14 rows for two left joins to 5 sweet items bought by only 2 customers

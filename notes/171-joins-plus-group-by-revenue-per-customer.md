@@ -67,4 +67,4 @@ Disha | 37.00
 </details>
 
 ---
-prev: [170 joining on a range, matching a date to a period](./170-joining-on-a-range-matching-a-date-to-a-period.md) | next: not written yet
+prev: [170 joining on a range, matching a date to a period](./170-joining-on-a-range-matching-a-date-to-a-period.md) | next: [172 practice, five join questions on the shop, checking row counts](./172-practice-five-join-questions-on-the-shop-checking-row-counts.md)
