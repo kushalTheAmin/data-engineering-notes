@@ -27,7 +27,7 @@ Disha | 1 | 5 | 37.00
 Esha | 0 | 0 | 0.00
 ```
 
-the status test sits in the ON, so cancelled and pending orders never join, but the customer stays. every join after it is a left join too, or Esha dies at the next one. count(DISTINCT) counts orders, not the 13 fanned out rows, and coalesce turns the NULL sums into 0. i expected the last join to be the tricky one, and its the ON on the first one that decides who survives.
+the status test sits in the ON, so cancelled and pending orders never join, but the customer stays. every join after it is a left join too, or Esha dies at the next one. count(DISTINCT) counts orders, not the 13 joined rows (11 items plus a filler row each for Chirag and Esha), and coalesce turns the NULL sums into 0. i expected the last join to be the tricky one, and its the ON on the first one that decides who survives.
 
 the pieces, each with its note:
 - why and how: [why joins](./155-why-joins-the-answer-lives-in-more-than-one-table.md), [inner join](./156-inner-join-traced-by-hand.md), [ON](./157-on-how-a-join-decides-which-rows-match.md), [aliases](./158-table-aliases-short-nicknames-for-tables.md)

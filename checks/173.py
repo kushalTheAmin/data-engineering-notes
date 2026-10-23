@@ -22,3 +22,5 @@ assert q("SELECT c.name, count(o.order_id) " + i3 + " GROUP BY c.name ORDER BY c
 assert q("SELECT o.status, sum(oi.quantity * p.price) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON oi.product_id = p.product_id GROUP BY o.status ORDER BY 1") == [("cancelled", D("18.00")), ("delivered", D("93.50")), ("pending", D("15.00"))]
 assert D("28.50") + D("28.00") + D("37.00") == D("93.50") and D("18.00") + D("15.00") == D("33.00") and D("93.50") + D("33.00") == D("126.50")
 assert D("43.50") + D("28.00") + D("18.00") + D("37.00") == D("126.50")
+# the 13 rows after the order_items join are 11 real items plus a filler row each for chirag and esha
+assert q("SELECT count(oi.product_id), count(*) - count(oi.product_id) " + i2) == [(11, 2)]
