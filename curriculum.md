@@ -14,6 +14,7 @@ log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept faile
 2026-10-23: repo baseline failed checks/127.py again: same date_trunc type assert, no duckdb from 1.0 to 1.4.5 passes the whole gate, still needs a fix outside this run; mermaid render also failed so no diagrams today
 2026-10-23: repo baseline failed checks/127.py: same date_trunc type assert on duckdb 1.4.5 (duckdb 2.0.0 also breaks 8 checks on fetchone), mermaid render failed again; no note written, needs a fix outside this run
 2026-10-23: repo baseline failed checks/127.py again: same date_trunc type assert on duckdb 1.4.5 (python3 here is 3.11, duckdb 2.0.0 is only installed for 3.13), no note written, needs a fix outside this run
+2026-10-23: repo baseline failed gate setup: python3 here is 3.11 with no duckdb (duckdb 2.0.0 sits only under 3.13 and breaks 8 checks on fetchone, a duckdb 1.4.5 install timed out), mermaid render failed again; no note written, needs a fix outside this run
 
 ## arc 1: data at the atom level
 after this arc: you know what a computer actually stores when it "saves" an order
