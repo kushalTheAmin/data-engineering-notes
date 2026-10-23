@@ -17,7 +17,7 @@ order_id | promo
 105 | festival sale
 ```
 
-order 103 is gone. its ordered_at is 2026-04-03 12:05, a timestamp (a date plus a time), and launch week ends on the date 2026-04-03, which counts as midnight. noon is after midnight, so the BETWEEN says no. the fix is to [CAST](./132-cast-changing-a-values-type.md) (convert) the timestamp to a date first, and a [left join](./159-left-join-keep-every-row-from-the-left-table.md) keeps the orders that match no promo:
+order 103 is gone. its ordered_at is 2026-04-03 12:05, a timestamp (a date plus a time), and launch week ends on the date 2026-04-03, which counts as midnight. noon is after midnight, so the BETWEEN says no. the fix is to [CAST](./132-cast-changing-a-values-type.md) (convert) the timestamp to a date first, and a [left join](./159-left-join-keep-every-row-from-the-left-table.md) keeps the orders that match no promo, with NULL (a missing value) in the promo column:
 
 ```sql
 SELECT o.order_id, p.promo FROM orders o LEFT JOIN promo_periods p ON CAST(o.ordered_at AS DATE) BETWEEN p.starts_on AND p.ends_on ORDER BY o.order_id
