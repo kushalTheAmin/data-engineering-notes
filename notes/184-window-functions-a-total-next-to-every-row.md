@@ -76,4 +76,4 @@ fafda | 18.00
 </details>
 
 ---
-prev: [183 INTERSECT and EXCEPT](./183-intersect-and-except.md) | next: not written yet
+prev: [183 INTERSECT and EXCEPT](./183-intersect-and-except.md) | next: [185 OVER, the window a function looks through](./185-over-the-window-a-function-looks-through.md)
