@@ -249,6 +249,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | TRY_CAST | CAST that gives null instead of an error when conversion fails | [133](./notes/133-casts-that-fail-and-try-cast.md) |
 | twos complement | binary where the leftmost place is negative, so one zero | [014](./notes/014-twos-complement.md) |
 | Unicode | one agreed table giving every character in every script a number | [009](./notes/009-unicode.md) |
+| UNION | stacks two queries rows, then drops repeated rows | [182](./notes/182-union-and-union-all.md) |
+| UNION ALL | stacks two queries rows and keeps every repeat | [182](./notes/182-union-and-union-all.md) |
 | unix time | a moment kept as seconds counted since the epoch | [025](./notes/025-unix-time.md) |
 | unknown | the third test result, from a null, that WHERE drops | [114](./notes/114-three-valued-logic-true-false-and-unknown.md) |
 | update anomaly | one fact stored in many rows, an update changing only some | [089](./notes/089-update-anomalies.md) |
