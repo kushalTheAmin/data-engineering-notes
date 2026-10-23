@@ -30,3 +30,11 @@ except Exception as e:
 # confirmed: operands must produce the same number of columns with compatible types; no duplicates unless ALL; "UNION ALL is usually significantly quicker than UNION"
 # source: https://www.postgresql.org/docs/current/queries-union.html
 # confirmed: UNION effectively appends query2 to query1 and eliminates duplicate rows in the same way as DISTINCT unless UNION ALL is used
+# columns line up by position and the result names come from the first query (checked above: name | city, row two puts a city under name)
+assert [d[0] for d in con.execute("SELECT name, city FROM customers WHERE customer_id = 1 UNION ALL SELECT city, name FROM customers WHERE customer_id = 1").description] == ["name", "city"]
+# DuckDB also has a separate UNION BY NAME that matches by name
+assert q("SELECT name, city FROM customers WHERE customer_id = 1 UNION ALL BY NAME SELECT city, name FROM customers WHERE customer_id = 1") == [('Asha', 'Jersey City'), ('Asha', 'Jersey City')]
+# source: https://duckdb.org/docs/2.0/sql/query_syntax/setops
+# confirmed: "Traditional set operations unify queries by column position, and require the to-be-combined queries to have the same number of input columns. ... The result will use the column names from the first query. DuckDB also supports UNION [ALL] BY NAME, which joins columns by name instead of by position."
+# source: https://www.postgresql.org/docs/current/sql-select.html
+# confirmed: "ALL prevents elimination of duplicates. (Therefore, UNION ALL is usually significantly quicker than UNION; use ALL when you can.)"

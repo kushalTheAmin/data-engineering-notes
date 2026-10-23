@@ -35,9 +35,9 @@ customer_id
 
 in python, UNION ALL is `a + b` and UNION is `sorted(set(a + b))`. i figured stacking two lists couldnt lose rows, but plain UNION quietly drops repeats, and Asha has three real orders that collapse into one row.
 
-two rules. both queries need the same number of columns, and columns line up by position, not by name. the result takes its names from the first query.
+two rules. both queries need the same number of columns, and columns line up by position, not by name (DuckDB, which runs these queries, has a separate UNION BY NAME). the result takes its names from the first query.
 
-so default to UNION ALL. Postgres (a server database) docs say it is usually significantly quicker, since nothing has to be compared. this is how teams glue monthly tables or logs into one.
+so default to UNION ALL. Postgres (a server database) docs say it is usually significantly quicker, since it skips removing repeats. this is how teams glue monthly tables or logs into one.
 
 ### check yourself
 
