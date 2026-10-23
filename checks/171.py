@@ -35,3 +35,5 @@ assert q("SELECT count(*) FROM orders o JOIN order_items oi ON o.order_id = oi.o
 # confirmed: "WHERE filters individual rows before the application of GROUP BY"
 # a join after a left join only drops her when it hangs off the filled in columns
 assert q("SELECT c.name FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id JOIN products p ON p.product_id = c.customer_id WHERE c.customer_id = 5") == [("Esha",)]
+# the closing line of question 2 now says the chained joins that test the order columns, the same narrowing 173 made
+assert "Esha" not in [r[0] for r in q("SELECT c.name FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id JOIN order_items oi ON o.order_id = oi.order_id")]
