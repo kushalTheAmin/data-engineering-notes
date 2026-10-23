@@ -23,3 +23,5 @@ assert q("SELECT sum(DISTINCT f.fee) " + a) == [(D("2.00"),)]
 # 7 fees in total, and summing a many side column in this join is safe: quantity totals 20 either way
 assert q("SELECT count(*) FROM order_fees") == [(7,)]
 assert q("SELECT sum(oi.quantity) FROM order_fees f JOIN order_items oi ON f.order_id = oi.order_id") == q("SELECT sum(quantity) FROM order_items") == [(20,)]
+# source: https://duckdb.org/docs/2.0/sql/functions/aggregates.html
+# confirmed: "When the DISTINCT clause is provided, only distinct values are considered in the computation of the aggregate."

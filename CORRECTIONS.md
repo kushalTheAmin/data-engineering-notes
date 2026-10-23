@@ -1,5 +1,7 @@
 # corrections
 
+165, 2026-10-23: note text unchanged. the claim that sum(DISTINCT) keeps one of each amount had no source in the checks. they now cite the DuckDB page. evidence: https://duckdb.org/docs/2.0/sql/functions/aggregates.html ("When the DISTINCT clause is provided, only distinct values are considered in the computation of the aggregate.")
+
 166, 2026-10-23: said NULL never matches NULL in a join, which reads as true for every join, but the note itself shows IS NOT DISTINCT FROM matching them. it now says in a join that tests with =. Postgres and DuckDB were also named without saying what they are, so a reader landing here alone could not place them. it now says Postgres (a server database) and DuckDB (what these notes run in), as other notes do. the checks now cite the Postgres page for Postgres being a server database. evidence: https://www.postgresql.org/docs/current/tutorial-arch.html ("PostgreSQL uses a client/server model."); python, SELECT count(*) with ON c.city IS NOT DISTINCT FROM z.city gives Esha a match (checks/166.py)
 
 167, 2026-10-23: said a right side test in WHERE kills the NULLs, but IS NULL is also a right side test in WHERE and keeps them, as the same sentence goes on to say. it now says a right side comparison, the wording 161 uses. evidence: notes/161-a-where-that-quietly-turns-a-left-join-into-an-inner-join.md ("so a right side comparison in WHERE quietly makes your left join an inner join. only IS NULL asks for the filled in rows instead.")
