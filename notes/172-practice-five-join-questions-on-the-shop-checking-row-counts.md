@@ -4,7 +4,7 @@ section: combining tables with joins, part 18, ~2 min read
 
 your join (pairs up rows from two tables) ran and the total looks plausible. but did the join quietly copy or drop rows before anything got added up?
 
-this one is practice, and the skill is a habit: say the row count out loud before you run a join, then check it. the shop (the imaginary gujarati snack store these notes run on) makes it easy, and it pays off in the [revenue chains](./171-joins-plus-group-by-revenue-per-customer.md) and [three table joins](./163-joining-three-tables.md) from before. when each order has exactly one customer, an [inner join](./156-inner-join-traced-by-hand.md) (keeps only matching pairs) returns one row per order, since every order in the shop has a customer. a [left join](./159-left-join-keep-every-row-from-the-left-table.md) (keeps every row of the table written first) adds one row for each left row with no partner (here every left row has at most one).
+this one is practice, and the skill is a habit: say the row count out loud before you run a join, then check it. the shop (the imaginary gujarati snack store these notes run on) makes it easy, and it pays off in the [revenue chains](./171-joins-plus-group-by-revenue-per-customer.md) and [three table joins](./163-joining-three-tables.md) from before. when each order has exactly one customer, an [inner join](./156-inner-join-traced-by-hand.md) (keeps only matching pairs) returns one row per order, since every order in the shop has a customer. a [left join](./159-left-join-keep-every-row-from-the-left-table.md) (keeps every row of the table written first) adds one row for each left row with no partner (here only Esha).
 
 here is the slice you need, 5 customers (Asha, Bhavin, Chirag, Disha, Esha) and the 7 orders with how many items each holds:
 
@@ -82,7 +82,7 @@ the tempting answer is that orders equal joined rows. Disha has one order with 3
 
 </details>
 
-4. delivered revenue for all 5 customers, 0.00 for those with nothing delivered. a WHERE on status would lose rows, so where does the test go?
+4. delivered revenue for all 5 customers, 0.00 for those with nothing delivered ([coalesce](./116-coalesce-a-fallback-when-a-value-is-null.md) swaps a NULL for a fallback). a WHERE on status would lose rows, so where does the test go?
 
 <details><summary>answer</summary>
 

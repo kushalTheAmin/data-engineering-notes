@@ -11,7 +11,8 @@ assert q("SELECT count(*) FROM orders") == [(7,)] and q("SELECT count(*) FROM cu
 assert q("SELECT count(*) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id") == [(13,)]
 assert q("SELECT count(*) FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id") == [(8,)] and 7 + 1 == 8
 assert q("SELECT count(*) FROM orders WHERE customer_id = 1") == [(3,)]
-# task 1: 13 item rows plus Esha
+# task 1: 13 item rows plus Esha, and every order has at least one item
+assert q("SELECT count(*) FROM orders WHERE order_id NOT IN (SELECT order_id FROM order_items)") == [(0,)]
 assert q("SELECT count(*) FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id LEFT JOIN order_items oi ON o.order_id = oi.order_id") == [(14,)] and 13 + 1 == 14
 # task 2
 assert q("SELECT count(*), count(o.order_id) FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id") == [(8, 7)]
@@ -30,3 +31,6 @@ assert q("SELECT DISTINCT c.name FROM customers c JOIN orders o ON c.customer_id
 # confirmed: page title "DataLemur - Ace the SQL & Data Science Interview", so it offers SQL interview questions
 # source: https://www.stratascratch.com
 # confirmed: page title "Data Science & AI Interview Prep | StrataScratch" and it lists SQL, so it offers SQL interview questions
+# source: https://www.postgresql.org/docs/current/queries-table-expressions.html
+# confirmed: "for each row in T1 that does not satisfy the join condition with any row in T2, a joined row is added with null values in columns of T2"; only Esha has no order
+assert q("SELECT count(*) FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id WHERE o.order_id IS NULL") == [(1,)]
