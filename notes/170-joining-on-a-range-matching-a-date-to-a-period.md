@@ -37,4 +37,4 @@ order_id | promo
 7 orders in, 7 rows out. 104 fell on april 4, between the two promos, and 106 and 107 came after both. one more thing to watch: if two periods overlap, an order inside both matches twice, and thats the [fan out](./164-fan-out-when-a-join-multiplies-rows.md) again. i kept picturing a join as matching ids, and a range join is really the cross join loop from [169](./169-cross-join-every-row-with-every-row.md) with a range check as the if.
 
 ---
-prev: [169 cross join, every row with every row](./169-cross-join-every-row-with-every-row.md) | next: not written yet
+prev: [169 cross join, every row with every row](./169-cross-join-every-row-with-every-row.md) | next: [171 joins plus GROUP BY, revenue per customer](./171-joins-plus-group-by-revenue-per-customer.md)
