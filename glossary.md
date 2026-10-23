@@ -185,6 +185,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | program | a file of bytes on disk that can be run | [050](./notes/050-processes.md) |
 | query | one request sent to a database, naming the result you want | [101](./notes/101-sql-you-describe-the-result.md) |
 | quoting (csv) | double quotes around a value so commas inside it stay text | [063](./notes/063-quoting-commas-inside-values.md) |
+| range join | a join whose ON is a BETWEEN, matching values to periods | [170](./notes/170-joining-on-a-range-matching-a-date-to-a-period.md) |
 | reading start to end | taking a files bytes in order from position 0 | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
 | record | one row of a table, one thing the data is about | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | redirect | > sends a programs stdout into a file, emptying it first | [059](./notes/059-redirecting-output-into-a-file.md) |

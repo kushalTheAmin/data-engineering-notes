@@ -39,4 +39,4 @@ pairs | customers | products
 so why ever do it on purpose? it builds every combination that could happen. only 10 of those 30 customer and product pairs were ever ordered, so 20 never happened, and an [anti join](./167-anti-join-rows-with-no-match.md) (keeps rows with no match) on top of the cross join lists them, Esha with all 6. a plain JOIN with no ON is a syntax error in DuckDB, so you ask for this one by name.
 
 ---
-prev: [168 self join, a table joined to itself](./168-self-join-a-table-joined-to-itself.md) | next: not written yet
+prev: [168 self join, a table joined to itself](./168-self-join-a-table-joined-to-itself.md) | next: [170 joining on a range, matching a date to a period](./170-joining-on-a-range-matching-a-date-to-a-period.md)

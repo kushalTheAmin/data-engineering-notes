@@ -171,3 +171,14 @@ INSERT INTO delivery_zones VALUES
     ('Edison',      'south'),
     ('Hoboken',     'north'),
     (NULL,          'unassigned');
+
+-- added by note 170: promo periods with a first and last day. april 4 and everything from april 8 fall in no period
+CREATE TABLE promo_periods (
+    promo VARCHAR NOT NULL,
+    starts_on DATE NOT NULL,
+    ends_on DATE NOT NULL
+);
+
+INSERT INTO promo_periods VALUES
+    ('launch week',   DATE '2026-04-01', DATE '2026-04-03'),
+    ('festival sale', DATE '2026-04-05', DATE '2026-04-07');
