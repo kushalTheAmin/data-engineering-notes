@@ -45,4 +45,4 @@ customer_id is each customers unique number, Asha is 1 and Chirag is 3. no row h
 another use is a people table where each row holds its mothers id, so child and mother are the same table joined to itself.
 
 ---
-prev: [167 anti join, rows with no match](./167-anti-join-rows-with-no-match.md) | next: not written yet
+prev: [167 anti join, rows with no match](./167-anti-join-rows-with-no-match.md) | next: [169 cross join, every row with every row](./169-cross-join-every-row-with-every-row.md)

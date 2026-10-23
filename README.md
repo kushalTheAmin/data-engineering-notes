@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 168
+notes so far: 169
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -193,3 +193,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [166 joining on columns that can be NULL](./notes/166-joining-on-columns-that-can-be-null.md): NULL never matches NULL in a join, so Esha drops out of an inner join on city (4 rows), and IS NOT DISTINCT FROM brings her back (5 rows)
 - [167 anti join, rows with no match](./notes/167-anti-join-rows-with-no-match.md): a left join plus WHERE the right primary key IS NULL finds Esha, the only customer with no orders, and fafda, the only product never ordered
 - [168 self join, a table joined to itself](./notes/168-self-join-a-table-joined-to-itself.md): joining customers to customers on city gives 6 pairs, 4 of them a person with herself, and a.customer_id < b.customer_id leaves Asha and Chirag
+- [169 cross join, every row with every row](./notes/169-cross-join-every-row-with-every-row.md): 5 customers crossed with 6 products give 30 pairs, the loop inside a loop with no if, and only 10 of those pairs were ever ordered
