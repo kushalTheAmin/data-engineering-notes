@@ -28,3 +28,5 @@ assert [x[0] for x in r2] == ["masala chai", "fafda", "jalebi", "dhokla"]
 assert round(sum(p for _, _, p in products) / 6, 2) == 6.33
 # source: https://www.postgresql.org/docs/current/sql-expressions.html
 # confirmed (4.2.11): "The subquery can refer to variables from the surrounding query, which will act as constants during any one evaluation of the subquery"
+# source: https://www.postgresql.org/docs/current/planner-optimizer.html
+# confirmed: "executed in a wide variety of different ways, each of which will produce the same set of results" and "the query optimizer will examine each of these possible execution plans, ultimately selecting the execution plan that is expected to run the fastest"
