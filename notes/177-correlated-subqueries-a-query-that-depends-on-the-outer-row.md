@@ -69,4 +69,4 @@ no error. plain category means the inner table both times, so it compares a colu
 </details>
 
 ---
-prev: [176 scalar subqueries, one value inside a query](./176-scalar-subqueries-one-value-inside-a-query.md) | next: not written yet
+prev: [176 scalar subqueries, one value inside a query](./176-scalar-subqueries-one-value-inside-a-query.md) | next: [178 EXISTS and NOT EXISTS, asking whether a matching row exists](./178-exists-and-not-exists-asking-whether-a-matching-row-exists.md)
