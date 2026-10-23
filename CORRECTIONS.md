@@ -1,5 +1,7 @@
 # corrections
 
+168, 2026-10-23: said a NULL never matches, the same unqualified claim 166 fixed, but 166 shows IS NOT DISTINCT FROM matching two NULLs. it now says a NULL never matches with =. evidence: notes/166-joining-on-columns-that-can-be-null.md (IS NOT DISTINCT FROM gives Esha the unassigned zone)
+
 169, 2026-10-23: said a join with no condition just runs, which reads as true of any join. a plain JOIN with no ON is a syntax error in DuckDB, and only the cross join written by name (or the comma form) runs. it now says so. the checks now assert the error. evidence: python, duckdb SELECT count(*) FROM customers JOIN products raises a parser error (checks/169.py); https://www.postgresql.org/docs/current/queries-table-expressions.html ("The join condition is specified in the ON or USING clause, or implicitly by the word NATURAL.")
 
 165, 2026-10-23: note text unchanged. the claim that sum(DISTINCT) keeps one of each amount had no source in the checks. they now cite the DuckDB page. evidence: https://duckdb.org/docs/2.0/sql/functions/aggregates.html ("When the DISTINCT clause is provided, only distinct values are considered in the computation of the aggregate.")
