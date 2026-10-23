@@ -36,7 +36,7 @@ pairs | customers | products
 
 5 times 6. the row count is the two row counts multiplied, so 10,000 rows crossed with 10,000 rows is 100 million, which is why an accidental one can hang a query. writing `FROM customers, products` with a comma is the same cross join, and the Postgres docs (a server database) say so.
 
-so why ever do it on purpose? it builds every combination that could happen. only 10 of those 30 customer and product pairs were ever ordered, so 20 never happened, and an [anti join](./167-anti-join-rows-with-no-match.md) (keeps rows with no match) on top of the cross join lists them, Esha with all 6. i expected a join with no condition to be an error, and it just runs.
+so why ever do it on purpose? it builds every combination that could happen. only 10 of those 30 customer and product pairs were ever ordered, so 20 never happened, and an [anti join](./167-anti-join-rows-with-no-match.md) (keeps rows with no match) on top of the cross join lists them, Esha with all 6. a plain JOIN with no ON is a syntax error in DuckDB, so you ask for this one by name.
 
 ---
 prev: [168 self join, a table joined to itself](./168-self-join-a-table-joined-to-itself.md) | next: not written yet

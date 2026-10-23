@@ -1,5 +1,6 @@
 # checks for notes/169-cross-join-every-row-with-every-row.md
 import os, sys
+import duckdb
 sys.path.insert(0, os.path.dirname(__file__))
 from _shop import shop
 con = shop()
@@ -23,3 +24,11 @@ assert q("SELECT count(*) FROM products") == [(6,)]
 # confirmed: a cross join gives every combination of rows, N and M rows give N * M rows, and FROM T1 CROSS JOIN T2 is equivalent to FROM T1, T2 and to INNER JOIN ON TRUE
 # source: https://www.postgresql.org/docs/current/tutorial-arch.html
 # confirmed: "PostgreSQL uses a client/server model", so Postgres is a server database
+# a plain JOIN with no ON is a syntax error in DuckDB, so the cross join has to be asked for by name
+try:
+    q("SELECT count(*) FROM customers JOIN products")
+    assert False
+except duckdb.ParserException:
+    pass
+# source: https://www.postgresql.org/docs/current/queries-table-expressions.html
+# confirmed: "The join condition is specified in the ON or USING clause, or implicitly by the word NATURAL." for qualified joins; a cross join is the one written CROSS JOIN
