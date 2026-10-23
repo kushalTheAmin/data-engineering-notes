@@ -23,3 +23,7 @@ assert q("SELECT count(*) FROM cheap") == [(4,)]
 # confirmed: the view is not physically materialized, the query is run every time the view is referenced
 # source: https://www.postgresql.org/docs/current/rules-materializedviews.html
 # confirmed: materialized views persist the results in a table-like form, so Postgres has both kinds
+# source: https://www.postgresql.org/docs/current/sql-dropview.html
+# confirmed: "DROP VIEW drops an existing view."
+# source: https://www.postgresql.org/docs/current/sql-update.html
+# confirmed: "UPDATE changes the values of the specified columns in all rows that satisfy the condition."

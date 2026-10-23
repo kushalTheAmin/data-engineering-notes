@@ -28,7 +28,7 @@ n
 
 5 became 6 and i never touched the view. it never held rows, only the query, which runs again each time something reads it. in python it is a function you call, not a list you saved: `delivered_orders = lambda: [o for o in orders if o["status"] == "delivered"]`.
 
-so a view is always fresh and costs no storage, but you pay for the work on every read. a view that stores its answer instead is called a materialized view, and Postgres (a popular server database) has both. this is how teams give analysts a clean `delivered_orders` and keep the messy filter in one place.
+so a view is always fresh and costs no storage, but you pay for the work on every read. a view that stores its answer instead is called a materialized view, and Postgres (a server database) has both. this is how teams give analysts a clean `delivered_orders` and keep the messy filter in one place.
 
 ### check yourself
 
