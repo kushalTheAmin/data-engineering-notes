@@ -11,7 +11,7 @@ SELECT avg(count(*)) FROM orders GROUP BY customer_id
 
 an aggregate cant sit inside another aggregate in DuckDB or Postgres. a subquery in FROM fixes that: the inner SELECT sits in parentheses where a table name would go, and the outer query reads its result like a table. [174](./174-subquery-in-where.md) put the inner query in WHERE (it handed over a list), this one hands over a whole table. the shop is the imaginary gujarati snack store these notes run on, (orders table: 7 rows).
 
-step one, the inner query alone, [GROUP BY](./143-group-by-one-group-per-value.md) making one row per customer:
+step one, the inner query alone, [GROUP BY](./143-group-by-one-group-per-value.md) making one row per customer and count(*) counting the rows in each:
 
 ```sql
 SELECT customer_id, count(*) AS orders FROM orders GROUP BY customer_id ORDER BY customer_id

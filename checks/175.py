@@ -27,3 +27,5 @@ assert q(d + " ORDER BY customer_id") == [(1, 2), (2, 2), (4, 1)]
 assert q("SELECT round(avg(orders), 2) FROM (" + d + ") AS per_customer") == [(1.67,)] and round(5 / 3, 2) == 1.67
 # source: https://www.postgresql.org/docs/current/queries-table-expressions.html
 # confirmed: "Subqueries specifying a derived table must be enclosed in parentheses. They may be assigned a table alias name" and a subquery in FROM with grouping or aggregation cannot be reduced to a plain join
+# source: https://www.postgresql.org/message-id/17981.1258936412%40sss.pgh.pa.us
+# confirmed: Tom Lane on the postgresql.org mailing list, about the error "aggregate function calls cannot be nested": "It means you can't write something like avg(sum(x))."
