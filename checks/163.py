@@ -31,3 +31,5 @@ assert q("SELECT count(*) FROM (SELECT order_id, product_id FROM order_items GRO
 oc = {r[0] for r in q("SELECT column_name FROM information_schema.columns WHERE table_name = 'orders'")}
 pc = {r[0] for r in q("SELECT column_name FROM information_schema.columns WHERE table_name = 'products'")}
 assert not (oc & pc)
+# source: https://en.wikipedia.org/wiki/Dhokla
+# confirmed on that page: dhokla is "a savoury sponge dish" made with a batter "steamed to a cake-like consistency", so a steamed savory cake

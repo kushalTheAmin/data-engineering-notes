@@ -1,5 +1,7 @@
 # corrections
 
+163, 2026-10-23: note text unchanged. the dhokla gloss (a steamed savory cake) had no source in the checks. it now cites the Wikipedia page. evidence: https://en.wikipedia.org/wiki/Dhokla ("a savoury sponge dish", batter "steamed to a cake-like consistency")
+
 166, 2026-10-22: note text unchanged. the claims that Postgres and DuckDB both have IS NOT DISTINCT FROM (DuckDB had no source), that a join keeps a pair only when its test is true, and that delivery_zones has 4 rows were not backed in the checks. the checks now cite the DuckDB and Postgres pages and assert the 4 rows. evidence: https://duckdb.org/docs/2.0/sql/expressions/comparison_operators.html ("IS NOT DISTINCT FROM", "equal, including NULL"); https://www.postgresql.org/docs/current/queries-table-expressions.html ("a row for each row in T2 that satisfies the join condition"); python, count(*) FROM delivery_zones is 4 (checks/166.py)
 
 163, 2026-10-22: said that after fixing the ON lines for the swapped order the inner join rows come out the same, but orders and products share no column, so the swapped order (orders, products, order_items) has no sensible ON to fix, and the check only tried products first, a different order. it now says orders and products share no column to match on, so keep order_items in the middle. the checks now assert the two tables share no column name. evidence: python, information_schema columns of orders and products have no name in common (checks/163.py)
