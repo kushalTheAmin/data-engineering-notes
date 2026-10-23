@@ -222,6 +222,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | stream | bytes handed over in order, like a program reading its stdin | [057](./notes/057-standard-input-and-output.md) |
 | structure | an agreement on where each fact sits, so code can find it | [061](./notes/061-structure-why-text-is-hard-to-ask.md) |
 | subquery | a SELECT in parentheses inside another query, run first | [174](./notes/174-subquery-in-where.md) |
+| subquery in FROM | an inner SELECT the outer query reads like a table | [175](./notes/175-subquery-in-from.md) |
 | substr | cuts a piece of text by start and count, counting from 1 | [125](./notes/125-concatenating-text-and-taking-pieces-of-it.md) |
 | subtotal | the total for one group, shown as an extra row | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | sum | adds up all the values in a column into one value | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |

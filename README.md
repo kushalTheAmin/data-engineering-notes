@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 174
+notes so far: 175
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -202,3 +202,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 ## section 8: bigger queries
 
 - [174 subquery in WHERE](./notes/174-subquery-in-where.md): the inner SELECT runs first and hands IN a list, delivered customer ids 1, 2, 1, 4, 2 keep Asha, Bhavin and Disha once each, where a join gives 5 rows
+- [175 subquery in FROM](./notes/175-subquery-in-from.md): avg(count(*)) errors, but grouping in an inner query first gives 4 rows and an average of 1.75, and Esha has no group so she is left out

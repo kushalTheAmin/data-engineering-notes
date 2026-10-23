@@ -81,4 +81,4 @@ Asha has pending order 106, so she counts. this is "has at least one undelivered
 </details>
 
 ---
-prev: [173 capstone, the shop revenue report from four tables](./173-capstone-the-shop-revenue-report-from-four-tables.md) | next: not written yet
+prev: [173 capstone, the shop revenue report from four tables](./173-capstone-the-shop-revenue-report-from-four-tables.md) | next: [175 subquery in FROM](./175-subquery-in-from.md)
