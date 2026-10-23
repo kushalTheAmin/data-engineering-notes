@@ -23,3 +23,5 @@ con.execute("INSERT INTO promo_periods VALUES ('overlap', DATE '2026-04-02', DAT
 assert q("SELECT count(*) FROM orders o JOIN promo_periods p ON CAST(o.ordered_at AS DATE) BETWEEN p.starts_on AND p.ends_on WHERE o.order_id = 103") == [(2,)]
 # source: https://www.postgresql.org/docs/current/queries-table-expressions.html
 # confirmed: the ON clause takes any boolean expression, the same kind as used in WHERE
+# source: https://www.postgresql.org/docs/current/functions-datetime.html
+# confirmed: "a date value is assumed to represent midnight in the TimeZone zone when comparing it to a timestamp"
