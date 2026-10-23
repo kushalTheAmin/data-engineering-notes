@@ -65,4 +65,4 @@ EXCEPT treats two NULLs as the same, like DISTINCT does, so the NULL city is rem
 </details>
 
 ---
-prev: [182 UNION and UNION ALL](./182-union-and-union-all.md) | next: not written yet
+prev: [182 UNION and UNION ALL](./182-union-and-union-all.md) | next: [184 window functions, a total next to every row](./184-window-functions-a-total-next-to-every-row.md)
