@@ -26,3 +26,7 @@ assert q("SELECT name FROM customers c WHERE EXISTS (SELECT 1 FROM orders o WHER
 # confirmed: EXISTS is true if the subquery returns at least one row, false if none; the subquery is generally run only long enough to find whether a row exists; the output list is normally unimportant
 # source: https://en.wikipedia.org/wiki/Semijoin
 # confirmed: "The result is the set of all tuples in R for which there is a tuple in S that is equal on their common attribute names. The difference from a natural join is that other columns of S do not appear."
+# the select list is only "normally unimportant", the docs name exceptions such as subqueries that use INTERSECT
+# confirmed: "the output list of the subquery is normally unimportant. A common coding convention is to write all EXISTS tests in the form EXISTS(SELECT 1 WHERE ...) . There are exceptions to this rule however, such as subqueries that use INTERSECT ."
+# check yourself 2: NOT EXISTS with the original test keeps Chirag and Esha, so the tempting Chirag only comes from ruling Asha out, not from that reading
+assert q("SELECT name FROM customers c WHERE NOT EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.customer_id AND o.status = 'delivered') ORDER BY name") == [("Chirag",), ("Esha",)]

@@ -49,7 +49,7 @@ Chirag
 Esha
 ```
 
-Chirag ordered, but it was cancelled, so he lands next to Esha. what the inner SELECT lists never matters: SELECT 1, SELECT * and SELECT NULL all behave the same. i kept hunting for what the inner query hands back, and the answer is nothing, only whether anything came.
+Chirag ordered, but it was cancelled, so he lands next to Esha. what the inner SELECT lists normally doesnt matter: SELECT 1, SELECT * and SELECT NULL behave the same. i kept hunting for what the inner query hands back, and the answer is nothing, only whether anything came.
 
 ### check yourself
 
@@ -82,7 +82,7 @@ name
 Asha
 Chirag
 ```
-yes, Asha stays. she has delivered orders too, but one match (her pending order 106) is enough. the tempting answer is Chirag only, from reading it as customers who have no delivered orders, which is NOT EXISTS with the original test.
+yes, Asha stays. she has delivered orders too, but one match (her pending order 106) is enough. the tempting answer is Chirag only, from ruling Asha out because she has delivered orders.
 
 </details>
 
