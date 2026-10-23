@@ -121,4 +121,4 @@ joined_rows | customers
 </details>
 
 ---
-prev: [171 joins plus GROUP BY, revenue per customer](./171-joins-plus-group-by-revenue-per-customer.md) | next: not written yet
+prev: [171 joins plus GROUP BY, revenue per customer](./171-joins-plus-group-by-revenue-per-customer.md) | next: [173 capstone, the shop revenue report from four tables](./173-capstone-the-shop-revenue-report-from-four-tables.md)
