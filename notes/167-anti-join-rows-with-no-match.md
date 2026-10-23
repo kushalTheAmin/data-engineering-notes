@@ -70,4 +70,4 @@ now the left table is orders, and every order has a customer, so nothing is unma
 </details>
 
 ---
-prev: [166 joining on columns that can be NULL](./166-joining-on-columns-that-can-be-null.md) | next: not written yet
+prev: [166 joining on columns that can be NULL](./166-joining-on-columns-that-can-be-null.md) | next: [168 self join, a table joined to itself](./168-self-join-a-table-joined-to-itself.md)
