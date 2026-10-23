@@ -47,7 +47,7 @@ dhokla | 6.00
 khandvi | 7.50
 kaju katli | 12.00
 ```
-4 rows, and fafda drops out, along with jalebi. >= is the opposite of <, so it keeps the ties, dhokla and masala chai, plus everything above the average. the tempting answer is 2 or 3, from thinking >= only adds ties to the old result.
+4 rows, and fafda drops out, along with jalebi. >= is the opposite of <, so it keeps the ties, dhokla and masala chai, plus everything above the average. the tempting answer is that fafda stays, from thinking >= only adds the ties to the old result.
 
 </details>
 
