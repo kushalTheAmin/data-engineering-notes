@@ -74,4 +74,4 @@ no rows and no error. the inner query returns nothing, so the value is NULL and 
 </details>
 
 ---
-prev: [175 subquery in FROM](./175-subquery-in-from.md) | next: not written yet
+prev: [175 subquery in FROM](./175-subquery-in-from.md) | next: [177 correlated subqueries, a query that depends on the outer row](./177-correlated-subqueries-a-query-that-depends-on-the-outer-row.md)

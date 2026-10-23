@@ -45,6 +45,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | connection | an open line from your program to a database | [102](./notes/102-a-database-in-one-file.md) |
 | continuation byte | a UTF-8 byte starting 10, continuing the previous characters bytes | [011](./notes/011-why-gujarati-takes-3-bytes.md) |
 | core | one full processor inside a chip, most chips hold several | [035](./notes/035-the-processor.md) |
+| correlated subquery | a scalar subquery that uses the outer row, asked again per row | [177](./notes/177-correlated-subqueries-a-query-that-depends-on-the-outer-row.md) |
 | count(*) | counts every row, nulls or not | [138](./notes/138-count-star-vs-count-of-a-column.md) |
 | count(column) | counts the rows where that column is not null | [138](./notes/138-count-star-vs-count-of-a-column.md) |
 | count(DISTINCT column) | counts how many different non-null values a column has | [139](./notes/139-count-distinct-counting-different-values.md) |
