@@ -50,7 +50,7 @@ zero rows. the inner list is order ids, 101 to 107, and no customer id (1 to 5) 
 
 </details>
 
-2. orders has 7 rows. predict the count here.
+2. orders has 7 rows. predict the count here (count(*) counts rows).
 ```sql
 SELECT count(*) FROM customers WHERE customer_id IN (SELECT customer_id FROM orders)
 ```
