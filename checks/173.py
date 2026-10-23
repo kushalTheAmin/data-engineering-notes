@@ -26,3 +26,6 @@ assert D("43.50") + D("28.00") + D("18.00") + D("37.00") == D("126.50")
 assert q("SELECT count(oi.product_id), count(*) - count(oi.product_id) " + i2) == [(11, 2)]
 # the items column adds up quantity: asha has 4 joined rows holding 6 units
 assert q("SELECT count(oi.product_id), sum(oi.quantity) " + i2 + " WHERE c.name = 'Asha'") == [(4, 6)]
+# a later join that tests the order columns drops Esha (and Chirag) unless it is a left join; one that tests a customer column would keep her
+assert sorted({r[0] for r in q("SELECT c.name " + base + " JOIN order_items oi ON o.order_id = oi.order_id")}) == ["Asha", "Bhavin", "Disha"]
+assert "Esha" in [r[0] for r in q("SELECT c.name " + base + " JOIN products p ON p.product_id = c.customer_id")]
