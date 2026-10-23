@@ -22,3 +22,5 @@ assert q("SELECT count(*) FROM customers WHERE customer_id IN (SELECT customer_i
 # check yourself 3: chirag cancelled 104, asha pending 106
 assert q("SELECT name FROM customers WHERE customer_id IN (SELECT customer_id FROM orders WHERE status <> 'delivered') ORDER BY name") == [("Asha",), ("Chirag",)]
 assert q("SELECT order_id FROM orders WHERE customer_id = 1 AND status = 'pending'") == [(106,)]
+# source: https://www.postgresql.org/docs/current/functions-subquery.html
+# confirmed: "The right-hand side is a parenthesized subquery, which must return exactly one column." and "The result of IN is "true" if any equal subquery row is found."
