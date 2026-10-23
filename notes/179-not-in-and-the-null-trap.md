@@ -88,4 +88,4 @@ all 5, Esha included. NULL = anything never matches, so no inner row is ever fou
 </details>
 
 ---
-prev: [178 EXISTS and NOT EXISTS, asking whether a matching row exists](./178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) | next: not written yet
+prev: [178 EXISTS and NOT EXISTS, asking whether a matching row exists](./178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) | next: [180 CTEs, naming each step with WITH](./180-ctes-naming-each-step-with-with.md)
