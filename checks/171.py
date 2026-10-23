@@ -31,3 +31,7 @@ assert q("SELECT c.name, o.order_id FROM customers c LEFT JOIN orders o ON c.cus
 # confirmed: JOIN is inner by default and LEFT OUTER JOIN keeps unmatched left rows, filled in with null
 assert q("SELECT sum(revenue) FROM (SELECT p.category, sum(oi.quantity * p.price) AS revenue FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON oi.product_id = p.product_id GROUP BY p.category)") == [(D("126.50"),)]
 assert q("SELECT count(*) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id") == [(13,)]
+# source: https://www.postgresql.org/docs/current/sql-select.html
+# confirmed: "WHERE filters individual rows before the application of GROUP BY"
+# a join after a left join only drops her when it hangs off the filled in columns
+assert q("SELECT c.name FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id JOIN products p ON p.product_id = c.customer_id WHERE c.customer_id = 5") == [("Esha",)]

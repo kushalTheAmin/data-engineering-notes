@@ -62,7 +62,7 @@ Bhavin | 28.00
 Chirag | 18.00
 Disha | 37.00
 ```
-4, no Esha. her filled in row has order_id NULL, and the next inner join tests it with =, which never matches a NULL ([166](./166-joining-on-columns-that-can-be-null.md)). the tempting answer is 5, since the left join already kept her. every join after a left join has to be a left join too.
+4, no Esha. her filled in row has order_id NULL, and the next inner join tests it with =, which never matches a NULL ([166](./166-joining-on-columns-that-can-be-null.md)). the tempting answer is 5, since the left join already kept her. to keep her, every join chained after a left join has to be a left join too.
 
 </details>
 
