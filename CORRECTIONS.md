@@ -1,5 +1,7 @@
 # corrections
 
+167, 2026-10-23: said to test the right tables primary key, like order_id, but the products example tests order_items.product_id, which is only half of that table's two column primary key, so the rule and the example did not match. it now says to test a right table column that is never NULL in a real row, like the primary key order_id, and says order_items.product_id is never NULL. the checks now assert that column has no NULLs and is declared NOT NULL. evidence: python, information_schema is_nullable for order_items.product_id is NO and count of NULL product_id is 0 (checks/167.py); data/shop.sql PRIMARY KEY (order_id, product_id)
+
 163, 2026-10-23: note text unchanged. the dhokla gloss (a steamed savory cake) had no source in the checks. it now cites the Wikipedia page. evidence: https://en.wikipedia.org/wiki/Dhokla ("a savoury sponge dish", batter "steamed to a cake-like consistency")
 
 166, 2026-10-22: note text unchanged. the claims that Postgres and DuckDB both have IS NOT DISTINCT FROM (DuckDB had no source), that a join keeps a pair only when its test is true, and that delivery_zones has 4 rows were not backed in the checks. the checks now cite the DuckDB and Postgres pages and assert the 4 rows. evidence: https://duckdb.org/docs/2.0/sql/expressions/comparison_operators.html ("IS NOT DISTINCT FROM", "equal, including NULL"); https://www.postgresql.org/docs/current/queries-table-expressions.html ("a row for each row in T2 that satisfies the join condition"); python, count(*) FROM delivery_zones is 4 (checks/166.py)

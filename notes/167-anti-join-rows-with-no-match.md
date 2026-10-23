@@ -17,7 +17,7 @@ Esha | NULL
 
 the join makes 8 rows and only Eshas order_id is NULL, so [IS NULL](./115-is-null-and-is-not-null.md) (true when a value is missing) keeps her. its the `if not found` from 159, printing only the unmatched ones.
 
-the column you test matters. use the right tables primary key (its unique id), like order_id, because in [160](./160-the-nulls-a-left-join-creates.md) that column is never NULL in a real row, so a NULL there can only mean no match. test a column that can be NULL in real rows and people who did order sneak in.
+use a right table column that is never NULL in a real row, like order_id, the primary key (its unique id), since as [160](./160-the-nulls-a-left-join-creates.md) showed, only the join can make it NULL there, which means no match. test a column that can be NULL in real rows and people who did order sneak in.
 
 same shape, other table: which products never appear in an order?
 
@@ -30,9 +30,7 @@ name
 fafda
 ```
 
-fafda, a crunchy fried snack, has never been ordered. i assumed finding what is missing needed its own kind of join, and its the same left join with one filter. [161](./161-a-where-that-quietly-turns-a-left-join-into-an-inner-join.md) warned that a right side test in WHERE kills the NULLs, and IS NULL is the one test that goes looking for them.
-
-its the query behind who never bought.
+fafda, a crunchy fried snack, has never been ordered (order_items.product_id is never NULL). i assumed finding what is missing needed its own kind of join, and its the same left join with one filter. [161](./161-a-where-that-quietly-turns-a-left-join-into-an-inner-join.md) warned that a right side test in WHERE kills the NULLs, and IS NULL is the one test that goes looking for them.
 
 ### check yourself
 

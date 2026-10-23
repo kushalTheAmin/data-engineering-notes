@@ -11,6 +11,9 @@ assert q("SELECT count(*) FROM customers c LEFT JOIN orders o ON c.customer_id =
 assert q("SELECT p.name FROM products p LEFT JOIN order_items i ON p.product_id = i.product_id WHERE i.product_id IS NULL") == [("fafda",)]
 # order_id is the primary key of orders, so it is never NULL in a real row
 assert q("SELECT count(*) FROM orders WHERE order_id IS NULL") == [(0,)]
+# order_items.product_id is declared NOT NULL (part of its composite primary key), so i.product_id IS NULL only after a missing match
+assert q("SELECT count(*) FROM order_items WHERE product_id IS NULL") == [(0,)]
+assert q("SELECT is_nullable FROM information_schema.columns WHERE table_name = 'order_items' AND column_name = 'product_id'") == [('NO',)]
 # check yourself 1: Chirag's only order is cancelled
 assert q("SELECT status FROM orders WHERE customer_id = 3") == [("cancelled",)]
 assert q("SELECT c.name FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id AND o.status = 'delivered' WHERE o.order_id IS NULL ORDER BY c.name") == [("Chirag",), ("Esha",)]
