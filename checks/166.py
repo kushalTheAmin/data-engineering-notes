@@ -26,3 +26,5 @@ assert q("SELECT count(*) FROM customers c JOIN delivery_zones z ON c.city IS NO
 # confirmed on that page: an inner join gives "a row for each row in T2 that satisfies the join condition", so a pair whose test is unknown (NULL = NULL) is not kept
 # source: https://duckdb.org/docs/2.0/sql/expressions/comparison_operators.html
 # confirmed on that page: "IS NOT DISTINCT FROM | equal, including NULL | NULL IS NOT DISTINCT FROM NULL | true", so DuckDB has it too
+# source: https://www.postgresql.org/docs/current/tutorial-arch.html
+# confirmed: "PostgreSQL uses a client/server model."

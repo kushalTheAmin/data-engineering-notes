@@ -4,7 +4,7 @@ section: combining tables with joins, part 12, ~2 min read
 
 a lookup table (one you look values up in) has a row for the missing city, and Esha has no city. so why does she still vanish from the join?
 
-NULL never matches NULL in a join. [ON](./157-on-how-a-join-decides-which-rows-match.md) keeps a pair only when its test is true, and by [three valued logic](./114-three-valued-logic-true-false-and-unknown.md) NULL = NULL is unknown, not true. the shop, the imaginary gujarati snack store these notes run on, now has delivery_zones: a zone per city, plus a catch-all row whose city is [NULL](./031-null.md) (a missing value). an [inner join](./156-inner-join-traced-by-hand.md) (keeps only matching pairs) on the city:
+NULL never matches NULL in a join that tests with =. [ON](./157-on-how-a-join-decides-which-rows-match.md) keeps a pair only when its test is true, and by [three valued logic](./114-three-valued-logic-true-false-and-unknown.md) NULL = NULL is unknown, not true. the shop, the imaginary gujarati snack store these notes run on, now has delivery_zones: a zone per city, plus a catch-all row whose city is [NULL](./031-null.md) (a missing value). an [inner join](./156-inner-join-traced-by-hand.md) (keeps only matching pairs) on the city:
 
 ```sql
 SELECT c.name, z.zone FROM customers c JOIN delivery_zones z ON c.city = z.city ORDER BY c.customer_id
@@ -35,7 +35,7 @@ Esha | unassigned
 
 now 5 rows. one caution: if the zones table had two NULL rows, Esha would match both and [fan out](./164-fan-out-when-a-join-multiplies-rows.md) (a row kept once per match) into two.
 
-you will hit this when a join key has gaps, like an optional customer_id on an event table. rows quietly drop out of a report and nobody sees an error. Postgres and DuckDB both have IS NOT DISTINCT FROM.
+you will hit this when a join key has gaps, like an optional customer_id on an event table. rows quietly drop out of a report and nobody sees an error. Postgres (a server database) and DuckDB (what these notes run in) both have IS NOT DISTINCT FROM.
 
 ### check yourself
 
