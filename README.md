@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 173
+notes so far: 174
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -198,3 +198,7 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [171 joins plus GROUP BY, revenue per customer](./notes/171-joins-plus-group-by-revenue-per-customer.md): the joins run first and GROUP BY sums quantity times price, Asha is 43.50, Esha drops out, and Chirag still shows 18.00 for a cancelled order until a WHERE removes it
 - [172 practice, five join questions on the shop, checking row counts](./notes/172-practice-five-join-questions-on-the-shop-checking-row-counts.md): five tasks on predicting the row count of a join before running it, from 14 rows for two left joins to 5 sweet items bought by only 2 customers
 - [173 capstone, the shop revenue report from four tables](./notes/173-capstone-the-shop-revenue-report-from-four-tables.md): four left joins and a GROUP BY put all 5 customers on one report with 93.50 delivered revenue, and the 33.00 gap to 126.50 is cancelled and pending orders
+
+## section 8: bigger queries
+
+- [174 subquery in WHERE](./notes/174-subquery-in-where.md): the inner SELECT runs first and hands IN a list, delivered customer ids 1, 2, 1, 4, 2 keep Asha, Bhavin and Disha once each, where a join gives 5 rows

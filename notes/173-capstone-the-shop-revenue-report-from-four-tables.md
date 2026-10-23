@@ -75,4 +75,4 @@ cancelled 18.00 plus pending 15.00 is 33.00, so no row went missing, the ON just
 </details>
 
 ---
-prev: [172 practice, five join questions on the shop, checking row counts](./172-practice-five-join-questions-on-the-shop-checking-row-counts.md) | next: not written yet
+prev: [172 practice, five join questions on the shop, checking row counts](./172-practice-five-join-questions-on-the-shop-checking-row-counts.md) | next: [174 subquery in WHERE](./174-subquery-in-where.md)
