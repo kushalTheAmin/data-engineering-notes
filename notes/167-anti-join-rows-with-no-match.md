@@ -30,7 +30,7 @@ name
 fafda
 ```
 
-fafda, a crunchy fried snack, has never been ordered (order_items.product_id is never NULL). i assumed finding what is missing needed its own kind of join, and its the same left join with one filter. [161](./161-a-where-that-quietly-turns-a-left-join-into-an-inner-join.md) warned that a right side test in WHERE kills the NULLs, and IS NULL is the one test that goes looking for them.
+fafda, a crunchy fried snack, has never been ordered (order_items.product_id is never NULL). i assumed finding what is missing needed its own kind of join, and its the same left join with one filter. [161](./161-a-where-that-quietly-turns-a-left-join-into-an-inner-join.md) warned that a right side comparison in WHERE kills the NULLs, and IS NULL is the one test that goes looking for them.
 
 ### check yourself
 
