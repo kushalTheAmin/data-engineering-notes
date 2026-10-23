@@ -32,7 +32,7 @@ kaju katli | 12.00
 
 the inner query runs once and becomes 6.333..., then [WHERE](./106-where-keeping-only-the-rows-that-match.md) tests every product against it. i expected the average to need saving somewhere first, but it just sits in the parentheses like a number i typed.
 
-the catch is the word "exactly". two sweets exist, jalebi at 5.00 and kaju katli at 12.00, so this has two values to compare against:
+the catch is that it must be exactly one value. two sweets exist, jalebi at 5.00 and kaju katli at 12.00, so this has two values to compare against:
 
 ```sql
 -- fails on purpose
