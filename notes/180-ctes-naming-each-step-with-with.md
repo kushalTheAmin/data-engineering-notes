@@ -62,4 +62,4 @@ the main query reads orders, the real table, so all 7 rows count. a name only fi
 </details>
 
 ---
-prev: [179 NOT IN and the NULL trap](./179-not-in-and-the-null-trap.md) | next: not written yet
+prev: [179 NOT IN and the NULL trap](./179-not-in-and-the-null-trap.md) | next: [181 views, a saved query with a name](./181-views-a-saved-query-with-a-name.md)
