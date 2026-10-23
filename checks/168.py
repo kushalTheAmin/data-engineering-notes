@@ -21,3 +21,5 @@ assert q("SELECT customer_id FROM customers WHERE name IN ('Asha','Chirag') ORDE
 # confirmed: aliases are necessary when joining a table to itself, with the example people AS mother JOIN people AS child ON mother.id = child.mother_id
 # source: https://www.postgresql.org/docs/current/tutorial-join.html
 # confirmed: the tutorial calls joining a table against itself a self join
+# source: https://www.postgresql.org/docs/current/queries-table-expressions.html
+# confirmed: "The ON clause is the most general kind of join condition: it takes a Boolean value expression of the same kind as is used in a WHERE clause."

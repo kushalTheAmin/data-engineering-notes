@@ -1,5 +1,7 @@
 # corrections
 
+168, 2026-10-23: said a customer is paired with herself and that nobody has a smaller id than herself, but the customers are not all she, and 154 was already fixed to use they for a customer. it now says a customer paired with their own row and no row has a smaller id than itself. the ON line taking any test had no source, so the checks now cite the Postgres page. evidence: https://www.postgresql.org/docs/current/queries-table-expressions.html ("The ON clause is the most general kind of join condition: it takes a Boolean value expression of the same kind as is used in a WHERE clause."); correction 154
+
 167, 2026-10-23: said to test the right tables primary key, like order_id, but the products example tests order_items.product_id, which is only half of that table's two column primary key, so the rule and the example did not match. it now says to test a right table column that is never NULL in a real row, like the primary key order_id, and says order_items.product_id is never NULL. the checks now assert that column has no NULLs and is declared NOT NULL. evidence: python, information_schema is_nullable for order_items.product_id is NO and count of NULL product_id is 0 (checks/167.py); data/shop.sql PRIMARY KEY (order_id, product_id)
 
 163, 2026-10-23: note text unchanged. the dhokla gloss (a steamed savory cake) had no source in the checks. it now cites the Wikipedia page. evidence: https://en.wikipedia.org/wiki/Dhokla ("a savoury sponge dish", batter "steamed to a cake-like consistency")

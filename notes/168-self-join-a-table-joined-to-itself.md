@@ -29,7 +29,7 @@ Chirag Chirag
 Disha Disha
 ```
 
-6 lines, and only one idea in there is what i wanted. 4 are a customer paired with herself, and Asha Chirag comes back mirrored as Chirag Asha. Esha is missing because her city is [NULL](./031-null.md) (a missing value) and [166](./166-joining-on-columns-that-can-be-null.md) showed a NULL never matches. the fix is a second test in [ON](./157-on-how-a-join-decides-which-rows-match.md), which takes any test, not only equals:
+6 lines, and only one idea is what i wanted. 4 are a customer paired with their own row, and Asha Chirag comes back mirrored as Chirag Asha. Esha is missing because her city is [NULL](./031-null.md) (a missing value) and [166](./166-joining-on-columns-that-can-be-null.md) showed a NULL never matches. the fix is a second test in [ON](./157-on-how-a-join-decides-which-rows-match.md), which takes any test, not only equals:
 
 ```sql
 SELECT a.name, b.name AS lives_near FROM customers a JOIN customers b ON a.city = b.city AND a.customer_id < b.customer_id
@@ -40,9 +40,9 @@ name | lives_near
 Asha | Chirag
 ```
 
-customer_id is each customers unique number, Asha is 1 and Chirag is 3. nobody has a smaller id than herself, so the 4 self pairs are dropped, and of Asha Chirag and Chirag Asha only the first has the smaller id on the left, so the mirror is dropped too. i assumed the database needed a real second copy of the table, and its one table with two nicknames.
+customer_id is each customers unique number, Asha is 1 and Chirag is 3. no row has a smaller id than itself, so the 4 self pairs are dropped, and of Asha Chirag and Chirag Asha only the first has the smaller id on the left, so the mirror is dropped too. i assumed the database needed a real second copy of the table, and its one table with two nicknames.
 
-another classic use is a people table where each row holds its mothers id, so child and mother are the same table joined to itself.
+another use is a people table where each row holds its mothers id, so child and mother are the same table joined to itself.
 
 ---
 prev: [167 anti join, rows with no match](./167-anti-join-rows-with-no-match.md) | next: not written yet
