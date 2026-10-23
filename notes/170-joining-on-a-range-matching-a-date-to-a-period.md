@@ -4,7 +4,7 @@ section: combining tables with joins, part 16, ~2 min read
 
 order 103 was placed on the last day of the launch week promo, and my join said it was in no promo at all. can you spot why?
 
-a range join is a join whose [ON](./157-on-how-a-join-decides-which-rows-match.md) (the test that decides which pairs stay) is a [BETWEEN](./112-between-ranges-that-include-both-ends.md) instead of an equals. [157](./157-on-how-a-join-decides-which-rows-match.md) said ON takes any test, and this is that. the shop (the imaginary gujarati snack store these notes run on) now has promo_periods, a small table with a first and last day for each promo. the slice below is all of it:
+a range join is a join whose [ON](./157-on-how-a-join-decides-which-rows-match.md) (the test that decides which pairs stay) is a [BETWEEN](./112-between-ranges-that-include-both-ends.md) instead of an equals. [157](./157-on-how-a-join-decides-which-rows-match.md) said ON takes any test, and this is that. the shop (the imaginary gujarati snack store these notes run on) now has promo_periods, a small table with a first and last day for each promo: launch week runs 2026-04-01 to 2026-04-03 and festival sale runs 2026-04-05 to 2026-04-07, and thats all of it. the join:
 
 ```sql
 SELECT o.order_id, p.promo FROM orders o JOIN promo_periods p ON o.ordered_at BETWEEN p.starts_on AND p.ends_on ORDER BY o.order_id
@@ -34,7 +34,7 @@ order_id | promo
 107 | NULL
 ```
 
-7 orders in, 7 rows out. 104 fell on april 4, between the two promos. one more thing to watch: if two periods overlap, an order inside both matches twice, and thats the [fan out](./164-fan-out-when-a-join-multiplies-rows.md) again. i kept picturing a join as matching ids, and a range join is really the cross join loop from [169](./169-cross-join-every-row-with-every-row.md) with a range check as the if.
+7 orders in, 7 rows out. 104 fell on april 4, between the two promos, and 106 and 107 came after both. one more thing to watch: if two periods overlap, an order inside both matches twice, and thats the [fan out](./164-fan-out-when-a-join-multiplies-rows.md) again. i kept picturing a join as matching ids, and a range join is really the cross join loop from [169](./169-cross-join-every-row-with-every-row.md) with a range check as the if.
 
 ---
 prev: [169 cross join, every row with every row](./169-cross-join-every-row-with-every-row.md) | next: not written yet

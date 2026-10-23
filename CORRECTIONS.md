@@ -1,5 +1,7 @@
 # corrections
 
+170, 2026-10-23: said the promo_periods slice below was all of it, but the note never showed the table, so the festival sale dates were missing and a reader could not see why 105 matches while 106 and 107 come back NULL, with only 104 explained. it now states both periods (launch week 2026-04-01 to 2026-04-03, festival sale 2026-04-05 to 2026-04-07) and says 106 and 107 came after both. the checks now assert the dates, 106 and 107 on april 8 and 9, and that an overlapping period matches order 103 twice. evidence: python, SELECT * FROM promo_periods and the orders dates (checks/170.py); data/shop.sql
+
 168, 2026-10-23: said a NULL never matches, the same unqualified claim 166 fixed, but 166 shows IS NOT DISTINCT FROM matching two NULLs. it now says a NULL never matches with =. evidence: notes/166-joining-on-columns-that-can-be-null.md (IS NOT DISTINCT FROM gives Esha the unassigned zone)
 
 169, 2026-10-23: said a join with no condition just runs, which reads as true of any join. a plain JOIN with no ON is a syntax error in DuckDB, and only the cross join written by name (or the comma form) runs. it now says so. the checks now assert the error. evidence: python, duckdb SELECT count(*) FROM customers JOIN products raises a parser error (checks/169.py); https://www.postgresql.org/docs/current/queries-table-expressions.html ("The join condition is specified in the ON or USING clause, or implicitly by the word NATURAL.")

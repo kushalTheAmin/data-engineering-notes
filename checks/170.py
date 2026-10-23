@@ -15,5 +15,11 @@ assert len(good) == 7 == q("SELECT count(*) FROM orders")[0][0]
 assert [r[0] for r in good if r[1] is None] == [104, 106, 107]
 # order 104 is on april 4, between the two promos
 assert q("SELECT CAST(ordered_at AS DATE) FROM orders WHERE order_id = 104")[0][0].isoformat() == "2026-04-04"
+# the two periods the note states, and 106 and 107 (april 8 and 9) come after both
+assert q("SELECT promo, strftime(starts_on, '%Y-%m-%d'), strftime(ends_on, '%Y-%m-%d') FROM promo_periods ORDER BY starts_on") == [("launch week", "2026-04-01", "2026-04-03"), ("festival sale", "2026-04-05", "2026-04-07")]
+assert [r[0].isoformat() for r in q("SELECT CAST(ordered_at AS DATE) FROM orders WHERE order_id IN (106, 107) ORDER BY order_id")] == ["2026-04-08", "2026-04-09"]
+# an overlapping period makes order 103 match twice
+con.execute("INSERT INTO promo_periods VALUES ('overlap', DATE '2026-04-02', DATE '2026-04-04')")
+assert q("SELECT count(*) FROM orders o JOIN promo_periods p ON CAST(o.ordered_at AS DATE) BETWEEN p.starts_on AND p.ends_on WHERE o.order_id = 103") == [(2,)]
 # source: https://www.postgresql.org/docs/current/queries-table-expressions.html
 # confirmed: the ON clause takes any boolean expression, the same kind as used in WHERE
