@@ -9,9 +9,9 @@ what is the average number of orders per customer? i tried avg(count(*)) and the
 SELECT avg(count(*)) FROM orders GROUP BY customer_id
 ```
 
-an aggregate cant sit inside another aggregate in DuckDB or Postgres. a subquery in FROM fixes that: the inner SELECT sits in parentheses where a table name would go, and the outer query reads its result like a table. [174](./174-subquery-in-where.md) put the inner query in WHERE (it handed over a list), this one hands over a whole table. the shop is the imaginary gujarati snack store these notes run on, (orders table: 7 rows).
+an aggregate cant sit inside another aggregate in DuckDB or Postgres. a subquery in FROM fixes that: the inner SELECT sits in parentheses where a table name would go, and the outer query reads its result like a table. [174](./174-subquery-in-where.md) put the inner query in WHERE (it handed over a list), this one hands over a whole table. the shop is the imaginary gujarati snack store these notes run on (orders table: 7 rows).
 
-step one, the inner query alone, [GROUP BY](./143-group-by-one-group-per-value.md) making one row per customer and count(*) counting the rows in each:
+step one, the inner query alone, [GROUP BY](./143-group-by-one-group-per-value.md) making one row per customer, count(*) counting its rows:
 
 ```sql
 SELECT customer_id, count(*) AS orders FROM orders GROUP BY customer_id ORDER BY customer_id
@@ -40,7 +40,7 @@ the outer query never sees the orders table, only those 4 rows. [avg](./140-sum-
 
 the gotcha is Esha. she has no orders, so she has no group, so the 4 rows never include her. 1.75 is the average among customers who ordered; counting her would make it 7 over 5, which is 1.4. i expected the database to know about all 5 customers, but the inner query only knows what its FROM gave it.
 
-any average of per-day or per-user totals works this way: group first, then average the groups.
+any average of per-day or per-user totals works this way.
 
 ### check yourself
 
