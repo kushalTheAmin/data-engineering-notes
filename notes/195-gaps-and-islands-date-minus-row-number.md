@@ -42,13 +42,13 @@ day | label
 2026-04-09 | 2026-04-03
 ```
 
-[WHERE](./106-where-keeping-only-the-rows-that-match.md) (keeps matching rows) runs before the numbering, so only days with orders get counted. DuckDB wants an INTEGER here, hence the [CAST](./132-cast-changing-a-values-type.md) (converts a type).
+[WHERE](./106-where-keeping-only-the-rows-that-match.md) (keeps matching rows) runs before the numbering, so only days with orders get counted. OVER (ORDER BY day) numbers in date order. DuckDB wants an INTEGER here, hence the [CAST](./132-cast-changing-a-values-type.md) (converts a type).
 
 the catch is one row per day, because a day listed twice bumps the counter without moving the date.
 
 ### check yourself
 
-1. number all 9 days with no WHERE. how many different labels come back?
+1. number all 9 days with no WHERE. DISTINCT keeps one copy of identical rows. how many different labels come back?
 ```sql
 SELECT DISTINCT day - CAST(row_number() OVER (ORDER BY day) AS INTEGER) AS label FROM daily_orders
 ```
@@ -62,7 +62,7 @@ label
 
 </details>
 
-2. a feed lists april 4 twice by mistake. what label does april 6 get, and which island does it wrongly join?
+2. a feed lists april 4 twice by mistake, and UNION ALL stacks two results. what label does april 6 get, and which island does it wrongly join?
 ```sql
 SELECT day, day - CAST(row_number() OVER (ORDER BY day) AS INTEGER) AS label FROM (SELECT day FROM daily_orders WHERE placed > 0 UNION ALL SELECT DATE '2026-04-04') AS t ORDER BY day, label
 ```
