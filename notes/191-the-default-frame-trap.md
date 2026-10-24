@@ -62,4 +62,4 @@ the frame ends at the current row, so last_value is the row itself. the tempting
 </details>
 
 ---
-prev: [190 window frames, ROWS BETWEEN](./190-window-frames-rows-between.md) | next: not written yet
+prev: [190 window frames, ROWS BETWEEN](./190-window-frames-rows-between.md) | next: [192 LAG and LEAD, looking at the row before](./192-lag-and-lead-looking-at-the-row-before.md)
