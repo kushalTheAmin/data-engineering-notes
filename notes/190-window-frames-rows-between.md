@@ -2,7 +2,7 @@
 builds on: [130 NULLIF and dividing by zero](./130-nullif-and-dividing-by-zero.md), [140 sum and avg, adding up and averaging](./140-sum-and-avg-adding-up-and-averaging.md), [175 subquery in FROM](./175-subquery-in-from.md), [185 OVER, the window a function looks through](./185-over-the-window-a-function-looks-through.md), [189 running totals](./189-running-totals.md)
 section: bigger queries, part 17, ~2 min read
 
-one day of orders is jumpy, april 2 has 0 and april 1 has 2. i wanted the last 3 days added up on every row, and a running total cant do that.
+one day of orders is jumpy, april 2 has 0 and april 1 has 2. i wanted the last 3 days added up on every row, and a running total (a sum that keeps growing down the rows) cant do that.
 
 a window frame is the slice of the [window](./185-over-the-window-a-function-looks-through.md) (the rows a function sees) that it actually adds up for the current row. ROWS BETWEEN 2 PRECEDING AND CURRENT ROW means this row plus the 2 rows before it, in the order of the ORDER BY (sorts rows). the shop, the imaginary snack store these notes run on, has daily_orders from [130](./130-nullif-and-dividing-by-zero.md), one row per day:
 

@@ -32,3 +32,5 @@ assert q("SELECT count(*) FROM daily_orders") == [(9,)]
 # confirmed: "In ROWS mode ... the option means that the frame starts or ends the specified number of rows before or after the current row"; "In ROWS mode, CURRENT ROW simply means the current row"; ROWS BETWEEN is in the frame syntax
 # source: https://www.postgresql.org/docs/current/tutorial-window.html
 # confirmed: by default, if ORDER BY is supplied then the frame consists of all rows from the start of the partition up through the current row, so the running column is a frame that starts at the first row
+# the running total gloss: a sum that keeps growing down the rows
+assert [g[3] for g in got] == [sum(placed[:i+1]) for i in range(9)]
