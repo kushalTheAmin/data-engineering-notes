@@ -83,4 +83,4 @@ april 6 gets 2026-04-01, the label of april 3 and one april 4, so it looks like 
 </details>
 
 ---
-prev: [194 removing duplicates with ROW_NUMBER](./194-removing-duplicates-with-row-number.md) | next: not written yet
+prev: [194 removing duplicates with ROW_NUMBER](./194-removing-duplicates-with-row-number.md) | next: [196 gaps and islands, one row per streak](./196-gaps-and-islands-one-row-per-streak.md)
