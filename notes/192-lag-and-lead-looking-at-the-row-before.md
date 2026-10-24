@@ -62,4 +62,4 @@ with a distance of 2, the first two rows have nobody that far back, so both edge
 </details>
 
 ---
-prev: [191 the default frame trap, why ORDER BY turns MAX into a running max](./191-the-default-frame-trap.md) | next: not written yet
+prev: [191 the default frame trap, why ORDER BY turns MAX into a running max](./191-the-default-frame-trap.md) | next: [193 top N per group](./193-top-n-per-group.md)

@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 192
+notes so far: 193
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -220,3 +220,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [190 window frames, ROWS BETWEEN](./notes/190-window-frames-rows-between.md): one day of orders is jumpy, so add up just the last 3 rows on every row
 - [191 the default frame trap](./notes/191-the-default-frame-trap.md): add an ORDER BY inside OVER and max quietly becomes a running max
 - [192 LAG and LEAD, looking at the row before](./notes/192-lag-and-lead-looking-at-the-row-before.md): the day before's orders pushed down one row, with NULL on the first day
+- [193 top N per group](./notes/193-top-n-per-group.md): the 2 priciest products per category, 5 rows, with masala chai alone in drinks
