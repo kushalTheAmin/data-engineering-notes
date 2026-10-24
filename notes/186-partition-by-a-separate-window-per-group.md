@@ -41,7 +41,7 @@ the [correlated subquery](./177-correlated-subqueries-a-query-that-depends-on-th
 
 ### check yourself
 
-1. predict the total column. the window runs after WHERE, same as in [184](./184-window-functions-a-total-next-to-every-row.md).
+1. predict the total column. the window runs after WHERE (keeps matching rows), same as in [184](./184-window-functions-a-total-next-to-every-row.md).
 ```sql
 SELECT name, sum(price) OVER (PARTITION BY category) AS t FROM products WHERE price > 5 ORDER BY product_id
 ```
