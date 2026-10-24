@@ -79,4 +79,4 @@ empty_days
 </details>
 
 ---
-prev: [196 gaps and islands, one row per streak](./196-gaps-and-islands-one-row-per-streak.md) | next: not written yet
+prev: [196 gaps and islands, one row per streak](./196-gaps-and-islands-one-row-per-streak.md) | next: [198 date spines, a left join that keeps the empty days](./198-date-spines-a-left-join-that-keeps-the-empty-days.md)
