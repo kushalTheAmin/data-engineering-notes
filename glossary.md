@@ -64,6 +64,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | daylight saving | clocks shifting an hour twice a year in many places | [024](./notes/024-utc.md) |
 | decompress | rebuild the original bytes from compressed ones, costing processor work | [048](./notes/048-compression-trades-processor-for-space.md) |
 | delete anomaly | removing one fact also removes another that lived only in that row | [090](./notes/090-insert-and-delete-anomalies.md) |
+| DENSE_RANK | like RANK, but the row after a tie gets the next number | [188](./notes/188-rank-vs-dense-rank-what-ties-do.md) |
 | DESC | sort direction: biggest first, instead of the default smallest first | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
 | dialect | one databases own version of SQL, with its own spellings and rules | [135](./notes/135-one-language-many-dialects.md) |
 | disk | storage like an SSD or hard drive, keeping bytes without power | [036](./notes/036-memory-vs-disk.md) |
@@ -196,6 +197,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | query | one request sent to a database, naming the result you want | [101](./notes/101-sql-you-describe-the-result.md) |
 | quoting (csv) | double quotes around a value so commas inside it stay text | [063](./notes/063-quoting-commas-inside-values.md) |
 | range join | a join whose ON is a BETWEEN, matching values to periods | [170](./notes/170-joining-on-a-range-matching-a-date-to-a-period.md) |
+| RANK | window function giving tied rows one number, then skipping past the tie | [188](./notes/188-rank-vs-dense-rank-what-ties-do.md) |
 | reading start to end | taking a files bytes in order from position 0 | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
 | record | one row of a table, one thing the data is about | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | redirect | > sends a programs stdout into a file, emptying it first | [059](./notes/059-redirecting-output-into-a-file.md) |

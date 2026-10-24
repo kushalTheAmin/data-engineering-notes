@@ -60,4 +60,4 @@ no. one row has quantity 3 and takes number 1, then 5 rows tie for numbers 2 to 
 </details>
 
 ---
-prev: [186 PARTITION BY, a separate window per group](./186-partition-by-a-separate-window-per-group.md) | next: not written yet
+prev: [186 PARTITION BY, a separate window per group](./186-partition-by-a-separate-window-per-group.md) | next: [188 RANK vs DENSE_RANK, what ties do](./188-rank-vs-dense-rank-what-ties-do.md)
