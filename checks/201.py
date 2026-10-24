@@ -28,6 +28,9 @@ for c in range(1, 6):
         per_month[m] = per_month.get(m, 0) + 1
 assert per_month == {1: 2, 2: 3, 3: 2}
 assert sum(per_month.values()) == 7
+# counting login rows per month instead of customers gives 2, 4, 2, so the note says count the customers
+assert q("SELECT count(*) FROM logins GROUP BY date_trunc('month', login_on) ORDER BY date_trunc('month', login_on)") == [(2,), (4,), (2,)]
+assert q("SELECT count(DISTINCT customer_id) FROM logins GROUP BY date_trunc('month', login_on) ORDER BY date_trunc('month', login_on)") == [(2,), (3,), (2,)]
 # answer 2: max puts each customer in their last month
 last = {}
 for c, d in rows:

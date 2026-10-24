@@ -27,7 +27,7 @@ cohort | customers
 2026-03-01 | 1
 ```
 
-the trap is doing the month first. truncate every login and group by month, and Asha lands in all three cohorts, so the cohorts read 2, 3 and 2, and 5 people add up to 7. the min has to come first, one row per customer, then count.
+the trap is doing the month first. truncate every login and count the customers in each month, and Asha lands in all three cohorts, so the cohorts read 2, 3 and 2, and 5 people add up to 7. the min has to come first, one row per customer, then count.
 
 i assumed a cohort would be a column somebody fills in, but nothing stores it. a customer has none until a query makes one, so a login that arrives late with an older date moves them to an earlier cohort.
 
