@@ -27,7 +27,7 @@ read the before column and it is just the placed column pushed down one row. aft
 
 the catch, same as in [190](./190-window-frames-rows-between.md): before means the row before in the ORDER BY, not the day before. if a day is missing, LAG just reaches over the gap.
 
-this is how day over day change gets computed in SQL, one line instead of a self join.
+this is one way to get day over day change in SQL, one line instead of a self join.
 
 ### check yourself
 
