@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 199
+notes so far: 200
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -227,3 +227,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [197 generate_series, a column of consecutive days](./notes/197-generate-series-a-column-of-consecutive-days.md): orders has no row for april 2, 5 or 7, so make the 9 days from nothing
 - [198 date spines, a left join that keeps the empty days](./notes/198-date-spines-a-left-join-that-keeps-the-empty-days.md): grouping orders by day gives 6 rows, so left join them onto 9 generated days and the empty ones read 0
 - [199 session starts, flagging the click after a long gap](./notes/199-session-starts-flag-the-click-after-a-long-gap.md): a click list has no sessions in it, so flag the click that comes after a 30 minute silence
+- [200 session ids, a running sum of the flags](./notes/200-session-ids-a-running-sum-of-the-flags.md): add the 0 and 1 start flags as you go and every click gets its session number

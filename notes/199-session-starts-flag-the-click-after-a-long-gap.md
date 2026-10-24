@@ -54,4 +54,4 @@ his first click now looks 2 minutes after ashas 09:00 click, so it opens no sess
 </details>
 
 ---
-prev: [198 date spines, a left join that keeps the empty days](./198-date-spines-a-left-join-that-keeps-the-empty-days.md) | next: not written yet
+prev: [198 date spines, a left join that keeps the empty days](./198-date-spines-a-left-join-that-keeps-the-empty-days.md) | next: [200 session ids, a running sum of the flags](./200-session-ids-a-running-sum-of-the-flags.md)
