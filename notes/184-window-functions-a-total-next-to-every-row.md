@@ -4,7 +4,7 @@ section: bigger queries, part 11, ~2 min read
 
 how do you show every product next to the total of all prices? [GROUP BY](./143-group-by-one-group-per-value.md) (one row per different value) gave me the total and threw the product rows away, and i needed both on one line.
 
-a window function is an aggregate that doesnt collapse anything. every row keeps itself and also gets the aggregate answer beside it. you write it by putting OVER () after the aggregate. the empty parentheses mean the window is every row, a later note opens them up. this is the shop, the imaginary gujarati snack store these notes run on, and its 6 products (dhokla, a steamed savory cake, khandvi, a rolled gram flour snack, jalebi and kaju katli, sweets, masala chai, spiced tea, fafda, a crisp gram flour strip). in python it is two steps, total first, then a loop that hands the total to every row:
+a window function does an aggregates job without collapsing anything. every row keeps itself and also gets the answer beside it. you write one by putting OVER () after an aggregate like sum. the empty parentheses mean the window is every row, a later note opens them up. this is the shop, the imaginary gujarati snack store these notes run on, and its 6 products (dhokla, a steamed savory cake, khandvi, a rolled gram flour snack, jalebi and kaju katli, sweets, masala chai, spiced tea, fafda, a crisp gram flour strip). in python it is two steps, total first, then a loop that hands the total to every row:
 
 ```python
 prices = {"dhokla": 6.0, "khandvi": 7.5, "jalebi": 5.0, "kaju katli": 12.0, "masala chai": 3.0, "fafda": 4.5}

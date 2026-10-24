@@ -1,5 +1,7 @@
 # corrections
 
+184, 2026-10-24: called a window function an aggregate, but the Postgres docs list other window functions such as row_number and say an ordinary aggregate can be used as one. it now says a window function does an aggregates job without collapsing rows, written by putting OVER () after an aggregate like sum. glossary.md carried the same wording and is fixed too. this redoes the fix lost in the 000 push conflict of 2026-10-23. evidence: https://www.postgresql.org/docs/current/functions-window.html ("any built-in or user-defined ordinary aggregate ... can be used as a window function")
+
 000, 2026-10-23: push conflict, the audit fix for note 184 (window function called an aggregate without saying it can be one, plus glossary.md) was not pushed because the note routine pushed note 185 meanwhile. the next audit will find it again.
 
 183, 2026-10-23: said INTERSECT and EXCEPT both drop repeated rows as if always, but INTERSECT ALL and EXCEPT ALL keep them. it now says plain INTERSECT and EXCEPT. the claim that EXCEPT treats two NULLs as the same had no source in the checks, it now cites the Wikipedia set operations page, and the checks assert the ALL forms and the NULL case. evidence: https://www.postgresql.org/docs/current/queries-union.html ("Duplicate rows are eliminated unless INTERSECT ALL is used"); https://en.wikipedia.org/wiki/Set_operations_(SQL) ("the EXCEPT operator does not distinguish between NULLs"); python, EXCEPT ALL gives 1, 2, 2, 4 (checks/183.py)
