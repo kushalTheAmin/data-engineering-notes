@@ -34,3 +34,9 @@ assert q("SELECT count(*) FROM orders WHERE CAST(ordered_at AS DATE) = DATE '202
 # confirmed: "When step is positive, zero rows are returned if start is greater than stop." and Postgres has generate_series
 # source: https://duckdb.org/docs/2.0/sql/functions/list.html
 # confirmed: "the stop parameter is exclusive" for range and "the stop parameter is inclusive" for generate_series
+# source: https://duckdb.org/docs/2.0/sql/functions/utility.html
+# confirmed: table functions, "generate_series(start, stop, step) Returns a table of values between start and stop (inclusive)" and "range(start, stop, step) ... (exclusive)"
+# source: https://duckdb.org/docs/2.0/sql/functions/timestamp.html
+# confirmed: "generate_series(timestamp, timestamp, interval) Generate a table of timestamps in the closed range, stepping by the interval."
+# source: https://www.postgresql.org/docs/current/functions-srf.html
+# confirmed: Postgres examples write the step as a quoted string, '1 day'::interval, not DuckDB's INTERVAL 1 DAY
