@@ -63,4 +63,4 @@ day | orders
 </details>
 
 ---
-prev: [197 generate_series, a column of consecutive days](./197-generate-series-a-column-of-consecutive-days.md) | next: not written yet
+prev: [197 generate_series, a column of consecutive days](./197-generate-series-a-column-of-consecutive-days.md) | next: [199 session starts, flagging the click after a long gap](./199-session-starts-flag-the-click-after-a-long-gap.md)

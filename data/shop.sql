@@ -196,3 +196,19 @@ INSERT INTO city_feed VALUES
     (1, 'Hoboken',     TIMESTAMP '2026-04-12 18:30:00'),
     (4, 'Hoboken',     TIMESTAMP '2026-04-11 07:45:00'),
     (2, 'Edison',      TIMESTAMP '2026-04-10 09:05:00');
+
+-- added by note 199: page clicks on the shop site. Asha browses in two bursts on april 1, Bhavin clicks twice with a long break between
+CREATE TABLE clicks (
+    customer_id INTEGER NOT NULL REFERENCES customers (customer_id),
+    clicked_at  TIMESTAMP NOT NULL,
+    page        VARCHAR NOT NULL
+);
+
+INSERT INTO clicks VALUES
+    (1, TIMESTAMP '2026-04-01 09:00:00', 'home'),
+    (1, TIMESTAMP '2026-04-01 09:05:00', 'dhokla'),
+    (1, TIMESTAMP '2026-04-01 09:10:00', 'cart'),
+    (1, TIMESTAMP '2026-04-01 11:00:00', 'home'),
+    (1, TIMESTAMP '2026-04-01 11:12:00', 'jalebi'),
+    (2, TIMESTAMP '2026-04-01 09:02:00', 'home'),
+    (2, TIMESTAMP '2026-04-01 09:50:00', 'fafda');
