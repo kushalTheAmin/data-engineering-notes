@@ -21,9 +21,9 @@ customer_id | clicked_at | gap | new_session
 2 | 2026-04-01 09:50:00 | 48 | 1
 ```
 
-[LAG](./192-lag-and-lead-looking-at-the-row-before.md) (the value from the row before) hands each click the previous click time, [PARTITION BY](./186-partition-by-a-separate-window-per-group.md) customer_id (a separate window per group) keeps Asha and Bhavin apart, and [date_diff](./129-the-difference-between-two-dates.md) counts the minute marks crossed, exact here, every click sits on a whole minute. the gap has to be built in an inner query ([subquery in FROM](./175-subquery-in-from.md)) so the outer [CASE WHEN](./123-case-when-if-and-else-inside-a-query.md) can read it by name.
+[LAG](./192-lag-and-lead-looking-at-the-row-before.md) (the value from the row before) hands each click the previous click time, [PARTITION BY](./186-partition-by-a-separate-window-per-group.md) customer_id (a separate window per group) keeps Asha and Bhavin apart, and [date_diff](./129-the-difference-between-two-dates.md) counts the minute marks crossed, exact here, every click sits on a whole minute. the gap is built in a [subquery in FROM](./175-subquery-in-from.md) (a query as a table) so the outer [CASE WHEN](./123-case-when-if-and-else-inside-a-query.md) (if/else inside a query) can read it by name.
 
-the gotcha: a first click has a [NULL](./031-null.md) gap, and NULL > 30 is unknown, not true, so without the IS NULL test the CASE would say 0 and the first session would never open. i kept reading the flags as "big gap", but a first click is a start too.
+the gotcha: a first click has a [NULL](./031-null.md) (missing value) gap, and NULL > 30 is unknown, not true, so without the IS NULL test the CASE says 0 and the first session never opens. i kept reading the flags as "big gap", but a first click is a start too.
 
 Asha has 2 sessions, Bhavin 2, since 48 is over 30. exactly 30 stays in.
 

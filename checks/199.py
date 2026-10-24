@@ -39,3 +39,5 @@ assert q("SELECT date_diff('minute', TIMESTAMP '2026-04-01 09:00:59', TIMESTAMP 
 assert all(t.second == 0 for (t,) in q("SELECT clicked_at FROM clicks"))
 # tempting answer for 1 is 1: only the 110 gap is over 60 once the NULL first clicks are forgotten
 assert sum(1 for r in rows60 if r[2] is not None and r[2] > 60) == 1
+# exactly 30 minutes is not over 30, so it stays in the session
+assert q("SELECT CASE WHEN 30 IS NULL OR 30 > 30 THEN 1 ELSE 0 END") == [(0,)]
