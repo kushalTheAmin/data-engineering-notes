@@ -212,3 +212,19 @@ INSERT INTO clicks VALUES
     (1, TIMESTAMP '2026-04-01 11:12:00', 'jalebi'),
     (2, TIMESTAMP '2026-04-01 09:02:00', 'home'),
     (2, TIMESTAMP '2026-04-01 09:50:00', 'fafda');
+
+-- added by note 201: site logins, one row per customer per login day, january to march. Asha logs in three months running, Bhavin only in january, Chirag twice in february, Disha once in february, Esha once in march
+CREATE TABLE logins (
+    customer_id INTEGER NOT NULL,
+    login_on    DATE NOT NULL
+);
+
+INSERT INTO logins VALUES
+    (1, DATE '2026-01-05'),
+    (1, DATE '2026-02-10'),
+    (1, DATE '2026-03-02'),
+    (2, DATE '2026-01-20'),
+    (3, DATE '2026-02-03'),
+    (3, DATE '2026-02-25'),
+    (4, DATE '2026-02-14'),
+    (5, DATE '2026-03-08');
