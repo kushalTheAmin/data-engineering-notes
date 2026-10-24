@@ -30,5 +30,9 @@ assert bh[0] == bh[1]
 dropped = q("SELECT customer_id, city FROM (SELECT customer_id, city, row_number() OVER (PARTITION BY customer_id ORDER BY changed_at DESC) AS rn FROM city_feed) AS t WHERE rn > 1 ORDER BY customer_id")
 assert dropped == [(1, "Jersey City"), (2, "Edison")]
 assert len(keep) + len(dropped) == len(feed)
+# source: https://www.postgresql.org/docs/current/sql-select.html
+# confirmed: "If SELECT DISTINCT is specified, all duplicate rows are removed from the result set (one row is kept from each group of duplicates)", so rows that differ in any column all stay
+# source: https://www.postgresql.org/docs/current/tutorial-window.html
+# confirmed: "the row_number window function assigns sequential numbers to the rows within each partition, in the order defined by the ORDER BY clause (with tied rows numbered in an unspecified order)", so which of two tied rows is number 1 is not promised
 # source: https://www.postgresql.org/docs/current/functions-window.html
 # confirmed: row_number is a window function; ordering within the window is set by ORDER BY inside OVER
