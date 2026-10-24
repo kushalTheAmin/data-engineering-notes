@@ -64,4 +64,4 @@ cohort | customers | came_back
 </details>
 
 ---
-prev: [201 cohorts, the month each customer first showed up](./201-cohorts-the-month-each-customer-first-showed-up.md) | next: not written yet
+prev: [201 cohorts, the month each customer first showed up](./201-cohorts-the-month-each-customer-first-showed-up.md) | next: [203 recursive CTEs, following a chain of rows](./203-recursive-ctes-following-a-chain-of-rows.md)

@@ -228,3 +228,15 @@ INSERT INTO logins VALUES
     (3, DATE '2026-02-25'),
     (4, DATE '2026-02-14'),
     (5, DATE '2026-03-08');
+
+-- added by note 203: who told whom about the shop. one row per customer who came through a friend. Asha told Bhavin and Chirag, Bhavin told Disha, Disha told Esha
+CREATE TABLE referrals (
+    customer_id INTEGER NOT NULL,
+    referred_by INTEGER NOT NULL
+);
+
+INSERT INTO referrals VALUES
+    (2, 1),
+    (3, 1),
+    (4, 2),
+    (5, 4);
