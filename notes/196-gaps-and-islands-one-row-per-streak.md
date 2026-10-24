@@ -4,7 +4,7 @@ section: bigger queries, part 23, ~2 min read
 
 so every day has a label now, but nobody wants 6 rows of labels, they want "the shop had a 2 day streak from april 3 to april 4". one more step gets there.
 
-the label from [195](./195-gaps-and-islands-date-minus-row-number.md) is the same for every day in a streak, so it is a perfect key for [GROUP BY](./143-group-by-one-group-per-value.md) (one group per different value). then [min and max](./142-min-and-max-the-smallest-and-biggest-value.md) give the first and last day, and [count(*)](./138-count-star-vs-count-of-a-column.md) (counts every row) gives the length. the shop, the imaginary snack store these notes run on, has daily_orders, and 195 labeled its 6 order days:
+the label from [195](./195-gaps-and-islands-date-minus-row-number.md) is the same for every day in a streak, so it is a perfect key for [GROUP BY](./143-group-by-one-group-per-value.md) (one group per different value). then [min and max](./142-min-and-max-the-smallest-and-biggest-value.md) give the first and last day, and [count(*)](./138-count-star-vs-count-of-a-column.md) (counts every row) gives the length. the shop, the imaginary snack store these notes run on, has daily_orders (one row per day, with placed, the number of orders that day), and 195 labeled the 6 days where placed is above 0:
 
 ```text
 day         label        |  group by label  | first_day   last_day    days

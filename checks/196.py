@@ -26,3 +26,5 @@ assert q(f"SELECT count(*) AS streaks FROM (SELECT day FROM ({inner}) AS t GROUP
 # longest-first: two streaks tie at the max length, so there is no single longest streak
 assert sorted((s[2] for s in streaks), reverse=True) == [2, 2, 1, 1]
 assert q(f"SELECT count(*) FROM (SELECT count(*) AS days FROM ({inner}) AS t GROUP BY label) WHERE days = 2") == [(2,)]
+# daily_orders has one row per day and placed counts that day's orders: 9 days, 6 with placed above 0
+assert q("SELECT count(*), count(*) FILTER (WHERE placed > 0) FROM daily_orders") == [(9, 6)]
