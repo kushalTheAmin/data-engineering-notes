@@ -62,4 +62,4 @@ quantity 1 has 1 + 5 = 6 rows ahead of it, so it is 7th. the tempting answer is 
 </details>
 
 ---
-prev: [187 ROW_NUMBER, numbering rows in order](./187-row-number-numbering-rows-in-order.md) | next: not written yet
+prev: [187 ROW_NUMBER, numbering rows in order](./187-row-number-numbering-rows-in-order.md) | next: [189 running totals](./189-running-totals.md)

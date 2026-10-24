@@ -214,6 +214,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | ROW_NUMBER | window function that numbers rows 1, 2, 3 in the OVER ordering | [187](./notes/187-row-number-numbering-rows-in-order.md) |
 | run | the same value repeated back to back | [047](./notes/047-compression-spotting-repeats.md) |
 | run length encoding | storing each run as the value once plus a count | [047](./notes/047-compression-spotting-repeats.md) |
+| running total | a sum where each row adds itself and every row before it | [189](./notes/189-running-totals.md) |
 | safe write | write a whole new file beside the old, then rename it over | [046](./notes/046-writing-safely.md) |
 | scalar subquery | a subquery returning one row and one column, used as a value | [176](./notes/176-scalar-subqueries-one-value-inside-a-query.md) |
 | scale | how many of a decimals digits sit after the point | [022](./notes/022-exact-decimal-types.md) |
