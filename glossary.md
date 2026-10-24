@@ -63,6 +63,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | date_trunc | chops a timestamp down to the start of its day or month | [127](./notes/127-truncating-timestamps-to-a-day-or-a-month.md) |
 | daylight saving | clocks shifting an hour twice a year in many places | [024](./notes/024-utc.md) |
 | decompress | rebuild the original bytes from compressed ones, costing processor work | [048](./notes/048-compression-trades-processor-for-space.md) |
+| default frame | with ORDER BY in OVER, the first row through this one | [191](./notes/191-the-default-frame-trap.md) |
 | delete anomaly | removing one fact also removes another that lived only in that row | [090](./notes/090-insert-and-delete-anomalies.md) |
 | DENSE_RANK | like RANK, but the row after a tie gets the next number | [188](./notes/188-rank-vs-dense-rank-what-ties-do.md) |
 | DESC | sort direction: biggest first, instead of the default smallest first | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
@@ -257,6 +258,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | trim | a function cutting spaces off both ends of text | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | TRY_CAST | CAST that gives null instead of an error when conversion fails | [133](./notes/133-casts-that-fail-and-try-cast.md) |
 | twos complement | binary where the leftmost place is negative, so one zero | [014](./notes/014-twos-complement.md) |
+| UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING | frame option meaning every row of the window, no limit either way | [191](./notes/191-the-default-frame-trap.md) |
 | Unicode | one agreed table giving every character in every script a number | [009](./notes/009-unicode.md) |
 | UNION | stacks two queries rows, then drops repeated rows | [182](./notes/182-union-and-union-all.md) |
 | UNION ALL | stacks two queries rows and keeps every repeat | [182](./notes/182-union-and-union-all.md) |

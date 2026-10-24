@@ -65,4 +65,4 @@ april 5 is gone, so the 2 rows before april 6 are april 3 and 4, and 1 + 1 + 1 =
 </details>
 
 ---
-prev: [189 running totals](./189-running-totals.md) | next: not written yet
+prev: [189 running totals](./189-running-totals.md) | next: [191 the default frame trap](./191-the-default-frame-trap.md)

@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 190
+notes so far: 191
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -218,3 +218,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [188 RANK vs DENSE_RANK, what ties do](./notes/188-rank-vs-dense-rank-what-ties-do.md): two tied rows both get 1, then RANK jumps to 3 and DENSE_RANK goes to 2
 - [189 running totals](./notes/189-running-totals.md): daily orders placed 2, 0, 1, 1, 0, 1, 0, 1, 1 add up to a running 2, 2, 3, 4, 4, 5, 5, 6, 7
 - [190 window frames, ROWS BETWEEN](./notes/190-window-frames-rows-between.md): one day of orders is jumpy, so add up just the last 3 rows on every row
+- [191 the default frame trap](./notes/191-the-default-frame-trap.md): add an ORDER BY inside OVER and max quietly becomes a running max
