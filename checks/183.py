@@ -34,3 +34,6 @@ assert q(f"{D} EXCEPT ALL {N} ORDER BY customer_id") == [(1,), (2,), (2,), (4,)]
 # source: https://en.wikipedia.org/wiki/Set_operations_(SQL)
 # confirmed: "For purposes of duplicate removal the INTERSECT operator does not distinguish between NULLs." and "For purposes of row elimination and duplicate removal, the EXCEPT operator does not distinguish between NULLs."
 assert q("SELECT city FROM customers INTERSECT SELECT city FROM customers WHERE customer_id = 5") == [(None,)]
+# source: https://duckdb.org/docs/2.0/sql/query_syntax/setops.html
+# confirmed: "Traditional set operations unify queries by column position." and the page names BY NAME only for UNION
+assert q("SELECT 1 AS a, 2 AS b INTERSECT SELECT 1 AS b, 2 AS a") == [(1, 2)]
