@@ -23,7 +23,7 @@ day | cancelled | all_max | with_order | whole
 2026-04-09 | 0 | 1 | 1 | 1
 ```
 
-with_order stays 0 until april 4, the day of the only cancellation, because before that the frame hasnt seen it. it is the [running total](./189-running-totals.md) idea, with max. a bare OVER () has no ORDER BY, so its frame is every row left after WHERE. rows tied in the ORDER BY share a frame, but the shops days never tie. to keep the ORDER BY and still see everything, say so: UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING (no limit either way).
+with_order stays 0 until april 4, the day of the only cancellation, because before that the frame hasnt seen it. it is the [running total](./189-running-totals.md) idea, with max. a bare OVER () has no ORDER BY, so its frame is every row left after WHERE (keeps matching rows). rows tied in the ORDER BY share a frame, but the shops days never tie. to keep the ORDER BY and still see everything, say so: UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING (no limit either way).
 
 i assumed the sorting only decided the order, but it also shrinks what the function can see.
 
