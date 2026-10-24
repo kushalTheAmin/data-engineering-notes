@@ -212,6 +212,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | root | the top folder holding everything else, written as a single slash | [040](./notes/040-folders-and-paths.md) |
 | row | one record of a csv, usually one line, split into values | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
 | ROW_NUMBER | window function that numbers rows 1, 2, 3 in the OVER ordering | [187](./notes/187-row-number-numbering-rows-in-order.md) |
+| ROWS BETWEEN | sets a frame by counting rows before and after the current one | [190](./notes/190-window-frames-rows-between.md) |
 | run | the same value repeated back to back | [047](./notes/047-compression-spotting-repeats.md) |
 | run length encoding | storing each run as the value once plus a count | [047](./notes/047-compression-spotting-repeats.md) |
 | running total | a sum where each row adds itself and every row before it | [189](./notes/189-running-totals.md) |
@@ -272,6 +273,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | whole cents | money kept as an integer count of cents, price times 100 | [021](./notes/021-storing-money-as-whole-cents.md) |
 | wildcard | a pattern character standing in for other characters | [113](./notes/113-like-matching-text-patterns.md) |
 | window | the rows a window function sees while working on one row | [185](./notes/185-over-the-window-a-function-looks-through.md) |
+| window frame | the slice of the window a function uses for one row | [190](./notes/190-window-frames-rows-between.md) |
 | window function | a calculation across rows that keeps every row, like sum with OVER | [184](./notes/184-window-functions-a-total-next-to-every-row.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
 | XML | a text format wrapping each value in opening and closing tags | [072](./notes/072-xml.md) |

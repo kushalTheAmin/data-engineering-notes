@@ -75,4 +75,4 @@ a surprise: WHERE (keeps matching rows) runs before the window, so only april 9 
 </details>
 
 ---
-prev: [188 RANK vs DENSE_RANK, what ties do](./188-rank-vs-dense-rank-what-ties-do.md) | next: not written yet
+prev: [188 RANK vs DENSE_RANK, what ties do](./188-rank-vs-dense-rank-what-ties-do.md) | next: [190 window frames, ROWS BETWEEN](./190-window-frames-rows-between.md)
