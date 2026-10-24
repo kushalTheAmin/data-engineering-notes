@@ -4,7 +4,7 @@ section: bigger queries, part 16, ~2 min read
 
 how many orders has the shop taken so far, as of each day? in python i would keep a total and add to it in a loop, and i wanted that in one SQL line.
 
-a running total is a [sum](./140-sum-and-avg-adding-up-and-averaging.md) where each row adds up itself and every row before it. you get it by putting an ORDER BY inside the [OVER](./185-over-the-window-a-function-looks-through.md) of a [window function](./184-window-functions-a-total-next-to-every-row.md) (a calculation that keeps every row). the shop, the imaginary snack store these notes run on, has daily_orders from [130](./130-nullif-and-dividing-by-zero.md), one row per day, with a placed and a cancelled count. in python:
+a running total is a [sum](./140-sum-and-avg-adding-up-and-averaging.md) where each row adds up itself and every row before it. you get it by putting an ORDER BY (sort rows by a column) inside the [OVER](./185-over-the-window-a-function-looks-through.md) of a [window function](./184-window-functions-a-total-next-to-every-row.md) (a calculation that keeps every row). the shop, the imaginary snack store these notes run on, has daily_orders from [130](./130-nullif-and-dividing-by-zero.md), one row per day, with a placed and a cancelled count. in python:
 
 ```python
 placed = [2, 0, 1, 1, 0, 1, 0, 1, 1]
