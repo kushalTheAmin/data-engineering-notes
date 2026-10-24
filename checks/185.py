@@ -20,3 +20,4 @@ assert round(38 / 6, 2) == 6.33
 # source: https://www.postgresql.org/docs/current/functions-window.html
 # confirmed: any built-in or user-defined ordinary aggregate can be used as a window function, so a window function is not always an aggregate
 # confirmed: a window function performs a calculation across rows related to the current row, a window function call always contains an OVER clause, rows keep their separate identities, and with no PARTITION BY the window is the whole table
+assert round(12.0 - 38 / 6, 2) == 5.67
