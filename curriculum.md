@@ -254,7 +254,8 @@ after this arc: you can write the multi step queries real reports need
 - [x] date spines: left join the days to orders, empty days become 0 ★ (note 198)
 - [x] session starts: LAG the time gap and flag the click that opens a new session ★ (note 199)
 - [x] session ids: a running sum of the flags numbers each session ★ (note 200)
-- [ ] retention cohorts: who came back next month ★
+- [ ] cohorts: the month each customer first showed up ★
+- [ ] retention: counting who came back the month after ★
 - [ ] recursive CTEs: following a chain of rows
 - [ ] arrays and UNNEST: lists inside a cell
 - [ ] querying JSON inside a column
