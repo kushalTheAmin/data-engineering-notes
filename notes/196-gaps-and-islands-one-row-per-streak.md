@@ -32,7 +32,7 @@ first_day | last_day | days
 
 the label itself isnt in the output, its only scaffolding, and thats what i found odd, a column you build just to throw away.
 
-swap ORDER BY for days DESC and you can pull the longest streak, and it works the same on 900 days as on 9. it still needs one row per day, same catch as 195.
+order by days DESC instead and the longest streaks come first, here two tie at 2 days, and it works the same on 900 days as on 9. it still needs one row per day, same catch as 195.
 
 ### check yourself
 

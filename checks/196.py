@@ -23,3 +23,6 @@ assert q(f"SELECT min(day) AS first_day, max(day) - min(day) AS span, count(*) A
 assert q(f"SELECT count(*) AS streaks FROM (SELECT day FROM ({inner}) AS t GROUP BY day)") == [(6,)]
 # source: https://duckdb.org/docs/stable/sql/query_syntax/groupby
 # confirmed earlier: GROUP BY groups rows sharing a value; see note 143 check
+# longest-first: two streaks tie at the max length, so there is no single longest streak
+assert sorted((s[2] for s in streaks), reverse=True) == [2, 2, 1, 1]
+assert q(f"SELECT count(*) FROM (SELECT count(*) AS days FROM ({inner}) AS t GROUP BY label) WHERE days = 2") == [(2,)]
