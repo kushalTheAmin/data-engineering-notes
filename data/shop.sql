@@ -182,3 +182,17 @@ CREATE TABLE promo_periods (
 INSERT INTO promo_periods VALUES
     ('launch week',   DATE '2026-04-01', DATE '2026-04-03'),
     ('festival sale', DATE '2026-04-05', DATE '2026-04-07');
+
+-- added by note 194: a raw feed of customer city updates, loaded messily. Asha appears twice with different cities, and Bhavin's row is there twice as an exact copy
+CREATE TABLE city_feed (
+    customer_id INTEGER NOT NULL,
+    city        VARCHAR NOT NULL,
+    changed_at  TIMESTAMP NOT NULL
+);
+
+INSERT INTO city_feed VALUES
+    (1, 'Jersey City', TIMESTAMP '2026-04-10 09:00:00'),
+    (2, 'Edison',      TIMESTAMP '2026-04-10 09:05:00'),
+    (1, 'Hoboken',     TIMESTAMP '2026-04-12 18:30:00'),
+    (4, 'Hoboken',     TIMESTAMP '2026-04-11 07:45:00'),
+    (2, 'Edison',      TIMESTAMP '2026-04-10 09:05:00');

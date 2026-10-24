@@ -66,4 +66,4 @@ ascending puts the cheapest first in each category, and fafda (4.50) beats dhokl
 </details>
 
 ---
-prev: [192 LAG and LEAD, looking at the row before](./192-lag-and-lead-looking-at-the-row-before.md) | next: not written yet
+prev: [192 LAG and LEAD, looking at the row before](./192-lag-and-lead-looking-at-the-row-before.md) | next: [194 removing duplicates with ROW_NUMBER](./194-removing-duplicates-with-row-number.md)
