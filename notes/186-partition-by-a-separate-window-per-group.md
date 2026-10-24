@@ -2,7 +2,7 @@
 builds on: [143 GROUP BY, one group per value](./143-group-by-one-group-per-value.md), [177 correlated subqueries](./177-correlated-subqueries-a-query-that-depends-on-the-outer-row.md), [184 window functions, a total next to every row](./184-window-functions-a-total-next-to-every-row.md), [185 OVER, the window a function looks through](./185-over-the-window-a-function-looks-through.md)
 section: bigger queries, part 13, ~2 min read
 
-masala chai is the cheapest thing in the shop, but next to the other drinks its exactly average. same row, two answers.
+masala chai is the cheapest thing in the shop, but measured against its own category its exactly average. same row, two answers.
 
 PARTITION BY is how you pick who. it goes inside the OVER (the keyword that makes an aggregate a window function) from [185](./185-over-the-window-a-function-looks-through.md) and cuts the window (the rows a function sees for the current row) into one group per value, so a row only sees its own group. the shop, the imaginary snack store these notes run on, has 3 categories: snack (dhokla, a steamed savory cake, khandvi, a rolled gram flour snack, fafda, a crisp gram flour strip), sweet (jalebi and kaju katli) and drink (masala chai, spiced tea).
 

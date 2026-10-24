@@ -22,3 +22,5 @@ assert all(d == 0 for _, d in q("SELECT name, price - avg(price) OVER (PARTITION
 assert min(p for _, _, p in rows) == 3.0
 # source: https://www.postgresql.org/docs/current/tutorial-window.html
 # confirmed: PARTITION BY divides rows into groups sharing the same values, the window function sees only rows in the current row's partition, and unlike GROUP BY every row is kept
+assert q("SELECT name FROM products WHERE category = 'drink'") == [("masala chai",)]  # the only drink, so no other drinks to compare with
+assert q("SELECT name FROM products ORDER BY price LIMIT 1") == [("masala chai",)]
