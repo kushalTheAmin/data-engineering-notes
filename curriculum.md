@@ -252,7 +252,8 @@ after this arc: you can write the multi step queries real reports need
 - [x] gaps and islands: grouping each island into one streak row ★ (note 196)
 - [x] generate_series: a column of consecutive days ★ (note 197)
 - [x] date spines: left join the days to orders, empty days become 0 ★ (note 198)
-- [ ] sessionizing clicks with LAG and a running sum ★
+- [ ] session starts: LAG the time gap and flag the click that opens a new session ★
+- [ ] session ids: a running sum of the flags numbers each session ★
 - [ ] retention cohorts: who came back next month ★
 - [ ] recursive CTEs: following a chain of rows
 - [ ] arrays and UNNEST: lists inside a cell
