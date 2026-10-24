@@ -21,3 +21,11 @@ assert [r[1] for r in r1 if r[0] == 1] == [1, 2, 2, 4, 4]
 # answer 2: no ORDER BY inside OVER, every Asha row is the total 2
 r2 = q(F + "SELECT sum(new_session) OVER (PARTITION BY customer_id) FROM flagged WHERE customer_id = 1")
 assert [r[0] for r in r2] == [2] * 5
+# a window function cant sit inside another one: duckdb refuses it
+try:
+    q("SELECT sum(lag(x) OVER (ORDER BY x)) OVER (ORDER BY x) FROM range(3) t(x)")
+    assert False
+except Exception as e:
+    assert "window function calls cannot be nested" in str(e)
+# source: https://www.postgresql.org/docs/current/sql-expressions.html
+# confirmed: "Window function calls are permitted only in the SELECT list and the ORDER BY clause of the query."
