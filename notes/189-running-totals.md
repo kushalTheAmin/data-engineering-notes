@@ -37,7 +37,7 @@ day | placed | running
 2026-04-09 | 1 | 7
 ```
 
-without the ORDER BY, OVER () is every row that survives WHERE, so every row shows 7 here. with it, the window for each row stops at that row. april 6 is 5 because 2 + 0 + 1 + 1 + 0 + 1 = 5. the last row is 7, the plain total.
+without the ORDER BY, OVER () is every row that survives WHERE (keeps matching rows), so every row shows 7 here. with it, the window for each row stops at that row. april 6 is 5 because 2 + 0 + 1 + 1 + 0 + 1 = 5. the last row is 7, the plain total.
 
 i assumed the sorting inside OVER was only for show, but it decides what "before" means. flip it to ORDER BY day DESC and april 1 shows 7 while april 9 shows 1.
 
@@ -70,7 +70,7 @@ SELECT day, sum(cancelled) OVER (ORDER BY day) AS running FROM daily_orders WHER
 day | running
 2026-04-09 | 0
 ```
-a surprise: WHERE (keeps matching rows) runs before the window, so only april 9 is left to add up and the total is 0. with the filter outside, in a [subquery in FROM](./175-subquery-in-from.md), it is 1. the tempting answer is 1, from picturing the running total as already built.
+a surprise: WHERE runs before the window, so only april 9 is left to add up and the total is 0. with the filter outside, in a [subquery in FROM](./175-subquery-in-from.md), it is 1. the tempting answer is 1, from picturing the running total as already built.
 
 </details>
 
