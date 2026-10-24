@@ -240,3 +240,17 @@ INSERT INTO referrals VALUES
     (3, 1),
     (4, 2),
     (5, 4);
+
+-- added by note 204: tags for each product, kept as a list in one cell. masala chai has an empty list, nobody has tagged it yet
+CREATE TABLE product_tags (
+    product_id INTEGER NOT NULL,
+    tags       VARCHAR[] NOT NULL
+);
+
+INSERT INTO product_tags VALUES
+    (1, ['steamed', 'savory']),
+    (2, ['rolled', 'savory']),
+    (3, ['fried', 'sweet']),
+    (4, ['sweet', 'festive']),
+    (5, []),
+    (6, ['fried', 'savory']);

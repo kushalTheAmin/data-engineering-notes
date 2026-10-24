@@ -34,4 +34,4 @@ i expected a recursive query to need some special loop syntax, but its a plain U
 the catch is the stop. Postgres docs say the repeat part has to eventually return no rows or the query loops indefinitely, so if Asha were listed as referred by Esha, this would never end.
 
 ---
-prev: [202 retention, who came back the month after](./202-retention-who-came-back-the-month-after.md) | next: not written yet
+prev: [202 retention, who came back the month after](./202-retention-who-came-back-the-month-after.md) | next: [204 arrays and UNNEST, lists inside a cell](./204-arrays-and-unnest-lists-inside-a-cell.md)
