@@ -34,3 +34,8 @@ r2 = run(30, p="", w="WHERE customer_id = 2")
 assert [(r[2], r[3]) for r in r2] == [(2, 0), (40, 1)]
 # source: https://support.google.com/analytics/answer/9191807
 # confirmed: "By default, a session ends or times out after 30 minutes of user inactivity."
+# date_diff counts minute boundaries crossed (note 129 shows the same for days), exact here because every click is on a whole minute
+assert q("SELECT date_diff('minute', TIMESTAMP '2026-04-01 09:00:59', TIMESTAMP '2026-04-01 09:01:01')") == [(1,)]
+assert all(t.second == 0 for (t,) in q("SELECT clicked_at FROM clicks"))
+# tempting answer for 1 is 1: only the 110 gap is over 60 once the NULL first clicks are forgotten
+assert sum(1 for r in rows60 if r[2] is not None and r[2] > 60) == 1
