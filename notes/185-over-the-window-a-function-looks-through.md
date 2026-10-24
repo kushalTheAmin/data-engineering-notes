@@ -44,4 +44,4 @@ i assumed the window was one fixed thing built once for the whole query. its a f
 price minus the average is how you spot outliers, and kaju katli sits 5.67 above the average. the window doesnt have to be the whole table, and shrinking it is where these get useful.
 
 ---
-prev: [184 window functions, a total next to every row](./184-window-functions-a-total-next-to-every-row.md) | next: not written yet
+prev: [184 window functions, a total next to every row](./184-window-functions-a-total-next-to-every-row.md) | next: [186 PARTITION BY, a separate window per group](./186-partition-by-a-separate-window-per-group.md)

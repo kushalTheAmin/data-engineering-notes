@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 185
+notes so far: 186
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -213,3 +213,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [183 INTERSECT and EXCEPT](./notes/183-intersect-and-except.md): delivered ids against the rest give Asha for INTERSECT, Bhavin and Disha for EXCEPT, and Chirag when the sides swap
 - [184 window functions, a total next to every row](./notes/184-window-functions-a-total-next-to-every-row.md): every product keeps its row and gets the 38.00 total beside it
 - [185 OVER, the window a function looks through](./notes/185-over-the-window-a-function-looks-through.md): every product gets its own window, so price minus the average gives dhokla -0.33 and kaju katli 5.67
+- [186 PARTITION BY, a separate window per group](./notes/186-partition-by-a-separate-window-per-group.md): average price per category gives snacks 6.00, sweets 8.50 and masala chai its own 3.00, with all 6 rows kept
