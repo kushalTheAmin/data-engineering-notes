@@ -215,6 +215,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | relative path | a path with no leading slash, begun at the working directory | [053](./notes/053-absolute-vs-relative-paths.md) |
 | repeating fraction | digits past the point that loop forever, so no exact finite form | [018](./notes/018-why-0-1-has-no-exact-binary-form.md) |
 | required field | a field name every record must have, or it is rejected | [077](./notes/077-required-vs-optional-fields.md) |
+| retention | how many of a cohort logged in again in a later month | [202](./notes/202-retention-who-came-back-the-month-after.md) |
 | revenue | quantity times price, added up over the order rows you choose | [171](./notes/171-joins-plus-group-by-revenue-per-customer.md) |
 | right join | a left join with the tables swapped, keeps every right row | [162](./notes/162-right-and-full-outer-joins.md) |
 | ROLLUP | a GROUP BY that adds subtotal rows and a grand total | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |

@@ -68,4 +68,4 @@ february and march tie at 2, since max puts Asha in march, her last month. the t
 </details>
 
 ---
-prev: [200 session ids, a running sum of the flags](./200-session-ids-a-running-sum-of-the-flags.md) | next: not written yet
+prev: [200 session ids, a running sum of the flags](./200-session-ids-a-running-sum-of-the-flags.md) | next: [202 retention, who came back the month after](./202-retention-who-came-back-the-month-after.md)
