@@ -77,4 +77,4 @@ every name is its own group, so every window is one row and the average is the p
 </details>
 
 ---
-prev: [185 OVER, the window a function looks through](./185-over-the-window-a-function-looks-through.md) | next: not written yet
+prev: [185 OVER, the window a function looks through](./185-over-the-window-a-function-looks-through.md) | next: [187 ROW_NUMBER, numbering rows in order](./187-row-number-numbering-rows-in-order.md)

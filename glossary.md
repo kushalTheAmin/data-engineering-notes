@@ -209,6 +209,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | ROLLUP | a GROUP BY that adds subtotal rows and a grand total | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | root | the top folder holding everything else, written as a single slash | [040](./notes/040-folders-and-paths.md) |
 | row | one record of a csv, usually one line, split into values | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
+| ROW_NUMBER | window function that numbers rows 1, 2, 3 in the OVER ordering | [187](./notes/187-row-number-numbering-rows-in-order.md) |
 | run | the same value repeated back to back | [047](./notes/047-compression-spotting-repeats.md) |
 | run length encoding | storing each run as the value once plus a count | [047](./notes/047-compression-spotting-repeats.md) |
 | safe write | write a whole new file beside the old, then rename it over | [046](./notes/046-writing-safely.md) |
