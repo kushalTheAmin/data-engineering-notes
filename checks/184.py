@@ -26,3 +26,4 @@ assert 6 + 7.5 + 4.5 == 18
 # source: https://www.postgresql.org/docs/current/functions-window.html
 # confirmed: any built-in or user-defined ordinary aggregate can be used as a window function, and aggregates act as window functions only when an OVER clause follows the call; other window functions such as row_number exist
 # confirmed: window functions do not group rows into a single output row, rows keep their separate identities; a row removed by WHERE is not seen by any window function; windows run after WHERE, GROUP BY and HAVING
+assert round(6.0 / 38.0, 4) == 0.1579

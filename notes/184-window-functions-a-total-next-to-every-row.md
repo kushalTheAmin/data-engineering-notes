@@ -40,7 +40,7 @@ fafda | 4.50 | 38.00
 
 6 rows in, 6 rows out. plain sum(price) would have given 1 row. the thing that surprised me is when it runs: after [WHERE](./106-where-keeping-only-the-rows-that-match.md) has already thrown rows out, so the window only adds up the survivors. Postgres docs say the same, a filtered out row is never seen by a window function.
 
-a row next to its total is how percent of total reports get built, one divide away.
+a row next to its total is one divide away from its percent of the total.
 
 ### check yourself
 
