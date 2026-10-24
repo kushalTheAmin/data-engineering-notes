@@ -41,7 +41,7 @@ without the ORDER BY, OVER () is every row that survives WHERE, so every row sho
 
 i assumed the sorting inside OVER was only for show, but it decides what "before" means. flip it to ORDER BY day DESC and april 1 shows 7 while april 9 shows 1.
 
-the shops days never repeat, and that matters. rows that tie in the ORDER BY all show the same running value, one that counts all of them, and a later note digs into it.
+the shops days never repeat, and that matters. rows that tie in the ORDER BY all show the same running value, one that counts all of them.
 
 ### check yourself
 
