@@ -268,7 +268,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | whole cents | money kept as an integer count of cents, price times 100 | [021](./notes/021-storing-money-as-whole-cents.md) |
 | wildcard | a pattern character standing in for other characters | [113](./notes/113-like-matching-text-patterns.md) |
 | window | the rows a window function sees while working on one row | [185](./notes/185-over-the-window-a-function-looks-through.md) |
-| window function | a calculation across related rows that keeps every row, an aggregate like sum with OVER is one | [184](./notes/184-window-functions-a-total-next-to-every-row.md) |
+| window function | a calculation across rows that keeps every row, like sum with OVER | [184](./notes/184-window-functions-a-total-next-to-every-row.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
 | XML | a text format wrapping each value in opening and closing tags | [072](./notes/072-xml.md) |
 | YAML | a text format where indentation shows nesting, dashes start list items | [073](./notes/073-yaml.md) |

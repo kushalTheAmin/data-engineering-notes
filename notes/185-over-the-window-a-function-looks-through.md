@@ -4,7 +4,7 @@ section: bigger queries, part 12, ~2 min read
 
 how far is each product from the average price, on its own line? in [184](./184-window-functions-a-total-next-to-every-row.md) i typed OVER () and just trusted the empty parentheses, so here is what they actually mean.
 
-the window is the set of rows a [window function](./184-window-functions-a-total-next-to-every-row.md) (an aggregate that keeps every row) looks at while it works on one row, called the current row. OVER () says the window is every row. the shop, the imaginary snack store these notes run on, has 6 products (dhokla, a steamed savory cake, khandvi, a rolled gram flour snack, jalebi and kaju katli, sweets, masala chai, spiced tea, fafda, a crisp gram flour strip). picture a loop where every row gets its own window:
+the window is the set of rows a [window function](./184-window-functions-a-total-next-to-every-row.md) (a calculation that keeps every row, like an aggregate that doesnt collapse them) looks at while it works on one row, called the current row. OVER () says the window is every row. the shop, the imaginary snack store these notes run on, has 6 products (dhokla, a steamed savory cake, khandvi, a rolled gram flour snack, jalebi and kaju katli, sweets, masala chai, spiced tea, fafda, a crisp gram flour strip). picture a loop where every row gets its own window:
 
 ```python
 rows = [("dhokla", 6.0), ("khandvi", 7.5), ("jalebi", 5.0), ("kaju katli", 12.0), ("masala chai", 3.0), ("fafda", 4.5)]

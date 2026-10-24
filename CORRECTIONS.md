@@ -1,5 +1,7 @@
 # corrections
 
+185, 2026-10-24: called a window function an aggregate that keeps every row, but the Postgres docs list other window functions such as row_number and say an ordinary aggregate can be used as one. it now says a calculation that keeps every row, like an aggregate that doesnt collapse them. same wording as the 184 fix. evidence: https://www.postgresql.org/docs/current/functions-window.html ("any built-in or user-defined ordinary aggregate ... can be used as a window function")
+
 184, 2026-10-24: called a window function an aggregate, but the Postgres docs list other window functions such as row_number and say an ordinary aggregate can be used as one. it now says a window function does an aggregates job without collapsing rows, written by putting OVER () after an aggregate like sum. glossary.md carried the same wording and is fixed too. this redoes the fix lost in the 000 push conflict of 2026-10-23. evidence: https://www.postgresql.org/docs/current/functions-window.html ("any built-in or user-defined ordinary aggregate ... can be used as a window function")
 
 000, 2026-10-23: push conflict, the audit fix for note 184 (window function called an aggregate without saying it can be one, plus glossary.md) was not pushed because the note routine pushed note 185 meanwhile. the next audit will find it again.
