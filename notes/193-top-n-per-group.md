@@ -30,7 +30,7 @@ jalebi | sweet | 5.00
 
 i assumed top N needed its own feature, but its just two ideas stacked, and it runs in Postgres too.
 
-this is the shape behind "latest order per customer". if prices can tie at the cut, add a second sort column, or which row survives isnt promised.
+if prices can tie at the cut, add a second sort column, or which row survives isnt promised.
 
 ### check yourself
 

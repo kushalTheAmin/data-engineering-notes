@@ -41,3 +41,8 @@ assert Decimal("4.50") < Decimal("6.00") < Decimal("7.50")
 # confirmed: window functions run after WHERE (rows removed by WHERE are not seen by a window function), so a window function result cannot be filtered in the same query level; row_number and PARTITION BY are standard Postgres
 # source: https://www.postgresql.org/docs/current/sql-expressions.html
 # confirmed: window function calls are only permitted in the SELECT list and ORDER BY clause of the query
+# the prices and categories the prose lists
+assert {r[0]: (r[1], r[2]) for r in prods} == {"dhokla": ("snack", Decimal("6.00")), "khandvi": ("snack", Decimal("7.50")), "fafda": ("snack", Decimal("4.50")), "jalebi": ("sweet", Decimal("5.00")), "kaju katli": ("sweet", Decimal("12.00")), "masala chai": ("drink", Decimal("3.00"))}
+assert len(groups) == 3
+# source: https://www.postgresql.org/docs/current/tutorial-window.html
+# confirmed: "the row_number window function assigns sequential numbers to the rows within each partition, in the order defined by the ORDER BY clause (with tied rows numbered in an unspecified order)"; its top-N example adds empno as a second sort column
