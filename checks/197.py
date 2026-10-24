@@ -32,3 +32,5 @@ assert q("SELECT CAST(d AS DATE) FROM generate_series(DATE '2026-04-01', DATE '2
 assert q("SELECT count(*) FROM orders WHERE CAST(ordered_at AS DATE) = DATE '2026-04-01'") == [(2,)]
 # source: https://www.postgresql.org/docs/current/functions-srf.html
 # confirmed: "When step is positive, zero rows are returned if start is greater than stop." and Postgres has generate_series
+# source: https://duckdb.org/docs/2.0/sql/functions/list.html
+# confirmed: "the stop parameter is exclusive" for range and "the stop parameter is inclusive" for generate_series

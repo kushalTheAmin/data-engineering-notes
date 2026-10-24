@@ -43,7 +43,7 @@ print(len(days), days[0], days[-1])
 
 i figured every row had to come from a table somewhere, and this one comes out of three values i typed. with a positive step, a start after the stop gives zero rows, not an error. DuckDB also has range(), the same thing but it skips the stop day, like python range.
 
-Postgres has generate_series too too, with the interval spelled a little differently, so this exact query is DuckDB. the next one lines these 9 days up against orders.
+Postgres has generate_series too, with the interval spelled a little differently, so this exact query is DuckDB. the next one lines these 9 days up against orders.
 
 ### check yourself
 
