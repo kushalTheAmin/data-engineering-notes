@@ -53,7 +53,7 @@ span 1, days 2. a streak of n days has a span of n minus 1, because the span cou
 
 </details>
 
-2. a teammate writes GROUP BY day instead of GROUP BY label. how many rows come back?
+2. a teammate writes GROUP BY day instead of GROUP BY label. the query counts the groups it makes. what number comes back?
 ```sql
 SELECT count(*) AS streaks FROM (SELECT day FROM (SELECT day, day - CAST(row_number() OVER (ORDER BY day) AS INTEGER) AS label FROM daily_orders WHERE placed > 0) AS t GROUP BY day)
 ```
