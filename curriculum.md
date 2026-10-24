@@ -250,7 +250,8 @@ after this arc: you can write the multi step queries real reports need
 - [x] removing duplicates with ROW_NUMBER ★ (note 194)
 - [x] gaps and islands: date minus row number stays constant inside a streak ★ (note 195)
 - [x] gaps and islands: grouping each island into one streak row ★ (note 196)
-- [ ] date spines: filling in days with no orders ★
+- [ ] generate_series: a column of consecutive days ★
+- [ ] date spines: left join the days to orders, empty days become 0 ★
 - [ ] sessionizing clicks with LAG and a running sum ★
 - [ ] retention cohorts: who came back next month ★
 - [ ] recursive CTEs: following a chain of rows
