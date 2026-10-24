@@ -502,6 +502,7 @@ every fix made to a note after it was published, newest first. if you learned fr
 
 ## audit log
 audit runs that could not finish, newest first. format: YYYY-MM-DD HH:MM: what happened
+2026-10-24 22:10: gate failed before any change (8 FAIL: checks 008, 011, 026 to 030 and 041) with duckdb 2.0.0, where relation.fetchone() was removed; no note was audited
 2026-10-23 19:30: gate failed before any change (FAIL checks/127.py assert on duckdb 1.4.5, and 8 FAIL with duckdb 2.0.0 where relation.fetchone() was removed; mermaid renderer also failed to launch); no note was audited
 2026-10-22 20:10: gate failed before any change (8 FAIL: checks 008, 011, 026 to 030 and 041), with duckdb 2.0.0 and with 1.5.6, where relation.fetchone() was removed; no note was audited
 2026-10-22 09:10: gate failed before any change (8 FAIL: checks 008, 011, 026 to 030 and 041) because pip installs duckdb 2.0.0, and 1.5.6 fails the same way, where relation.fetchone() was removed; no note was audited
