@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 196
+notes so far: 197
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -224,3 +224,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [194 removing duplicates with ROW_NUMBER](./notes/194-removing-duplicates-with-row-number.md): DISTINCT leaves Asha twice in the city feed, so number each customers rows newest first and keep number 1
 - [195 gaps and islands, date minus row number](./notes/195-gaps-and-islands-date-minus-row-number.md): which days in a row got an order, found by subtracting a counter from the date
 - [196 gaps and islands, one row per streak](./notes/196-gaps-and-islands-one-row-per-streak.md): turning 6 labeled days into 4 streak rows with GROUP BY
+- [197 generate_series, a column of consecutive days](./notes/197-generate-series-a-column-of-consecutive-days.md): orders has no row for april 2, 5 or 7, so make the 9 days from nothing

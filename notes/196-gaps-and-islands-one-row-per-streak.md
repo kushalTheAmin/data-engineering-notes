@@ -68,4 +68,4 @@ streaks
 </details>
 
 ---
-prev: [195 gaps and islands, date minus row number](./195-gaps-and-islands-date-minus-row-number.md) | next: not written yet
+prev: [195 gaps and islands, date minus row number](./195-gaps-and-islands-date-minus-row-number.md) | next: [197 generate_series, a column of consecutive days](./197-generate-series-a-column-of-consecutive-days.md)

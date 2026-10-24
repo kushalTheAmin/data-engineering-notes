@@ -96,6 +96,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | full run order (of a query) | FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY, LIMIT | [153](./notes/153-the-full-run-order-with-group-by-and-having.md) |
 | function | SQL that takes a value and returns a new one | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | gap (between islands) | the empty days between two runs of days with orders | [195](./notes/195-gaps-and-islands-date-minus-row-number.md) |
+| generate_series | a function in FROM making one row per step, stop included | [197](./notes/197-generate-series-a-column-of-consecutive-days.md) |
 | gibibyte | 1024 x 1024 x 1024 bytes, written GiB | [038](./notes/038-1000-or-1024.md) |
 | gigabyte | 1000 megabytes, a billion bytes, written GB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | grand total | the one row that sums up every row of the result | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
