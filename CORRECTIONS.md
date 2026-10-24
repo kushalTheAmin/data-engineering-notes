@@ -1,5 +1,6 @@
 # corrections
 
+189, 2026-10-24: note text unchanged. the claim that rows tying in the ORDER BY all show the same running value had no assertion, and its checks source line named peers on a page that never says it. checks now assert it and cite the Postgres expressions page. evidence: https://www.postgresql.org/docs/current/sql-expressions.html ("all rows from the partition start up through the current row's last ORDER BY peer"); python, two tied rows 5 and 7 both show 12, then 13
 184, 2026-10-24: said a row next to its total is how percent of total reports get built, a claim no page backs. it now says it is one divide away from its percent of the total. evidence: python, 6.0 / 38.0 is the dhokla share (checks/184.py)
 185, 2026-10-24: said price minus the average is how you spot outliers, a claim no page backs. it now says it shows you how far a row sits from the middle, which is what the number is. evidence: python, 12.0 minus 38/6 is 5.67 (checks/185.py)
 183, 2026-10-24: note text unchanged. the claim that INTERSECT and EXCEPT match columns by position, same as UNION, had no source in the checks. they now cite the DuckDB page and assert it. evidence: https://duckdb.org/docs/2.0/sql/query_syntax/setops.html ("Traditional set operations unify queries by column position."; BY NAME is named only for UNION)

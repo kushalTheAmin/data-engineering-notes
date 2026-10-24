@@ -29,4 +29,9 @@ assert q("SELECT day FROM daily_orders WHERE cancelled = 1") == [(dt.date(2026, 
 assert q("SELECT day, sum(cancelled) OVER (ORDER BY day) AS running FROM daily_orders WHERE day = DATE '2026-04-09'") == [(dt.date(2026, 4, 9), 0)]
 assert q("SELECT running FROM (SELECT day, sum(cancelled) OVER (ORDER BY day) AS running FROM daily_orders) AS t WHERE day = DATE '2026-04-09'") == [(1,)]
 # source: https://www.postgresql.org/docs/current/tutorial-window.html
-# confirmed: with ORDER BY in OVER the sum runs from the first row up through the current one (peers included), and a WHERE-removed row is not seen by any window function
+# confirmed: with ORDER BY in OVER the sum runs from the first row up through the current one, and a WHERE-removed row is not seen by any window function
+# source: https://www.postgresql.org/docs/current/sql-expressions.html
+# confirmed: the default frame with ORDER BY is all rows from the partition start up through the current row's last ORDER BY peer
+# rows that tie in the ORDER BY all show the same running value, which counts all of them
+assert q("SELECT x, sum(x) OVER (ORDER BY k) FROM (VALUES (1, 5), (1, 7), (2, 1)) AS t(k, x) ORDER BY x") == [(1, 13), (5, 12), (7, 12)]
+assert 5 + 7 == 12 and 5 + 7 + 1 == 13
