@@ -2,7 +2,7 @@
 builds on: [121 DISTINCT, removing duplicate rows](./121-distinct-removing-duplicate-rows.md), [175 subquery in FROM](./175-subquery-in-from.md), [186 PARTITION BY, a separate window per group](./186-partition-by-a-separate-window-per-group.md), [187 ROW_NUMBER, numbering rows in order](./187-row-number-numbering-rows-in-order.md), [193 top N per group](./193-top-n-per-group.md)
 section: bigger queries, part 21, ~2 min read
 
-Asha is in my feed twice with two different cities, so which one is true? DISTINCT cant tell me, and thats the whole problem.
+Asha (customer 1) is in my feed twice with two different cities, so which one is true? DISTINCT cant tell me, and thats the whole problem.
 
 deduplicating means keeping one row per thing when the data holds several. the shop, the imaginary snack store these notes run on, got a raw feed of city updates, a table i added called city_feed (all 5 rows):
 
@@ -19,7 +19,7 @@ customer_id | city | changed_at
 2 | Edison | 2026-04-10 09:05:00
 ```
 
-[DISTINCT](./121-distinct-removing-duplicate-rows.md) (keeps one copy of identical rows) only removes Bhavins exact copy, so Asha still has 2 rows. her rows differ, so DISTINCT sees two different rows. the fix is [top N per group](./193-top-n-per-group.md) with N = 1: number each customers rows newest first with [ROW_NUMBER](./187-row-number-numbering-rows-in-order.md) per [PARTITION BY](./186-partition-by-a-separate-window-per-group.md) customer (a separate count per customer), then keep number 1 in a [subquery in FROM](./175-subquery-in-from.md):
+[DISTINCT](./121-distinct-removing-duplicate-rows.md) (keeps one copy of identical rows) only removes Bhavins (customer 2) exact copy, so Asha still has 2 rows. her rows differ, so DISTINCT sees two different rows. the fix is [top N per group](./193-top-n-per-group.md) with N = 1: number each customers rows newest first with [ROW_NUMBER](./187-row-number-numbering-rows-in-order.md) per [PARTITION BY](./186-partition-by-a-separate-window-per-group.md) customer (a separate count per customer), then keep number 1 in a [subquery in FROM](./175-subquery-in-from.md):
 
 ```sql
 SELECT customer_id, city, changed_at FROM (SELECT customer_id, city, changed_at, row_number() OVER (PARTITION BY customer_id ORDER BY changed_at DESC) AS rn FROM city_feed) AS t WHERE rn = 1 ORDER BY customer_id
