@@ -14,7 +14,7 @@ a cohort is a group of customers who first showed up in the same month, and a cu
 | Disha | feb 14 | feb 14 | february |
 | Esha | mar 8 | mar 8 | march |
 
-[min](./142-min-and-max-the-smallest-and-biggest-value.md) (the earliest date) per [GROUP BY](./143-group-by-one-group-per-value.md) customer collapses the rows, and [date_trunc](./127-truncating-timestamps-to-a-day-or-a-month.md) (chop a date down to its month start) names the month. then a second GROUP BY counts customers per cohort, so the first step sits in a [subquery in FROM](./175-subquery-in-from.md) (an inner SELECT read like a table):
+[min](./142-min-and-max-the-smallest-and-biggest-value.md) (the earliest date) per [GROUP BY](./143-group-by-one-group-per-value.md) customer collapses the rows, and [date_trunc](./127-truncating-timestamps-to-a-day-or-a-month.md) (chop a date down to its month start) names the month, and [CAST](./132-cast-changing-a-values-type.md) (change a type) turns the timestamp it gives back into a plain date. then a second GROUP BY counts customers per cohort, so the first step sits in a [subquery in FROM](./175-subquery-in-from.md) (an inner SELECT read like a table):
 
 ```sql
 SELECT cohort, count(*) AS customers FROM (SELECT customer_id, CAST(date_trunc('month', min(login_on)) AS DATE) AS cohort FROM logins GROUP BY customer_id) AS t GROUP BY cohort ORDER BY cohort

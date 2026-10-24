@@ -42,3 +42,6 @@ assert mx == {1: 1, 2: 2, 3: 2}
 # the sql agrees
 r = q("SELECT count(*) FROM (SELECT customer_id, CAST(date_trunc('month', min(login_on)) AS DATE) AS cohort FROM logins GROUP BY customer_id) AS t")
 assert r[0][0] == 5
+# date_trunc hands back a timestamp, which is why the query casts it to a plain date (note 132 explains CAST)
+assert q("SELECT typeof(date_trunc('month', DATE '2026-01-05'))") == [("TIMESTAMP",)]
+assert q("SELECT typeof(CAST(date_trunc('month', DATE '2026-01-05') AS DATE))") == [("DATE",)]
