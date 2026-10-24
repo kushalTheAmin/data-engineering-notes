@@ -68,4 +68,4 @@ every row shows 2, the total number of sessions Asha had, because without ORDER 
 </details>
 
 ---
-prev: [199 session starts, flagging the click after a long gap](./199-session-starts-flag-the-click-after-a-long-gap.md) | next: not written yet
+prev: [199 session starts, flagging the click after a long gap](./199-session-starts-flag-the-click-after-a-long-gap.md) | next: [201 cohorts, the month each customer first showed up](./201-cohorts-the-month-each-customer-first-showed-up.md)
