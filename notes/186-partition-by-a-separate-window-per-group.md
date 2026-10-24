@@ -4,7 +4,7 @@ section: bigger queries, part 13, ~2 min read
 
 masala chai is the cheapest thing in the shop, but measured against its own category its exactly average. same row, two answers.
 
-PARTITION BY is how you pick who. it goes inside the OVER (the keyword that makes an aggregate a window function) from [185](./185-over-the-window-a-function-looks-through.md) and cuts the window (the rows a function sees for the current row) into one group per value, so a row only sees its own group. the shop, the imaginary snack store these notes run on, has 3 categories: snack (dhokla, a steamed savory cake, khandvi, a rolled gram flour snack, fafda, a crisp gram flour strip), sweet (jalebi and kaju katli) and drink (masala chai, spiced tea).
+PARTITION BY is how you pick who. it goes inside the OVER (the keyword that turns a function call into a window function) from [185](./185-over-the-window-a-function-looks-through.md) and cuts the window (the rows a function sees for the current row) into one group per value, so a row only sees its own group. the shop, the imaginary snack store these notes run on, has 3 categories: snack (dhokla, a steamed savory cake, khandvi, a rolled gram flour snack, fafda, a crisp gram flour strip), sweet (jalebi and kaju katli) and drink (masala chai, spiced tea).
 
 ```sql
 SELECT name, category, price, avg(price) OVER (PARTITION BY category) AS category_avg FROM products ORDER BY product_id

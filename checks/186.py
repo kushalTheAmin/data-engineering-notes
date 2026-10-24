@@ -24,3 +24,6 @@ assert min(p for _, _, p in rows) == 3.0
 # confirmed: PARTITION BY divides rows into groups sharing the same values, the window function sees only rows in the current row's partition, and unlike GROUP BY every row is kept
 assert q("SELECT name FROM products WHERE category = 'drink'") == [("masala chai",)]  # the only drink, so no other drinks to compare with
 assert q("SELECT name FROM products ORDER BY price LIMIT 1") == [("masala chai",)]
+# source: https://www.postgresql.org/docs/current/functions-window.html
+# confirmed: any built-in or user-defined ordinary aggregate can be used as a window function, and row_number is a window function that is not an aggregate, so OVER does not just turn an aggregate into a window function
+assert q("SELECT row_number() OVER (ORDER BY price) FROM products WHERE name = 'fafda'") == [(1,)]
