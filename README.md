@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 194
+notes so far: 195
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -222,3 +222,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [192 LAG and LEAD, looking at the row before](./notes/192-lag-and-lead-looking-at-the-row-before.md): the day before's orders pushed down one row, with NULL on the first day
 - [193 top N per group](./notes/193-top-n-per-group.md): the 2 priciest products per category, 5 rows, with masala chai alone in drinks
 - [194 removing duplicates with ROW_NUMBER](./notes/194-removing-duplicates-with-row-number.md): DISTINCT leaves Asha twice in the city feed, so number each customers rows newest first and keep number 1
+- [195 gaps and islands, date minus row number](./notes/195-gaps-and-islands-date-minus-row-number.md): which days in a row got an order, found by subtracting a counter from the date

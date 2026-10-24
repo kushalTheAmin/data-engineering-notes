@@ -61,4 +61,4 @@ these are the rows the dedup threw away: Ashas old city and Bhavins copy. the te
 </details>
 
 ---
-prev: [193 top N per group](./193-top-n-per-group.md) | next: not written yet
+prev: [193 top N per group](./193-top-n-per-group.md) | next: [195 gaps and islands, date minus row number](./195-gaps-and-islands-date-minus-row-number.md)
