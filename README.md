@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 203
+notes so far: 204
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -231,3 +231,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [201 cohorts, the month each customer first showed up](./notes/201-cohorts-the-month-each-customer-first-showed-up.md): Asha logged in three months running, so her cohort is her earliest one, and counting per month without min makes 5 people add up to 7
 - [202 retention, who came back the month after](./notes/202-retention-who-came-back-the-month-after.md): Asha came back the month after joining and Bhavin never did, so left join active months onto cohorts and count who matched
 - [203 recursive CTEs, following a chain of rows](./notes/203-recursive-ctes-following-a-chain-of-rows.md): Asha told Bhavin, Bhavin told Disha, Disha told Esha, so a query that reads its own rows walks the whole chain round by round
+- [204 arrays and UNNEST, lists inside a cell](./notes/204-arrays-and-unnest-lists-inside-a-cell.md): count the savory products when each keeps its tags in one cell, and watch the empty list vanish

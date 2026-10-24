@@ -13,6 +13,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | AND | joins two tests, keeping a row only if both are true | [108](./notes/108-and-or-combining-two-tests.md) |
 | anti join | keeps left rows with no match: a left join, then IS NULL | [167](./notes/167-anti-join-rows-with-no-match.md) |
 | argument | a word after the program name, handed to that program | [049](./notes/049-the-terminal.md) |
+| array (SQL) | several values kept in one cell, written in square brackets | [204](./notes/204-arrays-and-unnest-lists-inside-a-cell.md) |
 | ASCII | the old table giving 128 characters a number, English only | [008](./notes/008-ascii-runs-out.md) |
 | atomic | happening whole or not at all, never half done | [046](./notes/046-writing-safely.md) |
 | avg | the average of a column, its sum divided by how many values | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
@@ -278,6 +279,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | UNION ALL | stacks two queries rows and keeps every repeat | [182](./notes/182-union-and-union-all.md) |
 | unix time | a moment kept as seconds counted since the epoch | [025](./notes/025-unix-time.md) |
 | unknown | the third test result, from a null, that WHERE drops | [114](./notes/114-three-valued-logic-true-false-and-unknown.md) |
+| UNNEST | turns each item of a list cell into its own row | [204](./notes/204-arrays-and-unnest-lists-inside-a-cell.md) |
 | update anomaly | one fact stored in many rows, an update changing only some | [089](./notes/089-update-anomalies.md) |
 | upper | a function turning every letter to upper case | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | UTC | the one clock everyone measures against, with no daylight saving | [024](./notes/024-utc.md) |
