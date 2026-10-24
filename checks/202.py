@@ -29,3 +29,5 @@ assert q("SELECT count(*) FROM logins WHERE customer_id = 3 AND login_on >= DATE
 assert q("SELECT max(login_on) FROM logins") == [(date(2026, 3, 8),)]
 # cohort is the first login month, not the signup month: Disha joined in march but first logged in in february
 assert q("SELECT month(c.joined_on), min(month(l.login_on)) FROM customers c JOIN logins l USING (customer_id) WHERE c.name = 'Disha' GROUP BY 1") == [(3, 2)]
+# CAST turns the timestamp date_trunc returns into a plain date (note 132)
+assert q("SELECT typeof(date_trunc('month', DATE '2026-01-05')), typeof(CAST(date_trunc('month', DATE '2026-01-05') AS DATE))") == [("TIMESTAMP", "DATE")]
