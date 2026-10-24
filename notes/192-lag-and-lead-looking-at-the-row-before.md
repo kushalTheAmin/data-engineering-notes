@@ -57,7 +57,7 @@ day | two_back
 2026-04-02 | NULL
 2026-04-03 | 2
 ```
-with a distance of 2, the first two rows have nobody that far back, so both edges are NULL, but april 3 does reach april 1. the tempting answer is 0 on april 3, april 2s value, from reading 2 as one row back.
+with a distance of 2, the first two days have nobody that far back, so april 2 is NULL, but april 3 does reach april 1. the tempting answer is 0 on april 3, april 2s value, from reading 2 as one row back.
 
 </details>
 

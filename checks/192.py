@@ -30,3 +30,5 @@ assert two[1] is None and two[2] == 2 and placed[1] == 0
 assert q("SELECT day, two_back FROM (SELECT day, lag(placed, 2) OVER (ORDER BY day) AS two_back FROM daily_orders) AS t WHERE day IN (DATE '2026-04-02', DATE '2026-04-03') ORDER BY day") == [(dt.date(2026, 4, 2), None), (dt.date(2026, 4, 3), 2)]
 # source: https://www.postgresql.org/docs/current/functions-window.html
 # confirmed: lag returns the value at the row offset rows before the current row; if there is no such row, returns default; offset defaults to 1 and default to NULL. lead is the same for rows after
+# answer 2 wording: only april 2 is NULL, april 3 reaches april 1
+assert two[1] is None and two[2] == placed[0]
