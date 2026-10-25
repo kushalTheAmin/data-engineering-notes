@@ -76,4 +76,4 @@ all five go in, since DuckDB never clashes NULLs, and count(city) skips them. th
 </details>
 
 ---
-prev: [215 NOT NULL and DEFAULT, required columns and fallback values](./215-not-null-and-default-required-columns-and-fallback-values.md) | next: not written yet
+prev: [215 NOT NULL and DEFAULT, required columns and fallback values](./215-not-null-and-default-required-columns-and-fallback-values.md) | next: [217 CHECK, a rule every value must pass](./217-check-a-rule-every-value-must-pass.md)

@@ -31,6 +31,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | CASE WHEN | an if, elif, else per row, the first true test wins | [123](./notes/123-case-when-if-and-else-inside-a-query.md) |
 | CAST | converts a value to another type, written CAST(x AS type) | [132](./notes/132-cast-changing-a-values-type.md) |
 | character | one letter, digit, space or symbol, stored as one number | [007](./notes/007-text-is-numbers.md) |
+| CHECK | a column rule: refuse any row where its test is false | [217](./notes/217-check-a-rule-every-value-must-pass.md) |
 | client | a program that sends a request and waits for the answer | [086](./notes/086-client-and-server.md) |
 | COALESCE | returns the first value in its list that is not null | [116](./notes/116-coalesce-a-fallback-when-a-value-is-null.md) |
 | code point | the number Unicode gives one character, written like U+0AA2 | [009](./notes/009-unicode.md) |

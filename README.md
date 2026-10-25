@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 216
+notes so far: 217
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -247,3 +247,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [214 temporary tables, a table that lives as long as your session](./notes/214-temporary-tables.md): a temp table named products hides the real one, so the shop suddenly has 3 products and nothing was deleted
 - [215 NOT NULL and DEFAULT, required columns and fallback values](./notes/215-not-null-and-default-required-columns-and-fallback-values.md): Esha has no city but nobody has no name, and a default fills a column you leave out but never rescues a NULL you type
 - [216 UNIQUE, no two rows may share a value](./notes/216-unique-no-two-rows-may-share-a-value.md): the second asha@example.com is refused, but two NULL emails both get in, because a missing value never equals another
+- [217 CHECK, a rule every value must pass](./notes/217-check-a-rule-every-value-must-pass.md): a price of -7.50 passes NOT NULL, and a NULL price even passes CHECK (price > 0), because unknown is not false
