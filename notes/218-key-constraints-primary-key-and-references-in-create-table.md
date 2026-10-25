@@ -45,7 +45,7 @@ this bites in data warehouses (databases built for analysis). Snowflake, a popul
 
 ### check yourself
 
-1. the keyed shipments table holds shipment 1 for order 101. a second shipment, number 2, goes out for the same order 101. refused? what do these give?
+1. the keyed shipments table holds shipment 1 for order 101. a second shipment, number 2, goes out for the same order 101. refused? what do these give (count(*) counts rows, count(DISTINCT order_id) counts the different order ids)?
 ```sql
 CREATE TABLE ship2 (shipment_id INTEGER PRIMARY KEY, order_id INTEGER NOT NULL REFERENCES orders (order_id));
 INSERT INTO ship2 VALUES (1, 101), (2, 101);
