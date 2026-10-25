@@ -35,3 +35,18 @@ except Exception as e:
 #   confirmed (opened this run): "by default objects are created in the public schema", so public.products reaches the real table
 # source: https://www.postgresql.org/docs/current/glossary.html
 #   confirmed (opened this run): relation is "The generic term for all objects in a database that have a name and a list of attributes defined in a specific order. Tables, sequences, views, foreign tables, materialized views, composite types, and indexes are all relations."
+# the real table needs its database name: a file database takes its name from the file, an in-memory one is called memory
+import duckdb, tempfile
+d = tempfile.mkdtemp()
+f = duckdb.connect(os.path.join(d, "shop.duckdb"))
+f.execute("CREATE TABLE products (price DECIMAL(4,2))")
+f.execute("INSERT INTO products VALUES (3), (4.5), (5), (6), (7), (8)")
+f.execute("CREATE TEMP TABLE products AS SELECT * FROM products WHERE price < 6")
+assert f.execute("SELECT count(*) FROM products").fetchall() == [(3,)]
+assert f.execute("SELECT count(*) FROM shop.products").fetchall() == [(6,)]
+try:
+    f.execute("SELECT count(*) FROM memory.products"); assert False
+except duckdb.CatalogException:
+    pass
+# source: https://duckdb.org/docs/2.0/sql/statements/create_table.html
+#   confirmed (opened this run): temporary tables are "session scoped ... once the connection to DuckDB is closed they will be automatically dropped", live in the temp.main schema, "take priority in name resolution and full qualification is required to refer to a regular table e.g., memory.main.t1"
