@@ -4,7 +4,7 @@ section: changing data safely, part 2, ~2 min read
 
 start the same box twice and edit a file inside one. does the other change too?
 
-[208](./208-containers-a-program-packed-with-everything-it-needs.md) said a container is a walled-off [process](./050-processes.md) (a running copy of a program) holding its own python and libraries. but a process comes from a program sitting on disk, so what does a container come from? an image: the packed box before anything runs, one frozen file with python, libraries, settings and the script. a container is a running copy made from it, same split as program and process.
+[208](./208-containers-a-program-packed-with-everything-it-needs.md) said a container is a walled-off [process](./050-processes.md) (a running copy of a program) holding its own python and libraries. but a process comes from a program sitting on disk, so what does a container come from? an image: the packed box before anything runs, one frozen package with python, libraries, settings and the script. a container is a running copy made from it, same split as program and process.
 
 the shop, the imaginary gujarati snack store these notes run on, packs its order loader into an image called shop-loader. watch what happens to the counts (Docker is the tool that runs containers, and every docker run makes a new container from an image):
 

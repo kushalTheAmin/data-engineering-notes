@@ -27,3 +27,4 @@ assert len(containers) == 2 and not edited("c")
 #   confirmed: "Images are immutable. Once an image is created, it can't be modified."; an image is a package of "all of the files, binaries, libraries, and configurations"
 # source: https://docs.docker.com/reference/cli/docker/container/run/
 #   confirmed: docker run is described as "Create and run a new container from an image"
+#   confirmed (opened this run): "Container images are composed of layers", so an image is a package of layers, not one file
