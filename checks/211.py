@@ -15,3 +15,5 @@ assert port == 5432
 #   confirmed (opened this run): "With SQLite, the process that wants to access the database reads and writes directly from the database files on disk. There is no intermediary server process."
 # source: https://www.postgresql.org/docs/current/app-pgresetwal.html
 #   confirmed (opened this run): pg_resetwal "must not be used when the server is running" and needs read/write access to the data directory, so the server is the only program opening the files while it runs
+# source: https://www.postgresql.org/docs/current/libpq-connect.html
+#   confirmed (opened this run): a host starting with a slash "specifies Unix-domain communication rather than TCP/IP", so a local client can reach the server through a socket file instead of an address and port

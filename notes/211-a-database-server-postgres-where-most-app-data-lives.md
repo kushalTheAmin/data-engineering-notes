@@ -13,11 +13,11 @@ my script                        Bhavins app ----+--> postgres server --> data f
   opens shop.duckdb directly     report script --+    listens on 5432     only it touches them
 ```
 
-with [DuckDB](./102-a-database-in-one-file.md) the database is a library inside your script, so whoever opens the file is the one touching it. with Postgres, three clients can be connected at the same moment and none of them ever opens a file. each one sends SQL (the language for asking a database) down its connection and gets rows back.
+with [DuckDB](./102-a-database-in-one-file.md) the database is a library inside your script, so whoever opens the file is the one touching it. with Postgres, three clients can be connected at once and none of them ever opens a file. each one sends SQL (the language for asking a database) down its connection and gets rows back.
 
-the Postgres docs say it starts a new process (a running program) for each connection, while one original process keeps listening. i assumed a server database was just a bigger DuckDB, but the real difference is who opens the file.
+the Postgres docs say it starts a new process (a running program) for each connection, while one keeps listening. i assumed a server database was just a bigger DuckDB, but the real difference is who opens the file.
 
-this is why a react or .NET backend on Postgres reaches its database by an address and port, not a file path (SQLite, another database, is read straight from its file). the notes on locks and transactions from here describe Postgres, while shop queries still get checked in DuckDB.
+this is why a react or .NET backend on Postgres reaches its database by asking the server, usually at an address and port, and never by opening the data files (SQLite, another database, is read straight from its file). the notes on locks and transactions from here describe Postgres, while shop queries still get checked in DuckDB.
 
 ---
 prev: [210 running Postgres in a container on your laptop](./210-running-postgres-in-a-container-on-your-laptop.md) | next: [212 connections and sessions, one conversation with the database](./212-connections-and-sessions-one-conversation-with-the-database.md)
