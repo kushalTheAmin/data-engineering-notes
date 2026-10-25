@@ -36,3 +36,5 @@ assert sorted(r[0] for r in q("SELECT DISTINCT city FROM customers WHERE city IS
 # source: https://www.postgresql.org/docs/current/ddl-constraints.html
 #   confirmed (opened this run): "A table can have at most one primary key"
 assert q("SELECT 'DIWALI' = 'diwali'") == [(False,)]
+# source: https://www.postgresql.org/docs/15/release-15.html
+#   confirmed (opened this run): "this can now be changed by creating constraints and indexes using UNIQUE NULLS NOT DISTINCT", and the postgres 14 constraints page has no NULLS NOT DISTINCT, so the option starts at Postgres 15

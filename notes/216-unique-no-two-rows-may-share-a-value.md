@@ -4,7 +4,7 @@ section: changing data safely, part 9, ~2 min read
 
 two shoppers sign up with the same email. the table already has a primary key, so which rule stops the second one?
 
-not the key, the key is for customer_id. UNIQUE is a rule you put on any other column: the database refuses a row whose value is already in that column. you write it inside [CREATE TABLE](./213-create-table-naming-a-table-and-its-columns.md) (the command that makes a table), next to rules like [NOT NULL](./215-not-null-and-default-required-columns-and-fallback-values.md) (refuse a missing value). the shop, the imaginary gujarati snack store these notes run on, gets a login table, in DuckDB. INSERT INTO adds rows:
+not the key, the key is for customer_id. UNIQUE is a rule you put on any other column: the database refuses a row whose value is already in that column. you write it inside [CREATE TABLE](./213-create-table-naming-a-table-and-its-columns.md) (the command that makes a table), next to rules like [NOT NULL](./215-not-null-and-default-required-columns-and-fallback-values.md) (refuse a missing value). the shop, the imaginary gujarati snack store these notes run on, gets a login table, in DuckDB. INSERT INTO adds rows and ORDER BY customer_id sorts the output:
 
 ```sql
 CREATE TABLE login (customer_id INTEGER NOT NULL, email VARCHAR UNIQUE);
@@ -27,7 +27,7 @@ INSERT INTO login VALUES (3, 'asha@example.com')
 
 DuckDB says duplicate key, violates unique constraint, and the row never lands. a [primary key](./087-primary-key.md) (a column unique in every row and never missing) is this same rule plus no NULL, and a table gets only one primary key but can have many UNIQUE columns.
 
-the part i didnt expect is [NULL](./031-null.md) (no value). in DuckDB two missing emails dont count as the same value, so both get in (count(email) counts only rows that have one):
+the part i didnt expect is [NULL](./031-null.md) (no value). in DuckDB two missing emails dont count as the same value, so both get in (count(*) counts all rows, count(email) only rows that have one):
 
 ```sql
 INSERT INTO login VALUES (4, NULL), (5, NULL);
@@ -39,7 +39,7 @@ rows_now | with_email
 4 | 2
 ```
 
-i assumed one NULL would be the limit. Postgres does the same by default, though SQL Server allows only one, and its docs say you can add NULLS NOT DISTINCT to change that. so if you need every row to have a value, UNIQUE alone is not enough, pair it with NOT NULL.
+i assumed one NULL would be the limit. Postgres does the same by default, though SQL Server allows only one, and Postgres 15 and up can change that with NULLS NOT DISTINCT. so if you need every row to have a value, UNIQUE alone is not enough, pair it with NOT NULL.
 
 ### check yourself
 
