@@ -42,7 +42,7 @@ your app code probably checks prices too, but a script that skips it still hits 
 
 ### check yourself
 
-1. a stock table has `quantity INTEGER CHECK (quantity >= 0)`. you insert dhokla with 0 and jalebi with NULL. does either get refused, and what do count(*) and count(quantity) give (the second counts only rows that have a value)?
+1. a stock table has `quantity INTEGER CHECK (quantity >= 0)`. you insert dhokla with 0 and jalebi with NULL. does either get refused, and what do count(*) and count(quantity) give (the first counts every row, the second only rows that have a value)?
 ```sql
 CREATE TABLE stock (product VARCHAR, quantity INTEGER CHECK (quantity >= 0));
 INSERT INTO stock VALUES ('dhokla', 0), ('jalebi', NULL);
@@ -58,7 +58,7 @@ neither is refused. 0 passes because the test says zero or more, and NULL gives 
 
 </details>
 
-2. say the orders table had been made with CHECK (status IN ('pending', 'delivered')). the 7 orders hold 5 delivered, 1 pending and 1 cancelled. which would the rule have refused?
+2. say the orders table had been made with CHECK (status IN ('pending', 'delivered')). the 7 orders hold 5 delivered, 1 pending and 1 cancelled. which would the rule have refused? (WHERE in the query keeps only the matching rows)
 ```sql
 SELECT order_id, status FROM orders WHERE NOT (status IN ('pending', 'delivered'))
 ```
