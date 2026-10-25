@@ -38,7 +38,7 @@ Asha | 2
 Bhavin | 1
 ```
 
-this is [schema on read](./083-schema-on-write-vs-schema-on-read.md) (shape checked only when you query) in action, which is why event logs often land like this. Postgres (another database) has ->> on its json columns too, but it takes only a bare key like 'quantity', no $. path.
+this is [schema on read](./083-schema-on-write-vs-schema-on-read.md) (shape checked only when you query) in action, which is why event logs often land like this. Postgres (another database) has ->> on its json columns too, but it takes a bare key like 'quantity', not a $. path.
 
 ---
 prev: [204 arrays and UNNEST, lists inside a cell](./204-arrays-and-unnest-lists-inside-a-cell.md) | next: not written yet

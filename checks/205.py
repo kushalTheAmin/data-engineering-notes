@@ -21,3 +21,4 @@ assert q("SELECT payload ->> '$.customer' AS customer, sum(CAST(payload ->> '$.q
 assert q("SELECT payload ->> 'customer' FROM app_events WHERE event_id = 1") == [('Asha',)]  # DuckDB also takes a bare key
 # source: https://www.postgresql.org/docs/current/functions-json.html
 #   confirmed: json ->> text extracts the object field with the given key as text; no such key returns NULL instead of failing
+#   confirmed: ->> also has an integer form (json ->> integer, the nth array element), so the note says a bare key, not a $. path, and not "only"; no path form
