@@ -20,7 +20,7 @@ step  Ashas connection                       Bhavins connection
         ->  ERROR: relation "cheap" does not exist
 ```
 
-3 is jalebi, masala chai and fafda, where [WHERE](./106-where-keeping-only-the-rows-that-match.md) price < 6 holds. relation is Postgres for table (also views and indexes). i thought a temp table was a small normal table, but it acts like a python variable holding rows.
+3 is jalebi, masala chai and fafda, where [WHERE](./106-where-keeping-only-the-rows-that-match.md) price < 6 holds. relation is Postgres for table (also views and indexes). i thought a temp table was a normal table, but it acts like a python variable.
 
 a plain CREATE TABLE products errors, the name is taken. with TEMP it doesnt, since temp tables live in their own place, and products now means the temp one. this is DuckDB, a database inside a script:
 
@@ -36,7 +36,7 @@ fafda | 4.50
 jalebi | 5.00
 ```
 
-the real table is hidden and writes hit the temp one. Postgres looks in temp tables first too. the real one needs its database name: shop.products for a file shop.duckdb, memory.products if in memory, public.products in Postgres.
+the real table is hidden. Postgres looks in temp tables first too. the real one needs its full name: shop.products for a file shop.duckdb, memory.products if in memory, public.products in Postgres, where public is a schema (a folder of tables).
 
 so what: behind a pooler like the one in 212, the next statement may run on another connection, where your temp table doesnt exist.
 

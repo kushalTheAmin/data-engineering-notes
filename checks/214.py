@@ -50,3 +50,5 @@ except duckdb.CatalogException:
     pass
 # source: https://duckdb.org/docs/2.0/sql/statements/create_table.html
 #   confirmed (opened this run): temporary tables are "session scoped ... once the connection to DuckDB is closed they will be automatically dropped", live in the temp.main schema, "take priority in name resolution and full qualification is required to refer to a regular table e.g., memory.main.t1"
+# source: https://www.postgresql.org/docs/current/ddl-schemas.html
+#   confirmed (opened this run): "A database contains one or more named schemas, which in turn contain tables", so public is a schema inside the database, not a database name
