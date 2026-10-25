@@ -14,7 +14,7 @@ retention is how many people from a [cohort](./201-cohorts-the-month-each-custom
 | Disha | february | feb | no |
 | Esha | march | mar | no |
 
-i need two lists, so two [CTEs](./180-ctes-naming-each-step-with-with.md) (queries named up front with WITH): cohorts, each customers first month from 201 (CAST makes it a plain date), and active, every month each customer logged in. then [left join](./159-left-join-keep-every-row-from-the-left-table.md) active onto cohorts, matching the same customer and the month equal to the cohort plus one [month](./128-adding-and-subtracting-intervals.md):
+i need two lists, so two [CTEs](./180-ctes-naming-each-step-with-with.md) (queries named up front with WITH): cohorts, each customers first month from 201 (CAST makes it a plain date, GROUP BY gives one bucket per customer), and active, every month each customer logged in. then [left join](./159-left-join-keep-every-row-from-the-left-table.md) active onto cohorts, matching the same customer and the month equal to the cohort plus one [month](./128-adding-and-subtracting-intervals.md):
 
 ```sql
 WITH cohorts AS (SELECT customer_id, CAST(date_trunc('month', min(login_on)) AS DATE) AS cohort FROM logins GROUP BY customer_id), active AS (SELECT DISTINCT customer_id, CAST(date_trunc('month', login_on) AS DATE) AS active_month FROM logins) SELECT c.cohort, count(*) AS customers, count(a.customer_id) AS came_back FROM cohorts AS c LEFT JOIN active AS a ON a.customer_id = c.customer_id AND a.active_month = c.cohort + INTERVAL 1 MONTH GROUP BY c.cohort ORDER BY c.cohort
