@@ -4,7 +4,7 @@ section: bigger queries, part 31, ~2 min read
 
 how many shop products are tagged savory, when every product keeps all its tags in one cell?
 
-an array is a list of values stored in one cell, written in square brackets. Postgres calls it an array, DuckDB calls the variable length kind a list. UNNEST is [exploding](./071-exploding-lists-into-many-rows.md) (one row per list item) done inside a query. the shop, the imaginary gujarati snack store these notes run on, has a new product_tags table. here is a slice, then the same rows unnested:
+an array is a list of values stored in one cell, which DuckDB writes in square brackets. Postgres calls it an array, DuckDB calls the variable length kind a list. UNNEST is [exploding](./071-exploding-lists-into-many-rows.md) (one row per list item) done inside a query. the shop, the imaginary gujarati snack store these notes run on, has a new product_tags table. here is a slice, then the same rows unnested:
 
 | product_id | tags |
 |---|---|
@@ -24,7 +24,7 @@ product_id | tag
 4 | sweet
 ```
 
-each tag got its own row and product_id got copied onto both, same as 071 copying the order fields. masala chai is gone. i assumed an empty list would leave one row with a missing tag, but DuckDB says an empty list unnests to zero rows, the same hole 071 found in the python loop.
+WHERE ... IN keeps only those 3 products and ORDER BY sorts the rows. each tag got its own row and product_id got copied onto both, same as 071 copying the order fields. masala chai is gone. i assumed an empty list would leave one row with a missing tag, but DuckDB says an empty list unnests to zero rows, the same hole 071 found in the python loop.
 
 now the tags are plain rows, so the old tools work. a [subquery in FROM](./175-subquery-in-from.md) (an inner SELECT read like a table) feeds a [GROUP BY](./143-group-by-one-group-per-value.md) (one bucket per value):
 

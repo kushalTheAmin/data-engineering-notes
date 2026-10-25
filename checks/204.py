@@ -26,6 +26,10 @@ assert sum(counts.values()) == 10
 assert q("SELECT count(DISTINCT product_id) FROM (SELECT product_id, UNNEST(tags) AS tag FROM product_tags)") == [(5,)]
 assert q("SELECT count(*) FROM products") == [(6,)]
 assert [p for p, t in tags.items() if not t] == [5]
+# DuckDB shows a list in square brackets
+assert str(q("SELECT [1, 2]")[0][0]) == "[1, 2]" and q("SELECT typeof([1, 2])") == [("INTEGER[]",)]
+# source: https://www.postgresql.org/docs/current/arrays.html
+#   confirmed: Postgres array literals are written '{ val1 delim val2 ... }' in curly braces; the ARRAY[...] constructor is the square bracket form
 # source: https://duckdb.org/docs/2.0/sql/query_syntax/unnest.html
 #   confirmed: unnest turns each list element into its own row; "Empty and NULL lists both unnest to zero rows"
 # source: https://duckdb.org/docs/2.0/sql/data_types/list.html
