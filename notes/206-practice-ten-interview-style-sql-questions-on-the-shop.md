@@ -84,7 +84,7 @@ khandvi | 3
 fafda | 0
 ```
 
-an inner join (keeps only matched rows) would drop fafda, nobody ordered it. [coalesce](./116-coalesce-a-fallback-when-a-value-is-null.md) turns its NULL sum into 0.
+ORDER BY ... DESC sorts biggest first. an inner join (keeps only matched rows) would drop fafda, nobody ordered it. [coalesce](./116-coalesce-a-fallback-when-a-value-is-null.md) turns its NULL sum into 0.
 
 </details>
 
