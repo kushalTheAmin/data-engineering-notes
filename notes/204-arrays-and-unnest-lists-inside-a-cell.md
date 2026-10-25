@@ -4,7 +4,7 @@ section: bigger queries, part 31, ~2 min read
 
 how many shop products are tagged savory, when every product keeps all its tags in one cell?
 
-an array is a list of values stored in one cell, which DuckDB writes in square brackets. Postgres calls it an array, DuckDB calls the variable length kind a list. UNNEST is [exploding](./071-exploding-lists-into-many-rows.md) (one row per list item) done inside a query. the shop, the imaginary gujarati snack store these notes run on, has a new product_tags table. here is a slice, then the same rows unnested:
+an array is a list of values stored in one cell, which DuckDB writes in square brackets. Postgres (a database) calls it an array, DuckDB calls the variable length kind a list. UNNEST is [exploding](./071-exploding-lists-into-many-rows.md) (one row per list item) done inside a query. the shop, the imaginary gujarati snack store these notes run on, has a new product_tags table. here is a slice, then the same rows unnested:
 
 | product_id | tags |
 |---|---|
