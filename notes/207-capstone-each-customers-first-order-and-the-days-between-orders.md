@@ -29,7 +29,7 @@ Chirag | 104 | 2026-04-04 | 1 | NULL
 Disha | 105 | 2026-04-06 | 1 | NULL
 ```
 
-nth is [ROW_NUMBER](./187-row-number-numbering-rows-in-order.md) (numbers rows 1, 2, 3 in window order), so a customers first order is the row where nth is 1. days_since is the day minus [LAG](./192-lag-and-lead-looking-at-the-row-before.md) (the value from the row before). [CAST](./132-cast-changing-a-values-type.md) (changes a values type) made the day a plain date, so the subtraction counts calendar days and ignores the clock, [129](./129-the-difference-between-two-dates.md). Asha waited 2 days, then 5.
+the ORDER BY name, day at the end sorts the output rows. nth is [ROW_NUMBER](./187-row-number-numbering-rows-in-order.md) (numbers rows 1, 2, 3 in window order), so a customers first order is the row where nth is 1. days_since is the day minus [LAG](./192-lag-and-lead-looking-at-the-row-before.md) (the value from the row before). [CAST](./132-cast-changing-a-values-type.md) (changes a values type) made the day a plain date, so the subtraction counts calendar days and ignores the clock, [129](./129-the-difference-between-two-dates.md). Asha waited 2 days, then 5.
 
 every first order shows NULL (no value), because no row stands behind it, and 0 would be a lie, and you cant count a wait that never happened. Esha is missing completely, since an inner join (keeps only rows that match) drops customers with no orders. i figured the first order and the gap were two jobs, but the same sorted window hands out both.
 
