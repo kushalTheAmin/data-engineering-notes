@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 206
+notes so far: 207
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -234,3 +234,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [204 arrays and UNNEST, lists inside a cell](./notes/204-arrays-and-unnest-lists-inside-a-cell.md): count the savory products when each keeps its tags in one cell, and watch the empty list vanish
 - [205 querying JSON inside a column](./notes/205-querying-json-inside-a-column.md): the app logs clicks as JSON strings in one column, so ->> pulls the customer out, and a missing name quietly gives NULL
 - [206 practice, ten interview style SQL questions on the shop](./notes/206-practice-ten-interview-style-sql-questions-on-the-shop.md): the shop sells 6 products but a units query shows 5, and nine more questions where the words tell you which tool to reach for
+- [207 capstone, each customers first order and the days between orders](./notes/207-capstone-each-customers-first-order-and-the-days-between-orders.md): Asha ordered on april 1, 3 and 8, so one window per customer numbers each order and LAG gives the days since the one before

@@ -219,4 +219,4 @@ the CTE makes one total per order, then the running sum adds those up in order. 
 </details>
 
 ---
-prev: [205 querying JSON inside a column](./205-querying-json-inside-a-column.md) | next: not written yet
+prev: [205 querying JSON inside a column](./205-querying-json-inside-a-column.md) | next: [207 capstone, each customers first order and the days between orders](./207-capstone-each-customers-first-order-and-the-days-between-orders.md)
