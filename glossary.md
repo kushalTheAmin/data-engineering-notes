@@ -291,6 +291,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | Unicode | one agreed table giving every character in every script a number | [009](./notes/009-unicode.md) |
 | UNION | stacks two queries rows, then drops repeated rows | [182](./notes/182-union-and-union-all.md) |
 | UNION ALL | stacks two queries rows and keeps every repeat | [182](./notes/182-union-and-union-all.md) |
+| UNIQUE | a column rule: the database refuses a value already in the column | [216](./notes/216-unique-no-two-rows-may-share-a-value.md) |
 | unix time | a moment kept as seconds counted since the epoch | [025](./notes/025-unix-time.md) |
 | unknown | the third test result, from a null, that WHERE drops | [114](./notes/114-three-valued-logic-true-false-and-unknown.md) |
 | UNNEST | turns each item of a list cell into its own row | [204](./notes/204-arrays-and-unnest-lists-inside-a-cell.md) |

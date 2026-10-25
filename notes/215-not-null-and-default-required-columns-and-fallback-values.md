@@ -74,4 +74,4 @@ Esha is stored with the text unknown, a [placeholder value](./032-null-is-not-ze
 </details>
 
 ---
-prev: [214 temporary tables, a table that lives as long as your session](./214-temporary-tables.md) | next: not written yet
+prev: [214 temporary tables, a table that lives as long as your session](./214-temporary-tables.md) | next: [216 UNIQUE, no two rows may share a value](./216-unique-no-two-rows-may-share-a-value.md)
