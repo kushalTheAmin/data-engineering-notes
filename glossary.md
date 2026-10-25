@@ -273,6 +273,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | table alias | a short name for a table, valid for one query only | [158](./notes/158-table-aliases-short-nicknames-for-tables.md) |
 | tag | a name in angle brackets, opening or closing an XML value | [072](./notes/072-xml.md) |
 | tail | prints the last lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
+| temporary table | a table dropped when its session ends, visible only there | [214](./notes/214-temporary-tables.md) |
 | terabyte | 1000 gigabytes, a trillion bytes, written TB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | terminal | a text window where you type a line and the computer replies | [049](./notes/049-the-terminal.md) |
 | text file | a file whose bytes decode as characters, usually with UTF-8 | [041](./notes/041-text-files-vs-binary-files.md) |

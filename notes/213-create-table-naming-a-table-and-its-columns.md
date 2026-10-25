@@ -40,4 +40,4 @@ no error here (Postgres prints a notice), and no note column. the Postgres docs 
 so a column added later to a table-building script never reaches a table that already exists. changing one after the fact is its own command, in a later note.
 
 ---
-prev: [212 connections and sessions, one conversation with the database](./212-connections-and-sessions-one-conversation-with-the-database.md) | next: not written yet
+prev: [212 connections and sessions, one conversation with the database](./212-connections-and-sessions-one-conversation-with-the-database.md) | next: [214 temporary tables, a table that lives as long as your session](./214-temporary-tables.md)
