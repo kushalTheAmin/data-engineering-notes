@@ -826,3 +826,4 @@ after this arc: you can design a data platform from a business question and defe
 - [ ] the shop pipeline on GitHub as a portfolio ★
 - [ ] the job: data engineer, analytics engineer and analyst
 - [ ] capstone: the whole journey on one map, every arc capstone linked
+2026-10-25: repo baseline failed checks/011.py and 7 more: python3 is 3.11, pip gives duckdb 2.0.0 which breaks 8 checks on fetchone (041 also asserts), 1.4.5 still fails 127, 201, 202 on date_trunc types, mermaid render failed again; no note written, needs a fix outside this run
