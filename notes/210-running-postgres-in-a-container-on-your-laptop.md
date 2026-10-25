@@ -11,7 +11,7 @@ docker run --name shop-db -e POSTGRES_PASSWORD=snacks -p 5432:5432 -d postgres
 
 docker run                       make a container from an image and start it
 --name shop-db                   a name, so i can find it later
--e POSTGRES_PASSWORD=snacks      a setting handed in from outside; the image wont start without one
+-e POSTGRES_PASSWORD=snacks      a setting handed in from outside; the image wont start without one unless you switch passwords off
 -p 5432:5432                     laptop port : container port
 -d                               run in the background, give the terminal back
 postgres                         the image

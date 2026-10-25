@@ -16,3 +16,5 @@ assert (host, box) == ("5433", "5432")  # left number is the laptop side
 #   confirmed (opened this run): rm -v "Remove anonymous volumes associated with the container", so the unnamed volume is not simply the container's own layer
 # source: https://hub.docker.com/_/postgres
 #   confirmed (opened this run): the postgres image uses an anonymous volume "not reused across container re-creations"
+# source: https://hub.docker.com/_/postgres
+#   confirmed (opened this run): "If you set POSTGRES_HOST_AUTH_METHOD to trust, then POSTGRES_PASSWORD is not required."
