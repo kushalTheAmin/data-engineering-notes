@@ -28,4 +28,5 @@ try:
 except Exception as e:
     assert "window function calls cannot be nested" in str(e)
 # source: https://www.postgresql.org/docs/current/sql-expressions.html
-# confirmed: "Window function calls are permitted only in the SELECT list and the ORDER BY clause of the query."
+# confirmed: syntax description says each argument is "any value expression that does not itself contain window function calls", so a window call cannot sit inside another;
+#   (the page also says "Window function calls are permitted only in the SELECT list and the ORDER BY clause of the query.")
