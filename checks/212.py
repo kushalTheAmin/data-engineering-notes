@@ -8,3 +8,5 @@ assert steps == 6
 #   confirmed (opened this run): "SET only affects the value used by the current session."; a SET persists "until the end of the session"; SET TIME ZONE and SHOW exist
 # source: https://www.pgbouncer.org/features.html
 #   confirmed (opened this run): transaction pooling assigns a server connection to a client only during a transaction; its feature table lists SET/RESET as Yes for session pooling and Never for transaction pooling
+# source: https://www.postgresql.org/docs/current/runtime-config-client.html
+#   confirmed (opened this run): TimeZone "built-in default is GMT, but that is typically overridden in postgresql.conf; initdb will install a setting there corresponding to its system environment", so UTC is an assumed setting here, not a universal default

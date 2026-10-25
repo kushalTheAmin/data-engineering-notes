@@ -6,7 +6,7 @@ if Asha changes her time zone setting on the database, does Bhavin see the chang
 
 [211](./211-a-database-server-postgres-where-most-app-data-lives.md) had three clients connected to one Postgres server. each [connection](./102-a-database-in-one-file.md) (an open line from a program to a database) carries one session: the conversation that starts when the line opens, ends when it closes, and keeps its own settings in between. the word is new here, because in [199](./199-session-starts-flag-the-click-after-a-long-gap.md) a session meant a run of someones clicks.
 
-here is the shop, the imaginary gujarati snack store these notes run on, with two apps on the Postgres server from [210](./210-running-postgres-in-a-container-on-your-laptop.md). this is Postgres, not DuckDB, and the server default is UTC:
+here is the shop, the imaginary gujarati snack store these notes run on, with two apps on the Postgres server from [210](./210-running-postgres-in-a-container-on-your-laptop.md). this is Postgres, not DuckDB, and say the server is set to default to UTC:
 
 ```text
 step  Ashas app (connection 1)               Bhavins app (connection 2)
