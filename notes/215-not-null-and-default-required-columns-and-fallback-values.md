@@ -33,7 +33,7 @@ INSERT INTO cart VALUES (3, 2, NULL)
 
 both fail with a NOT NULL error. the second is the one i didnt expect: quantity has a default of 1, but a default only fills a column you leave out. typing NULL is a value you chose, so the rule refuses it.
 
-unlike [COALESCE](./116-coalesce-a-fallback-when-a-value-is-null.md) (first value that is not null), which patches output when you read, DEFAULT stores the fallback when you write. the rule lives in the database, so a script that skips your react form or .NET validation still gets refused.
+unlike [COALESCE](./116-coalesce-a-fallback-when-a-value-is-null.md) (first value that is not null), which patches output when you read, DEFAULT stores the fallback when you write. the rule lives in the database, so a script that skips your apps own checks still gets refused.
 
 ### check yourself
 
