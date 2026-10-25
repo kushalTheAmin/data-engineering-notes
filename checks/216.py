@@ -27,3 +27,5 @@ assert q("SELECT count(*), count(city) FROM hub") == [(5, 3)]
 assert sorted(r[0] for r in q("SELECT DISTINCT city FROM customers WHERE city IS NOT NULL")) == ["Edison", "Hoboken", "Jersey City"]
 # source: https://www.postgresql.org/docs/current/ddl-constraints.html
 #   confirmed (opened this run): null values are never considered equal in the unique comparison, so duplicate rows with a null are storable; NULLS NOT DISTINCT changes this.
+# source: https://learn.microsoft.com/en-us/sql/relational-databases/tables/unique-constraints-and-check-constraints
+#   confirmed (opened this run): SQL Server UNIQUE "allow for the value NULL. However, as with any value participating in a UNIQUE constraint, only one null value is allowed per column", so two NULLs both getting in is DuckDB and Postgres behavior, not every database

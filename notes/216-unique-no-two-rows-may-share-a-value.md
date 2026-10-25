@@ -27,7 +27,7 @@ INSERT INTO login VALUES (3, 'asha@example.com')
 
 DuckDB says duplicate key, violates unique constraint, and the row never lands. a [primary key](./087-primary-key.md) (a column unique in every row and never missing) is this same rule plus no NULL, and a table gets only one primary key but can have many UNIQUE columns.
 
-the part i didnt expect is [NULL](./031-null.md) (no value). two missing emails dont count as the same value, so both get in (count(email) counts only rows that have one):
+the part i didnt expect is [NULL](./031-null.md) (no value). in DuckDB two missing emails dont count as the same value, so both get in (count(email) counts only rows that have one):
 
 ```sql
 INSERT INTO login VALUES (4, NULL), (5, NULL);
@@ -39,7 +39,7 @@ rows_now | with_email
 4 | 2
 ```
 
-i assumed one NULL would be the limit. Postgres does the same by default, and its docs say you can add NULLS NOT DISTINCT to change that. so if you need every row to have a value, UNIQUE alone is not enough, pair it with NOT NULL.
+i assumed one NULL would be the limit. Postgres does the same by default, though SQL Server allows only one, and its docs say you can add NULLS NOT DISTINCT to change that. so if you need every row to have a value, UNIQUE alone is not enough, pair it with NOT NULL.
 
 ### check yourself
 
@@ -71,7 +71,7 @@ SELECT count(*) AS all_rows, count(city) AS named FROM hub
 all_rows | named
 5 | 3
 ```
-all five go in, since NULLs never clash, and count(city) skips them. the tempting answer is 4 rows, one NULL allowed.
+all five go in, since DuckDB never clashes NULLs, and count(city) skips them. the tempting answer is 4 rows, one NULL allowed.
 
 </details>
 
