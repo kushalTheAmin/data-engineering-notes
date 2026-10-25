@@ -21,3 +21,4 @@ assert q("SELECT column_name FROM information_schema.columns WHERE table_name = 
     ("product_id",), ("name",), ("category",), ("price",)]
 # source: https://www.postgresql.org/docs/current/sql-createtable.html
 #   confirmed (opened this run): "CREATE TABLE will create a new, initially empty table in the current database"; IF NOT EXISTS: "Do not throw an error if a relation with the same name already exists... Note that there is no guarantee that the existing relation is anything like the one that would have been created."
+#   confirmed (opened this run): IF NOT EXISTS "A notice is issued in this case."; a real Postgres 16 server also printed: NOTICE:  relation "products" already exists, skipping, and information_schema.columns returned the types as integer and date
