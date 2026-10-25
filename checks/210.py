@@ -12,3 +12,7 @@ assert (host, box) == ("5433", "5432")  # left number is the laptop side
 #   confirmed: port is "The TCP port the server listens on; 5432 by default."
 # source: https://docs.docker.com/engine/storage/
 #   confirmed: "Data written to the container layer doesn't persist when the container is destroyed."
+# source: https://docs.docker.com/reference/cli/docker/container/rm/
+#   confirmed (opened this run): rm -v "Remove anonymous volumes associated with the container", so the unnamed volume is not simply the container's own layer
+# source: https://hub.docker.com/_/postgres
+#   confirmed (opened this run): the postgres image uses an anonymous volume "not reused across container re-creations"

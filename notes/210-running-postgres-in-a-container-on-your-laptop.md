@@ -27,7 +27,7 @@ the one that bit me is -p. the container has its own ports, and [a port picks wh
 
 the left number is the laptop side, so 5433:5432 is how you dodge a Postgres already installed on 5432. i assumed a running database was a reachable database, but running only means the process is alive inside the walls.
 
-and the catch from [209](./209-images-and-containers-the-packed-box-and-the-running-copy.md) still holds: every row you create lives in this containers scratch space, so removing shop-db removes the shop.
+and the catch from [209](./209-images-and-containers-the-packed-box-and-the-running-copy.md) still holds: rows you create land in an unnamed volume (a disk area docker manages) that a fresh container never reuses, so removing shop-db and starting again gives an empty shop.
 
 ---
 prev: [209 images and containers, the packed box and the running copy](./209-images-and-containers-the-packed-box-and-the-running-copy.md) | next: [211 a database server, Postgres where most app data lives](./211-a-database-server-postgres-where-most-app-data-lives.md)
