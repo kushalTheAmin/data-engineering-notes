@@ -28,3 +28,5 @@ assert len(containers) == 2 and not edited("c")
 # source: https://docs.docker.com/reference/cli/docker/container/run/
 #   confirmed: docker run is described as "Create and run a new container from an image"
 #   confirmed (opened this run): "Container images are composed of layers", so an image is a package of layers, not one file
+# source: https://hub.docker.com/_/postgres
+#   confirmed (opened this run): the image declares a volume (/var/lib/postgresql/data up to 17, /var/lib/postgresql from 18) and "the container runtime will automatically create an anonymous volume that is not reused across container re-creations"; data there "won't persist when the container is deleted and re-created"

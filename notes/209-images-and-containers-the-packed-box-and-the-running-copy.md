@@ -18,9 +18,7 @@ the shop, the imaginary gujarati snack store these notes run on, packs its order
 
 each container gets its own private scratch space on top of the image. the edit in step 3 lands there, so b never sees it, and the image is never touched. the image just sits there and never runs. i assumed the image was the thing running and a container was only a nickname for it.
 
-removing a in step 4 throws its edit away, and c in step 5 starts clean.
-
-this bites with databases. a Postgres container (Postgres is a database) that stores rows in its own scratch space loses them when you remove it. you have to keep the data outside the container, and a later note does that.
+this bites with databases. a Postgres container (Postgres is a database) that stores rows inside itself loses them when you remove it. the real image parks them in an unnamed volume (a disk area docker manages) that a fresh container never reuses, so the loss looks the same. keep the data somewhere you name, and a later note does that.
 
 ### check yourself
 
