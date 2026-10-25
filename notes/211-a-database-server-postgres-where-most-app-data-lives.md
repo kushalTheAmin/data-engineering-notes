@@ -20,4 +20,4 @@ the Postgres docs say it starts a new process (a running program) for each conne
 this is why a react or .NET backend on Postgres reaches its database by an address and port, not a file path (SQLite, another database, is read straight from its file). the notes on locks and transactions from here describe Postgres, while shop queries still get checked in DuckDB.
 
 ---
-prev: [210 running Postgres in a container on your laptop](./210-running-postgres-in-a-container-on-your-laptop.md) | next: not written yet
+prev: [210 running Postgres in a container on your laptop](./210-running-postgres-in-a-container-on-your-laptop.md) | next: [212 connections and sessions, one conversation with the database](./212-connections-and-sessions-one-conversation-with-the-database.md)

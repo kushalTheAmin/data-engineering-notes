@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 211
+notes so far: 212
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -242,3 +242,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [209 images and containers, the packed box and the running copy](./notes/209-images-and-containers-the-packed-box-and-the-running-copy.md): edit a file in one of two containers started from the same image and the other never sees it, because the image itself never changes
 - [210 running Postgres in a container on your laptop](./notes/210-running-postgres-in-a-container-on-your-laptop.md): the container says running but the app gets connection refused, because without -p nothing on the laptop is wired to the box
 - [211 a database server, Postgres where most app data lives](./notes/211-a-database-server-postgres-where-most-app-data-lives.md): DuckDB lets one program write to its file, so a shop with many shoppers needs a server that alone opens the files and answers every client
+- [212 connections and sessions, one conversation with the database](./notes/212-connections-and-sessions-one-conversation-with-the-database.md): Asha sets her time zone and Bhavin on the same server still sees UTC, because a setting belongs to one connection's session
