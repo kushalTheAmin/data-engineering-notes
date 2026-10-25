@@ -31,3 +31,10 @@ assert q("SELECT order_id FROM orders2 WHERE status = 'pending'") == [(1,)]
 #   confirmed (opened this run): serial is a notational convenience built on a sequence plus DEFAULT nextval(...); gaps appear because a value is used up even if the row never lands.
 #   also confirmed there: AUTO_INCREMENT is a similar property supported by some other databases.
 # note: nextval is not undone by ROLLBACK in DuckDB, checked by running it in python this run.
+con.execute("CREATE SEQUENCE rb START 1")
+con.execute("BEGIN")
+assert q("SELECT nextval('rb')") == [(1,)]
+con.execute("ROLLBACK")
+assert q("SELECT nextval('rb')") == [(2,)]
+# source: https://dev.mysql.com/doc/refman/8.4/en/example-auto-increment.html
+#   confirmed (opened this run): "When you insert any other value into an AUTO_INCREMENT column, the column is set to that value and the sequence is reset so that the next automatically generated value follows sequentially from the largest column value", so after 101 and 102 typed by hand MySQL hands out 103
