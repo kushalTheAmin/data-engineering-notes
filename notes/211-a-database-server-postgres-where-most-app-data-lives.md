@@ -4,7 +4,7 @@ section: changing data safely, part 4, ~2 min read
 
 DuckDB lets one running program write to its file at a time. so how does the shop, the imaginary snack store these notes run on, take orders from Asha and Bhavin in the same second?
 
-[210](./210-running-postgres-in-a-container-on-your-laptop.md) left a Postgres container running. Postgres is a database server: a database that runs as its own program, listens on a [port](./086-client-and-server.md) (a number picking which program gets the bytes; 5432 unless you change it), and is the only thing that ever opens the data files. everyone else is a [client](./086-client-and-server.md) (a program that sends a request and waits), and it asks.
+[210](./210-running-postgres-in-a-container-on-your-laptop.md) left a Postgres container running. Postgres is a database server: a database that runs as its own program, listens on a [port](./086-client-and-server.md) (a number picking which program gets the bytes; 5432 unless you change it), and is the only program that opens the data files while it runs. everyone else is a [client](./086-client-and-server.md) (a program that sends a request and waits), and it asks.
 
 ```text
 DuckDB (102)                     Postgres
@@ -17,7 +17,7 @@ with [DuckDB](./102-a-database-in-one-file.md) the database is a library inside 
 
 the Postgres docs say it starts a new process (a running program) for each connection, while one original process keeps listening. i assumed a server database was just a bigger DuckDB, but the real difference is who opens the file.
 
-this is why a react or .NET backend reaches its database by an address and port, not a file path. the notes on locks and transactions from here describe Postgres, while shop queries still get checked in DuckDB.
+this is why a react or .NET backend on Postgres reaches its database by an address and port, not a file path (SQLite, another database, is read straight from its file). the notes on locks and transactions from here describe Postgres, while shop queries still get checked in DuckDB.
 
 ---
 prev: [210 running Postgres in a container on your laptop](./210-running-postgres-in-a-container-on-your-laptop.md) | next: not written yet
