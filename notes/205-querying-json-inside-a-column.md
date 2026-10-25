@@ -10,7 +10,7 @@ the arrow ->> reaches into a [JSON](./066-json-records-with-names-on-every-value
 {"type": "add_to_cart", "customer": "Asha", "product": "dhokla", "quantity": 2}
 ```
 
-the path after the arrow says where: $ means the whole record, so $.customer means the value named customer. type is view or add_to_cart, and AS just names the output column:
+ORDER BY event_id sorts the rows. the path after the arrow says where: $ means the whole record, so $.customer means the value named customer. type is view or add_to_cart, and AS just names the output column:
 
 ```sql
 SELECT event_id, payload ->> '$.customer' AS customer, payload ->> '$.quantity' AS quantity FROM app_events ORDER BY event_id
@@ -38,7 +38,7 @@ Asha | 2
 Bhavin | 1
 ```
 
-this is [schema on read](./083-schema-on-write-vs-schema-on-read.md) (shape checked only when you query), which is why event logs often land like this. Postgres (another database) has ->> on its json columns too, but it takes a bare key like 'quantity', not a $. path.
+this is [schema on read](./083-schema-on-write-vs-schema-on-read.md) (shape checked only when you query). Postgres (another database) has ->> on its json columns too, but it takes a bare key like 'quantity', not a $. path.
 
 ---
 prev: [204 arrays and UNNEST, lists inside a cell](./204-arrays-and-unnest-lists-inside-a-cell.md) | next: [206 practice, ten interview style SQL questions on the shop](./206-practice-ten-interview-style-sql-questions-on-the-shop.md)
