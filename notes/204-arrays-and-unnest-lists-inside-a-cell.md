@@ -42,7 +42,7 @@ rolled | 1
 steamed | 1
 ```
 
-savory is 3. the counts add up to 10 tags, but only 5 of the 6 products show up behind them, since chai has none. so a tag count can never tell you which products are untagged, you need the original table for that.
+savory is 3. the counts add up to 10 tags, but only 5 of the shops 6 products show up behind them, since chai has none. so a tag count can never tell you which products are untagged, you need the original table for that.
 
 Postgres has the same unnest function on its arrays, so this habit carries over.
 
