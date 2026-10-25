@@ -32,7 +32,7 @@ this bites with databases. a Postgres container (Postgres is a database) that st
 2. a team removes their Postgres container to upgrade, then starts a fresh one from the same image. their orders were stored inside the old container. where are the orders now?
 <details><summary>answer</summary>
 
-gone, they lived in the removed containers scratch space. the image never held them. the tempting answer is that they come back, from thinking the image remembers what its containers did.
+the new container starts with none. they were written inside the old container, into the unnamed volume from above, which a fresh container never reuses, and the image never held them. the tempting answer is that they come back, from thinking the image remembers what its containers did.
 
 </details>
 

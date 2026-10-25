@@ -30,3 +30,4 @@ assert len(containers) == 2 and not edited("c")
 #   confirmed (opened this run): "Container images are composed of layers", so an image is a package of layers, not one file
 # source: https://hub.docker.com/_/postgres
 #   confirmed (opened this run): the image declares a volume (/var/lib/postgresql/data up to 17, /var/lib/postgresql from 18) and "the container runtime will automatically create an anonymous volume that is not reused across container re-creations"; data there "won't persist when the container is deleted and re-created"
+# question 2 answer: the orders are not visible to the fresh container; they sit in the old containers anonymous volume, per the postgres image page above
