@@ -55,7 +55,7 @@ SELECT count(*) AS coupons FROM coupon
 coupons
 2
 ```
-accepted. UNIQUE compares the text exactly, so DIWALI and diwali are different values. the tempting answer is refused, because they look the same to a person.
+accepted. in DuckDB, UNIQUE compares the text exactly, so DIWALI and diwali are different values (MySQL ignores case by default and would refuse). the tempting answer is refused, because they look the same to a person.
 
 </details>
 
