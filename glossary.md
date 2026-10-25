@@ -52,6 +52,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | count(*) | counts every row, nulls or not | [138](./notes/138-count-star-vs-count-of-a-column.md) |
 | count(column) | counts the rows where that column is not null | [138](./notes/138-count-star-vs-count-of-a-column.md) |
 | count(DISTINCT column) | counts how many different non-null values a column has | [139](./notes/139-count-distinct-counting-different-values.md) |
+| CREATE TABLE | makes a new empty table from a name and typed columns | [213](./notes/213-create-table-naming-a-table-and-its-columns.md) |
+| CREATE TABLE IF NOT EXISTS | skips if the name is taken, never checking the columns match | [213](./notes/213-create-table-naming-a-table-and-its-columns.md) |
 | CRLF | a line ending of two characters, 0d then 0a, common on windows | [042](./notes/042-line-endings.md) |
 | cross join | a join with no test, pairing every row with every row | [169](./notes/169-cross-join-every-row-with-every-row.md) |
 | crows feet | line end marks on an ERD showing how many rows match | [099](./notes/099-crows-feet-reading-one-and-many.md) |

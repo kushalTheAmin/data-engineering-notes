@@ -23,4 +23,4 @@ step 3 is the answer: one server, two answers. the Postgres docs say SET only af
 so what: apps often reuse a few open connections instead of opening one per request, and a tool in the middle can hand your next statement to a different connection. PgBouncer, a popular connection pooler for Postgres, does this in transaction mode, and its docs list SET as unsupported there. so a SET you ran a minute ago can quietly be gone.
 
 ---
-prev: [211 a database server, Postgres where most app data lives](./211-a-database-server-postgres-where-most-app-data-lives.md) | next: not written yet
+prev: [211 a database server, Postgres where most app data lives](./211-a-database-server-postgres-where-most-app-data-lives.md) | next: [213 CREATE TABLE, naming a table and its columns](./213-create-table-naming-a-table-and-its-columns.md)
