@@ -278,7 +278,8 @@ after this arc: you can change data and know exactly what happens when two peopl
 - [x] CREATE TABLE (note 213)
 - [x] temporary tables (note 214)
 - [x] NOT NULL and DEFAULT: required columns and fallback values ★ (note 215)
-- [ ] UNIQUE and CHECK: rules every value must pass ★
+- [ ] UNIQUE: no two rows may share a value ★
+- [ ] CHECK: a rule every value must pass ★
 - [ ] key constraints the database enforces for you ★
 - [ ] where ids come from: sequences and auto increment ★
 - [ ] INSERT
