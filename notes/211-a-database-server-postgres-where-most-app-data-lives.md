@@ -17,7 +17,7 @@ with [DuckDB](./102-a-database-in-one-file.md) the database is a library inside 
 
 the Postgres docs say it starts a new process (a running program) for each connection, while one original process keeps listening. i assumed a server database was just a bigger DuckDB, but the real difference is who opens the file.
 
-this is why a react or .NET backend reaches its database by an address and port, not a file path, and why most app data lives in a server like this. the notes on locks and transactions from here describe Postgres, while shop queries still get checked in DuckDB.
+this is why a react or .NET backend reaches its database by an address and port, not a file path. the notes on locks and transactions from here describe Postgres, while shop queries still get checked in DuckDB.
 
 ---
 prev: [210 running Postgres in a container on your laptop](./210-running-postgres-in-a-container-on-your-laptop.md) | next: not written yet

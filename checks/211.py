@@ -10,3 +10,4 @@ assert port == 5432
 #   confirmed: port is "The TCP port the server listens on; 5432 by default."
 # source: https://duckdb.org/docs/current/connect/concurrency.html
 #   confirmed: "Read-write mode: one process can both read and write to the database."; writing from several processes goes through a separate server, not the file
+# the earlier claim that most app data lives in a server like this had no page behind it, so it was removed from the note
