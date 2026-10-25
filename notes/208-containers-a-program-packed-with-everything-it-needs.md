@@ -26,7 +26,7 @@ the box (a container)
 borrowed from the machine: the kernel (core of the operating system)
 ```
 
-ship the box and the servers python and libraries stop mattering, because the script looks inside the box first. i kept picturing a tiny virtual computer inside the real one, and thats wrong. it is an ordinary [process](./050-processes.md) (a running copy of a program) that the [operating system](./051-the-operating-system.md) walls off from the others. so it borrows the machines kernel, the one thing the box cant pack.
+ship the box and the servers python and libraries stop mattering, because the script looks inside the box first. i kept picturing a tiny virtual computer inside the real one, and thats wrong. it is an ordinary [process](./050-processes.md) (a running copy of a program) that the [operating system](./051-the-operating-system.md) walls off from the others. so it borrows the machines kernel, the one thing the box cant pack (on mac and windows, Docker Desktop starts a small hidden linux machine and the boxes borrow its kernel).
 
 the Postgres database the next notes use is published as a ready-made box. Docker, a tool that runs containers, starts it with one command, so you skip installing Postgres yourself. a later note does exactly that.
 
