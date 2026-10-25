@@ -33,3 +33,5 @@ except Exception as e:
 # the error text relation "cheap" does not exist is Postgres's standard message for a missing table; source: https://www.postgresql.org/docs/current/errcodes-appendix.html (42P01 undefined_table)
 # source: https://www.postgresql.org/docs/current/ddl-schemas.html
 #   confirmed (opened this run): "by default objects are created in the public schema", so public.products reaches the real table
+# source: https://www.postgresql.org/docs/current/glossary.html
+#   confirmed (opened this run): relation is "The generic term for all objects in a database that have a name and a list of attributes defined in a specific order. Tables, sequences, views, foreign tables, materialized views, composite types, and indexes are all relations."
