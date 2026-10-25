@@ -37,7 +37,7 @@ unlike [COALESCE](./116-coalesce-a-fallback-when-a-value-is-null.md) (first valu
 
 ### check yourself
 
-1. a table has `status VARCHAR DEFAULT 'packed'` and no NOT NULL. parcel 1 is inserted with status written as NULL, parcel 2 leaves status out. what does each row hold?
+1. a table has `status VARCHAR DEFAULT 'packed'` and no NOT NULL. parcel 1 is inserted with status written as NULL, parcel 2 leaves status out. what does each row hold? (ORDER BY parcel_id sorts the rows)
 ```sql
 CREATE TABLE parcel (parcel_id INTEGER, status VARCHAR DEFAULT 'packed');
 INSERT INTO parcel VALUES (1, NULL);
@@ -56,7 +56,7 @@ parcel 1 keeps NULL, parcel 2 gets packed. the default only fires for a column l
 
 </details>
 
-2. say the shop city column were `city VARCHAR NOT NULL DEFAULT 'unknown'` and Esha is inserted with no city. how many rows does WHERE city IS NULL find?
+2. say the shop city column were `city VARCHAR NOT NULL DEFAULT 'unknown'` and Esha is inserted with no city. how many rows does WHERE city IS NULL find (count(*) counts rows)?
 ```sql
 CREATE TABLE people (name VARCHAR NOT NULL, city VARCHAR NOT NULL DEFAULT 'unknown');
 INSERT INTO people (name) VALUES ('Esha');
