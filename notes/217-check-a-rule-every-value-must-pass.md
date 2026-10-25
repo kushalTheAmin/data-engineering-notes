@@ -73,4 +73,4 @@ only order 104. the rule is a claim about every row, and cancelled is a real sta
 </details>
 
 ---
-prev: [216 UNIQUE, no two rows may share a value](./216-unique-no-two-rows-may-share-a-value.md) | next: not written yet
+prev: [216 UNIQUE, no two rows may share a value](./216-unique-no-two-rows-may-share-a-value.md) | next: [218 key constraints, PRIMARY KEY and REFERENCES in CREATE TABLE](./218-key-constraints-primary-key-and-references-in-create-table.md)

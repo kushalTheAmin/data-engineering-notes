@@ -146,6 +146,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | jump | asking for a file position directly, called seek in python | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
 | junction table | a table with one row per pair, pointing at both sides | [097](./notes/097-junction-tables.md) |
 | kernel | the core of the operating system, shared by containers | [208](./notes/208-containers-a-program-packed-with-everything-it-needs.md) |
+| key constraint | a key rule declared in CREATE TABLE, enforced on every insert | [218](./notes/218-key-constraints-primary-key-and-references-in-create-table.md) |
 | kibibyte | 1024 bytes, the unambiguous 1024 based unit, written KiB | [038](./notes/038-1000-or-1024.md) |
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | LAG | a window function that returns a value from an earlier row | [192](./notes/192-lag-and-lead-looking-at-the-row-before.md) |
