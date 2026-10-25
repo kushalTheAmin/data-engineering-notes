@@ -134,6 +134,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | JSON array | square brackets around values in order, like a python list | [067](./notes/067-json-types.md) |
 | JSON lines | a text file with one whole JSON record per line | [069](./notes/069-json-lines.md) |
 | JSON object | curly braces around name: value pairs, like a dictionary | [067](./notes/067-json-types.md) |
+| JSON path | a $.name address telling a query which value to pull out | [205](./notes/205-querying-json-inside-a-column.md) |
 | JSON types | the six kinds of value: string, number, boolean, null, object, array | [067](./notes/067-json-types.md) |
 | jump | asking for a file position directly, called seek in python | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
 | junction table | a table with one row per pair, pointing at both sides | [097](./notes/097-junction-tables.md) |

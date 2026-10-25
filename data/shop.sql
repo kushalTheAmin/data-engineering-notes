@@ -254,3 +254,15 @@ INSERT INTO product_tags VALUES
     (4, ['sweet', 'festive']),
     (5, []),
     (6, ['fried', 'savory']);
+
+-- added by note 205: the app logs every click as one JSON string in a single column. views have no quantity, add_to_cart events do
+CREATE TABLE app_events (
+    event_id INTEGER NOT NULL,
+    payload  VARCHAR NOT NULL
+);
+
+INSERT INTO app_events VALUES
+    (1, '{"type": "view", "customer": "Asha", "product": "dhokla"}'),
+    (2, '{"type": "add_to_cart", "customer": "Asha", "product": "dhokla", "quantity": 2}'),
+    (3, '{"type": "view", "customer": "Disha", "product": "kaju katli"}'),
+    (4, '{"type": "add_to_cart", "customer": "Bhavin", "product": "jalebi", "quantity": 1}');

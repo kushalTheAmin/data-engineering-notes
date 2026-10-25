@@ -47,4 +47,4 @@ savory is 3. the counts add up to 10 tags, but only 5 of the shops 6 products sh
 Postgres has the same unnest function on its arrays, so this habit carries over.
 
 ---
-prev: [203 recursive CTEs, following a chain of rows](./203-recursive-ctes-following-a-chain-of-rows.md) | next: not written yet
+prev: [203 recursive CTEs, following a chain of rows](./203-recursive-ctes-following-a-chain-of-rows.md) | next: [205 querying JSON inside a column](./205-querying-json-inside-a-column.md)
