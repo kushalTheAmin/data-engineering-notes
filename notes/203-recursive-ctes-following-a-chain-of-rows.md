@@ -4,7 +4,7 @@ section: bigger queries, part 30, ~2 min read
 
 Asha told Bhavin about the shop, Bhavin told Disha, Disha told Esha. how do you ask for everyone Asha brought in, through friends of friends, when you dont know how many hops there are?
 
-a recursive CTE is a [CTE](./180-ctes-naming-each-step-with-with.md) (an inner query named up front with WITH) that reads its own rows. a start query runs once, then a repeat query runs on the rows the last round found, until a round finds nothing. the shop, the imaginary gujarati snack store these notes run on, has a new referrals table, one row per customer who came through a friend. round by round:
+a recursive CTE is a [CTE](./180-ctes-naming-each-step-with-with.md) (an inner query named up front with WITH) that reads its own rows. a start query runs once, then a repeat query runs on the rows the last round found, until a round finds nothing. the shop, the imaginary gujarati snack store these notes run on, has a new referrals table, one row per customer who came through a friend, with customer_id (the newcomer) and referred_by (the friend). round by round:
 
 | round | rows found | why |
 |---|---|---|

@@ -23,6 +23,11 @@ assert q(REC.format(n="Asha")) == [("Asha", 0), ("Bhavin", 1), ("Chirag", 1), ("
 assert [d for _, d in q(REC.format(n="Asha"))] == [0, 1, 1, 2, 3]
 # nobody was referred by Esha
 assert q("SELECT count(*) FROM referrals WHERE referred_by = 5") == [(0,)]
+# columns: customer_id is the newcomer, referred_by is the friend (Bhavin, id 2, came through Asha, id 1)
+assert q("SELECT customer_id, referred_by FROM referrals ORDER BY customer_id") == [(2, 1), (3, 1), (4, 2), (5, 4)]
+# a cycle (Asha referred by Esha) never stops: rows keep coming at every depth until the extra WHERE cap cuts it
+con.execute("INSERT INTO referrals VALUES (1, 5)")
+assert q("WITH RECURSIVE chain AS (SELECT customer_id, 0 AS depth FROM customers WHERE name = 'Asha' UNION ALL SELECT r.customer_id, ch.depth + 1 FROM chain AS ch JOIN referrals AS r ON r.referred_by = ch.customer_id WHERE ch.depth < 12) SELECT max(depth) FROM chain") == [(12,)]
 # source: https://www.postgresql.org/docs/current/queries-with.html
 #   confirmed: recursive WITH is a non-recursive term, UNION or UNION ALL, then a recursive term that alone refers to the query's own output;
 #   each iteration substitutes the working table (previous round) for the self reference;
