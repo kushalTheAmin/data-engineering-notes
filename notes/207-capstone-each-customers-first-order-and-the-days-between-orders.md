@@ -82,4 +82,4 @@ avg skips the NULL ([141](./141-what-nulls-do-to-sum-and-avg.md)), so it is (2 +
 </details>
 
 ---
-prev: [206 practice, ten interview style SQL questions on the shop](./206-practice-ten-interview-style-sql-questions-on-the-shop.md) | next: not written yet
+prev: [206 practice, ten interview style SQL questions on the shop](./206-practice-ten-interview-style-sql-questions-on-the-shop.md) | next: [208 containers, a program packed with everything it needs](./208-containers-a-program-packed-with-everything-it-needs.md)

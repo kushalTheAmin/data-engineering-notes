@@ -45,6 +45,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | concatenate | glue two pieces of text into one, written with two bars | [125](./notes/125-concatenating-text-and-taking-pieces-of-it.md) |
 | conditional aggregation | a CASE inside an aggregate, so each row counts toward chosen totals | [148](./notes/148-conditional-aggregation-counting-several-things-in-one-pass.md) |
 | connection | an open line from your program to a database | [102](./notes/102-a-database-in-one-file.md) |
+| container | a program running in a walled-off box with all it needs | [208](./notes/208-containers-a-program-packed-with-everything-it-needs.md) |
 | continuation byte | a UTF-8 byte starting 10, continuing the previous characters bytes | [011](./notes/011-why-gujarati-takes-3-bytes.md) |
 | core | one full processor inside a chip, most chips hold several | [035](./notes/035-the-processor.md) |
 | correlated subquery | a scalar subquery that uses the outer row, asked again per row | [177](./notes/177-correlated-subqueries-a-query-that-depends-on-the-outer-row.md) |
@@ -138,6 +139,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | JSON types | the six kinds of value: string, number, boolean, null, object, array | [067](./notes/067-json-types.md) |
 | jump | asking for a file position directly, called seek in python | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
 | junction table | a table with one row per pair, pointing at both sides | [097](./notes/097-junction-tables.md) |
+| kernel | the core of the operating system, shared by containers | [208](./notes/208-containers-a-program-packed-with-everything-it-needs.md) |
 | kibibyte | 1024 bytes, the unambiguous 1024 based unit, written KiB | [038](./notes/038-1000-or-1024.md) |
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | LAG | a window function that returns a value from an earlier row | [192](./notes/192-lag-and-lead-looking-at-the-row-before.md) |
@@ -146,6 +148,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | left table | the table written before the word JOIN in the query | [159](./notes/159-left-join-keep-every-row-from-the-left-table.md) |
 | length | how many characters a text has, spaces included, not bytes | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | LF | a one character line ending, 0a, common on linux and mac | [042](./notes/042-line-endings.md) |
+| library | code other people wrote that your program calls | [208](./notes/208-containers-a-program-packed-with-everything-it-needs.md) |
 | LIKE | keeps text matching a pattern, % any run, _ one character | [113](./notes/113-like-matching-text-patterns.md) |
 | LIMIT | keeps only the first n rows of the result | [120](./notes/120-limit-and-offset-paging-through-rows.md) |
 | line ending | the characters marking where one line stops, the next starts | [042](./notes/042-line-endings.md) |

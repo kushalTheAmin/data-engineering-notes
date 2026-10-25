@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 207
+notes so far: 208
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -235,3 +235,7 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [205 querying JSON inside a column](./notes/205-querying-json-inside-a-column.md): the app logs clicks as JSON strings in one column, so ->> pulls the customer out, and a missing name quietly gives NULL
 - [206 practice, ten interview style SQL questions on the shop](./notes/206-practice-ten-interview-style-sql-questions-on-the-shop.md): the shop sells 6 products but a units query shows 5, and nine more questions where the words tell you which tool to reach for
 - [207 capstone, each customers first order and the days between orders](./notes/207-capstone-each-customers-first-order-and-the-days-between-orders.md): Asha ordered on april 1, 3 and 8, so one window per customer numbers each order and LAG gives the days since the one before
+
+## section 9: changing data safely
+
+- [208 containers, a program packed with everything it needs](./notes/208-containers-a-program-packed-with-everything-it-needs.md): a script that runs on a laptop and dies on a server needs its python and libraries packed in a box, and the one thing it still borrows is the kernel
