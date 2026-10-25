@@ -9,7 +9,7 @@ this is practice, ten questions on the shop (the imaginary gujarati snack store 
 | the question says | reach for |
 |---|---|
 | only some rows | [WHERE](./106-where-keeping-only-the-rows-that-match.md), keeps rows passing a test |
-| never, nobody | [left join](./159-left-join-keep-every-row-from-the-left-table.md) (keeps every row of the first table) plus [IS NULL](./115-is-null-and-is-not-null.md), or [NOT EXISTS](./178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
+| never, nobody | [left join](./159-left-join-keep-every-row-from-the-left-table.md) (keeps every row of the first table) plus [IS NULL](./115-is-null-and-is-not-null.md), or [NOT EXISTS](./178-exists-and-not-exists-asking-whether-a-matching-row-exists.md), no matching row exists |
 | more than once | GROUP BY (one bucket per value) plus [HAVING](./146-having-filtering-whole-groups.md), filters buckets |
 | second highest | [scalar subquery](./176-scalar-subqueries-one-value-inside-a-query.md), a query giving one value |
 | both A and B | [INTERSECT](./183-intersect-and-except.md), rows two queries share |
@@ -84,7 +84,7 @@ khandvi | 3
 fafda | 0
 ```
 
-an inner join would drop fafda, nobody ordered it. [coalesce](./116-coalesce-a-fallback-when-a-value-is-null.md) turns its NULL sum into 0.
+an inner join (keeps only matched rows) would drop fafda, nobody ordered it. [coalesce](./116-coalesce-a-fallback-when-a-value-is-null.md) turns its NULL sum into 0.
 
 </details>
 
@@ -156,7 +156,7 @@ Chirag | 104
 Disha | 105
 ```
 
-newest first, number each customers orders, keep number 1.
+newest first, number each customers orders (PARTITION BY restarts the count per customer), keep number 1.
 
 </details>
 

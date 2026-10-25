@@ -33,3 +33,7 @@ assert q('WITH t AS (SELECT o.order_id, sum(oi.quantity * p.price) AS total FROM
 # confirmed: page title "DataLemur - Ace the SQL & Data Science Interview", so it offers SQL interview questions
 # source: https://www.stratascratch.com
 # confirmed: page title "Data Science & AI Interview Prep | StrataScratch" and it lists SQL, so it offers SQL interview questions
+# fafda has no order lines, so its sum is NULL and coalesce makes it 0
+assert q("SELECT sum(oi.quantity) FROM products p LEFT JOIN order_items oi ON p.product_id = oi.product_id WHERE p.name = 'fafda'") == [(None,)]
+# source: https://www.postgresql.org/docs/current/functions-comparison.html
+# confirmed: table 9.1 lists <> as "Not equal" (and != as an alias)
