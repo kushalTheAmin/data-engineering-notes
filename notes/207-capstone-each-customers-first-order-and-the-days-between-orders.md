@@ -49,7 +49,7 @@ the next section is about changing data, and what happens when two people do it 
 
 ### check yourself
 
-1. order 104 is cancelled and 106 is pending. a teammate adds WHERE o.status = 'delivered' inside the CTE. predict ashas last row. which customer disappears?
+1. order 104 is cancelled and 106 is pending. a teammate adds WHERE (keeps matching rows) o.status = 'delivered' inside the CTE. predict ashas last row. which customer disappears?
 ```sql
 WITH o AS (SELECT c.name, CAST(o.ordered_at AS DATE) AS day, o.order_id FROM customers c JOIN orders o ON c.customer_id = o.customer_id WHERE o.status = 'delivered') SELECT name, order_id, day, row_number() OVER (PARTITION BY name ORDER BY day) AS nth, day - lag(day) OVER (PARTITION BY name ORDER BY day) AS days_since FROM o ORDER BY name, day
 ```
@@ -77,7 +77,7 @@ WITH o AS (SELECT c.name, CAST(o.ordered_at AS DATE) AS day FROM customers c JOI
 name | avg_gap
 Asha | 3.5
 ```
-avg skips the NULL ([141](./141-what-nulls-do-to-sum-and-avg.md)), so it is (2 + 5) / 2 = 3.5. the tempting answer is 2.33, from counting the first order as a 0 and dividing by 3.
+avg skips the NULL ([141](./141-what-nulls-do-to-sum-and-avg.md)) and GROUP BY gives one bucket per name, so it is (2 + 5) / 2 = 3.5. the tempting answer is 2.33, from counting the first order as a 0 and dividing by 3.
 
 </details>
 

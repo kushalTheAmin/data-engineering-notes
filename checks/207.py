@@ -39,3 +39,7 @@ assert round(sum(real) / 3, 2) == 2.33  # the tempting answer, NULL counted as 0
 assert q("WITH o AS (SELECT c.name, CAST(o.ordered_at AS DATE) AS day FROM customers c JOIN orders o ON c.customer_id = o.customer_id), g AS (SELECT name, day - lag(day) OVER (PARTITION BY name ORDER BY day) AS days_since FROM o) SELECT name, avg(days_since) AS avg_gap FROM g WHERE name = 'Asha' GROUP BY name") == [("Asha", 3.5)]
 # asha ordered on april 1, 3 and 8
 assert [r[2] for r in exp if r[0] == 'Asha'] == [d(2026,4,1), d(2026,4,3), d(2026,4,8)]
+# source: https://www.postgresql.org/docs/current/tutorial-window.html
+#   confirmed (opened this run): "a row removed because it does not meet the WHERE condition is not seen by any window function"
+# source: https://www.postgresql.org/docs/current/functions-aggregate.html
+#   confirmed (opened this run): avg "Computes the average (arithmetic mean) of all the non-null input values."
