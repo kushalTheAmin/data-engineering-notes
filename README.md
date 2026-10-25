@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 214
+notes so far: 215
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -245,3 +245,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [212 connections and sessions, one conversation with the database](./notes/212-connections-and-sessions-one-conversation-with-the-database.md): Asha sets her time zone and Bhavin on the same server still sees UTC, because a setting belongs to one connection's session
 - [213 CREATE TABLE, naming a table and its columns](./notes/213-create-table-naming-a-table-and-its-columns.md): CREATE TABLE IF NOT EXISTS on products raises no error and adds no column, because it only checks that the name is taken
 - [214 temporary tables, a table that lives as long as your session](./notes/214-temporary-tables.md): a temp table named products hides the real one, so the shop suddenly has 3 products and nothing was deleted
+- [215 NOT NULL and DEFAULT, required columns and fallback values](./notes/215-not-null-and-default-required-columns-and-fallback-values.md): Esha has no city but nobody has no name, and a default fills a column you leave out but never rescues a NULL you type

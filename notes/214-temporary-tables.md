@@ -41,4 +41,4 @@ the real table is only hidden, and writes would hit the temp one. Postgres looks
 so what: behind a pooler like the one in 212, the next statement may run on another connection, where your temp table doesnt exist.
 
 ---
-prev: [213 CREATE TABLE, naming a table and its columns](./213-create-table-naming-a-table-and-its-columns.md) | next: not written yet
+prev: [213 CREATE TABLE, naming a table and its columns](./213-create-table-naming-a-table-and-its-columns.md) | next: [215 NOT NULL and DEFAULT, required columns and fallback values](./215-not-null-and-default-required-columns-and-fallback-values.md)
