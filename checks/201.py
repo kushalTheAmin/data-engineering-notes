@@ -45,3 +45,5 @@ assert r[0][0] == 5
 # date_trunc hands back a timestamp, which is why the query casts it to a plain date (note 132 explains CAST)
 assert q("SELECT typeof(date_trunc('month', DATE '2026-01-05'))") == [("TIMESTAMP",)]
 assert q("SELECT typeof(CAST(date_trunc('month', DATE '2026-01-05') AS DATE))") == [("DATE",)]
+# source: https://duckdb.org/docs/2.0/sql/functions/date.html
+#   confirmed: date_trunc(part, date) "Always returns a TIMESTAMP, even when the input is a DATE", which is why the query casts it back to a date
