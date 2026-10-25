@@ -180,6 +180,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | negative zero | a second zero pattern, with the sign bit set | [013](./notes/013-negative-numbers-sign-bit.md) |
 | nesting | an object or array sitting inside another one, as deep as needed | [068](./notes/068-nesting.md) |
 | network | a way to move bytes from one computer to another | [084](./notes/084-a-network.md) |
+| nextval | the call that hands out a sequences next number | [219](./notes/219-sequences-where-made-up-ids-come-from.md) |
 | no promised order | without ORDER BY, rows may come back in any order | [118](./notes/118-no-order-by-no-promised-order.md) |
 | NOT | flips a test, but a null stays unknown and is dropped | [110](./notes/110-not-flipping-a-condition.md) |
 | NOT EXISTS | true when the inner query returns no rows at all | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
@@ -252,6 +253,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | SELECT star | the shortcut for every column, in the tables order | [105](./notes/105-select-star-every-column.md) |
 | self join | a table joined to a second copy of itself under another alias | [168](./notes/168-self-join-a-table-joined-to-itself.md) |
 | semi join | keeps left rows that have a match, once each, never copies | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
+| sequence | a counter the database keeps outside any table, only moving forward | [219](./notes/219-sequences-where-made-up-ids-come-from.md) |
 | server | a program that listens on a port and answers requests | [086](./notes/086-client-and-server.md) |
 | session (clicks) | a run of one persons clicks, a long silence starts the next | [199](./notes/199-session-starts-flag-the-click-after-a-long-gap.md) |
 | session (database) | one connections conversation with the database, with its own settings | [212](./notes/212-connections-and-sessions-one-conversation-with-the-database.md) |

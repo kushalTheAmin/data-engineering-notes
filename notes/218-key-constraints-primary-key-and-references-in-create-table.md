@@ -78,4 +78,4 @@ accepted. a NULL points at nothing, so there is nothing to match, and Postgres d
 </details>
 
 ---
-prev: [217 CHECK, a rule every value must pass](./217-check-a-rule-every-value-must-pass.md) | next: not written yet
+prev: [217 CHECK, a rule every value must pass](./217-check-a-rule-every-value-must-pass.md) | next: [219 sequences, where made up ids come from](./219-sequences-where-made-up-ids-come-from.md)
