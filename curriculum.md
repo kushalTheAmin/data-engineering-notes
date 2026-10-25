@@ -269,6 +269,7 @@ after this arc: you can write the multi step queries real reports need
 after this arc: you can change data and know exactly what happens when two people do it at once
 
 - [ ] containers: a program packed with everything it needs ★
+- [ ] images and containers: the packed box and the running copy ★
 - [ ] running Postgres in a container on your laptop
 - [ ] a database server: Postgres, where most app data lives
 - [ ] connections and sessions: one conversation with the database
