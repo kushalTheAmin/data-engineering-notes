@@ -60,6 +60,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | data | facts written down so you can ask questions about them later | [001](./notes/001-data-is-facts-and-numbers.md) |
 | data type | the kind of value a field allows, like text or number | [076](./notes/076-data-types-in-a-schema.md) |
 | database | a program that owns the data files, changing them only on request | [082](./notes/082-a-database-guards-the-data.md) |
+| database server | a database that runs as its own program and answers clients | [211](./notes/211-a-database-server-postgres-where-most-app-data-lives.md) |
 | date | a calendar day with no time of day | [027](./notes/027-dates-and-times-apart.md) |
 | date part | one piece of a date, like its year, as a number | [126](./notes/126-date-parts-pulling-out-the-year-month-and-day.md) |
 | date spine | every day you want as rows, with the data left joined on | [198](./notes/198-date-spines-a-left-join-that-keeps-the-empty-days.md) |
@@ -204,6 +205,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | placeholder value | a made up value, like 0, standing in for missing | [032](./notes/032-null-is-not-zero-or-empty-text.md) |
 | port | a number picking which program on a machine gets the bytes | [085](./notes/085-addresses-and-ports.md) |
 | port mapping | the -p flag: laptop port forwards to a port inside the container | [210](./notes/210-running-postgres-in-a-container-on-your-laptop.md) |
+| Postgres | a database server, where most app data lives | [211](./notes/211-a-database-server-postgres-where-most-app-data-lives.md) |
 | precedence | which operator runs first when a test mixes several, AND before OR | [109](./notes/109-parentheses-and-runs-before-or.md) |
 | precision | the most digits a decimal can hold in total | [022](./notes/022-exact-decimal-types.md) |
 | primary key | a column that is unique in every row and never NULL | [087](./notes/087-primary-key.md) |

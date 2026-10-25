@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 210
+notes so far: 211
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -241,3 +241,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [208 containers, a program packed with everything it needs](./notes/208-containers-a-program-packed-with-everything-it-needs.md): a script that runs on a laptop and dies on a server needs its python and libraries packed in a box, and the one thing it still borrows is the kernel
 - [209 images and containers, the packed box and the running copy](./notes/209-images-and-containers-the-packed-box-and-the-running-copy.md): edit a file in one of two containers started from the same image and the other never sees it, because the image itself never changes
 - [210 running Postgres in a container on your laptop](./notes/210-running-postgres-in-a-container-on-your-laptop.md): the container says running but the app gets connection refused, because without -p nothing on the laptop is wired to the box
+- [211 a database server, Postgres where most app data lives](./notes/211-a-database-server-postgres-where-most-app-data-lives.md): DuckDB lets one program write to its file, so a shop with many shoppers needs a server that alone opens the files and answers every client
