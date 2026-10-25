@@ -203,6 +203,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
 | placeholder value | a made up value, like 0, standing in for missing | [032](./notes/032-null-is-not-zero-or-empty-text.md) |
 | port | a number picking which program on a machine gets the bytes | [085](./notes/085-addresses-and-ports.md) |
+| port mapping | the -p flag: laptop port forwards to a port inside the container | [210](./notes/210-running-postgres-in-a-container-on-your-laptop.md) |
 | precedence | which operator runs first when a test mixes several, AND before OR | [109](./notes/109-parentheses-and-runs-before-or.md) |
 | precision | the most digits a decimal can hold in total | [022](./notes/022-exact-decimal-types.md) |
 | primary key | a column that is unique in every row and never NULL | [087](./notes/087-primary-key.md) |
