@@ -79,4 +79,4 @@ it gets 1. the sequence never looks at the table, so typed ids dont move it. the
 </details>
 
 ---
-prev: [218 key constraints, PRIMARY KEY and REFERENCES in CREATE TABLE](./218-key-constraints-primary-key-and-references-in-create-table.md) | next: not written yet
+prev: [218 key constraints, PRIMARY KEY and REFERENCES in CREATE TABLE](./218-key-constraints-primary-key-and-references-in-create-table.md) | next: [220 INSERT, adding rows and matching values to columns](./220-insert-adding-rows-and-matching-values-to-columns.md)

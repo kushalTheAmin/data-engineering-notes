@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 219
+notes so far: 220
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -250,3 +250,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [217 CHECK, a rule every value must pass](./notes/217-check-a-rule-every-value-must-pass.md): a price of -7.50 passes NOT NULL, and a NULL price even passes CHECK (price > 0), because unknown is not false
 - [218 key constraints, PRIMARY KEY and REFERENCES in CREATE TABLE](./notes/218-key-constraints-primary-key-and-references-in-create-table.md): a column called order_id is just a label, the database refuses an orphan or a repeated id only once the key rule is written down
 - [219 sequences, where made up ids come from](./notes/219-sequences-where-made-up-ids-come-from.md): a failed insert still burns an id, so Chirag gets ticket 4 and ticket 3 never exists
+- [220 INSERT, adding rows and matching values to columns](./notes/220-insert-adding-rows-and-matching-values-to-columns.md): swap two whole numbers in an INSERT and Disha ends up wanting jalebi, because the database only checks types, never what you meant
