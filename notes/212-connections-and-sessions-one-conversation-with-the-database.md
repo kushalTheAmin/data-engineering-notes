@@ -20,7 +20,7 @@ step  Ashas app (connection 1)               Bhavins app (connection 2)
 
 step 3 is the answer: one server, two answers. the Postgres docs say SET only affects the value used by the current session. step 6 is the other half, since a new connection is a new session and the setting died with the old one. i assumed SET changed the database, but it only changes my side of the conversation.
 
-so what: apps often reuse a few open connections instead of opening one per request, and a tool in the middle can hand your next statement to a different connection. PgBouncer, a popular connection pooler for Postgres, does this in transaction mode, and its docs list SET as unsupported there. so a SET you ran a minute ago can quietly be gone.
+so what: apps often reuse a few open connections instead of opening one per request, and a tool in the middle can hand your next statement to a different connection. PgBouncer, a popular connection pooler for Postgres, does this in transaction mode, and its docs list SET as unsupported there, though it tracks a few settings, time zone among them. so most other SETs can quietly be gone.
 
 ---
 prev: [211 a database server, Postgres where most app data lives](./211-a-database-server-postgres-where-most-app-data-lives.md) | next: [213 CREATE TABLE, naming a table and its columns](./213-create-table-naming-a-table-and-its-columns.md)
