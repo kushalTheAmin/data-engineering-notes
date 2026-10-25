@@ -4,7 +4,7 @@ section: bigger queries, part 32, ~2 min read
 
 the shop app logs every click as one JSON string, so how do you ask for the customer when there is no customer column?
 
-the arrow ->> reaches into a [JSON](./066-json-records-with-names-on-every-value.md) string (text with a name on every value) and pulls one value out as text. the shop, the imaginary gujarati snack store these notes run on, has a new app_events table (a table is rows with the same columns, like a list of dictionaries). 4 rows, each just an id and a payload column holding one string, like this:
+the arrow ->> reaches into a [JSON](./066-json-records-with-names-on-every-value.md) string (text with a name on every value) and pulls one value out as text. the shop, the imaginary gujarati snack store these notes run on, has a new app_events table (a table is rows with the same columns, like a list of dictionaries). 4 rows, each an id and a payload column holding one string, like this:
 
 ```text
 {"type": "add_to_cart", "customer": "Asha", "product": "dhokla", "quantity": 2}
@@ -26,7 +26,7 @@ event_id | customer | quantity
 
 the two view events never had a quantity, so those cells are [NULL](./031-null.md) (a marker for no value). i expected a missing name to raise an error, like a python dictionary does, but ->> quietly hands back NULL. that includes a typo: '$.custmer' would give NULL on all 4 rows and nothing would warn you.
 
-second thing, the 2 is text, not a number. so [CAST](./132-cast-changing-a-values-type.md) (converts a value to another type) it before adding, then it works like any column with [GROUP BY](./143-group-by-one-group-per-value.md) (one bucket per value):
+the 2 is text, not a number. so [CAST](./132-cast-changing-a-values-type.md) (converts a value to another type) it before adding, then it works like any column with [GROUP BY](./143-group-by-one-group-per-value.md) (one bucket per value), and WHERE keeps only the add_to_cart rows:
 
 ```sql
 SELECT payload ->> '$.customer' AS customer, sum(CAST(payload ->> '$.quantity' AS INTEGER)) AS added FROM app_events WHERE payload ->> '$.type' = 'add_to_cart' GROUP BY customer ORDER BY customer
@@ -38,7 +38,7 @@ Asha | 2
 Bhavin | 1
 ```
 
-this is [schema on read](./083-schema-on-write-vs-schema-on-read.md) (shape checked only when you query) in action, which is why event logs often land like this. Postgres (another database) has ->> on its json columns too, but it takes a bare key like 'quantity', not a $. path.
+this is [schema on read](./083-schema-on-write-vs-schema-on-read.md) (shape checked only when you query), which is why event logs often land like this. Postgres (another database) has ->> on its json columns too, but it takes a bare key like 'quantity', not a $. path.
 
 ---
 prev: [204 arrays and UNNEST, lists inside a cell](./204-arrays-and-unnest-lists-inside-a-cell.md) | next: [206 practice, ten interview style SQL questions on the shop](./206-practice-ten-interview-style-sql-questions-on-the-shop.md)
