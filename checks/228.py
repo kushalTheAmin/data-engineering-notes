@@ -44,6 +44,7 @@ con.execute("BEGIN")
 con.execute("INSERT INTO my_orders VALUES (110, 5, TIMESTAMP '2026-04-10 13:00:00', 'pending')")
 assert fails("INSERT INTO my_items VALUES (110, 99, 1)")
 assert fails("INSERT INTO my_items VALUES (110, 1, 1)")
+assert fails("SELECT 1")
 con.execute("COMMIT")
 assert counts(110) == [(0, 0)]
 # autocommit: with no BEGIN each statement is kept on its own
@@ -51,3 +52,5 @@ con.execute("INSERT INTO my_orders VALUES (111, 1, TIMESTAMP '2026-04-10 14:00:0
 assert counts(111) == [(1, 0)]
 # source: https://www.postgresql.org/docs/current/tutorial-transactions.html
 # confirmed: a transaction is set up by surrounding the commands with BEGIN and COMMIT; ROLLBACK instead cancels all updates so far; without BEGIN each statement has an implicit BEGIN and COMMIT wrapped around it; updates of an open transaction are invisible to other transactions until it completes, then all become visible simultaneously
+# source: https://duckdb.org/docs/2.0/sql/statements/transactions.html
+#   confirmed (opened this run): outside BEGIN statements run "in auto-commit mode: each statement that succeeds is committed immediately"; "If you are not in an active transaction, the ROLLBACK and ABORT statements will fail." the page does not describe constraint errors aborting a transaction, so that is shown by python: after the foreign key failure even SELECT 1 raises "Current transaction is aborted (please ROLLBACK)", and COMMIT then ends it with nothing kept
