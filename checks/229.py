@@ -26,3 +26,4 @@ assert q("SELECT count(*) FROM my_products") == [(6,)]
 #   confirmed: "A transaction is said to be atomic ... either happens completely or not at all"; once completed and acknowledged it "won't be lost even if a crash ensues"; updates are logged on disk before the transaction is reported complete
 # source: https://www.postgresql.org/docs/current/transaction-iso.html
 #   confirmed: "Read Committed is the default isolation level in PostgreSQL" (Serializable is the strictest level)
+#   confirmed (opened this run): "PostgreSQL's Read Uncommitted mode behaves like Read Committed" and Table 13.1 marks dirty reads for Read Uncommitted "Allowed, but not in PG", so check yourself question 3 (Postgres doesnt let Asha see work that is later rolled back) is right
