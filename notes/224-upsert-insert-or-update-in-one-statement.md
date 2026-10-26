@@ -46,7 +46,7 @@ so what: loading jobs retry, and an upsert makes a retry harmless. Postgres docs
 
 ### check yourself
 
-1. a typo: the supplier sends dhokla at 6.50 and "chai", but the shop calls it masala chai. how many rows does menu2 have after this?
+1. a typo: the supplier sends dhokla at 6.50 and "chai", but the shop calls it masala chai. count(*) counts rows, so how many does menu2 have after this?
 
 ```sql
 CREATE TABLE menu2 (name VARCHAR PRIMARY KEY, price DECIMAL(6, 2));
