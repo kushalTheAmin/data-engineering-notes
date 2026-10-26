@@ -38,7 +38,7 @@ ticket_id | customer
 | no customer | 3 | nothing, row refused |
 | Chirag | 4 | 4 |
 
-in DuckDB the id was taken before the row got refused, and a counter never steps back, even if a transaction rolls back. i assumed ids would count up with no holes, but a number once handed out stays used. thats fine, an id only has to be unique, not tidy.
+in DuckDB the id was taken before the row got refused, and a counter never steps back, even if a transaction (a group of changes that can be undone together) rolls back. i assumed ids would count up with no holes, but a number once handed out stays used. thats fine, an id only has to be unique, not tidy.
 
 Postgres, a popular server database, has the same gaps, and its docs say a sequence cant give gapless numbers. its serial columns are a sequence plus a DEFAULT nextval underneath, and some other databases call the same idea AUTO_INCREMENT. so never read a missing id as a deleted row, and dont use one as an invoice count.
 

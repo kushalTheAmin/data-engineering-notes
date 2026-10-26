@@ -38,3 +38,9 @@ con.execute("ROLLBACK")
 assert q("SELECT nextval('rb')") == [(2,)]
 # source: https://dev.mysql.com/doc/refman/8.4/en/example-auto-increment.html
 #   confirmed (opened this run): "When you insert any other value into an AUTO_INCREMENT column, the column is set to that value and the sequence is reset so that the next automatically generated value follows sequentially from the largest column value", so after 101 and 102 typed by hand MySQL hands out 103
+# the gloss for transaction in the note: a ROLLBACK undoes the changes made since BEGIN, but not nextval (asserted above)
+con.execute("CREATE TABLE tx (a INTEGER)")
+con.execute("BEGIN")
+con.execute("INSERT INTO tx VALUES (1)")
+con.execute("ROLLBACK")
+assert q("SELECT count(*) FROM tx") == [(0,)]
