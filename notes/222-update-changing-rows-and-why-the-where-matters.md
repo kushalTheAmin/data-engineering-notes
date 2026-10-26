@@ -78,4 +78,4 @@ jalebi and kaju katli were sweets, and the first line turns masala chai into one
 </details>
 
 ---
-prev: [221 INSERT from a SELECT, copying rows from a query](./221-insert-from-a-select-copying-rows-from-a-query.md) | next: not written yet
+prev: [221 INSERT from a SELECT, copying rows from a query](./221-insert-from-a-select-copying-rows-from-a-query.md) | next: [223 DELETE, removing rows and what still points at them](./223-delete-removing-rows-and-what-still-points-at-them.md)

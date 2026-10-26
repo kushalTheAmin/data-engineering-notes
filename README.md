@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 222
+notes so far: 223
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -253,3 +253,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [220 INSERT, adding rows and matching values to columns](./notes/220-insert-adding-rows-and-matching-values-to-columns.md): swap two whole numbers in an INSERT and Disha ends up wanting jalebi, because the database only checks types, never what you meant
 - [221 INSERT from a SELECT, copying rows from a query](./notes/221-insert-from-a-select-copying-rows-from-a-query.md): run the copy of delivered orders twice and 5 orders become 10 rows, because nothing remembers the first run
 - [222 UPDATE, changing rows and why the WHERE matters](./notes/222-update-changing-rows-and-why-the-where-matters.md): forget one WHERE on an UPDATE and all 7 orders say cancelled, with no error and no warning
+- [223 DELETE, removing rows and what still points at them](./notes/223-delete-removing-rows-and-what-still-points-at-them.md): a cancelled order wont delete while its item row still points at it, so the pointing row goes first

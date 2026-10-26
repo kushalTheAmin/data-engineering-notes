@@ -74,7 +74,9 @@ every term these notes have built, in plain words, with the note that built it. 
 | deduplicate | keep one row per thing when the data holds several | [194](./notes/194-removing-duplicates-with-row-number.md) |
 | DEFAULT | the value filled in when an insert leaves that column out | [215](./notes/215-not-null-and-default-required-columns-and-fallback-values.md) |
 | default frame | with ORDER BY in OVER, the first row through this one | [191](./notes/191-the-default-frame-trap.md) |
+| DELETE | removes the rows that match its WHERE, whole rows at once | [223](./notes/223-delete-removing-rows-and-what-still-points-at-them.md) |
 | delete anomaly | removing one fact also removes another that lived only in that row | [090](./notes/090-insert-and-delete-anomalies.md) |
+| DELETE without WHERE | removes every row in the table, leaving it empty | [223](./notes/223-delete-removing-rows-and-what-still-points-at-them.md) |
 | DENSE_RANK | like RANK, but the row after a tie gets the next number | [188](./notes/188-rank-vs-dense-rank-what-ties-do.md) |
 | DESC | sort direction: biggest first, instead of the default smallest first | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
 | dialect | one databases own version of SQL, with its own spellings and rules | [135](./notes/135-one-language-many-dialects.md) |
