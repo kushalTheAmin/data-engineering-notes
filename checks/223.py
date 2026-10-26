@@ -20,10 +20,9 @@ assert q("SELECT fee FROM order_fees WHERE order_id = 104") == [(Decimal("0.00")
 assert q("SELECT stars FROM order_ratings ORDER BY order_id") == [(5,), (4,), (None,), (3,), (None,)]
 assert q("DELETE FROM order_ratings WHERE stars < 4") == [(1,)]
 assert q("SELECT count(*) FROM order_ratings") == [(4,)]
-# question 2: fafda (6) is in no order, dhokla (1) is in orders 101 and 107 once 104's item is gone
-con.execute("DELETE FROM order_items WHERE order_id = 104")
+# question 2: fafda (6) is in no order, dhokla (1) is in orders 101, 104 and 107
 assert q("SELECT count(*) FROM order_items WHERE product_id = 6") == [(0,)]
-assert q("SELECT order_id FROM order_items WHERE product_id = 1 ORDER BY order_id") == [(101,), (107,)]
+assert q("SELECT order_id FROM order_items WHERE product_id = 1 ORDER BY order_id") == [(101,), (104,), (107,)]
 assert q("DELETE FROM products WHERE name = 'fafda'") == [(1,)]
 assert q("SELECT count(*) FROM products") == [(5,)]
 try:
@@ -35,3 +34,5 @@ except Exception as e:
 assert q("DELETE FROM order_ratings") == [(4,)]
 assert q("SELECT count(*) FROM order_ratings") == [(0,)]
 # source: https://www.postgresql.org/docs/current/sql-delete.html
+# source: https://www.postgresql.org/docs/current/ddl-constraints.html
+#   confirmed (opened this run): "The default ON DELETE action is ON DELETE NO ACTION", and "CASCADE specifies that when a referenced row is deleted, row(s) referencing it should be automatically deleted as well", so by default nothing tidies up but Postgres can be told to

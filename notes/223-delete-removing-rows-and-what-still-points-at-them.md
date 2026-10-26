@@ -26,7 +26,7 @@ order_fees | 1
 order_ratings | 0
 ```
 
-two tables point at it, a line item and a 0.00 delivery fee. i expected one blocker and the database to tidy up behind the order, but there were two, and it never tidies on its own. those rows go first, the order last. a table nothing points at, like order_ratings, can be deleted from any time. leave the WHERE off and every row goes while the empty table stays, the same trap as [222](./222-update-changing-rows-and-why-the-where-matters.md).
+two tables point at it, a line item and a 0.00 delivery fee. i expected one blocker and the database to tidy up behind the order, but there were two, and by default it never tidies on its own (Postgres can be told to, with ON DELETE CASCADE). those rows go first, the order last. a table nothing points at, like order_ratings, can be deleted from any time. leave the WHERE off and every row goes while the empty table stays, the same trap as [222](./222-update-changing-rows-and-why-the-where-matters.md).
 
 so what: a deleted row is simply gone, and rows in other tables can disagree with it. thats a good reason the shop keeps 104 as a cancelled row, history stays.
 
@@ -50,7 +50,7 @@ only the 3 is below 4. a test on NULL is [unknown](./114-three-valued-logic-true
 
 </details>
 
-2. the shop sells 6 products. fafda is in no order, dhokla is in orders 101 and 107. one of `DELETE FROM products WHERE name = 'fafda'` and the same for 'dhokla' errors. which, and what does the count return after the safe one?
+2. the shop sells 6 products. fafda is in no order, dhokla is in orders 101, 104 and 107. one of `DELETE FROM products WHERE name = 'fafda'` and the same for 'dhokla' errors. which, and what does the count return after the safe one?
 
 ```sql
 DELETE FROM products WHERE name = 'fafda';
