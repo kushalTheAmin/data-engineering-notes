@@ -34,4 +34,4 @@ INSERT INTO wishlist VALUES (5, 2)
 DuckDB refuses a count that doesnt match. Postgres, a popular server database, is looser: its docs say with no column list and too few values, the rest take their default or NULL. so i name the columns, and a mix up shows in the line.
 
 ---
-prev: [219 sequences, where made up ids come from](./219-sequences-where-made-up-ids-come-from.md) | next: not written yet
+prev: [219 sequences, where made up ids come from](./219-sequences-where-made-up-ids-come-from.md) | next: [221 INSERT from a SELECT, copying rows from a query](./221-insert-from-a-select-copying-rows-from-a-query.md)

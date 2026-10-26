@@ -126,6 +126,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | inner join | a join keeping only pairs where the match holds, dropping the rest | [156](./notes/156-inner-join-traced-by-hand.md) |
 | INSERT | adds new rows to a table, matching values to columns | [220](./notes/220-insert-adding-rows-and-matching-values-to-columns.md) |
 | insert anomaly | a fact cant be stored until an unrelated fact exists | [090](./notes/090-insert-and-delete-anomalies.md) |
+| INSERT from a SELECT | adds the rows a query returns, matched to columns by position | [221](./notes/221-insert-from-a-select-copying-rows-from-a-query.md) |
 | integer division | dividing whole numbers and keeping only the whole part | [131](./notes/131-integer-division-when-7-divided-by-2-gives-3.md) |
 | integer size | how many bits a whole number gets, which sets its range | [015](./notes/015-integer-sizes.md) |
 | INTERSECT | keeps only rows that appear in both queries | [183](./notes/183-intersect-and-except.md) |
