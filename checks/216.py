@@ -38,3 +38,5 @@ assert sorted(r[0] for r in q("SELECT DISTINCT city FROM customers WHERE city IS
 assert q("SELECT 'DIWALI' = 'diwali'") == [(False,)]
 # source: https://www.postgresql.org/docs/15/release-15.html
 #   confirmed (opened this run): "this can now be changed by creating constraints and indexes using UNIQUE NULLS NOT DISTINCT", and the postgres 14 constraints page has no NULLS NOT DISTINCT, so the option starts at Postgres 15
+# the five rows in question 2 hold only 3 different cities plus 2 NULLs
+assert q("SELECT count(*), count(DISTINCT city), count(*) - count(city) FROM hub") == [(5, 3, 2)]

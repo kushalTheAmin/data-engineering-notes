@@ -59,7 +59,7 @@ accepted. in DuckDB, UNIQUE compares the text exactly, so DIWALI and diwali are 
 
 </details>
 
-2. the shop sets city UNIQUE in a new table and saves five cities: Jersey City, Edison, Hoboken, and two customers with no city, like Esha. do all five go in, and what do count(*) and count(city) give?
+2. the shop sets city UNIQUE in a new table and saves five rows: Jersey City, Edison, Hoboken, and two customers with no city, like Esha. do all five go in, and what do count(*) and count(city) give?
 ```sql
 CREATE TABLE hub (city VARCHAR UNIQUE);
 INSERT INTO hub VALUES ('Jersey City'), ('Edison'), ('Hoboken'), (NULL), (NULL);
