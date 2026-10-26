@@ -45,4 +45,4 @@ that is the gap i left in [213](./213-create-table-naming-a-table-and-its-column
 i assumed every old row would have to be rewritten before the column could exist. in Postgres a fixed default is kept once in the metadata (the notes a table keeps about itself), and the docs say the ALTER is very fast even on large tables. a default that changes per row, like clock_timestamp(), does rewrite the whole table.
 
 ---
-prev: [224 upsert, insert or update in one statement](./224-upsert-insert-or-update-in-one-statement.md) | next: not written yet
+prev: [224 upsert, insert or update in one statement](./224-upsert-insert-or-update-in-one-statement.md) | next: [226 DROP and TRUNCATE, emptying a table vs removing it](./226-drop-and-truncate-emptying-a-table-vs-removing-it.md)

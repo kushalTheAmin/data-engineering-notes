@@ -85,6 +85,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | DISTINCT | keeps one copy of each repeated row in a query result | [121](./notes/121-distinct-removing-duplicate-rows.md) |
 | double counting | a sum repeating a value because a fan out copied its row | [165](./notes/165-double-counting-why-sums-after-a-fan-out-lie.md) |
 | doubled quote | two quotes in a row inside a quoted value, meaning one quote | [064](./notes/064-quotes-inside-quotes-and-newlines-inside-values.md) |
+| DROP TABLE | removes a table itself, its rows and its columns | [226](./notes/226-drop-and-truncate-emptying-a-table-vs-removing-it.md) |
 | DuckDB | a database that runs inside your program, keeping data in one file | [102](./notes/102-a-database-in-one-file.md) |
 | embedded newline | a line ending inside a quoted csv value, not ending the row | [064](./notes/064-quotes-inside-quotes-and-newlines-inside-values.md) |
 | entity | a kind of thing you keep facts about, drawn as one table | [098](./notes/098-entity-relationship-diagrams.md) |
@@ -296,6 +297,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | top N per group | keep the first N rows of each group: number inside, filter outside | [193](./notes/193-top-n-per-group.md) |
 | torn write | a write cut off partway, leaving some new blocks and some old | [045](./notes/045-torn-writes.md) |
 | trim | a function cutting spaces off both ends of text | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
+| TRUNCATE | removes every row at once and keeps the empty table | [226](./notes/226-drop-and-truncate-emptying-a-table-vs-removing-it.md) |
 | TRY_CAST | CAST that gives null instead of an error when conversion fails | [133](./notes/133-casts-that-fail-and-try-cast.md) |
 | twos complement | binary where the leftmost place is negative, so one zero | [014](./notes/014-twos-complement.md) |
 | UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING | frame option meaning every row of the window, no limit either way | [191](./notes/191-the-default-frame-trap.md) |
