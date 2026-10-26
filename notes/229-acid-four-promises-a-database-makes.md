@@ -10,7 +10,7 @@ ACID is the name for those four promises, one letter each. they cover a [transac
 | --- | --- | --- |
 | A, atomicity | all of a transaction happens, or none of it | order 108 saved, its items missing |
 | C, consistency | the rules still hold after every change | a product priced -5 gets in |
-| isolation | people working at once dont see each others half done work | Asha counts orders mid way through Dishas, sees one that later vanishes |
+| I, isolation | people working at once dont see each others half done work | Asha counts orders mid way through Dishas, sees one that later vanishes |
 | D, durability | once COMMIT (keep the changes) says done, a crash cant undo it | Esha is told her order is saved, the power dies, it is gone |
 
 A is [227](./227-transactions-all-or-nothing.md), and [COMMIT and ROLLBACK](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md) are how you ask for it. C leans on rules like [CHECK](./217-check-a-rule-every-value-must-pass.md) (refuse a row whose test is false), but only rules somebody wrote down: a price of 600.00 sails through CHECK (price > 0). D means the changes reach the [disk](./036-memory-vs-disk.md), storage that keeps bytes without power, before the database says done, with default settings.
