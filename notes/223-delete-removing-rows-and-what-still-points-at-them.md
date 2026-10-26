@@ -11,7 +11,7 @@ DELETE FROM removes the rows its [WHERE](./106-where-keeping-only-the-rows-that-
 DELETE FROM orders WHERE order_id = 104
 ```
 
-so who is pointing at 104? in DuckDB (a database that runs inside your script), count(*) [counts rows](./138-count-star-vs-count-of-a-column.md), here per table:
+so who is pointing at 104? in DuckDB (a database that runs inside your script), count(*) [counts rows](./138-count-star-vs-count-of-a-column.md) and UNION ALL stacks the three results, one per table:
 
 ```sql
 SELECT 'order_items' AS tbl, count(*) AS rows_for_104 FROM order_items WHERE order_id = 104
