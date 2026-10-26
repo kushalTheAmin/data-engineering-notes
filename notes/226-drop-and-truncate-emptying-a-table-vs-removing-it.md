@@ -34,7 +34,7 @@ SELECT * FROM menu
 
 the table is not empty, it doesnt exist, so the error is about the name.
 
-i kept assuming TRUNCATE was just a shouty DELETE. the Postgres docs say it gives the same result as a DELETE with no WHERE but doesnt scan the rows, so its faster and frees disk space right away. the catch, per the same docs, is that Postgres refuses to truncate or drop a table another table points at with a [foreign key](./093-foreign-key.md) (a column pointing at another tables row), unless you add CASCADE, and you should read that word twice before typing it.
+i kept assuming TRUNCATE was just a shouty DELETE. the Postgres docs say it gives the same result as a DELETE with no WHERE but doesnt scan the rows, so its faster and frees disk space right away. the catch, per the same docs, is that Postgres refuses to drop, or truncate on its own, a table another table points at with a [foreign key](./093-foreign-key.md) (a column pointing at another tables row), unless you add CASCADE (truncate can instead list both tables in one command), and you should read that word twice before typing it.
 
 ---
 prev: [225 ALTER TABLE, adding a column to a table with rows](./225-alter-table-adding-a-column-to-a-table-with-rows.md) | next: not written yet

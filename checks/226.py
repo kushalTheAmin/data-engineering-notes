@@ -23,3 +23,4 @@ assert 3 == 3
 # confirmed: same effect as an unqualified DELETE but does not scan the tables so it is faster, reclaims disk space immediately; cannot be used on a table with foreign-key references from other tables unless they are truncated too, CASCADE option exists
 # source: https://www.postgresql.org/docs/current/sql-droptable.html
 # confirmed: DROP TABLE removes tables; dropping a table referenced by a foreign-key constraint of another table needs CASCADE
+#   confirmed (opened this run): "TRUNCATE cannot be used on a table that has foreign-key references from other tables, unless all such tables are also truncated in the same command." so CASCADE is not the only way past it for truncate
