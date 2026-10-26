@@ -20,3 +20,9 @@ except Exception as e:
     assert "3 columns" in str(e)
 # source: https://www.postgresql.org/docs/current/sql-insert.html
 #   confirmed (opened this run): with no column list the default is all columns in declared order, or the first N if only N values are supplied; columns not listed get their default or null; the standard disallows that case but Postgres permits it.
+# source: https://duckdb.org/why_duckdb
+#   confirmed (opened this run): "By default, DuckDB does not run as a separate process but is completely embedded within a host process", and "there is no DBMS server software to install", so a small database with no server
+# source: https://www.typescriptlang.org/
+#   confirmed (opened this run): "TypeScript is JavaScript with syntax for types", so typed javascript
+# two whole numbers have the same type, so swapping customer and product ids cannot be caught by a type
+assert q("SELECT typeof(customer_id) = typeof(product_id) FROM (SELECT 4 AS customer_id, 3 AS product_id)") == [(True,)]
