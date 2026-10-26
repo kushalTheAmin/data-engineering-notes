@@ -39,3 +39,5 @@ except Exception as e:
     assert "conflict target" in str(e)
 # source: https://www.postgresql.org/docs/current/sql-insert.html
 # confirmed: ON CONFLICT DO UPDATE guarantees an atomic INSERT or UPDATE outcome, even under high concurrency
+# source: https://duckdb.org/docs/2.0/sql/statements/insert.html
+#   confirmed (opened this run): "DuckDB supports two such clauses: ON CONFLICT DO NOTHING and ON CONFLICT DO UPDATE SET ..."; "the special virtual table EXCLUDED, which contains the conflicting values for the row"; "A conflict target ... is a group of columns that an index or uniqueness/key constraint is defined on"
