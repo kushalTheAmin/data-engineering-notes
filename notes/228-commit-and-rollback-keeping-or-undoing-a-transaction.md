@@ -120,4 +120,4 @@ in DuckDB the foreign key failure aborts the whole transaction, so the good item
 </details>
 
 ---
-prev: [227 transactions, all or nothing](./227-transactions-all-or-nothing.md) | next: not written yet
+prev: [227 transactions, all or nothing](./227-transactions-all-or-nothing.md) | next: [229 ACID, four promises a database makes](./229-acid-four-promises-a-database-makes.md)
