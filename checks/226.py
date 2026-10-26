@@ -24,3 +24,4 @@ assert 3 == 3
 # source: https://www.postgresql.org/docs/current/sql-droptable.html
 # confirmed: DROP TABLE removes tables; dropping a table referenced by a foreign-key constraint of another table needs CASCADE
 #   confirmed (opened this run): "TRUNCATE cannot be used on a table that has foreign-key references from other tables, unless all such tables are also truncated in the same command." so CASCADE is not the only way past it for truncate
+#   confirmed (python/psql, a real Postgres 16 server run this audit): with b pointing at a by foreign key, DROP TABLE a fails (HINT: Use DROP ... CASCADE), DROP TABLE a, b works; TRUNCATE a fails (HINT: Truncate table b at the same time, or use TRUNCATE ... CASCADE), TRUNCATE a, b works. the droptable page says CASCADE must be specified for a foreign-key reference, which misses the multi-table form
