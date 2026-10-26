@@ -92,4 +92,4 @@ one statement is all or nothing, so the row that could have moved to 6 stayed pu
 </details>
 
 ---
-prev: [226 DROP and TRUNCATE, emptying a table vs removing it](./226-drop-and-truncate-emptying-a-table-vs-removing-it.md) | next: not written yet
+prev: [226 DROP and TRUNCATE, emptying a table vs removing it](./226-drop-and-truncate-emptying-a-table-vs-removing-it.md) | next: [228 COMMIT and ROLLBACK, keeping or undoing a transaction](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md)

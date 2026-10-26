@@ -18,6 +18,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | ASCII | the old table giving 128 characters a number, English only | [008](./notes/008-ascii-runs-out.md) |
 | atomic | happening whole or not at all, never half done | [046](./notes/046-writing-safely.md) |
 | avg | the average of a column, its sum divided by how many values | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
+| BEGIN | the command that opens a transaction | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
 | BETWEEN | a test keeping values from a low to a high end, inclusive | [112](./notes/112-between-ranges-that-include-both-ends.md) |
 | binary | counting with only 0 and 1, each place worth double | [003](./notes/003-counting-in-binary.md) |
 | binary file | a file whose bytes are not characters, like packed numbers | [041](./notes/041-text-files-vs-binary-files.md) |
@@ -40,6 +41,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | column | a fixed position in every row, like position 3 for status | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
 | column type | one data type chosen for a whole column, every value fits it | [080](./notes/080-every-column-holds-one-type.md) |
 | combining mark | a code point with no letter, drawn on the letter before it | [012](./notes/012-combining-marks.md) |
+| COMMIT | ends a transaction and keeps every change made inside it | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
 | comparison | a column, a test like >= and a value, true or false | [107](./notes/107-comparisons-equal-not-equal-bigger-smaller.md) |
 | composite key | a primary key of two columns, only the pair is unique | [095](./notes/095-composite-keys.md) |
 | compression | storing the same information in fewer bytes, rebuildable exactly | [047](./notes/047-compression-spotting-repeats.md) |
@@ -243,6 +245,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | retention | how many of a cohort logged in again in a later month | [202](./notes/202-retention-who-came-back-the-month-after.md) |
 | revenue | quantity times price, added up over the order rows you choose | [171](./notes/171-joins-plus-group-by-revenue-per-customer.md) |
 | right join | a left join with the tables swapped, keeps every right row | [162](./notes/162-right-and-full-outer-joins.md) |
+| ROLLBACK | ends a transaction and throws away every change made inside it | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
 | ROLLUP | a GROUP BY that adds subtotal rows and a grand total | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | root | the top folder holding everything else, written as a single slash | [040](./notes/040-folders-and-paths.md) |
 | row | one record of a csv, usually one line, split into values | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
