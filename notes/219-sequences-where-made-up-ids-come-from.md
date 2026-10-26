@@ -12,7 +12,7 @@ CREATE TABLE tickets (ticket_id INTEGER PRIMARY KEY DEFAULT nextval('ticket_id')
 INSERT INTO tickets (customer) VALUES ('Asha'), ('Bhavin')
 ```
 
-a [PRIMARY KEY](./218-key-constraints-primary-key-and-references-in-create-table.md) is the unique, never missing id column. now one insert with no customer, which [NOT NULL](./215-not-null-and-default-required-columns-and-fallback-values.md) (refuse a missing value) refuses, then Chirag:
+a [PRIMARY KEY](./218-key-constraints-primary-key-and-references-in-create-table.md) is the unique, never missing id column. now one insert with no customer, which [NOT NULL](./215-not-null-and-default-required-columns-and-fallback-values.md) (refuse a missing value) refuses, then Chirag (ORDER BY sorts the rows):
 
 ```sql
 -- fails on purpose
@@ -44,7 +44,7 @@ Postgres, a popular server database, has the same gaps, and its docs say a seque
 
 ### check yourself
 
-1. Chirags ticket 4 is deleted, then Disha opens one. which id does she get?
+1. Chirags ticket 4 is deleted, then Disha opens one. which id does she get? (DELETE removes rows and WHERE picks which ones)
 ```sql
 DELETE FROM tickets WHERE customer = 'Chirag';
 INSERT INTO tickets (customer) VALUES ('Disha');
@@ -60,7 +60,7 @@ she gets 5. the counter lives outside the table and only moves forward, so 4 is 
 
 </details>
 
-2. a small orders table is loaded with ids 101 and 102 typed by hand, and then one new order is added without an id. what id does it get?
+2. a small orders table is loaded with ids 101 and 102 typed by hand, and then one new order is added without an id. what id does it get? (WHERE keeps only the matching rows)
 ```sql
 CREATE SEQUENCE o START 1;
 CREATE TABLE orders2 (order_id INTEGER PRIMARY KEY DEFAULT nextval('o'), status VARCHAR);
