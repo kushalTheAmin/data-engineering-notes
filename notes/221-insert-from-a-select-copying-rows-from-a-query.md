@@ -40,4 +40,4 @@ nothing remembers the first run, so every order is there twice. a [PRIMARY KEY](
 so what: this shape fills one table from another, like a clean table from a raw one, and a loading job that retries copies the rows again unless the table refuses repeats. Postgres takes the same statement.
 
 ---
-prev: [220 INSERT, adding rows and matching values to columns](./220-insert-adding-rows-and-matching-values-to-columns.md) | next: not written yet
+prev: [220 INSERT, adding rows and matching values to columns](./220-insert-adding-rows-and-matching-values-to-columns.md) | next: [222 UPDATE, changing rows and why the WHERE matters](./222-update-changing-rows-and-why-the-where-matters.md)

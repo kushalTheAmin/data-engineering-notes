@@ -302,7 +302,9 @@ every term these notes have built, in plain words, with the note that built it. 
 | unix time | a moment kept as seconds counted since the epoch | [025](./notes/025-unix-time.md) |
 | unknown | the third test result, from a null, that WHERE drops | [114](./notes/114-three-valued-logic-true-false-and-unknown.md) |
 | UNNEST | turns each item of a list cell into its own row | [204](./notes/204-arrays-and-unnest-lists-inside-a-cell.md) |
+| UPDATE | changes values in rows that already exist | [222](./notes/222-update-changing-rows-and-why-the-where-matters.md) |
 | update anomaly | one fact stored in many rows, an update changing only some | [089](./notes/089-update-anomalies.md) |
+| UPDATE without WHERE | changes every row in the table, with no warning | [222](./notes/222-update-changing-rows-and-why-the-where-matters.md) |
 | upper | a function turning every letter to upper case | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | UTC | the one clock everyone measures against, with no daylight saving | [024](./notes/024-utc.md) |
 | UTF-8 | a way to store each code point as 1 to 4 bytes | [010](./notes/010-utf-8.md) |
