@@ -83,4 +83,4 @@ it errors, since nothing in loose can say a conflict happened. the tempting answ
 </details>
 
 ---
-prev: [223 DELETE, removing rows and what still points at them](./223-delete-removing-rows-and-what-still-points-at-them.md) | next: not written yet
+prev: [223 DELETE, removing rows and what still points at them](./223-delete-removing-rows-and-what-still-points-at-them.md) | next: [225 ALTER TABLE, adding a column to a table with rows](./225-alter-table-adding-a-column-to-a-table-with-rows.md)

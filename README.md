@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 224
+notes so far: 225
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -255,3 +255,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [222 UPDATE, changing rows and why the WHERE matters](./notes/222-update-changing-rows-and-why-the-where-matters.md): forget one WHERE on an UPDATE and all 7 orders say cancelled, with no error and no warning
 - [223 DELETE, removing rows and what still points at them](./notes/223-delete-removing-rows-and-what-still-points-at-them.md): a cancelled order wont delete while its item row still points at it, so the pointing row goes first
 - [224 upsert, insert or update in one statement](./notes/224-upsert-insert-or-update-in-one-statement.md): a price list has jalebi changed and imarti new, and one INSERT with ON CONFLICT updates the first and adds the second
+- [225 ALTER TABLE, adding a column to a table with rows](./notes/225-alter-table-adding-a-column-to-a-table-with-rows.md): the shop adds a vegan flag to a menu that already has rows, and every old row quietly reads NULL

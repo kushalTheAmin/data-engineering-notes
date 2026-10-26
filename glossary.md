@@ -5,6 +5,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | term | plain meaning | built in |
 |---|---|---|
 | absolute path | a path starting with a slash, always begun at the root | [053](./notes/053-absolute-vs-relative-paths.md) |
+| add column | a new column added to a table that already has rows | [225](./notes/225-alter-table-adding-a-column-to-a-table-with-rows.md) |
 | address (network) | a number naming one machine on a network, 4 bytes in IPv4 | [085](./notes/085-addresses-and-ports.md) |
 | aggregate function | reads many rows, returns one value, like count, sum or max | [137](./notes/137-aggregate-functions-many-rows-in-one-value-out.md) |
 | aggregates skip nulls | sum, avg and count(column) ignore null rows entirely | [141](./notes/141-what-nulls-do-to-sum-and-avg.md) |
