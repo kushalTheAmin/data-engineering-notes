@@ -61,7 +61,7 @@ accepted. only shipment_id has to be unique, order_id is a foreign key and may r
 
 </details>
 
-2. this version forgot NOT NULL on the pointer. shipment 3 goes in with order_id NULL. refused?
+2. this version forgot NOT NULL on the pointer. shipment 3 goes in with order_id NULL. refused? (count(order_id) counts only the rows that have a value)
 ```sql
 CREATE TABLE ship3 (shipment_id INTEGER PRIMARY KEY, order_id INTEGER REFERENCES orders (order_id));
 INSERT INTO ship3 VALUES (3, NULL);
