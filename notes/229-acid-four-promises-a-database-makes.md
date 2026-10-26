@@ -65,4 +65,4 @@ isolation. Asha saw work that was never final. the tempting answer is A, but Esh
 </details>
 
 ---
-prev: [228 COMMIT and ROLLBACK, keeping or undoing a transaction](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md) | next: not written yet
+prev: [228 COMMIT and ROLLBACK, keeping or undoing a transaction](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md) | next: [230 ACID consistency, the rules still hold after every change](./230-acid-consistency-the-rules-still-hold-after-every-change.md)

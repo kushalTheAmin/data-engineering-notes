@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 229
+notes so far: 230
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -260,3 +260,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [227 transactions, all or nothing](./notes/227-transactions-all-or-nothing.md): an order row goes in, its item row breaks a foreign key, and the shop is left with an order holding nothing
 - [228 COMMIT and ROLLBACK, keeping or undoing a transaction](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md): insert an order, count it, type ROLLBACK, and both rows are gone together
 - [229 ACID, four promises a database makes](./notes/229-acid-four-promises-a-database-makes.md): a power cut, two shoppers at once, a price of -5 and a crash after saving each break a different promise
+- [230 ACID consistency, the rules still hold after every change](./notes/230-acid-consistency-the-rules-still-hold-after-every-change.md): one good price change and one bad one share a transaction and both vanish, while an order with no items sails through
