@@ -69,4 +69,4 @@ fafda goes, leaving 5. dhokla errors, since order_items still points at it. ever
 </details>
 
 ---
-prev: [222 UPDATE, changing rows and why the WHERE matters](./222-update-changing-rows-and-why-the-where-matters.md) | next: not written yet
+prev: [222 UPDATE, changing rows and why the WHERE matters](./222-update-changing-rows-and-why-the-where-matters.md) | next: [224 upsert, insert or update in one statement](./224-upsert-insert-or-update-in-one-statement.md)
