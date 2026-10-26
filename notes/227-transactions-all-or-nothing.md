@@ -40,7 +40,7 @@ my_items | 0
 
 an order with nothing in it. i expected the failed step to cancel the whole script, but the database judges each statement alone and never reaches back. wrap both steps in a transaction and step 1 is undone as well, as if it never happened. one statement on its own is already all or nothing, even an [UPDATE](./222-update-changing-rows-and-why-the-where-matters.md) over many rows.
 
-so what: the Postgres docs open with a bank payment, money out of Alice, money into Bob, and a crash between the two would make money vanish. how you actually write a transaction is for a later note.
+so what: the Postgres docs explain it with a bank payment, money out of Alice, money into Bob, and a crash between the two would make money vanish. how you actually write a transaction is for a later note.
 
 ### check yourself
 

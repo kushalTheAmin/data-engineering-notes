@@ -30,3 +30,4 @@ assert fails("UPDATE my_items SET product_id = product_id + 3 WHERE order_id = 1
 assert q("SELECT product_id FROM my_items WHERE order_id = 102 ORDER BY product_id") == [(3,), (4,)]
 # source: https://www.postgresql.org/docs/current/tutorial-transactions.html
 # confirmed: a transaction bundles multiple steps into a single all-or-nothing operation; the page's example is a bank payment from Alice's account to Bob's; PostgreSQL treats every SQL statement as executed within a transaction
+#   confirmed (opened this run): the page opens with a general paragraph ("bundles multiple steps into a single, all-or-nothing operation") and brings in the Alice and Bob payment in its second paragraph, so the note says the docs explain it with that payment, not open with it
