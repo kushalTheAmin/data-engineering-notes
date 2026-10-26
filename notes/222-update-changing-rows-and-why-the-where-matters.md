@@ -34,7 +34,7 @@ i assumed a missing WHERE would be an error, the database asking which rows, but
 
 the other slip is quiet too: a WHERE that matches nothing changes 0 rows, and Postgres docs say thats not an error. SET can read the old value, so price = price + 1 adds 1 to whatever was there.
 
-so what: this is a classic way to wreck a live table. MySQL, another database, has a safety option, --safe-updates (also --i-am-a-dummy), that refuses an UPDATE not filtered by its id column. Postgres, a server database, takes the same statement.
+so what: this is a classic way to wreck a live table. MySQL, another database, has a safety option, --safe-updates (also --i-am-a-dummy), that refuses an UPDATE unless its WHERE uses a key column like the id, or it has a LIMIT. Postgres, a server database, takes the same statement.
 
 ### check yourself
 

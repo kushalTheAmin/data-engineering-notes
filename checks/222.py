@@ -27,3 +27,4 @@ assert q("SELECT count(*) FROM products WHERE category = 'sweet'") == [(3,)]
 #   confirmed (opened this run): "If count is 0, no rows were updated by the query (this is not considered an error)"; "The expression can use the old values of this and other columns in the table."
 # source: https://dev.mysql.com/doc/refman/8.4/en/mysql-command-options.html
 #   confirmed (opened this run): --safe-updates (also --i-am-a-dummy): UPDATE and DELETE statements that do not use a key in the WHERE clause or a LIMIT clause produce an error
+# the note says the option refuses an UPDATE unless the WHERE uses a key or there is a LIMIT: matches the quote above
