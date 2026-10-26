@@ -838,3 +838,4 @@ after this arc: you can design a data platform from a business question and defe
 - [ ] the job: data engineer, analytics engineer and analyst
 - [ ] capstone: the whole journey on one map, every arc capstone linked
 2026-10-25: repo baseline failed checks/008.py and 7 more: python3 is 3.11, pip gives duckdb 2.0.0 which breaks 8 checks on fetchone (041 also asserts), older duckdb fails 127, 201, 202 on date_trunc types; no note written, needs a fix outside this run
+2026-10-26: repo baseline failed checks/008.py and 8 more: duckdb 1.1.3, 1.3.2, 1.5.6 and 2.0.0 all fail (fetchone on relations, 041 assert, 180 CTE circular reference), mermaid render failed; no note written, needs a fix outside this run
