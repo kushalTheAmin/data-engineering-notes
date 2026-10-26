@@ -37,7 +37,14 @@ try:
     raise SystemExit("upsert should have failed")
 except Exception as e:
     assert "conflict target" in str(e)
+# a UNIQUE column with no primary key also works as the conflict target
+con.execute("CREATE TABLE uniq (name VARCHAR UNIQUE, price DECIMAL(6, 2))")
+con.execute("INSERT INTO uniq SELECT name, price FROM products")
+con.execute(up.replace("menu", "uniq"))
+assert q("SELECT count(*) FROM uniq") == [(7,)]
+assert q("SELECT price FROM uniq WHERE name = 'jalebi'") == [(Decimal("5.50"),)]
 # source: https://www.postgresql.org/docs/current/sql-insert.html
 # confirmed: ON CONFLICT DO UPDATE guarantees an atomic INSERT or UPDATE outcome, even under high concurrency
 # source: https://duckdb.org/docs/2.0/sql/statements/insert.html
 #   confirmed (opened this run): "DuckDB supports two such clauses: ON CONFLICT DO NOTHING and ON CONFLICT DO UPDATE SET ..."; "the special virtual table EXCLUDED, which contains the conflicting values for the row"; "A conflict target ... is a group of columns that an index or uniqueness/key constraint is defined on"
+#   confirmed (opened this run): "A conflict target may be provided as ON CONFLICT (conflict_target). This is a group of columns that an index or uniqueness/key constraint is defined on.", so a primary key or a unique rule both work

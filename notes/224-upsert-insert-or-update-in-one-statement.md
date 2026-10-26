@@ -42,7 +42,7 @@ ON CONFLICT (name) says which key to watch. DO UPDATE SET is an [UPDATE](./222-u
 
 i expected a python style check, is it there, then one branch or the other, but the database does both in one statement. run it twice and you get the same 7 rows, where the copy in [221](./221-insert-from-a-select-copying-rows-from-a-query.md) doubled.
 
-so what: loading jobs retry, and an upsert makes a retry harmless. Postgres docs say ON CONFLICT DO UPDATE gives one of insert or update even with many writers at once. it only works because the key exists, so no key, no upsert.
+so what: loading jobs retry, and an upsert makes a retry harmless. Postgres docs say ON CONFLICT DO UPDATE gives one of insert or update even with many writers at once. it only works because the column has a key or a no repeats rule (UNIQUE), so without one, no upsert.
 
 ### check yourself
 
