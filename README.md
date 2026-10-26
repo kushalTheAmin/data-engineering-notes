@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 226
+notes so far: 227
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -257,3 +257,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [224 upsert, insert or update in one statement](./notes/224-upsert-insert-or-update-in-one-statement.md): a price list has jalebi changed and imarti new, and one INSERT with ON CONFLICT updates the first and adds the second
 - [225 ALTER TABLE, adding a column to a table with rows](./notes/225-alter-table-adding-a-column-to-a-table-with-rows.md): the shop adds a vegan flag to a menu that already has rows, and every old row quietly reads NULL
 - [226 DROP and TRUNCATE, emptying a table vs removing it](./notes/226-drop-and-truncate-emptying-a-table-vs-removing-it.md): DELETE, TRUNCATE and DROP all get rid of the menu rows, but only DROP takes the table with them
+- [227 transactions, all or nothing](./notes/227-transactions-all-or-nothing.md): an order row goes in, its item row breaks a foreign key, and the shop is left with an order holding nothing
