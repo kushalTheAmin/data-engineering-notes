@@ -12,7 +12,7 @@ CREATE TABLE my_items (order_id INTEGER, product_id INTEGER REFERENCES products 
 INSERT INTO my_items SELECT * FROM order_items
 ```
 
-now Dishas order 108, two [INSERTs](./220-insert-adding-rows-and-matching-values-to-columns.md) (add a row each) inside a transaction, counted before i decide:
+now Dishas order 108, two [INSERTs](./220-insert-adding-rows-and-matching-values-to-columns.md) (add a row each) inside a transaction, counted before i decide (count(*) counts rows, WHERE keeps the matching ones, UNION ALL stacks the two results):
 
 ```sql
 BEGIN;
