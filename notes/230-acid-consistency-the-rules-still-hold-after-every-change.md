@@ -36,7 +36,7 @@ kaju katli | 12.00
 | kaju katli to -1 | refused | the whole transaction dies |
 | after COMMIT | back to 6.00 and 12.00 | yes |
 
-the good dhokla change vanished with the bad one. i expected only the bad row to be refused, but the database never lets the transaction end in a broken state, so it takes back all of it ([228](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md) showed DuckDB doing the same after a failed foreign key).
+the good dhokla change vanished with the bad one. i expected only the bad row to be refused, but in DuckDB one refused change kills the whole transaction, so it takes back all of it (SQLite would keep the dhokla change, so this is a choice each database makes) ([228](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md) showed DuckDB doing the same after a failed foreign key).
 
 now the catch. a rule nobody declared isnt guarded. nothing says an order needs items, so order 108 goes in alone and every rule is happy. this query lists orders with no matching item row (LEFT JOIN keeps unmatched orders, with empty item columns):
 
