@@ -56,4 +56,4 @@ no. the 60.00 was committed when she read it, so it was a real price for a while
 </details>
 
 ---
-prev: [235 lost updates](./235-lost-updates.md) | next: not written yet
+prev: [235 lost updates](./235-lost-updates.md) | next: [237 non repeatable reads](./237-non-repeatable-reads.md)

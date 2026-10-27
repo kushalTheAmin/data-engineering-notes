@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 236
+notes so far: 237
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -267,3 +267,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [234 replaying the log after a crash](./notes/234-replaying-the-log-after-a-crash.md): the server restarts with the table file behind, and redoing the whole log would put order 108 in twice
 - [235 lost updates](./notes/235-lost-updates.md): 10 dhokla left, two buyers each take one, and the stock says 9 with no error
 - [236 dirty reads](./notes/236-dirty-reads.md): Esha rolls back a typo price, but Asha already read it, a price that never existed
+- [237 non repeatable reads](./notes/237-non-repeatable-reads.md): Asha reads dhokla twice in one transaction and gets 6.00 then 7.00, and nothing was rolled back

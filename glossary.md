@@ -200,6 +200,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | network | a way to move bytes from one computer to another | [084](./notes/084-a-network.md) |
 | nextval | the call that hands out a sequences next number | [219](./notes/219-sequences-where-made-up-ids-come-from.md) |
 | no promised order | without ORDER BY, rows may come back in any order | [118](./notes/118-no-order-by-no-promised-order.md) |
+| non repeatable read | reading one row twice in a transaction and getting different values | [237](./notes/237-non-repeatable-reads.md) |
 | NOT | flips a test, but a null stays unknown and is dropped | [110](./notes/110-not-flipping-a-condition.md) |
 | NOT EXISTS | true when the inner query returns no rows at all | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
 | NOT IN | keeps non-matches, but one NULL in the list empties the result | [179](./notes/179-not-in-and-the-null-trap.md) |
