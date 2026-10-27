@@ -9,9 +9,11 @@ isolation, the third promise in [ACID](./229-acid-four-promises-a-database-makes
 ```python
 import duckdb
 db = duckdb.connect()
+# range(7) makes 7 rows, so orders 101 to 107
 db.execute("CREATE TABLE my_orders AS SELECT 101 + range AS order_id FROM range(7)")
 asha = db.cursor()
 esha = db.cursor()
+# count(who) = how many orders that connection sees
 count = lambda who: who.execute("SELECT count(*) FROM my_orders").fetchone()[0]
 
 esha.execute("BEGIN")
