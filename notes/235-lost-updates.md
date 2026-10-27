@@ -67,4 +67,4 @@ that 7.50 is the SQL way. the python way stores 6.50, since Bhavin never saw Ash
 </details>
 
 ---
-prev: [234 replaying the log after a crash](./234-replaying-the-log-after-a-crash.md) | next: not written yet
+prev: [234 replaying the log after a crash](./234-replaying-the-log-after-a-crash.md) | next: [236 dirty reads](./236-dirty-reads.md)

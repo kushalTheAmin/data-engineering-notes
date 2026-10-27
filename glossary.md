@@ -87,6 +87,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | DENSE_RANK | like RANK, but the row after a tie gets the next number | [188](./notes/188-rank-vs-dense-rank-what-ties-do.md) |
 | DESC | sort direction: biggest first, instead of the default smallest first | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
 | dialect | one databases own version of SQL, with its own spellings and rules | [135](./notes/135-one-language-many-dialects.md) |
+| dirty read | reading another transactions change before it is committed | [236](./notes/236-dirty-reads.md) |
 | disk | storage like an SSD or hard drive, keeping bytes without power | [036](./notes/036-memory-vs-disk.md) |
 | DISTINCT | keeps one copy of each repeated row in a query result | [121](./notes/121-distinct-removing-duplicate-rows.md) |
 | double counting | a sum repeating a value because a fan out copied its row | [165](./notes/165-double-counting-why-sums-after-a-fan-out-lie.md) |
