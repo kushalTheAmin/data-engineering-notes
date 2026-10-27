@@ -56,4 +56,4 @@ she gets 1 both times. the tempting 1 then 0 reads the second query as a fresh l
 </details>
 
 ---
-prev: [239 isolation levels, read committed](./239-isolation-levels-read-committed.md) | next: not written yet
+prev: [239 isolation levels, read committed](./239-isolation-levels-read-committed.md) | next: [241 serializable, as if one at a time, and retrying the failures](./241-serializable-as-if-one-at-a-time-and-retrying-the-failures.md)

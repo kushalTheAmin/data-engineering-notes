@@ -280,6 +280,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | self join | a table joined to a second copy of itself under another alias | [168](./notes/168-self-join-a-table-joined-to-itself.md) |
 | semi join | keeps left rows that have a match, once each, never copies | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
 | sequence | a counter the database keeps outside any table, only moving forward | [219](./notes/219-sequences-where-made-up-ids-come-from.md) |
+| serializable | strictest level: results match some one-at-a-time order of transactions | [241](./notes/241-serializable-as-if-one-at-a-time-and-retrying-the-failures.md) |
+| serialization failure | error 40001: Postgres refuses a transaction so the app must retry it | [241](./notes/241-serializable-as-if-one-at-a-time-and-retrying-the-failures.md) |
 | server | a program that listens on a port and answers requests | [086](./notes/086-client-and-server.md) |
 | session (clicks) | a run of one persons clicks, a long silence starts the next | [199](./notes/199-session-starts-flag-the-click-after-a-long-gap.md) |
 | session (database) | one connections conversation with the database, with its own settings | [212](./notes/212-connections-and-sessions-one-conversation-with-the-database.md) |
