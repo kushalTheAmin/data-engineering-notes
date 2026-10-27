@@ -59,6 +59,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | count(*) | counts every row, nulls or not | [138](./notes/138-count-star-vs-count-of-a-column.md) |
 | count(column) | counts the rows where that column is not null | [138](./notes/138-count-star-vs-count-of-a-column.md) |
 | count(DISTINCT column) | counts how many different non-null values a column has | [139](./notes/139-count-distinct-counting-different-values.md) |
+| crash | anything that wipes memory, like a power cut or the server dying | [232](./notes/232-durability-surviving-a-crash.md) |
 | CREATE TABLE | makes a new empty table from a name and typed columns | [213](./notes/213-create-table-naming-a-table-and-its-columns.md) |
 | CREATE TABLE IF NOT EXISTS | skips if the name is taken, never checking the columns match | [213](./notes/213-create-table-naming-a-table-and-its-columns.md) |
 | CRLF | a line ending of two characters, 0d then 0a, common on windows | [042](./notes/042-line-endings.md) |
@@ -109,6 +110,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | file extension | the letters after the dot in a name, just a label | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
 | flattening | turning inner names into columns, like address_city, one per name | [070](./notes/070-flattening-nested-objects-into-columns.md) |
 | float | binary digits plus a count of how far to slide the point | [019](./notes/019-floating-point.md) |
+| flush | force waiting data onto disk before moving on | [232](./notes/232-durability-surviving-a-crash.md) |
 | folder | a named place on disk holding files and other folders | [040](./notes/040-folders-and-paths.md) |
 | foreign key | a column holding another tables primary key values, a pointer | [093](./notes/093-foreign-key.md) |
 | FROM | the clause naming the table a query reads from | [104](./notes/104-select-and-from-picking-columns.md) |

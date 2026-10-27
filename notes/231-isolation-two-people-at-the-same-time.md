@@ -65,4 +65,4 @@ delivered
 </details>
 
 ---
-prev: [230 ACID consistency, the rules still hold after every change](./230-acid-consistency-the-rules-still-hold-after-every-change.md) | next: not written yet
+prev: [230 ACID consistency, the rules still hold after every change](./230-acid-consistency-the-rules-still-hold-after-every-change.md) | next: [232 durability, surviving a crash](./232-durability-surviving-a-crash.md)
