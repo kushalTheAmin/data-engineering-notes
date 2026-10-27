@@ -43,4 +43,4 @@ how does it know? Postgres stamps each page (its name for a block, 8 kB by defau
 so what: a crashed Postgres usually replays for a bit and carries on with no manual repair, unless the log or disk is damaged.
 
 ---
-prev: [233 the write ahead log, write down the plan before the change](./233-the-write-ahead-log-write-down-the-plan-before-the-change.md) | next: not written yet
+prev: [233 the write ahead log, write down the plan before the change](./233-the-write-ahead-log-write-down-the-plan-before-the-change.md) | next: [235 lost updates](./235-lost-updates.md)
