@@ -15,7 +15,7 @@ durability, the last promise in [ACID](./229-acid-four-promises-a-database-makes
 
 the order of the steps is the whole promise. say done first and flush later, and a crash in between leaves her holding a confirmation for an order that doesnt exist. i figured saving was one instant, but the database has to pick an order between telling Esha and writing it down.
 
-so what: every commit waits on a [slow disk](./037-disk-is-slow.md), and for short transactions the Postgres docs call that wait a major part of the time. Postgres has a setting, synchronous_commit, on by default. turn it off and it says done without waiting, and the docs say a crash can lose the last few commits, but not corrupt anything: the database looks as if they were cleanly cancelled.
+so what: by default a commit waits on a [slow disk](./037-disk-is-slow.md), and for short transactions the Postgres docs call that wait a major part of the time. Postgres has a setting, synchronous_commit, on by default. turn it off and it says done without waiting, and the docs say a crash can lose the last few commits, but not corrupt anything: the database looks as if they were cleanly cancelled.
 
 what gets flushed is a log of the change, not the table files. a later note covers why.
 
