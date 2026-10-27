@@ -33,7 +33,7 @@ read then write: 9
 one UPDATE each: 8
 ```
 
-in way 1 both read 10 before either wrote, so both wrote 9. i figured [isolation](./231-isolation-two-people-at-the-same-time.md) was the whole fix, but nothing unfinished was hidden here: both reads were of a real, committed 10. isolation hides half done work, it doesnt notice two people building on the same stale number.
+in way 1 both read 10 before either wrote, so both wrote 9. i figured [isolation](./231-isolation-two-people-at-the-same-time.md) was the whole fix, but nothing unfinished was hidden here: both reads were of a real, committed 10. isolation at the default level hides half done work, it doesnt notice two people building on the same stale number (Postgres at repeatable read, a stricter level, refuses the second write with an error).
 
 way 2 works because the number never visits python. as in [222](./222-update-changing-rows-and-why-the-where-matters.md), `left_over - 1` reads the current value when the UPDATE runs. my demo runs one after the other, but the Postgres docs say that at [read committed](./231-isolation-two-people-at-the-same-time.md), the Postgres default, a second UPDATE of the same row waits for the first to commit, then applies to the new row.
 

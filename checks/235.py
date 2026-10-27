@@ -30,3 +30,6 @@ left = left - 1
 assert left == -1
 # source: https://www.postgresql.org/docs/current/transaction-iso.html
 #   confirmed (opened this run): at read committed a would-be updater "will wait for the first updating transaction to commit or roll back", then "attempt to apply its operation to the updated version of the row"
+
+#   confirmed (opened this run): "Read Committed is the default isolation level in PostgreSQL."
+#   confirmed (opened this run), repeatable read section: if the first updater commits "the repeatable read transaction will be rolled back with the message ERROR:  could not serialize access due to concurrent update"
