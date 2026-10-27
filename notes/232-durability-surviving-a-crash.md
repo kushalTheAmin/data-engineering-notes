@@ -20,4 +20,4 @@ so what: every commit waits on a [slow disk](./037-disk-is-slow.md), and for sho
 what gets flushed is a log of the change, not the table files. a later note covers why.
 
 ---
-prev: [231 isolation, two people at the same time](./231-isolation-two-people-at-the-same-time.md) | next: not written yet
+prev: [231 isolation, two people at the same time](./231-isolation-two-people-at-the-same-time.md) | next: [233 the write ahead log, write down the plan before the change](./233-the-write-ahead-log-write-down-the-plan-before-the-change.md)

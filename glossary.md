@@ -329,6 +329,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | UTF-8 | a way to store each code point as 1 to 4 bytes | [010](./notes/010-utf-8.md) |
 | valid state | every declared rule true at once, before and after a transaction | [230](./notes/230-acid-consistency-the-rules-still-hold-after-every-change.md) |
 | view | a query saved under a name, rerun on every read | [181](./notes/181-views-a-saved-query-with-a-name.md) |
+| WAL | short for write ahead log | [233](./notes/233-the-write-ahead-log-write-down-the-plan-before-the-change.md) |
 | wc | prints a files counts; wc -l counts its 0a line endings | [055](./notes/055-wc-counting-lines.md) |
 | WHERE | the clause keeping only rows whose condition is true, checked before SELECT | [106](./notes/106-where-keeping-only-the-rows-that-match.md) |
 | WHERE vs HAVING | WHERE tests single rows before grouping, HAVING tests groups after | [147](./notes/147-where-vs-having-before-grouping-or-after.md) |
@@ -338,6 +339,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | window frame | the slice of the window a function uses for one row | [190](./notes/190-window-frames-rows-between.md) |
 | window function | a calculation across rows that keeps every row, like sum with OVER | [184](./notes/184-window-functions-a-total-next-to-every-row.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
+| write ahead log | the databases own list of changes, flushed before table files change | [233](./notes/233-the-write-ahead-log-write-down-the-plan-before-the-change.md) |
 | XML | a text format wrapping each value in opening and closing tags | [072](./notes/072-xml.md) |
 | YAML | a text format where indentation shows nesting, dashes start list items | [073](./notes/073-yaml.md) |
 | YAML trap | a bare word like no read as a boolean, so quote text | [074](./notes/074-yaml-traps.md) |
