@@ -19,3 +19,7 @@ assert done == [2]
 # toy: redoing the insert (record 1) a second time would give two 108 rows
 rows = [108]; rows.append(108); assert rows.count(108) == 2
 # page size 8 kB default: https://www.postgresql.org/docs/current/storage-page-layout.html (default 8 kB pages)
+# page = 8192 bytes = 2 blocks of 4096 (note 044)
+assert 8 * 1024 // 4096 == 2
+# source: https://www.postgresql.org/docs/current/wal-intro.html
+#   confirmed (opened this run): "in the event of a crash we will be able to recover the database using the log: any changes that have not been applied to the data pages can be redone from the WAL records"

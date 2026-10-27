@@ -38,9 +38,9 @@ print(table)
 
 record 1 was already in the table file, so replay skips it. i assumed replay meant running the whole log again blindly, but every record first gets one question: do you already have this? in my toy, redoing record 1 would add 108 twice.
 
-how does it know? Postgres stamps each page (its name for a block, 8 kB by default) with the position of the last log record applied to it, and Postgres normally skips a record when the page is already at or past it (source: transam/README). my loop uses one number for the whole table.
+how does it know? Postgres stamps each page (its own unit, 8 kB by default, two of the 4096 byte blocks from [044](./044-disks-read-in-blocks.md)) with the position of the last log record applied to it, and Postgres normally skips a record when the page is already at or past it (source: transam/README). my loop uses one number for the whole table.
 
-so what: a crashed Postgres usually replays for a bit and carries on with no manual repair, unless the log or disk is damaged.
+so what: after a crash Postgres can redo the missing changes from the log, as long as the log itself survived.
 
 ---
 prev: [233 the write ahead log, write down the plan before the change](./233-the-write-ahead-log-write-down-the-plan-before-the-change.md) | next: [235 lost updates](./235-lost-updates.md)
