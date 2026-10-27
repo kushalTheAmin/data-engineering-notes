@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 239
+notes so far: 240
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -270,3 +270,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [237 non repeatable reads](./notes/237-non-repeatable-reads.md): Asha reads dhokla twice in one transaction and gets 6.00 then 7.00, and nothing was rolled back
 - [238 phantoms](./notes/238-phantoms.md): Asha lists the pending orders twice in one transaction and gets one row, then two, and none of the rows she read changed
 - [239 isolation levels, read committed](./notes/239-isolation-levels-read-committed.md): Asha types BEGIN and Esha commits 108 right after, so does ashas first query see it
+- [240 repeatable read, rows dont change under you mid transaction](./notes/240-repeatable-read-rows-dont-change-under-you-mid-transaction.md): Esha commits 108 mid transaction and Ashas two counts still match, what changed

@@ -68,4 +68,4 @@ no. the query got its one picture at the start and keeps it until it ends. the t
 </details>
 
 ---
-prev: [238 phantoms](./238-phantoms.md) | next: not written yet
+prev: [238 phantoms](./238-phantoms.md) | next: [240 repeatable read, rows dont change under you mid transaction](./240-repeatable-read-rows-dont-change-under-you-mid-transaction.md)

@@ -253,6 +253,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | register | a tiny holding spot inside the processor, where it works on numbers | [035](./notes/035-the-processor.md) |
 | relationship | how rows in one table connect to rows in another | [092](./notes/092-relationships-one-customer-many-orders.md) |
 | relative path | a path with no leading slash, begun at the working directory | [053](./notes/053-absolute-vs-relative-paths.md) |
+| repeatable read | Postgres level: one picture, taken at the first query, kept all transaction | [240](./notes/240-repeatable-read-rows-dont-change-under-you-mid-transaction.md) |
 | repeating fraction | digits past the point that loop forever, so no exact finite form | [018](./notes/018-why-0-1-has-no-exact-binary-form.md) |
 | replay | reading the log forward and redoing changes the table files lack | [234](./notes/234-replaying-the-log-after-a-crash.md) |
 | required field | a field name every record must have, or it is rejected | [077](./notes/077-required-vs-optional-fields.md) |
