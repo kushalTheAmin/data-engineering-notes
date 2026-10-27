@@ -14,7 +14,7 @@ the write ahead log, WAL for short, is the databases own list of changes, added 
 
 look at the middle row. Esha has her done, and if the power died there, 108 would sit on disk in one place only, the WAL. i assumed the table file was the real copy and the log a side note, but at that moment its the other way round.
 
-why bother, you ask? the WAL grows at the end of one file, so its [reading start to end](./043-reading-start-to-end-vs-jumping.md) style, one append. updating the table means [jumping](./043-reading-start-to-end-vs-jumping.md) to whichever [blocks](./044-disks-read-in-blocks.md) (fixed chunks a disk handles whole) hold the rows, and [037](./037-disk-is-slow.md) priced a random lookup at 10 milliseconds on a spinning disk (an SSD gap is smaller). Postgres docs agree.
+why bother, you ask? the WAL only ever grows at its end, so its [reading start to end](./043-reading-start-to-end-vs-jumping.md) style, one append. updating the table means [jumping](./043-reading-start-to-end-vs-jumping.md) to whichever [blocks](./044-disks-read-in-blocks.md) (fixed chunks a disk handles whole) hold the rows, and [037](./037-disk-is-slow.md) priced a random lookup at 10 milliseconds on a spinning disk (an SSD gap is smaller). Postgres docs agree.
 
 caveat: the rule is about order. Postgres may write a table page early, just never before the WAL has that change.
 
