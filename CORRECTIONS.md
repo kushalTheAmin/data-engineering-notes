@@ -569,6 +569,7 @@ every fix made to a note after it was published, newest first. if you learned fr
 
 ## audit log
 audit runs that could not finish, newest first. format: YYYY-MM-DD HH:MM: what happened
+2026-10-27 10:09: gate failed before any change (8 FAIL: checks 008, 011, 026 to 030 and 041) with duckdb 2.0.0, where relation.fetchone() was removed; no note was audited
 2026-10-27 12:00: gate failed before any change (8 FAIL: checks 008, 011, 026 to 030 and 041) with duckdb 2.0.0, where relation.fetchone() was removed; no note was audited
 2026-10-27 02:17: gate failed before any change (8 FAIL: checks 008, 011, 026 to 030 and 041) with duckdb 2.0.0, where relation.fetchone() was removed; duckdb 1.4.4 and 1.5.6 fail the same 8; no note was audited
 2026-10-26 19:08: gate failed before any change (8 FAIL: checks 008, 011, 026 to 030 and 041) with duckdb 2.0.0, where relation.fetchone() was removed; no note was audited
