@@ -12,7 +12,7 @@ CREATE TABLE my_items (order_id INTEGER, product_id INTEGER REFERENCES products 
 INSERT INTO my_items SELECT * FROM order_items
 ```
 
-now Dishas order 108, two [INSERTs](./220-insert-adding-rows-and-matching-values-to-columns.md) (add a row each) inside a transaction, counted before i decide (count(*) counts rows, WHERE keeps the matching ones, UNION ALL stacks the two results):
+now Dishas order 108, two [INSERTs](./220-insert-adding-rows-and-matching-values-to-columns.md) (add a row each) inside a transaction, counted before i decide (count(*) counts rows, UNION ALL stacks the results):
 
 ```sql
 BEGIN;
@@ -28,7 +28,7 @@ my_orders | 1
 my_items | 1
 ```
 
-nothing is final yet, but from inside the rows look normal. now i change my mind and count again:
+nothing is final yet. now i change my mind and count again:
 
 ```sql
 ROLLBACK;
@@ -42,7 +42,7 @@ my_orders | 0
 my_items | 0
 ```
 
-both gone together. same steps ending in COMMIT instead would leave both rows for good.
+both gone together. ending in COMMIT instead would keep both for good.
 
 | command | what happens to the changes |
 | --- | --- |
