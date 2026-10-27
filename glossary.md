@@ -224,6 +224,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | PARTITION BY | inside OVER, cuts the window into one group per value | [186](./notes/186-partition-by-a-separate-window-per-group.md) |
 | path | folder names from the top down to a file, joined by slashes | [040](./notes/040-folders-and-paths.md) |
 | percentile | the value some fraction of the way through the sorted column | [150](./notes/150-percentiles-the-medians-cousins.md) |
+| phantom read | a re-run query in one transaction returns a different set of rows | [238](./notes/238-phantoms.md) |
 | pid | the number the system gives one running process, new each run | [050](./notes/050-processes.md) |
 | pipe (shell) | joins one programs output to the next programs input | [058](./notes/058-pipes.md) |
 | pivot | turning the values of one column into columns of their own | [151](./notes/151-pivoting-turning-rows-into-columns.md) |

@@ -59,4 +59,4 @@ no. both reads returned the same value, so nothing non repeatable showed up. yes
 </details>
 
 ---
-prev: [236 dirty reads](./236-dirty-reads.md) | next: not written yet
+prev: [236 dirty reads](./236-dirty-reads.md) | next: [238 phantoms](./238-phantoms.md)
