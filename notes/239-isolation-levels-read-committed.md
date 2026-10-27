@@ -4,7 +4,7 @@ section: changing data safely, part 32, ~2 min read
 
 Asha types BEGIN Esha commits order 108, then Asha runs her first query. does she see 108? i guessed no, because BEGIN felt like the moment she gets her view. would you?
 
-she does see it. an isolation level is how much of other peoples work a [transaction](./227-transactions-all-or-nothing.md) (a group of changes that all happen or none do) can see. [231](./231-isolation-two-people-at-the-same-time.md) said [isolation](./231-isolation-two-people-at-the-same-time.md) is the promise that simultaneous users dont see half done work. read committed, the default in Postgres (a database that runs as its own server), has one rule: each query sees only what was committed before that query began. at this level the picture, a frozen view of the data, is taken per query, never per transaction.
+she does see it. an isolation level is how much of other peoples work a [transaction](./227-transactions-all-or-nothing.md) (a group of changes that all happen or none do) can see. [231](./231-isolation-two-people-at-the-same-time.md) said [isolation](./231-isolation-two-people-at-the-same-time.md) is the promise that simultaneous users dont see half done work. read committed, the default in Postgres (a database that runs as its own server), has one rule for reading: each SELECT sees only what was committed before that SELECT began. at this level the picture, a frozen view of the data, is taken per query, never per transaction.
 
 the shop, the imaginary gujarati snack store these notes run on, has 7 orders. order 108 is imagined:
 
@@ -30,7 +30,7 @@ step  who    does                          ashas count
 
 step 4 still says 7, because 108 is a draft until [COMMIT](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md) (make the changes permanent), so a [dirty read](./236-dirty-reads.md) (reading an uncommitted change) never happens here. step 6 says 8 because a new query is a new picture. at this level thats the source of a [non repeatable read](./237-non-repeatable-reads.md) (one row, two different values) and a [phantom](./238-phantoms.md) (a different set of rows): they are not bugs, just this rule showing up.
 
-the Postgres docs say one query never sees changes committed while it runs. i found that comforting.
+the Postgres docs say one SELECT never sees changes committed while it runs. i found that comforting.
 
 so what: a report running five queries in one transaction can get five pictures, so its totals may not add up.
 
