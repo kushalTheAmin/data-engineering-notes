@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 233
+notes so far: 234
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -264,3 +264,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [231 isolation, two people at the same time](./notes/231-isolation-two-people-at-the-same-time.md): Esha is mid order and Asha counts at that moment, she sees the last finished picture and nobody waits
 - [232 durability, surviving a crash](./notes/232-durability-surviving-a-crash.md): Esha is told her order is saved and the power dies, so what the database did before saying saved decides if 108 survives
 - [233 the write ahead log, write down the plan before the change](./notes/233-the-write-ahead-log-write-down-the-plan-before-the-change.md): Esha is told done while the table file on disk still lacks 108, and thats on purpose
+- [234 replaying the log after a crash](./notes/234-replaying-the-log-after-a-crash.md): the server restarts with the table file behind, and redoing the whole log would put order 108 in twice

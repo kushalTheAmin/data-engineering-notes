@@ -48,4 +48,4 @@ no. only the wait for done is skipped, the order rule stays. thats why the docs 
 </details>
 
 ---
-prev: [232 durability, surviving a crash](./232-durability-surviving-a-crash.md) | next: not written yet
+prev: [232 durability, surviving a crash](./232-durability-surviving-a-crash.md) | next: [234 replaying the log after a crash](./234-replaying-the-log-after-a-crash.md)
