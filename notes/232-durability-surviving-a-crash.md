@@ -13,11 +13,11 @@ durability, the last promise in [ACID](./229-acid-four-promises-a-database-makes
 | done sent | yes | yes | 108 stays |
 | wrong order: done sent first | no | yes | 108 lost, Esha lied to |
 
-the order of the steps is the whole promise. a crash before the flush loses 108, but Esha was never told done. say done first and flush later, and a crash in between leaves her holding a confirmation for an order that doesnt exist. i figured saving was one instant, but the database has to pick an order between telling Esha and writing it down.
+the order of the steps is the whole promise. say done first and flush later, and a crash in between leaves her holding a confirmation for an order that doesnt exist. i figured saving was one instant, but the database has to pick an order between telling Esha and writing it down.
 
-so what: every commit waits on a [slow disk](./037-disk-is-slow.md), so it limits commits per second. Postgres has a setting, synchronous_commit, on by default. turn it off and it says done without waiting, and the docs say a crash can lose the last few commits, but not corrupt anything: the database looks as if they were cleanly cancelled.
+so what: every commit waits on a [slow disk](./037-disk-is-slow.md), and for short transactions the Postgres docs call that wait a major part of the time. Postgres has a setting, synchronous_commit, on by default. turn it off and it says done without waiting, and the docs say a crash can lose the last few commits, but not corrupt anything: the database looks as if they were cleanly cancelled.
 
-what gets flushed is a short record of the change, not the whole table. a later note covers why.
+what gets flushed is a log of the change, not the table files. a later note covers why.
 
 ---
 prev: [231 isolation, two people at the same time](./231-isolation-two-people-at-the-same-time.md) | next: not written yet
