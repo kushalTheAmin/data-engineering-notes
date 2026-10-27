@@ -69,4 +69,4 @@ the snack count can go from 3 to 4. the dhokla read returns the same single row 
 </details>
 
 ---
-prev: [237 non repeatable reads](./237-non-repeatable-reads.md) | next: not written yet
+prev: [237 non repeatable reads](./237-non-repeatable-reads.md) | next: [239 isolation levels, read committed](./239-isolation-levels-read-committed.md)

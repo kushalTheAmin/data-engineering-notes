@@ -150,6 +150,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | IS NULL | the test that is true when a value is missing, never unknown | [115](./notes/115-is-null-and-is-not-null.md) |
 | island | a run of consecutive days, rows with no break between them | [195](./notes/195-gaps-and-islands-date-minus-row-number.md) |
 | isolation | the ACID promise: simultaneous users dont see half done work | [229](./notes/229-acid-four-promises-a-database-makes.md) |
+| isolation level | the setting for how much of others work a transaction sees | [239](./notes/239-isolation-levels-read-committed.md) |
 | join | pairing rows of two tables where a foreign key equals the id | [155](./notes/155-why-joins-the-answer-lives-in-more-than-one-table.md) |
 | join chain | joins in a row, each pairing the last result with a table | [163](./notes/163-joining-three-tables.md) |
 | join filter placement | a right side test in WHERE runs after the join, dropping NULLs | [161](./notes/161-a-where-that-quietly-turns-a-left-join-into-an-inner-join.md) |
