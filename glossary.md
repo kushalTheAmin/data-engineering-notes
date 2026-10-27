@@ -238,6 +238,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | quoting (csv) | double quotes around a value so commas inside it stay text | [063](./notes/063-quoting-commas-inside-values.md) |
 | range join | a join whose ON is a BETWEEN, matching values to periods | [170](./notes/170-joining-on-a-range-matching-a-date-to-a-period.md) |
 | RANK | window function giving tied rows one number, then skipping past the tie | [188](./notes/188-rank-vs-dense-rank-what-ties-do.md) |
+| read committed | default Postgres level: each query sees only data committed before it began | [231](./notes/231-isolation-two-people-at-the-same-time.md) |
 | reading start to end | taking a files bytes in order from position 0 | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
 | record | one row of a table, one thing the data is about | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | recursive CTE | a CTE that reads its own rows, repeating until none are found | [203](./notes/203-recursive-ctes-following-a-chain-of-rows.md) |

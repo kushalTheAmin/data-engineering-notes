@@ -55,4 +55,4 @@ order_id
 so what: a CHECK only sees the row being written, and the Postgres docs say it cant reference other rows, so rules like "every order has an item" live in app code or other tools. consistency is only as good as the rules you wrote down.
 
 ---
-prev: [229 ACID, four promises a database makes](./229-acid-four-promises-a-database-makes.md) | next: not written yet
+prev: [229 ACID, four promises a database makes](./229-acid-four-promises-a-database-makes.md) | next: [231 isolation, two people at the same time](./231-isolation-two-people-at-the-same-time.md)
