@@ -199,6 +199,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | microsecond | a millionth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | millisecond | a thousandth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | min | returns the smallest non-null value in a column, or the earliest date | [142](./notes/142-min-and-max-the-smallest-and-biggest-value.md) |
+| MVCC | Postgres never overwrites a row, an UPDATE writes a new version | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
 | nan | not a number, what 0 / 0 gives in DuckDB | [130](./notes/130-nullif-and-dividing-by-zero.md) |
 | nanosecond | a billionth of a second | [037](./notes/037-disk-is-slow.md) |
 | natural key | a real world value that already tells rows apart, like an email | [088](./notes/088-natural-keys-vs-made-up-ids.md) |
@@ -271,6 +272,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | root | the top folder holding everything else, written as a single slash | [040](./notes/040-folders-and-paths.md) |
 | row | one record of a csv, usually one line, split into values | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
 | row lock | a mark on one row, so others changing it wait | [242](./notes/242-row-locks-and-table-locks.md) |
+| row version | one stored copy of a row, an UPDATE makes a new one | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
 | ROW_NUMBER | window function that numbers rows 1, 2, 3 in the OVER ordering | [187](./notes/187-row-number-numbering-rows-in-order.md) |
 | ROWS BETWEEN | sets a frame by counting rows before and after the current one | [190](./notes/190-window-frames-rows-between.md) |
 | run | the same value repeated back to back | [047](./notes/047-compression-spotting-repeats.md) |
@@ -361,6 +363,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | window function | a calculation across rows that keeps every row, like sum with OVER | [184](./notes/184-window-functions-a-total-next-to-every-row.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
 | write ahead log | the databases own list of changes, flushed before table files change | [233](./notes/233-the-write-ahead-log-write-down-the-plan-before-the-change.md) |
+| xmax | stamp on a row version: the transaction that ended it | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
+| xmin | stamp on a row version: the transaction that created it | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
 | XML | a text format wrapping each value in opening and closing tags | [072](./notes/072-xml.md) |
 | YAML | a text format where indentation shows nesting, dashes start list items | [073](./notes/073-yaml.md) |
 | YAML trap | a bare word like no read as a boolean, so quote text | [074](./notes/074-yaml-traps.md) |

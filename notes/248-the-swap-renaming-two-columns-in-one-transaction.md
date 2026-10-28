@@ -46,4 +46,4 @@ they wait too, queued behind your rename (i tested this on Postgres 16), so a ti
 </details>
 
 ---
-prev: [247 changing a column type without downtime, keeping the new column in sync with new writes](./247-keeping-the-new-column-in-sync-with-a-trigger.md) | next: not written yet
+prev: [247 changing a column type without downtime, keeping the new column in sync with new writes](./247-keeping-the-new-column-in-sync-with-a-trigger.md) | next: [249 MVCC, an update writes a new row version](./249-mvcc-an-update-writes-a-new-row-version.md)

@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 248
+notes so far: 249
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -279,3 +279,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [246 changing a column type without downtime, add a new column and backfill it in batches](./notes/246-add-a-new-column-and-backfill-it-in-batches.md): the rewrite lock froze orders, so what if you never touch the old column and fill a second one next to it
 - [247 changing a column type without downtime, keeping the new column in sync with new writes](./notes/247-keeping-the-new-column-in-sync-with-a-trigger.md): order 108 came in after the copy and kept a NULL, so who fills the new column for orders that dont exist yet
 - [248 changing a column type without downtime, the swap in one short transaction](./notes/248-the-swap-renaming-two-columns-in-one-transaction.md): order_id_big is correct for every order, but the app still asks for order_id, so how do you switch without touching the app
+- [249 MVCC, an update writes a new row version](./notes/249-mvcc-an-update-writes-a-new-row-version.md): Esha reads order 106 while Asha is changing it, so what is she actually reading
