@@ -47,6 +47,7 @@ log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept faile
 
 2026-10-28: repo baseline failed checks/011.py and 7 more: pip gives only duckdb 2.0.0 for python 3.11 and it breaks 8 checks on fetchone (041 also asserts), mermaid render also fails (chromium refuses to run as root without --no-sandbox); no note written, needs a fix outside this run
 2026-10-28: repo baseline failed checks/030.py and 041.py and note 180: duckdb 1.3.2 and 1.4.5 fail fetchone in 030, an assert in 041 and a circular CTE in 180, duckdb 2.0.0 breaks 8 checks on fetchone, mermaid render failed again; no note written, needs a fix outside this run
+2026-10-28: repo baseline failed checks/030.py and 041.py and 6 more: pip gives duckdb 2.0.0 for python 3.11 (fetchone on relations removed, 041 asserts), mermaid render failed again; no note written, needs a fix outside this run
 
 ## arc 1: data at the atom level
 after this arc: you know what a computer actually stores when it "saves" an order
