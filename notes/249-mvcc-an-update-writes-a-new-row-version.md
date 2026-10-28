@@ -44,4 +44,4 @@ two versions, pending and cancelled, and a SELECT reads pending. the cancelled c
 </details>
 
 ---
-prev: [248 changing a column type without downtime, the swap in one short transaction](./248-the-swap-renaming-two-columns-in-one-transaction.md) | next: not written yet
+prev: [248 changing a column type without downtime, the swap in one short transaction](./248-the-swap-renaming-two-columns-in-one-transaction.md) | next: [250 transaction snapshots, what your transaction is allowed to see](./250-transaction-snapshots-what-your-transaction-is-allowed-to-see.md)
