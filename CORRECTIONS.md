@@ -1,5 +1,6 @@
 # corrections
 
+239, 2026-10-28: the answer to check yourself question 1 used <> without saying what it means, and no note 239 builds on defines it. it now says <> means not equal. evidence: grep of the builds on notes, <> is defined only in notes/107; python, the query returns 4 (checks/239.py)
 241, 2026-10-28: check yourself question 1 used WHERE and <> in its query without saying what they mean, and neither is defined in any note 241 builds on (240, 239, 235, 227, 228). it now says WHERE keeps only matching rows and <> means not equal. evidence: grep of the builds on notes, <> is defined only in notes/107 and WHERE in no builds on note; python, the query returns 0 (checks/241.py)
 000, 2026-10-27: gate failed before any change, so no notes were audited: with duckdb 2.0.0 (the only version installed here) checks/008.py, 011, 026 to 030 break on fetchone and 041 on an assert. evidence: python3 tools/gate.py printed FAIL (8).
 000, 2026-10-27: gate failed before any change, so no notes were audited: with duckdb 2.0.0 (the only version pip gives here) checks/008.py, 011, 026 to 030 break on fetchone and 041 on an assert. mermaid-cli also produced no svg. evidence: python3 tools/gate.py printed FAIL (8).

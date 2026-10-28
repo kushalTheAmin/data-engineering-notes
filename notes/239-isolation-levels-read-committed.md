@@ -44,7 +44,7 @@ SELECT count(*) AS delivered FROM orders WHERE status = 'delivered'
 
 <details><summary>answer</summary>
 
-on the real table it gives 5, since 107 is delivered today. after Eshas change the table gives 4:
+on the real table it gives 5, since 107 is delivered today. after Eshas change the table gives 4 (<> means not equal):
 
 ```sql
 SELECT count(*) AS delivered FROM orders WHERE status = 'delivered' AND order_id <> 107
