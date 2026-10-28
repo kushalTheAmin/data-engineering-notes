@@ -17,7 +17,7 @@ the shop, the imaginary gujarati snack store these notes run on, has orders 106 
 
 i assumed a lock meant nobody could look, but the docs say row locks block only writers of the same row, never readers. thats the wait behind [235](./235-lost-updates.md): the second UPDATE sits there until the first one [COMMITs or ROLLBACKs](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md). the strongest table lock is what [DROP TABLE](./226-drop-and-truncate-emptying-a-table-vs-removing-it.md) takes, and the docs say only that kind blocks a plain SELECT.
 
-so what: locks are released only when the transaction ends, so a forgotten COMMIT keeps your row locked for everyone who needs to change it.
+so what: locks are normally held until the transaction ends, so a forgotten COMMIT keeps your row locked for everyone who needs to change it.
 
 ---
 prev: [241 serializable, as if one at a time, and retrying the failures](./241-serializable-as-if-one-at-a-time-and-retrying-the-failures.md) | next: [243 SELECT FOR UPDATE, locking on purpose](./243-select-for-update-locking-on-purpose.md)
