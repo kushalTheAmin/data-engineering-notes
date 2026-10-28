@@ -862,3 +862,4 @@ after this arc: you can design a data platform from a business question and defe
 2026-10-27: repo baseline failed checks/127.py, 201, 202: duckdb 1.4.5 date_trunc type asserts (pip default 2.0.0 breaks 8 checks on fetchone, 041 also asserts), mermaid render produced no svg; no note written, needs a fix outside this run
 2026-10-27: repo baseline failed checks/127.py, 201, 202: duckdb 1.4.2 (2.0.0 breaks 8 checks on fetchone) fails the date_trunc on a DATE type asserts; mermaid render ok; no note written
 2026-10-28: repo baseline failed checks/127.py, 201.py, 202.py: date_trunc type assert on duckdb 1.4.0 and 1.4.4 (1.3.2 also breaks 180, 2.0.0 breaks 8 on fetchone), mermaid render failed too; no note written, needs a fix outside this run
+2026-10-28: repo baseline failed checks/011.py, 026 to 030, 041: only duckdb 2.0.0 installs here (python3 is 3.11, fetchone on relations breaks 8 checks), mermaid render failed too; no note written, needs a fix outside this run
