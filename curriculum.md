@@ -331,7 +331,8 @@ after this arc: you can change data and know exactly what happens when two peopl
 - [x] row locks and table locks (note 242)
 - [x] SELECT FOR UPDATE: locking on purpose ★ (note 243)
 - [x] deadlocks ★ (note 244)
-- [ ] changing a column type on a big table ★
+- [ ] changing a column type: the table rewrite and the lock ★
+- [ ] changing a column type without downtime: add, backfill, swap ★
 - [ ] MVCC: every row keeps versions ★
 - [ ] transaction snapshots: what your transaction is allowed to see ★
 - [ ] backups: a copy you can restore from
