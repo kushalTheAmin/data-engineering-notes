@@ -182,6 +182,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | LIMIT | keeps only the first n rows of the result | [120](./notes/120-limit-and-offset-paging-through-rows.md) |
 | line ending | the characters marking where one line stops, the next starts | [042](./notes/042-line-endings.md) |
 | lock | a mark a transaction puts on data so others must wait | [242](./notes/242-row-locks-and-table-locks.md) |
+| lock_timeout | a setting: give up if a lock wait lasts longer than this | [248](./notes/248-the-swap-renaming-two-columns-in-one-transaction.md) |
 | logical order (of a query) | the fixed clause order: FROM, WHERE, SELECT, ORDER BY, LIMIT | [134](./notes/134-the-order-sql-really-runs-in.md) |
 | long and wide | long: many rows per thing. wide: one row, many columns | [151](./notes/151-pivoting-turning-rows-into-columns.md) |
 | lookup | fetching one value from a random spot | [037](./notes/037-disk-is-slow.md) |
@@ -310,6 +311,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | substr | cuts a piece of text by start and count, counting from 1 | [125](./notes/125-concatenating-text-and-taking-pieces-of-it.md) |
 | subtotal | the total for one group, shown as an extra row | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | sum | adds up all the values in a column into one value | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
+| swap (column type) | renaming the new column to the old name in one transaction | [248](./notes/248-the-swap-renaming-two-columns-in-one-transaction.md) |
 | table | a grid of rows, every row holding the same columns | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | table alias | a short name for a table, valid for one query only | [158](./notes/158-table-aliases-short-nicknames-for-tables.md) |
 | table lock | a mark on a whole table, the strongest also blocks plain reads | [242](./notes/242-row-locks-and-table-locks.md) |

@@ -50,4 +50,4 @@ anyone writing outside the app: a one-off script, a manual INSERT in a database 
 </details>
 
 ---
-prev: [246 changing a column type without downtime, add a new column and backfill it in batches](./246-add-a-new-column-and-backfill-it-in-batches.md) | next: not written yet
+prev: [246 changing a column type without downtime, add a new column and backfill it in batches](./246-add-a-new-column-and-backfill-it-in-batches.md) | next: [248 changing a column type without downtime, the swap in one short transaction](./248-the-swap-renaming-two-columns-in-one-transaction.md)
