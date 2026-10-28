@@ -20,3 +20,8 @@ assert 50 * 2 == 100 and 100 - 50 == 50  # a ceiling
 #   confirmed (opened this run): integer is 4 bytes, range -2147483648 to +2147483647, bigint is 8 bytes
 # source: https://www.postgresql.org/docs/current/explicit-locking.html
 #   confirmed (opened this run): ACCESS EXCLUSIVE conflicts with locks of all modes including ACCESS SHARE, which SELECT takes; many forms of ALTER TABLE acquire a lock at this level; an ACCESS EXCLUSIVE lock blocks a plain SELECT
+# check yourself 1: order_items points at orders(order_id), customers does not (data/shop.sql)
+assert q("SELECT count(*) FROM duckdb_constraints() WHERE table_name = 'order_items' AND constraint_type = 'FOREIGN KEY' AND referenced_table = 'orders'")[0][0] == 1
+assert q("SELECT count(*) FROM duckdb_constraints() WHERE table_name = 'customers' AND constraint_type = 'FOREIGN KEY'")[0][0] == 0
+# verified on a real Postgres 16 server this run: while ALTER TABLE orders ALTER COLUMN order_id TYPE bigint was open in a transaction,
+#   SELECT on orders and on order_items (foreign key to orders) hit lock_timeout; SELECT on customers returned at once; pg_locks showed ACCESS EXCLUSIVE on both orders and order_items

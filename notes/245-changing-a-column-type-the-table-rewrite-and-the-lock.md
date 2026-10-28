@@ -29,7 +29,7 @@ one caveat: if the stored bytes dont change at all, the docs say no rewrite is n
 
 <details><summary>answer</summary>
 
-no. the lock is on the orders table only, so customers is untouched. the tempting yes assumes the whole database freezes. a query on orders itself, even a plain read like order 106, would wait.
+no. the lock lands on orders and on tables pointing at its order_id, like order_items, but customers has no such link, so it is untouched. the tempting yes assumes the whole database freezes. a plain read of order 106 would wait.
 
 </details>
 
