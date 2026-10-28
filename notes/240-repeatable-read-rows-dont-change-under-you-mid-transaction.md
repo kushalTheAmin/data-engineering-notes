@@ -4,7 +4,7 @@ section: changing data safely, part 33, ~2 min read
 
 Esha commits order 108 in the middle of Ashas transaction, but this time Asha counts the orders twice and gets the same number both times. same script as last note, so what did i change?
 
-one setting. repeatable read is an [isolation level](./239-isolation-levels-read-committed.md) (how much of others work a transaction sees) where the picture, a frozen view of the data, is taken once and kept until the [transaction](./227-transactions-all-or-nothing.md) ends. in Postgres, a database that runs as its own server, you ask for it like this:
+one setting. repeatable read is an [isolation level](./239-isolation-levels-read-committed.md) (how much of others work a transaction sees) where, in Postgres (a database that runs as its own server), the picture, a frozen view of the data, is taken once and kept until the [transaction](./227-transactions-all-or-nothing.md) ends. the name is looser elsewhere, SQL Server still lets new rows in. you ask for it like this:
 
 ```text
 -- Postgres
@@ -22,9 +22,9 @@ here it is next to [read committed](./239-isolation-levels-read-committed.md) (e
 | 5 | asha [COMMIT](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md) (make it permanent) | - | - |
 | 6 | asha counts orders, new transaction | 8 | 8 |
 
-step 4 is the whole point. a [non repeatable read](./237-non-repeatable-reads.md) (one row, two values) and a [phantom](./238-phantoms.md) (a different set of rows) both need the second look to differ, so neither can happen here. the Postgres docs say this beats what the SQL standard asks for here.
+a [non repeatable read](./237-non-repeatable-reads.md) (one row, two values) and a [phantom](./238-phantoms.md) (a different set of rows) both need the second look to differ, so neither can happen here. the Postgres docs say this beats what the SQL standard (the official written rules for SQL) asks for here.
 
-the catch: the picture starts at the first query, not BEGIN, so a commit between them still shows up. what surprised me is that being out of date is the feature: Asha knows 108 exists somewhere and still gets 7, on purpose.
+the catch: the picture starts at the first query, not BEGIN, so a commit between them still shows up. being out of date is the feature: Asha knows 108 exists and still gets 7.
 
 so what: a report of five queries now adds up. the price, per the docs, is that if Asha tries to change a row Esha already changed, Postgres refuses with an error and the app must retry the transaction.
 
