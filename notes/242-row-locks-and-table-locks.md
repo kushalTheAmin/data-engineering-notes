@@ -20,4 +20,4 @@ i assumed a lock meant nobody could look, but the docs say row locks block only 
 so what: locks are released only when the transaction ends, so a forgotten COMMIT keeps your row locked for everyone who needs to change it.
 
 ---
-prev: [241 serializable, as if one at a time, and retrying the failures](./241-serializable-as-if-one-at-a-time-and-retrying-the-failures.md) | next: not written yet
+prev: [241 serializable, as if one at a time, and retrying the failures](./241-serializable-as-if-one-at-a-time-and-retrying-the-failures.md) | next: [243 SELECT FOR UPDATE, locking on purpose](./243-select-for-update-locking-on-purpose.md)
