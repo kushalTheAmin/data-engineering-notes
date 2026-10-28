@@ -54,4 +54,4 @@ the single UPDATE keeps every row it has reached locked until it ends, so once i
 </details>
 
 ---
-prev: [245 changing a column type, the table rewrite and the lock](./245-changing-a-column-type-the-table-rewrite-and-the-lock.md) | next: not written yet
+prev: [245 changing a column type, the table rewrite and the lock](./245-changing-a-column-type-the-table-rewrite-and-the-lock.md) | next: [247 changing a column type without downtime, keeping the new column in sync with new writes](./247-keeping-the-new-column-in-sync-with-a-trigger.md)

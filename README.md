@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 246
+notes so far: 247
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -277,3 +277,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [244 deadlocks, two transactions waiting on each other](./notes/244-deadlocks-two-transactions-waiting-on-each-other.md): Asha waits for Esha while Esha waits for Asha, so does anyone ever move
 - [245 changing a column type, the table rewrite and the lock](./notes/245-changing-a-column-type-the-table-rewrite-and-the-lock.md): changing order_id from INTEGER to BIGINT is one line, so why do people dread it on a big table
 - [246 changing a column type without downtime, add a new column and backfill it in batches](./notes/246-add-a-new-column-and-backfill-it-in-batches.md): the rewrite lock froze orders, so what if you never touch the old column and fill a second one next to it
+- [247 changing a column type without downtime, keeping the new column in sync with new writes](./notes/247-keeping-the-new-column-in-sync-with-a-trigger.md): order 108 came in after the copy and kept a NULL, so who fills the new column for orders that dont exist yet
