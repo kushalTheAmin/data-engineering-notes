@@ -29,3 +29,5 @@ assert run(["backfill", 108, 109, "trigger"]) == 2
 # source: https://www.postgresql.org/docs/current/plpgsql-trigger.html
 #   confirmed (opened this run): NEW is the new row in row-level INSERT/UPDATE triggers, a BEFORE trigger changes the stored row by changing NEW and returning it, and the CREATE FUNCTION ... RETURNS trigger / CREATE TRIGGER ... BEFORE INSERT OR UPDATE ... FOR EACH ROW EXECUTE FUNCTION syntax
 
+# tested this run on a local PostgreSQL 16.15: after renaming order_id to order_id_old and order_id_big to order_id, this trigger failed every INSERT and UPDATE
+#   on orders with record "new" has no field "order_id_big", so it cannot just stay once the columns are renamed (see check 248)
