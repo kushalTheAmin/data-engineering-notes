@@ -332,7 +332,9 @@ after this arc: you can change data and know exactly what happens when two peopl
 - [x] SELECT FOR UPDATE: locking on purpose ★ (note 243)
 - [x] deadlocks ★ (note 244)
 - [x] changing a column type: the table rewrite and the lock ★ (note 245)
-- [ ] changing a column type without downtime: add, backfill, swap ★
+- [ ] changing a column type without downtime: add a new column and backfill it in batches ★
+- [ ] changing a column type without downtime: keeping the new column in sync with new writes ★
+- [ ] changing a column type without downtime: the swap, renaming in one short transaction ★
 - [ ] MVCC: every row keeps versions ★
 - [ ] transaction snapshots: what your transaction is allowed to see ★
 - [ ] backups: a copy you can restore from
