@@ -14,6 +14,9 @@ assert q("SELECT count(*) FROM orders WHERE status = 'pending'")[0][0] + 1 == 2
 # check yourself 2: three snacks, a new snack makes four
 assert q("SELECT count(*) FROM products WHERE category = 'snack'")[0][0] == 3
 assert 3 + 1 == 4
+# the dhokla read matches one row both times, and thepla is not in the shop yet
+assert q("SELECT count(*) FROM products WHERE name = 'dhokla'")[0][0] == 1
+assert q("SELECT count(*) FROM products WHERE name = 'thepla'")[0][0] == 0
 # source: https://www.postgresql.org/docs/current/transaction-iso.html
 #   confirmed (opened this run): "phantom read: A transaction re-executes a query returning a set of rows that satisfy a search condition and finds that the set of rows satisfying the condition has changed due to another recently-committed transaction"; Table 13.1 lists phantom read Possible at Read committed and "Allowed, but not in PG" at Repeatable read; "Read Committed is the default isolation level"
 assert q("SELECT order_id, status FROM orders WHERE order_id IN (105, 106, 107) ORDER BY order_id") == [(105, "delivered"), (106, "pending"), (107, "delivered")]
