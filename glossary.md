@@ -177,6 +177,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | LIKE | keeps text matching a pattern, % any run, _ one character | [113](./notes/113-like-matching-text-patterns.md) |
 | LIMIT | keeps only the first n rows of the result | [120](./notes/120-limit-and-offset-paging-through-rows.md) |
 | line ending | the characters marking where one line stops, the next starts | [042](./notes/042-line-endings.md) |
+| lock | a mark a transaction puts on data so others must wait | [242](./notes/242-row-locks-and-table-locks.md) |
 | logical order (of a query) | the fixed clause order: FROM, WHERE, SELECT, ORDER BY, LIMIT | [134](./notes/134-the-order-sql-really-runs-in.md) |
 | long and wide | long: many rows per thing. wide: one row, many columns | [151](./notes/151-pivoting-turning-rows-into-columns.md) |
 | lookup | fetching one value from a random spot | [037](./notes/037-disk-is-slow.md) |
@@ -264,6 +265,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | ROLLUP | a GROUP BY that adds subtotal rows and a grand total | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | root | the top folder holding everything else, written as a single slash | [040](./notes/040-folders-and-paths.md) |
 | row | one record of a csv, usually one line, split into values | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
+| row lock | a mark on one row, so others changing it wait | [242](./notes/242-row-locks-and-table-locks.md) |
 | ROW_NUMBER | window function that numbers rows 1, 2, 3 in the OVER ordering | [187](./notes/187-row-number-numbering-rows-in-order.md) |
 | ROWS BETWEEN | sets a frame by counting rows before and after the current one | [190](./notes/190-window-frames-rows-between.md) |
 | run | the same value repeated back to back | [047](./notes/047-compression-spotting-repeats.md) |
@@ -305,6 +307,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | sum | adds up all the values in a column into one value | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
 | table | a grid of rows, every row holding the same columns | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | table alias | a short name for a table, valid for one query only | [158](./notes/158-table-aliases-short-nicknames-for-tables.md) |
+| table lock | a mark on a whole table, the strongest also blocks plain reads | [242](./notes/242-row-locks-and-table-locks.md) |
 | tag | a name in angle brackets, opening or closing an XML value | [072](./notes/072-xml.md) |
 | tail | prints the last lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | temporary table | a table dropped when its session ends, visible only there | [214](./notes/214-temporary-tables.md) |

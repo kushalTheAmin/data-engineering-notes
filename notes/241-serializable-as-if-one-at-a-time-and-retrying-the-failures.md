@@ -50,4 +50,4 @@ no. serializable checks what each transaction read, not only what it wrote, so d
 </details>
 
 ---
-prev: [240 repeatable read, rows dont change under you mid transaction](./240-repeatable-read-rows-dont-change-under-you-mid-transaction.md) | next: not written yet
+prev: [240 repeatable read, rows dont change under you mid transaction](./240-repeatable-read-rows-dont-change-under-you-mid-transaction.md) | next: [242 row locks and table locks](./242-row-locks-and-table-locks.md)
