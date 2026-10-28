@@ -20,3 +20,5 @@ assert q("SELECT count(*) FROM orders WHERE status = 'pending'")[0][0] + 1 == 2
 #   confirmed (opened this run): Table 13.1 repeatable read row: phantom read "Allowed, but not in PG"; "This is a stronger guarantee than is required by the SQL standard for this isolation level"
 # source: https://learn.microsoft.com/en-us/sql/t-sql/statements/set-transaction-isolation-level-transact-sql
 #   confirmed (opened this run): SQL Server REPEATABLE READ: "Other transactions can insert new rows that match the search conditions of statements issued by the current transaction ... which results in phantom reads"
+# count(*) counts rows, WHERE keeps only matching rows (glossed in check yourself 1)
+assert q("SELECT count(*) FROM orders WHERE status = 'pending'")[0][0] == len(q("SELECT * FROM orders WHERE status = 'pending'"))

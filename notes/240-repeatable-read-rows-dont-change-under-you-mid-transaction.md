@@ -30,7 +30,7 @@ so what: a report of five queries now adds up. the price, per the docs, is that 
 
 ### check yourself
 
-1. at repeatable read, Asha counts pending orders as her first query. then Esha commits order 106 as delivered, an imagined change. Asha counts again. what are her two numbers?
+1. at repeatable read, Asha counts pending orders as her first query. then Esha commits order 106 as delivered, an imagined change. Asha counts again. what are her two numbers? (count(*) counts rows, WHERE keeps only matching rows)
 
 ```sql
 SELECT count(*) AS pending_now FROM orders WHERE status = 'pending'
