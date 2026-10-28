@@ -1,5 +1,7 @@
 # corrections
 
+000, 2026-10-28: gate failed before any change, so no notes were audited: duckdb 2.0.0 (pip default) fails checks/008.py, 011, 026 to 030 on fetchone and 041 on an assert, and duckdb 1.4.5 fails checks/127.py, 201 and 202 on an assert. mermaid-cli did not render a test file here. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (8) on duckdb 2.0.0 and FAIL (3) on 1.4.5.
+
 247, 2026-10-28: said drop the trigger after the swap, a word no earlier part of the note explains, and that it slows every write, which no page was behind. it now says drop it once nothing reads the old column any more, it runs on every write. evidence: the text of notes/247 before this fix, swap appears only in that sentence
 
 245, 2026-10-28: the byte printout showed the biggest byte first as if that is how the database stores a number. most machines (x86) keep the smallest byte first, so 101 as 4 bytes is [101, 0, 0, 0] there. it now says the printout is biggest byte first and some machines store it the other way. to stay under the word limit a few phrases were trimmed (like making a box bigger, at all, that it), nothing true was removed. evidence: https://en.wikipedia.org/wiki/Endianness (little-endian is dominant, x86 is little-endian); python, (101).to_bytes(4, 'little') is [101, 0, 0, 0] (checks/245.py)
