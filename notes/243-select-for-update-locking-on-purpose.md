@@ -2,7 +2,7 @@
 builds on: [242 row locks and table locks](./242-row-locks-and-table-locks.md), [239 isolation levels, read committed](./239-isolation-levels-read-committed.md), [235 lost updates](./235-lost-updates.md), [228 COMMIT and ROLLBACK, keeping or undoing a transaction](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md), [227 transactions, all or nothing](./227-transactions-all-or-nothing.md)
 section: changing data safely, part 36, ~2 min read
 
-Asha and Esha both open order 106, see it pending, and both send the delivery email. the customer gets two. [242](./242-row-locks-and-table-locks.md) said a [row lock](./242-row-locks-and-table-locks.md) (a mark so others changing that row wait) stops this, so where was it?
+Asha and Esha both open order 106, see it pending, and both send the delivery email. the customer gets two. [242](./242-row-locks-and-table-locks.md) said a [row lock](./242-row-locks-and-table-locks.md) (a mark so others changing that row wait) makes a second person wait, so why didnt it help here?
 
 a plain SELECT takes no row lock, so nothing stopped the second reader. SELECT ... FOR UPDATE is a read that also locks every row it returns, until the [transaction](./227-transactions-all-or-nothing.md) (a group of changes that all happen or none do) ends. this is Postgres, the database that runs as its own server. same shape of bug as [235](./235-lost-updates.md): check, then act, with a gap between.
 
