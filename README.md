@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 245
+notes so far: 246
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -276,3 +276,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [243 SELECT FOR UPDATE, locking on purpose](./notes/243-select-for-update-locking-on-purpose.md): Asha and Esha both see order 106 pending and both send the delivery email, so where was the lock
 - [244 deadlocks, two transactions waiting on each other](./notes/244-deadlocks-two-transactions-waiting-on-each-other.md): Asha waits for Esha while Esha waits for Asha, so does anyone ever move
 - [245 changing a column type, the table rewrite and the lock](./notes/245-changing-a-column-type-the-table-rewrite-and-the-lock.md): changing order_id from INTEGER to BIGINT is one line, so why do people dread it on a big table
+- [246 changing a column type without downtime, add a new column and backfill it in batches](./notes/246-add-a-new-column-and-backfill-it-in-batches.md): the rewrite lock froze orders, so what if you never touch the old column and fill a second one next to it

@@ -42,4 +42,4 @@ up to another 50 GB (a ceiling, counting indexes), since the docs say up to doub
 </details>
 
 ---
-prev: [244 deadlocks, two transactions waiting on each other](./244-deadlocks-two-transactions-waiting-on-each-other.md) | next: not written yet
+prev: [244 deadlocks, two transactions waiting on each other](./244-deadlocks-two-transactions-waiting-on-each-other.md) | next: [246 changing a column type without downtime, add a new column and backfill it in batches](./246-add-a-new-column-and-backfill-it-in-batches.md)

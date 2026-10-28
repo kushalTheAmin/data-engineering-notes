@@ -21,6 +21,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | atomic | happening whole or not at all, never half done | [046](./notes/046-writing-safely.md) |
 | atomicity | the ACID promise: all of a transaction happens, or none of it | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | avg | the average of a column, its sum divided by how many values | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
+| backfill | fills a new column for rows that already exist, in small batches | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
+| batch | a small slice of rows handled by one statement | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
 | BEGIN | the command that opens a transaction | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
 | BETWEEN | a test keeping values from a low to a high end, inclusive | [112](./notes/112-between-ranges-that-include-both-ends.md) |
 | binary | counting with only 0 and 1, each place worth double | [003](./notes/003-counting-in-binary.md) |
