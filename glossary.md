@@ -5,6 +5,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | term | plain meaning | built in |
 |---|---|---|
 | absolute path | a path starting with a slash, always begun at the root | [053](./notes/053-absolute-vs-relative-paths.md) |
+| ACCESS EXCLUSIVE | the strongest table lock, blocks every other query on the table | [245](./notes/245-changing-a-column-type-the-table-rewrite-and-the-lock.md) |
 | ACID | four promises of a database: atomicity, consistency, isolation, durability | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | add column | a new column added to a table that already has rows | [225](./notes/225-alter-table-adding-a-column-to-a-table-with-rows.md) |
 | address (network) | a number naming one machine on a network, 4 bytes in IPv4 | [085](./notes/085-addresses-and-ports.md) |
@@ -310,6 +311,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | table | a grid of rows, every row holding the same columns | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | table alias | a short name for a table, valid for one query only | [158](./notes/158-table-aliases-short-nicknames-for-tables.md) |
 | table lock | a mark on a whole table, the strongest also blocks plain reads | [242](./notes/242-row-locks-and-table-locks.md) |
+| table rewrite | storing every row again in a fresh copy of the table | [245](./notes/245-changing-a-column-type-the-table-rewrite-and-the-lock.md) |
 | tag | a name in angle brackets, opening or closing an XML value | [072](./notes/072-xml.md) |
 | tail | prints the last lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | temporary table | a table dropped when its session ends, visible only there | [214](./notes/214-temporary-tables.md) |

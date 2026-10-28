@@ -44,4 +44,4 @@ the abort rolled back the whole transaction, including the first UPDATE. the ret
 </details>
 
 ---
-prev: [243 SELECT FOR UPDATE, locking on purpose](./243-select-for-update-locking-on-purpose.md) | next: not written yet
+prev: [243 SELECT FOR UPDATE, locking on purpose](./243-select-for-update-locking-on-purpose.md) | next: [245 changing a column type, the table rewrite and the lock](./245-changing-a-column-type-the-table-rewrite-and-the-lock.md)
