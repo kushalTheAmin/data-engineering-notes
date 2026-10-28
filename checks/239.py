@@ -14,3 +14,5 @@ assert q("SELECT count(*) FROM orders WHERE status = 'delivered' AND order_id <>
 # source: https://www.postgresql.org/docs/current/transaction-iso.html
 #   confirmed (opened this run): "Read Committed is the default isolation level in PostgreSQL"; a SELECT "sees only data committed before the query began; it never sees either uncommitted data or changes committed by concurrent transactions during the query's execution"; "two successive SELECT commands can see different data, even though they are within a single transaction"
 #   confirmed (opened this run): the rule is worded for "a SELECT query"; "UPDATE, DELETE, SELECT FOR UPDATE, and SELECT FOR SHARE commands behave the same as SELECT in terms of searching for target rows" but a target row "might have already been updated ... by another concurrent transaction", then the updater waits and applies to the updated row (so the note words the rule for SELECT)
+# count(*) counts rows: 7 rows in orders, the gloss added to the note
+assert q("SELECT count(*) FROM orders")[0][0] == len(q("SELECT * FROM orders"))
