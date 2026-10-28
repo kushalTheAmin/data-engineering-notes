@@ -2,7 +2,7 @@
 builds on: [238 phantoms](./238-phantoms.md), [237 non repeatable reads](./237-non-repeatable-reads.md), [236 dirty reads](./236-dirty-reads.md), [231 isolation, two people at the same time](./231-isolation-two-people-at-the-same-time.md), [227 transactions, all or nothing](./227-transactions-all-or-nothing.md), [228 COMMIT and ROLLBACK, keeping or undoing a transaction](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md)
 section: changing data safely, part 32, ~2 min read
 
-Asha types BEGIN Esha commits order 108, then Asha runs her first query. does she see 108? i guessed no, because BEGIN felt like the moment she gets her view. would you?
+Asha types BEGIN, Esha commits order 108, then Asha runs her first query. does she see 108? i guessed no, because BEGIN felt like the moment she gets her view. would you?
 
 she does see it. an isolation level is how much of other peoples work a [transaction](./227-transactions-all-or-nothing.md) (a group of changes that all happen or none do) can see. [231](./231-isolation-two-people-at-the-same-time.md) said [isolation](./231-isolation-two-people-at-the-same-time.md) is the promise that simultaneous users dont see half done work. read committed, the default in Postgres (a database that runs as its own server), has one rule for reading: each SELECT sees only what was committed before that SELECT began. at this level the picture, a frozen view of the data, is taken per query, never per transaction.
 
