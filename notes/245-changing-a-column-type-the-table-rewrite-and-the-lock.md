@@ -17,11 +17,11 @@ for order_id in [101, 102, 103]:
 103 [0, 0, 0, 103] -> [0, 0, 0, 0, 0, 0, 0, 103]
 ```
 
-same number, wider slot. i assumed widening would be free, like making a box bigger, but the size is fixed per column, so every row has to be stored again. Postgres writes a whole new copy of the table and its indexes (extra lookup copies kept for speed), then swaps it in. the docs say a type change normally does this, and that it can need up to double the disk space meanwhile.
+same number, wider slot (biggest byte first here, some machines store it the other way). i assumed widening would be free, but the size is fixed per column, so every row has to be stored again. Postgres writes a whole new copy of the table and its indexes (extra lookup copies kept for speed), then swaps it in. the docs say a type change normally does this, and can need up to double the disk space meanwhile.
 
-the lock is the other half. the docs say ALTER TABLE takes an ACCESS EXCLUSIVE lock unless noted, the strongest [table lock](./242-row-locks-and-table-locks.md) (a mark on a whole table, the kind DROP TABLE takes), and that one blocks even a plain SELECT (a read). with 7 orders you never notice. with a billion, queries on orders wait for the whole copy.
+the lock is the other half. the docs say ALTER TABLE takes an ACCESS EXCLUSIVE lock unless noted, the strongest [table lock](./242-row-locks-and-table-locks.md) (a mark on a whole table, the kind DROP TABLE takes), which blocks even a plain SELECT (a read). with 7 orders you never notice. with a billion, queries on orders wait for the whole copy.
 
-one caveat: if the stored bytes dont change at all, the docs say no rewrite is needed. here they do change.
+one caveat: if the stored bytes dont change, the docs say no rewrite is needed. here they do.
 
 ### check yourself
 

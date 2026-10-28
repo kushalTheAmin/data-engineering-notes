@@ -25,3 +25,8 @@ assert q("SELECT count(*) FROM duckdb_constraints() WHERE table_name = 'order_it
 assert q("SELECT count(*) FROM duckdb_constraints() WHERE table_name = 'customers' AND constraint_type = 'FOREIGN KEY'")[0][0] == 0
 # verified on a real Postgres 16 server this run: while ALTER TABLE orders ALTER COLUMN order_id TYPE bigint was open in a transaction,
 #   SELECT on orders and on order_items (foreign key to orders) hit lock_timeout; SELECT on customers returned at once; pg_locks showed ACCESS EXCLUSIVE on both orders and order_items
+# the printout is big end first; x86 machines store the little end first, 4 bytes then 8 bytes either way
+for i in (101, 102, 103):
+    assert list(i.to_bytes(4, "little")) == [i, 0, 0, 0] and len(i.to_bytes(8, "little")) == 8
+# source: https://en.wikipedia.org/wiki/Endianness
+#   confirmed (opened this run): little-endian stores the least significant byte at the smallest address and is dominant (x86); big-endian stores the most significant byte first
