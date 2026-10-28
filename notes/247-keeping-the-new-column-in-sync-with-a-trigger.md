@@ -29,7 +29,7 @@ NEW is the row about to be stored. it has to be BEFORE, because only then does c
 
 a trigger never goes back for old rows. thats why the [backfill](./246-add-a-new-column-and-backfill-it-in-batches.md) (filling old rows in batches) is still needed, and why the trigger goes in first. backfill first, and you need a second pass to catch 108.
 
-why not just change the app to write both columns? any other writer skips that, a one-off script, a hand typed INSERT, an old copy of the app still running mid deploy. the trigger sees them all. drop it after the swap, it slows every write.
+why not just change the app to write both columns? any other writer skips that, a one-off script, a hand typed INSERT, an old copy of the app still running mid deploy. the trigger sees them all. drop it once nothing reads the old column any more, it runs on every write.
 
 ### check yourself
 
