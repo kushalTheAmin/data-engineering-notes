@@ -21,3 +21,5 @@ assert 0 + 1 == 1
 #   confirmed (opened this run): BEGIN takes "ISOLATION LEVEL { SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED }"
 # source: https://www.postgresql.org/docs/current/transaction-iso.html
 #   confirmed (opened this run): "In PostgreSQL these locks do not cause any blocking" (so serializable lets both run); Table 13.1 repeatable read: serialization anomaly "Possible"
+# count(*) counts rows (glossed in check yourself 1)
+assert q("SELECT count(*) FROM orders WHERE status = 'pending'")[0][0] == len(q("SELECT * FROM orders WHERE status = 'pending'"))
