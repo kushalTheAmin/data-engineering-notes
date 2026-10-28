@@ -24,7 +24,7 @@ so what: the docs say apps here must be ready to retry, so wrap it in a retry lo
 
 ### check yourself
 
-1. Esha gets error 40001. her code reruns only the cancel of 108, reusing her old count of 2. with 106 now cancelled, what count should she have seen, and what should she do?
+1. Esha gets error 40001. her code reruns only the cancel of 108, reusing her old count of 2. with 106 now cancelled, what count should she have seen, and what should she do? (WHERE keeps only matching rows, <> means not equal)
 
 ```sql
 SELECT count(*) AS pending FROM orders WHERE status = 'pending' AND order_id <> 106
