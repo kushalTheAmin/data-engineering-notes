@@ -77,6 +77,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | date_diff | counts the day or month boundaries crossed between two moments | [129](./notes/129-the-difference-between-two-dates.md) |
 | date_trunc | chops a timestamp down to the start of its day or month | [127](./notes/127-truncating-timestamps-to-a-day-or-a-month.md) |
 | daylight saving | clocks shifting an hour twice a year in many places | [024](./notes/024-utc.md) |
+| deadlock | two transactions each waiting for a lock the other holds | [244](./notes/244-deadlocks-two-transactions-waiting-on-each-other.md) |
 | decompress | rebuild the original bytes from compressed ones, costing processor work | [048](./notes/048-compression-trades-processor-for-space.md) |
 | deduplicate | keep one row per thing when the data holds several | [194](./notes/194-removing-duplicates-with-row-number.md) |
 | DEFAULT | the value filled in when an insert leaves that column out | [215](./notes/215-not-null-and-default-required-columns-and-fallback-values.md) |

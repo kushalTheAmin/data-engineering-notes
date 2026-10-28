@@ -57,4 +57,4 @@ no. only the rows the query returns get locked, and 107 is delivered, so Esha go
 </details>
 
 ---
-prev: [242 row locks and table locks](./242-row-locks-and-table-locks.md) | next: not written yet
+prev: [242 row locks and table locks](./242-row-locks-and-table-locks.md) | next: [244 deadlocks, two transactions waiting on each other](./244-deadlocks-two-transactions-waiting-on-each-other.md)

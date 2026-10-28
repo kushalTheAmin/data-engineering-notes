@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 243
+notes so far: 244
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -274,3 +274,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [241 serializable, as if one at a time, and retrying the failures](./notes/241-serializable-as-if-one-at-a-time-and-retrying-the-failures.md): Asha and Esha both follow the never cancel the last pending order rule and the rule still breaks
 - [242 row locks and table locks](./notes/242-row-locks-and-table-locks.md): Asha changes order 106 and Esha changes 107 fine, but touching 106 makes her hang
 - [243 SELECT FOR UPDATE, locking on purpose](./notes/243-select-for-update-locking-on-purpose.md): Asha and Esha both see order 106 pending and both send the delivery email, so where was the lock
+- [244 deadlocks, two transactions waiting on each other](./notes/244-deadlocks-two-transactions-waiting-on-each-other.md): Asha waits for Esha while Esha waits for Asha, so does anyone ever move
