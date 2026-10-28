@@ -16,7 +16,7 @@ asha:  SELECT price FROM products WHERE name = 'dhokla';   -- 7.00
 asha:  COMMIT;
 ```
 
-the shop table has 6.00 before Esha touches it, as in [222](./222-update-changing-rows-and-why-the-where-matters.md):
+the shop table has 6.00 before Esha runs her [UPDATE](./222-update-changing-rows-and-why-the-where-matters.md):
 
 ```sql
 SELECT name, price FROM products WHERE name = 'dhokla'
