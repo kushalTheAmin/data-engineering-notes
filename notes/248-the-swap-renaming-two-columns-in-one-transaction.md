@@ -11,6 +11,11 @@ the swap is renaming the two columns so the big one takes the old name, all insi
 BEGIN;
 ALTER TABLE orders RENAME COLUMN order_id TO order_id_old;
 ALTER TABLE orders RENAME COLUMN order_id_big TO order_id;
+CREATE OR REPLACE FUNCTION copy_order_id() RETURNS trigger AS $$
+BEGIN
+  NEW.order_id_old := NEW.order_id;
+  RETURN NEW;
+END $$ LANGUAGE plpgsql;
 COMMIT;
 ```
 
@@ -25,7 +30,7 @@ why one [transaction](./228-commit-and-rollback-keeping-or-undoing-a-transaction
 
 the catch: a rename takes ACCESS EXCLUSIVE ([245](./245-changing-a-column-type-the-table-rewrite-and-the-lock.md), the lock, a mark making others wait, that blocks even a plain SELECT read). it is held for milliseconds, not for a whole copy.
 
-one more gotcha, the [primary key](./087-primary-key.md) (the unique id column) and the [foreign key](./093-foreign-key.md) (a column pointing at another table) from order_items stay attached to order_id_old. moving them is its own job, so keep that column for now.
+one more gotcha, the [primary key](./087-primary-key.md) (the unique id column) and the [foreign key](./093-foreign-key.md) (a column pointing at another table) from order_items stay attached to order_id_old, which can never be empty. so the block also flips the trigger from [247](./247-keeping-the-new-column-in-sync-with-a-trigger.md) to fill order_id_old. unflipped, it fails every write, since order_id_big is gone. moving the keys is its own job.
 
 ### check yourself
 

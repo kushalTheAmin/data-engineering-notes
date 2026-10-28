@@ -1,5 +1,7 @@
 # corrections
 
+248, 2026-10-28: the swap left the trigger from 247 in place, but after the renames it points at order_id_big, which no longer exists, so every insert and update on orders failed. the block now also replaces the trigger function so it copies order_id into order_id_old, which still holds the primary key and cannot be empty, and the text says so. evidence: python, local Postgres 16 ran the old swap then INSERT and UPDATE both gave record "new" has no field "order_id_big"; with the function replaced in the same transaction both worked (checks/248.py)
+
 247, 2026-10-28: the last line said to drop the trigger once nothing reads the old column, which hid that the trigger breaks as soon as the columns are renamed, a step before that. it now says it runs on every write and breaks once the columns are renamed, and points to 248. this undoes the wording from the earlier 247 audit, which was still wrong about when the trigger has to change. evidence: local Postgres 16, after the renames in 248 every INSERT and UPDATE failed with record "new" has no field "order_id_big" (checks/247.py)
 
 000, 2026-10-28: gate failed before any change, so no notes were audited: duckdb 2.0.0 (pip default) fails checks/008.py, 011, 026 to 030 on fetchone and 041 on an assert, and duckdb 1.4.5 fails checks/127.py, 201 and 202 on an assert. mermaid-cli did not render a test file here. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (8) on duckdb 2.0.0 and FAIL (3) on 1.4.5.
