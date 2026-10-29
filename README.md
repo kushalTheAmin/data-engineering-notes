@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 264
+notes so far: 265
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -298,3 +298,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [262 denormalization, copying data on purpose](./notes/262-denormalization-copying-data-on-purpose.md): listing 7 orders with a city takes 7 lookups, so why would you copy the city onto each order
 - [263 choosing column types, ask what you do with the value](./notes/263-choosing-column-types-by-what-you-do-with-the-value.md): store the last 4 phone digits as a number and what does Bhavin read out
 - [264 naming conventions, names people can guess](./notes/264-naming-conventions-names-people-can-guess.md): could you join to a table you have never opened, if the names are guessable
+- [265 created_at and updated_at, two timestamps every table carries](./notes/265-created-at-and-updated-at-two-timestamps-every-table-carries.md): order 104 says cancelled, but cancelled when

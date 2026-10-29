@@ -67,6 +67,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | crash | anything that wipes memory, like a power cut or the server dying | [232](./notes/232-durability-surviving-a-crash.md) |
 | CREATE TABLE | makes a new empty table from a name and typed columns | [213](./notes/213-create-table-naming-a-table-and-its-columns.md) |
 | CREATE TABLE IF NOT EXISTS | skips if the name is taken, never checking the columns match | [213](./notes/213-create-table-naming-a-table-and-its-columns.md) |
+| created_at | a column holding when the row was inserted, set once, never changed | [265](./notes/265-created-at-and-updated-at-two-timestamps-every-table-carries.md) |
 | CRLF | a line ending of two characters, 0d then 0a, common on windows | [042](./notes/042-line-endings.md) |
 | cross join | a join with no test, pairing every row with every row | [169](./notes/169-cross-join-every-row-with-every-row.md) |
 | crows feet | line end marks on an ERD showing how many rows match | [099](./notes/099-crows-feet-reading-one-and-many.md) |
@@ -365,6 +366,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | UPDATE | changes values in rows that already exist | [222](./notes/222-update-changing-rows-and-why-the-where-matters.md) |
 | update anomaly | one fact stored in many rows, an update changing only some | [089](./notes/089-update-anomalies.md) |
 | UPDATE without WHERE | changes every row in the table, with no warning | [222](./notes/222-update-changing-rows-and-why-the-where-matters.md) |
+| updated_at | a column holding when the row last changed, moved by every update | [265](./notes/265-created-at-and-updated-at-two-timestamps-every-table-carries.md) |
 | upper | a function turning every letter to upper case | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | upsert | an INSERT that updates the row instead if its key exists | [224](./notes/224-upsert-insert-or-update-in-one-statement.md) |
 | UTC | the one clock everyone measures against, with no daylight saving | [024](./notes/024-utc.md) |

@@ -30,4 +30,4 @@ the [ON line](./157-on-how-a-join-decides-which-rows-match.md) wrote itself. a s
 i figured naming was taste, but a name is a promise about what you will find, so keeping it saves everyone a trip to the schema. the next one is about two columns almost every table should carry.
 
 ---
-prev: [263 choosing column types, ask what you do with the value](./263-choosing-column-types-by-what-you-do-with-the-value.md) | next: not written yet
+prev: [263 choosing column types, ask what you do with the value](./263-choosing-column-types-by-what-you-do-with-the-value.md) | next: [265 created_at and updated_at, two timestamps every table carries](./265-created-at-and-updated-at-two-timestamps-every-table-carries.md)

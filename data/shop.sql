@@ -277,3 +277,20 @@ INSERT INTO customer_contacts VALUES
     (1, '555-0101'),
     (2, '555-0102'),
     (4, '555-0104');
+
+-- added by note 265: when each order row was created and when it last changed. created_at matches ordered_at. 106 was never touched after it was created, so its two times are equal
+CREATE TABLE order_tracking (
+    order_id   INTEGER PRIMARY KEY REFERENCES orders (order_id),
+    status     VARCHAR NOT NULL,
+    created_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP NOT NULL
+);
+
+INSERT INTO order_tracking VALUES
+    (101, 'delivered', TIMESTAMP '2026-04-01 09:15:00', TIMESTAMP '2026-04-01 10:05:00'),
+    (102, 'delivered', TIMESTAMP '2026-04-01 18:40:00', TIMESTAMP '2026-04-01 19:30:00'),
+    (103, 'delivered', TIMESTAMP '2026-04-03 12:05:00', TIMESTAMP '2026-04-03 13:00:00'),
+    (104, 'cancelled', TIMESTAMP '2026-04-04 08:30:00', TIMESTAMP '2026-04-04 08:45:00'),
+    (105, 'delivered', TIMESTAMP '2026-04-06 19:10:00', TIMESTAMP '2026-04-06 20:15:00'),
+    (106, 'pending',   TIMESTAMP '2026-04-08 10:00:00', TIMESTAMP '2026-04-08 10:00:00'),
+    (107, 'delivered', TIMESTAMP '2026-04-09 13:45:00', TIMESTAMP '2026-04-09 14:30:00');
