@@ -45,4 +45,4 @@ the second. a table failing the second also fails the third, so the lowest one c
 </details>
 
 ---
-prev: [256 one to one, when two tables share a key](./256-one-to-one-when-two-tables-share-a-key.md) | next: not written yet
+prev: [256 one to one, when two tables share a key](./256-one-to-one-when-two-tables-share-a-key.md) | next: [258 functional dependency, when one column decides another](./258-functional-dependency-when-one-column-decides-another.md)
