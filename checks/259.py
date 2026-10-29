@@ -23,3 +23,5 @@ except Exception as e:
 con.execute("INSERT INTO pt VALUES (3, 'sweet')")
 # source: https://www.postgresql.org/docs/16/arrays.html
 # confirmed: tip says searching for specific array elements can be a sign of database misdesign, consider a separate table with a row for each item
+# source: https://en.wikipedia.org/wiki/Database_normalization
+# confirmed: first normal form means each field contains a single value, "A field may not contain a set of values or a nested record"

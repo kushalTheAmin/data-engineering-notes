@@ -1,5 +1,7 @@
 # corrections
 
+259, 2026-10-29: note text unchanged. the claim that first normal form means one value per cell had no page behind it in checks/259.py. the check now cites the Wikipedia normalization page. evidence: https://en.wikipedia.org/wiki/Database_normalization (first normal form: each field contains a single value, a field may not contain a set of values or a nested record) (checks/259.py)
+
 000, 2026-10-29: gate failed before any change, so no notes were audited: duckdb 2.0.0 (the pip default) fails checks/008.py, 011, 026 to 030 on fetchone and 041 on an assert. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (8).
 
 000, 2026-10-29: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone and 041 on an assert. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (8).
