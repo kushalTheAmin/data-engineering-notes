@@ -56,4 +56,4 @@ yes, it breaks it. the time is decided by order_id alone, half of the key, and o
 </details>
 
 ---
-prev: [259 first normal form, one value per cell](./259-first-normal-form-one-value-per-cell.md) | next: not written yet
+prev: [259 first normal form, one value per cell](./259-first-normal-form-one-value-per-cell.md) | next: [261 third normal form, nothing but the key](./261-third-normal-form-nothing-but-the-key.md)
