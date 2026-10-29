@@ -21,7 +21,9 @@ backup.remove(999)
 live = list(backup)
 assert len(live) == 7 and 108 not in live
 # source: https://www.postgresql.org/docs/current/app-pgdump.html
-# confirmed: pg_dump makes consistent exports even if the database is used concurrently, does not block readers or writers, and is generally not the right choice for regular production backups
+# confirmed: pg_dump makes consistent exports even if the database is used concurrently, does not block readers or writers, and except in simple cases is generally not the right choice for regular production backups
 # source: https://www.postgresql.org/docs/current/app-pgdump.html
 # confirmed: the default pg_dump output format is a plain-text SQL script file
+# source: https://www.postgresql.org/docs/16/wal-intro.html
+# confirmed (opened this run): "any changes that have not been applied to the data pages can be redone from the WAL records. (This is roll-forward recovery, also known as REDO.)"
 print("251 ok")
