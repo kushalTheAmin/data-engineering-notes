@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 250
+notes so far: 251
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -281,3 +281,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [248 changing a column type without downtime, the swap in one short transaction](./notes/248-the-swap-renaming-two-columns-in-one-transaction.md): order_id_big is correct for every order, but the app still asks for order_id, so how do you switch without touching the app
 - [249 MVCC, an update writes a new row version](./notes/249-mvcc-an-update-writes-a-new-row-version.md): Esha reads order 106 while Asha is changing it, so what is she actually reading
 - [250 transaction snapshots, what your transaction is allowed to see](./notes/250-transaction-snapshots-what-your-transaction-is-allowed-to-see.md): Esha sees Bhavins newer order but not Ashas older change, so how does Postgres decide who is visible
+- [251 backups, a copy you can restore from](./notes/251-backups-a-copy-you-can-restore-from.md): Asha drops the orders table and durability keeps the drop, so how do you get the orders back

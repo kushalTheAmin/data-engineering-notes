@@ -22,6 +22,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | atomicity | the ACID promise: all of a transaction happens, or none of it | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | avg | the average of a column, its sum divided by how many values | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
 | backfill | fills a new column for rows that already exist, in small batches | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
+| backup | a copy of your data, kept elsewhere, that you can restore from | [251](./notes/251-backups-a-copy-you-can-restore-from.md) |
 | batch | a small slice of rows handled by one statement | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
 | BEGIN | the command that opens a transaction | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
 | BETWEEN | a test keeping values from a low to a high end, inclusive | [112](./notes/112-between-ranges-that-include-both-ends.md) |
@@ -264,6 +265,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | repeating fraction | digits past the point that loop forever, so no exact finite form | [018](./notes/018-why-0-1-has-no-exact-binary-form.md) |
 | replay | reading the log forward and redoing changes the table files lack | [234](./notes/234-replaying-the-log-after-a-crash.md) |
 | required field | a field name every record must have, or it is rejected | [077](./notes/077-required-vs-optional-fields.md) |
+| restore | load a backup back, returning data to the moment of the copy | [251](./notes/251-backups-a-copy-you-can-restore-from.md) |
 | retention | how many of a cohort logged in again in a later month | [202](./notes/202-retention-who-came-back-the-month-after.md) |
 | revenue | quantity times price, added up over the order rows you choose | [171](./notes/171-joins-plus-group-by-revenue-per-customer.md) |
 | right join | a left join with the tables swapped, keeps every right row | [162](./notes/162-right-and-full-outer-joins.md) |

@@ -63,4 +63,4 @@ no. 740 finished, so the code says visible, but a rolled back transaction never 
 </details>
 
 ---
-prev: [249 MVCC, an update writes a new row version](./249-mvcc-an-update-writes-a-new-row-version.md) | next: not written yet
+prev: [249 MVCC, an update writes a new row version](./249-mvcc-an-update-writes-a-new-row-version.md) | next: [251 backups, a copy you can restore from](./251-backups-a-copy-you-can-restore-from.md)
