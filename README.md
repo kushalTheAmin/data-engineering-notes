@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 262
+notes so far: 263
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -296,3 +296,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [260 second normal form, nothing about half the key](./notes/260-second-normal-form-nothing-about-half-the-key.md): if every dhokla line also carried the word dhokla, how many places do you fix on a rename
 - [261 third normal form, nothing but the key](./notes/261-third-normal-form-nothing-but-the-key.md): is a table with a one column key safe from copied data, not quite
 - [262 denormalization, copying data on purpose](./notes/262-denormalization-copying-data-on-purpose.md): listing 7 orders with a city takes 7 lookups, so why would you copy the city onto each order
+- [263 choosing column types, ask what you do with the value](./notes/263-choosing-column-types-by-what-you-do-with-the-value.md): store the last 4 phone digits as a number and what does Bhavin read out

@@ -57,4 +57,4 @@ the city. it changes rarely, so rebuilding the copy is rare. the count changes w
 </details>
 
 ---
-prev: [261 third normal form, nothing but the key](./261-third-normal-form-nothing-but-the-key.md) | next: not written yet
+prev: [261 third normal form, nothing but the key](./261-third-normal-form-nothing-but-the-key.md) | next: [263 choosing column types, ask what you do with the value](./263-choosing-column-types-by-what-you-do-with-the-value.md)

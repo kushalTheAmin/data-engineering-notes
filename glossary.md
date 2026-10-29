@@ -178,6 +178,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | LAG | a window function that returns a value from an earlier row | [192](./notes/192-lag-and-lead-looking-at-the-row-before.md) |
 | LEAD | a window function that returns a value from a later row | [192](./notes/192-lag-and-lead-looking-at-the-row-before.md) |
+| leading zero | a front 0 that numbers drop and text keeps | [263](./notes/263-choosing-column-types-by-what-you-do-with-the-value.md) |
 | left join | inner join plus every unmatched left row, with null on the right | [159](./notes/159-left-join-keep-every-row-from-the-left-table.md) |
 | left table | the table written before the word JOIN in the query | [159](./notes/159-left-join-keep-every-row-from-the-left-table.md) |
 | length | how many characters a text has, spaces included, not bytes | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
@@ -350,6 +351,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | TRUNCATE | removes every row at once and keeps the empty table | [226](./notes/226-drop-and-truncate-emptying-a-table-vs-removing-it.md) |
 | TRY_CAST | CAST that gives null instead of an error when conversion fails | [133](./notes/133-casts-that-fail-and-try-cast.md) |
 | twos complement | binary where the leftmost place is negative, so one zero | [014](./notes/014-twos-complement.md) |
+| type by use | choose a type by what you do with the value | [263](./notes/263-choosing-column-types-by-what-you-do-with-the-value.md) |
 | UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING | frame option meaning every row of the window, no limit either way | [191](./notes/191-the-default-frame-trap.md) |
 | Unicode | one agreed table giving every character in every script a number | [009](./notes/009-unicode.md) |
 | UNION | stacks two queries rows, then drops repeated rows | [182](./notes/182-union-and-union-all.md) |
