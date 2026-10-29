@@ -31,3 +31,5 @@ assert trigger_target not in renamed and "order_id_old" in renamed
 #   record "new" has no field "order_id_big"; with the trigger dropped instead, an INSERT that sets only order_id failed with
 #   null value in column "order_id_old" violates not-null constraint (the primary key stayed on order_id_old);
 #   with CREATE OR REPLACE FUNCTION copy_order_id() setting NEW.order_id_old := NEW.order_id inside the same transaction, INSERT of 108 and an UPDATE both worked
+# source: https://www.postgresql.org/docs/16/datatype-numeric.html
+#   confirmed (opened this run): Table 8.2 lists integer as 4 bytes and bigint as 8 bytes
