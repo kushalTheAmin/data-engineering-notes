@@ -207,6 +207,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | min | returns the smallest non-null value in a column, or the earliest date | [142](./notes/142-min-and-max-the-smallest-and-biggest-value.md) |
 | modeling | deciding the tables, and which table each fact belongs in, before SQL | [254](./notes/254-modeling-deciding-the-tables-before-writing-them.md) |
 | MVCC | Postgres never overwrites a row, an UPDATE writes a new version | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
+| naming convention | habits for naming tables and columns so others can guess them | [264](./notes/264-naming-conventions-names-people-can-guess.md) |
 | nan | not a number, what 0 / 0 gives in DuckDB | [130](./notes/130-nullif-and-dividing-by-zero.md) |
 | nanosecond | a billionth of a second | [037](./notes/037-disk-is-slow.md) |
 | natural key | a real world value that already tells rows apart, like an email | [088](./notes/088-natural-keys-vs-made-up-ids.md) |
@@ -312,6 +313,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | session id | the running sum of start flags, one number per session | [200](./notes/200-session-ids-a-running-sum-of-the-flags.md) |
 | shell | the program inside a terminal that reads your line and runs it | [049](./notes/049-the-terminal.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
+| snake_case | lowercase words joined by underscores, like ordered_at | [264](./notes/264-naming-conventions-names-people-can-guess.md) |
 | snapshot (Postgres) | a note of which transactions had finished when a query began | [250](./notes/250-transaction-snapshots-what-your-transaction-is-allowed-to-see.md) |
 | splitting into tables | one table per kind of thing, other tables keep only its id | [091](./notes/091-splitting-into-tables.md) |
 | SQL | the language you send a database to ask for rows | [101](./notes/101-sql-you-describe-the-result.md) |

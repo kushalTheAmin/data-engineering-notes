@@ -52,4 +52,4 @@ discount_code is text, 007 would become 7 as a number, and nobody adds two codes
 </details>
 
 ---
-prev: [262 denormalization, copying data on purpose](./262-denormalization-copying-data-on-purpose.md) | next: not written yet
+prev: [262 denormalization, copying data on purpose](./262-denormalization-copying-data-on-purpose.md) | next: [264 naming conventions, names people can guess](./264-naming-conventions-names-people-can-guess.md)
