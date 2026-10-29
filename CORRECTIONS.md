@@ -1,5 +1,6 @@
 # corrections
 
+256, 2026-10-29: said note 255 gave city its own table, but 255 only says it would if the shop wanted a delivery fee per city (a what-if, no city table exists in the shop). it now says city would get its own table because customers share one. evidence: the text of notes/255 ("say the shop wants a delivery fee per city"), data/shop.sql has no city table (notes/256)
 256, 2026-10-29: said joining customers to orders gives 8 rows, but a plain join gives 7, only a left join gives 8 (7 orders plus Esha who has none). it now says left joining. evidence: python, inner join count 7, left join count 8 (checks/256.py)
 254, 2026-10-29: said a later note copies the price onto each order row, but an order holds several products at different prices (order 101 has dhokla at 6.00 and masala chai at 3.00) and orders has no product, so a price copied there cannot be right. it now says the price is copied onto each order_items row, the one row per order and product pair. evidence: python, order 101 joins to two different prices and the orders columns are order_id, customer_id, ordered_at, status (checks/254.py)
 

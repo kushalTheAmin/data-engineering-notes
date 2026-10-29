@@ -4,7 +4,7 @@ section: designing tables, part 3, ~2 min read
 
 why would you build a second table with at most one row per customer, when a column would do? and what stops it sneaking up to two?
 
-in [255](./255-entities-and-attributes.md) city got its own table because customers share one. this is the opposite: one to one, a row matching at most one row there, where [092](./092-relationships-one-customer-many-orders.md) had one row matching a pile.
+in [255](./255-entities-and-attributes.md) city would get its own table because customers share one. this is the opposite: one to one, a row matching at most one row there, where [092](./092-relationships-one-customer-many-orders.md) had one row matching a pile.
 
 in the shop, the imaginary gujarati snack store, phone numbers are optional, so they live in customer_contacts. its [primary key](./087-primary-key.md) (a column unique in every row) is the customer id, which is also a [foreign key](./093-foreign-key.md) (a column pointing at another tables id) back to customers.
 
