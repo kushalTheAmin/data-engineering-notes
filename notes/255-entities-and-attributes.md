@@ -25,4 +25,4 @@ GROUP BY makes one group per city and count(*) counts its rows. the NULL is Esha
 i assumed entity or attribute was a fixed label on the thing itself, but its decided by whether you want to keep facts about it. test it on a value: would i ever store something about this? status, probably not, it stays a column. a table for every column is its own mess.
 
 ---
-prev: [254 modeling, deciding the tables before writing them](./254-modeling-deciding-the-tables-before-writing-them.md) | next: not written yet
+prev: [254 modeling, deciding the tables before writing them](./254-modeling-deciding-the-tables-before-writing-them.md) | next: [256 one to one, when two tables share a key](./256-one-to-one-when-two-tables-share-a-key.md)

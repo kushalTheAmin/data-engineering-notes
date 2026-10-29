@@ -224,6 +224,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | offset (time zones) | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
 | ON | the join test that decides which pairs of rows are kept | [157](./notes/157-on-how-a-join-decides-which-rows-match.md) |
 | one to many | one row on one side matches many rows on the other | [092](./notes/092-relationships-one-customer-many-orders.md) |
+| one to one | each row matches at most one row in the other table | [256](./notes/256-one-to-one-when-two-tables-share-a-key.md) |
 | operating system | the program that starts programs and shares the machine between them | [051](./notes/051-the-operating-system.md) |
 | optional field | a field a record may leave out without being rejected | [077](./notes/077-required-vs-optional-fields.md) |
 | OR | joins two tests, keeping a row if either is true | [108](./notes/108-and-or-combining-two-tests.md) |

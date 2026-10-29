@@ -266,3 +266,14 @@ INSERT INTO app_events VALUES
     (2, '{"type": "add_to_cart", "customer": "Asha", "product": "dhokla", "quantity": 2}'),
     (3, '{"type": "view", "customer": "Disha", "product": "kaju katli"}'),
     (4, '{"type": "add_to_cart", "customer": "Bhavin", "product": "jalebi", "quantity": 1}');
+
+-- added by note 256: phone numbers customers chose to share, at most one row per customer. Chirag and Esha never gave one, so they have no row
+CREATE TABLE customer_contacts (
+    customer_id INTEGER PRIMARY KEY REFERENCES customers (customer_id),
+    phone       VARCHAR NOT NULL
+);
+
+INSERT INTO customer_contacts VALUES
+    (1, '555-0101'),
+    (2, '555-0102'),
+    (4, '555-0104');
