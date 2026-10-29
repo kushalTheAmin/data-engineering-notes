@@ -1,5 +1,7 @@
 # corrections
 
+000, 2026-10-29: gate failed before any change, so no notes were audited: with duckdb 2.0.0 checks/008.py, 011, 026 to 030 fail on fetchone and 041 on an assert, and mermaid-cli did not render a test file. same failure as the earlier 000 lines. evidence: python3.13 tools/gate.py printed FAIL (8).
+
 000, 2026-10-29: gate failed before any change, so no notes were audited: duckdb 2.0.0 (the pip default) fails checks/008.py, 011, 026 to 030 on fetchone and 041 on an assert. same failure as the earlier 000 line. evidence: python3.13 tools/gate.py printed FAIL (8)
 000, 2026-10-29: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone and 041 on an assert, duckdb 1.4.4 fails checks/127.py, 201 and 202 on an assert, 1.3.2 fails 5 and 1.2.2 fails 9. mermaid-cli renders only with --no-sandbox as root. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL on every duckdb version tried.
 
