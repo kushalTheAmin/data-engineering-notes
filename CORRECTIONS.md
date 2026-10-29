@@ -1,5 +1,7 @@
 # corrections
 
+261, 2026-10-29: note text unchanged. the claim that third normal form fails when a column depends on another non-key column had no page behind it in checks/261.py. the check now cites the Wikipedia normalization page. evidence: https://en.wikipedia.org/wiki/Database_normalization (third normal form is violated by a transitive functional dependency, a non-key attribute depending on another non-key attribute) (checks/261.py)
+
 260, 2026-10-29: note text unchanged. the claim that second normal form means depending on the whole key, with violations only on composite keys, had no page behind it in checks/260.py. the check now cites the Wikipedia normalization page. evidence: https://en.wikipedia.org/wiki/Database_normalization (second normal form: non-key attributes depend on the whole candidate key, not just part of it) (checks/260.py)
 
 259, 2026-10-29: note text unchanged. the claim that first normal form means one value per cell had no page behind it in checks/259.py. the check now cites the Wikipedia normalization page. evidence: https://en.wikipedia.org/wiki/Database_normalization (first normal form: each field contains a single value, a field may not contain a set of values or a nested record) (checks/259.py)

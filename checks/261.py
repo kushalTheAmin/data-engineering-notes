@@ -12,3 +12,5 @@ assert q("SELECT count(*) FROM orders o JOIN customers c ON c.customer_id = o.cu
 # order_id decides customer_id, customer_id decides city
 assert q("SELECT count(*) FROM (SELECT customer_id FROM customers GROUP BY customer_id HAVING count(DISTINCT city) > 1)") == [(0,)]
 assert q("SELECT count(*) FROM (SELECT order_id FROM orders GROUP BY order_id HAVING count(DISTINCT customer_id) > 1)") == [(0,)]
+# source: https://en.wikipedia.org/wiki/Database_normalization
+# confirmed: third normal form is violated by a "transitive functional dependency", a non-key attribute depending on another non-key attribute
