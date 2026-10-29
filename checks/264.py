@@ -14,3 +14,7 @@ assert 'ordered_at' in [r[0] for r in q("SELECT column_name FROM information_sch
 # confirmed: unquoted names are folded to lower case in PostgreSQL, quoting makes an identifier case-sensitive so "Foo" differs from foo
 # source: https://survey.stackoverflow.co/2025/technology
 # confirmed: PostgreSQL is the most used database among all survey respondents, 55.6 percent (chart data), so popular is supported and most app data is not
+# customers holds customer_id as its primary key, only tables that point at customers hold it as a foreign key
+assert q("SELECT constraint_column_names FROM duckdb_constraints() WHERE table_name = 'customers' AND constraint_type = 'PRIMARY KEY'") == [(['customer_id'],)]
+fk = {r[0] for r in q("SELECT table_name FROM duckdb_constraints() WHERE constraint_type = 'FOREIGN KEY' AND constraint_column_names = ['customer_id']")}
+assert {'customer_contacts', 'orders'} <= fk and 'customers' not in fk

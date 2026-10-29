@@ -4,7 +4,7 @@ section: designing tables, part 11, ~2 min read
 
 could you join customers to customer_contacts without opening customer_contacts? the shop (the imaginary gujarati snack store these notes run on) says yes, and the reason is just the names.
 
-a naming convention is a set of habits for naming tables and columns so the next person can guess them. the shop uses two. lowercase words joined by underscores (snake_case, like ordered_at), and one fact keeps one name everywhere, so the [foreign key](./093-foreign-key.md) (a column pointing at another tables id) is customer_id in every table.
+a naming convention is a set of habits for naming tables and columns so the next person can guess them. the shop uses two. lowercase words joined by underscores (snake_case, like ordered_at), and one fact keeps one name everywhere, so the [foreign key](./093-foreign-key.md) (a column pointing at another tables id) is customer_id in every table that points at customers.
 
 | messy | what it costs | clean |
 |---|---|---|

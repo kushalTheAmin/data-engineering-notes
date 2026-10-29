@@ -1,5 +1,7 @@
 # corrections
 
+264, 2026-10-29: said the foreign key is customer_id in every table, but in customers that column is the primary key, not a foreign key. it now says the foreign key is customer_id in every table that points at customers. evidence: data/shop.sql (customers.customer_id INTEGER PRIMARY KEY; orders and customer_contacts reference it) (checks/264.py)
+
 264, 2026-10-29: called Postgres the server database where most app data lives, which no page says. the Stack Overflow 2025 survey only shows it is the most used database among developers (55.6%). it now says a popular server database. evidence: https://survey.stackoverflow.co/2025/technology (PostgreSQL 55.6% of all respondents) (checks/264.py)
 
 000, 2026-10-29: gate failed before any change, so no notes were audited: checks/008.py, 011, 026 to 030 fail on fetchone and 041 on an assert, with both duckdb 2.0.0 and 1.4.5. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (8).
