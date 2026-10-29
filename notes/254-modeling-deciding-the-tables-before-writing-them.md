@@ -20,7 +20,7 @@ four facts have one subject, so that subjects table is the answer. the 2 is the 
 
 i figured design started with picking column types, but its that one question asked again and again.
 
-one gotcha: with price only in products, old orders are read at todays price, but a receipt wants what it cost that day. a later note copies the price onto each order row on purpose.
+one gotcha: with price only in products, old orders are read at todays price, but a receipt wants what it cost that day. a later note copies the price onto each order_items row on purpose.
 
 ---
 prev: [253 capstone, placing an order as one transaction](./253-capstone-placing-an-order-as-one-transaction.md) | next: [255 entities and attributes](./255-entities-and-attributes.md)

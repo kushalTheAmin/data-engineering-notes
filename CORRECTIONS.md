@@ -1,5 +1,7 @@
 # corrections
 
+254, 2026-10-29: said a later note copies the price onto each order row, but an order holds several products at different prices (order 101 has dhokla at 6.00 and masala chai at 3.00) and orders has no product, so a price copied there cannot be right. it now says the price is copied onto each order_items row, the one row per order and product pair. evidence: python, order 101 joins to two different prices and the orders columns are order_id, customer_id, ordered_at, status (checks/254.py)
+
 000, 2026-10-29: gate failed before any change, so no notes were audited: with duckdb 2.0.0 (pip default) and 1.4.4 checks/008.py, 011, 026 to 030 fail on fetchone and 041 on an assert, and mermaid-cli produced no svg. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (8).
 
 253, 2026-10-29: note text unchanged. two claims had no page behind them in checks/253.py: that the server tells Esha done only after the log is flushed to disk by default, and that a second FOR UPDATE rechecks the WHERE on the row as the first saved it. the check now cites both Postgres pages. evidence: https://www.postgresql.org/docs/current/runtime-config-wal.html (synchronous_commit: on (the default), waits for local flush of WAL); https://www.postgresql.org/docs/16/transaction-iso.html (WHERE clause re-evaluated, SELECT FOR UPDATE returns the updated version) (checks/253.py)

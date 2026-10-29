@@ -17,3 +17,6 @@ assert q("SELECT count(DISTINCT order_id) FROM order_items WHERE product_id = 1"
 assert 'price' not in [r[0] for r in q("SELECT column_name FROM information_schema.columns WHERE table_name = 'order_items'")]
 # five facts in the table
 assert 5 == len(["Asha", "2026-04-01 09:15", "dhokla", "6.00", "2"])
+# an order holds products at different prices, so a per day price belongs on the order_items row, not on orders
+assert q("SELECT count(DISTINCT p.price) FROM order_items i JOIN products p ON p.product_id = i.product_id WHERE i.order_id = 101")[0][0] == 2
+assert 'price' not in [r[0] for r in q("SELECT column_name FROM information_schema.columns WHERE table_name = 'orders'")]
