@@ -294,3 +294,17 @@ INSERT INTO order_tracking VALUES
     (105, 'delivered', TIMESTAMP '2026-04-06 19:10:00', TIMESTAMP '2026-04-06 20:15:00'),
     (106, 'pending',   TIMESTAMP '2026-04-08 10:00:00', TIMESTAMP '2026-04-08 10:00:00'),
     (107, 'delivered', TIMESTAMP '2026-04-09 13:45:00', TIMESTAMP '2026-04-09 14:30:00');
+
+-- added by note 266: one account row for each customer who made one, Esha never did. Disha closed hers on 2026-04-10 09:00:00 and it was soft deleted, so deleted_at is set and updated_at moved with it. everyone else is live, deleted_at NULL
+CREATE TABLE customer_accounts (
+    customer_id INTEGER PRIMARY KEY REFERENCES customers (customer_id),
+    email       VARCHAR NOT NULL UNIQUE,
+    updated_at  TIMESTAMP NOT NULL,
+    deleted_at  TIMESTAMP
+);
+
+INSERT INTO customer_accounts VALUES
+    (1, 'asha@example.com',   TIMESTAMP '2026-01-05 10:00:00', NULL),
+    (2, 'bhavin@example.com', TIMESTAMP '2026-01-20 10:00:00', NULL),
+    (3, 'chirag@example.com', TIMESTAMP '2026-02-11 10:00:00', NULL),
+    (4, 'disha@example.com',  TIMESTAMP '2026-04-10 09:00:00', TIMESTAMP '2026-04-10 09:00:00');

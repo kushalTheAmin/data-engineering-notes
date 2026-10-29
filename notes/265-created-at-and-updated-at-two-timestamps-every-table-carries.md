@@ -58,4 +58,4 @@ no. the row changed but updated_at is still 2026-04-08 10:00:00, so if the job a
 </details>
 
 ---
-prev: [264 naming conventions, names people can guess](./264-naming-conventions-names-people-can-guess.md) | next: not written yet
+prev: [264 naming conventions, names people can guess](./264-naming-conventions-names-people-can-guess.md) | next: [266 soft deletes, marking a row gone instead of removing it](./266-soft-deletes-marking-a-row-gone-instead-of-removing-it.md)

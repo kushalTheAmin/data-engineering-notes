@@ -140,6 +140,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | GROUP BY rule | every SELECT column must be grouped or inside an aggregate | [145](./notes/145-the-group-by-rule-every-column-is-grouped-or-aggregated.md) |
 | grouping by several columns | one group per different combination of the values, only combinations that exist | [144](./notes/144-grouping-by-more-than-one-column.md) |
 | grouping() | gives 1 on a made-up total row, 0 on a real group | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
+| hard delete | a real DELETE: the row is physically removed | [266](./notes/266-soft-deletes-marking-a-row-gone-instead-of-removing-it.md) |
 | HAVING | a filter on groups, run after GROUP BY, testing an aggregate | [146](./notes/146-having-filtering-whole-groups.md) |
 | head | prints the first lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | header row | the first line of a csv, holding column names instead of data | [065](./notes/065-the-header-row-naming-the-columns.md) |
@@ -316,6 +317,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
 | snake_case | lowercase words joined by underscores, like ordered_at | [264](./notes/264-naming-conventions-names-people-can-guess.md) |
 | snapshot (Postgres) | a note of which transactions had finished when a query began | [250](./notes/250-transaction-snapshots-what-your-transaction-is-allowed-to-see.md) |
+| soft delete | marking a row gone with a deleted_at time instead of removing it | [266](./notes/266-soft-deletes-marking-a-row-gone-instead-of-removing-it.md) |
 | splitting into tables | one table per kind of thing, other tables keep only its id | [091](./notes/091-splitting-into-tables.md) |
 | SQL | the language you send a database to ask for rows | [101](./notes/101-sql-you-describe-the-result.md) |
 | SQL dump | a text file of SQL commands that rebuilds a database when run | [103](./notes/103-your-first-query-against-the-shop.md) |
