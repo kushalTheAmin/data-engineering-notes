@@ -38,4 +38,8 @@ linked = set(int(n) for n in re.findall(r'\[(\d{3})\]\(\./', body))
 assert linked == set(range(208, 253)) | {252}, sorted(set(range(208, 253)) - linked)
 # source: https://www.postgresql.org/docs/current/runtime-config-wal.html
 # confirmed: if a recovery target is configured but archive recovery ends before the target is reached, the server shuts down with a fatal error
+# source: https://www.postgresql.org/docs/current/runtime-config-wal.html
+# confirmed (opened this run): synchronous_commit "on (the default)", and the local behavior of all non-off modes is to wait for local flush of WAL to disk before the server returns success
+# source: https://www.postgresql.org/docs/16/transaction-iso.html
+# confirmed (opened this run): at read committed, if the first updater commits, the second updater re-evaluates the WHERE clause on the updated row version, and for SELECT FOR UPDATE it is the updated version of the row that is locked and returned
 print("253 ok")
