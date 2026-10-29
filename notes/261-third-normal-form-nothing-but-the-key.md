@@ -49,4 +49,4 @@ the third. the key is one column, so the second passes for free, but the tax is 
 </details>
 
 ---
-prev: [260 second normal form, nothing about half the key](./260-second-normal-form-nothing-about-half-the-key.md) | next: not written yet
+prev: [260 second normal form, nothing about half the key](./260-second-normal-form-nothing-about-half-the-key.md) | next: [262 denormalization, copying data on purpose](./262-denormalization-copying-data-on-purpose.md)
