@@ -14,6 +14,8 @@ assert q("SELECT order_id, status, created_at, updated_at FROM order_tracking WH
 assert q("SELECT date_diff('minute', created_at, updated_at) FROM order_tracking WHERE order_id = 104") == [(15,)]
 # the tracking table agrees with orders on creation time and status
 assert q("SELECT count(*) FROM order_tracking t JOIN orders o USING (order_id) WHERE o.ordered_at = t.created_at AND o.status = t.status") == [(7,)]
+# order_tracking holds all 7 orders, the note shows 3 of them
+assert q("SELECT count(*) FROM order_tracking") == [(7,)]
 # only 106 has equal times
 assert q("SELECT order_id FROM order_tracking WHERE updated_at = created_at") == [(106,)]
 # question 1

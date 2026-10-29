@@ -4,7 +4,7 @@ section: designing tables, part 12, ~2 min read
 
 order 104 in the shop (the imaginary gujarati snack store these notes run on) says cancelled. cancelled when? the orders table (a grid of rows) has one timestamp, a date plus a time, called ordered_at, so it cant tell you.
 
-the fix is two columns on every table. created_at is the moment the row was inserted (added), set once and never touched again. updated_at is the moment the row last changed, so it starts equal to created_at and moves on every [UPDATE](./222-update-changing-rows-and-why-the-where-matters.md). the shop keeps them in order_tracking (a slice of 3 orders, stored in [UTC](./030-store-utc-show-local.md), the one reference clock):
+the fix is two columns on every table. created_at is the moment the row was inserted (added), set once and never touched again. updated_at is the moment the row last changed, so it starts equal to created_at and moves on every [UPDATE](./222-update-changing-rows-and-why-the-where-matters.md). the shop keeps them in order_tracking (7 orders, the query shows 3, stored in [UTC](./030-store-utc-show-local.md), the one reference clock):
 
 ```sql
 SELECT order_id, status, created_at, updated_at FROM order_tracking WHERE order_id IN (104, 105, 106) ORDER BY order_id
