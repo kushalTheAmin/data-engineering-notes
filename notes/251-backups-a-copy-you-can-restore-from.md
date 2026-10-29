@@ -32,4 +32,4 @@ i assumed restore meant undoing the mistake. it only takes you back to the momen
 so what: Postgres ships pg_dump, which by default writes a [SQL dump](./103-your-first-query-against-the-shop.md) (a text file of commands that rebuilds the database). the docs say it makes consistent exports (matching one moment) while the database is in use, and doesnt block readers or writers, but also that for regular production backups its generally not the right choice. a later note closes the 02:00 to 11:00 gap.
 
 ---
-prev: [250 transaction snapshots, what your transaction is allowed to see](./250-transaction-snapshots-what-your-transaction-is-allowed-to-see.md) | next: not written yet
+prev: [250 transaction snapshots, what your transaction is allowed to see](./250-transaction-snapshots-what-your-transaction-is-allowed-to-see.md) | next: [252 point in time recovery, a backup plus the replayed log](./252-point-in-time-recovery-a-backup-plus-the-replayed-log.md)

@@ -236,9 +236,11 @@ every term these notes have built, in plain words, with the note that built it. 
 | phantom read | a re-run query in one transaction returns a different set of rows | [238](./notes/238-phantoms.md) |
 | pid | the number the system gives one running process, new each run | [050](./notes/050-processes.md) |
 | pipe (shell) | joins one programs output to the next programs input | [058](./notes/058-pipes.md) |
+| PITR | short for point in time recovery | [252](./notes/252-point-in-time-recovery-a-backup-plus-the-replayed-log.md) |
 | pivot | turning the values of one column into columns of their own | [151](./notes/151-pivoting-turning-rows-into-columns.md) |
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
 | placeholder value | a made up value, like 0, standing in for missing | [032](./notes/032-null-is-not-zero-or-empty-text.md) |
+| point in time recovery | restore a backup, replay the log, stop at a time you pick | [252](./notes/252-point-in-time-recovery-a-backup-plus-the-replayed-log.md) |
 | port | a number picking which program on a machine gets the bytes | [085](./notes/085-addresses-and-ports.md) |
 | port mapping | the -p flag: laptop port forwards to a port inside the container | [210](./notes/210-running-postgres-in-a-container-on-your-laptop.md) |
 | positional insert | an INSERT with no column list, values fill columns in table order | [220](./notes/220-insert-adding-rows-and-matching-values-to-columns.md) |

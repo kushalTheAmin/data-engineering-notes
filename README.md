@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 251
+notes so far: 252
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -282,3 +282,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [249 MVCC, an update writes a new row version](./notes/249-mvcc-an-update-writes-a-new-row-version.md): Esha reads order 106 while Asha is changing it, so what is she actually reading
 - [250 transaction snapshots, what your transaction is allowed to see](./notes/250-transaction-snapshots-what-your-transaction-is-allowed-to-see.md): Esha sees Bhavins newer order but not Ashas older change, so how does Postgres decide who is visible
 - [251 backups, a copy you can restore from](./notes/251-backups-a-copy-you-can-restore-from.md): Asha drops the orders table and durability keeps the drop, so how do you get the orders back
+- [252 point in time recovery, a backup plus the replayed log](./notes/252-point-in-time-recovery-a-backup-plus-the-replayed-log.md): the 02:00 backup cant bring back order 108, so where was it written down
