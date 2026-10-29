@@ -26,4 +26,4 @@ i assumed the log only mattered during a crash, but here its the thing you keep.
 so what: you keep it on purpose, copying each log file out once its full (Postgres calls that archiving), so you only recover as far as the last file copied. the docs say that if the files run out before your stop time, Postgres shuts down with an error.
 
 ---
-prev: [251 backups, a copy you can restore from](./251-backups-a-copy-you-can-restore-from.md) | next: not written yet
+prev: [251 backups, a copy you can restore from](./251-backups-a-copy-you-can-restore-from.md) | next: [253 capstone, placing an order as one transaction](./253-capstone-placing-an-order-as-one-transaction.md)
