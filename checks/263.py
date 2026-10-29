@@ -24,3 +24,6 @@ except Exception as e:
 assert q("SELECT count(*) FROM customer_contacts WHERE CAST(CAST(right(phone, 4) AS INTEGER) AS VARCHAR) = right(phone, 4)") == [(0,)]
 # check yourself 2: 007 as a number is 7
 assert str(int('007')) == '7'
+# source: https://duckdb.org/docs/2.0/sql/data_types/numeric.html
+# confirmed: INTEGER (INT4, INT32) takes 4 bytes and ranges from -2^31 to 2^31 - 1
+assert q("SELECT CAST('2147483647' AS INTEGER)") == [(2147483647,)]

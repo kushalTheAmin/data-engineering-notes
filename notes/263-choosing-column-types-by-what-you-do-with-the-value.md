@@ -4,7 +4,7 @@ section: designing tables, part 10, ~2 min read
 
 the shop (the imaginary gujarati snack store these notes run on) has support confirm a caller by the last 4 digits of their phone. store those 4 digits as a number instead of text and what does Bhavin read out?
 
-in [262](./262-denormalization-copying-data-on-purpose.md) the choice was where a fact lives. the other choice per column is its [type](./080-every-column-holds-one-type.md) (the kind of value allowed), and the rule is to pick it by what you do with the value, not by what it looks like. add or average it: number. only show and compare it: text.
+in [262](./262-denormalization-copying-data-on-purpose.md) the choice was where a fact lives. the other choice per column is its [type](./080-every-column-holds-one-type.md) (the kind of value allowed), and the rule is to pick it by what you do with the value, not by what it looks like. add or average it: number. only show it or match it exactly: text.
 
 phones sit in customer_contacts from [256](./256-one-to-one-when-two-tables-share-a-key.md) as VARCHAR (text). right(phone, 4) keeps the last 4 characters, and [CAST](./132-cast-changing-a-values-type.md) (turn a value into another type) makes them a number. all 3 rows:
 
@@ -23,7 +23,7 @@ Bhavin reads out 0102 and the system holds 102. the leading zero (a 0 in front o
 
 sniff test: [average](./140-sum-and-avg-adding-up-and-averaging.md) those 3 and you get 102.33, which means nothing. if avg is nonsense on a column, it holds digits but isnt a number.
 
-numbers also have a size limit. a 32 bit [INTEGER](./015-integer-sizes.md) tops out at 2147483647, so a made up phone like 9876543210 doesnt fit, and DuckDB, the database these notes run in, errors on that cast.
+numbers have a size limit. a 32 bit [INTEGER](./015-integer-sizes.md) tops out at 2147483647, so a fake phone like 9876543210 doesnt fit, and DuckDB, the database these notes run in, errors on that cast.
 
 i assumed a column full of digits was a number column, but the test is whether adding two of them means anything.
 

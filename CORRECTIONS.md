@@ -1,5 +1,7 @@
 # corrections
 
+263, 2026-10-29: the rule said only show and compare it means text, but the note's own check yourself 2 says loyalty_points is a number because you add and compare it, so compare pointed both ways. it now says only show it or match it exactly means text. the check file also now cites the DuckDB page for INTEGER being 4 bytes (-2^31 to 2^31 - 1) and asserts the top value casts. to stay under the word limit also was cut and made up became fake, nothing true was removed. evidence: https://duckdb.org/docs/2.0/sql/data_types/numeric.html; the text of notes/263 check yourself 2 (checks/263.py)
+
 261, 2026-10-29: note text unchanged. the claim that third normal form fails when a column depends on another non-key column had no page behind it in checks/261.py. the check now cites the Wikipedia normalization page. evidence: https://en.wikipedia.org/wiki/Database_normalization (third normal form is violated by a transitive functional dependency, a non-key attribute depending on another non-key attribute) (checks/261.py)
 
 260, 2026-10-29: note text unchanged. the claim that second normal form means depending on the whole key, with violations only on composite keys, had no page behind it in checks/260.py. the check now cites the Wikipedia normalization page. evidence: https://en.wikipedia.org/wiki/Database_normalization (second normal form: non-key attributes depend on the whole candidate key, not just part of it) (checks/260.py)
