@@ -200,6 +200,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | microsecond | a millionth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | millisecond | a thousandth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | min | returns the smallest non-null value in a column, or the earliest date | [142](./notes/142-min-and-max-the-smallest-and-biggest-value.md) |
+| modeling | deciding the tables, and which table each fact belongs in, before SQL | [254](./notes/254-modeling-deciding-the-tables-before-writing-them.md) |
 | MVCC | Postgres never overwrites a row, an UPDATE writes a new version | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
 | nan | not a number, what 0 / 0 gives in DuckDB | [130](./notes/130-nullif-and-dividing-by-zero.md) |
 | nanosecond | a billionth of a second | [037](./notes/037-disk-is-slow.md) |

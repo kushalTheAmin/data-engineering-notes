@@ -92,4 +92,4 @@ no. current docs: recovery ending before the target shuts the server down with a
 </details>
 
 ---
-prev: [252 point in time recovery, a backup plus the replayed log](./252-point-in-time-recovery-a-backup-plus-the-replayed-log.md) | next: not written yet
+prev: [252 point in time recovery, a backup plus the replayed log](./252-point-in-time-recovery-a-backup-plus-the-replayed-log.md) | next: [254 modeling, deciding the tables before writing them](./254-modeling-deciding-the-tables-before-writing-them.md)

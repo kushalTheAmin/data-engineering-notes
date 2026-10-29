@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 253
+notes so far: 254
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -284,3 +284,7 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [251 backups, a copy you can restore from](./notes/251-backups-a-copy-you-can-restore-from.md): Asha drops the orders table and durability keeps the drop, so how do you get the orders back
 - [252 point in time recovery, a backup plus the replayed log](./notes/252-point-in-time-recovery-a-backup-plus-the-replayed-log.md): the 02:00 backup cant bring back order 108, so where was it written down
 - [253 capstone, placing an order as one transaction](./notes/253-capstone-placing-an-order-as-one-transaction.md): Esha taps place order, so what has to be true for that one tap to be safe
+
+## section 10: designing tables
+
+- [254 modeling, deciding the tables before writing them](./notes/254-modeling-deciding-the-tables-before-writing-them.md): somebody had to decide the tables before the first CREATE TABLE, so how do you even start
