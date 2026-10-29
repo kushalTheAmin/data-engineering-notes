@@ -20,6 +20,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | ASCII | the old table giving 128 characters a number, English only | [008](./notes/008-ascii-runs-out.md) |
 | atomic | happening whole or not at all, never half done | [046](./notes/046-writing-safely.md) |
 | atomicity | the ACID promise: all of a transaction happens, or none of it | [229](./notes/229-acid-four-promises-a-database-makes.md) |
+| attribute | one fact about one entity, stored as a column | [255](./notes/255-entities-and-attributes.md) |
 | avg | the average of a column, its sum divided by how many values | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
 | backfill | fills a new column for rows that already exist, in small batches | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
 | backup | a copy of your data, kept elsewhere, that you can restore from | [251](./notes/251-backups-a-copy-you-can-restore-from.md) |
