@@ -38,4 +38,4 @@ DuckDB, the database these notes run, answers duplicate key, violates primary ke
 Django, a python web framework, has OneToOneField, which its docs call similar to a unique foreign key. a sometimes-NULL column is often fine, so split when most rows would be empty.
 
 ---
-prev: [255 entities and attributes](./255-entities-and-attributes.md) | next: not written yet
+prev: [255 entities and attributes](./255-entities-and-attributes.md) | next: [257 normal forms, the rules behind splitting tables](./257-normal-forms-the-rules-behind-splitting-tables.md)
