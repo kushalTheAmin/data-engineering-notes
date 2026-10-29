@@ -9,7 +9,7 @@ the shop, the imaginary gujarati snack store these notes run on, takes an order 
 ```text
 -- Postgres
 BEGIN;                                   -- open a group of changes, all or nothing (227, 228)
-INSERT INTO orders VALUES (108, 5, TIMESTAMP '2026-04-10 11:00:00', 'pending');
+INSERT INTO orders VALUES (108, 5, TIMESTAMP '2026-04-10 09:30:00', 'pending');
                                          -- add the order row; column rules checked now (215 to 218)
 INSERT INTO order_items VALUES (108, 1, 2);
                                          -- add 2 dhokla; a product id that doesnt exist is refused by the foreign key (218)
@@ -49,7 +49,7 @@ the next section is about designing the tables these inserts go into.
 ```sql
 CREATE TABLE my_orders AS SELECT * FROM orders;
 CREATE TABLE my_items (order_id INTEGER, product_id INTEGER, quantity INTEGER CHECK (quantity > 0));
-INSERT INTO my_orders VALUES (108, 5, TIMESTAMP '2026-04-10 11:00:00', 'pending');
+INSERT INTO my_orders VALUES (108, 5, TIMESTAMP '2026-04-10 09:30:00', 'pending');
 BEGIN;
 INSERT INTO my_items VALUES (108, 1, 2)
 ```

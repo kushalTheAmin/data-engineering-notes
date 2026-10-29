@@ -10,17 +10,23 @@ assert q("SELECT name FROM products WHERE product_id = 1")[0][0] == 'dhokla'
 assert q("SELECT name FROM products WHERE product_id = 2")[0][0] == 'khandvi'
 assert q("SELECT count(*) FROM orders WHERE order_id = 108")[0][0] == 0
 assert q("SELECT count(*) FROM products WHERE product_id = 99")[0][0] == 0
+# a product id that doesnt exist is refused by the foreign key on order_items
+try:
+    con.execute("INSERT INTO order_items VALUES (101, 99, 1)")
+    assert False
+except Exception as e:
+    assert "foreign key" in str(e).lower(), e
 # check yourself 1: the order insert is outside BEGIN so it stays, the rolled back item does not
 con.execute("CREATE TABLE my_orders AS SELECT * FROM orders")
 con.execute("CREATE TABLE my_items (order_id INTEGER, product_id INTEGER, quantity INTEGER CHECK (quantity > 0))")
-con.execute("INSERT INTO my_orders VALUES (108, 5, TIMESTAMP '2026-04-10 11:00:00', 'pending')")
+con.execute("INSERT INTO my_orders VALUES (108, 5, TIMESTAMP '2026-04-10 09:30:00', 'pending')")
 con.execute("BEGIN")
 con.execute("INSERT INTO my_items VALUES (108, 1, 2)")
 try:
     con.execute("INSERT INTO my_items VALUES (108, 2, 0)")
     assert False
-except Exception:
-    pass
+except Exception as e:
+    assert "CHECK" in str(e), e
 con.execute("ROLLBACK")
 assert q("SELECT count(*) FROM my_orders WHERE order_id = 108")[0][0] == 1
 assert q("SELECT count(*) FROM my_items WHERE order_id = 108")[0][0] == 0
