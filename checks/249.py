@@ -23,7 +23,12 @@ assert (orders[5]["order"], orders[5]["status"], orders[5]["xmin"], orders[5]["x
 assert (orders[6]["order"], orders[6]["status"], orders[6]["xmin"], orders[6]["xmax"]) == (107, "delivered", 738, 0)
 assert (orders[7]["order"], orders[7]["status"], orders[7]["xmin"], orders[7]["xmax"]) == (106, "delivered", 739, 0)
 # check yourself 1: after a rolled back update there are still 2 versions of 106, readers skip the aborted one
-assert 1 + 1 == 2
+rb = [{"order": o, "status": s, "xmin": 738, "xmax": 0} for o, s in q("SELECT order_id, status FROM orders ORDER BY order_id")]
+update(rb, 739, lambda v: v["order"] == 106, {"status": "cancelled"})
+committed = {738}
+seen = [v for v in rb if v["order"] == 106 and v["xmin"] in committed and (v["xmax"] == 0 or v["xmax"] not in committed)]
+assert len([v for v in rb if v["order"] == 106]) == 2
+assert [v["status"] for v in seen] == ["pending"]
 # check yourself 2: updating every order, even to the same value, doubles the versions
 every = [{"order": o, "status": s, "xmin": 1, "xmax": 0} for o, s in q("SELECT order_id, status FROM orders")]
 update(every, 2, lambda v: True, {})
