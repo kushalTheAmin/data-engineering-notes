@@ -36,9 +36,9 @@ slot order status     first  later
 9    108   pending    True   True
 ```
 
-Eshas first snapshot prints as 739:741:739 (xmin, xmax, running ids): everything below 739 is finished, nothing from 741 up is, and 739 is still running. that xmin means lowest running id, not the row stamp from 249. ids are numbered in order but transactions finish in any order, so you cant just say below N. at read committed Esha gets the later snapshot once 739 commits. at [repeatable read](./240-repeatable-read-rows-dont-change-under-you-mid-transaction.md) she keeps the first.
+Eshas first snapshot prints as 739:741:739 (xmin, xmax, running ids): everything below 739 is finished, nothing from 741 up is, and 739 is still running. that xmin means lowest running id, not the row stamp from 249. ids are numbered in order but transactions finish in any order. at read committed Esha gets the later snapshot once 739 commits. at [repeatable read](./240-repeatable-read-rows-dont-change-under-you-mid-transaction.md) she keeps the first.
 
-caveat: finished can mean rolled back, which my code counts as committed.
+caveats: finished can mean rolled back, which my code counts as committed, and it ignores that you always see your own changes.
 
 i assumed a bigger id meant newer, but a snapshot is a list of whos done, not a timeline.
 
