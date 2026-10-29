@@ -1,5 +1,7 @@
 # corrections
 
+264, 2026-10-29: called Postgres the server database where most app data lives, which no page says. the Stack Overflow 2025 survey only shows it is the most used database among developers (55.6%). it now says a popular server database. evidence: https://survey.stackoverflow.co/2025/technology (PostgreSQL 55.6% of all respondents) (checks/264.py)
+
 000, 2026-10-29: gate failed before any change, so no notes were audited: checks/008.py, 011, 026 to 030 fail on fetchone and 041 on an assert, with both duckdb 2.0.0 and 1.4.5. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (8).
 
 263, 2026-10-29: the rule said only show and compare it means text, but the note's own check yourself 2 says loyalty_points is a number because you add and compare it, so compare pointed both ways. it now says only show it or match it exactly means text. the check file also now cites the DuckDB page for INTEGER being 4 bytes (-2^31 to 2^31 - 1) and asserts the top value casts. to stay under the word limit also was cut and made up became fake, nothing true was removed. evidence: https://duckdb.org/docs/2.0/sql/data_types/numeric.html; the text of notes/263 check yourself 2 (checks/263.py)

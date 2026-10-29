@@ -12,3 +12,5 @@ assert 'customer_id' in [r[0] for r in q("SELECT column_name FROM information_sc
 assert 'ordered_at' in [r[0] for r in q("SELECT column_name FROM information_schema.columns WHERE table_name = 'orders'")]
 # source: https://www.postgresql.org/docs/current/sql-syntax-lexical.html
 # confirmed: unquoted names are folded to lower case in PostgreSQL, quoting makes an identifier case-sensitive so "Foo" differs from foo
+# source: https://survey.stackoverflow.co/2025/technology
+# confirmed: PostgreSQL is the most used database among all survey respondents, 55.6 percent (chart data), so popular is supported and most app data is not

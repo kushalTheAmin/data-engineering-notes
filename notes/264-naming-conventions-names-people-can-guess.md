@@ -25,7 +25,7 @@ Bhavin | 555-0102
 Disha | 555-0104
 ```
 
-the [ON line](./157-on-how-a-join-decides-which-rows-match.md) wrote itself. a space in a name forces quotes, and Postgres, the server database where most app data lives, turns unquoted names into lowercase, so a column created as "OrderDate" breaks every query that forgets the quotes.
+the [ON line](./157-on-how-a-join-decides-which-rows-match.md) wrote itself. a space in a name forces quotes, and Postgres, a popular server database, turns unquoted names into lowercase, so a column created as "OrderDate" breaks every query that forgets the quotes.
 
 i figured naming was taste, but a name is a promise about what you will find, so keeping it saves everyone a trip to the schema. the next one is about two columns almost every table should carry.
 
