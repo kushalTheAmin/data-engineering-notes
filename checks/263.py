@@ -27,3 +27,6 @@ assert str(int('007')) == '7'
 # source: https://duckdb.org/docs/2.0/sql/data_types/numeric.html
 # confirmed: INTEGER (INT4, INT32) takes 4 bytes and ranges from -2^31 to 2^31 - 1
 assert q("SELECT CAST('2147483647' AS INTEGER)") == [(2147483647,)]
+# ids are matched exactly and never added, yet the shop stores them as INTEGER, so the text rule needs digits that must stay as typed
+assert q("SELECT data_type FROM information_schema.columns WHERE table_name = 'orders' AND column_name = 'order_id'") == [('INTEGER',)]
+assert q("SELECT data_type FROM information_schema.columns WHERE table_name = 'customer_contacts' AND column_name = 'phone'") == [('VARCHAR',)]
