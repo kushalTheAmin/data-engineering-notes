@@ -115,6 +115,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | field | one fact every row has a spot for, like city | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | file | a name plus a list of bytes in order, kept on disk | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
 | file extension | the letters after the dot in a name, just a label | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
+| first normal form | every cell holds exactly one value, never a list | [259](./notes/259-first-normal-form-one-value-per-cell.md) |
 | flattening | turning inner names into columns, like address_city, one per name | [070](./notes/070-flattening-nested-objects-into-columns.md) |
 | float | binary digits plus a count of how far to slide the point | [019](./notes/019-floating-point.md) |
 | flush | force waiting data onto disk before moving on | [232](./notes/232-durability-surviving-a-crash.md) |

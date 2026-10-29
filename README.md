@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 258
+notes so far: 259
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -292,3 +292,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [256 one to one, when two tables share a key](./notes/256-one-to-one-when-two-tables-share-a-key.md): why build a second table with at most one row per customer, and what stops it from becoming two
 - [257 normal forms, the rules behind splitting tables](./notes/257-normal-forms-the-rules-behind-splitting-tables.md): people say a table is in third normal form like its a grade, so what are they grading
 - [258 functional dependency, when one column decides another](./notes/258-functional-dependency-when-one-column-decides-another.md): i kept saying a column is about the key, so can a loop check what about means
+- [259 first normal form, one value per cell](./notes/259-first-normal-form-one-value-per-cell.md): what stops someone saving the tag savory twice in one cell

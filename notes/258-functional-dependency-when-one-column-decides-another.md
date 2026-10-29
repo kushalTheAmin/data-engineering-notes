@@ -68,4 +68,4 @@ only id. Asha now maps to Jersey City and Hoboken. the tempting answer is that b
 </details>
 
 ---
-prev: [257 normal forms, the rules behind splitting tables](./257-normal-forms-the-rules-behind-splitting-tables.md) | next: not written yet
+prev: [257 normal forms, the rules behind splitting tables](./257-normal-forms-the-rules-behind-splitting-tables.md) | next: [259 first normal form, one value per cell](./259-first-normal-form-one-value-per-cell.md)
