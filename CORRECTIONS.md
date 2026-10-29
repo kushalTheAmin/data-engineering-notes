@@ -1,5 +1,7 @@
 # corrections
 
+265, 2026-10-29: said the usual way to keep updated_at current in Postgres is a trigger, which no page says. the Postgres docs only say a trigger makes the database automatically run a function on INSERT, UPDATE or DELETE. it now says a trigger can do it. evidence: https://www.postgresql.org/docs/current/trigger-definition.html (checks/265.py)
+
 263, 2026-10-29: the rule said only show it or match it exactly means text, which would make order_id and customer_id text too, yet the shop stores them as INTEGER (they are matched exactly in every join). it now says text when you only show or match it and every digit must stay as typed, and the sniff test says a nonsense average means the column may not be a number. the earlier fix to this sentence fixed compare but left ids contradicting it. to stay under the word limit the line casting back gives 102, not 0102 was cut, the same point is made one sentence before. evidence: data/shop.sql (orders.order_id INTEGER, customer_contacts.phone VARCHAR) (checks/263.py)
 
 264, 2026-10-29: said the foreign key is customer_id in every table, but in customers that column is the primary key, not a foreign key. it now says the foreign key is customer_id in every table that points at customers. evidence: data/shop.sql (customers.customer_id INTEGER PRIMARY KEY; orders and customer_contacts reference it) (checks/264.py)
