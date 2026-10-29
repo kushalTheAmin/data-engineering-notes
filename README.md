@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 256
+notes so far: 257
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -290,3 +290,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [254 modeling, deciding the tables before writing them](./notes/254-modeling-deciding-the-tables-before-writing-them.md): somebody had to decide the tables before the first CREATE TABLE, so how do you even start
 - [255 entities and attributes](./notes/255-entities-and-attributes.md): customers has a city column but orders points at a customer with an id, so why is one a table and the other a column
 - [256 one to one, when two tables share a key](./notes/256-one-to-one-when-two-tables-share-a-key.md): why build a second table with at most one row per customer, and what stops it from becoming two
+- [257 normal forms, the rules behind splitting tables](./notes/257-normal-forms-the-rules-behind-splitting-tables.md): people say a table is in third normal form like its a grade, so what are they grading
