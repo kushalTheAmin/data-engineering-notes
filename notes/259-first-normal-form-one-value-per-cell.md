@@ -55,4 +55,4 @@ product_id alone allows one row per product, so a product could hold only one ta
 </details>
 
 ---
-prev: [258 functional dependency, when one column decides another](./258-functional-dependency-when-one-column-decides-another.md) | next: not written yet
+prev: [258 functional dependency, when one column decides another](./258-functional-dependency-when-one-column-decides-another.md) | next: [260 second normal form, nothing about half the key](./260-second-normal-form-nothing-about-half-the-key.md)
