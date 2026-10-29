@@ -24,7 +24,7 @@ Disha | 555-0104
 Esha | NULL
 ```
 
-a [left join](./159-left-join-keep-every-row-from-the-left-table.md) (keep every left row, fill gaps) gives 5 rows for 5 customers. Chirag and Esha shared no number, so the join fills in [NULL](./031-null.md) (no value). joining customers to orders instead gives 8 rows, Asha repeats 3 times. a one to one join cant multiply rows.
+a [left join](./159-left-join-keep-every-row-from-the-left-table.md) (keep every left row, fill gaps) gives 5 rows for 5 customers. Chirag and Esha shared no number, so the join fills in [NULL](./031-null.md) (no value). left joining customers to orders instead gives 8 rows, Asha repeats 3 times. a one to one join cant multiply rows.
 
 what stops it is the key being unique. orders.customer_id isnt, so Asha gets a pile there.
 

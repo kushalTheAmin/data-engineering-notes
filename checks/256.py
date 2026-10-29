@@ -11,6 +11,8 @@ assert q("SELECT count(*) FROM customers WHERE customer_id NOT IN (SELECT custom
 # joining customers to orders gives 8 rows, Asha repeats 3 times
 assert q("SELECT count(*) FROM customers c LEFT JOIN orders o ON o.customer_id = c.customer_id") == [(8,)]
 assert q("SELECT count(*) FROM orders WHERE customer_id = 1") == [(3,)]
+# an inner join gives only 7 rows, so the 8 needs the left join (7 orders plus Esha with none)
+assert q("SELECT count(*) FROM customers c JOIN orders o ON o.customer_id = c.customer_id") == [(7,)]
 # a second row for Asha is refused by the primary key
 try:
     con.execute("INSERT INTO customer_contacts VALUES (1, '555-0199')")
