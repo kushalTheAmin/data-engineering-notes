@@ -15,3 +15,5 @@ assert q("SELECT count(*) FROM (SELECT product_id FROM products GROUP BY product
 assert q("SELECT order_id FROM order_items WHERE product_id = 4 ORDER BY 1") == [(102,), (105,)]
 # order 105 has 3 lines
 assert q("SELECT count(*) FROM order_items WHERE order_id = 105") == [(3,)]
+# source: https://en.wikipedia.org/wiki/Database_normalization
+# confirmed: second normal form, non-key attributes must depend on the "whole candidate key, not just part of it", violations involve a composite key
