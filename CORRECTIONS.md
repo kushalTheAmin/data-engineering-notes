@@ -1,5 +1,7 @@
 # corrections
 
+000, 2026-10-29: gate failed before any change, so no notes were audited: with duckdb 2.0.0 (pip default) and 1.4.4 checks/008.py, 011, 026 to 030 fail on fetchone and 041 on an assert, and mermaid-cli produced no svg. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (8).
+
 253, 2026-10-29: note text unchanged. two claims had no page behind them in checks/253.py: that the server tells Esha done only after the log is flushed to disk by default, and that a second FOR UPDATE rechecks the WHERE on the row as the first saved it. the check now cites both Postgres pages. evidence: https://www.postgresql.org/docs/current/runtime-config-wal.html (synchronous_commit: on (the default), waits for local flush of WAL); https://www.postgresql.org/docs/16/transaction-iso.html (WHERE clause re-evaluated, SELECT FOR UPDATE returns the updated version) (checks/253.py)
 
 250, 2026-10-29: said a row version is visible if its creator had committed and its ender had not, which reads as true for every transaction. a transaction also sees its own uncommitted changes (249 shows Asha reading slot 8 while 739 is open), and the code skips that. the caveat now says so. to stay under the word limit the clause so you cant just say below N was cut, nothing true was removed. evidence: https://www.postgresql.org/docs/16/transaction-iso.html ("SELECT does see the effects of previous updates executed within its own transaction, even though they are not yet committed") (checks/250.py)
