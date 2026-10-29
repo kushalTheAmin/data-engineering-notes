@@ -37,3 +37,4 @@ assert len(every) == 14 and len([v for v in every if v["xmax"] == 0]) == 7
 #   confirmed (opened this run): VACUUM removes dead row versions in tables and indexes
 # tested this run on a local PostgreSQL 16 with pageinspect: slots 6, 7, 8 and the stamps 738/739 in the note, Eshas SELECT during the open update returned slot (0,6) pending xmin 738 xmax 739, after COMMIT slot (0,8) delivered; a rolled back update left 8 versions and a SELECT read pending; UPDATE orders SET status = status left count(*) at 7 and 14 versions
 #   also confirmed on that page: the autovacuum daemon runs VACUUM automatically (opened this run)
+# audit: xmax is zero only for a row version nobody has tried to delete or replace; the same page says it can be nonzero in a visible row version when the deleting transaction hasnt committed yet or rolled back (opened this run), as slot 6 is for Esha in the note

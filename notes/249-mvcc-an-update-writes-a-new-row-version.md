@@ -4,7 +4,7 @@ section: changing data safely, part 42, ~2 min read
 
 Asha is mid UPDATE (a command that changes a row) on order 106 and hasnt committed yet. Esha reads 106 and gets an answer with no waiting, as [242](./242-row-locks-and-table-locks.md) showed. what is she reading, if the row is being changed?
 
-the answer is MVCC, multi version concurrency control: Postgres (a database that runs as its own server) never overwrites a row. an UPDATE writes a new copy, a row version, and stamps the old one as ended. every version carries two stamps: xmin, the id of the [transaction](./227-transactions-all-or-nothing.md) (a group of changes that all happen or none do) that created it, and xmax, the one that ended it, 0 while it is current.
+the answer is MVCC, multi version concurrency control: Postgres (a database that runs as its own server) never overwrites a row. an UPDATE writes a new copy, a row version, and stamps the old one as ended. every version carries two stamps: xmin, the id of the [transaction](./227-transactions-all-or-nothing.md) (a group of changes that all happen or none do) that created it, and xmax, the one that ended it, 0 if none has.
 
 the shop, the imaginary snack store these notes run on: Ashas transaction 739 updates order 106 to delivered. afterwards, a slice from my own run (slot is the copys position in storage):
 

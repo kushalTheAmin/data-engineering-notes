@@ -1,5 +1,7 @@
 # corrections
 
+249, 2026-10-29: said xmax is 0 while a row version is current, but the note's own table shows slot 6 with xmax 739 still current for Esha until 739 commits (and after a rollback it stays stamped). it now says xmax is 0 if no transaction has tried to end the version. evidence: https://www.postgresql.org/docs/16/ddl-system-columns.html ("It is possible for this column to be nonzero in a visible row version")
+
 248, 2026-10-28: the swap left the trigger from 247 in place, but after the renames it points at order_id_big, which no longer exists, so every insert and update on orders failed. the block now also replaces the trigger function so it copies order_id into order_id_old, which still holds the primary key and cannot be empty, and the text says so. evidence: python, local Postgres 16 ran the old swap then INSERT and UPDATE both gave record "new" has no field "order_id_big"; with the function replaced in the same transaction both worked (checks/248.py)
 
 247, 2026-10-28: the last line said to drop the trigger once nothing reads the old column, which hid that the trigger breaks as soon as the columns are renamed, a step before that. it now says it runs on every write and breaks once the columns are renamed, and points to 248. this undoes the wording from the earlier 247 audit, which was still wrong about when the trigger has to change. evidence: local Postgres 16, after the renames in 248 every INSERT and UPDATE failed with record "new" has no field "order_id_big" (checks/247.py)
