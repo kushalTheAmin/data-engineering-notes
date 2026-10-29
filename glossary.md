@@ -297,9 +297,11 @@ every term these notes have built, in plain words, with the note that built it. 
 | safe write | write a whole new file beside the old, then rename it over | [046](./notes/046-writing-safely.md) |
 | scalar subquery | a subquery returning one row and one column, used as a value | [176](./notes/176-scalar-subqueries-one-value-inside-a-query.md) |
 | scale | how many of a decimals digits sit after the point | [022](./notes/022-exact-decimal-types.md) |
+| schema (database) | a named folder of tables inside a database, written schema.table | [267](./notes/267-schemas-as-namespaces-folders-for-tables.md) |
 | schema (file) | a written agreement on which fields every record must have | [075](./notes/075-schema.md) |
 | schema on read | storing anything as it arrives, checking shape only when used | [083](./notes/083-schema-on-write-vs-schema-on-read.md) |
 | schema on write | checking shape as data goes in, rejecting what doesnt fit | [083](./notes/083-schema-on-write-vs-schema-on-read.md) |
+| search path | the folders Postgres checks in order to find a bare table name | [267](./notes/267-schemas-as-namespaces-folders-for-tables.md) |
 | second normal form | every column depends on the whole key, not half of it | [260](./notes/260-second-normal-form-nothing-about-half-the-key.md) |
 | SELECT | the clause naming which columns to keep, in the order written | [104](./notes/104-select-and-from-picking-columns.md) |
 | SELECT FOR UPDATE | a read that also locks the rows it returns until commit | [243](./notes/243-select-for-update-locking-on-purpose.md) |

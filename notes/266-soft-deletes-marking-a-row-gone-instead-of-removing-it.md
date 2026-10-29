@@ -61,4 +61,4 @@ after the hard delete it works, the old row is gone. after the soft delete it is
 </details>
 
 ---
-prev: [265 created_at and updated_at, two timestamps every table carries](./265-created-at-and-updated-at-two-timestamps-every-table-carries.md) | next: not written yet
+prev: [265 created_at and updated_at, two timestamps every table carries](./265-created-at-and-updated-at-two-timestamps-every-table-carries.md) | next: [267 schemas as namespaces, folders for tables](./267-schemas-as-namespaces-folders-for-tables.md)
