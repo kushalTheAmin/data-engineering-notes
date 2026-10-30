@@ -32,3 +32,5 @@ assert 7_000_000 * 1 == 7_000_000
 assert len([1, 2, 3, 4]) == 4
 # source: https://www.postgresql.org/docs/current/indexes-intro.html
 # confirmed: "With no advance preparation, the system would have to scan the entire test1 table, row by row, to find all matching entries."
+# source: https://en.wikipedia.org/wiki/Time_complexity
+# confirmed: "one commonly considers the worst-case time complexity, which is the maximum amount of time required for inputs of a given size"
