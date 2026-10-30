@@ -373,7 +373,8 @@ after this arc: you can design the tables for a new feature and defend every cho
 after this arc: you know the handful of ideas every database, index and big data tool is built on
 
 - [x] big O in plain words: how work grows as data grows ★ (note 269)
-- [ ] the shapes of growth: flat, straight line, curving up ★
+- [ ] flat and straight line: the two shapes of growth ★
+- [ ] curving up: when 10 times the data means 100 times the steps ★
 - [ ] a loop inside a loop: why some code gets slow so fast ★
 - [ ] binary search: finding one item in sorted data by halving ★
 - [ ] sorting: how merge sort splits and merges ★
