@@ -1,5 +1,7 @@
 # corrections
 
+263, 2026-10-30: note text unchanged. the claim that right(phone, 4) keeps the last 4 characters had no page behind it in checks/263.py. the check now cites the DuckDB text functions page. evidence: https://duckdb.org/docs/2.0/sql/functions/text.html (right: extract the right-most count characters) (checks/263.py)
+
 264, 2026-10-30: note text unchanged. the claim that a space in a name forces quotes had no quote behind it in checks/264.py. evidence: https://www.postgresql.org/docs/current/sql-syntax-lexical.html (quoted identifiers allow names such as ones containing spaces or ampersands) (checks/264.py)
 
 glossary, 2026-10-30: the Postgres entry said a database server where most app data lives, which no page says (the Stack Overflow 2025 survey only shows it is the most used database among developers, 55.6%). it now says a popular database server. evidence: https://survey.stackoverflow.co/2025/technology (PostgreSQL 55.6% of all respondents, opened this run); same wrong claim 264 already fixed. the title of 211 carries it too but headers stay as they are

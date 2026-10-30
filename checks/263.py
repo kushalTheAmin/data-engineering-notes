@@ -30,3 +30,5 @@ assert q("SELECT CAST('2147483647' AS INTEGER)") == [(2147483647,)]
 # ids are matched exactly and never added, yet the shop stores them as INTEGER, so the text rule needs digits that must stay as typed
 assert q("SELECT data_type FROM information_schema.columns WHERE table_name = 'orders' AND column_name = 'order_id'") == [('INTEGER',)]
 assert q("SELECT data_type FROM information_schema.columns WHERE table_name = 'customer_contacts' AND column_name = 'phone'") == [('VARCHAR',)]
+# source: https://duckdb.org/docs/2.0/sql/functions/text.html
+# confirmed: right(string, count) extracts the right-most count characters
