@@ -1,5 +1,7 @@
 # corrections
 
+000, 2026-10-30: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and now 268 on an assert (268 line 52 expects across different schemas in the error text). same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
+
 269, 2026-10-30: said a database with nothing to help it does this loop, never stopping early, which reads as always true, yet the Postgres page says the scan is needed to find all matching entries, and a lookup for one id can stop at the first match like find does. it now says when it wants every match it never stops early. the check also cites the Stack Overflow survey for popular. evidence: https://www.postgresql.org/docs/current/indexes-intro.html (scan the entire test1 table, row by row, to find all matching entries, opened this run) (checks/269.py)
 
 272, 2026-10-30: the join sentence was broken (a database can run a join is exactly this) and read as if every join is the nested loop, yet the Postgres page lists three join strategies: nested loop, merge and hash. it now says a database can run a join this way, and Postgres calls it a nested loop join, one of three join methods it has. evidence: https://www.postgresql.org/docs/current/planner-optimizer.html (nested loop join, merge join and hash join all listed, opened this run) (checks/272.py)
