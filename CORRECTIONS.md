@@ -1,5 +1,7 @@
 # corrections
 
+264, 2026-10-30: note text unchanged. the claim that a space in a name forces quotes had no quote behind it in checks/264.py. evidence: https://www.postgresql.org/docs/current/sql-syntax-lexical.html (quoted identifiers allow names such as ones containing spaces or ampersands) (checks/264.py)
+
 glossary, 2026-10-30: the Postgres entry said a database server where most app data lives, which no page says (the Stack Overflow 2025 survey only shows it is the most used database among developers, 55.6%). it now says a popular database server. evidence: https://survey.stackoverflow.co/2025/technology (PostgreSQL 55.6% of all respondents, opened this run); same wrong claim 264 already fixed. the title of 211 carries it too but headers stay as they are
 
 265, 2026-10-30: named MySQL and Postgres with no hint what they are, so a reader landing here cold could not tell. it now says other databases can do it, so both read as databases. evidence: the text of notes/265 (neither name was glossed there; 264 glosses Postgres only for its own readers)

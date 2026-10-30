@@ -18,3 +18,4 @@ assert 'ordered_at' in [r[0] for r in q("SELECT column_name FROM information_sch
 assert q("SELECT constraint_column_names FROM duckdb_constraints() WHERE table_name = 'customers' AND constraint_type = 'PRIMARY KEY'") == [(['customer_id'],)]
 fk = {r[0] for r in q("SELECT table_name FROM duckdb_constraints() WHERE constraint_type = 'FOREIGN KEY' AND constraint_column_names = ['customer_id']")}
 assert {'customer_contacts', 'orders'} <= fk and 'customers' not in fk
+# confirmed on the same lexical page: quoted identifiers can hold characters such as spaces that would otherwise not be possible in a name
