@@ -56,6 +56,7 @@ log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept faile
 2026-10-29: repo baseline failed checks/008.py and 7 more: python3 is 3.11 and pip gives duckdb 2.0.0, which breaks 8 checks on fetchone (041 also asserts); no note written, needs a fix outside this run
 2026-10-29: repo baseline failed checks/127.py, 201.py, 202.py: date_trunc type asserts on duckdb 1.4.5 (python3 is 3.11, plain pip gives duckdb 2.0.0 which breaks 8 checks on fetchone); no note written, needs a fix outside this run
 2026-10-30: repo baseline failed checks/011.py and 7 more: pip gives duckdb 2.0.0 for python 3.11 (fetchone on relations removed, 041 asserts); no note written, needs a fix outside this run
+2026-10-30: repo baseline failed checks/008.py and 7 more: pip gives duckdb 2.0.0 for python 3.11 again (fetchone on relations removed, 041 asserts); no note written, needs a fix outside this run
 
 ## arc 1: data at the atom level
 after this arc: you know what a computer actually stores when it "saves" an order
