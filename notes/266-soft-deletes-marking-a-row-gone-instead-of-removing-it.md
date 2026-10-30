@@ -17,7 +17,7 @@ UPDATE customer_accounts SET deleted_at = TIMESTAMP '2026-04-10 09:00:00', updat
 | copy job, updated_at after 2026-04-10 00:00:00 | finds nothing | finds Disha |
 | when she left | gone | deleted_at says 09:00 |
 
-the hard delete column is what the table would show after the DELETE. with the soft one the row stays, so the copy job sees an ordinary change, as long as the UPDATE sets updated_at too like in 265. the price is that every query now has to remember the extra test:
+the hard delete column is what the table would show after the DELETE. with the soft one the row stays, so the copy job sees an ordinary change, as long as the UPDATE sets updated_at too like in 265. the price is that every query now has to remember the extra test. this one counts rows twice and stacks the two results with UNION ALL:
 
 ```sql
 SELECT 'no filter' AS query, count(*) AS accounts FROM customer_accounts

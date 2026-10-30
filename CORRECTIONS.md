@@ -1,5 +1,7 @@
 # corrections
 
+266, 2026-10-30: the query under the table uses UNION ALL, which this note never explained and does not build on, so a reader landing here cold could not follow it. one clause now says it counts rows twice and stacks the two results with UNION ALL. nothing else changed. evidence: the text of notes/266 (builds on has no 182, the note only glosses NULL, hard delete and UNIQUE)
+
 265, 2026-10-30: said the database wont move updated_at and that nothing moves it unless somebody writes to it, which reads as always true, yet the next paragraph (and the MySQL docs) show ON UPDATE CURRENT_TIMESTAMP and triggers move it with no one writing it per UPDATE. it now says by default for both. to stay under the word limit two words were trimmed, nothing true was removed. evidence: https://dev.mysql.com/doc/refman/8.0/en/timestamp-initialization.html ("automatically updated to the current timestamp when the value of any other column in the row is changed", opened this run); the text of notes/265
 
 266, 2026-10-30: said Disha is in a slice of customer_accounts, but that table is only those 4 accounts (the table shows 4 rows with no filter), so nothing is sliced. it now says customer_accounts, which holds 4 accounts. evidence: python, select count(*) from customer_accounts gives 4 (checks/266.py, data/shop.sql); same slip 265 had
