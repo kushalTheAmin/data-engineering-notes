@@ -1,5 +1,7 @@
 # corrections
 
+000, 2026-10-30: gate failed before any change, so no notes were audited: checks/008.py, 011, 026 to 030 fail on fetchone, 041 and 268 on an assert, with duckdb 2.0.0 and 1.5.6. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
+
 000, 2026-10-30: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and now 268 on an assert (268 line 52 expects across different schemas in the error text). same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
 
 269, 2026-10-30: said a database with nothing to help it does this loop, never stopping early, which reads as always true, yet the Postgres page says the scan is needed to find all matching entries, and a lookup for one id can stop at the first match like find does. it now says when it wants every match it never stops early. the check also cites the Stack Overflow survey for popular. evidence: https://www.postgresql.org/docs/current/indexes-intro.html (scan the entire test1 table, row by row, to find all matching entries, opened this run) (checks/269.py)
