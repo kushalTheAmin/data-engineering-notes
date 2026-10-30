@@ -52,3 +52,4 @@ except Exception as e:
     assert "across different schemas" in str(e)
 # the last 14 notes of the section are 254 to 267
 assert len(range(254, 268)) == 14
+# the shop notes 103, 104 and 112 call fafda a crunchy chickpea flour snack, so 268 uses the same name (gram flour is the same flour, but unglossed)
