@@ -38,3 +38,5 @@ assert 700 * 2 ** 3 == 5600 and 700 * 3 == 2100
 # confirmed: "This makes indexing a list a[i] an operation whose cost is independent of the size of the list or the value of the index."
 # source: https://www.postgresql.org/docs/current/indexes-intro.html
 # confirmed: without an index "the system would have to scan the entire test1 table, row by row"; with one "it might only have to walk a few levels deep into a search tree"
+# source: https://survey.stackoverflow.co/2025/technology
+# confirmed: PostgreSQL is the most used database among all survey respondents, 55.6%, so popular is supported

@@ -6,7 +6,7 @@ the shop wants a page showing its newest order, and there are two ways to write 
 
 [269](./269-big-o-in-plain-words-how-work-grows-as-data-grows.md) counted steps, one per id looked at. when the data gets 10 times bigger, the steps either stay the same (flat) or grow 10 times too (straight line).
 
-the shop, the imaginary gujarati snack store these notes run on, has orders 101 to 107. a table is a list of rows ([079](./079-a-table-rows-are-records-columns-are-fields.md)), so the longer lists below are pretend ones. the newest id is the last one.
+the shop, the imaginary gujarati snack store these notes run on, has orders 101 to 107. a table is a list of rows ([079](./079-a-table-rows-are-records-columns-are-fields.md)), so the longer lists are pretend. the newest id is the last one.
 
 ```python
 def find(order_ids, wanted):
@@ -32,11 +32,11 @@ for n in [7, 70, 700, 7000]:
 
 the hunt column is the loop from 269, so it grows with the data, a straight line. the jump column never moves. a python list is a row of numbered slots, so order_ids[-1] goes straight to the last one. the python docs say that costs the same at any size.
 
-the gotcha: no loop in the line doesnt mean flat. 104 in order_ids is one short line, but it walks the list looking, a straight line in disguise.
+the gotcha: no loop in the line doesnt mean flat. 104 in order_ids is one short line, but a missing id makes it walk the whole list, a straight line in disguise.
 
 this is why databases bother with indexes, lookup shortcuts. the docs of Postgres, a popular database, say that with one it might walk only a few levels of a search tree, instead of scanning every row.
 
-i expected the flat shape to need some clever trick, but it is just knowing where to jump.
+i expected the flat shape to need a clever trick, but it is just knowing where to jump.
 
 the next one is the shape that looks harmless at 7 rows and isnt.
 
