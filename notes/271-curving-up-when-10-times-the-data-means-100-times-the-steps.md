@@ -33,9 +33,9 @@ read the last column. 7 to 70 is 10 times the orders, 49 to 4900 is 100 times th
 
 every id meets every id, so n orders cost n times n. skipping repeat pairs halves it, still about 100 times.
 
-the gotcha is that you never have to write the second loop. if oid in seen, with seen a list of ids so far, inside a for loop is the same shape, because in walks the list one id at a time, the hidden loop from 270.
+the gotcha is that you never have to write the second loop. if oid in seen, with seen a list of ids so far, inside a for loop is the same shape, because in walks the list one id at a time.
 
-it can show up in joins ([155](./155-why-joins-the-answer-lives-in-more-than-one-table.md), matching rows of two tables). Postgres, a popular database, says in its docs that a nested loop join scans the right table once per left row, which can be very slow.
+it can show up in joins ([155](./155-why-joins-the-answer-lives-in-more-than-one-table.md), matching rows of two tables). Postgres, a popular database, says in its docs that a nested loop join scans the right table once per left row, which can be very slow unless an index (a lookup shortcut) helps.
 
 i assumed slow code was just more of the same, but 49 looks turning into 490000 feels like a different program.
 

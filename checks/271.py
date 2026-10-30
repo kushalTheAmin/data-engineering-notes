@@ -37,3 +37,4 @@ for oid in range(101, 101 + 7000):
 assert steps == sum(range(7000)) == 24496500
 # source: https://www.postgresql.org/docs/current/planner-optimizer.html
 # confirmed: nested loop join "The right relation is scanned once for every row found in the left relation. This strategy is easy to implement but can be very time consuming."
+# also: "(However, if the right relation can be scanned with an index scan, this can be a good strategy.)" so the note adds unless an index helps

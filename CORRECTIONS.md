@@ -1,5 +1,7 @@
 # corrections
 
+271, 2026-10-30: said a nested loop join scans the right table once per left row, which can be very slow, which reads as always true, yet the same Postgres page adds that with an index scan on the right table it can be a good strategy. it now says very slow unless an index (a lookup shortcut) helps. evidence: https://www.postgresql.org/docs/current/planner-optimizer.html ("However, if the right relation can be scanned with an index scan, this can be a good strategy", opened this run) (checks/271.py). to stay under the word limit the clause the hidden loop from 270 was cut, nothing true was removed
+
 270, 2026-10-30: the gotcha said 104 in order_ids walks the list looking, a straight line in disguise, which reads as always true, yet 269 check yourself 1 shows find for 104 takes 4 steps at any size because 104 sits near the front. it now says a missing id makes it walk the whole list. to stay under the word limit three words were trimmed, nothing true was removed. the check also cites the Stack Overflow survey for Postgres being popular. evidence: python, find(list(range(101, 108)), 104) and find(list(range(101, 7001)), 104) both give 4 (checks/269.py); https://survey.stackoverflow.co/2025/technology (PostgreSQL 55.6%, opened this run)
 
 266, 2026-10-30: note text unchanged. the claim that = NULL never matches was neither asserted nor sourced in checks/266.py. the check now asserts it. evidence: python, select count(*) from customer_accounts where deleted_at = NULL gives 0 (checks/266.py)
