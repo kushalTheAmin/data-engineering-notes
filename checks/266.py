@@ -37,3 +37,6 @@ hard.execute("INSERT INTO customer_accounts VALUES (5, 'disha@example.com', TIME
 assert q(hard, "SELECT count(*) FROM customer_accounts") == [(4,)]
 # hard delete is blocked by foreign keys: Disha has order 105, so her customers row cannot be deleted
 assert q(con, "SELECT count(*) FROM orders WHERE customer_id = 4") == [(1,)]
+
+# the whole customer_accounts table is 4 accounts, not a slice of a bigger one (data/shop.sql)
+assert q(con, "SELECT count(*) FROM customer_accounts") == [(4,)]

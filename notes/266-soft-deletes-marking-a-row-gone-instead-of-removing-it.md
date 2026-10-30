@@ -4,7 +4,7 @@ section: designing tables, part 13, ~2 min read
 
 Disha closes her account at the shop, the imaginary gujarati snack store these notes run on. if you DELETE her row, how does the nightly copy job from [265](./265-created-at-and-updated-at-two-timestamps-every-table-carries.md) (it copies rows changed since its last run) ever hear about it? it asks for rows with a new updated_at, and a row that is gone has no updated_at.
 
-a soft delete skips the [DELETE](./223-delete-removing-rows-and-what-still-points-at-them.md). the table gets a deleted_at column that stays NULL (empty) while the account is live, and leaving means an [UPDATE](./222-update-changing-rows-and-why-the-where-matters.md) that fills it in. the real DELETE is the hard delete, the row physically removed. here is Disha both ways, in a slice of customer_accounts:
+a soft delete skips the [DELETE](./223-delete-removing-rows-and-what-still-points-at-them.md). the table gets a deleted_at column that stays NULL (empty) while the account is live, and leaving means an [UPDATE](./222-update-changing-rows-and-why-the-where-matters.md) that fills it in. the real DELETE is the hard delete, the row physically removed. here is Disha both ways, in customer_accounts, which holds 4 accounts:
 
 ```text
 DELETE FROM customer_accounts WHERE customer_id = 4

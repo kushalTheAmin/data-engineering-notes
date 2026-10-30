@@ -1,5 +1,7 @@
 # corrections
 
+266, 2026-10-30: said Disha is in a slice of customer_accounts, but that table is only those 4 accounts (the table shows 4 rows with no filter), so nothing is sliced. it now says customer_accounts, which holds 4 accounts. evidence: python, select count(*) from customer_accounts gives 4 (checks/266.py, data/shop.sql); same slip 265 had
+
 263, 2026-10-30: note text unchanged. the claim that right(phone, 4) keeps the last 4 characters had no page behind it in checks/263.py. the check now cites the DuckDB text functions page. evidence: https://duckdb.org/docs/2.0/sql/functions/text.html (right: extract the right-most count characters) (checks/263.py)
 
 264, 2026-10-30: note text unchanged. the claim that a space in a name forces quotes had no quote behind it in checks/264.py. evidence: https://www.postgresql.org/docs/current/sql-syntax-lexical.html (quoted identifiers allow names such as ones containing spaces or ampersands) (checks/264.py)
