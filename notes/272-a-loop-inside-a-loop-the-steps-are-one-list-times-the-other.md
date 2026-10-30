@@ -57,4 +57,4 @@ you can dodge the inner loop on sorted data, and the next one shows how.
 </details>
 
 ---
-prev: [271 curving up, when 10 times the data means 100 times the steps](./271-curving-up-when-10-times-the-data-means-100-times-the-steps.md) | next: not written yet
+prev: [271 curving up, when 10 times the data means 100 times the steps](./271-curving-up-when-10-times-the-data-means-100-times-the-steps.md) | next: [273 binary search, finding one item in sorted data by halving](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md)

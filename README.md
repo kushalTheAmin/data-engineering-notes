@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 272
+notes so far: 273
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -309,3 +309,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [270 flat and straight line, the two shapes of growth](./notes/270-flat-and-straight-line-the-two-shapes-of-growth.md): the newest order page looks the same at 7 orders and acts very different at 7000
 - [271 curving up, when 10 times the data means 100 times the steps](./notes/271-curving-up-when-10-times-the-data-means-100-times-the-steps.md): comparing every order with every order is 49 looks at 7 orders and 490000 at 700
 - [272 a loop inside a loop, the steps are one list times the other](./notes/272-a-loop-inside-a-loop-the-steps-are-one-list-times-the-other.md): two loops, one inside the other, is 42 steps against 6 products and 49 against orders
+- [273 binary search, finding one item in sorted data by halving](./notes/273-binary-search-finding-one-item-in-sorted-data-by-halving.md): the hunt for the last order took 7 looks, and 7000 at 7000 orders, what if you skipped most of them
