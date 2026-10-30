@@ -1,5 +1,7 @@
 # corrections
 
+glossary, 2026-10-30: the Postgres entry said a database server where most app data lives, which no page says (the Stack Overflow 2025 survey only shows it is the most used database among developers, 55.6%). it now says a popular database server. evidence: https://survey.stackoverflow.co/2025/technology (PostgreSQL 55.6% of all respondents, opened this run); same wrong claim 264 already fixed. the title of 211 carries it too but headers stay as they are
+
 265, 2026-10-30: named MySQL and Postgres with no hint what they are, so a reader landing here cold could not tell. it now says other databases can do it, so both read as databases. evidence: the text of notes/265 (neither name was glossed there; 264 glosses Postgres only for its own readers)
 
 267, 2026-10-30: said DuckDB tries the current folder and then main when a bare table name is not found, which no DuckDB page says (the USE page only says main is used implicitly for USE memory, the configuration page only lists schema as defaulting to main). it works in 1.5.6 but is unsourced, so the clause is removed. evidence: https://duckdb.org/docs/2.0/sql/statements/use.html and https://duckdb.org/docs/2.0/configuration/overview.html have no fallback line. checks/267.py also now cites the Postgres command list for Postgres having no USE (https://www.postgresql.org/docs/current/sql-commands.html)

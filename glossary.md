@@ -256,7 +256,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | port | a number picking which program on a machine gets the bytes | [085](./notes/085-addresses-and-ports.md) |
 | port mapping | the -p flag: laptop port forwards to a port inside the container | [210](./notes/210-running-postgres-in-a-container-on-your-laptop.md) |
 | positional insert | an INSERT with no column list, values fill columns in table order | [220](./notes/220-insert-adding-rows-and-matching-values-to-columns.md) |
-| Postgres | a database server, where most app data lives | [211](./notes/211-a-database-server-postgres-where-most-app-data-lives.md) |
+| Postgres | a popular database server | [211](./notes/211-a-database-server-postgres-where-most-app-data-lives.md) |
 | precedence | which operator runs first when a test mixes several, AND before OR | [109](./notes/109-parentheses-and-runs-before-or.md) |
 | precision | the most digits a decimal can hold in total | [022](./notes/022-exact-decimal-types.md) |
 | primary key | a column that is unique in every row and never NULL | [087](./notes/087-primary-key.md) |
