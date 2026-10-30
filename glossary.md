@@ -74,6 +74,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | crows feet | line end marks on an ERD showing how many rows match | [099](./notes/099-crows-feet-reading-one-and-many.md) |
 | CSV | a text file, usually one row per line, values split by commas | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
 | CTE | a named inner query written first with WITH, alive for one statement | [180](./notes/180-ctes-naming-each-step-with-with.md) |
+| curving up (growth) | 10 times the data costs 100 times the steps | [271](./notes/271-curving-up-when-10-times-the-data-means-100-times-the-steps.md) |
 | data | facts written down so you can ask questions about them later | [001](./notes/001-data-is-facts-and-numbers.md) |
 | data type | the kind of value a field allows, like text or number | [076](./notes/076-data-types-in-a-schema.md) |
 | database | a program that owns the data files, changing them only on request | [082](./notes/082-a-database-guards-the-data.md) |

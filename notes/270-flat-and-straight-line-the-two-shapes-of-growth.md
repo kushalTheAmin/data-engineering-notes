@@ -67,4 +67,4 @@ in walks the list comparing each id until it finds 104 or runs out, so a missing
 </details>
 
 ---
-prev: [269 big O in plain words, how work grows as data grows](./269-big-o-in-plain-words-how-work-grows-as-data-grows.md) | next: not written yet
+prev: [269 big O in plain words, how work grows as data grows](./269-big-o-in-plain-words-how-work-grows-as-data-grows.md) | next: [271 curving up, when 10 times the data means 100 times the steps](./271-curving-up-when-10-times-the-data-means-100-times-the-steps.md)

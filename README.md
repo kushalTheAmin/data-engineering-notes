@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 270
+notes so far: 271
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -307,3 +307,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 
 - [269 big O in plain words, how work grows as data grows](./notes/269-big-o-in-plain-words-how-work-grows-as-data-grows.md): the reviews table has 4 rows today, would a lookup still feel instant with 4 million
 - [270 flat and straight line, the two shapes of growth](./notes/270-flat-and-straight-line-the-two-shapes-of-growth.md): the newest order page looks the same at 7 orders and acts very different at 7000
+- [271 curving up, when 10 times the data means 100 times the steps](./notes/271-curving-up-when-10-times-the-data-means-100-times-the-steps.md): comparing every order with every order is 49 looks at 7 orders and 490000 at 700
