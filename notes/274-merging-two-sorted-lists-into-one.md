@@ -78,4 +78,4 @@ print(merge([6.0, 4.5], [3.0, 5.0]))
 </details>
 
 ---
-prev: [273 binary search, finding one item in sorted data by halving](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md) | next: not written yet
+prev: [273 binary search, finding one item in sorted data by halving](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md) | next: [275 merge sort, split down to single items, then merge back up](./275-merge-sort-split-down-to-single-items-then-merge-back-up.md)
