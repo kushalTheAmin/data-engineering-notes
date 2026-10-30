@@ -293,6 +293,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | ROLLBACK | ends a transaction and throws away every change made inside it | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
 | ROLLUP | a GROUP BY that adds subtotal rows and a grand total | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | root | the top folder holding everything else, written as a single slash | [040](./notes/040-folders-and-paths.md) |
+| rounds (merge sort) | how many times the lists get paired up and merged, halving backwards | [276](./notes/276-why-sorting-costs-more-than-one-pass-over-the-data.md) |
 | row | one record of a csv, usually one line, split into values | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
 | row lock | a mark on one row, so others changing it wait | [242](./notes/242-row-locks-and-table-locks.md) |
 | row version | one stored copy of a row, an UPDATE makes a new one | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |

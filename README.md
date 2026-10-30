@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 275
+notes so far: 276
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -312,3 +312,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [273 binary search, finding one item in sorted data by halving](./notes/273-binary-search-finding-one-item-in-sorted-data-by-halving.md): the hunt for the last order took 7 looks, and 7000 at 7000 orders, what if you skipped most of them
 - [274 merging two sorted lists into one](./notes/274-merging-two-sorted-lists-into-one.md): to sort without comparing everything with everything, start with two lists already sorted
 - [275 merge sort, split down to single items, then merge back up](./notes/275-merge-sort-split-down-to-single-items-then-merge-back-up.md): the merge needs sorted lists, and a list of one item already is
+- [276 why sorting costs more than one pass over the data](./notes/276-why-sorting-costs-more-than-one-pass-over-the-data.md): a merge is one pass, so why is sorting not, and what does it cost at 7000 orders

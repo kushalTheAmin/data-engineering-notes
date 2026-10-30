@@ -83,4 +83,4 @@ neither half is sorted, so the merge trusts them and nothing moves: 6.0, 7.5 and
 </details>
 
 ---
-prev: [274 merging two sorted lists into one](./274-merging-two-sorted-lists-into-one.md) | next: not written yet
+prev: [274 merging two sorted lists into one](./274-merging-two-sorted-lists-into-one.md) | next: [276 why sorting costs more than one pass over the data](./276-why-sorting-costs-more-than-one-pass-over-the-data.md)
