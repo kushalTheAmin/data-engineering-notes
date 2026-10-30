@@ -42,4 +42,4 @@ the Postgres docs give the reasons: many users sharing one database, grouping ta
 i assumed a table name was just the name of the table, but its only a name inside a folder, so a bare orders depends on where you are standing.
 
 ---
-prev: [266 soft deletes, marking a row gone instead of removing it](./266-soft-deletes-marking-a-row-gone-instead-of-removing-it.md) | next: not written yet
+prev: [266 soft deletes, marking a row gone instead of removing it](./266-soft-deletes-marking-a-row-gone-instead-of-removing-it.md) | next: [268 capstone, modeling product reviews for the shop](./268-capstone-modeling-product-reviews-for-the-shop.md)

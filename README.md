@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 267
+notes so far: 268
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -301,3 +301,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [265 created_at and updated_at, two timestamps every table carries](./notes/265-created-at-and-updated-at-two-timestamps-every-table-carries.md): order 104 says cancelled, but cancelled when
 - [266 soft deletes, marking a row gone instead of removing it](./notes/266-soft-deletes-marking-a-row-gone-instead-of-removing-it.md): Disha closes her account and the nightly copy job never hears, if you really DELETE the row
 - [267 schemas as namespaces, folders for tables](./notes/267-schemas-as-namespaces-folders-for-tables.md): the same query says 7 for one person and 2 for another in one database, what differs
+- [268 capstone, modeling product reviews for the shop](./notes/268-capstone-modeling-product-reviews-for-the-shop.md): Esha wants to rate the fafda, and every column of the table traces to a note
