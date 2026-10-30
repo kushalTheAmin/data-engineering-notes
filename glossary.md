@@ -208,6 +208,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | median | the middle value once sorted, or the average of the two middles | [149](./notes/149-median-the-middle-value-after-sorting.md) |
 | megabyte | 1000 kilobytes, a million bytes, written MB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | memory | the computers working space (RAM), emptied when the power goes off | [036](./notes/036-memory-vs-disk.md) |
+| merge | combining two sorted lists into one by taking the smaller front | [274](./notes/274-merging-two-sorted-lists-into-one.md) |
 | microsecond | a millionth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | millisecond | a thousandth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | min | returns the smallest non-null value in a column, or the earliest date | [142](./notes/142-min-and-max-the-smallest-and-biggest-value.md) |

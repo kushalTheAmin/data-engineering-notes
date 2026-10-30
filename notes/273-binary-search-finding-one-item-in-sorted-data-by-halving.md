@@ -72,4 +72,4 @@ False True
 </details>
 
 ---
-prev: [272 a loop inside a loop, the steps are one list times the other](./272-a-loop-inside-a-loop-the-steps-are-one-list-times-the-other.md) | next: not written yet
+prev: [272 a loop inside a loop, the steps are one list times the other](./272-a-loop-inside-a-loop-the-steps-are-one-list-times-the-other.md) | next: [274 merging two sorted lists into one](./274-merging-two-sorted-lists-into-one.md)
