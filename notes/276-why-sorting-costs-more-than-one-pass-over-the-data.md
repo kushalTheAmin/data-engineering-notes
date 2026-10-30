@@ -32,4 +32,4 @@ i assumed sorting was either cheap or expensive, but it sits in between. doublin
 Postgres, a popular database server, says an index (a lookup shortcut) can hand rows back already in order, so the sort for an ORDER BY ([117](./117-order-by-sorting-by-one-or-more-columns.md), SQL sorting) is skipped ([docs](https://www.postgresql.org/docs/current/indexes-ordering.html)). only some kinds of index can.
 
 ---
-prev: [275 merge sort, split down to single items, then merge back up](./275-merge-sort-split-down-to-single-items-then-merge-back-up.md) | next: not written yet
+prev: [275 merge sort, split down to single items, then merge back up](./275-merge-sort-split-down-to-single-items-then-merge-back-up.md) | next: [277 hash functions, turning anything into a number in a fixed range](./277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md)
