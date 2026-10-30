@@ -4,7 +4,7 @@ section: designing tables, part 12, ~2 min read
 
 order 104 in the shop (the imaginary gujarati snack store these notes run on) says cancelled. cancelled when? the orders table (a grid of rows) has one timestamp, a date plus a time, called ordered_at, so it cant tell you.
 
-the fix is two columns on every table. created_at is the moment the row was inserted (added), set once and never touched again. updated_at is the moment the row last changed, so it starts equal to created_at and moves on every [UPDATE](./222-update-changing-rows-and-why-the-where-matters.md). the shop keeps them in order_tracking (7 orders, the query shows 3, stored in [UTC](./030-store-utc-show-local.md), the one reference clock):
+the fix is two columns on every table. created_at is the moment the row was inserted (added), set once, never touched again. updated_at is the moment the row last changed, so it starts equal to created_at and moves on every [UPDATE](./222-update-changing-rows-and-why-the-where-matters.md). the shop keeps them in order_tracking (7 orders, the query shows 3, stored in [UTC](./030-store-utc-show-local.md), the reference clock):
 
 ```sql
 SELECT order_id, status, created_at, updated_at FROM order_tracking WHERE order_id IN (104, 105, 106) ORDER BY order_id
@@ -19,7 +19,7 @@ order_id | status | created_at | updated_at
 
 104 was cancelled 15 minutes after it was placed. 106 has two equal times, so nothing has touched it since. created_at stays put, updated_at is the one that moves.
 
-the catch i didnt expect: the database wont move updated_at for you. a [DEFAULT](./215-not-null-and-default-required-columns-and-fallback-values.md) (a value filled in on insert) can fill both at insert, but an UPDATE only changes what its SET names:
+the catch i didnt expect: by default the database wont move updated_at for you. a [DEFAULT](./215-not-null-and-default-required-columns-and-fallback-values.md) (a value filled in on insert) can fill both at insert, but an UPDATE only changes what its SET names:
 
 ```text
 UPDATE order_tracking SET status = 'delivered', updated_at = current_timestamp WHERE order_id = 106
@@ -29,7 +29,7 @@ other databases can: MySQL does it in the column with ON UPDATE CURRENT_TIMESTAM
 
 so what: a nightly job that copies only rows changed since its last run asks WHERE updated_at > that time. one writer that forgets the column and its changes are invisible to that job.
 
-i assumed updated_at worked like a files modified time, kept by the system, but nothing moves it unless somebody writes to it.
+i assumed updated_at worked like a files modified time, kept by the system, but by default nothing moves it unless somebody writes to it.
 
 ### check yourself
 
