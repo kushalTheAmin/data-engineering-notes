@@ -217,6 +217,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | nanosecond | a billionth of a second | [037](./notes/037-disk-is-slow.md) |
 | natural key | a real world value that already tells rows apart, like an email | [088](./notes/088-natural-keys-vs-made-up-ids.md) |
 | negative zero | a second zero pattern, with the sign bit set | [013](./notes/013-negative-numbers-sign-bit.md) |
+| nested loop | a loop inside a loop, steps are outer length times inner length | [272](./notes/272-a-loop-inside-a-loop-the-steps-are-one-list-times-the-other.md) |
 | nesting | an object or array sitting inside another one, as deep as needed | [068](./notes/068-nesting.md) |
 | network | a way to move bytes from one computer to another | [084](./notes/084-a-network.md) |
 | nextval | the call that hands out a sequences next number | [219](./notes/219-sequences-where-made-up-ids-come-from.md) |

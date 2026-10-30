@@ -58,4 +58,4 @@ curving up, about 24.5 million looks. the first id checks an empty list, the las
 </details>
 
 ---
-prev: [270 flat and straight line, the two shapes of growth](./270-flat-and-straight-line-the-two-shapes-of-growth.md) | next: not written yet
+prev: [270 flat and straight line, the two shapes of growth](./270-flat-and-straight-line-the-two-shapes-of-growth.md) | next: [272 a loop inside a loop, the steps are one list times the other](./272-a-loop-inside-a-loop-the-steps-are-one-list-times-the-other.md)
