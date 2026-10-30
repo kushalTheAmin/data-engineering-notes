@@ -31,7 +31,7 @@ for n in [7, 70, 700, 7000]:
 
 read the last column. 10 times the orders, 10 times the steps. big O keeps that and throws the exact count away, because "about as many steps as rows" is what survives when data gets huge. the first-one column is why it usually quotes the worst case, the unlucky one where the thing is last or missing. luck gives 1 step at any size, but you cant plan on luck.
 
-a database with nothing to help it does this exact loop. [Postgres](./211-a-database-server-postgres-where-most-app-data-lives.md), a popular database server, docs say that with no index (a lookup shortcut) it has to scan the entire table, row by row. at 7 million rows that is 7 million steps for every single lookup.
+a database with nothing to help it does this loop, never stopping early. [Postgres](./211-a-database-server-postgres-where-most-app-data-lives.md), a popular database server, docs say that with no index (a lookup shortcut) it has to scan the entire table, row by row. at 7 million rows that is 7 million steps for every lookup.
 
 i expected the interesting number to be how fast one lookup is, but the useful one is what happens to the steps when the data gets 10 times bigger.
 

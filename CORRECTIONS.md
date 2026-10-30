@@ -1,5 +1,7 @@
 # corrections
 
+269, 2026-10-30: said a database with nothing to help it does this exact loop, but the loop above stops at the first match (first one: 1 step) while the Postgres page says the system scans the entire table, row by row, to find all matching entries, so 7 million steps for every lookup contradicted the table. it now says the database does this loop, never stopping early. evidence: https://www.postgresql.org/docs/current/indexes-intro.html ("With no advance preparation, the system would have to scan the entire test1 table, row by row, to find all matching entries", opened this run); python, find(list(range(101, 108)), 101) gives 1 (checks/269.py)
+
 268, 2026-10-30: called fafda a crunchy gram flour snack, a different name for the flour than 103, 104 and 112 use, and one a cold reader may not know. it now says chickpea flour, like those notes. evidence: the text of notes/103, 104 and 112 (fafda, a crunchy chickpea flour snack)
 
 266, 2026-10-30: the query under the table uses UNION ALL, which this note never explained and does not build on, so a reader landing here cold could not follow it. one clause now says it counts rows twice and stacks the two results with UNION ALL. nothing else changed. evidence: the text of notes/266 (builds on has no 182, the note only glosses NULL, hard delete and UNIQUE)

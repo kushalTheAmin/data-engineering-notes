@@ -25,6 +25,7 @@ assert (find(list(range(101, 108)), 104), find(list(range(101, 7001)), 104)) == 
 assert len(range(101, 7001)) == 6900 and 6900 // 7 == 985  # almost a thousand times longer
 # question 2
 assert (find(list(range(101, 108)), 9999), find(list(range(101, 7101)), 9999)) == (7, 7000)
+# unlike find, a scan cannot stop at the first match: the docs say it scans the entire table to find all matching entries
 # 7 million rows, 7 million steps for one lookup in the worst case
 assert 7_000_000 * 1 == 7_000_000
 # the reviews table in 268 has 4 rows
