@@ -61,6 +61,8 @@ log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept faile
 2026-10-30: repo baseline failed checks/127.py, 201.py, 202.py: date_trunc on a DATE returns DATE not TIMESTAMP on duckdb 1.4.5 (python3 is 3.11, mermaid render also failed); no note written, needs a fix outside this run
 2026-10-30: repo baseline failed checks/008.py and 8 more: pip gives duckdb 2.0.0 for python 3.11 (fetchone on relations removed, 041 and 268 assert), mermaid render failed (chromium needs no-sandbox as root); no note written, needs a fix outside this run
 2026-10-30: repo baseline failed checks/008.py and 8 more: pip gives duckdb 2.0.0 (fetchone on relations removed, 041 and 268 assert), mermaid render failed (chromium needs no-sandbox as root); no note written, needs a fix outside this run
+2026-10-30: repo baseline failed gate setup: python3 is 3.11 with no duckdb, python3 -m pip gives duckdb 2.0.0 which breaks 8 checks on fetchone (041 and 268 also assert); no note written, needs a fix outside this run
+
 
 ## arc 1: data at the atom level
 after this arc: you know what a computer actually stores when it "saves" an order
