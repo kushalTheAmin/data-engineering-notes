@@ -4,7 +4,7 @@ section: designing tables, part 12, ~2 min read
 
 order 104 in the shop (the imaginary gujarati snack store these notes run on) says cancelled. cancelled when? the orders table (a grid of rows) has one timestamp, a date plus a time, called ordered_at, so it cant tell you.
 
-the fix is two columns on every table. created_at is the moment the row was inserted (added), set once, never touched again. updated_at is the moment the row last changed, so it starts equal to created_at and moves on every [UPDATE](./222-update-changing-rows-and-why-the-where-matters.md). the shop keeps them in order_tracking (7 orders, the query shows 3, stored in [UTC](./030-store-utc-show-local.md), the reference clock):
+the fix is two columns on every table. created_at is the moment the row was inserted (added), set once, never touched again. updated_at is the moment the row last changed, so it starts equal to created_at and moves on every [UPDATE](./222-update-changing-rows-and-why-the-where-matters.md). the shop keeps them in order_tracking (7 orders, the query shows 3, in New York clock time like ordered_at, though [UTC](./030-store-utc-show-local.md) is the safer habit):
 
 ```sql
 SELECT order_id, status, created_at, updated_at FROM order_tracking WHERE order_id IN (104, 105, 106) ORDER BY order_id
@@ -17,7 +17,7 @@ order_id | status | created_at | updated_at
 106 | pending | 2026-04-08 10:00:00 | 2026-04-08 10:00:00
 ```
 
-104 was cancelled 15 minutes after it was placed. 106 has two equal times, so nothing has touched it since. created_at stays put, updated_at is the one that moves.
+104 was cancelled 15 minutes after it was placed. 106 has two equal times, so nothing has touched it since.
 
 the catch i didnt expect: by default the database wont move updated_at for you. a [DEFAULT](./215-not-null-and-default-required-columns-and-fallback-values.md) (a value filled in on insert) can fill both at insert, but an UPDATE only changes what its SET names:
 
@@ -27,7 +27,7 @@ UPDATE order_tracking SET status = 'delivered', updated_at = current_timestamp W
 
 other databases can: MySQL does it in the column with ON UPDATE CURRENT_TIMESTAMP, and in Postgres a trigger, code the database runs on every change, can do it.
 
-so what: a nightly job that copies only rows changed since its last run asks WHERE updated_at > that time. one writer that forgets the column and its changes are invisible to that job.
+so what: a nightly job that copies rows changed since its last run asks WHERE updated_at > that time. one writer that forgets the column and its changes are invisible to that job.
 
 i assumed updated_at worked like a files modified time, kept by the system, but by default nothing moves it unless somebody writes to it.
 
@@ -50,10 +50,10 @@ order_id
 
 </details>
 
-2. someone fixes order 106 by typing UPDATE order_tracking SET status = 'delivered' WHERE order_id = 106 in a console. the nightly job from question 1 runs again. does the copy learn 106 is delivered?
+2. someone fixes order 106 by typing UPDATE order_tracking SET status = 'delivered' WHERE order_id = 106 in a console. the nightly job from question 1 already copied 106 as pending and now asks only for rows updated since that run. does the copy learn 106 is delivered?
 <details><summary>answer</summary>
 
-no. the row changed but updated_at is still 2026-04-08 10:00:00, so if the job already copied 106 it sees nothing new. the tempting answer is yes, since the database knows the row changed, but it only records what the statement says.
+no. the row changed but updated_at is still 2026-04-08 10:00:00, older than that run, so the job sees nothing new. the tempting answer is yes, since the database knows the row changed, but it only records what the statement says.
 
 </details>
 

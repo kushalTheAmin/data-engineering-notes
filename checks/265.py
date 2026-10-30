@@ -31,3 +31,8 @@ assert q("SELECT created_at = updated_at FROM t") == [(True,)]
 # confirmed: MySQL column definitions can use DEFAULT CURRENT_TIMESTAMP and ON UPDATE CURRENT_TIMESTAMP as automatic properties
 # source: https://www.postgresql.org/docs/current/trigger-definition.html
 # confirmed: a Postgres trigger makes the database automatically execute a function whenever an INSERT, UPDATE or DELETE happens on a table
+# created_at equals ordered_at, which note 030 says is New York clock text, so the shown times are New York time, not UTC
+assert q("SELECT count(*) FROM order_tracking t JOIN orders o USING (order_id) WHERE o.ordered_at = t.created_at") == [(7,)]
+# question 2: the fixed cutoff of question 1 would copy 106 again with its new status, so the question must say the cutoff moves to the last run
+assert q("SELECT status FROM order_tracking WHERE updated_at > TIMESTAMP '2026-04-06 00:00:00' AND order_id = 106") == [("delivered",)]
+assert q("SELECT count(*) FROM order_tracking WHERE order_id = 106 AND updated_at > TIMESTAMP '2026-04-08 23:59:59'") == [(0,)]
