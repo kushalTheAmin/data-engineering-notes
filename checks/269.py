@@ -25,7 +25,7 @@ assert (find(list(range(101, 108)), 104), find(list(range(101, 7001)), 104)) == 
 assert len(range(101, 7001)) == 6900 and 6900 // 7 == 985  # almost a thousand times longer
 # question 2
 assert (find(list(range(101, 108)), 9999), find(list(range(101, 7101)), 9999)) == (7, 7000)
-# unlike find, a scan cannot stop at the first match: the docs say it scans the entire table to find all matching entries
+# unlike find, a scan after every match cannot stop at the first one: the docs say it scans the entire table to find all matching entries
 # 7 million rows, 7 million steps for one lookup in the worst case
 assert 7_000_000 * 1 == 7_000_000
 # the reviews table in 268 has 4 rows
@@ -34,3 +34,5 @@ assert len([1, 2, 3, 4]) == 4
 # confirmed: "With no advance preparation, the system would have to scan the entire test1 table, row by row, to find all matching entries."
 # source: https://en.wikipedia.org/wiki/Time_complexity
 # confirmed: "one commonly considers the worst-case time complexity, which is the maximum amount of time required for inputs of a given size"
+# source: https://survey.stackoverflow.co/2025/technology
+# confirmed: PostgreSQL is the most used database among all respondents, 55.6%, so popular is supported

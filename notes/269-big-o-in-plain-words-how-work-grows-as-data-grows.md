@@ -6,7 +6,7 @@ the reviews table in [268](./268-capstone-modeling-product-reviews-for-the-shop.
 
 big O answers that without a stopwatch: count the steps your code takes, then ask how the count grows when the data does. steps, not seconds, because seconds change with the laptop.
 
-below, the loop hiding inside [WHERE](./106-where-keeping-only-the-rows-that-match.md) hunts for an order id. a table is a list of rows ([079](./079-a-table-rows-are-records-columns-are-fields.md)), and the shop, the imaginary gujarati snack store these notes run on, has 7 orders, ids 101 to 107. the longer lists are pretend. a step is one look at one id.
+below, the loop hiding inside [WHERE](./106-where-keeping-only-the-rows-that-match.md) hunts for an order id. a table is a list of rows ([079](./079-a-table-rows-are-records-columns-are-fields.md)), and the shop, the imaginary gujarati snack store these notes run on, has 7 orders, ids 101 to 107. the longer lists are pretend. a step is one id looked at.
 
 ```python
 def find(order_ids, wanted):
@@ -29,11 +29,11 @@ for n in [7, 70, 700, 7000]:
 7000 orders | first one: 1 | last one: 7000
 ```
 
-read the last column. 10 times the orders, 10 times the steps. big O keeps that and throws the exact count away, because "about as many steps as rows" is what survives when data gets huge. the first-one column is why it usually quotes the worst case, the unlucky one where the thing is last or missing. luck gives 1 step at any size, but you cant plan on luck.
+read the last column. 10 times the orders, 10 times the steps. big O keeps that and throws the exact count away, because "about as many steps as rows" is what survives when data gets huge. the first-one column is why it usually quotes the worst case, the unlucky one where the thing is last or missing. luck gives 1 step at any size, but dont plan on luck.
 
-a database with nothing to help it does this loop, never stopping early. [Postgres](./211-a-database-server-postgres-where-most-app-data-lives.md), a popular database server, docs say that with no index (a lookup shortcut) it has to scan the entire table, row by row. at 7 million rows that is 7 million steps for every lookup.
+a database with nothing to help it does this loop, and when it wants every match it never stops early. [Postgres](./211-a-database-server-postgres-where-most-app-data-lives.md), a popular database server, docs say that with no index (a lookup shortcut) it has to scan the entire table, row by row. at 7 million rows, 7 million steps per lookup.
 
-i expected the interesting number to be how fast one lookup is, but the useful one is what happens to the steps when the data gets 10 times bigger.
+i expected the interesting number to be how fast one lookup is, but it is what happens to the steps at 10 times the data.
 
 ### check yourself
 
