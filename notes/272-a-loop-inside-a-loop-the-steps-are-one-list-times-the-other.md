@@ -32,7 +32,7 @@ same two loops, two shapes. against 6 products the steps grow 10 times when orde
 
 so ask which list grows. a small list that never grows just multiplies the steps by a fixed number.
 
-a database can run a join ([155](./155-why-joins-the-answer-lives-in-more-than-one-table.md), pairing rows of two tables) is exactly this. Postgres calls it a nested loop join, and its docs say the right table is read once for every left row. that costs left rows times right rows, unless a lookup shortcut helps.
+a database can run a join ([155](./155-why-joins-the-answer-lives-in-more-than-one-table.md), pairing rows of two tables) this way. Postgres calls it a nested loop join, one of three join methods it has, and its docs say the right table is read once for every left row. that costs left rows times right rows, unless a lookup shortcut helps.
 
 i assumed any loop inside a loop was the slow shape, but it only curves when both lists grow.
 

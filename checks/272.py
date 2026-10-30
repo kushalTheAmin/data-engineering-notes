@@ -26,3 +26,4 @@ assert 7000 * 6 == 42000
 assert 5 * 7 == 35 and 500 * 700 == 350000 == 35 * 100 * 100 and 35 * 100 == 3500
 # source: https://www.postgresql.org/docs/current/planner-optimizer.html
 # confirmed: nested loop join "The right relation is scanned once for every row found in the left relation", and an index scan on the right can make it a good strategy
+# also: the same page lists three join strategies (nested loop join, merge join, hash join), so a join is only sometimes this loop
