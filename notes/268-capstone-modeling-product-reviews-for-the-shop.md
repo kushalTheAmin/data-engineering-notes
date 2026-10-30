@@ -90,4 +90,4 @@ Chirags 2 stars counts, so 5 + 4 + 2 over 3. the tempting 2 and 4.5 are the live
 </details>
 
 ---
-prev: [267 schemas as namespaces, folders for tables](./267-schemas-as-namespaces-folders-for-tables.md) | next: not written yet
+prev: [267 schemas as namespaces, folders for tables](./267-schemas-as-namespaces-folders-for-tables.md) | next: [269 big O in plain words, how work grows as data grows](./269-big-o-in-plain-words-how-work-grows-as-data-grows.md)
