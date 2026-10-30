@@ -119,6 +119,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | file | a name plus a list of bytes in order, kept on disk | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
 | file extension | the letters after the dot in a name, just a label | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
 | first normal form | every cell holds exactly one value, never a list | [259](./notes/259-first-normal-form-one-value-per-cell.md) |
+| flat (growth) | steps stay the same however big the data gets | [270](./notes/270-flat-and-straight-line-the-two-shapes-of-growth.md) |
 | flattening | turning inner names into columns, like address_city, one per name | [070](./notes/070-flattening-nested-objects-into-columns.md) |
 | float | binary digits plus a count of how far to slide the point | [019](./notes/019-floating-point.md) |
 | flush | force waiting data onto disk before moving on | [232](./notes/232-durability-surviving-a-crash.md) |
@@ -328,6 +329,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | standard input | stdin, the channel a process reads from, the keyboard by default | [057](./notes/057-standard-input-and-output.md) |
 | standard output | stdout, the channel a process writes to, the screen by default | [057](./notes/057-standard-input-and-output.md) |
 | store UTC, show local | keep moments in UTC, convert to local only when displaying | [030](./notes/030-store-utc-show-local.md) |
+| straight line (growth) | steps grow as fast as the data does | [270](./notes/270-flat-and-straight-line-the-two-shapes-of-growth.md) |
 | streak row | one output row per island: first day, last day, length | [196](./notes/196-gaps-and-islands-one-row-per-streak.md) |
 | stream | bytes handed over in order, like a program reading its stdin | [057](./notes/057-standard-input-and-output.md) |
 | structure | an agreement on where each fact sits, so code can find it | [061](./notes/061-structure-why-text-is-hard-to-ask.md) |

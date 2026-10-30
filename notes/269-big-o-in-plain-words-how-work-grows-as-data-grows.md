@@ -70,4 +70,4 @@ a missing id is the worst case, the loop has to look at every id before it can s
 </details>
 
 ---
-prev: [268 capstone, modeling product reviews for the shop](./268-capstone-modeling-product-reviews-for-the-shop.md) | next: not written yet
+prev: [268 capstone, modeling product reviews for the shop](./268-capstone-modeling-product-reviews-for-the-shop.md) | next: [270 flat and straight line, the two shapes of growth](./270-flat-and-straight-line-the-two-shapes-of-growth.md)
