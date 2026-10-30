@@ -25,7 +25,7 @@ the catch i didnt expect: the database wont move updated_at for you. a [DEFAULT]
 UPDATE order_tracking SET status = 'delivered', updated_at = current_timestamp WHERE order_id = 106
 ```
 
-MySQL can do it in the column with ON UPDATE CURRENT_TIMESTAMP, and in Postgres a trigger, code the database runs on every change, can do it.
+other databases can: MySQL does it in the column with ON UPDATE CURRENT_TIMESTAMP, and in Postgres a trigger, code the database runs on every change, can do it.
 
 so what: a nightly job that copies only rows changed since its last run asks WHERE updated_at > that time. one writer that forgets the column and its changes are invisible to that job.
 

@@ -1,5 +1,7 @@
 # corrections
 
+265, 2026-10-30: named MySQL and Postgres with no hint what they are, so a reader landing here cold could not tell. it now says other databases can do it, so both read as databases. evidence: the text of notes/265 (neither name was glossed there; 264 glosses Postgres only for its own readers)
+
 267, 2026-10-30: said DuckDB tries the current folder and then main when a bare table name is not found, which no DuckDB page says (the USE page only says main is used implicitly for USE memory, the configuration page only lists schema as defaulting to main). it works in 1.5.6 but is unsourced, so the clause is removed. evidence: https://duckdb.org/docs/2.0/sql/statements/use.html and https://duckdb.org/docs/2.0/configuration/overview.html have no fallback line. checks/267.py also now cites the Postgres command list for Postgres having no USE (https://www.postgresql.org/docs/current/sql-commands.html)
 
 265, 2026-10-29: said order_tracking is a slice of 3 orders, but the table holds all 7 orders (check yourself 1 even uses order 107, which the 3 row result never shows). it now says 7 orders, the query shows 3. evidence: python, select count(*) from order_tracking gives 7 (checks/265.py, data/shop.sql)
