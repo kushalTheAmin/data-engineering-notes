@@ -380,7 +380,8 @@ after this arc: you know the handful of ideas every database, index and big data
 - [x] curving up: when 10 times the data means 100 times the steps ★ (note 271)
 - [x] a loop inside a loop: why some code gets slow so fast ★ (note 272)
 - [x] binary search: finding one item in sorted data by halving ★ (note 273)
-- [ ] sorting: how merge sort splits and merges ★
+- [ ] merging two sorted lists into one ★
+- [ ] merge sort: split down to single items, then merge back up ★
 - [ ] why sorting costs more than one pass over the data
 - [ ] hash functions: turning anything into a number in a fixed range ★
 - [ ] hash tables: how a dictionary finds a key without searching ★
