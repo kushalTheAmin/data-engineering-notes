@@ -27,6 +27,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | batch | a small slice of rows handled by one statement | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
 | BEGIN | the command that opens a transaction | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
 | BETWEEN | a test keeping values from a low to a high end, inclusive | [112](./notes/112-between-ranges-that-include-both-ends.md) |
+| big O | how the steps code takes grow as the data grows | [269](./notes/269-big-o-in-plain-words-how-work-grows-as-data-grows.md) |
 | binary | counting with only 0 and 1, each place worth double | [003](./notes/003-counting-in-binary.md) |
 | binary file | a file whose bytes are not characters, like packed numbers | [041](./notes/041-text-files-vs-binary-files.md) |
 | binary fraction | binary carried past the point, places worth a half, quarter, eighth | [017](./notes/017-fractions-in-binary.md) |
@@ -387,6 +388,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | window frame | the slice of the window a function uses for one row | [190](./notes/190-window-frames-rows-between.md) |
 | window function | a calculation across rows that keeps every row, like sum with OVER | [184](./notes/184-window-functions-a-total-next-to-every-row.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
+| worst case | the input costing most steps, like a wanted row last or missing | [269](./notes/269-big-o-in-plain-words-how-work-grows-as-data-grows.md) |
 | write ahead log | the databases own list of changes, flushed before table files change | [233](./notes/233-the-write-ahead-log-write-down-the-plan-before-the-change.md) |
 | xmax | stamp on a row version: the transaction that ended it | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
 | xmin | stamp on a row version: the transaction that created it | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
