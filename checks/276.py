@@ -51,3 +51,5 @@ assert round(91000 / 7000) == 13 and 91000 / 7000 < 100
 assert len(sort_rounds(list(range(6)))) == 3 and len(sort_rounds(list(range(12)))) == 4
 # source: https://www.postgresql.org/docs/current/indexes-ordering.html
 # confirmed: an index may deliver rows in sorted order so ORDER BY is honored without a separate sorting step; of the index types supported, only B-tree can produce sorted output
+# source: https://survey.stackoverflow.co/2025/technology
+# confirmed: PostgreSQL is the most used database among all respondents, 55.6%, so popular is supported
