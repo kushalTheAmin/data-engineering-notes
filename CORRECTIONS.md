@@ -1,5 +1,7 @@
 # corrections
 
+266, 2026-10-30: note text unchanged. the claim that = NULL never matches was neither asserted nor sourced in checks/266.py. the check now asserts it. evidence: python, select count(*) from customer_accounts where deleted_at = NULL gives 0 (checks/266.py)
+
 269, 2026-10-30: note text unchanged. the claim that big O usually quotes the worst case had no page behind it in checks/269.py. the check now cites the Wikipedia time complexity page. evidence: https://en.wikipedia.org/wiki/Time_complexity (one commonly considers the worst-case time complexity, the maximum amount of time required for inputs of a given size, opened this run) (checks/269.py)
 
 269, 2026-10-30: said a database with nothing to help it does this exact loop, but the loop above stops at the first match (first one: 1 step) while the Postgres page says the system scans the entire table, row by row, to find all matching entries, so 7 million steps for every lookup contradicted the table. it now says the database does this loop, never stopping early. evidence: https://www.postgresql.org/docs/current/indexes-intro.html ("With no advance preparation, the system would have to scan the entire test1 table, row by row, to find all matching entries", opened this run); python, find(list(range(101, 108)), 101) gives 1 (checks/269.py)

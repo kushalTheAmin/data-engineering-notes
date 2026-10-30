@@ -40,3 +40,5 @@ assert q(con, "SELECT count(*) FROM orders WHERE customer_id = 4") == [(1,)]
 
 # the whole customer_accounts table is 4 accounts, not a slice of a bigger one (data/shop.sql)
 assert q(con, "SELECT count(*) FROM customer_accounts") == [(4,)]
+# the note says = NULL never matches, so IS NULL is the only test for empty
+assert q(con, "SELECT count(*) FROM customer_accounts WHERE deleted_at = NULL") == [(0,)]
