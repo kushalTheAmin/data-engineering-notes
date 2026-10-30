@@ -31,4 +31,6 @@ assert 4 - 1 == 3
 # check yourself 2
 assert merge([6.0, 4.5], [3.0, 5.0])[0] == [3.0, 5.0, 6.0, 4.5]
 # source: https://www.postgresql.org/docs/current/planner-optimizer.html
-# confirmed: merge join sorts each relation on the join attributes, then scans the two in parallel, each only once
+# confirmed: merge join: each relation is sorted on the join attributes before the join starts (by an explicit sort step or by an index scan in the proper order), then the two are scanned in parallel, each only once
+# check yourself 1 grouping: [4.5, 6.0] and [7.5, 12.0] is 2 comparisons; grouped as [4.5, 6.0, 7.5] and [12.0] it would be 3
+assert merge([4.5, 6.0, 7.5], [12.0])[1] == 3

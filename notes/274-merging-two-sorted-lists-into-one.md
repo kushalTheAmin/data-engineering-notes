@@ -37,11 +37,11 @@ print([name for name, price in out])
 
 once left ran out, kaju katli just got tacked on, nobody was left to compare it with. and the markers only ever move forward. 5 comparisons for 6 items, never going back, so the work is about one step per item, a straight line ([270](./270-flat-and-straight-line-the-two-shapes-of-growth.md)) in the sense of [269](./269-big-o-in-plain-words-how-work-grows-as-data-grows.md). i expected combining two lists to need a nested loop, but the sorted order is what lets one pass do it.
 
-this shows up for real: Postgres has a merge join, one way to run a [join](./155-why-joins-the-answer-lives-in-more-than-one-table.md), pairing up rows of two tables. it sorts both on the shared column, then scans them side by side once ([docs](https://www.postgresql.org/docs/current/planner-optimizer.html)).
+this shows up for real: Postgres has a merge join, one way to run a [join](./155-why-joins-the-answer-lives-in-more-than-one-table.md), pairing up rows of two tables. it needs both in order on the shared column, then scans them side by side once ([docs](https://www.postgresql.org/docs/current/planner-optimizer.html)).
 
 ### check yourself
 
-1. merge the sorted lists fafda 4.50, dhokla 6.00 and khandvi 7.50, kaju katli 12.00 with the code above. how many comparisons happen?
+1. merge the sorted lists [fafda 4.50, dhokla 6.00] and [khandvi 7.50, kaju katli 12.00] with the code above. how many comparisons happen?
 
 <details><summary>answer</summary>
 
