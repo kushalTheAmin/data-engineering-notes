@@ -672,6 +672,7 @@ every fix made to a note after it was published, newest first. if you learned fr
 
 ## audit log
 audit runs that could not finish, newest first. format: YYYY-MM-DD HH:MM: what happened
+2026-10-30 06:10: gate failed before any change (9 FAIL: checks 008, 011, 026 to 030, 041 and 268) with duckdb 2.0.0 and 1.5.6, where relation.fetchone() was removed; mermaid renderer would not launch as root; no note was audited
 2026-10-28 22:40: gate failed before any change with every duckdb tried: 2.0.0 (8 FAIL: checks 008, 011, 026 to 030, 041) and 1.1.3 (10 FAIL: the same plus notes/022 result row 0.68 vs 0.67 and notes/180 circular CTE orders). mermaid-cli renders only with --no-sandbox as root. no notes were audited.
 2026-10-28 11:09: gate failed before any change (8 FAIL: checks 008, 011, 026 to 030 and 041) with duckdb 2.0.0, where relation.fetchone() was removed; mermaid renderer also would not launch as root; no note was audited
 2026-10-27 10:09: gate failed before any change (8 FAIL: checks 008, 011, 026 to 030 and 041) with duckdb 2.0.0, where relation.fetchone() was removed; no note was audited
