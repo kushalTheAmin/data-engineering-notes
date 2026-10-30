@@ -35,7 +35,7 @@ n
 2
 ```
 
-same words, different table, no error (DuckDB tries the current folder, then main). Postgres has no USE, it sets a search path, a list of folders checked in order, first match wins. its default is "$user", public.
+same words, different table, no error. Postgres has no USE, it sets a search path, a list of folders checked in order, first match wins. its default is "$user", public.
 
 the Postgres docs give the reasons: many users sharing one database, grouping tables, and apps keeping their names out of yours. a folder is no wall though, you can reach any schema you have permission for.
 

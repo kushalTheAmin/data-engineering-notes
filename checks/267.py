@@ -24,5 +24,7 @@ assert q(con, "SELECT count(*) FROM main.orders") == [(7,)]
 # the DuckDB USE page confirms:
 # source: https://duckdb.org/docs/2.0/sql/statements/use.html
 #  USE sets a default database, schema, or database/schema combination for future operations, and USE memory uses the main schema implicitly
-# DuckDB falls back to main when the current schema has no such table
+# no DuckDB page states a fallback to main for bare table names, so the note does not claim one (it works in 1.5.6, but unsourced)
+# source: https://www.postgresql.org/docs/current/sql-commands.html
+# confirmed: the list of SQL commands has no USE (the U commands are UNLISTEN and UPDATE)
 assert q(con, "SELECT count(*) FROM customers") == [(5,)]
