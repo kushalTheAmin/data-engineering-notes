@@ -65,4 +65,4 @@ one slot. barfi adds to 516, 516 % 8 is 4, and slot 4 holds masala chai, so the 
 </details>
 
 ---
-prev: [277 hash functions, turning anything into a number in a fixed range](./277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md) | next: not written yet
+prev: [277 hash functions, turning anything into a number in a fixed range](./277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md) | next: [279 collisions, when two keys land in the same spot](./279-collisions-when-two-keys-land-in-the-same-spot.md)
