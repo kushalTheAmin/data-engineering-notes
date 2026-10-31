@@ -48,7 +48,7 @@ the tidy list wins the search, 3 looks against 7, and 10 against 700, the [growt
 
 a [balanced tree](./281-balanced-trees-why-the-depth-stays-small.md) pays far less than shifting a list, but it still pays.
 
-in Postgres, once an index exists (a sorted shortcut to rows, a later note builds it), the docs say keeping it synchronized with the table slows writes ([docs](https://www.postgresql.org/docs/current/indexes-intro.html)).
+in Postgres, once an index exists (a lookup shortcut to rows, a later note builds it), the docs say keeping it synchronized with the table slows writes ([docs](https://www.postgresql.org/docs/current/indexes-intro.html)).
 
 i assumed keeping data sorted was a free upgrade, but the cost lands on the insert, not the read. would you pay it on a write heavy table?
 
