@@ -2,7 +2,7 @@
 builds on: [273 binary search, finding one item in sorted data by halving](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md), [270 flat and straight line, the two shapes of growth](./270-flat-and-straight-line-the-two-shapes-of-growth.md), [007 text is numbers, one character and one number](./007-text-is-numbers.md), [004 bytes, 8 bits and 256 possible values](./004-bytes.md)
 section: tricks that make data fast, part 9, ~2 min read
 
-halving ([273](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md)) needs sorted data. a python dictionary has no sorted order and still jumps straight to "dhokla" without reading the other keys. how does it know where to jump?
+halving ([273](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md)) needs sorted data. a python dictionary has no sorted order and still jumps to "dhokla" without reading the other keys. how does it know where to jump?
 
 the first half of that trick is a hash function: it turns any input into a number, and the same input always gives the same number. then a remainder (the leftover after dividing, written %) squeezes the number into a fixed range.
 
@@ -28,9 +28,9 @@ all six products, same recipe:
 
 ask again tomorrow and dhokla is still 3, so you find a slot by calculating instead of searching. that is the flat shape from [270](./270-flat-and-straight-line-the-two-shapes-of-growth.md), a jump.
 
-i expected a hash function to be some scary scrambling, but this one is addition and a remainder. it is also a bad one: "kholda" has the same letters, adds to 627 and lands in slot 3 too. real ones mix the order of the bytes in.
+i expected a hash function to be some scary scrambling, but this one is addition and a remainder. it is a bad one: "kholda" has the same letters, adds to 627 and lands in slot 3 too. real ones mix the order of the bytes in.
 
-python hashes text for dictionaries too, with a much better recipe than adding, but its value for a string changes each time python starts, on purpose ([docs](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHASHSEED)). same within one run, never saved to a file.
+python hashes text for dictionaries too, with a much better recipe than adding, but by default its value for a string changes each time python starts, on purpose ([docs](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHASHSEED)). same within one run, never saved to a file.
 
 ### check yourself
 
@@ -38,7 +38,7 @@ python hashes text for dictionaries too, with a much better recipe than adding, 
 
 <details><summary>answer</summary>
 
-627 % 10 is 7. the new slots are dhokla 7, khandvi 1, jalebi 5, kaju katli 2, masala chai 0, fafda 8, and none match the old 3, 5, 7, 0, 4, 2. the tempting answer is that only the new slots change, but the remainder depends on the range, so everything can move.
+627 % 10 is 7. now dhokla 7, khandvi 1, jalebi 5, kaju katli 2, masala chai 0, fafda 8, and none match the old 3, 5, 7, 0, 4, 2. the tempting answer is that only the new slots change, but the remainder depends on the range, so everything can move.
 
 </details>
 
@@ -46,7 +46,7 @@ python hashes text for dictionaries too, with a much better recipe than adding, 
 
 <details><summary>answer</summary>
 
-python mixes a random secret into text hashes each run, so Asha gets a new number tomorrow. the tempting answer is a bad file, but a name only keeps its number inside one run.
+by default python mixes a random secret into text hashes each run, so Asha gets a new number tomorrow. the tempting answer is a bad file, but a name only keeps its number inside one run.
 
 </details>
 

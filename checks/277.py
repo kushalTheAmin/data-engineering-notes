@@ -39,3 +39,8 @@ assert hash("dhokla") == hash("dhokla")
 assert hash("dhokla") != 627 and hash("kholda") != hash("dhokla")
 # half truth: one byte per character holds only for plain english letters
 assert len('fafda'.encode()) == 5 and len('é'.encode()) == 2
+# half truth: the changing value is the default only; the docs say PYTHONHASHSEED set to an integer is a fixed seed
+# source: https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHASHSEED
+# confirmed: "If this variable is not set or set to random, a random value is used to seed the hashes of str and bytes objects. If PYTHONHASHSEED is set to an integer value, it is used as a fixed seed"
+_fixed = {subprocess.run([sys.executable, "-c", "print(hash('dhokla'))"], capture_output=True, text=True, env={**os.environ, "PYTHONHASHSEED": "0"}).stdout for _ in range(3)}
+assert len(_fixed) == 1
