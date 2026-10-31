@@ -4,7 +4,7 @@ section: inside a database server, part 1, ~2 min read
 
 where does order 106 actually sit inside Postgres, and what does reading just that one row cost? [283](./283-capstone-the-same-lookup-three-ways-scan-halving-and-hash.md) was about shortcuts for finding things, so now, where the things live.
 
-Postgres ([211](./211-a-database-server-postgres-where-most-app-data-lives.md), a database that runs as its own server) keeps a table in a file cut into pages: fixed chunks of 8192 bytes, each packed with many rows. a rows address is its page number and its slot, a numbered seat on that page. page here is not a web page or the paging of [120](./120-limit-and-offset-paging-through-rows.md), and this slot is not a hash table slot from [278](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md).
+Postgres ([211](./211-a-database-server-postgres-where-most-app-data-lives.md), a database that runs as its own server) keeps a table in a file (one over 1 GB is split into several) cut into pages: fixed chunks of 8192 bytes, each packed with many rows. a rows address is its page number and its slot, a numbered seat on that page. page here is not a web page or the paging of [120](./120-limit-and-offset-paging-through-rows.md), and this slot is not a hash table slot from [278](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md).
 
 the shop, the imaginary gujarati snack store these notes run on, loaded into Postgres 16, other columns left out. ctid is the hidden address column:
 

@@ -22,3 +22,5 @@ assert 8 * 8192 == 65536
 # source: https://www.postgresql.org/docs/current/storage-page-layout.html
 #   confirmed: tables are arrays of fixed size pages, usually 8 kB, changeable at compile time,
 #   and a ctid is a page number plus the index of an item identifier
+# source: https://www.postgresql.org/docs/16/storage-file-layout.html
+#   confirmed: "When a table or index exceeds 1 GB, it is divided into gigabyte-sized segments", so a big table is several files
