@@ -26,8 +26,9 @@ assert q("SELECT count(*) FROM orders") == [(7,)]
 #  Rows Removed 1000, shared hit=8 for order_id = 999999
 #  Limit over Seq Scan, Rows Removed 5, shared hit=1 with LIMIT 1
 # the 7 order table with a PRIMARY KEY still gave Seq Scan, Rows Removed 6, hit=1 for 106
-# a 100000 row table of the same shape had pg_relation_size 5242880 bytes
-assert 5242880 // 8192 == 640
+# a 100000 row table of the same 4 column shape (136 rows per page, as in 286) had pg_relation_size
+# 6029312 bytes, 736 pages, audit rerun on Postgres 16.15; 640 pages was wrong for this shape
+assert -(-100000 // 136) == 736 and 736 * 8192 == 6029312
 # source: https://www.postgresql.org/docs/16/using-explain.html
 #   confirmed: a query with no WHERE uses a sequential scan of all rows, Rows Removed by Filter
 #   is shown for a filter, and the planner skips an index on a tiny table (polygon_tbl example)

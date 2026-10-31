@@ -31,7 +31,7 @@ nothing says order ids are unique in this copy, so a second 106 could sit on pag
 
 i assumed Postgres would stop at the first match, but without a LIMIT it reads to the end, since it cant know it has them all.
 
-pages touched grow as fast as the table, the straight line of [270](./270-flat-and-straight-line-the-two-shapes-of-growth.md): 100000 similar rows fill 640 pages. you can spot a Seq Scan on a big table returning one row. its not always bad though, Postgres scans the 7 real orders too, since one page needs no shortcut.
+pages touched grow as fast as the table, the straight line of [270](./270-flat-and-straight-line-the-two-shapes-of-growth.md): 100000 similar rows fill 736 pages. you can spot a Seq Scan on a big table returning one row. its not always bad though, Postgres scans the 7 real orders too, since one page needs no shortcut.
 
 ### check yourself
 
