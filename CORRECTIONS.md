@@ -1,6 +1,7 @@
 # corrections
 
 000, 2026-10-31: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and 268 on an assert. same failure as the earlier 000 lines
+000, 2026-10-31: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and 268 on an assert. same failure as the earlier 000 lines
 000, 2026-10-31: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and 268 on an assert. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
 000, 2026-10-31: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and 268 on an assert. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
 000, 2026-10-31: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and 268 on an assert. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
