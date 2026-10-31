@@ -27,3 +27,5 @@ assert set(ids) - set(path(107)) == {101, 102, 103, 105}
 assert len(ids) == 7 and len(ids) == 1 + 2 + 4
 # source: https://www.postgresql.org/docs/current/indexes-types.html
 # confirmed: CREATE INDEX creates B-tree indexes by default
+# source: https://survey.stackoverflow.co/2025/technology
+# confirmed: PostgreSQL is the most used database among all respondents, 55.6%, so popular is supported
