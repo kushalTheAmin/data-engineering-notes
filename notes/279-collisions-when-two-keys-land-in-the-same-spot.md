@@ -62,4 +62,4 @@ all 6, since every name sits in one chain, so a miss walks all of it, the straig
 </details>
 
 ---
-prev: [278 hash tables, how a dictionary finds a key without searching](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md) | next: not written yet
+prev: [278 hash tables, how a dictionary finds a key without searching](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md) | next: [280 trees, data that branches](./280-trees-data-that-branches.md)

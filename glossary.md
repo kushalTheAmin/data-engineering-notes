@@ -189,6 +189,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | LAG | a window function that returns a value from an earlier row | [192](./notes/192-lag-and-lead-looking-at-the-row-before.md) |
 | LEAD | a window function that returns a value from a later row | [192](./notes/192-lag-and-lead-looking-at-the-row-before.md) |
 | leading zero | a front 0 that numbers drop and text keeps | [263](./notes/263-choosing-column-types-by-what-you-do-with-the-value.md) |
+| leaf | a tree node with no children under it | [280](./notes/280-trees-data-that-branches.md) |
 | left join | inner join plus every unmatched left row, with null on the right | [159](./notes/159-left-join-keep-every-row-from-the-left-table.md) |
 | left table | the table written before the word JOIN in the query | [159](./notes/159-left-join-keep-every-row-from-the-left-table.md) |
 | length | how many characters a text has, spaces included, not bytes | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
@@ -229,6 +230,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | network | a way to move bytes from one computer to another | [084](./notes/084-a-network.md) |
 | nextval | the call that hands out a sequences next number | [219](./notes/219-sequences-where-made-up-ids-come-from.md) |
 | no promised order | without ORDER BY, rows may come back in any order | [118](./notes/118-no-order-by-no-promised-order.md) |
+| node | a box in a tree holding one value, pointing to its children | [280](./notes/280-trees-data-that-branches.md) |
 | non repeatable read | reading one row twice in a transaction and getting different values | [237](./notes/237-non-repeatable-reads.md) |
 | normal form | a named checklist a table passes to avoid a copy bug | [257](./notes/257-normal-forms-the-rules-behind-splitting-tables.md) |
 | NOT | flips a test, but a null stays unknown and is dropped | [110](./notes/110-not-flipping-a-condition.md) |
@@ -298,6 +300,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | ROLLBACK | ends a transaction and throws away every change made inside it | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
 | ROLLUP | a GROUP BY that adds subtotal rows and a grand total | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | root | the top folder holding everything else, written as a single slash | [040](./notes/040-folders-and-paths.md) |
+| root (tree) | the top node of a tree (root as top folder: see root) | [280](./notes/280-trees-data-that-branches.md) |
 | rounds (merge sort) | how many times the lists get paired up and merged, halving backwards | [276](./notes/276-why-sorting-costs-more-than-one-pass-over-the-data.md) |
 | row | one record of a csv, usually one line, split into values | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
 | row lock | a mark on one row, so others changing it wait | [242](./notes/242-row-locks-and-table-locks.md) |
@@ -368,6 +371,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | top N per group | keep the first N rows of each group: number inside, filter outside | [193](./notes/193-top-n-per-group.md) |
 | torn write | a write cut off partway, leaving some new blocks and some old | [045](./notes/045-torn-writes.md) |
 | transaction | a group of changes that all happen or none do | [227](./notes/227-transactions-all-or-nothing.md) |
+| tree | nodes linked parent to children, a lookup follows one path down | [280](./notes/280-trees-data-that-branches.md) |
 | trigger | a rule the database runs by itself on every write | [247](./notes/247-keeping-the-new-column-in-sync-with-a-trigger.md) |
 | trim | a function cutting spaces off both ends of text | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | TRUNCATE | removes every row at once and keeps the empty table | [226](./notes/226-drop-and-truncate-emptying-a-table-vs-removing-it.md) |
