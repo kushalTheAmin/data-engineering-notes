@@ -24,3 +24,5 @@ assert slots.count(None) == 2
 assert sum("barfi".encode()) == 516 and 516 % 8 == 4 and slots[4] == "masala chai"
 # source: https://docs.python.org/3/builtins/time-complexity.html
 # confirmed: dict get item is O(1) as an average-case time, assuming collisions are uncommon; worst case O(n) when every key hashes the same
+# python dicts can collide, so a miss is about one look, not always exactly one (O(1) is the average case, source above)
+assert slot_of('kholda') == slot_of('dhokla')

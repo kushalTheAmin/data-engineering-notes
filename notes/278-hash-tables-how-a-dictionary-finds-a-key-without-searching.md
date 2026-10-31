@@ -2,7 +2,7 @@
 builds on: [277 hash functions, turning anything into a number in a fixed range](./277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md), [270 flat and straight line, the two shapes of growth](./270-flat-and-straight-line-the-two-shapes-of-growth.md), [273 binary search, finding one item in sorted data by halving](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md), [269 big O in plain words, how work grows as data grows](./269-big-o-in-plain-words-how-work-grows-as-data-grows.md)
 section: tricks that make data fast, part 10, ~2 min read
 
-in [270](./270-flat-and-straight-line-the-two-shapes-of-growth.md) a missing id made `in` walk the whole list. ask a python dictionary for a name it doesnt have and it says no in one look. why is a miss cheap too?
+in [270](./270-flat-and-straight-line-the-two-shapes-of-growth.md) a missing id made `in` walk the whole list. ask a python dictionary for a name it doesnt have and it says no in about one look. why is a miss cheap too?
 
 a hash table is a row of numbered slots plus a hash function. to store a key (here the name you look things up by, not the table key of [087](./087-primary-key.md)), hash it and put it, with its value, in that slot. to find it, hash again and look in that one slot.
 
