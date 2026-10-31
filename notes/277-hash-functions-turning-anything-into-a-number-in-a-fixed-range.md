@@ -6,7 +6,7 @@ halving ([273](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md
 
 the first half of that trick is a hash function: it turns any input into a number, and the same input always gives the same number. then a remainder (the leftover after dividing, written %) squeezes the number into a fixed range.
 
-the shop, the imaginary gujarati snack store these notes run on, sells dhokla, a steamed savory cake. each character is one number ([007](./007-text-is-numbers.md)), one [byte](./004-bytes.md), a group of 8 bits. a toy hash: add the bytes of the name, then % 8 to land in one of 8 slots, numbered 0 to 7.
+the shop, the imaginary gujarati snack store these notes run on, sells dhokla, a steamed savory cake. each plain english letter is one number ([007](./007-text-is-numbers.md)), one [byte](./004-bytes.md), a group of 8 bits (accented letters and other scripts can take more than one). a toy hash: add the bytes of the name, then % 8 to land in one of 8 slots, numbered 0 to 7.
 
 ```text
 "dhokla" into 8 slots

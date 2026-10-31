@@ -37,3 +37,5 @@ assert hash("dhokla") == hash("dhokla")
 # confirmed: hash randomization is on by default, str and bytes hashes are salted, constant within one process but not predictable between runs
 # python does not add bytes: its hash differs from the toy sum and kholda does not collide with dhokla
 assert hash("dhokla") != 627 and hash("kholda") != hash("dhokla")
+# half truth: one byte per character holds only for plain english letters
+assert len('fafda'.encode()) == 5 and len('é'.encode()) == 2
