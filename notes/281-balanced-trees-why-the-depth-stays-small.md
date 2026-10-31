@@ -4,7 +4,7 @@ section: tricks that make data fast, part 13, ~2 min read
 
 in [280](./280-trees-data-that-branches.md) the order ids 101 to 107 made a tree where finding 107 took 3 looks, a look being one node checked. but real orders arrive as 101, 102, 103, in order. would you expect the tree to stay small?
 
-a balanced tree keeps its depth, the number of levels from the root down, as small as its size allows. a plain tree makes no promise: each new id hangs off the first free spot, so the shape comes from the arrival order.
+a balanced tree keeps its depth, the number of levels from the root down, close to as small as its size allows. a plain tree makes no promise: each new id hangs off the first free spot, so the shape comes from the arrival order.
 
 the shop, the imaginary gujarati snack store these notes run on, has orders 101 to 107. same ids, two arrival orders. a node here is a list: the id, its smaller side, its bigger side.
 
@@ -56,7 +56,7 @@ a balanced tree fixes this while ids arrive. when one side gets too deep, it mov
     103          101   103
 ```
 
-now 700 orders need at most 10 looks, the same as the halving in [273](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md).
+now 700 orders need about 10 looks, the halving count in [273](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md). a perfectly even tree needs exactly 10, real ones a few more at worst.
 
 Postgres docs call its btree index a multi-way balanced tree ([docs](https://www.postgresql.org/docs/current/btree.html)), so the repair is built in.
 
@@ -72,11 +72,11 @@ i figured the tree itself was the fast part, but the speed is how even it is.
 
 </details>
 
-2. 700 orders arrive in id order. how many looks for the last one in a plain tree, and at most in a balanced one?
+2. 700 orders arrive in id order. how many looks for the last one in a plain tree, and roughly in a balanced one?
 
 <details><summary>answer</summary>
 
-700 looks in the plain tree, at most 10 in a balanced one. the plain tree is a chain here. the tempting answer is 10 for both, because both are called trees.
+700 looks in the plain tree, about 10 in a balanced one. the plain tree is a chain here. the tempting answer is 10 for both, because both are called trees.
 
 </details>
 

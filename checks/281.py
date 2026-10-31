@@ -39,3 +39,11 @@ assert math.ceil(math.log2(700 + 1)) == 10
 assert looks(build([102, 101, 103]), 103) == 2 and looks(build([101, 102, 103]), 103) == 3
 # source: https://www.postgresql.org/docs/current/btree.html
 # confirmed: PostgreSQL includes an implementation of the standard btree (multi-way balanced tree) index
+# half truth: a self-balancing tree (AVL, heights of the two sides differ by at most 1) is close to even, not perfectly even
+# worst AVL height for 700 nodes: fewest nodes for height h is N(h) = N(h-1) + N(h-2) + 1
+_n = [0, 1]
+while _n[-1] <= 700:
+    _n.append(_n[-1] + _n[-2] + 1)
+assert max(h for h in range(len(_n)) if _n[h] <= 700) == 13
+# source: https://en.wikipedia.org/wiki/AVL_tree
+# confirmed: in an AVL tree the heights of the two child subtrees of any node differ by not more than one
