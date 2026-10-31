@@ -61,4 +61,4 @@ removed is 2 and Buffers is 1 page, since all 7 orders share page 0. 5 rows come
 </details>
 
 ---
-prev: [284 how Postgres keeps a table on disk, rows packed into pages](./284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md) | next: not written yet
+prev: [284 how Postgres keeps a table on disk, rows packed into pages](./284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md) | next: [286 index, a sorted shortcut to rows](./286-index-a-sorted-shortcut-to-rows.md)
