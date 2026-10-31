@@ -372,6 +372,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | time of day | a clock reading with no day attached | [027](./notes/027-dates-and-times-apart.md) |
 | top N per group | keep the first N rows of each group: number inside, filter outside | [193](./notes/193-top-n-per-group.md) |
 | torn write | a write cut off partway, leaving some new blocks and some old | [045](./notes/045-torn-writes.md) |
+| trade off | anything speeding up reads must be kept up on every write | [282](./notes/282-the-trade-off-faster-reads-usually-mean-slower-writes.md) |
 | transaction | a group of changes that all happen or none do | [227](./notes/227-transactions-all-or-nothing.md) |
 | tree | nodes linked parent to children, a lookup follows one path down | [280](./notes/280-trees-data-that-branches.md) |
 | trigger | a rule the database runs by itself on every write | [247](./notes/247-keeping-the-new-column-in-sync-with-a-trigger.md) |
@@ -409,6 +410,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | window function | a calculation across rows that keeps every row, like sum with OVER | [184](./notes/184-window-functions-a-total-next-to-every-row.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
 | worst case | the unluckiest input, like the wanted item sitting last | [269](./notes/269-big-o-in-plain-words-how-work-grows-as-data-grows.md) |
+| write | any change to stored data, like an INSERT adding a row | [282](./notes/282-the-trade-off-faster-reads-usually-mean-slower-writes.md) |
 | write ahead log | the databases own list of changes, flushed before table files change | [233](./notes/233-the-write-ahead-log-write-down-the-plan-before-the-change.md) |
 | xmax | stamp on a row version: the transaction that ended it | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
 | xmin | stamp on a row version: the transaction that created it | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |

@@ -81,4 +81,4 @@ i figured the tree itself was the fast part, but the speed is how even it is.
 </details>
 
 ---
-prev: [280 trees, data that branches](./280-trees-data-that-branches.md) | next: not written yet
+prev: [280 trees, data that branches](./280-trees-data-that-branches.md) | next: [282 the trade off, faster reads usually mean slower writes](./282-the-trade-off-faster-reads-usually-mean-slower-writes.md)
