@@ -1,4 +1,5 @@
 # corrections
+277, 2026-10-31: said python hashes text this way for dictionaries, which reads as if python adds the bytes like the toy hash. it does not (python hash of dhokla is not 627 and kholda does not collide with dhokla). it now says python hashes text for dictionaries too, with a much better recipe than adding. evidence: python, hash('dhokla') != 627 and hash('kholda') != hash('dhokla') (checks/277.py)
 000, 2026-10-31: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and 268 on an assert. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
 000, 2026-10-31: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and 268 on an assert. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
 

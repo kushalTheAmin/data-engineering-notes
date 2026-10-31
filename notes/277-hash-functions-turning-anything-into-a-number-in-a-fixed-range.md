@@ -30,7 +30,7 @@ ask again tomorrow and dhokla is still 3, so you find a slot by calculating inst
 
 i expected a hash function to be some scary scrambling, but this one is addition and a remainder. it is also a bad one: "kholda" has the same letters, adds to 627 and lands in slot 3 too. real ones mix the order of the bytes in.
 
-python hashes text this way for dictionaries, but its value for a string changes each time python starts, on purpose ([docs](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHASHSEED)). same within one run, never saved to a file.
+python hashes text for dictionaries too, with a much better recipe than adding, but its value for a string changes each time python starts, on purpose ([docs](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHASHSEED)). same within one run, never saved to a file.
 
 ### check yourself
 
