@@ -24,6 +24,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | avg | the average of a column, its sum divided by how many values | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
 | backfill | fills a new column for rows that already exist, in small batches | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
 | backup | a copy of your data, kept elsewhere, that you can restore from | [251](./notes/251-backups-a-copy-you-can-restore-from.md) |
+| balanced tree | a tree that keeps its depth as small as its size allows | [281](./notes/281-balanced-trees-why-the-depth-stays-small.md) |
 | batch | a small slice of rows handled by one statement | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
 | BEGIN | the command that opens a transaction | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
 | BETWEEN | a test keeping values from a low to a high end, inclusive | [112](./notes/112-between-ranges-that-include-both-ends.md) |
@@ -98,6 +99,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | DELETE without WHERE | removes every row in the table, leaving it empty | [223](./notes/223-delete-removing-rows-and-what-still-points-at-them.md) |
 | denormalization | copying a fact on purpose so reads skip a lookup | [262](./notes/262-denormalization-copying-data-on-purpose.md) |
 | DENSE_RANK | like RANK, but the row after a tie gets the next number | [188](./notes/188-rank-vs-dense-rank-what-ties-do.md) |
+| depth | the number of levels in a tree, from the root down | [281](./notes/281-balanced-trees-why-the-depth-stays-small.md) |
 | DESC | sort direction: biggest first, instead of the default smallest first | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
 | dialect | one databases own version of SQL, with its own spellings and rules | [135](./notes/135-one-language-many-dialects.md) |
 | dirty read | reading another transactions change before it is committed | [236](./notes/236-dirty-reads.md) |

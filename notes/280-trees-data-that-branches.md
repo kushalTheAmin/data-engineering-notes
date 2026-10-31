@@ -29,4 +29,4 @@ i assumed a tree was some fancy structure, but its the halving i knew with the m
 this is tidy only because i picked the order. what if ids arrive as 101, 102, 103? the next one.
 
 ---
-prev: [279 collisions, when two keys land in the same spot](./279-collisions-when-two-keys-land-in-the-same-spot.md) | next: not written yet
+prev: [279 collisions, when two keys land in the same spot](./279-collisions-when-two-keys-land-in-the-same-spot.md) | next: [281 balanced trees, why the depth stays small](./281-balanced-trees-why-the-depth-stays-small.md)
