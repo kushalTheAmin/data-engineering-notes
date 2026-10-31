@@ -71,4 +71,4 @@ loose. visitor names arrive in no order, so the tidy list shoves items over on m
 </details>
 
 ---
-prev: [281 balanced trees, why the depth stays small](./281-balanced-trees-why-the-depth-stays-small.md) | next: not written yet
+prev: [281 balanced trees, why the depth stays small](./281-balanced-trees-why-the-depth-stays-small.md) | next: [283 capstone, the same lookup three ways, scan, halving and hash](./283-capstone-the-same-lookup-three-ways-scan-halving-and-hash.md)
