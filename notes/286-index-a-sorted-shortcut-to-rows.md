@@ -4,7 +4,7 @@ section: inside a database server, part 3, ~2 min read
 
 what if a lookup that read 8 pages in [285](./285-full-table-scan-reading-every-page.md) could jump to the right page and read 1 table page instead?
 
-an index is a second list kept next to the table, sorted by one column. each entry is that columns value plus the rows address, the page and slot of [284](./284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md). to find a value, halve the sorted list like [273](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md) (drop half the sorted items per look), then follow the address. index here is not a list position like numbers[2], and the default index in Postgres (a database server) is sorted.
+the usual index is a second list kept next to the table, sorted by one column. each entry is that columns value plus the rows address, the page and slot of [284](./284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md). to find a value, halve the sorted list like [273](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md) (drop half the sorted items per look), then follow the address. index here is not a list position like numbers[2], and the default index in Postgres (a database server) is sorted.
 
 the shop, the imaginary gujarati snack store these notes run on, here as the 1000 made up orders of 285, 136 rows per page. each entry is (order_id, page, slot):
 

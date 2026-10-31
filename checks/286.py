@@ -42,3 +42,7 @@ assert 2 + 1 == 3
 #   confirmed: the CREATE INDEX command creates a B-tree index by default, and Hash, GiST, SP-GiST, GIN and BRIN also exist
 # source: https://www.postgresql.org/docs/16/indexes-unique.html
 #   confirmed: Postgres automatically creates a unique index when a unique constraint or primary key is defined
+# source: https://www.postgresql.org/docs/16/indexes-types.html
+#   confirmed: Hash indexes store a 32-bit hash code of the value and handle only equality, so not every index is sorted
+# source: https://www.postgresql.org/docs/16/sql-createindex.html
+#   confirmed: the default index method is btree
