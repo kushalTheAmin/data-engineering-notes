@@ -20,13 +20,13 @@ flowchart TD
 
 finding 107: at the root 104, 107 is bigger, go right. at 106, bigger again, go right. thats 107, 3 looks. 102, 101, 103 and 105 never get touched, each step drops a whole side. 104, 106, 107 are the same middles as the halving in 273.
 
-so a lookup follows one path, one node per level, and this tree has 3 levels. walking all 7 ids one by one, like [269](./269-big-o-in-plain-words-how-work-grows-as-data-grows.md), took 7 looks.
+so a lookup follows one path, one node per level, and this tree has 3 levels. walking all 7 ids, like [269](./269-big-o-in-plain-words-how-work-grows-as-data-grows.md), took 7 looks.
 
-real databases use this. Postgres, a popular one, builds its indexes (lookup shortcuts) as B-trees by default, a kind of tree ([docs](https://www.postgresql.org/docs/current/indexes-types.html)).
+real databases use trees. Postgres, a popular one, builds its indexes (lookup shortcuts) as B-trees by default, a kind of tree whose nodes can have more than two children ([docs](https://www.postgresql.org/docs/current/indexes-types.html)).
 
 i assumed a tree was some fancy structure, but its the halving i knew with the middles drawn as boxes.
 
-this one is only tidy because i picked the order. what if the ids arrive as 101, 102, 103 in a row? the next one.
+this is tidy only because i picked the order. what if ids arrive as 101, 102, 103? the next one.
 
 ---
 prev: [279 collisions, when two keys land in the same spot](./279-collisions-when-two-keys-land-in-the-same-spot.md) | next: not written yet

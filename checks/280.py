@@ -29,3 +29,5 @@ assert len(ids) == 7 and len(ids) == 1 + 2 + 4
 # confirmed: CREATE INDEX creates B-tree indexes by default
 # source: https://survey.stackoverflow.co/2025/technology
 # confirmed: PostgreSQL is the most used database among all respondents, 55.6%, so popular is supported
+# source: https://en.wikipedia.org/wiki/B-tree
+# confirmed: the B-tree generalizes the binary search tree, allowing nodes to have more than two children
