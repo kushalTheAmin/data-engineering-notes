@@ -120,6 +120,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | EXCEPT | keeps first query rows missing from the second, order matters | [183](./notes/183-intersect-and-except.md) |
 | EXCLUDED | in an upsert, the row you tried to insert | [224](./notes/224-upsert-insert-or-update-in-one-statement.md) |
 | EXISTS | true when the inner query returns at least one row | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
+| EXPLAIN | Postgres command that shows the plan it would use for a query | [285](./notes/285-full-table-scan-reading-every-page.md) |
 | explode | turning a record holding a list into one row per list item | [071](./notes/071-exploding-lists-into-many-rows.md) |
 | fan out | a join keeping a left row once per matching right row | [164](./notes/164-fan-out-when-a-join-multiplies-rows.md) |
 | field | one fact every row has a spot for, like city | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
@@ -135,6 +136,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | FROM | the clause naming the table a query reads from | [104](./notes/104-select-and-from-picking-columns.md) |
 | full join | a join keeping unmatched rows from both tables, nulls fill the gaps | [162](./notes/162-right-and-full-outer-joins.md) |
 | full run order (of a query) | FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY, LIMIT | [153](./notes/153-the-full-run-order-with-group-by-and-having.md) |
+| full table scan | reading every page of a table and testing every row | [285](./notes/285-full-table-scan-reading-every-page.md) |
 | function | SQL that takes a value and returns a new one | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | functional dependency | one column decides another: each value gives exactly one value | [258](./notes/258-functional-dependency-when-one-column-decides-another.md) |
 | gap (between islands) | the empty days between two runs of days with orders | [195](./notes/195-gaps-and-islands-date-minus-row-number.md) |
@@ -328,6 +330,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | SELECT star | the shortcut for every column, in the tables order | [105](./notes/105-select-star-every-column.md) |
 | self join | a table joined to a second copy of itself under another alias | [168](./notes/168-self-join-a-table-joined-to-itself.md) |
 | semi join | keeps left rows that have a match, once each, never copies | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
+| Seq Scan | Postgres name for a full table scan in a plan | [285](./notes/285-full-table-scan-reading-every-page.md) |
 | sequence | a counter the database keeps outside any table, only moving forward | [219](./notes/219-sequences-where-made-up-ids-come-from.md) |
 | serializable | strictest level: results match some one-at-a-time order of transactions | [241](./notes/241-serializable-as-if-one-at-a-time-and-retrying-the-failures.md) |
 | serialization failure | error 40001: Postgres refuses a transaction so the app must retry it | [241](./notes/241-serializable-as-if-one-at-a-time-and-retrying-the-failures.md) |

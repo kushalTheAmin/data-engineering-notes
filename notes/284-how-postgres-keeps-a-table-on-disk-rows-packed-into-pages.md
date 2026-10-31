@@ -33,4 +33,4 @@ this is the slot of [249](./249-mvcc-an-update-writes-a-new-row-version.md). aft
 8 kB is the usual size ([docs](https://www.postgresql.org/docs/current/storage-page-layout.html)).
 
 ---
-prev: [283 capstone, the same lookup three ways, scan, halving and hash](./283-capstone-the-same-lookup-three-ways-scan-halving-and-hash.md) | next: not written yet
+prev: [283 capstone, the same lookup three ways, scan, halving and hash](./283-capstone-the-same-lookup-three-ways-scan-halving-and-hash.md) | next: [285 full table scan, reading every page](./285-full-table-scan-reading-every-page.md)

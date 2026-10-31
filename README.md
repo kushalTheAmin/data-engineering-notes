@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 284
+notes so far: 285
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -323,3 +323,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 
 ## section 12: inside a database server
 - [284 how Postgres keeps a table on disk, rows packed into pages](./notes/284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md): all 7 orders sit in page 0 at (0,1) to (0,7), and reading one row hands over the whole 8192 byte page
+- [285 full table scan, reading every page](./notes/285-full-table-scan-reading-every-page.md): order 106 is in row 6 of page 0, yet the scan reads all 8 pages, and only LIMIT 1 lets it stop
