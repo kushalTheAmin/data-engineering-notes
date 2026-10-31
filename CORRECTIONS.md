@@ -1,5 +1,7 @@
 # corrections
 
+000, 2026-10-31: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and 268 on an assert. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
+
 000, 2026-10-31: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and 268 on an assert; 1.2.2 fails checks/197.py, 201 and 202; 1.0.0 fails 201, 202, 245 and more. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9) with 2.0.0 and 1.2.2, FAIL (23) with 1.0.0.
 
 274, 2026-10-30: check yourself 1 listed the lists as fafda 4.50, dhokla 6.00 and khandvi 7.50, kaju katli 12.00, which reads as a list of 3 and a list of 1 (3 comparisons, the answer it calls tempting), while the answer works on two lists of 2. it now writes the two lists in brackets. the merge join line also said it sorts both tables, yet the Postgres page says the sorting may be an explicit sort step or an index scan in the proper order, so it now says it needs both in order. evidence: python, merge([4.5, 6.0, 7.5], [12.0]) takes 3 comparisons and merge([4.5, 6.0], [7.5, 12.0]) takes 2 (checks/274.py); https://www.postgresql.org/docs/current/planner-optimizer.html (opened this run)
