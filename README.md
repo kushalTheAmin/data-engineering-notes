@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 283
+notes so far: 284
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -320,3 +320,6 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [281 balanced trees, why the depth stays small](./notes/281-balanced-trees-why-the-depth-stays-small.md): ids arriving in order turn the tree into a chain of 7 looks, and balancing is what keeps it at 3
 - [282 the trade off, faster reads usually mean slower writes](./notes/282-the-trade-off-faster-reads-usually-mean-slower-writes.md): the tidy list finds an order in 3 looks instead of 7, but 700 mixed up orders cost it 118348 write steps against 700
 - [283 capstone, the same lookup three ways, scan, halving and hash](./notes/283-capstone-the-same-lookup-three-ways-scan-halving-and-hash.md): one question on 7000 orders takes 7000 looks, 13 or 1, and each way asks the data for something different
+
+## section 12: inside a database server
+- [284 how Postgres keeps a table on disk, rows packed into pages](./notes/284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md): all 7 orders sit in page 0 at (0,1) to (0,7), and reading one row hands over the whole 8192 byte page

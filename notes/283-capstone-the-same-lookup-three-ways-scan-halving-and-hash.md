@@ -85,4 +85,4 @@ hash. a yes or no needs no order, and writes drop an id into a slot instead of s
 </details>
 
 ---
-prev: [282 the trade off, faster reads usually mean slower writes](./282-the-trade-off-faster-reads-usually-mean-slower-writes.md) | next: not written yet
+prev: [282 the trade off, faster reads usually mean slower writes](./282-the-trade-off-faster-reads-usually-mean-slower-writes.md) | next: [284 how Postgres keeps a table on disk, rows packed into pages](./284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md)
