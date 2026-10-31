@@ -59,4 +59,4 @@ slot 2, same as fafda. a space is byte 32, so the sum is 530, and 530 % 8 is 2. 
 </details>
 
 ---
-prev: [276 why sorting costs more than one pass over the data](./276-why-sorting-costs-more-than-one-pass-over-the-data.md) | next: not written yet
+prev: [276 why sorting costs more than one pass over the data](./276-why-sorting-costs-more-than-one-pass-over-the-data.md) | next: [278 hash tables, how a dictionary finds a key without searching](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md)

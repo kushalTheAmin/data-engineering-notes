@@ -146,6 +146,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | grouping() | gives 1 on a made-up total row, 0 on a real group | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | hard delete | a real DELETE: the row is physically removed | [266](./notes/266-soft-deletes-marking-a-row-gone-instead-of-removing-it.md) |
 | hash function | turns any input into a number, same input always same number | [277](./notes/277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md) |
+| hash table | slots where a keys hash picks the one place to look | [278](./notes/278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md) |
 | HAVING | a filter on groups, run after GROUP BY, testing an aggregate | [146](./notes/146-having-filtering-whole-groups.md) |
 | head | prints the first lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | header row | the first line of a csv, holding column names instead of data | [065](./notes/065-the-header-row-naming-the-columns.md) |
@@ -327,6 +328,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | session id | the running sum of start flags, one number per session | [200](./notes/200-session-ids-a-running-sum-of-the-flags.md) |
 | shell | the program inside a terminal that reads your line and runs it | [049](./notes/049-the-terminal.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
+| slot | one numbered place in a hash table, holding a key and value | [278](./notes/278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md) |
 | snake_case | lowercase words joined by underscores, like ordered_at | [264](./notes/264-naming-conventions-names-people-can-guess.md) |
 | snapshot (Postgres) | a note of which transactions had finished when a query began | [250](./notes/250-transaction-snapshots-what-your-transaction-is-allowed-to-see.md) |
 | soft delete | marking a row gone with a deleted_at time instead of removing it | [266](./notes/266-soft-deletes-marking-a-row-gone-instead-of-removing-it.md) |
