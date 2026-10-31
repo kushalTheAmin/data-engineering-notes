@@ -56,7 +56,7 @@ a balanced tree fixes this while ids arrive. when one side gets too deep, it mov
     103          101   103
 ```
 
-now 700 orders need about 10 looks, the halving count in [273](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md). a perfectly even tree needs exactly 10, real ones a few more at worst.
+now 700 orders need about 10 looks at worst, the halving count in [273](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md). a perfectly even tree never needs more than 10, real ones a few more.
 
 Postgres docs call its btree index a multi-way balanced tree ([docs](https://www.postgresql.org/docs/current/btree.html)), so the repair is built in.
 

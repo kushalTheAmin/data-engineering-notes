@@ -47,3 +47,12 @@ while _n[-1] <= 700:
 assert max(h for h in range(len(_n)) if _n[h] <= 700) == 13
 # source: https://en.wikipedia.org/wiki/AVL_tree
 # confirmed: in an AVL tree the heights of the two child subtrees of any node differ by not more than one
+# half truth: 10 is the worst case of a perfectly even tree, not what every lookup takes
+def _depths(lo, hi, d=1, out=None):
+    out = [] if out is None else out
+    if lo <= hi:
+        m = (lo + hi) // 2
+        out.append(d); _depths(lo, m - 1, d + 1, out); _depths(m + 1, hi, d + 1, out)
+    return out
+_d = _depths(0, 699)
+assert len(_d) == 700 and max(_d) == 10 and _d.count(10) == 189 and _d.count(1) == 1
