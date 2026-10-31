@@ -2,9 +2,9 @@
 builds on: [278 hash tables, how a dictionary finds a key without searching](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md), [277 hash functions, turning anything into a number in a fixed range](./277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md), [270 flat and straight line, the two shapes of growth](./270-flat-and-straight-line-the-two-shapes-of-growth.md)
 section: tricks that make data fast, part 11, ~2 min read
 
-in [278](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md), a hash table (numbered slots, a name hashed to pick its slot), ladoo, a round sweet, wanted slot 7 where jalebi already sits, and the code just overwrote it. does a dictionary really lose a product whenever two names collide?
+in [278](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md), a hash table (numbered slots, a name hashed to pick its slot), ladoo, a round sweet, wanted slot 7 where jalebi already sits, and the code would just overwrite it. does a dictionary really lose a product whenever two names collide?
 
-a collision is two different keys getting the same slot from the [hash function](./277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md). you cant prevent it, because 9 names never fit into 8 slots without sharing. the common fix is chaining: each slot holds a small list of names, not one.
+a collision is two different keys getting the same slot from the [hash function](./277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md). you cant always prevent it, because 9 names never fit into 8 slots without sharing. the common fix is chaining: each slot holds a small list of names, not one.
 
 the shop, the imaginary gujarati snack store these notes run on, with the same 8 slots as 278 (ladoo is a what-if, not a shop product):
 
