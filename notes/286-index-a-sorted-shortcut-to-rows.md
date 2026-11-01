@@ -51,7 +51,7 @@ Index Scan after:   Buffers: shared hit=3
 
 i figured an index was a sorted copy of the table, but its only keys and addresses, and the rows stay put.
 
-Postgres builds one on every [primary key](./087-primary-key.md), so when you look up by key, even a huge table stays fast. every write now updates the index too, a bill like the one in [282](./282-the-trade-off-faster-reads-usually-mean-slower-writes.md).
+Postgres builds one on every [primary key](./087-primary-key.md), so when you look up by key, even a huge table stays fast. most writes now update the index too, a bill like the one in [282](./282-the-trade-off-faster-reads-usually-mean-slower-writes.md).
 
 ### check yourself
 
@@ -75,11 +75,11 @@ customer_id | entries
 
 </details>
 
-2. someone asks for order 999999, which doesnt exist. how many table pages does Postgres read with the index, and why not 8?
+2. someone asks for order 999999, which doesnt exist. how many table pages does Postgres read with the index?
 
 <details><summary>answer</summary>
 
-none. the sorted index shows where 999999 would sit and finds nothing there, so there is no address to follow. on Postgres 16 the plan showed Buffers: shared hit=2, both index pages. the tempting answer is 8, from 285 where a miss cost a full scan.
+none. the sorted index shows where 999999 would sit and finds nothing there, so there is no address to follow. on Postgres 16 the plan showed Buffers: shared hit=2, both index pages. the tempting answer is 1, from picturing the index always handing back a page to read, or 8 from 285 where a miss cost a full scan.
 
 </details>
 

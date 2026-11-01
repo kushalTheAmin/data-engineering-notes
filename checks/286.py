@@ -30,8 +30,8 @@ assert q("SELECT customer_id FROM customers WHERE name = 'Asha'") == [(1,)]
 assert q("SELECT count(*) FROM orders") == [(7,)]
 assert q("SELECT count(*) FROM orders WHERE customer_id = 1") == [(3,)]
 assert len(q("SELECT DISTINCT customer_id FROM orders")) == 4
-# run on a real Postgres 16.15 server: table orders1000 (order_id, customer_id, status, ordered_at,
-# city from generate_series(101,1100), 1000 rows, pg_relation_size 8 pages). before the index:
+# run on a real Postgres 16.15 server: table orders1000 (4 columns: order_id, customer_id, status,
+# ordered_at, from generate_series(101,1100), 1000 rows, pg_relation_size 8 pages; a 5th text column gave 16). before the index:
 # Seq Scan, Buffers shared hit=8 for order_id = 106 (and 1100). CREATE INDEX orders1000_id_idx ON
 # orders1000 (order_id): pg_relation_size of the index 5 pages, bt_metap level 1 (a root and leaves,
 # so a lookup reads 2 index pages). Index Scan for order_id = 1100: Buffers shared hit=3 once cached
@@ -46,3 +46,7 @@ assert 2 + 1 == 3
 #   confirmed: Hash indexes store a 32-bit hash code of the value and handle only equality, so not every index is sorted
 # source: https://www.postgresql.org/docs/16/sql-createindex.html
 #   confirmed: the default index method is btree
+# 'most writes update the index': a HOT update (no indexed column changed, room on the page) adds no index entry
+#   rerun this audit on Postgres 16.15: index on orders(order_id), UPDATE status of 106 gave n_tup_hot_upd 1
+# source: https://www.postgresql.org/docs/16/storage-hot.html
+#   confirmed: "New index entries are not needed to represent updated rows" when no indexed column changes and the page has free space
