@@ -26,6 +26,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | backfill | fills a new column for rows that already exist, in small batches | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
 | backup | a copy of your data, kept elsewhere, that you can restore from | [251](./notes/251-backups-a-copy-you-can-restore-from.md) |
 | balanced tree | a tree that keeps its depth as small as its size allows | [281](./notes/281-balanced-trees-why-the-depth-stays-small.md) |
+| bare column | the column alone in a WHERE, with no function around it | [295](./notes/295-functions-on-a-column-why-the-index-gets-skipped.md) |
 | batch | a small slice of rows handled by one statement | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
 | BEGIN | the command that opens a transaction | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
 | BETWEEN | a test keeping values from a low to a high end, inclusive | [112](./notes/112-between-ranges-that-include-both-ends.md) |
@@ -125,6 +126,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | EXISTS | true when the inner query returns at least one row | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
 | EXPLAIN | Postgres command that shows the plan it would use for a query | [285](./notes/285-full-table-scan-reading-every-page.md) |
 | explode | turning a record holding a list into one row per list item | [071](./notes/071-exploding-lists-into-many-rows.md) |
+| expression index | an index built on a functions result, like lower(name) | [295](./notes/295-functions-on-a-column-why-the-index-gets-skipped.md) |
 | fan out | a join keeping a left row once per matching right row | [164](./notes/164-fan-out-when-a-join-multiplies-rows.md) |
 | field | one fact every row has a spot for, like city | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | file | a name plus a list of bytes in order, kept on disk | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
