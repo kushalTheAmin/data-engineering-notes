@@ -4,7 +4,7 @@ section: inside a database server, part 2, ~2 min read
 
 order 106 sits in the 6th row of a table, and Postgres, a database that runs as its own server, still read all 8 pages. why didnt it stop? [284](./284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md) said a table is pages, 8192 byte chunks packed with rows, numbered from 0.
 
-a full table scan reads every page of a table in order and tests the [WHERE](./106-where-keeping-only-the-rows-that-match.md) condition on every row. its the scan of [283](./283-capstone-the-same-lookup-three-ways-scan-halving-and-hash.md), counted in pages.
+a full table scan reads every page of a table, usually in order, and tests the [WHERE](./106-where-keeping-only-the-rows-that-match.md) condition on every row. its the scan of [283](./283-capstone-the-same-lookup-three-ways-scan-halving-and-hash.md), counted in pages.
 
 the shop, the imaginary gujarati snack store these notes run on, has 7 orders, here padded to 1000 made up ones. its a copy with no [primary key](./087-primary-key.md) (a column unique in every row), so no shortcut exists. EXPLAIN shows the steps Postgres picks, and ANALYZE really runs them:
 

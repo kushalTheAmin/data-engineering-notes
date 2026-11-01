@@ -34,3 +34,5 @@ assert -(-100000 // 136) == 736 and 736 * 8192 == 6029312
 #   is shown for a filter, and the planner skips an index on a tiny table (polygon_tbl example)
 # source: https://www.postgresql.org/docs/16/sql-explain.html
 #   confirmed: BUFFERS counts shared blocks hit, and a hit means the block was found in cache
+# source: https://www.postgresql.org/docs/16/runtime-config-compatible.html
+#   confirmed: synchronize_seqscans (default on) lets a scan of a large table start in the middle and wrap around, so the order is not always first page to last
