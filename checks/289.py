@@ -28,3 +28,4 @@ assert leaves[:2] == [[101, 102, 103], [104, 105, 106]]
 # confirmed: a page split moves "a portion of the items" to a new page, not necessarily half
 # rerun this audit on Postgres 16.15: 2000 ascending ids inserted into a primary key, leaf pages bt_page_stats live_items 367, 367, 367, 367, 367, 170 (366 real entries each plus a high key, page capacity about 407), so full left leaves, not half
 assert round(407 * 0.9) == 366
+# audit: root is first used without a gloss in this note; it now says root (the top page), the same word 287 uses for the top page

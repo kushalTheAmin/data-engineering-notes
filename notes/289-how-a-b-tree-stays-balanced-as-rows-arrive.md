@@ -4,9 +4,9 @@ section: inside a database server, part 6, ~2 min read
 
 [288](./288-one-lookup-traced-through-a-b-tree.md) walked a finished tree. but orders keep arriving, so what do you think happens when order 110 lands on a leaf page (a bottom page) with no room left?
 
-the leaf splits. some of its entries move to a new page next to it (half here, far fewer in Postgres when the new key is the biggest yet), and the parent page gets one new signpost (a value saying which child to follow) for the new page. nothing else moves.
+the leaf splits. some of its entries move to a new page next to it (half here, far fewer in Postgres when the new key is the biggest yet), and the parent page gets one new signpost (a value saying which child to follow) for the new page.
 
-the shop, the imaginary snack store these notes run on, with the toy tree of [287](./287-b-tree-pages-that-point-to-pages.md): a root over leaves of at most 3 entries. orders 108 to 110 are made up new ones.
+the shop, the imaginary snack store these notes run on, with the toy tree of [287](./287-b-tree-pages-that-point-to-pages.md): a root (the top page) over leaves of at most 3 entries. orders 108 to 110 are made up new ones.
 
 ```python
 capacity = 3
