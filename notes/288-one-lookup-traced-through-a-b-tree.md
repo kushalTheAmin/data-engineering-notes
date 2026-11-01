@@ -75,4 +75,4 @@ four. two index levels hold only 90000 orders, three hold 27 million, so 3 index
 </details>
 
 ---
-prev: [287 B tree, pages that point to pages](./287-b-tree-pages-that-point-to-pages.md) | next: not written yet
+prev: [287 B tree, pages that point to pages](./287-b-tree-pages-that-point-to-pages.md) | next: [289 how a B tree stays balanced as rows arrive](./289-how-a-b-tree-stays-balanced-as-rows-arrive.md)

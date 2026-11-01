@@ -261,6 +261,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | orphan row | a row whose foreign key matches no row in the other table | [094](./notes/094-what-a-foreign-key-stops.md) |
 | overflow | a result too big for its bit size, wrapping or erroring | [016](./notes/016-overflow.md) |
 | page (Postgres) | a fixed 8192 byte chunk of a table file, packed with rows | [284](./notes/284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md) |
+| page split | a full page divides in two and its parent gains a signpost | [289](./notes/289-how-a-b-tree-stays-balanced-as-rows-arrive.md) |
 | parent folder | the folder holding this one, written .. in a path | [053](./notes/053-absolute-vs-relative-paths.md) |
 | partial dependency | a column decided by only part of a two column key | [260](./notes/260-second-normal-form-nothing-about-half-the-key.md) |
 | partition (window functions) | one group of rows sharing a value, inside a window | [186](./notes/186-partition-by-a-separate-window-per-group.md) |
