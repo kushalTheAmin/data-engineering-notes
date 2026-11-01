@@ -4,7 +4,7 @@ section: inside a database server, part 10, ~2 min read
 
 i put two indexes on the 1000 order table and they came out bigger than the table. how does a shortcut outweigh what it points at?
 
-an index costs you twice: disk, since each index is its own sorted list in its own pages, and writes, since every INSERT adds an entry to every index, not just a row to the table. this is the [trade off](./282-the-trade-off-faster-reads-usually-mean-slower-writes.md) with real numbers.
+an index costs you twice: disk, since each index is its own sorted list in its own pages, and writes, since an INSERT usually adds an entry to every index, not just a row to the table. this is the [trade off](./282-the-trade-off-faster-reads-usually-mean-slower-writes.md) with real numbers.
 
 the shop, the imaginary gujarati snack store these notes run on, as the 1000 made up orders of [286](./286-index-a-sorted-shortcut-to-rows.md) (4 columns) in Postgres 16, a database server. one [index](./286-index-a-sorted-shortcut-to-rows.md) on order_id, one [composite index](./290-composite-indexes-sorted-by-the-first-column-then-the-second.md) on (customer_id, ordered_at). a page is the 8192 byte chunk of [284](./284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md).
 
