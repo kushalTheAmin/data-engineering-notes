@@ -56,6 +56,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | combining mark | a code point with no letter, drawn on the letter before it | [012](./notes/012-combining-marks.md) |
 | COMMIT | ends a transaction and keeps every change made inside it | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
 | comparison | a column, a test like >= and a value, true or false | [107](./notes/107-comparisons-equal-not-equal-bigger-smaller.md) |
+| composite index | an index sorted by one column, then a second inside ties | [290](./notes/290-composite-indexes-sorted-by-the-first-column-then-the-second.md) |
 | composite key | a primary key of two columns, only the pair is unique | [095](./notes/095-composite-keys.md) |
 | compression | storing the same information in fewer bytes, rebuildable exactly | [047](./notes/047-compression-spotting-repeats.md) |
 | computed column | an expression in SELECT, worked out fresh for each row | [122](./notes/122-computed-columns-and-as.md) |

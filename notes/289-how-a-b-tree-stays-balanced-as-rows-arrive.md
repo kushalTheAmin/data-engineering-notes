@@ -54,4 +54,4 @@ if the root fills up, it splits too, and a new root goes above it. the Postgres 
 the catch is the write bill from [282](./282-the-trade-off-faster-reads-usually-mean-slower-writes.md): the insert that splits also writes a new page and edits its parent, so it costs more than one that fits.
 
 ---
-prev: [288 one lookup traced through a B tree](./288-one-lookup-traced-through-a-b-tree.md) | next: not written yet
+prev: [288 one lookup traced through a B tree](./288-one-lookup-traced-through-a-b-tree.md) | next: [290 composite indexes, sorted by the first column, then the second](./290-composite-indexes-sorted-by-the-first-column-then-the-second.md)

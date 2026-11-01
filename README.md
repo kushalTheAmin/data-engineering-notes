@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 289
+notes so far: 290
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -328,3 +328,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [287 B tree, pages that point to pages](./notes/287-b-tree-pages-that-point-to-pages.md): a balanced tree of 1000 orders needs about 10 looks, but the real Postgres index is a root page with 2 signposts over 3 leaf pages, so 2 reads
 - [288 one lookup traced through a B tree](./notes/288-one-lookup-traced-through-a-b-tree.md): order 500 goes root, middle leaf, table page, 8 looks inside the leaf, and only the 3 page reads cost anything
 - [289 how a B tree stays balanced as rows arrive](./notes/289-how-a-b-tree-stays-balanced-as-rows-arrive.md): a full leaf splits in two and the parent gains a signpost, so the tree grows from the top and every leaf stays level
+- [290 composite indexes, sorted by the first column, then the second](./notes/290-composite-indexes-sorted-by-the-first-column-then-the-second.md): Ashas 3 orders sit together oldest first on (customer_id, ordered_at), but flip the columns and other customers wedge in between
