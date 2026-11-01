@@ -59,3 +59,8 @@ start = bisect_left(ids, 500)
 assert ids[start:start + 101][0] == 500 and ids[start:start + 101][-1] == 600
 # source: https://survey.stackoverflow.co/2025/technology
 #   confirmed: PostgreSQL 55.6% of all respondents, the highest share among databases, so popular is backed
+# a hash table keeps no order: python hashes small ints to themselves, so neighbors are not scattered, yet a dict lists keys in insertion order, not sorted
+assert [hash(500), hash(501)] == [500, 501]
+assert list({600: 1, 500: 2, 550: 3}) == [600, 500, 550]
+# source: https://en.wikipedia.org/wiki/Hash_table
+#   confirmed: the infobox calls a hash table an "Unordered associative array"
