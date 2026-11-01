@@ -57,3 +57,5 @@ assert 13 * 1000 == 13000
 ids = list(range(101, 7101))
 start = bisect_left(ids, 500)
 assert ids[start:start + 101][0] == 500 and ids[start:start + 101][-1] == 600
+# source: https://survey.stackoverflow.co/2025/technology
+#   confirmed: PostgreSQL 55.6% of all respondents, the highest share among databases, so popular is backed
