@@ -6,12 +6,12 @@ i put an index on status and Postgres used it for cancelled orders but skipped i
 
 selectivity is the share of a tables rows that a condition keeps. a condition that keeps few rows is selective, and thats the kind an [index](./286-index-a-sorted-shortcut-to-rows.md) (a sorted list of values and row addresses) actually helps.
 
-the shop, the imaginary gujarati snack store these notes run on, here as 100000 made up orders in Postgres 16, a database server, with an index on status. this copy is 768 [pages](./284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md), 8192 byte chunks of rows. 100 orders are cancelled, the rest delivered. pages touched counts every page visit in the Buffers line of EXPLAIN, from [285](./285-full-table-scan-reading-every-page.md):
+the shop, the imaginary gujarati snack store these notes run on, here as 100000 made up orders in Postgres 16, a database server, with an index on status. this copy is 736 [pages](./284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md), 8192 byte chunks of rows. 100 orders are cancelled, the rest delivered. pages touched counts every page visit in the Buffers line of EXPLAIN, from [285](./285-full-table-scan-reading-every-page.md):
 
 | query | rows kept | plan | pages touched |
 |---|---|---|---|
 | `status = 'cancelled'` | 100 (0.1%) | Index Scan | 102 |
-| `status = 'delivered'` | 99900 (99.9%) | Seq Scan | 768 |
+| `status = 'delivered'` | 99900 (99.9%) | Seq Scan | 736 |
 | delivered, Seq Scan switched off | 99900 (99.9%) | Index Scan | 823 |
 
 102 is 2 index pages plus 100 table pages, one trip per cancelled order, and those 100 sat on 100 different pages. for delivered, Postgres chose Seq Scan (read every page in order), and when i switched Seq Scan off with a setting it used the index and touched 823 page visits, more than the scan, since it hopped through the index and the table instead of reading straight through. so the scan really was cheaper.
@@ -43,7 +43,7 @@ no bug. true keeps about 99800 rows, so scanning is cheaper, same as delivered a
 
 </details>
 
-2. the 7 real orders have the status mix below. a second table of 100000 orders in that same mix has pending keeping about 14% of rows, scattered through the table. do you expect it to touch about 14% of the 768 pages?
+2. the 7 real orders have the status mix below. a second table of 100000 orders in that same mix has pending keeping about 14% of rows, scattered through the table. do you expect it to touch about 14% of its 725 pages?
 
 ```sql
 SELECT status, count(*) AS orders FROM orders GROUP BY status ORDER BY status;
@@ -58,7 +58,7 @@ delivered | 5
 pending | 1
 ```
 
-no. on Postgres 16 the 14286 pending rows were spread over nearly every page, so Postgres chose a bitmap scan (list the pages first, then read them) and it touched 739 pages (14 index, 725 table), barely under the 768 of a scan. a share of rows is not a share of pages. the tempting answer is about 110 pages.
+no. on Postgres 16 the 14286 pending rows were spread over nearly every page, so Postgres chose a bitmap scan (list the pages first, then read them) and it touched 739 pages (14 index, 725 table), more than the whole table has. a share of rows is not a share of pages. the tempting answer is about 104 pages.
 
 </details>
 
