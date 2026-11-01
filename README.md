@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 287
+notes so far: 288
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -326,3 +326,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [285 full table scan, reading every page](./notes/285-full-table-scan-reading-every-page.md): order 106 is in row 6 of page 0, yet the scan reads all 8 pages, and only LIMIT 1 lets it stop
 - [286 index, a sorted shortcut to rows](./notes/286-index-a-sorted-shortcut-to-rows.md): finding order 1100 takes 10 looks in a sorted list of keys and addresses, then 1 table page, and Postgres touched 3 pages instead of 8
 - [287 B tree, pages that point to pages](./notes/287-b-tree-pages-that-point-to-pages.md): a balanced tree of 1000 orders needs about 10 looks, but the real Postgres index is a root page with 2 signposts over 3 leaf pages, so 2 reads
+- [288 one lookup traced through a B tree](./notes/288-one-lookup-traced-through-a-b-tree.md): order 500 goes root, middle leaf, table page, 8 looks inside the leaf, and only the 3 page reads cost anything

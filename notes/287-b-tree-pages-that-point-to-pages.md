@@ -51,4 +51,4 @@ at most 90000, because 299 signposts give 300 children, and 300 leaves of 300 en
 </details>
 
 ---
-prev: [286 index, a sorted shortcut to rows](./286-index-a-sorted-shortcut-to-rows.md) | next: not written yet
+prev: [286 index, a sorted shortcut to rows](./286-index-a-sorted-shortcut-to-rows.md) | next: [288 one lookup traced through a B tree](./288-one-lookup-traced-through-a-b-tree.md)
