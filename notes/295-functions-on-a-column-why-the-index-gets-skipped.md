@@ -25,7 +25,7 @@ order_id
 102
 ```
 
-a date never goes backwards as the timestamp grows, but Postgres 16 doesnt reason about what a function does to order. it only knows the list is sorted by the bare column, the column alone. so you keep it bare and move the work elsewhere. the other fix is an index on the expression itself, which the Postgres docs say costs extra on every insert and most updates. [source](https://www.postgresql.org/docs/16/indexes-expressional.html)
+a date never goes backwards as the timestamp grows, but Postgres 16 doesnt reason about what a function does to order. it only knows the list is sorted by the bare column, the column alone. so you keep it bare and move the work elsewhere. the other fix is an index on the expression itself, which the Postgres docs say costs extra on every insert and some updates. [source](https://www.postgresql.org/docs/16/indexes-expressional.html)
 
 i assumed the index cared which column i filtered on, but it cares whether the column is left alone. lower(email) = '...' is the classic one, fixed by that expression index.
 

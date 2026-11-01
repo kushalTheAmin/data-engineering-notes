@@ -28,3 +28,4 @@ assert q("SELECT customer_id FROM customers WHERE lower(name) = 'asha'") == [(1,
 # audit: the docs say index expressions are computed for each row insertion and non-HOT update, so the note says most updates, not every update
 # source: https://www.postgresql.org/docs/16/indexes-expressional.html
 #   confirmed: "Index expressions are relatively expensive to maintain, because the derived expression(s) must be computed for each row insertion and non-HOT update" (opened this run)
+# audit: the docs say only non-HOT updates compute the expression and never say how many updates that is, so the note says some updates, not most (https://www.postgresql.org/docs/16/indexes-expressional.html and https://www.postgresql.org/docs/16/indexes-intro.html on heap-only tuples)
