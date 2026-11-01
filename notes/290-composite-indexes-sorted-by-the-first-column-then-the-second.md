@@ -83,7 +83,7 @@ Jersey City | Asha
 Jersey City | Chirag
 ```
 
-after. Hoboken sorts before Jersey City, and the name only breaks the tie between Asha and Chirag. the tempting answer is before, from C coming before D in the names.
+after. Esha has no city, so the query leaves her out. Hoboken sorts before Jersey City, and the name only breaks the tie between Asha and Chirag. the tempting answer is before, from C coming before D in the names.
 
 </details>
 

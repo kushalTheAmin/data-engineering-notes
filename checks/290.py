@@ -17,3 +17,5 @@ assert q("SELECT city, name FROM customers WHERE city IS NOT NULL ORDER BY city,
 assert q("SELECT count(*) FROM orders WHERE customer_id = 1") == [(3,)]
 # source: https://www.postgresql.org/docs/16/indexes-multicolumn.html
 # confirmed: page titled Multicolumn Indexes; a scan runs from the first entry with a=5 and b=42 up through the last entry with a=5 (opened this run)
+# audit: the city query drops Esha (customer 5) because her city is missing; the answer now says so
+assert q("SELECT customer_id FROM customers WHERE city IS NULL") == [(5,)]
