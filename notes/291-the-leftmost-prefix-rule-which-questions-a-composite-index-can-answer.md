@@ -38,7 +38,7 @@ so the order you pick decides which questions get the shortcut.
 
 ### check yourself
 
-1. imagine an index on order_items (product_id, order_id), a made up one for this question. a query asks WHERE order_id = 105. how many of its 13 entries does it have to look at, and why not 3?
+1. imagine an index on order_items (product_id, order_id), a made up one for this question. a query asks WHERE order_id = 105. how many of its 13 entries does it have to look at without a skip scan, and why not 3?
 
 ```sql
 SELECT product_id, order_id FROM order_items ORDER BY product_id, order_id;

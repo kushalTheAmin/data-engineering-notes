@@ -25,3 +25,5 @@ assert q("SELECT product_id FROM order_items WHERE order_id = 105 ORDER BY produ
 # confirmed: leading column constraints limit the scanned portion; a condition on later columns alone means the entire index is scanned and the planner would usually prefer a sequential scan (opened this run)
 # source: https://www.postgresql.org/docs/18/indexes-multicolumn.html
 # confirmed: version 18 docs describe skip scan, generally taken only when there are few distinct values in the skipped column (opened this run)
+# audit: product_id has 5 distinct values in order_items, the few-distinct-values case where a version 18 skip scan could avoid reading all 13 entries, so check yourself 1 says without a skip scan
+assert len(q("SELECT DISTINCT product_id FROM order_items")) == 5
