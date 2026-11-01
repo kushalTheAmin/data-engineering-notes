@@ -22,6 +22,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | atomicity | the ACID promise: all of a transaction happens, or none of it | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | attribute | one fact about one entity, stored as a column | [255](./notes/255-entities-and-attributes.md) |
 | avg | the average of a column, its sum divided by how many values | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
+| B tree | a tree whose nodes are whole pages, each holding many sorted values | [287](./notes/287-b-tree-pages-that-point-to-pages.md) |
 | backfill | fills a new column for rows that already exist, in small batches | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
 | backup | a copy of your data, kept elsewhere, that you can restore from | [251](./notes/251-backups-a-copy-you-can-restore-from.md) |
 | balanced tree | a tree that keeps its depth as small as its size allows | [281](./notes/281-balanced-trees-why-the-depth-stays-small.md) |
@@ -341,6 +342,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | session id | the running sum of start flags, one number per session | [200](./notes/200-session-ids-a-running-sum-of-the-flags.md) |
 | shell | the program inside a terminal that reads your line and runs it | [049](./notes/049-the-terminal.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
+| signpost (B tree) | a value in a non-leaf page splitting which child to follow | [287](./notes/287-b-tree-pages-that-point-to-pages.md) |
 | slot (hash table) | one numbered place in a hash table, holding a key and value | [278](./notes/278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md) |
 | slot (page) | a numbered seat for one row version on a Postgres page | [284](./notes/284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md) |
 | snake_case | lowercase words joined by underscores, like ordered_at | [264](./notes/264-naming-conventions-names-people-can-guess.md) |

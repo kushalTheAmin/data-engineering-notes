@@ -84,4 +84,4 @@ none. the sorted index shows where 999999 would sit and finds nothing there, so 
 </details>
 
 ---
-prev: [285 full table scan, reading every page](./285-full-table-scan-reading-every-page.md) | next: not written yet
+prev: [285 full table scan, reading every page](./285-full-table-scan-reading-every-page.md) | next: [287 B tree, pages that point to pages](./287-b-tree-pages-that-point-to-pages.md)
