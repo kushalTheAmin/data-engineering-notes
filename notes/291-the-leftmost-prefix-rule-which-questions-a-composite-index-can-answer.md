@@ -86,4 +86,4 @@ two. order is the first column, so the index jumps to order 105 and product 4, t
 </details>
 
 ---
-prev: [290 composite indexes, sorted by the first column, then the second](./290-composite-indexes-sorted-by-the-first-column-then-the-second.md) | next: not written yet
+prev: [290 composite indexes, sorted by the first column, then the second](./290-composite-indexes-sorted-by-the-first-column-then-the-second.md) | next: [292 covering index, when the index alone has the answer](./292-covering-index-when-the-index-alone-has-the-answer.md)
