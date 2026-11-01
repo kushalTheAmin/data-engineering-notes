@@ -25,3 +25,6 @@ assert q("SELECT customer_id FROM customers WHERE lower(name) = 'asha'") == [(1,
 # after CREATE INDEX ON cust100k (lower(name)) it was an Index Scan
 # source: https://www.postgresql.org/docs/16/indexes-expressional.html
 #   confirmed: a lower(col1) query can use an index defined on lower(col1), and index expressions are relatively expensive to maintain because they are computed on each row insertion (opened this run)
+# audit: the docs say index expressions are computed for each row insertion and non-HOT update, so the note says most updates, not every update
+# source: https://www.postgresql.org/docs/16/indexes-expressional.html
+#   confirmed: "Index expressions are relatively expensive to maintain, because the derived expression(s) must be computed for each row insertion and non-HOT update" (opened this run)
