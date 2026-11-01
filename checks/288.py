@@ -37,3 +37,6 @@ assert 300 ** 2 == 90000 and 300 ** 3 == 27000000
 assert 300 ** 2 < 20_000_000 <= 300 ** 3 and 3 + 1 == 4
 # source: https://raw.githubusercontent.com/postgres/postgres/REL_16_STABLE/src/backend/access/nbtree/nbtsearch.c
 #   confirmed: _bt_binsrch does a binary search for a key on a particular page (opened this run)
+# the 7 real orders are scanned even with a primary key (checks/285.py, Postgres 16: Seq Scan, hit=1), so the walk is not under every key lookup
+#   rerun this audit on Postgres 16.15: 7 row table with an index on order_id, WHERE status = 'delivered' gave Seq Scan, Buffers shared hit=1
+# a page read can be served from memory: note 286 shows Buffers: shared hit=3 on cached pages (Postgres 16.15 rerun: first uncached run gave hit=1 read=2)

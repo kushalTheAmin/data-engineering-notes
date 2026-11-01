@@ -39,11 +39,11 @@ read 2, leaf of 366 entries: 8 looks, found (500, 2, 128)
 read 3, table page 2 slot 128
 ```
 
-500 is at least 467 and under 833, so the middle leaf. inside it, 8 looks. the entry says table page 2, slot 128, and that is read 3, the same 3 pages Postgres touched in 286. a page read is a trip to disk, slow next to work in memory.
+500 is at least 467 and under 833, so the middle leaf. inside it, 8 looks. the entry says table page 2, slot 128, and that is read 3, the same 3 pages Postgres touched in 286. a page not in memory is a slow trip to disk.
 
-i figured the 8 looks would be the part to worry about, but they happen inside a page already loaded, so the only cost that counts is the 3 page reads. a signpost value belongs to the side above it, so 467 goes middle too.
+i figured the 8 looks would be the worry, but they happen inside a loaded page, so only the 3 page reads count. a signpost value belongs to the side above it, so 467 goes middle too.
 
-this runs under every lookup by [primary key](./087-primary-key.md) (the column naming each row).
+this runs under [primary key](./087-primary-key.md) (the column naming each row) lookups on big tables, not the 7 real orders.
 
 ### check yourself
 
