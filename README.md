@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 294
+notes so far: 295
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -333,3 +333,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [292 covering index, when the index alone has the answer](./notes/292-covering-index-when-the-index-alone-has-the-answer.md): asking for Ashas order times needs 0 trips to the table because the index entries already hold them, asking for status needs 3
 - [293 what indexes cost, slower writes and more disk](./notes/293-what-indexes-cost-slower-writes-and-more-disk.md): two indexes on 1000 orders took 11 pages against the table's 8, and one insert wrote 3 places
 - [294 selectivity, when an index doesnt help](./notes/294-selectivity-when-an-index-doesnt-help.md): the same status index served cancelled with 102 pages but delivered went back to a 768 page scan, because it depends on the share of rows kept
+- [295 functions on a column, why the index gets skipped](./notes/295-functions-on-a-column-why-the-index-gets-skipped.md): the same 144 rows cost 736 pages behind CAST(ordered_at AS DATE) and 4 pages as a plain range

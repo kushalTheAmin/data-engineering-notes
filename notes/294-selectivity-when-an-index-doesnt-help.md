@@ -63,4 +63,4 @@ no. on Postgres 16 the 14286 pending rows were spread over nearly every page, so
 </details>
 
 ---
-prev: [293 what indexes cost, slower writes and more disk](./293-what-indexes-cost-slower-writes-and-more-disk.md) | next: not written yet
+prev: [293 what indexes cost, slower writes and more disk](./293-what-indexes-cost-slower-writes-and-more-disk.md) | next: [295 functions on a column, why the index gets skipped](./295-functions-on-a-column-why-the-index-gets-skipped.md)
