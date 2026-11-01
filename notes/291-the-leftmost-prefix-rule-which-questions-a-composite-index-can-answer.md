@@ -32,7 +32,7 @@ ordered_at from 04-06 alone: [2, 4, 6]
 
 the first two are one run, so the index finds the start and reads until the run ends. the third is scattered, entries 2, 4 and 6 with others between, so there is no start to jump to. i expected the second column to be a second way in, but its only a tiebreaker, and a tiebreaker means nothing until you know the first value.
 
-Postgres, a database server, can still read the whole index for the third question, but its docs say it would usually rather scan the table. version 18 added a skip scan, which helps when the first column has few different values.
+Postgres, a database server, can still read the whole index for the third question, but its docs say it would usually rather scan the table. version 18 added a skip scan, which searches again for each first value in turn and helps when the first column has few different values.
 
 so the order you pick decides which questions get the shortcut.
 
