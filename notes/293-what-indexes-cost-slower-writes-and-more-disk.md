@@ -23,11 +23,11 @@ index on (customer_id, ordered_at)    +1 entry
 
 11 pages of index against 8 of table. an entry is the value plus the rows address, 16 and 24 bytes against 56 for a row, so entries alone fill 7 pages, and each index adds a metapage (a bookkeeping page) and a root page (the top page).
 
-now the insert: one new order is three writes in three places, each entry finding its spot in its own tree, sometimes with a [page split](./289-how-a-b-tree-stays-balanced-as-rows-arrive.md). each index grew by exactly 1 entry.
+the insert: one new order is three writes in three places, each entry finding its spot in its own tree, sometimes with a [page split](./289-how-a-b-tree-stays-balanced-as-rows-arrive.md). each index grew by 1 entry.
 
 i assumed an index was a thin layer beside the table, but two of them took more room than the table did.
 
-the Postgres docs say indexes seldom or never used in queries should be removed, since each one must be kept synchronized ([docs](https://www.postgresql.org/docs/16/indexes-intro.html)). so adding one is a decision.
+the Postgres docs say every index must be kept synchronized, which adds overhead to writes, and that indexes seldom or never used should be removed ([docs](https://www.postgresql.org/docs/16/indexes-intro.html)). so adding one is a decision.
 
 ### check yourself
 

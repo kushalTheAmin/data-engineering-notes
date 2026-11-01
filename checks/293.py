@@ -14,7 +14,8 @@ assert 8 + 5 + 6 == 19
 assert 1003 - 1002 == 1 and 1004 - 1003 == 1
 assert 1 + 2 == 3  # one table row plus one entry in each of two indexes
 # source: https://www.postgresql.org/docs/16/indexes-intro.html
-#   confirmed: the system has to keep an index synchronized with the table, which adds overhead to data manipulation operations, and indexes seldom or never used in queries should be removed (opened this run)
+#   confirmed: "After an index is created, the system has to keep it synchronized with the table. This adds overhead to data manipulation operations." and, in a separate paragraph, "Indexes can also prevent the creation of heap-only tuples. Therefore indexes that are seldom or never used in queries should be removed." (opened this run)
+# audit: the old note joined the two with since, but the docs give heap-only tuples as the reason for removal, so the note now states the two facts separately
 # source: https://www.postgresql.org/docs/16/btree-implementation.html
 #   confirmed: each leaf page holds tuples pointing to table rows and a metapage sits at the start of the index (opened this run)
 # audit: not every INSERT adds an entry to every index. Postgres 16.15 run this audit: a partial index (CREATE INDEX ... WHERE status = 'cancelled') on orders1000, then INSERT of a 'delivered' order, left the index with no leaf page at all (bt_page_items block 1 out of range), so no entry was added. the note now says usually
