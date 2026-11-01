@@ -26,3 +26,5 @@ assert 725 + 14 == 739 and 739 > 725 and round(0.14286 * 725) == 104
 # note: Buffers counts page visits, so 823 can exceed the 736 pages of the table. in o7 the pending plan was chosen by the planner (Bitmap Heap Scan), not forced
 # audit: the first run of this note said 768 pages, but that copy was built with CREATE TABLE AS, which leaves empty pages at the end. Postgres 16.15 run this audit: 768 relation pages of which only 736 hold rows (distinct ctid blocks), and 725 of 768 for the 5:1:1 copy. a table built with CREATE TABLE and INSERT is 736 pages (100000 / 136 rows per page, rounded up) and the 5:1:1 mix is 725 pages, with pending still Bitmap Heap Scan, 14 + 725 = 739
 assert -(-100000 // 136) == 736 and 768 - 736 == 32 and 768 - 725 == 43
+# audit: Heap Blocks exact=725 is every one of the 725 table pages, so the note says every page, not nearly every. EXPLAIN is now glossed in the note
+assert 725 == 725
