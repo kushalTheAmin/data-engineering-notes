@@ -1,4 +1,5 @@
 # corrections
+000, 2026-11-01: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and 268 on an assert; installing older duckdb did not take effect here. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
 000, 2026-11-01: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and 268 on an assert. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
 000, 2026-11-01: gate failed before any change, so no notes were audited: duckdb 2.0.0 fails checks/008.py, 011, 026 to 030 on fetchone, 041 and 268 on an assert. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
 283, 2026-11-01: note text unchanged. the claim that Postgres is a popular database had no page behind it in checks/283.py. the check now cites the Stack Overflow survey. evidence: https://survey.stackoverflow.co/2025/technology (PostgreSQL 55.6% of all respondents, the highest share, opened this run); same fix 276 and 280 got
