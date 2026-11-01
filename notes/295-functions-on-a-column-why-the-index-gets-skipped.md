@@ -66,4 +66,4 @@ compare the bare column, `WHERE name = 'Asha'`, when you know the exact stored c
 </details>
 
 ---
-prev: [294 selectivity, when an index doesnt help](./294-selectivity-when-an-index-doesnt-help.md) | next: not written yet
+prev: [294 selectivity, when an index doesnt help](./294-selectivity-when-an-index-doesnt-help.md) | next: [296 the query planner, picking the cheapest plan](./296-the-query-planner-picking-the-cheapest-plan.md)

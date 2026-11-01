@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 295
+notes so far: 296
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -334,3 +334,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [293 what indexes cost, slower writes and more disk](./notes/293-what-indexes-cost-slower-writes-and-more-disk.md): two indexes on 1000 orders took 11 pages against the table's 8, and one insert wrote 3 places
 - [294 selectivity, when an index doesnt help](./notes/294-selectivity-when-an-index-doesnt-help.md): the same status index served cancelled with 102 pages but delivered went back to a 768 page scan, because it depends on the share of rows kept
 - [295 functions on a column, why the index gets skipped](./notes/295-functions-on-a-column-why-the-index-gets-skipped.md): the same 144 rows cost 736 pages behind CAST(ordered_at AS DATE) and 4 pages as a plain range
+- [296 the query planner, picking the cheapest plan](./notes/296-the-query-planner-picking-the-cheapest-plan.md): the same index wins for cancelled at cost 14.36 and loses for delivered at 2849.71, because Postgres prices every way first
