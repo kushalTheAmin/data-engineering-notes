@@ -2,9 +2,9 @@
 builds on: [288 one lookup traced through a B tree](./288-one-lookup-traced-through-a-b-tree.md), [287 B tree, pages that point to pages](./287-b-tree-pages-that-point-to-pages.md), [281 balanced trees, why the depth stays small](./281-balanced-trees-why-the-depth-stays-small.md), [282 the trade off, faster reads usually mean slower writes](./282-the-trade-off-faster-reads-usually-mean-slower-writes.md)
 section: inside a database server, part 6, ~2 min read
 
-[288](./288-one-lookup-traced-through-a-b-tree.md) walked a finished tree. but orders keep arriving and a page holds so much, so what do you think happens when order 110 lands on a leaf page (a bottom page) with no room left?
+[288](./288-one-lookup-traced-through-a-b-tree.md) walked a finished tree. but orders keep arriving, so what do you think happens when order 110 lands on a leaf page (a bottom page) with no room left?
 
-the leaf splits. half its entries move to a new page next to it, and the parent page gets one new signpost (a value saying which child to follow) for the new page. nothing else moves.
+the leaf splits. some of its entries move to a new page next to it (half here, far fewer in Postgres when the new key is the biggest yet), and the parent page gets one new signpost (a value saying which child to follow) for the new page. nothing else moves.
 
 the shop, the imaginary snack store these notes run on, with the toy tree of [287](./287-b-tree-pages-that-point-to-pages.md): a root over leaves of at most 3 entries. orders 108 to 110 are made up new ones.
 
@@ -47,7 +47,7 @@ insert 110 -> leaf full, split, new signpost 109
 
 108 and 109 fit. 110 finds the right leaf holding 107, 108, 109, so it splits into 107, 108 and 109, 110, and the root gets signpost 109. four leaves now, but a lookup still reads the root and one leaf, and the first two leaves were never touched.
 
-i assumed a full page would make the tree lopsided at the bottom, but it never grows down there, new leaves just appear side by side.
+i assumed a full page would make the tree lopsided, but new leaves just appear side by side.
 
 if the root fills up, it splits too, and a new root goes above it. the Postgres docs say splits "cascade upwards" ([docs](https://www.postgresql.org/docs/16/btree-implementation.html)). so every leaf stays the same distance from the top, which is the balance of [281](./281-balanced-trees-why-the-depth-stays-small.md).
 
