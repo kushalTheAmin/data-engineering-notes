@@ -18,3 +18,8 @@ assert 1 + 2 == 3  # one table row plus one entry in each of two indexes
 # source: https://www.postgresql.org/docs/16/btree-implementation.html
 #   confirmed: each leaf page holds tuples pointing to table rows and a metapage sits at the start of the index (opened this run)
 # audit: not every INSERT adds an entry to every index. Postgres 16.15 run this audit: a partial index (CREATE INDEX ... WHERE status = 'cancelled') on orders1000, then INSERT of a 'delivered' order, left the index with no leaf page at all (bt_page_items block 1 out of range), so no entry was added. the note now says usually
+# audit: Postgres 16.15 run this audit on a 1000 row copy (4 columns): heap_page_items lp_len 56 for every row (136 per page), bt_page_items itemlen 16 (order_id index) and 24 (composite), bt_page_stats: order_id index = metapage + root + 3 leaf pages, composite = metapage + root + 4 leaf pages
+assert 3 + 4 == 7 and 7 + 2 * 2 == 11
+assert 16 < 24 < 56
+# source: https://www.postgresql.org/docs/16/indexes-unique.html
+#   confirmed: PostgreSQL automatically creates a unique index when a unique constraint or primary key is defined for a table (opened this run)
