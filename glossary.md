@@ -71,6 +71,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | count(*) | counts every row, nulls or not | [138](./notes/138-count-star-vs-count-of-a-column.md) |
 | count(column) | counts the rows where that column is not null | [138](./notes/138-count-star-vs-count-of-a-column.md) |
 | count(DISTINCT column) | counts how many different non-null values a column has | [139](./notes/139-count-distinct-counting-different-values.md) |
+| covering index | an index holding every column a query needs, so no table trips | [292](./notes/292-covering-index-when-the-index-alone-has-the-answer.md) |
 | crash | anything that wipes memory, like a power cut or the server dying | [232](./notes/232-durability-surviving-a-crash.md) |
 | CREATE TABLE | makes a new empty table from a name and typed columns | [213](./notes/213-create-table-naming-a-table-and-its-columns.md) |
 | CREATE TABLE IF NOT EXISTS | skips if the name is taken, never checking the columns match | [213](./notes/213-create-table-naming-a-table-and-its-columns.md) |
@@ -165,6 +166,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | IN | keeps a row if its value equals any item in a list | [111](./notes/111-in-matching-against-a-list.md) |
 | index (database) | a separate sorted list of values, each with its rows address | [286](./notes/286-index-a-sorted-shortcut-to-rows.md) |
 | index lookup | walk from root page down, one child per page, to the row | [288](./notes/288-one-lookup-traced-through-a-b-tree.md) |
+| index-only scan | Postgres answering a query from the index without visiting the table | [292](./notes/292-covering-index-when-the-index-alone-has-the-answer.md) |
 | inner join | a join keeping only pairs where the match holds, dropping the rest | [156](./notes/156-inner-join-traced-by-hand.md) |
 | INSERT | adds new rows to a table, matching values to columns | [220](./notes/220-insert-adding-rows-and-matching-values-to-columns.md) |
 | insert anomaly | a fact cant be stored until an unrelated fact exists | [090](./notes/090-insert-and-delete-anomalies.md) |
