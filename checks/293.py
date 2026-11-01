@@ -23,3 +23,4 @@ assert 3 + 4 == 7 and 7 + 2 * 2 == 11
 assert 16 < 24 < 56
 # source: https://www.postgresql.org/docs/16/indexes-unique.html
 #   confirmed: PostgreSQL automatically creates a unique index when a unique constraint or primary key is defined for a table (opened this run)
+# audit: metapage and root page are now glossed in the note. source above (btree-implementation): a single metapage is stored at the start of the index, leaf pages are the lowest level and all other levels are internal pages

@@ -21,9 +21,9 @@ index on order_id                     +1 entry
 index on (customer_id, ordered_at)    +1 entry
 ```
 
-11 pages of index against 8 of table. an entry is the value plus the rows address, 16 and 24 bytes against 56 for a row, so entries alone fill 7 pages, and each index adds a metapage and a root page.
+11 pages of index against 8 of table. an entry is the value plus the rows address, 16 and 24 bytes against 56 for a row, so entries alone fill 7 pages, and each index adds a metapage (a bookkeeping page) and a root page (the top page).
 
-now the insert: one new order is three writes in three places, each entry finding its spot in its own tree, sometimes with a [page split](./289-how-a-b-tree-stays-balanced-as-rows-arrive.md). i counted entries before and after, and each index grew by exactly 1.
+now the insert: one new order is three writes in three places, each entry finding its spot in its own tree, sometimes with a [page split](./289-how-a-b-tree-stays-balanced-as-rows-arrive.md). each index grew by exactly 1 entry.
 
 i assumed an index was a thin layer beside the table, but two of them took more room than the table did.
 
