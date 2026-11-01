@@ -50,4 +50,4 @@ one catch: Postgres only skips the table for pages it knows hold no recent chang
 each extra column makes the entries fatter, and thats a bill too.
 
 ---
-prev: [291 the leftmost prefix rule, which questions a composite index can answer](./291-the-leftmost-prefix-rule-which-questions-a-composite-index-can-answer.md) | next: not written yet
+prev: [291 the leftmost prefix rule, which questions a composite index can answer](./291-the-leftmost-prefix-rule-which-questions-a-composite-index-can-answer.md) | next: [293 what indexes cost, slower writes and more disk](./293-what-indexes-cost-slower-writes-and-more-disk.md)

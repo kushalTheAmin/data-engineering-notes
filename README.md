@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 292
+notes so far: 293
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -331,3 +331,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [290 composite indexes, sorted by the first column, then the second](./notes/290-composite-indexes-sorted-by-the-first-column-then-the-second.md): Ashas 3 orders sit together oldest first on (customer_id, ordered_at), but flip the columns and other customers wedge in between
 - [291 the leftmost prefix rule, which questions a composite index can answer](./notes/291-the-leftmost-prefix-rule-which-questions-a-composite-index-can-answer.md): an index on (customer_id, ordered_at) jumps for customer_id alone, but ordered_at alone matches scattered entries 2, 4 and 6
 - [292 covering index, when the index alone has the answer](./notes/292-covering-index-when-the-index-alone-has-the-answer.md): asking for Ashas order times needs 0 trips to the table because the index entries already hold them, asking for status needs 3
+- [293 what indexes cost, slower writes and more disk](./notes/293-what-indexes-cost-slower-writes-and-more-disk.md): two indexes on 1000 orders took 11 pages against the table's 8, and one insert wrote 3 places

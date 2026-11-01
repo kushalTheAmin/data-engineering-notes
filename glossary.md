@@ -166,6 +166,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | IN | keeps a row if its value equals any item in a list | [111](./notes/111-in-matching-against-a-list.md) |
 | index (database) | a separate sorted list of values, each with its rows address | [286](./notes/286-index-a-sorted-shortcut-to-rows.md) |
 | index lookup | walk from root page down, one child per page, to the row | [288](./notes/288-one-lookup-traced-through-a-b-tree.md) |
+| index overhead | what each index adds: disk pages, plus one entry per insert | [293](./notes/293-what-indexes-cost-slower-writes-and-more-disk.md) |
 | index-only scan | Postgres answering a query from the index without visiting the table | [292](./notes/292-covering-index-when-the-index-alone-has-the-answer.md) |
 | inner join | a join keeping only pairs where the match holds, dropping the rest | [156](./notes/156-inner-join-traced-by-hand.md) |
 | INSERT | adds new rows to a table, matching values to columns | [220](./notes/220-insert-adding-rows-and-matching-values-to-columns.md) |
