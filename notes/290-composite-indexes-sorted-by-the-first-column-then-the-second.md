@@ -88,4 +88,4 @@ after. Hoboken sorts before Jersey City, and the name only breaks the tie betwee
 </details>
 
 ---
-prev: [289 how a B tree stays balanced as rows arrive](./289-how-a-b-tree-stays-balanced-as-rows-arrive.md) | next: not written yet
+prev: [289 how a B tree stays balanced as rows arrive](./289-how-a-b-tree-stays-balanced-as-rows-arrive.md) | next: [291 the leftmost prefix rule, which questions a composite index can answer](./291-the-leftmost-prefix-rule-which-questions-a-composite-index-can-answer.md)

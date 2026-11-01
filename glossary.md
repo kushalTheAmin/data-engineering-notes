@@ -201,6 +201,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | leaf | a tree node with no children under it | [280](./notes/280-trees-data-that-branches.md) |
 | left join | inner join plus every unmatched left row, with null on the right | [159](./notes/159-left-join-keep-every-row-from-the-left-table.md) |
 | left table | the table written before the word JOIN in the query | [159](./notes/159-left-join-keep-every-row-from-the-left-table.md) |
+| leftmost prefix rule | an index only jumps for questions starting at its first column | [291](./notes/291-the-leftmost-prefix-rule-which-questions-a-composite-index-can-answer.md) |
 | length | how many characters a text has, spaces included, not bytes | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | LF | a one character line ending, 0a, common on linux and mac | [042](./notes/042-line-endings.md) |
 | library | code other people wrote that your program calls | [208](./notes/208-containers-a-program-packed-with-everything-it-needs.md) |
