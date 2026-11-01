@@ -337,6 +337,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | SELECT | the clause naming which columns to keep, in the order written | [104](./notes/104-select-and-from-picking-columns.md) |
 | SELECT FOR UPDATE | a read that also locks the rows it returns until commit | [243](./notes/243-select-for-update-locking-on-purpose.md) |
 | SELECT star | the shortcut for every column, in the tables order | [105](./notes/105-select-star-every-column.md) |
+| selectivity | share of a tables rows that a condition keeps | [294](./notes/294-selectivity-when-an-index-doesnt-help.md) |
 | self join | a table joined to a second copy of itself under another alias | [168](./notes/168-self-join-a-table-joined-to-itself.md) |
 | semi join | keeps left rows that have a match, once each, never copies | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
 | Seq Scan | Postgres name for a full table scan in a plan | [285](./notes/285-full-table-scan-reading-every-page.md) |

@@ -57,4 +57,4 @@ index visitor_id only. every extra index adds an entry to all 5000 inserts a min
 </details>
 
 ---
-prev: [292 covering index, when the index alone has the answer](./292-covering-index-when-the-index-alone-has-the-answer.md) | next: not written yet
+prev: [292 covering index, when the index alone has the answer](./292-covering-index-when-the-index-alone-has-the-answer.md) | next: [294 selectivity, when an index doesnt help](./294-selectivity-when-an-index-doesnt-help.md)
