@@ -23,14 +23,14 @@ WHERE o.order_id = 500;
 
 the first child is the outer side, one order found by its [index](./286-index-a-sorted-shortcut-to-rows.md) (a sorted list of values and row addresses). the second is the inner side, a [Seq Scan](./285-full-table-scan-reading-every-page.md) (read every page) of 5 customers, once per outer row. 1 times 5 is 5 looks, finding Asha.
 
-EXPLAIN shows only the winner, so i switched other methods off to see losers. cost is a made up number for comparing plans ([296](./296-the-query-planner-picking-the-cheapest-plan.md)):
+EXPLAIN shows only the winner, so i switched other methods off to see losers, like a hash join (builds a lookup table of the inner side). cost is a made up number for comparing plans ([296](./296-the-query-planner-picking-the-cheapest-plan.md)):
 
 | orders on the outer side | nested loop cost | hash join cost | planner picks |
 |---|---|---|---|
 | 1 (order 500) | 9.42 | 9.43 | nested loop |
 | 100000 (no WHERE) | 3940.88 | 2126.11 | hash join |
 
-i assumed a nested loop was the naive join Postgres only fell back on, but with one outer row it won, by 0.01 on this data. both costs grow with the outer rows, the loop just grows faster.
+i assumed a nested loop was the naive join Postgres only fell back on, but with one outer row it won, by 0.01 on this data.
 
 how many outer rows to expect is one of the guesses from [297](./297-statistics-how-the-planner-guesses-row-counts.md). if it expects 1 and 20000 arrive, the inner side runs 20000 times.
 

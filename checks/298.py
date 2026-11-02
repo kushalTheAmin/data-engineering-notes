@@ -18,3 +18,7 @@ assert q("SELECT o.order_id, c.name FROM orders o JOIN customers c ON c.customer
 assert q("SELECT count(*) FROM customers")[0][0] == 5 and q("SELECT count(*) FROM orders")[0][0] * 5 == 35
 # source: https://www.postgresql.org/docs/16/planner-optimizer.html
 #   confirmed: nested loop join scans the right relation once for every row found in the left relation, and an index scan on the right can make it a good strategy (opened this run)
+# source: https://www.postgresql.org/docs/16/planner-optimizer.html
+#   confirmed: hash join - the right relation is first scanned and loaded into a hash table, then the left relation is scanned and its values used as hash keys to locate the matching rows in the table (opened this run)
+# audit: the note used hash join in its table with no explanation, so it now glosses it
+# audit: to stay under 250 words the sentence both costs grow with the outer rows was dropped, the table already shows 9.42 against 3940.88 and 9.43 against 2126.11
