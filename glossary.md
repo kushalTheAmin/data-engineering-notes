@@ -292,6 +292,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
 | placeholder value | a made up value, like 0, standing in for missing | [032](./notes/032-null-is-not-zero-or-empty-text.md) |
 | plan | the steps Postgres picks to run a query | [296](./notes/296-the-query-planner-picking-the-cheapest-plan.md) |
+| plan tree | a plan drawn as nodes, with rows moving up to the root | [301](./notes/301-reading-explain-the-plan-as-a-tree.md) |
 | point in time recovery | restore a backup, replay the log, stop at a time you pick | [252](./notes/252-point-in-time-recovery-a-backup-plus-the-replayed-log.md) |
 | port | a number picking which program on a machine gets the bytes | [085](./notes/085-addresses-and-ports.md) |
 | port mapping | the -p flag: laptop port forwards to a port inside the container | [210](./notes/210-running-postgres-in-a-container-on-your-laptop.md) |
