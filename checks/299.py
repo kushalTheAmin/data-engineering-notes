@@ -13,3 +13,6 @@ assert q("SELECT name FROM customers WHERE customer_id NOT IN (SELECT customer_i
 #   confirmed: hash join loads the right relation into a hash table, then scans the left and uses its join values as hash keys
 # source: https://www.postgresql.org/docs/16/xoper-optimization.html
 #   confirmed: hash join is only for operators that represent equality, since values in different hash buckets are never compared
+# source: https://en.wikipedia.org/wiki/Hash_table
+#   confirmed: "In a well-dimensioned hash table, the average time complexity for each lookup is independent of the number of elements stored"; the complexity table lists worst-case search as O(n) (opened this run)
+# audit: the note said a probe takes one look, which reads as always true; collisions make it about one look (same narrowing 278 made)

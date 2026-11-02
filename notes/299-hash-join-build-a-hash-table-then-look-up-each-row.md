@@ -4,7 +4,7 @@ section: inside a database server, part 16, ~2 min read
 
 in [298](./298-nested-loop-join-for-each-outer-row-search-the-inner-side.md) the join of orders to customers stayed a nested loop (search the inner side once per outer row) with one order, then switched at 100000. what does Postgres, the database server these notes use, do instead of searching 5 customers 100000 times?
 
-a hash join first loads one side into a [hash table](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md) (slots where a keys hash picks the place to look). that is the build. then it reads the other side once, and each row looks up its match in one look. that is the probe. here the inner side is the 5 customers, the outer is the 7 orders; Postgres loads the inner side and probes with the outer ([docs](https://www.postgresql.org/docs/16/planner-optimizer.html)).
+a hash join first loads one side into a [hash table](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md) (slots where a keys hash picks the place to look). that is the build. then it reads the other side once, and each row looks up its match in about one look. that is the probe. here the inner side is the 5 customers, the outer is the 7 orders; Postgres loads the inner side and probes with the outer ([docs](https://www.postgresql.org/docs/16/planner-optimizer.html)).
 
 the shop, the imaginary gujarati snack store these notes run on, with its real 7 orders and 5 customers. a python dictionary is a hash table:
 
