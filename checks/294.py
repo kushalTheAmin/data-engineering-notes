@@ -28,3 +28,9 @@ assert 725 + 14 == 739 and 739 > 725 and round(0.14286 * 725) == 104
 assert -(-100000 // 136) == 736 and 768 - 736 == 32 and 768 - 725 == 43
 # audit: Heap Blocks exact=725 is every one of the 725 table pages, so the note says every page, not nearly every. EXPLAIN is now glossed in the note
 assert 725 == 725
+# source: https://www.postgresql.org/docs/16/sql-explain.html
+#   confirmed: EXPLAIN displays the execution plan the planner generates; the BUFFERS option includes the number of shared blocks hit and read (opened this run)
+# source: https://www.postgresql.org/docs/16/using-explain.html
+#   confirmed: the upper bitmap node sorts the row locations the index identifies into physical order before reading them (opened this run)
+# source: https://www.postgresql.org/docs/16/row-estimation-examples.html
+#   confirmed: the selectivity is the fraction of the histogram (the rows) that a condition keeps (opened this run)
