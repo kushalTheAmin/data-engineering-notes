@@ -4,7 +4,7 @@ section: inside a database server, part 10, ~2 min read
 
 i put two indexes on the 1000 order table and they came out bigger than the table. how does a shortcut outweigh what it points at?
 
-an index costs you twice: disk, since each index is its own sorted list in its own pages, and writes, since an INSERT usually adds an entry to every index, not just a row to the table. this is the [trade off](./282-the-trade-off-faster-reads-usually-mean-slower-writes.md) with real numbers.
+an index costs you twice: disk, since each index is its own sorted list in its own pages, and writes, since an INSERT usually adds an entry to every index, not just a row to the table. real numbers for the [trade off](./282-the-trade-off-faster-reads-usually-mean-slower-writes.md).
 
 the shop, the imaginary gujarati snack store these notes run on, as the 1000 made up orders of [286](./286-index-a-sorted-shortcut-to-rows.md) (4 columns) in Postgres 16, a database server. one [index](./286-index-a-sorted-shortcut-to-rows.md) on order_id, one [composite index](./290-composite-indexes-sorted-by-the-first-column-then-the-second.md) on (customer_id, ordered_at). a page is the 8192 byte chunk of [284](./284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md).
 
@@ -21,11 +21,11 @@ index on order_id                     +1 entry
 index on (customer_id, ordered_at)    +1 entry
 ```
 
-11 pages of index against 8 of table. an entry is the value plus the rows address, 16 and 24 bytes against 56 for a row, so entries alone fill 7 pages, and each index adds a metapage (a bookkeeping page) and a root page (the top page).
+11 pages of index against 8 of table. an entry is the value plus the rows address, 16 and 24 bytes against 56 for a row. add a 4 byte pointer each and spare room in every page, and entries alone fill 7 pages, plus a metapage (a bookkeeping page) and a root page (the top page) per index.
 
-the insert: one new order is three writes in three places, each entry finding its spot in its own tree, sometimes with a [page split](./289-how-a-b-tree-stays-balanced-as-rows-arrive.md). each index grew by 1 entry.
+the insert: one new order is three writes in three places, each entry finding its spot in its own tree, sometimes with a [page split](./289-how-a-b-tree-stays-balanced-as-rows-arrive.md).
 
-i assumed an index was a thin layer beside the table, but two of them took more room than the table did.
+i assumed an index was a thin layer beside the table, but two took more room than the table.
 
 the Postgres docs say every index must be kept synchronized, which adds overhead to writes, and that indexes seldom or never used should be removed ([docs](https://www.postgresql.org/docs/16/indexes-intro.html)). so adding one is a decision.
 

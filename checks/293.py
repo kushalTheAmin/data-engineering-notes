@@ -25,3 +25,9 @@ assert 16 < 24 < 56
 # source: https://www.postgresql.org/docs/16/indexes-unique.html
 #   confirmed: PostgreSQL automatically creates a unique index when a unique constraint or primary key is defined for a table (opened this run)
 # audit: metapage and root page are now glossed in the note. source above (btree-implementation): a single metapage is stored at the start of the index, leaf pages are the lowest level and all other levels are internal pages
+# source: https://www.postgresql.org/docs/16/storage-page-layout.html
+#   confirmed: ItemIdData, an array of item identifiers pointing to the items, 4 bytes per item (opened this run)
+# source: https://www.postgresql.org/docs/16/sql-createindex.html
+#   confirmed: B-trees use a default fillfactor of 90, leaf pages are filled to this percentage during initial index builds (opened this run)
+# audit: the note said 16 and 24 byte entries, so entries alone fill 7 pages, but 1000 * (16 + 24) bytes is only 4.9 pages. Postgres 16.15 run this audit: bt_page_stats on the order_id index leaf shows 367 live items, avg_item_size 16, and 3 leaf pages is 1002 entries / 367. each entry also takes a 4 byte pointer and leaves are filled to 90 percent. the note now says that
+assert round(1000 * (16 + 24) / 8192, 1) == 4.9 and -(-1002 // 367) == 3
