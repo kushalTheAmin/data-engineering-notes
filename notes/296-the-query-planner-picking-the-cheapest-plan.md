@@ -61,4 +61,4 @@ the rows never change, only how they are found. the cost goes from 1986.00 to 28
 </details>
 
 ---
-prev: [295 functions on a column, why the index gets skipped](./295-functions-on-a-column-why-the-index-gets-skipped.md) | next: not written yet
+prev: [295 functions on a column, why the index gets skipped](./295-functions-on-a-column-why-the-index-gets-skipped.md) | next: [297 statistics, how the planner guesses row counts](./297-statistics-how-the-planner-guesses-row-counts.md)

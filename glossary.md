@@ -13,6 +13,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | aggregates skip nulls | sum, avg and count(column) ignore null rows entirely | [141](./notes/141-what-nulls-do-to-sum-and-avg.md) |
 | alias | a name you give a result column with AS | [122](./notes/122-computed-columns-and-as.md) |
 | ambiguous time | a clock reading that happens twice, when clocks go back | [029](./notes/029-daylight-saving.md) |
+| ANALYZE | Postgres command that samples a table and saves its statistics | [297](./notes/297-statistics-how-the-planner-guesses-row-counts.md) |
 | AND | joins two tests, keeping a row only if both are true | [108](./notes/108-and-or-combining-two-tests.md) |
 | anti join | keeps left rows with no match: a left join, then IS NULL | [167](./notes/167-anti-join-rows-with-no-match.md) |
 | argument | a word after the program name, handed to that program | [049](./notes/049-the-terminal.md) |
@@ -235,6 +236,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | millisecond | a thousandth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | min | returns the smallest non-null value in a column, or the earliest date | [142](./notes/142-min-and-max-the-smallest-and-biggest-value.md) |
 | modeling | deciding the tables, and which table each fact belongs in, before SQL | [254](./notes/254-modeling-deciding-the-tables-before-writing-them.md) |
+| most common values | the values a column holds most, saved with their shares | [297](./notes/297-statistics-how-the-planner-guesses-row-counts.md) |
 | MVCC | Postgres never overwrites a row, an UPDATE writes a new version | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
 | naming convention | habits for naming tables and columns so others can guess them | [264](./notes/264-naming-conventions-names-people-can-guess.md) |
 | nan | not a number, what 0 / 0 gives in DuckDB | [130](./notes/130-nullif-and-dividing-by-zero.md) |
@@ -367,6 +369,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | SSD | a disk made of chips with no moving parts | [037](./notes/037-disk-is-slow.md) |
 | standard input | stdin, the channel a process reads from, the keyboard by default | [057](./notes/057-standard-input-and-output.md) |
 | standard output | stdout, the channel a process writes to, the screen by default | [057](./notes/057-standard-input-and-output.md) |
+| statistics (planner) | per column summary Postgres saves to guess row counts | [297](./notes/297-statistics-how-the-planner-guesses-row-counts.md) |
 | store UTC, show local | keep moments in UTC, convert to local only when displaying | [030](./notes/030-store-utc-show-local.md) |
 | straight line (growth) | steps grow as fast as the data does | [270](./notes/270-flat-and-straight-line-the-two-shapes-of-growth.md) |
 | streak row | one output row per island: first day, last day, length | [196](./notes/196-gaps-and-islands-one-row-per-streak.md) |
