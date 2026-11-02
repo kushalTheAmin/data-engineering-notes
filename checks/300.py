@@ -14,3 +14,6 @@ assert q("SELECT name FROM customers WHERE customer_id NOT IN (SELECT customer_i
 #   confirmed: merge join sorts each relation on the join attributes, scans both in parallel, sorting can come from an explicit sort or an index scan in the proper order
 # source: https://www.postgresql.org/docs/16/xoper-optimization.html
 #   confirmed: a merge-joinable operator must behave like equality
+# audit: the note said markers only move forward and cited the docs, but the docs only say each relation has to be scanned only once. Postgres source nodeMergejoin.c marks the first inner tuple of a run of equal keys and restores the inner cursor to it for the next outer row with the same key
+# source: https://raw.githubusercontent.com/postgres/postgres/REL_16_STABLE/src/backend/executor/nodeMergejoin.c
+#   confirmed: comment says the inner cursor is repositioned by marking the first inner 5 so the executor can restore the cursor to it, and the access method provides routines to mark and restore to a tuple (opened this run)
