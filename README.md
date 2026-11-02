@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 297
+notes so far: 298
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -336,3 +336,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [295 functions on a column, why the index gets skipped](./notes/295-functions-on-a-column-why-the-index-gets-skipped.md): the same 144 rows cost 736 pages behind CAST(ordered_at AS DATE) and 4 pages as a plain range
 - [296 the query planner, picking the cheapest plan](./notes/296-the-query-planner-picking-the-cheapest-plan.md): the same index wins for cancelled at cost 14.36 and loses for delivered at 2849.71, because Postgres prices every way first
 - [297 statistics, how the planner guesses row counts](./notes/297-statistics-how-the-planner-guesses-row-counts.md): five ANALYZE runs expected 77 to 110 cancelled orders, 100 real, because the planner multiplies a saved share from a random sample
+- [298 nested loop join, for each outer row search the inner side](./notes/298-nested-loop-join-for-each-outer-row-search-the-inner-side.md): the same join of order 500 to its customer is a nested loop, but with 100000 orders on the outer side the planner picks a hash join

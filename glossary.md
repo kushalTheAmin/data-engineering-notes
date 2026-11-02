@@ -173,6 +173,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | index overhead | what each index adds: disk pages, plus one entry per insert | [293](./notes/293-what-indexes-cost-slower-writes-and-more-disk.md) |
 | index-only scan | Postgres answering a query from the index without visiting the table | [292](./notes/292-covering-index-when-the-index-alone-has-the-answer.md) |
 | inner join | a join keeping only pairs where the match holds, dropping the rest | [156](./notes/156-inner-join-traced-by-hand.md) |
+| inner side | the table a join searches once for every outer row | [298](./notes/298-nested-loop-join-for-each-outer-row-search-the-inner-side.md) |
 | INSERT | adds new rows to a table, matching values to columns | [220](./notes/220-insert-adding-rows-and-matching-values-to-columns.md) |
 | insert anomaly | a fact cant be stored until an unrelated fact exists | [090](./notes/090-insert-and-delete-anomalies.md) |
 | INSERT from a SELECT | adds the rows a query returns, matched to columns by position | [221](./notes/221-insert-from-a-select-copying-rows-from-a-query.md) |
@@ -244,6 +245,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | natural key | a real world value that already tells rows apart, like an email | [088](./notes/088-natural-keys-vs-made-up-ids.md) |
 | negative zero | a second zero pattern, with the sign bit set | [013](./notes/013-negative-numbers-sign-bit.md) |
 | nested loop | a loop inside a loop, steps are outer length times inner length | [272](./notes/272-a-loop-inside-a-loop-the-steps-are-one-list-times-the-other.md) |
+| nested loop join | Postgres join: for each outer row, search the inner side | [298](./notes/298-nested-loop-join-for-each-outer-row-search-the-inner-side.md) |
 | nesting | an object or array sitting inside another one, as deep as needed | [068](./notes/068-nesting.md) |
 | network | a way to move bytes from one computer to another | [084](./notes/084-a-network.md) |
 | nextval | the call that hands out a sequences next number | [219](./notes/219-sequences-where-made-up-ids-come-from.md) |
@@ -269,6 +271,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | OR | joins two tests, keeping a row if either is true | [108](./notes/108-and-or-combining-two-tests.md) |
 | ORDER BY | sorts the returned rows by a column, later columns only break ties | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
 | orphan row | a row whose foreign key matches no row in the other table | [094](./notes/094-what-a-foreign-key-stops.md) |
+| outer side | the table a join reads once, row by row | [298](./notes/298-nested-loop-join-for-each-outer-row-search-the-inner-side.md) |
 | overflow | a result too big for its bit size, wrapping or erroring | [016](./notes/016-overflow.md) |
 | page (Postgres) | a fixed 8192 byte chunk of a table file, packed with rows | [284](./notes/284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md) |
 | page split | a full page divides in two and its parent gains a signpost | [289](./notes/289-how-a-b-tree-stays-balanced-as-rows-arrive.md) |

@@ -39,4 +39,4 @@ the real answer is 100 every time. i assumed the planner counted the table befor
 next up is what the planner does with these guesses.
 
 ---
-prev: [296 the query planner, picking the cheapest plan](./296-the-query-planner-picking-the-cheapest-plan.md) | next: not written yet
+prev: [296 the query planner, picking the cheapest plan](./296-the-query-planner-picking-the-cheapest-plan.md) | next: [298 nested loop join, for each outer row search the inner side](./298-nested-loop-join-for-each-outer-row-search-the-inner-side.md)
