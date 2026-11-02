@@ -922,3 +922,4 @@ after this arc: you can design a data platform from a business question and defe
 2026-11-01: repo baseline failed gate setup: duckdb 2.0.0 (the only one pip gives here) breaks checks 008, 011, 026 to 030 on fetchone and asserts on 041 and 268; no note written, needs a fix outside this run
 2026-11-01: repo baseline failed checks/029.py, 030.py, 041.py, 268.py and more (9 fails): python3 is 3.11, pip gives duckdb 2.0.0 which breaks fetchone checks, no older duckdb has a wheel here; no note written (query planner still next), needs a fix outside this run
 2026-11-02: repo baseline failed checks/008.py and 8 more: only duckdb 2.0.0 is installed (fetchone on relations removed, 041 and 268 assert); no note written, needs a fix outside this run
+2026-11-02: repo baseline failed checks/008.py and 8 more: pip gives duckdb 2.0.0 for python 3.11 (fetchone on relations removed, 041 and 268 assert), mermaid render hung; no note written, needs a fix outside this run
