@@ -40,6 +40,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | bit | one tiny switch inside a computer, written as 0 or 1 | [002](./notes/002-bits.md) |
 | block | a fixed chunk of bytes, often 4096, a disk reads at once | [044](./notes/044-disks-read-in-blocks.md) |
 | boolean | a value with only two states, true or false | [023](./notes/023-true-and-false-the-boolean.md) |
+| build (hash join) | loading the inner side into a hash table, once | [299](./notes/299-hash-join-build-a-hash-table-then-look-up-each-row.md) |
 | byte | a group of 8 bits, holding 256 possible values | [004](./notes/004-bytes.md) |
 | byte in hex | a byte is always exactly two hex digits, 00 to ff | [006](./notes/006-one-byte-two-hex-digits.md) |
 | carriage return | the 0d character, which sent a typewriter carriage back | [042](./notes/042-line-endings.md) |
@@ -160,6 +161,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | grouping() | gives 1 on a made-up total row, 0 on a real group | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | hard delete | a real DELETE: the row is physically removed | [266](./notes/266-soft-deletes-marking-a-row-gone-instead-of-removing-it.md) |
 | hash function | turns any input into a number, same input always same number | [277](./notes/277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md) |
+| hash join | join: hash one side into a table, look up the other | [299](./notes/299-hash-join-build-a-hash-table-then-look-up-each-row.md) |
 | hash table | slots where a keys hash picks the one place to look | [278](./notes/278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md) |
 | HAVING | a filter on groups, run after GROUP BY, testing an aggregate | [146](./notes/146-having-filtering-whole-groups.md) |
 | head | prints the first lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
@@ -297,6 +299,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | precedence | which operator runs first when a test mixes several, AND before OR | [109](./notes/109-parentheses-and-runs-before-or.md) |
 | precision | the most digits a decimal can hold in total | [022](./notes/022-exact-decimal-types.md) |
 | primary key | a column that is unique in every row and never NULL | [087](./notes/087-primary-key.md) |
+| probe (hash join) | reading the outer side, one hash table look per row | [299](./notes/299-hash-join-build-a-hash-table-then-look-up-each-row.md) |
 | process | one running copy of a program, loaded into memory | [050](./notes/050-processes.md) |
 | processor | the CPU, the part of the computer doing tiny steps on numbers | [035](./notes/035-the-processor.md) |
 | program | a file of bytes on disk that can be run | [050](./notes/050-processes.md) |

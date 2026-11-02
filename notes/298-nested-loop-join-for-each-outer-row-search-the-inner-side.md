@@ -62,4 +62,4 @@ order_id | name
 </details>
 
 ---
-prev: [297 statistics, how the planner guesses row counts](./297-statistics-how-the-planner-guesses-row-counts.md) | next: not written yet
+prev: [297 statistics, how the planner guesses row counts](./297-statistics-how-the-planner-guesses-row-counts.md) | next: [299 hash join, build a hash table then look up each row](./299-hash-join-build-a-hash-table-then-look-up-each-row.md)
