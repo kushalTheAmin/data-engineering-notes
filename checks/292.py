@@ -12,3 +12,4 @@ assert {c: d for a, b, c, d in rows} == {101: "delivered", 103: "delivered", 106
 assert len(rows) == 3
 # source: https://www.postgresql.org/docs/16/indexes-index-only-scans.html
 # confirmed: index-only scans answer from the index alone when the query references only columns stored in the index; the visibility map bit is checked and the heap is visited if not set; INCLUDE adds extra columns to build a covering index (opened this run)
+# audit: the note used the word index with no explanation, so a reader landing here could not tell what it is. it now says a sorted list of values and row addresses, the same gloss 294 to 296 use (286: each entry is the columns value plus the rows address)
