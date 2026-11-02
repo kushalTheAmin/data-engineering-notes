@@ -4,7 +4,7 @@ section: inside a database server, part 18, ~2 min read
 
 below, the top line of a plan costs 136.31 and the Index Scan under it costs 134.20. so is the top line the expensive step? [296](./296-the-query-planner-picking-the-cheapest-plan.md) said EXPLAIN prints the plan, the steps Postgres picked.
 
-a plan is a [tree](./280-trees-data-that-branches.md) (boxes linked parent to children), and each step line is one [node](./280-trees-data-that-branches.md). indentation says whose child it is ([docs](https://www.postgresql.org/docs/16/using-explain.html)). rows travel up, from the leaves (nodes with no children, which read tables) to the root (the top line), and the root hands you the answer.
+a plan is a [tree](./280-trees-data-that-branches.md) (boxes linked parent to children), and each step line is one [node](./280-trees-data-that-branches.md). indentation says whose child it is ([docs](https://www.postgresql.org/docs/16/using-explain.html)). rows travel up, from the leaves (nodes with no children, which usually read tables) to the root (the top line), and the root hands you the answer.
 
 the shop, the imaginary gujarati snack store these notes run on, as 100000 made up orders in Postgres 16. cancelled orders per customer (with pending orders too, so costs differ from 296):
 
@@ -23,7 +23,7 @@ WHERE o.status = 'cancelled' GROUP BY c.name;
                     (cost=0.00..1.05 rows=5 ...)       <- leaf: reads all 5 customers
 ```
 
-i trimmed the detail lines. the Hash Join probes with the order scan and builds the Hash, as in [299](./299-hash-join-build-a-hash-table-then-look-up-each-row.md). strictly the root asks its child for rows, which asks its child, so the asking goes down while the rows come back up.
+the Hash Join probes with the order scan and builds the Hash, as in [299](./299-hash-join-build-a-hash-table-then-look-up-each-row.md). strictly the root asks its child for rows, which asks its child, so the asking goes down while the rows come back up.
 
 the cost is the made up score from 296, the second number of each pair is the total, and a parent includes its children: 134.20 sits inside 135.78 inside 136.31. so the root is usually biggest. the root itself adds only 0.53, so the top line isnt the expensive step. rows= is the guess from [297](./297-statistics-how-the-planner-guesses-row-counts.md), 97 against 100 really cancelled.
 

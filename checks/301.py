@@ -22,3 +22,7 @@ assert q("SELECT count(*) FROM customers")[0][0] == 5
 assert 4000.00 - 3990.00 == 10.0
 # source: https://www.postgresql.org/docs/16/using-explain.html
 #   confirmed: the indentation of the node summary lines reflects the plan tree structure, the cost of an upper-level node includes the cost of all its child nodes, cost is (startup..total), rows is an estimate (opened this run)
+# audit: the note said leaves read tables, which reads as always true. the docs say bottom-level nodes are scan nodes that return raw rows from a table, and that there are also non-table row sources such as VALUES clauses and set-returning functions in FROM with their own scan node types (https://www.postgresql.org/docs/16/using-explain.html, opened this run). the note now says usually read tables
+# source: https://www.postgresql.org/docs/16/using-explain.html
+#   confirmed: nodes at the bottom level of the tree are scan nodes that return raw rows from a table, plus non-table row sources such as VALUES clauses (opened this run)
+# Postgres 16.15 run this audit: the plan shape and the cost chain (child total inside parent total) reproduced on a rebuilt orders100k; rows= varied between 90 and 117 by sample, so 97 is one run
