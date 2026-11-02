@@ -14,3 +14,6 @@ assert round(1 - 23 / 30000, 7) == 0.9992333
 #   confirmed: ANALYZE takes a random sample of a large table, statistics include most common values, and are approximate and change slightly each run (opened this run)
 # source: https://www.postgresql.org/docs/16/routine-vacuuming.html
 #   confirmed: the autovacuum daemon automatically issues ANALYZE whenever a table has changed sufficiently (opened this run)
+# audit: the note said ANALYZE reads a random sample of rows, not every row, and that the guess is share times table size, both read as always true. the docs say "For large tables, ANALYZE takes a random sample of the table contents, rather than examining every row" (https://www.postgresql.org/docs/16/sql-analyze.html, opened this run), and for a value that is not in the most common list the estimate is made another way (https://www.postgresql.org/docs/16/row-estimation-examples.html, opened this run). the note now says on a big table and for a saved value
+# Postgres 16.15 run this audit: six ANALYZE runs on orders100k gave cancelled freq * 30000 = 23, 38, 34, 31, 22, 23 (all whole numbers), so the 30000 row sample is right
+assert [round(x) for x in [0.00076666666 * 30000, 0.0012666667 * 30000, 0.0011333333 * 30000]] == [23, 38, 34]
