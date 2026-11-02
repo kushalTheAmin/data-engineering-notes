@@ -48,4 +48,4 @@ i figured a join had to look things up, but nothing is. the sorted order does th
 the catch: the 7 orders in order_id order carry customer ids 1, 2, 1, 3, 4, 1, 2, so someone pays for the sort ([276](./276-why-sorting-costs-more-than-one-pass-over-the-data.md)). unless an [index](./286-index-a-sorted-shortcut-to-rows.md) (a sorted list of values and row addresses) on customer_id hands the rows over already in order, which the docs say is one way to get it. like a hash join it needs an equality test (match when values are equal) ([docs](https://www.postgresql.org/docs/16/xoper-optimization.html)). the [planner](./296-the-query-planner-picking-the-cheapest-plan.md) prices it like any other plan.
 
 ---
-prev: [299 hash join, build a hash table then look up each row](./299-hash-join-build-a-hash-table-then-look-up-each-row.md) | next: not written yet
+prev: [299 hash join, build a hash table then look up each row](./299-hash-join-build-a-hash-table-then-look-up-each-row.md) | next: [301 reading EXPLAIN, the plan as a tree](./301-reading-explain-the-plan-as-a-tree.md)

@@ -254,6 +254,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | nextval | the call that hands out a sequences next number | [219](./notes/219-sequences-where-made-up-ids-come-from.md) |
 | no promised order | without ORDER BY, rows may come back in any order | [118](./notes/118-no-order-by-no-promised-order.md) |
 | node | a box in a tree holding one value, pointing to its children | [280](./notes/280-trees-data-that-branches.md) |
+| node (plan) | one step of a plan, hands its rows up to its parent | [301](./notes/301-reading-explain-the-plan-as-a-tree.md) |
 | non repeatable read | reading one row twice in a transaction and getting different values | [237](./notes/237-non-repeatable-reads.md) |
 | normal form | a named checklist a table passes to avoid a copy bug | [257](./notes/257-normal-forms-the-rules-behind-splitting-tables.md) |
 | NOT | flips a test, but a null stays unknown and is dropped | [110](./notes/110-not-flipping-a-condition.md) |
@@ -292,6 +293,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | place value | what a digit is worth because of where it sits | [003](./notes/003-counting-in-binary.md) |
 | placeholder value | a made up value, like 0, standing in for missing | [032](./notes/032-null-is-not-zero-or-empty-text.md) |
 | plan | the steps Postgres picks to run a query | [296](./notes/296-the-query-planner-picking-the-cheapest-plan.md) |
+| plan tree | a plan drawn as nodes, each child indented under its parent | [301](./notes/301-reading-explain-the-plan-as-a-tree.md) |
 | point in time recovery | restore a backup, replay the log, stop at a time you pick | [252](./notes/252-point-in-time-recovery-a-backup-plus-the-replayed-log.md) |
 | port | a number picking which program on a machine gets the bytes | [085](./notes/085-addresses-and-ports.md) |
 | port mapping | the -p flag: laptop port forwards to a port inside the container | [210](./notes/210-running-postgres-in-a-container-on-your-laptop.md) |
