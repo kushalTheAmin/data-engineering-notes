@@ -926,3 +926,4 @@ after this arc: you can design a data platform from a business question and defe
 2026-11-02: repo baseline failed checks/008.py and 8 more: only duckdb 2.0.0 is installed (fetchone on relations removed, 041 and 268 assert); no note written, needs a fix outside this run
 2026-11-02: repo baseline failed checks/008.py and 8 more: pip gives duckdb 2.0.0 for python 3.11 (fetchone on relations removed, 041 and 268 assert), mermaid render hung; no note written, needs a fix outside this run
 2026-11-02: repo baseline failed checks/127.py, 201.py, 202.py: no duckdb version passes (1.2.2 fails 9, 1.3.2 fails 5, 1.4.5 fails these 3 on date_trunc type asserts, 2.0.0 breaks 8 on fetchone); no note written, needs a fix outside this run
+2026-11-02: repo baseline failed checks/127.py, 201.py, 202.py: duckdb 1.4.5 (python3 is 3.11) fails these 3 on date_trunc type asserts, mermaid render ok; no note written (nested loop join still next), needs a fix outside this run
