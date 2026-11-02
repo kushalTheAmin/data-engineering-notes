@@ -29,3 +29,6 @@ assert q("SELECT customer_id FROM customers WHERE lower(name) = 'asha'") == [(1,
 # source: https://www.postgresql.org/docs/16/indexes-expressional.html
 #   confirmed: "Index expressions are relatively expensive to maintain, because the derived expression(s) must be computed for each row insertion and non-HOT update" (opened this run)
 # audit: the docs say only non-HOT updates compute the expression and never say how many updates that is, so the note says some updates, not most (https://www.postgresql.org/docs/16/indexes-expressional.html and https://www.postgresql.org/docs/16/indexes-intro.html on heap-only tuples)
+# source: https://www.postgresql.org/docs/16/xfunc-optimization.html
+#   confirmed: "it may be possible to convert a function call appearing in WHERE into an indexable operator clause" through a support function (SupportRequestIndexCondition) (opened this run)
+# audit: the note said Postgres cant halve the list for any function and doesnt reason about what a function does to order, but support functions let some functions become index conditions, so the note now says usually and most functions

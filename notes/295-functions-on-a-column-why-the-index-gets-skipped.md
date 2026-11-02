@@ -4,7 +4,7 @@ section: inside a database server, part 12, ~2 min read
 
 i had an index on ordered_at, filtered on the date of it, and Postgres still read every page. 144 of 100000 rows is very selective, so selectivity ([294](./294-selectivity-when-an-index-doesnt-help.md), how few rows a condition keeps) cant be it.
 
-an [index](./286-index-a-sorted-shortcut-to-rows.md) (a sorted list of values and row addresses) is sorted by the column as stored. wrap the column in a function in the WHERE and Postgres cant [halve](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md) that list, so it falls back to a [full scan](./285-full-table-scan-reading-every-page.md), called Seq Scan in a plan.
+an [index](./286-index-a-sorted-shortcut-to-rows.md) (a sorted list of values and row addresses) is sorted by the column as stored. wrap the column in a function in the WHERE and Postgres usually cant [halve](./273-binary-search-finding-one-item-in-sorted-data-by-halving.md) that list, so it falls back to a [full scan](./285-full-table-scan-reading-every-page.md), called Seq Scan in a plan.
 
 the shop, the imaginary gujarati snack store these notes run on, as 100000 made up orders in Postgres 16, one every 10 minutes, 144 on 1 June 2025. this copy is 736 pages (8192 byte chunks of rows), indexed on ordered_at. pages touched is page visits. [CAST](./132-cast-changing-a-values-type.md) (turns a value into another type) counts as a function:
 
@@ -25,7 +25,7 @@ order_id
 102
 ```
 
-a date never goes backwards as the timestamp grows, but Postgres 16 doesnt reason about what a function does to order. it only knows the list is sorted by the bare column, the column alone. so you keep it bare and move the work elsewhere. the other fix is an index on the expression itself, which the Postgres docs say costs extra on every insert and some updates. [source](https://www.postgresql.org/docs/16/indexes-expressional.html)
+a date never goes backwards as the timestamp grows, but Postgres 16 doesnt reason about what most functions do to order. it only knows the list is sorted by the bare column, the column alone. so you keep it bare and move the work elsewhere. the other fix is an index on the expression itself, which the Postgres docs say costs extra on every insert and some updates. [source](https://www.postgresql.org/docs/16/indexes-expressional.html)
 
 i assumed the index cared which column i filtered on, but it cares whether the column is left alone. lower(email) = '...' is the classic one, fixed by that expression index.
 
