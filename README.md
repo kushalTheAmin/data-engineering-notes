@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 299
+notes so far: 300
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -338,3 +338,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [297 statistics, how the planner guesses row counts](./notes/297-statistics-how-the-planner-guesses-row-counts.md): five ANALYZE runs expected 77 to 110 cancelled orders, 100 real, because the planner multiplies a saved share from a random sample
 - [298 nested loop join, for each outer row search the inner side](./notes/298-nested-loop-join-for-each-outer-row-search-the-inner-side.md): the same join of order 500 to its customer is a nested loop, but with 100000 orders on the outer side the planner picks a hash join
 - [299 hash join, build a hash table then look up each row](./notes/299-hash-join-build-a-hash-table-then-look-up-each-row.md): the same 7 orders and 5 customers join in 12 looks instead of 35 once one side is loaded into a hash table first
+- [300 merge join, walk two sorted lists side by side](./notes/300-merge-join-walk-two-sorted-lists-side-by-side.md): the 7 orders and 5 customers join in 10 steps with no lookups once both are sorted by customer id, and Esha is never touched

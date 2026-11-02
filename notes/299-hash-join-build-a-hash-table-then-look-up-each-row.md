@@ -74,4 +74,4 @@ a hash lookup only finds equal values, and a less-than has no single slot to jum
 </details>
 
 ---
-prev: [298 nested loop join, for each outer row search the inner side](./298-nested-loop-join-for-each-outer-row-search-the-inner-side.md) | next: not written yet
+prev: [298 nested loop join, for each outer row search the inner side](./298-nested-loop-join-for-each-outer-row-search-the-inner-side.md) | next: [300 merge join, walk two sorted lists side by side](./300-merge-join-walk-two-sorted-lists-side-by-side.md)
