@@ -1,4 +1,5 @@
 # corrections
+000, 2026-11-02: gate failed before any change, so no notes were audited: duckdb 2.0.0 (the pip default) fails 9 checks (008, 011, 026 to 030 on fetchone, 041 and 268 on an assert). same failure as the earlier 000 lines; pinning an older duckdb in the setup step would fix it. evidence: python3 tools/gate.py printed FAIL (9).
 000, 2026-11-02: gate failed before any change, so no notes were audited: duckdb 2.0.0 (the pip default) fails 9 checks (008, 011, 026 to 030 on fetchone, 041 and 268 on an assert). same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
 000, 2026-11-02: gate failed before any change, so no notes were audited: duckdb 2.0.0 (the pip default) fails 9 checks (008, 011, 026 to 030 on fetchone, 041 and 268 on an assert). same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
 000, 2026-11-02: gate failed before any change, so no notes were audited: duckdb 2.0.0 (the pip default for this environment) fails 9 checks (008, 011, 026 to 030 on fetchone, 041 and 268 on an assert). same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (9).
