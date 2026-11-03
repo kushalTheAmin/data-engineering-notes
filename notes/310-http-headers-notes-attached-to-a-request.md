@@ -43,4 +43,4 @@ most request headers say what the client wants, most response headers describe t
 this is how one machine at one address serves many sites: HTTP/1.1 requires a client to send Host, and the server (the program answering) picks the site by it. i figured the extra lines were decoration, but the name the address doesnt carry has to ride along in one of them.
 
 ---
-prev: [309 HTTP methods, GET asks and POST sends](./309-http-methods-get-asks-post-sends.md) | next: not written yet
+prev: [309 HTTP methods, GET asks and POST sends](./309-http-methods-get-asks-post-sends.md) | next: [311 status codes, what 200, 404 and 500 mean](./311-status-codes-what-200-404-and-500-mean.md)

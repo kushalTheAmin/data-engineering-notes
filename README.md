@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 310
+notes so far: 311
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -353,3 +353,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [308 request and response, one message out, one message back](./notes/308-request-and-response-one-message-out-one-message-back.md): Ashas phone sends a few lines of text ending in an empty line, and the shop answers with a first line, an empty line and a body
 - [309 HTTP methods, GET asks and POST sends](./notes/309-http-methods-get-asks-post-sends.md): sending the same message twice changes nothing for GET, but a POST twice adds two orders
 - [310 HTTP headers, notes attached to a request](./notes/310-http-headers-notes-attached-to-a-request.md): the phone connects to an address that has no name in it, so a Host line carries the name
+- [311 status codes, what 200, 404 and 500 mean](./notes/311-status-codes-what-200-404-and-500-mean.md): the first digit of the response number says whose problem it is, and a cancelled order is still a 200

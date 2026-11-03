@@ -398,6 +398,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | standard input | stdin, the channel a process reads from, the keyboard by default | [057](./notes/057-standard-input-and-output.md) |
 | standard output | stdout, the channel a process writes to, the screen by default | [057](./notes/057-standard-input-and-output.md) |
 | statistics (planner) | per column summary Postgres saves to guess row counts | [297](./notes/297-statistics-how-the-planner-guesses-row-counts.md) |
+| status code | 3 digit number on a responses first line, saying how it went | [311](./notes/311-status-codes-what-200-404-and-500-mean.md) |
 | store UTC, show local | keep moments in UTC, convert to local only when displaying | [030](./notes/030-store-utc-show-local.md) |
 | straight line (growth) | steps grow as fast as the data does | [270](./notes/270-flat-and-straight-line-the-two-shapes-of-growth.md) |
 | streak row | one output row per island: first day, last day, length | [196](./notes/196-gaps-and-islands-one-row-per-streak.md) |
