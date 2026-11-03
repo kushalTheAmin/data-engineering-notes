@@ -117,6 +117,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | dirty read | reading another transactions change before it is committed | [236](./notes/236-dirty-reads.md) |
 | disk | storage like an SSD or hard drive, keeping bytes without power | [036](./notes/036-memory-vs-disk.md) |
 | DISTINCT | keeps one copy of each repeated row in a query result | [121](./notes/121-distinct-removing-duplicate-rows.md) |
+| DNS | a lookup service: send a name, get back an address | [306](./notes/306-dns-turning-names-into-addresses.md) |
 | double counting | a sum repeating a value because a fan out copied its row | [165](./notes/165-double-counting-why-sums-after-a-fan-out-lie.md) |
 | doubled quote | two quotes in a row inside a quoted value, meaning one quote | [064](./notes/064-quotes-inside-quotes-and-newlines-inside-values.md) |
 | DROP TABLE | removes a table itself, its rows and its columns | [226](./notes/226-drop-and-truncate-emptying-a-table-vs-removing-it.md) |
@@ -172,6 +173,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | head | prints the first lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | header row | the first line of a csv, holding column names instead of data | [065](./notes/065-the-header-row-naming-the-columns.md) |
 | hexadecimal | counting with sixteen digits, a to f standing for ten to fifteen | [005](./notes/005-hexadecimal.md) |
+| host name | a text name for one machine, like shop.example | [306](./notes/306-dns-turning-names-into-addresses.md) |
 | ILIKE | LIKE that ignores upper and lower case | [113](./notes/113-like-matching-text-patterns.md) |
 | image | the frozen packed box a container starts from, never changes | [209](./notes/209-images-and-containers-the-packed-box-and-the-running-copy.md) |
 | IN | keeps a row if its value equals any item in a list | [111](./notes/111-in-matching-against-a-list.md) |
@@ -223,6 +225,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | LIKE | keeps text matching a pattern, % any run, _ one character | [113](./notes/113-like-matching-text-patterns.md) |
 | LIMIT | keeps only the first n rows of the result | [120](./notes/120-limit-and-offset-paging-through-rows.md) |
 | line ending | the characters marking where one line stops, the next starts | [042](./notes/042-line-endings.md) |
+| localhost | the name for this same machine, address 127.0.0.1 | [306](./notes/306-dns-turning-names-into-addresses.md) |
 | lock | a mark a transaction puts on data so others must wait | [242](./notes/242-row-locks-and-table-locks.md) |
 | lock_timeout | a setting: give up if a lock wait lasts longer than this | [248](./notes/248-the-swap-renaming-two-columns-in-one-transaction.md) |
 | logical order (of a query) | the fixed clause order: FROM, WHERE, SELECT, ORDER BY, LIMIT | [134](./notes/134-the-order-sql-really-runs-in.md) |

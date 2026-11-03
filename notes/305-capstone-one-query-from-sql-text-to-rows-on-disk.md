@@ -60,4 +60,4 @@ the statistics, the saved shares of common values that ANALYZE builds from a sam
 </details>
 
 ---
-prev: [304 vacuum, how Postgres cleans up old row versions](./304-vacuum-how-postgres-cleans-up-old-row-versions.md) | next: not written yet
+prev: [304 vacuum, how Postgres cleans up old row versions](./304-vacuum-how-postgres-cleans-up-old-row-versions.md) | next: [306 DNS, turning names into addresses](./306-dns-turning-names-into-addresses.md)
