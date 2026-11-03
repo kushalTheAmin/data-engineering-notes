@@ -60,4 +60,4 @@ no rows, so an empty list with a 200, the usual choice for a list. the request w
 </details>
 
 ---
-prev: [311 status codes, what 200, 404 and 500 mean](./311-status-codes-what-200-404-and-500-mean.md) | next: not written yet
+prev: [311 status codes, what 200, 404 and 500 mean](./311-status-codes-what-200-404-and-500-mean.md) | next: [313 JSON over HTTP, the answer is text until you parse it](./313-json-over-http-the-answer-is-text-until-you-parse-it.md)

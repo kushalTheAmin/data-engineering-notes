@@ -72,6 +72,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | connection | an open line from your program to a database | [102](./notes/102-a-database-in-one-file.md) |
 | consistency (ACID) | the ACID promise: declared rules still hold after every change | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | container | a program running in a walled-off box with all it needs | [208](./notes/208-containers-a-program-packed-with-everything-it-needs.md) |
+| Content-Type | header naming the format of the body, like application/json | [313](./notes/313-json-over-http-the-answer-is-text-until-you-parse-it.md) |
 | continuation byte | a UTF-8 byte starting 10, continuing the previous characters bytes | [011](./notes/011-why-gujarati-takes-3-bytes.md) |
 | core | one full processor inside a chip, most chips hold several | [035](./notes/035-the-processor.md) |
 | correlated subquery | a scalar subquery that uses the outer row, asked again per row | [177](./notes/177-correlated-subqueries-a-query-that-depends-on-the-outer-row.md) |
