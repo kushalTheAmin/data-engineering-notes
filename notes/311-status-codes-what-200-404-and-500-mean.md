@@ -44,7 +44,7 @@ this bites in real code: the browser fetch call in javascript doesnt throw on a 
 
 ### check yourself
 
-1. Bhavins phone asks the toy shop for order 107 and then for order 108. which codes come back?
+1. Bhavins phone asks a shop that holds all 7 real orders (the toy above holds only two) for order 107 and then for order 108. which codes come back?
 ```sql
 SELECT order_id FROM orders WHERE order_id IN (107, 108)
 ```

@@ -20,4 +20,7 @@ assert [shop_("/orders/101"), shop_("/orders/104"), shop_("/orders/999"), shop_(
 # confirmed (section 15): the first digit of the status code defines the class; 2xx successful, 3xx redirection, 4xx client error, 5xx server error; 15.5.5 404 means no current representation found; 15.6.1 500 means an unexpected condition prevented fulfilling the request
 # source: https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch
 # confirmed: a fetch() promise does not reject on HTTP error statuses like 404 or 504, a then() handler must check Response.ok or Response.status
+# audit: check yourself 1 said the toy shop, but the toy server holds only 101 and 104, so it answers 404 for both 107 and 108, not 200 then 404. the question now says a shop holding the 7 real orders
+assert [shop_("/orders/107"), shop_("/orders/108")] == [404, 404]
+assert [200 if r in {107} else 404 for r in (107, 108)] == [200, 404]
 print("311 ok")
