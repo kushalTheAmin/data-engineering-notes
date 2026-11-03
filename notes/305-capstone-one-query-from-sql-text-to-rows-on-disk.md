@@ -28,9 +28,9 @@ flowchart TD
 | pages | the 8192 byte chunks of the table file that hold the rows | [284](./284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md) |
 | vacuum | frees old row versions in those pages, its own job | [304](./304-vacuum-how-postgres-cleans-up-old-row-versions.md) |
 
-cover the words and the picture still says it: the planner and the plan decide before anything is read, and only the scans pull in pages, from the buffer pool if they are there and the disk if not. the planner works from saved summaries, so a slow query starts with EXPLAIN ANALYZE, comparing guessed rows to real ones. a big gap often means stale statistics, the summaries ANALYZE builds, though lumpy data can do it too. no gap and still slow, look at the scans, like a function wrapped around an indexed column. careful, EXPLAIN ANALYZE really runs the query, so an UPDATE inside it really updates.
+cover the words and the picture still says it: the planner and the plan decide before your table is read, and only the scans pull in its pages, from the buffer pool if they are there and the disk if not. the planner works from saved summaries, so a slow query starts with EXPLAIN ANALYZE, comparing guessed rows to real ones. a big gap often means stale statistics, the summaries ANALYZE builds, though lumpy data can do it too. no gap and still slow, look at the scans, like a function wrapped around an indexed column. careful, EXPLAIN ANALYZE really runs the query, so an UPDATE inside it really updates.
 
-i assumed the database was one big step, but it thinks first and only fetches pages at the end.
+i assumed the database was one big step, but it thinks first and only fetches table pages at the end.
 
 ### check yourself
 

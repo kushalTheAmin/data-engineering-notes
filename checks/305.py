@@ -15,3 +15,8 @@ assert 5 != 50000  # source for ANALYZE and VACUUM ANALYZE: see below
 assert len(range(284, 305)) == 21
 # source: https://www.postgresql.org/docs/16/routine-vacuuming.html
 #   confirmed (opened this run): statistics for the planner are gathered by ANALYZE, which can be invoked by itself or as an optional step in VACUUM, so plain VACUUM does not refresh them; autovacuum also issues ANALYZE
+# source: https://www.postgresql.org/docs/16/catalogs.html
+#   confirmed (opened this run): the system catalogs are regular tables, and the planner statistics live in one (pg_statistic, https://www.postgresql.org/docs/16/planner-stats.html), so planning itself reads pages
+# audit: the note said the planner and plan decide before anything is read, but Postgres 16 run this audit printed "Planning: Buffers: shared hit=16" for EXPLAIN (ANALYZE, BUFFERS) on a 100000 row table, so planning touches pages too. it now says before your table is read. the 7 order index on status run gave Seq Scan 1.09 and, with enable_seqscan off, Index Scan 8.15, matching check yourself 1
+# source: https://www.postgresql.org/docs/16/sql-explain.html
+#   confirmed (opened this run): the ANALYZE option causes the statement to be actually executed, not only planned
