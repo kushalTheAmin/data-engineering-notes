@@ -36,4 +36,4 @@ i expected `1` to come back as a number, but everything in a URL is text, so the
 so to ask for a filtered list, you add a query parameter, a filter written into the address. the shop would answer this one with Ashas delivered orders, 101 and 103.
 
 ---
-prev: [306 DNS, turning names into addresses](./306-dns-turning-names-into-addresses.md) | next: not written yet
+prev: [306 DNS, turning names into addresses](./306-dns-turning-names-into-addresses.md) | next: [308 request and response, one message out, one message back](./308-request-and-response-one-message-out-one-message-back.md)

@@ -174,6 +174,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | header row | the first line of a csv, holding column names instead of data | [065](./notes/065-the-header-row-naming-the-columns.md) |
 | hexadecimal | counting with sixteen digits, a to f standing for ten to fifteen | [005](./notes/005-hexadecimal.md) |
 | host name | a text name for one machine, like shop.example | [306](./notes/306-dns-turning-names-into-addresses.md) |
+| HTTP | rules the web uses: a text request, then a text response | [308](./notes/308-request-and-response-one-message-out-one-message-back.md) |
 | ILIKE | LIKE that ignores upper and lower case | [113](./notes/113-like-matching-text-patterns.md) |
 | image | the frozen packed box a container starts from, never changes | [209](./notes/209-images-and-containers-the-packed-box-and-the-running-copy.md) |
 | IN | keeps a row if its value equals any item in a list | [111](./notes/111-in-matching-against-a-list.md) |
@@ -332,7 +333,9 @@ every term these notes have built, in plain words, with the note that built it. 
 | repeatable read | Postgres level: one picture, taken at the first query, kept all transaction | [240](./notes/240-repeatable-read-rows-dont-change-under-you-mid-transaction.md) |
 | repeating fraction | digits past the point that loop forever, so no exact finite form | [018](./notes/018-why-0-1-has-no-exact-binary-form.md) |
 | replay | reading the log forward and redoing changes the table files lack | [234](./notes/234-replaying-the-log-after-a-crash.md) |
+| request (HTTP) | the text a client sends: what it wants, extra lines, optional body | [308](./notes/308-request-and-response-one-message-out-one-message-back.md) |
 | required field | a field name every record must have, or it is rejected | [077](./notes/077-required-vs-optional-fields.md) |
+| response (HTTP) | the text a server sends back: how it went, extra lines, body | [308](./notes/308-request-and-response-one-message-out-one-message-back.md) |
 | restore | load a backup back, returning data to the moment of the copy | [251](./notes/251-backups-a-copy-you-can-restore-from.md) |
 | retention | how many of a cohort logged in again in a later month | [202](./notes/202-retention-who-came-back-the-month-after.md) |
 | revenue | quantity times price, added up over the order rows you choose | [171](./notes/171-joins-plus-group-by-revenue-per-customer.md) |
