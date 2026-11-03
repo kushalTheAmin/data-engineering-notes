@@ -21,3 +21,6 @@ assert req.endswith(b"\r\n\r\n")
 # source: https://www.rfc-editor.org/rfc/rfc9110.html
 # confirmed: HTTP is a stateless request/response protocol, a client sends a request message and the server responds
 print("308 ok")
+# audit: the note said plain HTTP is a few lines of text, which is true of HTTP/1.1 only. it now says HTTP/1.1 and that newer versions pack it as binary
+# source: https://www.rfc-editor.org/rfc/rfc9113.txt
+#   confirmed (opened this run): HTTP/2 enables more efficient processing of messages through use of binary message framing

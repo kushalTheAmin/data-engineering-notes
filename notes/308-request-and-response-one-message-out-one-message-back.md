@@ -2,9 +2,9 @@
 builds on: [042 line endings, the invisible characters that break files](./042-line-endings.md), [086 client and server, you ask, the database answers](./086-client-and-server.md), [307 URLs and query parameters](./307-urls-and-query-parameters.md)
 section: talking over a network, part 3, ~2 min read
 
-what does Ashas phone send when she taps "my delivered orders"? i pictured something fancy, and in plain HTTP its a few lines of text (real phones encrypt it).
+what does Ashas phone send when she taps "my delivered orders"? i pictured something fancy, and in plain HTTP/1.1 its a few lines of text (real phones encrypt it, and newer versions pack it as binary).
 
-HTTP, the rules the web talks by (the http at the start of a [URL](./307-urls-and-query-parameters.md)), has two kinds of message. a request is the text a [client](./086-client-and-server.md) (the side that asks) sends, and a response is the text the server sends back. one request, one response. here it is for the shop, the imaginary gujarati snack store these notes run on, both ends on this machine like in [086](./086-client-and-server.md), with each [line ending](./042-line-endings.md) (characters that end a line) shown as \r\n:
+HTTP, the rules the web talks by (the http at the start of a [URL](./307-urls-and-query-parameters.md)), has two kinds of message. a request is the text a [client](./086-client-and-server.md) (the side that asks) sends, and a response is the text the server sends back. here it is for the shop, the imaginary gujarati snack store these notes run on, both ends on this machine like in [086](./086-client-and-server.md), with each [line ending](./042-line-endings.md) (characters that end a line) shown as \r\n:
 
 ```python
 import socket
