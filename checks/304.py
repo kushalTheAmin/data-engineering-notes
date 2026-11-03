@@ -20,3 +20,10 @@ assert 8192 == 8 * 1024
 # 4) INSERT order 108 -> ctid (0,4); separate run: delete 104 and 105, VACUUM, insert 108 and 109 -> (0,4) and (0,5)
 # source: https://www.postgresql.org/docs/16/routine-vacuuming.html
 #   confirmed: standard VACUUM removes dead row versions and marks the space available for reuse, but does not return it to the operating system except when pages at the end of the table become entirely free; autovacuum daemon runs vacuuming automatically
+# audit: the note said a transaction left open for days stops cleanup, which reads as always true. the docs tell you to end long-running open transactions found by a large age(backend_xid) or age(backend_xmin), so only a transaction holding an xid or a snapshot holds cleanup back (an idle read committed one with no xid takes none). it now says a repeatable read transaction blocks cleanup of rows ended since
+# source: https://www.postgresql.org/docs/16/routine-vacuuming.html
+#   confirmed: End long-running open transactions. You can find these by checking pg_stat_activity for rows where age(backend_xid) or age(backend_xmin) is large (opened this run)
+# source: https://www.postgresql.org/docs/16/ddl-system-columns.html
+#   confirmed: xmin is the transaction ID of the inserting transaction for this row version, xmax is the identity of the deleting transaction (opened this run)
+# source: https://www.postgresql.org/docs/16/sql-vacuum.html
+#   confirmed: VACUUM FULL rewrites the entire contents of the table into a new disk file with no extra space, returning unused space to the operating system (opened this run)

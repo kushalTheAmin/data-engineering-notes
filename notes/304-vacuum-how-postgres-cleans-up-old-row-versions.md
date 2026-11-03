@@ -17,7 +17,7 @@ the shop, the imaginary gujarati snack store these notes run on, as an orders-on
 
 Esha could still see 104, so the first VACUUM left it. the second freed the seat and 108 took it. the file never shrank: plain VACUUM marks space for reuse, while VACUUM FULL rewrites the file smaller ([docs](https://www.postgresql.org/docs/16/routine-vacuuming.html)).
 
-i assumed DELETE meant the bytes were gone, but the row is only hidden, then removable by a later VACUUM once nobody could need it. so a transaction left open for days stops cleanup.
+i assumed DELETE meant the bytes were gone, but the row is only hidden, then removable by a later VACUUM once nobody could need it. so a repeatable read transaction left open for days blocks cleanup of rows ended since.
 
 ### check yourself
 
