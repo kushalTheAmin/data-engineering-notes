@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 302
+notes so far: 303
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -342,3 +342,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [301 reading EXPLAIN, the plan as a tree](./notes/301-reading-explain-the-plan-as-a-tree.md): the root of a plan costs 136.31 and its leaf 134.20, because a parent cost includes its children and rows travel up the tree
 
 - [302 EXPLAIN ANALYZE, the planners guesses vs what really happened](./notes/302-explain-analyze-the-planners-guesses-vs-what-really-happened.md): the same plan run for real shows 90 guessed cancelled orders against 100 real, and 5 guessed groups against 1
+- [303 the buffer pool, keeping hot pages in memory](./notes/303-the-buffer-pool-keeping-hot-pages-in-memory.md): the same scan reads 8 pages from disk the first time and finds all 8 in memory the second

@@ -40,6 +40,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | bit | one tiny switch inside a computer, written as 0 or 1 | [002](./notes/002-bits.md) |
 | block | a fixed chunk of bytes, often 4096, a disk reads at once | [044](./notes/044-disks-read-in-blocks.md) |
 | boolean | a value with only two states, true or false | [023](./notes/023-true-and-false-the-boolean.md) |
+| buffer hit | a page found already in memory, so no disk trip | [303](./notes/303-the-buffer-pool-keeping-hot-pages-in-memory.md) |
+| buffer pool | memory where Postgres keeps copies of pages it already read | [303](./notes/303-the-buffer-pool-keeping-hot-pages-in-memory.md) |
 | build (hash join) | loading the inner side into a hash table, once | [299](./notes/299-hash-join-build-a-hash-table-then-look-up-each-row.md) |
 | byte | a group of 8 bits, holding 256 possible values | [004](./notes/004-bytes.md) |
 | byte in hex | a byte is always exactly two hex digits, 00 to ff | [006](./notes/006-one-byte-two-hex-digits.md) |
@@ -364,6 +366,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | session (clicks) | a run of one persons clicks, a long silence starts the next | [199](./notes/199-session-starts-flag-the-click-after-a-long-gap.md) |
 | session (database) | one connections conversation with the database, with its own settings | [212](./notes/212-connections-and-sessions-one-conversation-with-the-database.md) |
 | session id | the running sum of start flags, one number per session | [200](./notes/200-session-ids-a-running-sum-of-the-flags.md) |
+| shared_buffers | the setting that sizes the buffer pool, 128MB by default | [303](./notes/303-the-buffer-pool-keeping-hot-pages-in-memory.md) |
 | shell | the program inside a terminal that reads your line and runs it | [049](./notes/049-the-terminal.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
 | signpost (B tree) | a value in a non-leaf page splitting which child to follow | [287](./notes/287-b-tree-pages-that-point-to-pages.md) |

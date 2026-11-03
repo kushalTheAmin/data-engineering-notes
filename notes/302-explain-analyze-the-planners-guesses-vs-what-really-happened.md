@@ -55,4 +55,4 @@ often stale [statistics](./297-statistics-how-the-planner-guesses-row-counts.md)
 </details>
 
 ---
-prev: [301 reading EXPLAIN, the plan as a tree](./301-reading-explain-the-plan-as-a-tree.md) | next: not written yet
+prev: [301 reading EXPLAIN, the plan as a tree](./301-reading-explain-the-plan-as-a-tree.md) | next: [303 the buffer pool, keeping hot pages in memory](./303-the-buffer-pool-keeping-hot-pages-in-memory.md)
