@@ -155,6 +155,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | functional dependency | one column decides another: each value gives exactly one value | [258](./notes/258-functional-dependency-when-one-column-decides-another.md) |
 | gap (between islands) | the empty days between two runs of days with orders | [195](./notes/195-gaps-and-islands-date-minus-row-number.md) |
 | generate_series | a function in FROM making one row per step, stop included | [197](./notes/197-generate-series-a-column-of-consecutive-days.md) |
+| GET | HTTP method meaning give me this, changing nothing | [309](./notes/309-http-methods-get-asks-post-sends.md) |
 | gibibyte | 1024 x 1024 x 1024 bytes, written GiB | [038](./notes/038-1000-or-1024.md) |
 | gigabyte | 1000 megabytes, a billion bytes, written GB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | grand total | the one row that sums up every row of the result | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
@@ -175,6 +176,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | hexadecimal | counting with sixteen digits, a to f standing for ten to fifteen | [005](./notes/005-hexadecimal.md) |
 | host name | a text name for one machine, like shop.example | [306](./notes/306-dns-turning-names-into-addresses.md) |
 | HTTP | rules the web uses: a text request, then a text response | [308](./notes/308-request-and-response-one-message-out-one-message-back.md) |
+| HTTP method | the first word of a request, saying what kind of action | [309](./notes/309-http-methods-get-asks-post-sends.md) |
 | ILIKE | LIKE that ignores upper and lower case | [113](./notes/113-like-matching-text-patterns.md) |
 | image | the frozen packed box a container starts from, never changes | [209](./notes/209-images-and-containers-the-packed-box-and-the-running-copy.md) |
 | IN | keeps a row if its value equals any item in a list | [111](./notes/111-in-matching-against-a-list.md) |
@@ -307,6 +309,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | port | a number picking which program on a machine gets the bytes | [085](./notes/085-addresses-and-ports.md) |
 | port mapping | the -p flag: laptop port forwards to a port inside the container | [210](./notes/210-running-postgres-in-a-container-on-your-laptop.md) |
 | positional insert | an INSERT with no column list, values fill columns in table order | [220](./notes/220-insert-adding-rows-and-matching-values-to-columns.md) |
+| POST | HTTP method meaning here is data, act on it | [309](./notes/309-http-methods-get-asks-post-sends.md) |
 | Postgres | a popular database server | [211](./notes/211-a-database-server-postgres-where-most-app-data-lives.md) |
 | precedence | which operator runs first when a test mixes several, AND before OR | [109](./notes/109-parentheses-and-runs-before-or.md) |
 | precision | the most digits a decimal can hold in total | [022](./notes/022-exact-decimal-types.md) |

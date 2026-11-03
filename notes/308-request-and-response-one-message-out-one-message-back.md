@@ -57,4 +57,4 @@ the answer is 5. the query returns one row, so the body is `[106]`, 5 bytes, all
 </details>
 
 ---
-prev: [307 URLs and query parameters](./307-urls-and-query-parameters.md) | next: not written yet
+prev: [307 URLs and query parameters](./307-urls-and-query-parameters.md) | next: [309 HTTP methods, GET asks and POST sends](./309-http-methods-get-asks-post-sends.md)
