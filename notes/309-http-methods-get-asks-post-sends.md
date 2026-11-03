@@ -32,11 +32,11 @@ POST new order 109
 GET  9 orders
 ```
 
-GET only reads, so sending it twice changes nothing. POST carries data in its body (the part after the empty line, here customer_id=2) and the server adds something, so twice means two orders.
+GET is meant only to read, so sending it twice changes nothing here. POST carries data in its body (the part after the empty line, here customer_id=2) and the server adds something, so twice means two orders.
 
 i assumed an identical message would give an identical result, but the first word decides, and POST doesnt promise it. the toy server cant tell the second POST is a repeat.
 
-this bites in real apps. the HTTP spec (RFC 9110) says a client shouldnt automatically retry a method like POST, since the first try may already have worked. PUT (replace a thing) and DELETE (remove it) are safe to repeat, so POST is the odd one.
+this bites in real apps. the HTTP spec (RFC 9110) says a client shouldnt automatically retry a method like POST, since the first try may already have worked. PUT (replace a thing) and DELETE (remove it) are safe to repeat, so of these four POST is the odd one.
 
 ### check yourself
 

@@ -20,3 +20,6 @@ assert asha == 3 and asha + 2 == 5
 # confirmed (section 9.2.2): PUT, DELETE and safe methods are idempotent; a client SHOULD NOT automatically retry a request with a non-idempotent method unless it knows the request is idempotent or can detect it was never applied; POST is not in the idempotent list
 # confirmed (section 9.3.3): POST asks the target resource to process the enclosed representation; GET (9.3.1) requests transfer of a current representation
 print("309 ok")
+# audit: the note said GET only reads and that POST is the odd one. RFC 9110 says safe methods are essentially read-only but may still cause side effects such as logging, and only PUT, DELETE and safe methods are idempotent among the methods it defines, so the note now says meant only to read, and odd one of these four
+# source: https://www.rfc-editor.org/rfc/rfc9110.txt
+#   confirmed (opened this run, 9.2.1): safe means essentially read-only, yet an implementation may cause side effects while invoking a safe method; (9.2.2) of the methods defined, PUT, DELETE and safe methods are idempotent; (9.3.4) PUT requests that the state of the target resource be created or replaced; (9.3.5) DELETE requests that the origin server remove the association between the target resource and its current functionality
