@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 306
+notes so far: 307
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -349,3 +349,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 ## section 13: talking over a network
 
 - [306 DNS, turning names into addresses](./notes/306-dns-turning-names-into-addresses.md): the phone asks a DNS server for shop.example first, gets 192.0.2.10, and only then connects to the address
+- [307 URLs and query parameters](./notes/307-urls-and-query-parameters.md): a URL is one string with a scheme, host, port, path and a query of key=value filters

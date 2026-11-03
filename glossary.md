@@ -291,6 +291,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | partition (window functions) | one group of rows sharing a value, inside a window | [186](./notes/186-partition-by-a-separate-window-per-group.md) |
 | PARTITION BY | inside OVER, cuts the window into one group per value | [186](./notes/186-partition-by-a-separate-window-per-group.md) |
 | path | folder names from the top down to a file, joined by slashes | [040](./notes/040-folders-and-paths.md) |
+| path (URL) | the part after the host saying which thing on that server | [307](./notes/307-urls-and-query-parameters.md) |
 | percentile | the value some fraction of the way through the sorted column | [150](./notes/150-percentiles-the-medians-cousins.md) |
 | phantom read | a re-run query in one transaction returns a different set of rows | [238](./notes/238-phantoms.md) |
 | pid | the number the system gives one running process, new each run | [050](./notes/050-processes.md) |
@@ -314,6 +315,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | processor | the CPU, the part of the computer doing tiny steps on numbers | [035](./notes/035-the-processor.md) |
 | program | a file of bytes on disk that can be run | [050](./notes/050-processes.md) |
 | query | one request sent to a database, naming the result you want | [101](./notes/101-sql-you-describe-the-result.md) |
+| query parameter | a key=value filter after the ? in a URL | [307](./notes/307-urls-and-query-parameters.md) |
 | query planner | the part of Postgres that prices the ways to run a query | [296](./notes/296-the-query-planner-picking-the-cheapest-plan.md) |
 | quoting (csv) | double quotes around a value so commas inside it stay text | [063](./notes/063-quoting-commas-inside-values.md) |
 | range join | a join whose ON is a BETWEEN, matching values to periods | [170](./notes/170-joining-on-a-range-matching-a-date-to-a-period.md) |
@@ -355,6 +357,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | schema (file) | a written agreement on which fields every record must have | [075](./notes/075-schema.md) |
 | schema on read | storing anything as it arrives, checking shape only when used | [083](./notes/083-schema-on-write-vs-schema-on-read.md) |
 | schema on write | checking shape as data goes in, rejecting what doesnt fit | [083](./notes/083-schema-on-write-vs-schema-on-read.md) |
+| scheme | the start of a URL, like http, naming the rules for talking | [307](./notes/307-urls-and-query-parameters.md) |
 | search path | the folders Postgres checks in order to find a bare table name | [267](./notes/267-schemas-as-namespaces-folders-for-tables.md) |
 | second normal form | every column depends on the whole key, not half of it | [260](./notes/260-second-normal-form-nothing-about-half-the-key.md) |
 | SELECT | the clause naming which columns to keep, in the order written | [104](./notes/104-select-and-from-picking-columns.md) |
@@ -437,6 +440,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | updated_at | a column holding when the row last changed, moved by every update | [265](./notes/265-created-at-and-updated-at-two-timestamps-every-table-carries.md) |
 | upper | a function turning every letter to upper case | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | upsert | an INSERT that updates the row instead if its key exists | [224](./notes/224-upsert-insert-or-update-in-one-statement.md) |
+| URL | one text string holding scheme, host, port, path and query | [307](./notes/307-urls-and-query-parameters.md) |
 | UTC | the one clock everyone measures against, with no daylight saving | [024](./notes/024-utc.md) |
 | UTF-8 | a way to store each code point as 1 to 4 bytes | [010](./notes/010-utf-8.md) |
 | VACUUM | Postgres command that frees dead row versions for reuse | [304](./notes/304-vacuum-how-postgres-cleans-up-old-row-versions.md) |

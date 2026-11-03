@@ -32,4 +32,4 @@ print(socket.gethostbyname("localhost"))
 i assumed the name was the destination, but its just a way to get the address. the bug it explains: "could not resolve host" means the lookup itself failed, not the connection refused in [085](./085-addresses-and-ports.md), where nobody listened.
 
 ---
-prev: [305 capstone, one query from SQL text to rows on disk](./305-capstone-one-query-from-sql-text-to-rows-on-disk.md) | next: not written yet
+prev: [305 capstone, one query from SQL text to rows on disk](./305-capstone-one-query-from-sql-text-to-rows-on-disk.md) | next: [307 URLs and query parameters](./307-urls-and-query-parameters.md)
