@@ -20,6 +20,8 @@ assert req.endswith(b"\r\n\r\n")
 # confirmed: a message is start-line, header lines, an empty line, then an optional body; Content-Length gives the body length in octets; request-line is method SP request-target SP HTTP-version
 # source: https://www.rfc-editor.org/rfc/rfc9110.html
 # confirmed: HTTP is a stateless request/response protocol, a client sends a request message and the server responds
+# source: https://nginx.org/en/docs/http/ngx_http_core_module.html
+# confirmed (opened this run, client_header_timeout): if a client does not transmit the entire header within this time, the request is terminated with the 408 (Request Time-out) error, so a typical server waits and then times out (check yourself 1)
 print("308 ok")
 # audit: the note said plain HTTP is a few lines of text, which is true of HTTP/1.1 only. it now says HTTP/1.1 and that newer versions pack it as binary
 # source: https://www.rfc-editor.org/rfc/rfc9113.txt
