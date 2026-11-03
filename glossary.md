@@ -22,6 +22,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | atomic | happening whole or not at all, never half done | [046](./notes/046-writing-safely.md) |
 | atomicity | the ACID promise: all of a transaction happens, or none of it | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | attribute | one fact about one entity, stored as a column | [255](./notes/255-entities-and-attributes.md) |
+| autovacuum | background Postgres job that runs VACUUM and ANALYZE for you | [304](./notes/304-vacuum-how-postgres-cleans-up-old-row-versions.md) |
 | avg | the average of a column, its sum divided by how many values | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
 | B tree | a tree whose nodes are whole pages, each holding many sorted values | [287](./notes/287-b-tree-pages-that-point-to-pages.md) |
 | backfill | fills a new column for rows that already exist, in small batches | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
@@ -99,6 +100,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | date_diff | counts the day or month boundaries crossed between two moments | [129](./notes/129-the-difference-between-two-dates.md) |
 | date_trunc | chops a timestamp down to the start of its day or month | [127](./notes/127-truncating-timestamps-to-a-day-or-a-month.md) |
 | daylight saving | clocks shifting an hour twice a year in many places | [024](./notes/024-utc.md) |
+| dead row version | an ended version no open snapshot can still need | [304](./notes/304-vacuum-how-postgres-cleans-up-old-row-versions.md) |
 | deadlock | two transactions each waiting for a lock the other holds | [244](./notes/244-deadlocks-two-transactions-waiting-on-each-other.md) |
 | decompress | rebuild the original bytes from compressed ones, costing processor work | [048](./notes/048-compression-trades-processor-for-space.md) |
 | deduplicate | keep one row per thing when the data holds several | [194](./notes/194-removing-duplicates-with-row-number.md) |
@@ -434,6 +436,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | upsert | an INSERT that updates the row instead if its key exists | [224](./notes/224-upsert-insert-or-update-in-one-statement.md) |
 | UTC | the one clock everyone measures against, with no daylight saving | [024](./notes/024-utc.md) |
 | UTF-8 | a way to store each code point as 1 to 4 bytes | [010](./notes/010-utf-8.md) |
+| VACUUM | Postgres command that frees dead row versions for reuse | [304](./notes/304-vacuum-how-postgres-cleans-up-old-row-versions.md) |
 | valid state | every declared rule true at once, before and after a transaction | [230](./notes/230-acid-consistency-the-rules-still-hold-after-every-change.md) |
 | view | a query saved under a name, rerun on every read | [181](./notes/181-views-a-saved-query-with-a-name.md) |
 | WAL | short for write ahead log | [233](./notes/233-the-write-ahead-log-write-down-the-plan-before-the-change.md) |

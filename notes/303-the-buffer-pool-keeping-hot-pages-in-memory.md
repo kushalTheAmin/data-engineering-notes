@@ -56,4 +56,4 @@ shared means ordinary table and index pages. the setting shared_buffers sizes th
 what surprised me is that a restart makes Postgres slower at first, since the pool starts empty. so when you time a query, run it twice.
 
 ---
-prev: [302 EXPLAIN ANALYZE, the planners guesses vs what really happened](./302-explain-analyze-the-planners-guesses-vs-what-really-happened.md) | next: not written yet
+prev: [302 EXPLAIN ANALYZE, the planners guesses vs what really happened](./302-explain-analyze-the-planners-guesses-vs-what-really-happened.md) | next: [304 vacuum, how Postgres cleans up old row versions](./304-vacuum-how-postgres-cleans-up-old-row-versions.md)
