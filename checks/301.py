@@ -29,3 +29,4 @@ assert 4000.00 - 3990.00 == 10.0
 # audit: the claim that the root asks its child for rows, which asks its child, had no source
 # source: https://raw.githubusercontent.com/postgres/postgres/REL_16_STABLE/src/backend/executor/README
 #   confirmed: the plan tree is a demand-pull pipeline, and a node that is not a primitive scan node calls its child nodes in turn to obtain input tuples (opened this run)
+# audit: the note used Postgres with no gloss, so a reader landing here cold could not tell what it is. it now says Postgres (a database), as 296 and 304 gloss it (text of notes/296 line 7, notes/304 line 5). to stay under 250 words, and the root hands you the answer became which hands you the answer

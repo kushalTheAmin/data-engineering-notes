@@ -2,9 +2,9 @@
 builds on: [300 merge join, walk two sorted lists side by side](./300-merge-join-walk-two-sorted-lists-side-by-side.md), [299 hash join, build a hash table then look up each row](./299-hash-join-build-a-hash-table-then-look-up-each-row.md), [298 nested loop join, for each outer row search the inner side](./298-nested-loop-join-for-each-outer-row-search-the-inner-side.md), [297 statistics, how the planner guesses row counts](./297-statistics-how-the-planner-guesses-row-counts.md), [296 the query planner, picking the cheapest plan](./296-the-query-planner-picking-the-cheapest-plan.md), [280 trees, data that branches](./280-trees-data-that-branches.md)
 section: inside a database server, part 18, ~2 min read
 
-below, the top line of a plan costs 136.31 and the Index Scan under it costs 134.20. so is the top line the expensive step? [296](./296-the-query-planner-picking-the-cheapest-plan.md) said EXPLAIN prints the plan, the steps Postgres picked.
+below, the top line of a plan costs 136.31 and the Index Scan under it costs 134.20. so is the top line the expensive step? [296](./296-the-query-planner-picking-the-cheapest-plan.md) said EXPLAIN prints the plan, the steps Postgres (a database) picked.
 
-a plan is a [tree](./280-trees-data-that-branches.md) (boxes linked parent to children), and each step line is one [node](./280-trees-data-that-branches.md). indentation says whose child it is ([docs](https://www.postgresql.org/docs/16/using-explain.html)). rows travel up, from the leaves (nodes with no children, which usually read tables) to the root (the top line), and the root hands you the answer.
+a plan is a [tree](./280-trees-data-that-branches.md) (boxes linked parent to children), and each step line is one [node](./280-trees-data-that-branches.md). indentation says whose child it is ([docs](https://www.postgresql.org/docs/16/using-explain.html)). rows travel up, from the leaves (nodes with no children, which usually read tables) to the root (the top line), which hands you the answer.
 
 the shop, the imaginary gujarati snack store these notes run on, as 100000 made up orders in Postgres 16. cancelled orders per customer (with pending orders too, so costs differ from 296):
 
