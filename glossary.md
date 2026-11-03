@@ -16,6 +16,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | ANALYZE | Postgres command that samples a table and saves its statistics | [297](./notes/297-statistics-how-the-planner-guesses-row-counts.md) |
 | AND | joins two tests, keeping a row only if both are true | [108](./notes/108-and-or-combining-two-tests.md) |
 | anti join | keeps left rows with no match: a left join, then IS NULL | [167](./notes/167-anti-join-rows-with-no-match.md) |
+| API | the requests a server promises to answer for other programs | [312](./notes/312-apis-a-door-built-for-programs.md) |
 | argument | a word after the program name, handed to that program | [049](./notes/049-the-terminal.md) |
 | array (SQL) | several values kept in one cell, written in square brackets | [204](./notes/204-arrays-and-unnest-lists-inside-a-cell.md) |
 | ASCII | the old table giving 128 characters a number, English only | [008](./notes/008-ascii-runs-out.md) |
