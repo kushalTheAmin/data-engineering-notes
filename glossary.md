@@ -174,8 +174,10 @@ every term these notes have built, in plain words, with the note that built it. 
 | head | prints the first lines of a file, 10 unless -n says otherwise | [054](./notes/054-head-and-tail.md) |
 | header row | the first line of a csv, holding column names instead of data | [065](./notes/065-the-header-row-naming-the-columns.md) |
 | hexadecimal | counting with sixteen digits, a to f standing for ten to fifteen | [005](./notes/005-hexadecimal.md) |
+| Host header | the request line naming which site, since the address has no name | [310](./notes/310-http-headers-notes-attached-to-a-request.md) |
 | host name | a text name for one machine, like shop.example | [306](./notes/306-dns-turning-names-into-addresses.md) |
 | HTTP | rules the web uses: a text request, then a text response | [308](./notes/308-request-and-response-one-message-out-one-message-back.md) |
+| HTTP header | one Name: value line between a messages first line and blank line | [310](./notes/310-http-headers-notes-attached-to-a-request.md) |
 | HTTP method | the first word of a request, saying what kind of action | [309](./notes/309-http-methods-get-asks-post-sends.md) |
 | ILIKE | LIKE that ignores upper and lower case | [113](./notes/113-like-matching-text-patterns.md) |
 | image | the frozen packed box a container starts from, never changes | [209](./notes/209-images-and-containers-the-packed-box-and-the-running-copy.md) |

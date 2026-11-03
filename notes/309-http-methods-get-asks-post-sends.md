@@ -55,4 +55,4 @@ no. the first removes 104, and after that the second has nothing left to remove,
 </details>
 
 ---
-prev: [308 request and response, one message out, one message back](./308-request-and-response-one-message-out-one-message-back.md) | next: not written yet
+prev: [308 request and response, one message out, one message back](./308-request-and-response-one-message-out-one-message-back.md) | next: [310 HTTP headers, notes attached to a request](./310-http-headers-notes-attached-to-a-request.md)
