@@ -57,4 +57,4 @@ a parent cost includes its children, so the root is usually the biggest. the roo
 </details>
 
 ---
-prev: [300 merge join, walk two sorted lists side by side](./300-merge-join-walk-two-sorted-lists-side-by-side.md) | next: not written yet
+prev: [300 merge join, walk two sorted lists side by side](./300-merge-join-walk-two-sorted-lists-side-by-side.md) | next: [302 EXPLAIN ANALYZE, the planners guesses vs what really happened](./302-explain-analyze-the-planners-guesses-vs-what-really-happened.md)

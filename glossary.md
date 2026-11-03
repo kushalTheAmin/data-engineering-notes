@@ -128,6 +128,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | EXCLUDED | in an upsert, the row you tried to insert | [224](./notes/224-upsert-insert-or-update-in-one-statement.md) |
 | EXISTS | true when the inner query returns at least one row | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
 | EXPLAIN | Postgres command that shows the plan it would use for a query | [285](./notes/285-full-table-scan-reading-every-page.md) |
+| EXPLAIN ANALYZE | EXPLAIN that runs the query and prints real rows and times too | [302](./notes/302-explain-analyze-the-planners-guesses-vs-what-really-happened.md) |
 | explode | turning a record holding a list into one row per list item | [071](./notes/071-exploding-lists-into-many-rows.md) |
 | expression index | an index built on a functions result, like lower(name) | [295](./notes/295-functions-on-a-column-why-the-index-gets-skipped.md) |
 | fan out | a join keeping a left row once per matching right row | [164](./notes/164-fan-out-when-a-join-multiplies-rows.md) |

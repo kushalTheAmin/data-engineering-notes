@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 301
+notes so far: 302
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -340,3 +340,5 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [299 hash join, build a hash table then look up each row](./notes/299-hash-join-build-a-hash-table-then-look-up-each-row.md): the same 7 orders and 5 customers join in 12 looks instead of 35 once one side is loaded into a hash table first
 - [300 merge join, walk two sorted lists side by side](./notes/300-merge-join-walk-two-sorted-lists-side-by-side.md): the 7 orders and 5 customers join in 10 steps with no lookups once both are sorted by customer id, and Esha is never touched
 - [301 reading EXPLAIN, the plan as a tree](./notes/301-reading-explain-the-plan-as-a-tree.md): the root of a plan costs 136.31 and its leaf 134.20, because a parent cost includes its children and rows travel up the tree
+
+- [302 EXPLAIN ANALYZE, the planners guesses vs what really happened](./notes/302-explain-analyze-the-planners-guesses-vs-what-really-happened.md): the same plan run for real shows 90 guessed cancelled orders against 100 real, and 5 guessed groups against 1
