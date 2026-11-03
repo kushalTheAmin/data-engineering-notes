@@ -18,7 +18,11 @@ assert q("SELECT name FROM customers WHERE customer_id = 1") == [("Asha",)]
 assert 100 - 90 == 10 and 5 != 1
 # check yourself 1: UPDATE of Ashas orders (customer 1) to cancelled, plus Chirags 104 already cancelled, gives 4
 assert q("SELECT count(*) FROM orders")[0][0] == 7
-assert q("SELECT count(*) AS cancelled FROM orders WHERE status = 'cancelled' OR customer_id = 1") == [(4,)]
+assert q("SELECT count(*) AS cancelled FROM orders WHERE status = 'cancelled'") == [(1,)]  # before the UPDATE
+con2 = shop()
+con2.execute("UPDATE orders SET status = 'cancelled' WHERE customer_id = 1")
+assert con2.execute("SELECT count(*) AS cancelled FROM orders WHERE status = 'cancelled'").fetchall() == [(4,)]  # after: what the note shows
+# audit: the old query had OR customer_id = 1 and returned 4 before and after the UPDATE, so it could not show whether ANALYZE ran the update
 assert q("SELECT count(*) FROM orders WHERE customer_id = 1")[0][0] == 3
 assert q("SELECT order_id, name FROM orders o JOIN customers c USING (customer_id) WHERE status = 'cancelled'") == [(104, "Chirag")]
 # Postgres 16.15 run: EXPLAIN ANALYZE DELETE on a 7 row copy, then SELECT count(*) returned 6 (so ANALYZE really applies writes; note uses an UPDATE because real shop orders have child rows that block a DELETE)

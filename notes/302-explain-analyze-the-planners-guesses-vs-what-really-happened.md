@@ -28,10 +28,11 @@ i figured EXPLAIN ANALYZE was EXPLAIN with a stopwatch added. it isnt. it runs t
 
 ### check yourself
 
-1. on the 7 real shop orders you run EXPLAIN ANALYZE on this UPDATE, outside any BEGIN, just to read the plan: UPDATE orders SET status = 'cancelled' WHERE customer_id = 1. afterwards, how many orders are cancelled?
+1. on the 7 real shop orders you run EXPLAIN ANALYZE on an UPDATE, outside any BEGIN, just to read the plan, then count. how many orders are cancelled?
 
 ```sql
-SELECT count(*) AS cancelled FROM orders WHERE status = 'cancelled' OR customer_id = 1
+EXPLAIN ANALYZE UPDATE orders SET status = 'cancelled' WHERE customer_id = 1;
+SELECT count(*) AS cancelled FROM orders WHERE status = 'cancelled'
 ```
 
 <details><summary>answer</summary>
