@@ -26,3 +26,6 @@ assert 4000.00 - 3990.00 == 10.0
 # source: https://www.postgresql.org/docs/16/using-explain.html
 #   confirmed: nodes at the bottom level of the tree are scan nodes that return raw rows from a table, plus non-table row sources such as VALUES clauses (opened this run)
 # Postgres 16.15 run this audit: the plan shape and the cost chain (child total inside parent total) reproduced on a rebuilt orders100k; rows= varied between 90 and 117 by sample, so 97 is one run
+# audit: the claim that the root asks its child for rows, which asks its child, had no source
+# source: https://raw.githubusercontent.com/postgres/postgres/REL_16_STABLE/src/backend/executor/README
+#   confirmed: the plan tree is a demand-pull pipeline, and a node that is not a primitive scan node calls its child nodes in turn to obtain input tuples (opened this run)
