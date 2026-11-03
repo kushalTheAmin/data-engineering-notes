@@ -24,3 +24,6 @@ assert headers == {"host": "shop.example", "accept": "application/json"}
 # source: https://www.rfc-editor.org/rfc/rfc9112.txt
 # confirmed (section 3.2): a client MUST send a Host header field in all HTTP/1.1 request messages
 print("310 ok")
+# audit: the note said most request headers say what the client wants and most response headers describe the body, which no page supports. it now says some of each
+# source: https://www.rfc-editor.org/rfc/rfc9110.txt
+#   confirmed (opened this run, 10.1 and 10.2): request context fields give information about the user, user agent and resource behind the request; response context fields give information about the server, the target resource or related resources, so not all describe the body

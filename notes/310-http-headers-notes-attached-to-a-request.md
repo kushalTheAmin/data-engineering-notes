@@ -38,7 +38,7 @@ shop.example
 
 i lowercased the names because HTTP ignores case in them, so Host and host are the same header. skip that and your lookup misses a header thats plainly there.
 
-most request headers say what the client wants, most response headers describe the body. a body is just bytes, so Content-Type is the main thing saying how to read them.
+some request headers say what the client wants, some response headers describe the body. a body is just bytes, so Content-Type is the main thing saying how to read them.
 
 this is how one machine at one address serves many sites: HTTP/1.1 requires a client to send Host, and the server (the program answering) picks the site by it. i figured the extra lines were decoration, but the name the address doesnt carry has to ride along in one of them.
 
