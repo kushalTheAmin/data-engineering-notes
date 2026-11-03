@@ -31,3 +31,6 @@ assert 2000 / 2 == 1000
 # source: https://www.postgresql.org/docs/16/using-explain.html
 #   confirmed: with ANALYZE, EXPLAIN actually executes the query and shows true row counts and run time per node; actual time is in milliseconds of real time while costs are arbitrary units;
 #   the most important thing to look for is whether estimated row counts are close to reality; INSERT/UPDATE/DELETE are really applied, so wrap in BEGIN ... ROLLBACK (opened this run)
+# audit: the note used EXPLAIN with no gloss, so a reader landing here cold could not tell what it is. it now says it prints how Postgres runs a query (same gloss as 303; https://www.postgresql.org/docs/16/sql-explain.html, opened this run: EXPLAIN displays the execution plan the planner generates)
+# the claim that a parent's actual time includes its children is not stated on the docs page; it is shown by the note's own numbers (and by the docs example, Nested Loop actual time=0.128..0.377 over Bitmap Heap Scan actual time=0.057..0.121)
+assert 0.625 >= 0.600 >= 0.549 and 0.600 >= 0.017 and 0.625 >= 0.600  # root, Hash Join, Index Scan, Hash totals from the note

@@ -4,7 +4,7 @@ section: inside a database server, part 19, ~2 min read
 
 Postgres, the database server these notes use, plans a query before running it and guesses how many rows each step handles. the plan in [301](./301-reading-explain-the-plan-as-a-tree.md) guessed 97 cancelled orders, and i just believed it. how do you check a guess like that without counting by hand?
 
-EXPLAIN ANALYZE is the [EXPLAIN](./285-full-table-scan-reading-every-page.md) command with one change: Postgres actually runs the query, then prints what really happened next to each guess ([docs](https://www.postgresql.org/docs/16/using-explain.html)).
+EXPLAIN ANALYZE is the [EXPLAIN](./285-full-table-scan-reading-every-page.md) command (it prints how Postgres runs a query) with one change: Postgres actually runs the query, then prints what really happened next to each guess ([docs](https://www.postgresql.org/docs/16/using-explain.html)).
 
 the shop, the imaginary gujarati snack store these notes run on, as 100000 made up orders in Postgres 16, same cancelled-orders-per-customer query as 301. a fresh [ANALYZE](./297-statistics-how-the-planner-guesses-row-counts.md) (the command that re-samples a table, a different thing from the option here) sampled differently, so the guess is 90 this time. the second pair on each line is the new part:
 
