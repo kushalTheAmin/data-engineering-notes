@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 304
+notes so far: 305
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -344,3 +344,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [302 EXPLAIN ANALYZE, the planners guesses vs what really happened](./notes/302-explain-analyze-the-planners-guesses-vs-what-really-happened.md): the same plan run for real shows 90 guessed cancelled orders against 100 real, and 5 guessed groups against 1
 - [303 the buffer pool, keeping hot pages in memory](./notes/303-the-buffer-pool-keeping-hot-pages-in-memory.md): the same scan reads 8 pages from disk the first time and finds all 8 in memory the second
 - [304 vacuum, how Postgres cleans up old row versions](./notes/304-vacuum-how-postgres-cleans-up-old-row-versions.md): a deleted row keeps its seat on the page until no open transaction could need it, then the next insert takes the seat and the file stays 8192 bytes
+- [305 capstone, one query from SQL text to rows on disk](./notes/305-capstone-one-query-from-sql-text-to-rows-on-disk.md): one query is planned, joined, scanned and read through the buffer pool, and only the last two steps touch the disk

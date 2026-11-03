@@ -38,4 +38,4 @@ it grows, because versions that ended after Monday snapshot are not removable wh
 </details>
 
 ---
-prev: [303 the buffer pool, keeping hot pages in memory](./303-the-buffer-pool-keeping-hot-pages-in-memory.md) | next: not written yet
+prev: [303 the buffer pool, keeping hot pages in memory](./303-the-buffer-pool-keeping-hot-pages-in-memory.md) | next: [305 capstone, one query from SQL text to rows on disk](./305-capstone-one-query-from-sql-text-to-rows-on-disk.md)
