@@ -16,7 +16,7 @@ http://shop.example:8080/orders?customer_id=1&status=delivered
 scheme: the rules for talking
 ```
 
-the host name goes to DNS, the [port](./085-addresses-and-ports.md) (a number picking one program) picks the program, and the [server](./086-client-and-server.md) (the side that waits for requests) reads the path and the query. this path is not the file path of [053](./053-absolute-vs-relative-paths.md), it just names a thing on the server. the query starts at the ? and is a list of key=value pairs, so it is a [dictionary](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md) written as text. python can split it:
+the host name goes to DNS, the [port](./085-addresses-and-ports.md) (a number picking one program) picks the program, and the [server](./086-client-and-server.md) (the side that waits for requests) reads the path and the query. this path is not the file path of [053](./053-absolute-vs-relative-paths.md), it just names a thing on the server. the query starts at the ? and usually holds key=value pairs, so it is often a [dictionary](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md) written as text. python can split it:
 
 ```python
 from urllib.parse import urlsplit, parse_qs

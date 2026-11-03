@@ -17,3 +17,8 @@ assert rows == [(101,), (103,)]
 # source: https://www.rfc-editor.org/rfc/rfc3986
 # confirmed: the example foo://example.com:8042/over/there?name=ferret has scheme, host, port, path and a query, and query components are often key=value pairs
 print("307 ok")
+# audit: the note said the query is a list of key=value pairs, which reads as always true, but RFC 3986 says only that query components are often used to carry key=value pairs. it now says usually holds key=value pairs, often a dictionary written as text
+# source: https://www.rfc-editor.org/rfc/rfc3986.txt
+#   confirmed (opened this run): query components are often used to carry identifying information in the form of "key=value" pairs; a URI is a sequence of characters
+# source: https://docs.python.org/3/library/urllib.parse.html
+#   confirmed (opened this run): parse_qs separator defaults to '&'
