@@ -29,3 +29,5 @@ assert 8 < 16384
 #   confirmed: BUFFERS reports shared blocks hit and read; a hit means a read was avoided because the block was already in cache; shared blocks hold regular table and index data
 # source: https://raw.githubusercontent.com/postgres/postgres/REL_16_STABLE/src/backend/storage/buffer/README
 #   confirmed: the normal buffer replacement strategy is a clock sweep algorithm, not strict least recently used
+# audit: the note said 128MB by default, but the docs say the default is typically 128MB and might be less, so it now says typically. it also used SSD and EXPLAIN with no gloss, so it now says a chip-based disk (note 037) and that EXPLAIN prints how Postgres runs a query (note 285)
+# Postgres 16 run this audit on a restarted server: orders1000 (1000 rows, 8 pages), run 1 shared read=8 dirtied=7, run 2 shared hit=8; SHOW shared_buffers gave 128MB
