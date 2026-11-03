@@ -12,3 +12,8 @@ assert bytes(int(p) for p in "192.0.2.10".split(".")).hex(" ") == "c0 00 02 0a"
 # source: https://www.rfc-editor.org/rfc/rfc2606
 # confirmed: .example is reserved for use in documentation or as examples
 print("306 ok")
+# audit: the note said the spec recommends returning all addresses, but RFC 1034 only says "a multiple address return is recommended, but a single address may be the only way to emulate prior HOSTS.TXT services". it now says several
+# source: https://www.rfc-editor.org/rfc/rfc6761.txt
+#   confirmed (opened this run): name resolution APIs and libraries SHOULD recognize localhost names as special and SHOULD always return the IP loopback address
+# source: https://www.rfc-editor.org/rfc/rfc1034.txt
+#   confirmed (opened this run): the TTL describes how long a resource record can be cached before it should be discarded

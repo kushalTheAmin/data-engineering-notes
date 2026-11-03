@@ -16,7 +16,7 @@ sequenceDiagram
     P->>S: bytes to 192.0.2.10
 ```
 
-the phone asks first and connects second. the connection goes to the address, the name is mostly what you typed to get it. so when the shop moves machines, someone changes one entry and no phone changes anything, once old cached answers expire. one name can also come back with several addresses (the [DNS spec](https://www.rfc-editor.org/rfc/rfc1034) recommends returning them all), so a name is not always one address.
+the phone asks first and connects second. the connection goes to the address, the name is mostly what you typed to get it. so when the shop moves machines, someone changes one entry and no phone changes anything, once old cached answers expire. one name can also come back with several addresses (the [DNS spec](https://www.rfc-editor.org/rfc/rfc1034) recommends returning several), so a name is not always one address.
 
 localhost, the name for this same machine, (127.0.0.1) is usually answered from a file on it, no network involved:
 
