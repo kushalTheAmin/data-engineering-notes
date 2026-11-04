@@ -30,7 +30,7 @@ the header name x-api-key is the shops own pick, and the toy assumes names arriv
 
 each program has its own entry, so deleting one cuts off that script alone.
 
-the gotcha: with a plain key the server cant tell the real script from a copy. whoever holds the string is the script. so a key typed into code pushed to a public repo (a project folder anyone can read) is a door left open. GitHub scanning flags only known kinds of keys, so ours would slip past. keep keys out of code, and if one leaks, delete its entry, since removing the line later doesnt unpublish it.
+the gotcha: with a plain key the server cant tell the real script from a copy. whoever holds the string is the script. so a key typed into code pushed to a public repo (a project folder anyone can read) is a door left open. GitHub scanning by default flags known kinds of keys, so ours would likely slip past. keep keys out of code, and if one leaks, delete its entry, since removing the line later doesnt unpublish it.
 
 ### check yourself
 

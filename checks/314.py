@@ -28,3 +28,6 @@ assert "k_other" in keys2 and "k_report_7f3a" not in keys2
 # source: https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning
 # confirmed: secret scanning scans repositories for hardcoded credentials including API keys and passwords
 print("314 ok")
+# audit: the note said GitHub scanning flags only known kinds of keys, but the page says that is the default detection and generic patterns (such as generic API keys), custom patterns and AI-detected secrets can extend it. the note now says by default and likely slip past
+# source: https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning
+#   confirmed (opened this run): scans for hardcoded credentials including API keys, passwords, tokens, and other known secret types; beyond the default detection of partner and provider secrets, generic patterns expand detection to secrets not tied to a specific provider, such as generic API keys
