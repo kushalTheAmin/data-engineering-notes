@@ -27,3 +27,6 @@ print("311 ok")
 # audit: the note said 404 means the server looked and found nothing. RFC 9110 15.5.5 says 404 means the origin server did not find a current representation or is not willing to disclose that one exists. the note now says found nothing, or wont say if anything is
 # source: https://www.rfc-editor.org/rfc/rfc9110.txt
 #   confirmed (opened this run, 15.5.5): the 404 status code indicates that the origin server did not find a current representation for the target resource or is not willing to disclose that one exists
+# audit: sources for the retry rule of thumb and check yourself 2, no note text changed
+# source: https://www.rfc-editor.org/rfc/rfc9110.txt
+#   confirmed (opened this run): 15.6.4 503 is a temporary overload or maintenance that will likely be alleviated after some delay (a 5xx can pass next time); 15.5.9 408 says a client MAY repeat its request (a 4xx can too, which is why the note says usually); 9.2.2 says a failed non-idempotent request may have partially applied changes, so automatic retry is risky; 15.6.1 500 is an unexpected condition, nothing about how far it got
