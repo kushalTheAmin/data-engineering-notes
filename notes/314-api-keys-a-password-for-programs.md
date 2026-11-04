@@ -49,4 +49,4 @@ it answers 200 and Ashas orders, because the lookup finds the key and cant tell 
 </details>
 
 ---
-prev: [313 JSON over HTTP, the answer is text until you parse it](./313-json-over-http-the-answer-is-text-until-you-parse-it.md) | next: not written yet
+prev: [313 JSON over HTTP, the answer is text until you parse it](./313-json-over-http-the-answer-is-text-until-you-parse-it.md) | next: [315 tokens that expire, a key with a shelf life](./315-tokens-that-expire-a-key-with-a-shelf-life.md)

@@ -7,6 +7,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | 401 | status code meaning the request lacks valid credentials, caller unknown | [314](./notes/314-api-keys-a-password-for-programs.md) |
 | absolute path | a path starting with a slash, always begun at the root | [053](./notes/053-absolute-vs-relative-paths.md) |
 | ACCESS EXCLUSIVE | the strongest table lock, blocks every other query on the table | [245](./notes/245-changing-a-column-type-the-table-rewrite-and-the-lock.md) |
+| access token | short lived string a program sends instead of a key | [315](./notes/315-tokens-that-expire-a-key-with-a-shelf-life.md) |
 | ACID | four promises of a database: atomicity, consistency, isolation, durability | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | add column | a new column added to a table that already has rows | [225](./notes/225-alter-table-adding-a-column-to-a-table-with-rows.md) |
 | address (network) | a number naming one machine on a network, 4 bytes in IPv4 | [085](./notes/085-addresses-and-ports.md) |
@@ -335,6 +336,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | record | one row of a table, one thing the data is about | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | recursive CTE | a CTE that reads its own rows, repeating until none are found | [203](./notes/203-recursive-ctes-following-a-chain-of-rows.md) |
 | redirect | > sends a programs stdout into a file, emptying it first | [059](./notes/059-redirecting-output-into-a-file.md) |
+| refresh token | long lived string that is only swapped for a new access token | [315](./notes/315-tokens-that-expire-a-key-with-a-shelf-life.md) |
 | register | a tiny holding spot inside the processor, where it works on numbers | [035](./notes/035-the-processor.md) |
 | relationship | how rows in one table connect to rows in another | [092](./notes/092-relationships-one-customer-many-orders.md) |
 | relative path | a path with no leading slash, begun at the working directory | [053](./notes/053-absolute-vs-relative-paths.md) |
@@ -428,6 +430,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | third normal form | every column is about the key and nothing but the key | [261](./notes/261-third-normal-form-nothing-but-the-key.md) |
 | three valued logic | a test is true, false or unknown, and a null gives unknown | [114](./notes/114-three-valued-logic-true-false-and-unknown.md) |
 | time of day | a clock reading with no day attached | [027](./notes/027-dates-and-times-apart.md) |
+| token | key string the server hands out, often with an expiry | [315](./notes/315-tokens-that-expire-a-key-with-a-shelf-life.md) |
 | top N per group | keep the first N rows of each group: number inside, filter outside | [193](./notes/193-top-n-per-group.md) |
 | torn write | a write cut off partway, leaving some new blocks and some old | [045](./notes/045-torn-writes.md) |
 | trade off | anything speeding up reads must be kept up on every write | [282](./notes/282-the-trade-off-faster-reads-usually-mean-slower-writes.md) |
