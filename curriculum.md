@@ -457,6 +457,7 @@ after this arc: you can explain how data travels between machines safely, and wh
 - [x] encryption: locking data so only a key opens it ★ (note 317)
 - [x] public and private keys: locking without sharing a secret ★ (note 318)
 - [x] cryptographic hashes: fingerprints you cant reverse ★ (note 319)
+- [ ] digital signatures: locking a fingerprint with the private key so anyone can check it
 - [ ] certificates: proving whose public key it is
 - [ ] encryption in transit: TLS and https
 - [ ] latency and bandwidth: slow vs narrow ★
