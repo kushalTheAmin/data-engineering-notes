@@ -24,3 +24,6 @@ assert [shop_("/orders/101"), shop_("/orders/104"), shop_("/orders/999"), shop_(
 assert [shop_("/orders/107"), shop_("/orders/108")] == [404, 404]
 assert [200 if r in {107} else 404 for r in (107, 108)] == [200, 404]
 print("311 ok")
+# audit: the note said 404 means the server looked and found nothing. RFC 9110 15.5.5 says 404 means the origin server did not find a current representation or is not willing to disclose that one exists. the note now says found nothing, or wont say if anything is
+# source: https://www.rfc-editor.org/rfc/rfc9110.txt
+#   confirmed (opened this run, 15.5.5): the 404 status code indicates that the origin server did not find a current representation for the target resource or is not willing to disclose that one exists

@@ -36,7 +36,7 @@ GET /orders/999 404
 GET /orders/101 500
 ```
 
-404 means the server looked and found nothing there. 500 means the server hit something unexpected, and the same request that gave 200 gives 500 once the database is down.
+404 means the server found nothing there, or wont say if anything is. 500 means the server hit something unexpected, and the same request that gave 200 gives 500 once the database is down.
 
 i assumed a cancelled order would come back as an error, but 104 is a 200. the code is about the request, and the bad news lives in the body (the part after the empty line).
 
