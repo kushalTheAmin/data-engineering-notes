@@ -4,7 +4,7 @@ section: talking over a network, part 11, ~2 min read
 
 an expense app wants to read Ashas orders. the lazy way is Asha typing her shop password into it, and i kept wondering who would ever accept that. would you?
 
-OAuth is how an app gets a [token](./315-tokens-that-expire-a-key-with-a-shelf-life.md) (a key with an expiry) for someone, without ever seeing their password. the shop, the imaginary gujarati snack store these notes run on, has an [API](./312-apis-a-door-built-for-programs.md) (requests it promises to answer), and Asha is one of its customers. this is the common version, called the authorization code flow:
+OAuth is how an app usually gets a [token](./315-tokens-that-expire-a-key-with-a-shelf-life.md) (a key with an expiry) for someone, without ever seeing their password. the shop, the imaginary gujarati snack store these notes run on, has an [API](./312-apis-a-door-built-for-programs.md) (requests it promises to answer), and Asha is one of its customers. this is the common version, called the authorization code flow:
 
 ```mermaid
 sequenceDiagram

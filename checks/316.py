@@ -29,3 +29,8 @@ assert len(flow) == 7
 # audit: the claim that the authorization code flow is the common version had no source
 # source: https://oauth.net/2/grant-types/authorization-code/
 #   confirmed (opened this run): the Authorization Code flow is the most widely used OAuth 2.0 grant type
+# audit: the note said OAuth is how an app gets a token without seeing the password, which reads as always true. RFC 6749 1.3.3 and 4.3 also define a password grant where the app is given the username and password (oauth.net marks it deprecated). the note now says usually
+# source: https://www.rfc-editor.org/rfc/rfc6749.txt
+#   confirmed (opened this run): 1.3.3 the resource owner password credentials (username and password) can be used directly as an authorization grant to obtain an access token
+# source: https://oauth.net/2/grant-types/password/
+#   confirmed (opened this run): the Password grant exchanged a user's username and password directly for an access token; it is deprecated, disallowed by the Security BCP, and removed from OAuth 2.1
