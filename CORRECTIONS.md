@@ -1,4 +1,5 @@
 # corrections
+000, 2026-11-04: gate failed before any change, so no notes were audited: duckdb 2.0.0 (the pip default) fails 11 checks (008, 011, 026 to 030, 316 and 317 on fetchone, 041 and 268 on an assert), 1.3.2 fails 5 (180, 201, 202 and two more) and 1.2.2 fails 9. same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (11) with 2.0.0, FAIL (5) with 1.3.2 and FAIL (9) with 1.2.2.
 316, 2026-11-04: the note said OAuth is how an app gets a token without ever seeing the password, which reads as always true. OAuth 2.0 also defines a password grant where the app is handed the username and password, now deprecated. it now says OAuth is how an app usually gets a token without seeing the password, and the flow shown is the authorization code one. evidence: https://www.rfc-editor.org/rfc/rfc6749.txt (1.3.3, opened this run); https://oauth.net/2/grant-types/password/ (deprecated, opened this run)
 000, 2026-11-04: gate failed before any change, so no notes were audited: duckdb 2.0.0 (the pip default) fails 11 checks (008, 011, 026 to 030, 316 and 317 on fetchone, 041 and 268 on an assert) and 1.4.4 fails 3 (127, 201, 202). same failure as the earlier 000 lines. evidence: python3 tools/gate.py printed FAIL (11) with 2.0.0 and FAIL (3) with 1.4.4.
 316, 2026-11-04: the claim that the authorization code flow is the common version had no source in its checks. it is right, no note text changed: oauth.net says it is the most widely used OAuth 2.0 grant type. evidence: https://oauth.net/2/grant-types/authorization-code/ (opened this run)
@@ -808,6 +809,7 @@ every fix made to a note after it was published, newest first. if you learned fr
 
 ## audit log
 audit runs that could not finish, newest first. format: YYYY-MM-DD HH:MM: what happened
+2026-11-04 12:00: gate failed before any change with every duckdb tried (2.0.0: 11 FAIL on fetchone and asserts in checks 008, 011, 026 to 030, 041, 268, 316, 317; 1.3.2: 5 FAIL; 1.2.2: 9 FAIL). no notes were audited.
 2026-11-02 12:00: gate failed before any change (9 FAIL: checks 008, 011, 026 to 030 on fetchone, 041 and 268 on an assert) with duckdb 2.0.0, same failures as the 2026-11-01 entries. no notes were audited. evidence: python3 tools/gate.py printed FAIL (9).
 2026-11-01 12:10: gate failed before any change (9 FAIL: checks 008, 011, 026 to 030 on fetchone, 041 and 268 on an assert) with duckdb 2.0.0. no notes were audited.
 2026-10-30 06:10: gate failed before any change (9 FAIL: checks 008, 011, 026 to 030, 041 and 268) with duckdb 2.0.0 and 1.5.6, where relation.fetchone() was removed; mermaid renderer would not launch as root; no note was audited
