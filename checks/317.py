@@ -24,3 +24,6 @@ assert "dhokla" in names and "cgnjk`" not in names
 # source: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf
 #   confirmed (opened this run): AES is capable of using cryptographic keys of 128, 192, and 256 bits
 # 308 said real phones encrypt: that note's own text
+# audit: the claim that one key locks and unlocks (symmetric encryption) had no source
+# source: https://csrc.nist.gov/glossary/term/symmetric_key
+#   confirmed (opened this run): a symmetric key is a single cryptographic key used with a symmetric-key algorithm, to encrypt and decrypt
