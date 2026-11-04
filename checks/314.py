@@ -31,3 +31,6 @@ print("314 ok")
 # audit: the note said GitHub scanning flags only known kinds of keys, but the page says that is the default detection and generic patterns (such as generic API keys), custom patterns and AI-detected secrets can extend it. the note now says by default and likely slip past
 # source: https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning
 #   confirmed (opened this run): scans for hardcoded credentials including API keys, passwords, tokens, and other known secret types; beyond the default detection of partner and provider secrets, generic patterns expand detection to secrets not tied to a specific provider, such as generic API keys
+# audit: the claim that removing the line later does not unpublish a leaked key had no source
+# source: https://docs.github.com/en/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/remediating-a-leaked-secret
+#   confirmed (opened this run): step 7, even after you revoke and update the secret in your codebase, the secret may still exist in your repository's commit history
