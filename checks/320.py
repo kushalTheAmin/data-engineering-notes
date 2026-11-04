@@ -36,3 +36,4 @@ assert msg.encode().decode() == msg
 #   confirmed (opened this run): RS256 is "RSASSA-PKCS1-v1_5 using SHA-256" (table in section 3.1, registry entry)
 # source: https://en.wikipedia.org/wiki/Digital_signature
 #   confirmed (opened this run): signatures made with a signing algorithm and private key pass verification with the corresponding public key
+# audit: check yourself 2 asked what signing cost grows with but the answer never said. it now says the export size, through the one read that makes the fingerprint

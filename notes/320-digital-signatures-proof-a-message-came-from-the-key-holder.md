@@ -68,7 +68,7 @@ True False
 2. the shop wants to sign a 600000 character export of all its orders. does the lock step now run over 600000 numbers, or fewer? and what does signing cost grow with?
 <details><summary>answer</summary>
 
-the lock step runs over the fingerprint only, 32 bytes however big the export is. only making the fingerprint reads all 600000 characters. the tempting answer is 600000 locks, from picturing the whole message being locked (that is what 317 and 318 did, and it is slow).
+the lock step runs over the fingerprint only, 32 bytes however big the export is. only making the fingerprint reads all 600000 characters, so cost grows with the export size through that one read, not through the locking. the tempting answer is 600000 locks, from picturing the whole message being locked (that is what 317 and 318 did, and it is slow).
 
 </details>
 
