@@ -85,6 +85,7 @@ log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept faile
 2026-11-04: repo baseline failed gate setup: duckdb 2.0.0 (default pip for /usr/bin/python3) breaks checks 008, 011, 026 to 030 on fetchone and asserts on 041 and 268, duckdb 1.3.2 fails 127, 180, 201, 202 and 074 lacks yaml; no note written, needs a fix outside this run
 2026-11-04: repo baseline failed gate setup: duckdb 2.0.0 is the only pip version and breaks 11 checks (fetchone in 008, 011, 026 to 030, 316, 317; asserts in 041, 268); gate fails before any change, no note written, needs a fix outside this run
 2026-11-04: repo baseline failed gate setup: duckdb 2.0.0 is the only pip version (python3 on PATH is 3.11, /usr/bin/python3 has it) and breaks 11 checks (fetchone in 008, 011 and others, asserts in 041, 268, fetchone again in 316, 317); no note written, needs a fix outside this run
+2026-11-04: repo baseline failed checks/008.py and 10 more: duckdb 2.0.0 is the only version installed here and removed fetchone on relations (041, 268 assert too); python3 on PATH is 3.11 without duckdb; no note written, needs a fix outside this run
 
 ## arc 1: data at the atom level
 after this arc: you know what a computer actually stores when it "saves" an order
