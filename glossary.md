@@ -93,6 +93,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | CRLF | a line ending of two characters, 0d then 0a, common on windows | [042](./notes/042-line-endings.md) |
 | cross join | a join with no test, pairing every row with every row | [169](./notes/169-cross-join-every-row-with-every-row.md) |
 | crows feet | line end marks on an ERD showing how many rows match | [099](./notes/099-crows-feet-reading-one-and-many.md) |
+| cryptographic hash | a hash with a fixed-size output, no undoing, any change scrambles it | [319](./notes/319-cryptographic-hashes-a-fingerprint-you-cant-reverse.md) |
 | CSV | a text file, usually one row per line, values split by commas | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
 | CTE | a named inner query written first with WITH, alive for one statement | [180](./notes/180-ctes-naming-each-step-with-with.md) |
 | ctid | a rows address in Postgres: page number, then slot | [284](./notes/284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md) |
@@ -149,6 +150,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | field | one fact every row has a spot for, like city | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | file | a name plus a list of bytes in order, kept on disk | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
 | file extension | the letters after the dot in a name, just a label | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
+| fingerprint | the fixed-size output of a cryptographic hash | [319](./notes/319-cryptographic-hashes-a-fingerprint-you-cant-reverse.md) |
 | first normal form | every cell holds exactly one value, never a list | [259](./notes/259-first-normal-form-one-value-per-cell.md) |
 | flat (growth) | steps stay the same however big the data gets | [270](./notes/270-flat-and-straight-line-the-two-shapes-of-growth.md) |
 | flattening | turning inner names into columns, like address_city, one per name | [070](./notes/070-flattening-nested-objects-into-columns.md) |

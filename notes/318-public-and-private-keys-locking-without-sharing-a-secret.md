@@ -63,4 +63,4 @@ no, whatever the public key locks, only the private key opens. the thing to guar
 </details>
 
 ---
-prev: [317 encryption, locking data so only a key opens it](./317-encryption-locking-data-so-only-a-key-opens-it.md) | next: not written yet
+prev: [317 encryption, locking data so only a key opens it](./317-encryption-locking-data-so-only-a-key-opens-it.md) | next: [319 cryptographic hashes, a fingerprint you cant reverse](./319-cryptographic-hashes-a-fingerprint-you-cant-reverse.md)

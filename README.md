@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 318
+notes so far: 319
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -361,3 +361,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [316 OAuth in one picture, a token without the password](./notes/316-oauth-in-one-picture-a-token-without-the-password.md): the shop password goes only to the shop, and the expense app gets a one time code it swaps for a token that says read orders
 - [317 encryption, locking data so only a key opens it](./notes/317-encryption-locking-data-so-only-a-key-opens-it.md): a toy lock adds 77 to every byte of dhokla, the same key undoes it, and a key off by one returns garbage with no error
 - [318 public and private keys, locking without sharing a secret](./notes/318-public-and-private-keys-locking-without-sharing-a-secret.md): lock dhokla with a public key and the same key cant undo it, only the private one at home can
+- [319 cryptographic hashes, a fingerprint you cant reverse](./notes/319-cryptographic-hashes-a-fingerprint-you-cant-reverse.md): change one space in dhokla and all 64 digits of its SHA-256 fingerprint change, and 600000 characters still give 64
