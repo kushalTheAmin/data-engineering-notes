@@ -40,4 +40,4 @@ that is why the shop can add a total field tomorrow without breaking this loop, 
 the gotcha: Content-Type is only a label, nothing forces the body to match it. a [500](./311-status-codes-what-200-404-and-500-mean.md) can come with an error page that isnt JSON, and json.loads on it raises an error, like the last line shows. check the status code before you parse.
 
 ---
-prev: [312 APIs, a door built for programs](./312-apis-a-door-built-for-programs.md) | next: not written yet
+prev: [312 APIs, a door built for programs](./312-apis-a-door-built-for-programs.md) | next: [314 API keys, a password for programs](./314-api-keys-a-password-for-programs.md)

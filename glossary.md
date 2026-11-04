@@ -4,6 +4,7 @@ every term these notes have built, in plain words, with the note that built it. 
 
 | term | plain meaning | built in |
 |---|---|---|
+| 401 | status code meaning the request lacks valid credentials, caller unknown | [314](./notes/314-api-keys-a-password-for-programs.md) |
 | absolute path | a path starting with a slash, always begun at the root | [053](./notes/053-absolute-vs-relative-paths.md) |
 | ACCESS EXCLUSIVE | the strongest table lock, blocks every other query on the table | [245](./notes/245-changing-a-column-type-the-table-rewrite-and-the-lock.md) |
 | ACID | four promises of a database: atomicity, consistency, isolation, durability | [229](./notes/229-acid-four-promises-a-database-makes.md) |
@@ -17,6 +18,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | AND | joins two tests, keeping a row only if both are true | [108](./notes/108-and-or-combining-two-tests.md) |
 | anti join | keeps left rows with no match: a left join, then IS NULL | [167](./notes/167-anti-join-rows-with-no-match.md) |
 | API | the requests a server promises to answer for other programs | [312](./notes/312-apis-a-door-built-for-programs.md) |
+| API key | secret string a program sends so the API knows who asks | [314](./notes/314-api-keys-a-password-for-programs.md) |
 | argument | a word after the program name, handed to that program | [049](./notes/049-the-terminal.md) |
 | array (SQL) | several values kept in one cell, written in square brackets | [204](./notes/204-arrays-and-unnest-lists-inside-a-cell.md) |
 | ASCII | the old table giving 128 characters a number, English only | [008](./notes/008-ascii-runs-out.md) |
