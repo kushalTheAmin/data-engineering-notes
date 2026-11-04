@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 315
+notes so far: 316
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -358,3 +358,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [313 JSON over HTTP, the answer is text until you parse it](./notes/313-json-over-http-the-answer-is-text-until-you-parse-it.md): the API answer is only characters on the wire, and json.loads turns it into a list of dictionaries
 - [314 API keys, a password for programs](./notes/314-api-keys-a-password-for-programs.md): the shop API only knows the string you send, so one wrong character is a 401 and a leaked key works for anyone
 - [315 tokens that expire, a key with a shelf life](./notes/315-tokens-that-expire-a-key-with-a-shelf-life.md): an access token carries an expiry and dies on its own, a refresh token is only swapped for a new one
+- [316 OAuth in one picture, a token without the password](./notes/316-oauth-in-one-picture-a-token-without-the-password.md): the shop password goes only to the shop, and the expense app gets a one time code it swaps for a token that says read orders

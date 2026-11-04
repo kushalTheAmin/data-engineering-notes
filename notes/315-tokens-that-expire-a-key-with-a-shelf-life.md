@@ -74,4 +74,4 @@ they can call swap and get a fresh access token, because the toy refresh token n
 </details>
 
 ---
-prev: [314 API keys, a password for programs](./314-api-keys-a-password-for-programs.md) | next: not written yet
+prev: [314 API keys, a password for programs](./314-api-keys-a-password-for-programs.md) | next: [316 OAuth in one picture, a token without the password](./316-oauth-in-one-picture-a-token-without-the-password.md)

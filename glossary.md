@@ -26,6 +26,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | atomic | happening whole or not at all, never half done | [046](./notes/046-writing-safely.md) |
 | atomicity | the ACID promise: all of a transaction happens, or none of it | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | attribute | one fact about one entity, stored as a column | [255](./notes/255-entities-and-attributes.md) |
+| authorization code flow | OAuth steps: login at the shop, one time code, swap for token | [316](./notes/316-oauth-in-one-picture-a-token-without-the-password.md) |
 | autovacuum | background Postgres job that runs VACUUM and ANALYZE for you | [304](./notes/304-vacuum-how-postgres-cleans-up-old-row-versions.md) |
 | avg | the average of a column, its sum divided by how many values | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
 | B tree | a tree whose nodes are whole pages, each holding many sorted values | [287](./notes/287-b-tree-pages-that-point-to-pages.md) |
@@ -282,6 +283,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | NULLIF | hands back null when two values are equal, else the first | [130](./notes/130-nullif-and-dividing-by-zero.md) |
 | NULLS FIRST | the ORDER BY option that puts missing values at the start | [119](./notes/119-where-nulls-land-when-you-sort.md) |
 | NULLS LAST | the ORDER BY option that puts missing values at the end | [119](./notes/119-where-nulls-land-when-you-sort.md) |
+| OAuth | how an app gets a token for someone without their password | [316](./notes/316-oauth-in-one-picture-a-token-without-the-password.md) |
 | OFFSET (rows) | skips this many result rows before returning any | [120](./notes/120-limit-and-offset-paging-through-rows.md) |
 | offset (time zones) | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
 | ON | the join test that decides which pairs of rows are kept | [157](./notes/157-on-how-a-join-decides-which-rows-match.md) |
@@ -372,6 +374,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | schema on read | storing anything as it arrives, checking shape only when used | [083](./notes/083-schema-on-write-vs-schema-on-read.md) |
 | schema on write | checking shape as data goes in, rejecting what doesnt fit | [083](./notes/083-schema-on-write-vs-schema-on-read.md) |
 | scheme | the start of a URL, like http, naming the rules for talking | [307](./notes/307-urls-and-query-parameters.md) |
+| scope (token) | the list of things a token is allowed to do | [316](./notes/316-oauth-in-one-picture-a-token-without-the-password.md) |
 | search path | the folders Postgres checks in order to find a bare table name | [267](./notes/267-schemas-as-namespaces-folders-for-tables.md) |
 | second normal form | every column depends on the whole key, not half of it | [260](./notes/260-second-normal-form-nothing-about-half-the-key.md) |
 | SELECT | the clause naming which columns to keep, in the order written | [104](./notes/104-select-and-from-picking-columns.md) |
