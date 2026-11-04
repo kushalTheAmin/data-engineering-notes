@@ -26,3 +26,6 @@ assert len(flow) == 7
 # audit: the note called RFC 6749 "the OAuth standard", but OAuth 1.0 is a separate older standard. it now says the OAuth 2.0 standard, matching 315
 # source: https://www.rfc-editor.org/rfc/rfc6749.txt
 #   confirmed (opened this run): the title is "The OAuth 2.0 Authorization Framework"
+# audit: the claim that the authorization code flow is the common version had no source
+# source: https://oauth.net/2/grant-types/authorization-code/
+#   confirmed (opened this run): the Authorization Code flow is the most widely used OAuth 2.0 grant type
