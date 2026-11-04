@@ -36,3 +36,6 @@ assert 3600 == 60 * 60
 
 # 1.4 and 1.5 describe access and refresh tokens, 5.1 shows expires_in 3600 as one hour
 # source: https://www.rfc-editor.org/rfc/rfc6749.txt
+# audit: the note said an access token is the short lived one and a refresh token the long lived one, which reads as always true. RFC 6749 1.5 says access tokens "may have a shorter lifetime" than the grant, and 1.3.3 itself mentions a "long-lived access token". the note now says usually short lived and longer lived
+# source: https://www.rfc-editor.org/rfc/rfc6749.txt
+#   confirmed (opened this run): 1.5 refresh tokens are credentials used to obtain a new access token when the current one becomes invalid or expires; access tokens may have a shorter lifetime; 5.1 expires_in 3600 denotes the access token expires in one hour

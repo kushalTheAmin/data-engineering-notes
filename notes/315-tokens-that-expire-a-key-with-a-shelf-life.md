@@ -4,7 +4,7 @@ section: talking over a network, part 10, ~2 min read
 
 a leaked [API key](./314-api-keys-a-password-for-programs.md) (a secret string a program sends) works until someone deletes its entry. so what if the string killed itself?
 
-a token is a key the server hands out with an expiry time saved beside it (in this toy, anyway). an access token is the short lived one, and a refresh token is the long lived one that can only be swapped for a new access token. the shop, the imaginary gujarati snack store these notes run on, has an [API](./312-apis-a-door-built-for-programs.md) (requests it promises to answer) that works like this. now counts seconds, like [unix time](./025-unix-time.md) (seconds since 1970), and starts at 0 when t_a1 is handed out:
+a token is a key the server hands out with an expiry time saved beside it (in this toy, anyway). an access token is usually the short lived one, and a refresh token is the longer lived one that can only be swapped for a new access token. the shop, the imaginary gujarati snack store these notes run on, has an [API](./312-apis-a-door-built-for-programs.md) (requests it promises to answer) that works like this. now counts seconds, like [unix time](./025-unix-time.md) (seconds since 1970), and starts at 0 when t_a1 is handed out:
 
 ```python
 tokens = {"t_a1": ("report script", 3600)}
@@ -42,7 +42,7 @@ t_b2
 
 i assumed expiring meant the server had to go delete things, but its one comparison, now against a number saved with the token. t_a1 died at second 3600 and nobody touched it. at 4000 the script showed r_9x, got t_b2, and carried on. the last line is a stranger holding the old t_a1, who gets a [401](./311-status-codes-what-200-404-and-500-mean.md) (not let in, here because the token ran out).
 
-you might spot the catch already, the refresh token lives long, so a leaked one is as bad as a leaked key from 314. it only gets sent to the swap door though, not on every request. OAuth 2.0 (RFC 6749, the standard for handing out tokens) describes both kinds, and its example answer has expires_in 3600, one hour. real servers also make a fresh random string each swap, ours always says t_b2.
+you might spot the catch already, the refresh token lives long, so a leaked one is as bad as a leaked key from 314. it only gets sent to the swap door though, not on every request. OAuth 2.0 (RFC 6749, the standard for handing out tokens) describes both kinds, and its example answer has expires_in 3600, one hour. real servers make a fresh random string each swap, ours always says t_b2.
 
 ### check yourself
 
