@@ -23,3 +23,6 @@ assert len(flow) == 7
 #   confirmed: 4.1.2 the authorization code MUST expire shortly after it is issued, a maximum lifetime of 10 minutes is RECOMMENDED, and the client MUST NOT use it more than once
 # audit: the note said "in this toy" with no toy shown, and used refresh token with no gloss, so a reader landing here cold could not follow. it now says in our shop and glosses the refresh token the way 315 does
 #   confirmed (opened this run): RFC 6749 1.5 refresh tokens are used to obtain a new access token; 2.1 and 4.1.3 a confidential client, or one issued client credentials, must authenticate when swapping the code, which supports "usually with a secret" (public clients have none)
+# audit: the note called RFC 6749 "the OAuth standard", but OAuth 1.0 is a separate older standard. it now says the OAuth 2.0 standard, matching 315
+# source: https://www.rfc-editor.org/rfc/rfc6749.txt
+#   confirmed (opened this run): the title is "The OAuth 2.0 Authorization Framework"

@@ -24,7 +24,7 @@ the password only ever goes to the shop. the app gets a code instead, which ride
 
 i expected the app to end up holding some version of her login, but it holds a token that, in our shop, is saved as "Asha, read orders" plus an expiry, like the expiry in [315](./315-tokens-that-expire-a-key-with-a-shelf-life.md). "read orders" is the scope, the list of things the token may do, and the shop checks it on every request. if Asha stops trusting the app, the shop deletes that token and its refresh token (the longer lived key that swaps for new tokens), like a key in [314](./314-api-keys-a-password-for-programs.md). her password and other apps are untouched.
 
-RFC 6749, the OAuth standard, names old costs, like apps storing passwords.
+RFC 6749, the OAuth 2.0 standard, names old costs, like apps storing passwords.
 
 ### check yourself
 
