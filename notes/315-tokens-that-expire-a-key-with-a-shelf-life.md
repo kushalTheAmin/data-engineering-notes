@@ -42,7 +42,7 @@ t_b2
 
 i assumed expiring meant the server had to go delete things, but its one comparison, now against a number saved with the token. t_a1 died at second 3600 and nobody touched it. at 4000 the script showed r_9x, got t_b2, and carried on. the last line is a stranger holding the old t_a1, who gets a [401](./311-status-codes-what-200-404-and-500-mean.md) (not let in, here because the token ran out).
 
-you might spot the catch already, the refresh token lives long, so a leaked one is as bad as a leaked key from 314. it only gets sent to the swap door though, not on every request. OAuth 2.0 (RFC 6749, the standard for handing out tokens) describes both kinds, and its example answer has expires_in 3600, one hour. real servers make a fresh random string each swap, ours always says t_b2.
+you might spot the catch already, the refresh token lives long, so a leaked one is as bad as a leaked key from 314. it only gets sent to the swap door though, not on every request. OAuth 2.0 (RFC 6749, the standard for handing out tokens) describes both kinds, and its example answer has expires_in 3600, one hour. real servers make a new token each swap, ours always says t_b2.
 
 ### check yourself
 

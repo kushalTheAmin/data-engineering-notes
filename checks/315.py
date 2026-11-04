@@ -39,3 +39,7 @@ assert 3600 == 60 * 60
 # audit: the note said an access token is the short lived one and a refresh token the long lived one, which reads as always true. RFC 6749 1.5 says access tokens "may have a shorter lifetime" than the grant, and 1.3.3 itself mentions a "long-lived access token". the note now says usually short lived and longer lived
 # source: https://www.rfc-editor.org/rfc/rfc6749.txt
 #   confirmed (opened this run): 1.5 refresh tokens are credentials used to obtain a new access token when the current one becomes invalid or expires; access tokens may have a shorter lifetime; 5.1 expires_in 3600 denotes the access token expires in one hour
+
+# audit: the note said real servers make a fresh random string each swap, but RFC 6749 1.4 says a token may be an identifier or may self-contain its data and a signature, so it is not always a random string. the note now says a new token each swap
+# source: https://www.rfc-editor.org/rfc/rfc6749.txt
+#   confirmed (opened this run): 1.4 the token may denote an identifier used to retrieve the authorization information or may self-contain the authorization information in a verifiable manner (a token string consisting of some data and a signature); 1.5 refresh tokens are intended for use only with authorization servers and are never sent to resource servers (the note says a refresh token only goes to the swap door)
