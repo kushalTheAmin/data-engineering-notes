@@ -50,4 +50,4 @@ i assumed a certificate was a secret file that unlocks things, but it is a publi
 trust moved, you now trust the CA instead of the shop. real checks often pass through a middle CA first, same idea.
 
 ---
-prev: [320 digital signatures, proof a message came from the key holder](./320-digital-signatures-proof-a-message-came-from-the-key-holder.md) | next: not written yet
+prev: [320 digital signatures, proof a message came from the key holder](./320-digital-signatures-proof-a-message-came-from-the-key-holder.md) | next: [322 encryption in transit, TLS and https](./322-encryption-in-transit-tls-and-https.md)

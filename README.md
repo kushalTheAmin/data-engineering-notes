@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 321
+notes so far: 322
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -364,3 +364,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [319 cryptographic hashes, a fingerprint you cant reverse](./notes/319-cryptographic-hashes-a-fingerprint-you-cant-reverse.md): change one space in dhokla and all 64 digits of its SHA-256 fingerprint change, and 600000 characters still give 64
 - [320 digital signatures, proof a message came from the key holder](./notes/320-digital-signatures-proof-a-message-came-from-the-key-holder.md): lock a messages fingerprint with the private key and anyone can check it with the public one, edit one word and it fails
 - [321 certificates, proving whose public key it is](./notes/321-certificates-proving-whose-public-key-it-is.md): a signature is only as good as the key, so a CA signs the name and key together
+- [322 encryption in transit, TLS and https](./notes/322-encryption-in-transit-tls-and-https.md): https is the same text request, sent after a handshake that locks a secret key with the shops public key

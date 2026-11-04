@@ -180,6 +180,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | GROUP BY rule | every SELECT column must be grouped or inside an aggregate | [145](./notes/145-the-group-by-rule-every-column-is-grouped-or-aggregated.md) |
 | grouping by several columns | one group per different combination of the values, only combinations that exist | [144](./notes/144-grouping-by-more-than-one-column.md) |
 | grouping() | gives 1 on a made-up total row, 0 on a real group | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
+| handshake (TLS) | the opening exchange where browser and server agree a secret key | [322](./notes/322-encryption-in-transit-tls-and-https.md) |
 | hard delete | a real DELETE: the row is physically removed | [266](./notes/266-soft-deletes-marking-a-row-gone-instead-of-removing-it.md) |
 | hash function | turns any input into a number, same input always same number | [277](./notes/277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md) |
 | hash join | join: hash one side into a table, look up the other | [299](./notes/299-hash-join-build-a-hash-table-then-look-up-each-row.md) |
@@ -193,6 +194,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | HTTP | rules the web uses: a text request, then a text response | [308](./notes/308-request-and-response-one-message-out-one-message-back.md) |
 | HTTP header | one Name: value line between a messages first line and blank line | [310](./notes/310-http-headers-notes-attached-to-a-request.md) |
 | HTTP method | the first word of a request, saying what kind of action | [309](./notes/309-http-methods-get-asks-post-sends.md) |
+| HTTPS | HTTP sent through a TLS lock, the wire shows locked bytes | [322](./notes/322-encryption-in-transit-tls-and-https.md) |
 | ILIKE | LIKE that ignores upper and lower case | [113](./notes/113-like-matching-text-patterns.md) |
 | image | the frozen packed box a container starts from, never changes | [209](./notes/209-images-and-containers-the-packed-box-and-the-running-copy.md) |
 | IN | keeps a row if its value equals any item in a list | [111](./notes/111-in-matching-against-a-list.md) |
@@ -402,6 +404,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | session (clicks) | a run of one persons clicks, a long silence starts the next | [199](./notes/199-session-starts-flag-the-click-after-a-long-gap.md) |
 | session (database) | one connections conversation with the database, with its own settings | [212](./notes/212-connections-and-sessions-one-conversation-with-the-database.md) |
 | session id | the running sum of start flags, one number per session | [200](./notes/200-session-ids-a-running-sum-of-the-flags.md) |
+| session key | the secret key picked in the handshake, locking everything after | [322](./notes/322-encryption-in-transit-tls-and-https.md) |
 | shared_buffers | the setting that sizes the buffer pool, 128MB by default | [303](./notes/303-the-buffer-pool-keeping-hot-pages-in-memory.md) |
 | shell | the program inside a terminal that reads your line and runs it | [049](./notes/049-the-terminal.md) |
 | sign bit | the bit saying plus (0) or minus (1) | [013](./notes/013-negative-numbers-sign-bit.md) |
@@ -445,6 +448,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | third normal form | every column is about the key and nothing but the key | [261](./notes/261-third-normal-form-nothing-but-the-key.md) |
 | three valued logic | a test is true, false or unknown, and a null gives unknown | [114](./notes/114-three-valued-logic-true-false-and-unknown.md) |
 | time of day | a clock reading with no day attached | [027](./notes/027-dates-and-times-apart.md) |
+| TLS | the protocol that does a handshake, then locks all traffic | [322](./notes/322-encryption-in-transit-tls-and-https.md) |
 | token | key string the server hands out, often with an expiry | [315](./notes/315-tokens-that-expire-a-key-with-a-shelf-life.md) |
 | top N per group | keep the first N rows of each group: number inside, filter outside | [193](./notes/193-top-n-per-group.md) |
 | torn write | a write cut off partway, leaving some new blocks and some old | [045](./notes/045-torn-writes.md) |
