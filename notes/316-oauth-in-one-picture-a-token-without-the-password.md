@@ -54,4 +54,4 @@ no. OAuth only keeps the password from the app when she types it at the real sho
 </details>
 
 ---
-prev: [315 tokens that expire, a key with a shelf life](./315-tokens-that-expire-a-key-with-a-shelf-life.md) | next: not written yet
+prev: [315 tokens that expire, a key with a shelf life](./315-tokens-that-expire-a-key-with-a-shelf-life.md) | next: [317 encryption, locking data so only a key opens it](./317-encryption-locking-data-so-only-a-key-opens-it.md)

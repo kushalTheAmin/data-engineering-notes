@@ -130,6 +130,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | DuckDB | a database that runs inside your program, keeping data in one file | [102](./notes/102-a-database-in-one-file.md) |
 | durability | the ACID promise: once COMMIT says done, a crash cant undo it | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | embedded newline | a line ending inside a quoted csv value, not ending the row | [064](./notes/064-quotes-inside-quotes-and-newlines-inside-values.md) |
+| encryption | turning bytes into other bytes, only the key turns them back | [317](./notes/317-encryption-locking-data-so-only-a-key-opens-it.md) |
+| encryption key (not a database key) | a secret number the lock uses to scramble and unscramble | [317](./notes/317-encryption-locking-data-so-only-a-key-opens-it.md) |
 | entity | a kind of thing you keep facts about, drawn as one table | [098](./notes/098-entity-relationship-diagrams.md) |
 | entity relationship diagram | a picture of boxes for tables and lines for foreign keys | [098](./notes/098-entity-relationship-diagrams.md) |
 | epoch | the starting line, 1 January 1970 UTC, that unix time counts from | [025](./notes/025-unix-time.md) |
@@ -419,6 +421,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | subtotal | the total for one group, shown as an extra row | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | sum | adds up all the values in a column into one value | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
 | swap (column type) | renaming the new column to the old name in one transaction | [248](./notes/248-the-swap-renaming-two-columns-in-one-transaction.md) |
+| symmetric encryption | one key both locks and unlocks the data | [317](./notes/317-encryption-locking-data-so-only-a-key-opens-it.md) |
 | table | a grid of rows, every row holding the same columns | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | table alias | a short name for a table, valid for one query only | [158](./notes/158-table-aliases-short-nicknames-for-tables.md) |
 | table lock | a mark on a whole table, the strongest also blocks plain reads | [242](./notes/242-row-locks-and-table-locks.md) |
