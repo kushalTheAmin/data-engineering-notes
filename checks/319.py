@@ -16,3 +16,6 @@ assert fp("dhokla") == fp("dhokla") and fp("dhokla")[:16] == "a19df0bccb680b96"
 #   confirmed (opened this run): SHA-256 digest is 256 bits
 # source: https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
 #   confirmed (opened this run): git names stored content by the SHA-1 checksum of the content plus a header
+# audit: the note said git names every object by SHA-1, but git can also make repositories that use SHA-256 (git init --object-format=sha256 gives 64 hex digit names). it now says by default
+# source: https://git-scm.com/docs/hash-function-transition
+#   confirmed (opened this run): the git project picked SHA-256 as the successor to SHA-1 and a repository can be transitioned one at a time; a git 2.43 sha256 repository printed 64 hex digit object names, a default one 40

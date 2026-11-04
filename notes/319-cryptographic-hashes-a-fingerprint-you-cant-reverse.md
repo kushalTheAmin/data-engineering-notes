@@ -31,7 +31,7 @@ a trailing space, a capital, the same letters reordered: four fingerprints that 
 
 it cant be reversed because the math only runs one way, and for big inputs like those 600000 characters most of the input is simply gone, squeezed into 32 bytes. one caveat: you can still guess. hash "dhokla", compare, and you know it matched, which is why short guessable inputs are weak.
 
-git, the tool most devs save code with, names every object it stores by the SHA-1 hash (an older hash, same idea) of its content plus a small header, so a changed file gets a new name ([source](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)).
+git, the tool most devs save code with, by default names every object it stores by the SHA-1 hash (an older hash, same idea) of its content plus a small header, so a changed file gets a new name ([source](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)).
 
 ### check yourself
 
