@@ -72,4 +72,4 @@ a19df0bccb680b96 a19df0bccb680b96
 </details>
 
 ---
-prev: [318 public and private keys, locking without sharing a secret](./318-public-and-private-keys-locking-without-sharing-a-secret.md) | next: not written yet
+prev: [318 public and private keys, locking without sharing a secret](./318-public-and-private-keys-locking-without-sharing-a-secret.md) | next: [320 digital signatures, proof a message came from the key holder](./320-digital-signatures-proof-a-message-came-from-the-key-holder.md)

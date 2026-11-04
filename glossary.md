@@ -122,6 +122,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | depth | the number of levels in a tree, from the root down | [281](./notes/281-balanced-trees-why-the-depth-stays-small.md) |
 | DESC | sort direction: biggest first, instead of the default smallest first | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
 | dialect | one databases own version of SQL, with its own spellings and rules | [135](./notes/135-one-language-many-dialects.md) |
+| digital signature | a fingerprint locked with the private key, checkable with the public one | [320](./notes/320-digital-signatures-proof-a-message-came-from-the-key-holder.md) |
 | dirty read | reading another transactions change before it is committed | [236](./notes/236-dirty-reads.md) |
 | disk | storage like an SSD or hard drive, keeping bytes without power | [036](./notes/036-memory-vs-disk.md) |
 | DISTINCT | keeps one copy of each repeated row in a query result | [121](./notes/121-distinct-removing-duplicate-rows.md) |
