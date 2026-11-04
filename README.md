@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 317
+notes so far: 318
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -360,3 +360,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [315 tokens that expire, a key with a shelf life](./notes/315-tokens-that-expire-a-key-with-a-shelf-life.md): an access token carries an expiry and dies on its own, a refresh token is only swapped for a new one
 - [316 OAuth in one picture, a token without the password](./notes/316-oauth-in-one-picture-a-token-without-the-password.md): the shop password goes only to the shop, and the expense app gets a one time code it swaps for a token that says read orders
 - [317 encryption, locking data so only a key opens it](./notes/317-encryption-locking-data-so-only-a-key-opens-it.md): a toy lock adds 77 to every byte of dhokla, the same key undoes it, and a key off by one returns garbage with no error
+- [318 public and private keys, locking without sharing a secret](./notes/318-public-and-private-keys-locking-without-sharing-a-secret.md): lock dhokla with a public key and the same key cant undo it, only the private one at home can

@@ -59,4 +59,4 @@ check the result after unlocking, like whether each name exists in products: dho
 </details>
 
 ---
-prev: [316 OAuth in one picture, a token without the password](./316-oauth-in-one-picture-a-token-without-the-password.md) | next: not written yet
+prev: [316 OAuth in one picture, a token without the password](./316-oauth-in-one-picture-a-token-without-the-password.md) | next: [318 public and private keys, locking without sharing a secret](./318-public-and-private-keys-locking-without-sharing-a-secret.md)

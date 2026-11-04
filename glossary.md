@@ -23,6 +23,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | argument | a word after the program name, handed to that program | [049](./notes/049-the-terminal.md) |
 | array (SQL) | several values kept in one cell, written in square brackets | [204](./notes/204-arrays-and-unnest-lists-inside-a-cell.md) |
 | ASCII | the old table giving 128 characters a number, English only | [008](./notes/008-ascii-runs-out.md) |
+| asymmetric encryption | two different keys: one locks, only the other unlocks | [318](./notes/318-public-and-private-keys-locking-without-sharing-a-secret.md) |
 | atomic | happening whole or not at all, never half done | [046](./notes/046-writing-safely.md) |
 | atomicity | the ACID promise: all of a transaction happens, or none of it | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | attribute | one fact about one entity, stored as a column | [255](./notes/255-entities-and-attributes.md) |
@@ -223,6 +224,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | junction table | a table with one row per pair, pointing at both sides | [097](./notes/097-junction-tables.md) |
 | kernel | the core of the operating system, shared by containers | [208](./notes/208-containers-a-program-packed-with-everything-it-needs.md) |
 | key constraint | a key rule declared in CREATE TABLE, enforced on every insert | [218](./notes/218-key-constraints-primary-key-and-references-in-create-table.md) |
+| key pair | a public key and a private key made together | [318](./notes/318-public-and-private-keys-locking-without-sharing-a-secret.md) |
 | kibibyte | 1024 bytes, the unambiguous 1024 based unit, written KiB | [038](./notes/038-1000-or-1024.md) |
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | LAG | a window function that returns a value from an earlier row | [192](./notes/192-lag-and-lead-looking-at-the-row-before.md) |
@@ -325,10 +327,12 @@ every term these notes have built, in plain words, with the note that built it. 
 | precedence | which operator runs first when a test mixes several, AND before OR | [109](./notes/109-parentheses-and-runs-before-or.md) |
 | precision | the most digits a decimal can hold in total | [022](./notes/022-exact-decimal-types.md) |
 | primary key | a column that is unique in every row and never NULL | [087](./notes/087-primary-key.md) |
+| private key | the half of a key pair you never share | [318](./notes/318-public-and-private-keys-locking-without-sharing-a-secret.md) |
 | probe (hash join) | reading the outer side, one hash table look per row | [299](./notes/299-hash-join-build-a-hash-table-then-look-up-each-row.md) |
 | process | one running copy of a program, loaded into memory | [050](./notes/050-processes.md) |
 | processor | the CPU, the part of the computer doing tiny steps on numbers | [035](./notes/035-the-processor.md) |
 | program | a file of bytes on disk that can be run | [050](./notes/050-processes.md) |
+| public key | the half of a key pair you hand to anyone | [318](./notes/318-public-and-private-keys-locking-without-sharing-a-secret.md) |
 | query | one request sent to a database, naming the result you want | [101](./notes/101-sql-you-describe-the-result.md) |
 | query parameter | a key=value filter after the ? in a URL | [307](./notes/307-urls-and-query-parameters.md) |
 | query planner | the part of Postgres that prices the ways to run a query | [296](./notes/296-the-query-planner-picking-the-cheapest-plan.md) |
