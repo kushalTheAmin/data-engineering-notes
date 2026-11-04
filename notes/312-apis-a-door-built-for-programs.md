@@ -55,7 +55,7 @@ SELECT order_id FROM orders WHERE customer_id = 5 ORDER BY order_id
 order_id
 ```
 
-no rows, so an empty list with a 200, the usual choice for a list. the request was fine and the answer is just empty (the shop could choose otherwise). the tempting answer is 404, from [311](./311-status-codes-what-200-404-and-500-mean.md), but that was for asking for one order that doesnt exist, here Esha exists and just has no orders.
+no rows, so an empty list with a 200. the request was fine and the answer is just empty (the shop could choose otherwise). the tempting answer is 404, from [311](./311-status-codes-what-200-404-and-500-mean.md), but that was for asking for one order that doesnt exist, here Esha exists and just has no orders.
 
 </details>
 

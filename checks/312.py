@@ -12,3 +12,4 @@ assert con.execute("SELECT count(*) FROM orders WHERE customer_id = 5").fetchone
 # source: https://docs.github.com/en/rest/quickstart
 # confirmed: the quickstart example is a GET to https://api.github.com/repos/octocat/Spoon-Knife/issues, the API host is api.github.com while the site is github.com
 print("312 ok")
+# audit: the note called an empty list with a 200 the usual choice, which no page supports. it now just says an empty list with a 200, and the shop could choose otherwise
