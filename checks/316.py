@@ -21,3 +21,5 @@ assert len(flow) == 7
 #   confirmed: 1 Introduction lists problems of sharing a password with third parties, including storing passwords and overly broad access
 #   confirmed: 3.3 scope is the access range a token is issued for
 #   confirmed: 4.1.2 the authorization code MUST expire shortly after it is issued, a maximum lifetime of 10 minutes is RECOMMENDED, and the client MUST NOT use it more than once
+# audit: the note said "in this toy" with no toy shown, and used refresh token with no gloss, so a reader landing here cold could not follow. it now says in our shop and glosses the refresh token the way 315 does
+#   confirmed (opened this run): RFC 6749 1.5 refresh tokens are used to obtain a new access token; 2.1 and 4.1.3 a confidential client, or one issued client credentials, must authenticate when swapping the code, which supports "usually with a secret" (public clients have none)
