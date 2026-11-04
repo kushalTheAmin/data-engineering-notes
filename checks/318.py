@@ -35,3 +35,6 @@ assert bytes(lock(s2, private)) == b"fafda"
 # equal bytes give equal numbers (toy weakness mentioned in the note)
 assert lock([102, 102], public)[0] == lock([102, 102], public)[1]
 assert 413 and 'fafda'.encode()[0] == 'fafda'.encode()[2]
+# audit: the note said GitHub asks for the public half of your login key pair, which reads as always true, yet that page is about SSH keys only. it now says for SSH login
+# source: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+#   confirmed (opened this run): after you generate an SSH key pair, you must add the public key to GitHub

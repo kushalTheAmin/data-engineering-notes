@@ -32,7 +32,7 @@ the shop posts 17 and 3233 on its website and keeps 413 at home. Chirag locks wi
 
 so he can lock a fresh secret key for the shop, and only the shop opens it. this toy is unsafe: 3233 is 61 times 53, found in a blink, and equal bytes give equal numbers. real keys run 2048 bits or more, with random filler added.
 
-GitHub asks for the public half of your login key pair too, the private half stays on your machine.
+for SSH login, GitHub asks for the public half of your key pair, the private half stays on your machine.
 
 ### check yourself
 
