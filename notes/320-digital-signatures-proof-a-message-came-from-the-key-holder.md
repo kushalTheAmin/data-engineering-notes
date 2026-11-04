@@ -73,4 +73,4 @@ the lock step runs over the fingerprint only, 32 bytes however big the export is
 </details>
 
 ---
-prev: [319 cryptographic hashes, a fingerprint you cant reverse](./319-cryptographic-hashes-a-fingerprint-you-cant-reverse.md) | next: not written yet
+prev: [319 cryptographic hashes, a fingerprint you cant reverse](./319-cryptographic-hashes-a-fingerprint-you-cant-reverse.md) | next: [321 certificates, proving whose public key it is](./321-certificates-proving-whose-public-key-it-is.md)

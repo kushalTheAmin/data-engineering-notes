@@ -55,6 +55,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | carriage return | the 0d character, which sent a typewriter carriage back | [042](./notes/042-line-endings.md) |
 | CASE WHEN | an if, elif, else per row, the first true test wins | [123](./notes/123-case-when-if-and-else-inside-a-query.md) |
 | CAST | converts a value to another type, written CAST(x AS type) | [132](./notes/132-cast-changing-a-values-type.md) |
+| certificate | a signed document: this public key belongs to this name | [321](./notes/321-certificates-proving-whose-public-key-it-is.md) |
+| certificate authority | a trusted company that signs certificates, a CA | [321](./notes/321-certificates-proving-whose-public-key-it-is.md) |
 | chaining | each slot holds a small list, so shared slots still fit | [279](./notes/279-collisions-when-two-keys-land-in-the-same-spot.md) |
 | character | one letter, digit, space or symbol, stored as one number | [007](./notes/007-text-is-numbers.md) |
 | CHECK | a column rule: refuse any row where its test is false | [217](./notes/217-check-a-rule-every-value-must-pass.md) |
