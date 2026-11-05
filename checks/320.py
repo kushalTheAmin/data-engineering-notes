@@ -39,3 +39,6 @@ assert msg.encode().decode() == msg
 # audit: check yourself 2 asked what signing cost grows with but the answer never said. it now says the export size, through the one read that makes the fingerprint
 # source: https://en.wikipedia.org/wiki/Digital_Signature_Algorithm
 #   confirmed (opened this run): DSA signing combines a random per-message value, the message hash and the private key into a pair (r, s) and does not encrypt the hash (backs "some key types sign without any lock step")
+# audit: check yourself 2 said 317 and 318 locking a whole message "is slow", but 317's lock is the fast shared key kind; only the public key lock (318) is the slow one. it now says the public key lock is slow, used on small things
+# source: https://en.wikipedia.org/wiki/RSA_cryptosystem
+#   confirmed (opened this run): RSA is used for public-key encryption of very short messages, almost always a single-use symmetric key
