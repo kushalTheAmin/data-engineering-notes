@@ -198,6 +198,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | HTTPS | HTTP sent through a TLS lock, the wire shows locked bytes | [322](./notes/322-encryption-in-transit-tls-and-https.md) |
 | ILIKE | LIKE that ignores upper and lower case | [113](./notes/113-like-matching-text-patterns.md) |
 | image | the frozen packed box a container starts from, never changes | [209](./notes/209-images-and-containers-the-packed-box-and-the-running-copy.md) |
+| import | runs a module file once and hands your code its names | [325](./notes/325-modules-and-imports-using-code-from-other-files.md) |
 | IN | keeps a row if its value equals any item in a list | [111](./notes/111-in-matching-against-a-list.md) |
 | index (database) | a separate sorted list of values, each with its rows address | [286](./notes/286-index-a-sorted-shortcut-to-rows.md) |
 | index lookup | walk from root page down, one child per page, to the row | [288](./notes/288-one-lookup-traced-through-a-b-tree.md) |
@@ -272,6 +273,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | millisecond | a thousandth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | min | returns the smallest non-null value in a column, or the earliest date | [142](./notes/142-min-and-max-the-smallest-and-biggest-value.md) |
 | modeling | deciding the tables, and which table each fact belongs in, before SQL | [254](./notes/254-modeling-deciding-the-tables-before-writing-them.md) |
+| module | a python file whose names other files can import | [325](./notes/325-modules-and-imports-using-code-from-other-files.md) |
 | most common values | the values a column holds most, saved with their shares | [297](./notes/297-statistics-how-the-planner-guesses-row-counts.md) |
 | MVCC | Postgres never overwrites a row, an UPDATE writes a new version | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
 | naming convention | habits for naming tables and columns so others can guess them | [264](./notes/264-naming-conventions-names-people-can-guess.md) |

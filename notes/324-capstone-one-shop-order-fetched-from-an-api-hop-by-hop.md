@@ -73,4 +73,4 @@ a JSON decode error, which hides the real problem. it should check the status co
 </details>
 
 ---
-prev: [323 latency and bandwidth, slow vs narrow](./323-latency-and-bandwidth-slow-vs-narrow.md) | next: not written yet
+prev: [323 latency and bandwidth, slow vs narrow](./323-latency-and-bandwidth-slow-vs-narrow.md) | next: [325 modules and imports, using code from other files](./325-modules-and-imports-using-code-from-other-files.md)
