@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 325
+notes so far: 326
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -371,3 +371,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 ## section 14: python for data work
 
 - [325 modules and imports, using code from other files](./notes/325-modules-and-imports-using-code-from-other-files.md): a module is just a python file, import runs it once, and a file named json.py can hide the real json
+- [326 running a python script from the terminal](./notes/326-running-a-python-script-from-the-terminal.md): everything typed after the file name lands in sys.argv as text, so the 2 in dhokla 2 needs int()

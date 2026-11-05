@@ -35,4 +35,4 @@ and python looks in the scripts own folder before the standard library ([python 
 next up is running these files from the terminal.
 
 ---
-prev: [324 capstone, one shop order fetched from an API, hop by hop](./324-capstone-one-shop-order-fetched-from-an-api-hop-by-hop.md) | next: not written yet
+prev: [324 capstone, one shop order fetched from an API, hop by hop](./324-capstone-one-shop-order-fetched-from-an-api-hop-by-hop.md) | next: [326 running a python script from the terminal](./326-running-a-python-script-from-the-terminal.md)

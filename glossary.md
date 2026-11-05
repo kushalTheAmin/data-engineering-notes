@@ -392,6 +392,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | schema on write | checking shape as data goes in, rejecting what doesnt fit | [083](./notes/083-schema-on-write-vs-schema-on-read.md) |
 | scheme | the start of a URL, like http, naming the rules for talking | [307](./notes/307-urls-and-query-parameters.md) |
 | scope (token) | the list of things a token is allowed to do | [316](./notes/316-oauth-in-one-picture-a-token-without-the-password.md) |
+| script | a python file you run directly, not one you import | [326](./notes/326-running-a-python-script-from-the-terminal.md) |
 | search path | the folders Postgres checks in order to find a bare table name | [267](./notes/267-schemas-as-namespaces-folders-for-tables.md) |
 | second normal form | every column depends on the whole key, not half of it | [260](./notes/260-second-normal-form-nothing-about-half-the-key.md) |
 | SELECT | the clause naming which columns to keep, in the order written | [104](./notes/104-select-and-from-picking-columns.md) |
@@ -438,6 +439,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | sum | adds up all the values in a column into one value | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
 | swap (column type) | renaming the new column to the old name in one transaction | [248](./notes/248-the-swap-renaming-two-columns-in-one-transaction.md) |
 | symmetric encryption | one key both locks and unlocks the data | [317](./notes/317-encryption-locking-data-so-only-a-key-opens-it.md) |
+| sys.argv | the list of words typed after python3, script name first, all text | [326](./notes/326-running-a-python-script-from-the-terminal.md) |
 | table | a grid of rows, every row holding the same columns | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | table alias | a short name for a table, valid for one query only | [158](./notes/158-table-aliases-short-nicknames-for-tables.md) |
 | table lock | a mark on a whole table, the strongest also blocks plain reads | [242](./notes/242-row-locks-and-table-locks.md) |
