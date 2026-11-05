@@ -22,3 +22,10 @@ with tempfile.TemporaryDirectory() as d:
 # source: https://docs.python.org/3/tutorial/modules.html
 #   confirmed (opened this run): each module is only imported once per interpreter session; the scripts directory is first on the search path, ahead of the standard library, so a same-named file is loaded instead
 # audit: the note said python looks in the scripts folder before the standard library, a term no earlier note explains. it now says the modules that come with python
+# audit: the note said the scripts folder wins over the modules that come with python, but built-in ones like sys lose to python itself. it now says most of them
+#   confirmed (opened this run): "the interpreter first searches for a built-in module with that name ... If not found, it then searches for a file named spam.py" in sys.path (https://docs.python.org/3/tutorial/modules.html)
+assert "sys" in sys.builtin_module_names and "json" not in sys.builtin_module_names
+with tempfile.TemporaryDirectory() as d:
+    open(os.path.join(d, "sys.py"), "w").write("print('mine')\n")
+    open(os.path.join(d, "t.py"), "w").write("import sys\n")
+    assert subprocess.run([sys.executable, "t.py"], cwd=d, capture_output=True, text=True).stdout == ""  # real sys still loaded

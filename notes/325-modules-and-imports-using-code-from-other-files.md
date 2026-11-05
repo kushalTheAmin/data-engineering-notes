@@ -30,7 +30,7 @@ the module name is the file name without .py. `import shop_utils` ran that file 
 
 i expected the second import to print again, but it didnt. python remembers a module after the first import and just reuses it. the flip side is that anything sitting at the top of the file, outside a function, runs the moment someone imports it, so a module that calls an API up there fires on import.
 
-and python looks in the scripts own folder before the modules that come with python ([python docs](https://docs.python.org/3/tutorial/modules.html)). name your file json.py and `import json` quietly loads yours. its a confusing way for a script to crash.
+and python looks in the scripts own folder before most of the modules that come with python ([python docs](https://docs.python.org/3/tutorial/modules.html)). name your file json.py and `import json` quietly loads yours. its a confusing way for a script to crash.
 
 next up is running these files from the terminal.
 
