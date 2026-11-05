@@ -46,7 +46,7 @@ request on wire: [148, 146, 161, 109, 124, 188]
 shop reads     : b'GET /orders?customer_id=1'
 ```
 
-someone watching the wire sees 3123 and the sealed bytes, never 77. the [certificate](./321-certificates-proving-whose-public-key-it-is.md) check is why Chirag locked to the real shop key and not a thiefs, a CA, a trusted signing organization, stamped it.
+someone watching the wire sees 3123 and the sealed bytes, never 77, once the numbers are real sizes and not 3233. the [certificate](./321-certificates-proving-whose-public-key-it-is.md) check is why Chirag locked to the real shop key and not a thiefs, a CA, a trusted signing organization, stamped it.
 
 i assumed the fancy public key lock did the whole job, but it only ever carries one small number, and the plain lock carries every request. one caveat: modern TLS 1.3 removed this exact way of sending the key and agrees it with another trick, Diffie-Hellman, same ending, both sides hold a key nobody on the wire does ([RFC 8446](https://www.rfc-editor.org/rfc/rfc8446.txt)).
 
