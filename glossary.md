@@ -489,6 +489,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | UTF-8 | a way to store each code point as 1 to 4 bytes | [010](./notes/010-utf-8.md) |
 | VACUUM | Postgres command that frees dead row versions for reuse | [304](./notes/304-vacuum-how-postgres-cleans-up-old-row-versions.md) |
 | valid state | every declared rule true at once, before and after a transaction | [230](./notes/230-acid-consistency-the-rules-still-hold-after-every-change.md) |
+| venv | a folder with its own python and its own installed packages | [328](./notes/328-venvs-one-set-of-installed-packages-per-project.md) |
 | view | a query saved under a name, rerun on every read | [181](./notes/181-views-a-saved-query-with-a-name.md) |
 | WAL | short for write ahead log | [233](./notes/233-the-write-ahead-log-write-down-the-plan-before-the-change.md) |
 | wc | prints a files counts; wc -l counts its 0a line endings | [055](./notes/055-wc-counting-lines.md) |

@@ -39,4 +39,4 @@ PyPI is open to any python developer to publish on ([packaging glossary](https:/
 by default everything you install lands in one shared place, and the next note is about why that gets painful once two projects want different versions of the same package.
 
 ---
-prev: [326 running a python script from the terminal](./326-running-a-python-script-from-the-terminal.md) | next: not written yet
+prev: [326 running a python script from the terminal](./326-running-a-python-script-from-the-terminal.md) | next: [328 venvs, one set of installed packages per project](./328-venvs-one-set-of-installed-packages-per-project.md)
