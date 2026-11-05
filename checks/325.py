@@ -21,3 +21,4 @@ with tempfile.TemporaryDirectory() as d:
     assert out == "mine\n", out
 # source: https://docs.python.org/3/tutorial/modules.html
 #   confirmed (opened this run): each module is only imported once per interpreter session; the scripts directory is first on the search path, ahead of the standard library, so a same-named file is loaded instead
+# audit: the note said python looks in the scripts folder before the standard library, a term no earlier note explains. it now says the modules that come with python
