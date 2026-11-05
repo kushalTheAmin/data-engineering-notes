@@ -50,7 +50,7 @@ someone watching the wire sees 3123 and the sealed bytes, never 77, once the num
 
 i assumed the fancy public key lock did the whole job, but it only ever carries one small number, and the plain lock carries every request. one caveat: modern TLS 1.3 removed this exact way of sending the key and agrees it with another trick, Diffie-Hellman, same ending, both sides hold a key nobody on the wire does ([RFC 8446](https://www.rfc-editor.org/rfc/rfc8446.txt)).
 
-after the handshake the headers (the extra lines) and bodies are locked too ([MDN](https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security)), so an API key or token you send in a header isnt readable in transit.
+after the handshake the headers (the extra lines) and bodies are locked too ([MDN](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)), so an API key or token you send in a header isnt readable in transit.
 
 ---
 prev: [321 certificates, proving whose public key it is](./321-certificates-proving-whose-public-key-it-is.md) | next: [323 latency and bandwidth, slow vs narrow](./323-latency-and-bandwidth-slow-vs-narrow.md)
