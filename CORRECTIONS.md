@@ -826,6 +826,7 @@ every fix made to a note after it was published, newest first. if you learned fr
 
 ## audit log
 audit runs that could not finish, newest first. format: YYYY-MM-DD HH:MM: what happened
+2026-11-05 12:00: gate failed before any change (13 FAIL with duckdb 2.0.0: fetchone removed in checks 008, 011, 026 to 030, 316, 317, 318, 320; asserts in 041 and 268), same failures as the earlier entries. no notes were audited.
 2026-11-04 12:00: gate failed before any change with every duckdb tried (2.0.0: 11 FAIL on fetchone and asserts in checks 008, 011, 026 to 030, 041, 268, 316, 317; 1.3.2: 5 FAIL; 1.2.2: 9 FAIL). no notes were audited.
 2026-11-02 12:00: gate failed before any change (9 FAIL: checks 008, 011, 026 to 030 on fetchone, 041 and 268 on an assert) with duckdb 2.0.0, same failures as the 2026-11-01 entries. no notes were audited. evidence: python3 tools/gate.py printed FAIL (9).
 2026-11-01 12:10: gate failed before any change (9 FAIL: checks 008, 011, 026 to 030 on fetchone, 041 and 268 on an assert) with duckdb 2.0.0. no notes were audited.
