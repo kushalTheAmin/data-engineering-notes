@@ -24,3 +24,5 @@ assert pow(sent, 413, 3233) == 77  # anyone who factors 3233 can rebuild 413 and
 # audit: the note glossed the URL as the text at the start naming the rules for talking, which defines the whole address as only its scheme. it now says the URL is the web address and its first part, the scheme, names the rules
 from urllib.parse import urlsplit
 assert urlsplit('https://shop.example/orders/101').scheme == 'https'  # note 307 shows scheme, host, path
+# audit: the note said TLS 1.3 agrees the key with Diffie-Hellman, which reads as always, but RFC 8446 section 2 lists three key exchange modes: (EC)DHE, PSK-only and PSK with (EC)DHE. it now says usually
+#   confirmed (opened this run): "supports three basic key exchange modes" (https://www.rfc-editor.org/rfc/rfc8446.txt)
