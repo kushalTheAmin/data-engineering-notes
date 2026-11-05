@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 323
+notes so far: 324
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -366,3 +366,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [321 certificates, proving whose public key it is](./notes/321-certificates-proving-whose-public-key-it-is.md): a signature is only as good as the key, so a CA signs the name and key together
 - [322 encryption in transit, TLS and https](./notes/322-encryption-in-transit-tls-and-https.md): https is the same text request, sent after a handshake that locks a secret key with the shops public key
 - [323 latency and bandwidth, slow vs narrow](./notes/323-latency-and-bandwidth-slow-vs-narrow.md): 100 requests of one order wait 5.02 seconds and one request of all 100 waits 0.07, and a 10 times wider line barely helps the first
+- [324 capstone, one shop order fetched from an API, hop by hop](./notes/324-capstone-one-shop-order-fetched-from-an-api-hop-by-hop.md): order 101 travels from a name lookup to a locked connection, a token, a GET, SQL behind the API and a JSON answer, and each hop fails in its own way
