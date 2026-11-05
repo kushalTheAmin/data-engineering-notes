@@ -28,4 +28,4 @@ each word after python3 is an [argument](./049-the-terminal.md), a word handed t
 scheduled jobs run lines like this too: cron, the timer on unix machines, runs a command on a schedule ([source](https://en.wikipedia.org/wiki/Cron)). for many arguments, python ships argparse, a built-in helper that can turn the text into numbers if you ask ([docs](https://docs.python.org/3/library/argparse.html)).
 
 ---
-prev: [325 modules and imports, using code from other files](./325-modules-and-imports-using-code-from-other-files.md) | next: not written yet
+prev: [325 modules and imports, using code from other files](./325-modules-and-imports-using-code-from-other-files.md) | next: [327 packages and pip, installing code other people wrote](./327-packages-and-pip-installing-code-other-people-wrote.md)

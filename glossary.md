@@ -311,6 +311,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | orphan row | a row whose foreign key matches no row in the other table | [094](./notes/094-what-a-foreign-key-stops.md) |
 | outer side | the table a join reads once, row by row | [298](./notes/298-nested-loop-join-for-each-outer-row-search-the-inner-side.md) |
 | overflow | a result too big for its bit size, wrapping or erroring | [016](./notes/016-overflow.md) |
+| package | a bundle of python modules other people wrote and shared | [327](./notes/327-packages-and-pip-installing-code-other-people-wrote.md) |
 | page (Postgres) | a fixed 8192 byte chunk of a table file, packed with rows | [284](./notes/284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md) |
 | page split | a full page divides in two and its parent gains a signpost | [289](./notes/289-how-a-b-tree-stays-balanced-as-rows-arrive.md) |
 | parent folder | the folder holding this one, written .. in a path | [053](./notes/053-absolute-vs-relative-paths.md) |
@@ -322,6 +323,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | percentile | the value some fraction of the way through the sorted column | [150](./notes/150-percentiles-the-medians-cousins.md) |
 | phantom read | a re-run query in one transaction returns a different set of rows | [238](./notes/238-phantoms.md) |
 | pid | the number the system gives one running process, new each run | [050](./notes/050-processes.md) |
+| pip | the program that downloads a package from PyPI and installs it | [327](./notes/327-packages-and-pip-installing-code-other-people-wrote.md) |
 | pipe (shell) | joins one programs output to the next programs input | [058](./notes/058-pipes.md) |
 | PITR | short for point in time recovery | [252](./notes/252-point-in-time-recovery-a-backup-plus-the-replayed-log.md) |
 | pivot | turning the values of one column into columns of their own | [151](./notes/151-pivoting-turning-rows-into-columns.md) |
@@ -344,6 +346,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | processor | the CPU, the part of the computer doing tiny steps on numbers | [035](./notes/035-the-processor.md) |
 | program | a file of bytes on disk that can be run | [050](./notes/050-processes.md) |
 | public key | the half of a key pair you hand to anyone | [318](./notes/318-public-and-private-keys-locking-without-sharing-a-secret.md) |
+| PyPI | the public shelf of python packages, the Python Package Index | [327](./notes/327-packages-and-pip-installing-code-other-people-wrote.md) |
 | query | one request sent to a database, naming the result you want | [101](./notes/101-sql-you-describe-the-result.md) |
 | query parameter | a key=value filter after the ? in a URL | [307](./notes/307-urls-and-query-parameters.md) |
 | query planner | the part of Postgres that prices the ways to run a query | [296](./notes/296-the-query-planner-picking-the-cheapest-plan.md) |
