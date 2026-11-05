@@ -18,3 +18,7 @@ assert "pyyaml" != "yaml"
 #   confirmed (opened this run): python -m pip <command> is the documented way to run pip, and it runs pip with that python
 # source: https://pypi.org/pypi/duckdb/json
 #   confirmed (opened this run): duckdb is a project on PyPI, and note 102 says pip install duckdb
+
+# audit: the note said everything you install lands in one shared place, which reads as always true. it now says by default
+# source: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
+#   confirmed (opened this run): "While a virtual environment is activated, pip will install packages into that specific environment."

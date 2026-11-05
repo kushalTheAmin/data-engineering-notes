@@ -36,7 +36,7 @@ i assumed the install name and the import name were always the same. they arent:
 
 PyPI is open to any python developer to publish on ([packaging glossary](https://packaging.python.org/en/latest/glossary/)), so installing a package means running a strangers code on your machine. check the spelling.
 
-everything you install lands in one shared place, and the next note is about why that gets painful once two projects want different versions of the same package.
+by default everything you install lands in one shared place, and the next note is about why that gets painful once two projects want different versions of the same package.
 
 ---
 prev: [326 running a python script from the terminal](./326-running-a-python-script-from-the-terminal.md) | next: not written yet
