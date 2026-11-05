@@ -22,3 +22,6 @@ assert 3233 == 61 * 53  # shop key modulus from note 318
 #   confirmed (opened this run): Lets Encrypt is a CA, its certificates trusted by most browsers and operating systems
 # source: https://en.wikipedia.org/wiki/Public_key_certificate
 #   confirmed (opened this run): all web browsers come with a built-in list of trusted root certificates
+# audit: the note called a CA a company, but Lets Encrypt, named in the note, is a nonprofit
+# source: https://letsencrypt.org/docs/faq/
+#   confirmed (opened this run): "Let's Encrypt is a nonprofit"

@@ -4,7 +4,7 @@ section: talking over a network, part 16, ~2 min read
 
 [320](./320-digital-signatures-proof-a-message-came-from-the-key-holder.md) ended on an if: a signature proves the key holder wrote it, if that [public key](./318-public-and-private-keys-locking-without-sharing-a-secret.md), the half you share, really is theirs. what stops a thief posting their own and calling it shop.example?
 
-a certificate is a small document saying "this public key belongs to this name", signed by a certificate authority, a CA, a company your browser already trusts. the shop, the imaginary gujarati snack store these notes run on, doesnt ask Chirag to trust its key. it gets a CA to sign the name and the key together.
+a certificate is a small document saying "this public key belongs to this name", signed by a certificate authority, a CA, an organization your browser already trusts. the shop, the imaginary gujarati snack store these notes run on, doesnt ask Chirag to trust its key. it gets a CA to sign the name and the key together.
 
 ```mermaid
 flowchart LR
