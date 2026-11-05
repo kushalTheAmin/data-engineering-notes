@@ -89,6 +89,7 @@ log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept faile
 2026-11-04: repo baseline failed checks/127.py, 201.py, 202.py: duckdb 1.4.5 (python3 is 3.11, installed via python3 -m pip) returns DATE not TIMESTAMP from date_trunc on a DATE so 3 type asserts fail; no note written, needs a fix outside this run
 2026-11-04: repo baseline failed checks/127.py, 201.py, 202.py: date_trunc on a DATE returns DATE not TIMESTAMP on duckdb 1.4.5 (python3 is 3.11, python3 -m pip install "duckdb<1.5"), no note written, needs a fix outside this run
 2026-11-05: repo baseline failed gate setup: duckdb 2.0.0 (the only one installed, under /usr/bin/python3) fails 13 checks (008, 011, 026 to 030, 316 to 318, 320 on fetchone, 041 and 268 on an assert); no note written, needs a fix outside this run
+2026-11-05: repo baseline failed checks/316.py, 317, 318, 320 and 9 more: python3 here is 3.11 and pip gives duckdb 2.0.0, which breaks 13 checks on fetchone; no note written, needs a fix outside this run
 
 ## arc 1: data at the atom level
 after this arc: you know what a computer actually stores when it "saves" an order
