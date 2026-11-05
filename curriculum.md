@@ -476,7 +476,8 @@ after this arc: you can write, run and test real python scripts that move data b
 
 - [x] modules and imports: using code from other files (note 325)
 - [x] running a python script from the terminal (note 326)
-- [ ] packages and venvs: other peoples code, kept per project
+- [ ] packages and pip: installing code other people wrote
+- [ ] venvs: one set of installed packages per project
 - [ ] git: commits as snapshots of your code ★
 - [ ] git branches: trying something without breaking main
 - [ ] pushing and pulling: sharing code through a remote
