@@ -15,3 +15,4 @@ assert bytes((b - session) % 256 for b in sealed) == b"GET /orders?customer_id=1
 # audit: the note said a wire watcher never sees 77, which is false for the toy (3233 = 61 * 53 factors at once, so 413 and then 77 follow). it now says never once the numbers are real sizes
 assert [k for k in range(2, 3233) if 3233 % k == 0][:1] == [53]
 assert pow(sent, 413, 3233) == 77  # anyone who factors 3233 can rebuild 413 and read this
+# audit: headers was used with no gloss for a reader landing cold; it now says headers are the extra lines, as note 308 defines them
