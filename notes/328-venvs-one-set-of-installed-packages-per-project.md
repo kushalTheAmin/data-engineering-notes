@@ -15,7 +15,7 @@ $ .venv/bin/python -m pip install duckdb
 $ .venv/bin/python -c "import duckdb"
 ```
 
-the first line prints nothing, which means the [import](./325-modules-and-imports-using-code-from-other-files.md) worked. the third fails with ModuleNotFoundError, python saying it cant find that package, though duckdb sits right there on the machine. i expected a new venv to inherit everything, but it starts empty on purpose, with only pip, the installer from 327, inside. you install into it with its own python, and only code run by that python sees the result.
+the first line prints nothing, which means the [import](./325-modules-and-imports-using-code-from-other-files.md) worked. the third fails with ModuleNotFoundError, python saying it cant find that package, though duckdb sits right there on the machine. i expected a new venv to inherit everything, but it starts empty on purpose, with little but pip, the installer from 327, inside. you install into it with its own python, and only code run by that python sees the result.
 
 typing .venv/bin/python each time gets old, so people run source .venv/bin/activate once, after which plain python3 and pip mean the venvs ones. ([guide](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/), windows uses Scripts, not bin).
 

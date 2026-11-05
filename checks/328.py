@@ -22,3 +22,5 @@ finally:
 #   confirmed (opened this run): venv creates lightweight virtual environments, each with their own independent set of Python packages, by default isolated from packages in the base environment; ships in the standard library; to move an environment you should recreate it at the new location
 # source: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
 #   confirmed (opened this run): source .venv/bin/activate on unix, .venv\Scripts\activate on windows; once activated pip installs into that environment; activation puts the venv python and pip on PATH
+# audit: the note said a fresh venv holds only pip, but venvs made by python before 3.12 also hold setuptools. it now says little but pip
+#   confirmed (opened this run): https://docs.python.org/3/library/venv.html "Changed in version 3.12: setuptools is no longer a core venv dependency."; python 3.11 here listed pip 24.0 and setuptools 79.0.1 in a fresh venv
