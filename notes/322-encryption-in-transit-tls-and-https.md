@@ -53,4 +53,4 @@ i assumed the fancy public key lock did the whole job, but it only ever carries 
 after the handshake the headers (the extra lines) and bodies are locked too ([MDN](https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security)), so an API key or token you send in a header isnt readable in transit.
 
 ---
-prev: [321 certificates, proving whose public key it is](./321-certificates-proving-whose-public-key-it-is.md) | next: not written yet
+prev: [321 certificates, proving whose public key it is](./321-certificates-proving-whose-public-key-it-is.md) | next: [323 latency and bandwidth, slow vs narrow](./323-latency-and-bandwidth-slow-vs-narrow.md)

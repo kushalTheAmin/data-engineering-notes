@@ -34,6 +34,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | backfill | fills a new column for rows that already exist, in small batches | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
 | backup | a copy of your data, kept elsewhere, that you can restore from | [251](./notes/251-backups-a-copy-you-can-restore-from.md) |
 | balanced tree | a tree that keeps its depth as small as its size allows | [281](./notes/281-balanced-trees-why-the-depth-stays-small.md) |
+| bandwidth | how many bytes a connection moves per second | [323](./notes/323-latency-and-bandwidth-slow-vs-narrow.md) |
 | bare column | the column alone in a WHERE, with no function around it | [295](./notes/295-functions-on-a-column-why-the-index-gets-skipped.md) |
 | batch | a small slice of rows handled by one statement | [246](./notes/246-add-a-new-column-and-backfill-it-in-batches.md) |
 | BEGIN | the command that opens a transaction | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
@@ -235,6 +236,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | kibibyte | 1024 bytes, the unambiguous 1024 based unit, written KiB | [038](./notes/038-1000-or-1024.md) |
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | LAG | a window function that returns a value from an earlier row | [192](./notes/192-lag-and-lead-looking-at-the-row-before.md) |
+| latency | the wait for a request to go out and back | [323](./notes/323-latency-and-bandwidth-slow-vs-narrow.md) |
 | LEAD | a window function that returns a value from a later row | [192](./notes/192-lag-and-lead-looking-at-the-row-before.md) |
 | leading zero | a front 0 that numbers drop and text keeps | [263](./notes/263-choosing-column-types-by-what-you-do-with-the-value.md) |
 | leaf | a tree node with no children under it | [280](./notes/280-trees-data-that-branches.md) |
