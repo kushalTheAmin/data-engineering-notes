@@ -4,7 +4,7 @@ section: talking over a network, part 17, ~2 min read
 
 [321](./321-certificates-proving-whose-public-key-it-is.md) left Chirags browser trusting the shops public key. so what actually changes between http:// and https:// in the [URL](./307-urls-and-query-parameters.md), the text at the start naming the rules for talking?
 
-TLS is a short opening conversation, a handshake, after which everything on the connection is [encrypted](./317-encryption-locking-data-so-only-a-key-opens-it.md). https is just [HTTP](./308-request-and-response-one-message-out-one-message-back.md), the same request and response, sent through that lock. the shop is the imaginary gujarati snack store these notes run on.
+TLS opens with a short conversation, a handshake, after which everything on the connection is [encrypted](./317-encryption-locking-data-so-only-a-key-opens-it.md). https is just [HTTP](./308-request-and-response-one-message-out-one-message-back.md), the same request and response, sent through that lock. the shop is the imaginary gujarati snack store these notes run on.
 
 ```mermaid
 sequenceDiagram

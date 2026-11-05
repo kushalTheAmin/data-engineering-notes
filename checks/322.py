@@ -16,3 +16,6 @@ assert bytes((b - session) % 256 for b in sealed) == b"GET /orders?customer_id=1
 assert [k for k in range(2, 3233) if 3233 % k == 0][:1] == [53]
 assert pow(sent, 413, 3233) == 77  # anyone who factors 3233 can rebuild 413 and read this
 # audit: headers was used with no gloss for a reader landing cold; it now says headers are the extra lines, as note 308 defines them
+# audit: the note said TLS is a short opening conversation, which equates TLS with its handshake. it now says TLS opens with one
+# source: https://www.rfc-editor.org/rfc/rfc8446.txt
+#   confirmed (opened this run): "TLS consists of two primary components: A handshake protocol ... A record protocol"
