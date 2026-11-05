@@ -37,3 +37,5 @@ assert msg.encode().decode() == msg
 # source: https://en.wikipedia.org/wiki/Digital_signature
 #   confirmed (opened this run): signatures made with a signing algorithm and private key pass verification with the corresponding public key
 # audit: check yourself 2 asked what signing cost grows with but the answer never said. it now says the export size, through the one read that makes the fingerprint
+# source: https://en.wikipedia.org/wiki/Digital_Signature_Algorithm
+#   confirmed (opened this run): DSA signing combines a random per-message value, the message hash and the private key into a pair (r, s) and does not encrypt the hash (backs "some key types sign without any lock step")
