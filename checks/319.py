@@ -19,3 +19,5 @@ assert fp("dhokla") == fp("dhokla") and fp("dhokla")[:16] == "a19df0bccb680b96"
 # audit: the note said git names every object by SHA-1, but git can also make repositories that use SHA-256 (git init --object-format=sha256 gives 64 hex digit names). it now says by default
 # source: https://git-scm.com/docs/hash-function-transition
 #   confirmed (opened this run): the git project picked SHA-256 as the successor to SHA-1 and a repository can be transitioned one at a time; a git 2.43 sha256 repository printed 64 hex digit object names, a default one 40
+# source: https://devclass.com/2022/06/23/vs-code-react-git-dominant-technologies-increase-their-grip-says-stack-overflow-survey
+#   confirmed (opened this run): in the Stack Overflow 2022 survey, 96.65 percent of professionals use Git, SVN second at 5.96 percent (backs "the tool most devs save code with")
