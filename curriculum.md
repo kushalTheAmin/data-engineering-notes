@@ -968,3 +968,4 @@ after this arc: you can design a data platform from a business question and defe
 2026-11-05: repo baseline failed checks/127.py, 201.py, 202.py: date_trunc type asserts on duckdb 1.4.5 (python3 is 3.11, duckdb 2.0.0 breaks 13 checks on fetchone), no note written, needs a fix outside this run
 2026-11-05: repo baseline failed checks/008.py and 12 more: python3 is 3.11, pip gives duckdb 2.0.0 which breaks 11 checks on fetchone (041 and 268 also assert); no note written, needs a fix outside this run
 2026-11-05: repo baseline failed checks/127.py, 201.py, 202.py: duckdb 1.4.5 fails date_trunc type asserts (duckdb 2.0.0, the pip default, breaks 13 checks on fetchone); no note written, needs a fix outside this run
+2026-11-05: repo baseline failed checks/127.py, 201.py, 202.py, 074.py: duckdb 1.4.5 fails date_trunc type asserts and note 074 needs pyyaml, duckdb 2.0.0 breaks 8 checks on fetchone; no note written, needs a fix outside this run
