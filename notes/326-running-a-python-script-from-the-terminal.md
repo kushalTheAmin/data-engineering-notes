@@ -4,7 +4,7 @@ section: python for data work, part 2, ~2 min read
 
 [325](./325-modules-and-imports-using-code-from-other-files.md) left report.py as a file you start yourself, with order 101 baked in. how do you point it at a different product without editing the file every time?
 
-a script is a python file you run directly, and anything you type after its name arrives in a list called sys.argv. in the [terminal](./049-the-terminal.md), where you type commands, you write python3 and the file name. python3 is a program, so it starts a [process](./050-processes.md), a running copy, which reads your file top to bottom. a bare file name like total.py is a [relative path](./053-absolute-vs-relative-paths.md), looked up in the [working directory](./052-the-working-directory.md), the folder you are standing in.
+a script is a python file you run directly, and anything you type after its name arrives in a list called sys.argv. in the [terminal](./049-the-terminal.md), where you type commands, you write python3 and the file name (on windows, usually py). python3 is a program, so it starts a [process](./050-processes.md), a running copy, which reads your file top to bottom. a bare file name like total.py is a [relative path](./053-absolute-vs-relative-paths.md), looked up in the [working directory](./052-the-working-directory.md), the folder you are standing in.
 
 the $ marks the prompt. here is total.py for the shop, the imaginary gujarati snack store these notes run on, and two runs:
 

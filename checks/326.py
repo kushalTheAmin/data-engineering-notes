@@ -23,3 +23,8 @@ with tempfile.TemporaryDirectory() as d:
 #   confirmed (opened this run): cron is a time-based job scheduler
 # source: https://docs.python.org/3/library/argparse.html
 #   confirmed (opened this run): argparse is the standard library module for command line interfaces, parsing sys.argv, with a type option on add_argument
+# audit: python3 is the linux and mac command, so the note now says on windows the word is usually py
+# source: https://docs.python.org/3/using/windows.html
+#   confirmed (opened this run): the python3 command on Windows "is intended to catch accidental uses of the typical POSIX command on Windows, but is not meant to be widely used or recommended"
+# source: https://pip.pypa.io/en/stable/cli/pip/
+#   confirmed (opened this run): usage is "Unix/macOS python -m pip <command>" and "Windows py -m pip <command>"
