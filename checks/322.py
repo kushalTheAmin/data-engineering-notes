@@ -21,3 +21,6 @@ assert pow(sent, 413, 3233) == 77  # anyone who factors 3233 can rebuild 413 and
 #   confirmed (opened this run): "TLS consists of two primary components: A handshake protocol ... A record protocol"
 # audit: the old mdn url answers 301 and moves to the Defenses path; note and check now use the new url
 #   confirmed (opened this run): "Client and server agree on a secret key" and "After the handshake, client and server use the secret key to encrypt and decrypt any messages, including HTTP headers as well as bodies"
+# audit: the note glossed the URL as the text at the start naming the rules for talking, which defines the whole address as only its scheme. it now says the URL is the web address and its first part, the scheme, names the rules
+from urllib.parse import urlsplit
+assert urlsplit('https://shop.example/orders/101').scheme == 'https'  # note 307 shows scheme, host, path

@@ -2,7 +2,7 @@
 builds on: [307 URLs and query parameters](./307-urls-and-query-parameters.md), [308 request and response, one message out, one message back](./308-request-and-response-one-message-out-one-message-back.md), [317 encryption, locking data so only a key opens it](./317-encryption-locking-data-so-only-a-key-opens-it.md), [318 public and private keys, locking without sharing a secret](./318-public-and-private-keys-locking-without-sharing-a-secret.md), [321 certificates, proving whose public key it is](./321-certificates-proving-whose-public-key-it-is.md)
 section: talking over a network, part 17, ~2 min read
 
-[321](./321-certificates-proving-whose-public-key-it-is.md) left Chirags browser trusting the shops public key. so what actually changes between http:// and https:// in the [URL](./307-urls-and-query-parameters.md), the text at the start naming the rules for talking?
+[321](./321-certificates-proving-whose-public-key-it-is.md) left Chirags browser trusting the shops public key. so what actually changes between http:// and https:// in the [URL](./307-urls-and-query-parameters.md), the web address, where the scheme at the start names the rules for talking?
 
 TLS opens with a short conversation, a handshake, after which everything on the connection is [encrypted](./317-encryption-locking-data-so-only-a-key-opens-it.md). https is just [HTTP](./308-request-and-response-one-message-out-one-message-back.md), the same request and response, sent through that lock. the shop is the imaginary gujarati snack store these notes run on.
 
@@ -48,7 +48,7 @@ shop reads     : b'GET /orders?customer_id=1'
 
 someone watching the wire sees 3123 and the sealed bytes, never 77, once the numbers are real sizes and not 3233. the [certificate](./321-certificates-proving-whose-public-key-it-is.md) check is why Chirag locked to the real shop key and not a thiefs, a CA, a trusted signing organization, stamped it.
 
-i assumed the fancy public key lock did the whole job, but it only ever carries one small number, and the plain lock carries every request. one caveat: modern TLS 1.3 removed this exact way of sending the key and agrees it with another trick, Diffie-Hellman, same ending, both sides hold a key nobody on the wire does ([RFC 8446](https://www.rfc-editor.org/rfc/rfc8446.txt)).
+i assumed the fancy public key lock did the whole job, but it only ever carries one small number, and the plain lock carries every request. modern TLS 1.3 removed this exact way of sending the key and agrees it with another trick, Diffie-Hellman, same ending, both sides hold a key nobody on the wire does ([RFC 8446](https://www.rfc-editor.org/rfc/rfc8446.txt)).
 
 after the handshake the headers (the extra lines) and bodies are locked too ([MDN](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)), so an API key or token you send in a header isnt readable in transit.
 
