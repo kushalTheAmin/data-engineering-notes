@@ -70,6 +70,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | column type | one data type chosen for a whole column, every value fits it | [080](./notes/080-every-column-holds-one-type.md) |
 | combining mark | a code point with no letter, drawn on the letter before it | [012](./notes/012-combining-marks.md) |
 | COMMIT | ends a transaction and keeps every change made inside it | [228](./notes/228-commit-and-rollback-keeping-or-undoing-a-transaction.md) |
+| commit (git) | one saved snapshot of the project, with a message and an id | [329](./notes/329-git-commits-as-snapshots-of-your-code.md) |
 | comparison | a column, a test like >= and a value, true or false | [107](./notes/107-comparisons-equal-not-equal-bigger-smaller.md) |
 | composite index | an index sorted by one column, then a second inside ties | [290](./notes/290-composite-indexes-sorted-by-the-first-column-then-the-second.md) |
 | composite key | a primary key of two columns, only the pair is unique | [095](./notes/095-composite-keys.md) |
@@ -173,6 +174,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | GET | HTTP method meaning give me this, changing nothing | [309](./notes/309-http-methods-get-asks-post-sends.md) |
 | gibibyte | 1024 x 1024 x 1024 bytes, written GiB | [038](./notes/038-1000-or-1024.md) |
 | gigabyte | 1000 megabytes, a billion bytes, written GB | [033](./notes/033-kilobytes-to-terabytes.md) |
+| git | a tool that saves snapshots of a project folder | [329](./notes/329-git-commits-as-snapshots-of-your-code.md) |
+| git add | picks which files go into the next snapshot | [329](./notes/329-git-commits-as-snapshots-of-your-code.md) |
 | grand total | the one row that sums up every row of the result | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | grapheme | one unit as seen on screen, possibly several code points | [012](./notes/012-combining-marks.md) |
 | grep | prints every line containing the given pattern, anywhere in the line | [056](./notes/056-grep-finding-matching-lines.md) |
@@ -420,6 +423,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | slot (hash table) | one numbered place in a hash table, holding a key and value | [278](./notes/278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md) |
 | slot (page) | a numbered seat for one row version on a Postgres page | [284](./notes/284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md) |
 | snake_case | lowercase words joined by underscores, like ordered_at | [264](./notes/264-naming-conventions-names-people-can-guess.md) |
+| snapshot (git) | the whole project folder as it was at one commit | [329](./notes/329-git-commits-as-snapshots-of-your-code.md) |
 | snapshot (Postgres) | a note of which transactions had finished when a query began | [250](./notes/250-transaction-snapshots-what-your-transaction-is-allowed-to-see.md) |
 | soft delete | marking a row gone with a deleted_at time instead of removing it | [266](./notes/266-soft-deletes-marking-a-row-gone-instead-of-removing-it.md) |
 | splitting into tables | one table per kind of thing, other tables keep only its id | [091](./notes/091-splitting-into-tables.md) |

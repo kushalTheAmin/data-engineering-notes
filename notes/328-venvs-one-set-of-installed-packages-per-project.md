@@ -22,4 +22,4 @@ typing .venv/bin/python each time gets old, so people run source .venv/bin/activ
 each project has its own venv, so nothing fights over a version. python itself ships the venv module ([docs](https://docs.python.org/3/library/venv.html)), but a venv breaks if you move it, the docs say recreate it, so you share a list of what to install instead.
 
 ---
-prev: [327 packages and pip, installing code other people wrote](./327-packages-and-pip-installing-code-other-people-wrote.md) | next: not written yet
+prev: [327 packages and pip, installing code other people wrote](./327-packages-and-pip-installing-code-other-people-wrote.md) | next: [329 git, commits as snapshots of your code](./329-git-commits-as-snapshots-of-your-code.md)

@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 328
+notes so far: 329
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -374,3 +374,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [326 running a python script from the terminal](./notes/326-running-a-python-script-from-the-terminal.md): everything typed after the file name lands in sys.argv as text, so the 2 in dhokla 2 needs int()
 - [327 packages and pip, installing code other people wrote](./notes/327-packages-and-pip-installing-code-other-people-wrote.md): import json works with no setup, so why does importing anything else fail? pip, PyPI, and the install name vs import name gotcha
 - [328 venvs, one set of installed packages per project](./notes/328-venvs-one-set-of-installed-packages-per-project.md): a fresh venv cant see the duckdb installed outside it, on purpose, so each project gets its own versions
+- [329 git, commits as snapshots of your code](./notes/329-git-commits-as-snapshots-of-your-code.md): you broke the script and want yesterdays version back; a commit saves the whole project, not a list of edits
