@@ -22,3 +22,6 @@ assert "pyyaml" != "yaml"
 # audit: the note said everything you install lands in one shared place, which reads as always true. it now says by default
 # source: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
 #   confirmed (opened this run): "While a virtual environment is activated, pip will install packages into that specific environment."
+
+# audit: python3 -m pip is the linux and mac form, so the note now says on windows the first word is usually py
+#   confirmed (opened this run): https://pip.pypa.io/en/stable/cli/pip/ lists "Windows py -m pip <command>"; https://docs.python.org/3/using/windows.html says python3 on Windows "is not meant to be widely used or recommended"

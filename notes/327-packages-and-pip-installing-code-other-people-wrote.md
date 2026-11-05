@@ -30,7 +30,7 @@ flowchart LR
   D --> E["import duckdb works"]
 ```
 
-DuckDB, a small database program for tables, is just a package like this. the `-m pip` part runs pip through the python3 you named, since a machine can have several pythons, and the package lands where that one looks.
+DuckDB, a small database program for tables, is just a package like this. the `-m pip` part runs pip through the python3 you named, since a machine can have several pythons, and the package lands where that one looks. on windows it is usually py.
 
 i assumed the install name and the import name were always the same. they arent: you run pip install pyyaml, then write import yaml ([docs](https://pyyaml.org/wiki/PyYAMLDocumentation)).
 
