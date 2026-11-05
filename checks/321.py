@@ -13,8 +13,8 @@ def check(text, sig, key):
 cert = "shop.example 17 3233"
 sig = sign(cert, private)
 assert check(cert, sig, public) is True
-assert check("shop.example 5 6767", sig, public) is False
-assert check("shop.example 5 6767", sign("shop.example 5 6767", public), public) is False
+assert check("shop.example 7 6767", sig, public) is False
+assert check("shop.example 7 6767", sign("shop.example 7 6767", public), public) is False
 assert 3233 == 61 * 53  # shop key modulus from note 318
 # source: https://www.rfc-editor.org/rfc/rfc5280.txt
 #   confirmed (opened this run): certificates bind public keys to subjects, a trusted CA signs each; fields include issuer, validity dates, subject, public key
@@ -25,3 +25,8 @@ assert 3233 == 61 * 53  # shop key modulus from note 318
 # audit: the note called a CA a company, but Lets Encrypt, named in the note, is a nonprofit
 # source: https://letsencrypt.org/docs/faq/
 #   confirmed (opened this run): "Let's Encrypt is a nonprofit"
+# audit: the thief key was 5 with 6767, but 5 shares a factor with (67 - 1) * (101 - 1) = 6600, so no private key exists for it. it is now 7 with 6767, a valid public key
+from math import gcd
+assert 6767 == 67 * 101 and gcd(7, 66 * 100) == 1 and (7 * pow(7, -1, 6600)) % 6600 == 1 and gcd(5, 6600) == 5
+# source: https://en.wikipedia.org/wiki/Public_key_certificate
+#   confirmed (opened this run): an intermediate certificate is not self-signed, only signs other certificates, and sits between a root and the end certificate in the chain of trust (backs "real checks often pass through a middle CA first")

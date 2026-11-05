@@ -33,8 +33,8 @@ def check(text, sig, key):
 cert = "shop.example 17 3233"
 sig = sign(cert, private)
 print(check(cert, sig, public))
-print(check("shop.example 5 6767", sig, public))
-print(check("shop.example 5 6767", sign("shop.example 5 6767", public), public))
+print(check("shop.example 7 6767", sig, public))
+print(check("shop.example 7 6767", sign("shop.example 7 6767", public), public))
 ```
 
 ```output
@@ -43,7 +43,7 @@ False
 False
 ```
 
-Chirag already holds the CAs public key, so the first check passes. the thief swaps in their own key (5 with 6767) and keeps the signature: False. signing it themselves needs the CAs private key, they only have the public one: False. browsers come with a built in list of trusted CAs ([source](https://en.wikipedia.org/wiki/Public_key_certificate)).
+Chirag already holds the CAs public key, so the first check passes. the thief swaps in their own key (7 with 6767) and keeps the signature: False. signing it themselves needs the CAs private key, they only have the public one: False. browsers come with a built in list of trusted CAs ([source](https://en.wikipedia.org/wiki/Public_key_certificate)).
 
 i assumed a certificate was a secret file that unlocks things, but it is a public ID card, anyone can read it, and the stamp is what matters. real ones also carry dates and the issuers name ([RFC 5280](https://www.rfc-editor.org/rfc/rfc5280.txt)). Lets Encrypt is a free CA, trusted by most browsers and operating systems ([source](https://letsencrypt.org/docs/faq/)).
 
