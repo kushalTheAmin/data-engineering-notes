@@ -29,3 +29,4 @@ assert len(range(306, 324)) == 18
 # source: https://requests.readthedocs.io/en/latest/api/
 #   confirmed (opened this run): Response.raise_for_status() "Raises HTTPError, if one occurred", so requests raises only when called
 # audit: DNS was used in the table with no gloss for a reader landing cold; it now says the lookup from name to address, as notes 306 and 310 do
+# audit: the table said the API asks the database with SQL, which a reader who has never written SQL cannot place. it now says SQL is its question language, the gloss the SELECT block below shows

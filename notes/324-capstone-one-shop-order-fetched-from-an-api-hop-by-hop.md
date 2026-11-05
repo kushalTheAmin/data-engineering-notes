@@ -30,7 +30,7 @@ sequenceDiagram
 | lock | the public key lock carries one secret key (newer TLS agrees it another way), and that key locks everything after | [317](./317-encryption-locking-data-so-only-a-key-opens-it.md) [318](./318-public-and-private-keys-locking-without-sharing-a-secret.md) [322](./322-encryption-in-transit-tls-and-https.md) |
 | message | a GET, a method meant only to read, with headers like the token | [308](./308-request-and-response-one-message-out-one-message-back.md) [309](./309-http-methods-get-asks-post-sends.md) [310](./310-http-headers-notes-attached-to-a-request.md) |
 | who | the token says who asks and expires, an API key works until deleted, OAuth is how an app got one | [314](./314-api-keys-a-password-for-programs.md) [315](./315-tokens-that-expire-a-key-with-a-shelf-life.md) [316](./316-oauth-in-one-picture-a-token-without-the-password.md) |
-| answer | the API asks the database with SQL, then sends a status code, a 3 digit result like 200, and a JSON body | [311](./311-status-codes-what-200-404-and-500-mean.md) [312](./312-apis-a-door-built-for-programs.md) [313](./313-json-over-http-the-answer-is-text-until-you-parse-it.md) |
+| answer | the API asks the database in SQL, its question language, then sends a status code, a 3 digit result like 200, and a JSON body | [311](./311-status-codes-what-200-404-and-500-mean.md) [312](./312-apis-a-door-built-for-programs.md) [313](./313-json-over-http-the-answer-is-text-until-you-parse-it.md) |
 | waits | every out and back pays its latency | [323](./323-latency-and-bandwidth-slow-vs-narrow.md) |
 
 behind the API this is all the database does:
