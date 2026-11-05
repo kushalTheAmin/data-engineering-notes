@@ -4,7 +4,7 @@ section: talking over a network, part 13, ~2 min read
 
 [317](./317-encryption-locking-data-so-only-a-key-opens-it.md) ended on a catch: both sides need the same key, so how does Chirag get one to the shop without a stranger reading it on the way?
 
-the fix is to stop using one key. a key pair is two encryption keys made together, a public key you hand to anyone and a private key that never leaves home. what the public key locks, only the private key opens. that is asymmetric encryption, two different keys, unlike [symmetric](./317-encryption-locking-data-so-only-a-key-opens-it.md) (one key locks and unlocks). here are textbook numbers on the bytes of "dhokla" from the shop, the imaginary gujarati snack store these notes run on. pow(b, key, n) multiplies key copies of b together, keeping the [remainder](./277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md) after dividing by n:
+the fix is to stop using one key. a key pair is two encryption keys made together, a public key you hand to anyone and a private key that never leaves home. what the public key locks, only the private key opens. that is asymmetric encryption, two different keys, unlike [symmetric](./317-encryption-locking-data-so-only-a-key-opens-it.md) (one key locks and unlocks). here are textbook numbers for "dhokla" from the shop, the imaginary gujarati snack store these notes run on. pow(b, key, n) multiplies key copies of b together, keeping the [remainder](./277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md) after dividing by n:
 
 ```python
 n = 3233
@@ -28,11 +28,11 @@ print(bytes(lock(sealed, private)))
 b'dhokla'
 ```
 
-the shop posts 17 and 3233 on its website and keeps 413 at home. Chirag locks with the public key. try it again and you get numbers above 255, too big for a [byte](./004-bytes.md) (a group of 8 bits). only 413 brings dhokla back. i assumed whoever locked a message could always undo it, but Chirag cant even read his own.
+the shop posts 17 and 3233 publicly and keeps 413 at home. Chirag locks with the public key. try it again and you get numbers above 255, too big for a [byte](./004-bytes.md) (a group of 8 bits). only 413, or 1193 in this toy, brings dhokla back. i assumed whoever locked a message could always undo it, but Chirag cant read his own.
 
 so he can lock a fresh secret key for the shop, and only the shop opens it. this toy is unsafe: 3233 is 61 times 53, found in a blink, and equal bytes give equal numbers. real keys run 2048 bits or more, with random filler added.
 
-for SSH login, GitHub asks for the public half of your key pair, the private half stays on your machine.
+for SSH (remote login), GitHub asks for the public half of your key pair, the private half stays on your machine.
 
 ### check yourself
 
