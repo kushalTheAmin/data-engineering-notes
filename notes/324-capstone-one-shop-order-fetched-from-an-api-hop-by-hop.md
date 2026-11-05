@@ -25,7 +25,7 @@ sequenceDiagram
 
 | step | what happens | notes |
 |---|---|---|
-| address | the [URL](./307-urls-and-query-parameters.md) splits into scheme, host and path, and the host name goes to DNS | [306](./306-dns-turning-names-into-addresses.md) [307](./307-urls-and-query-parameters.md) |
+| address | the [URL](./307-urls-and-query-parameters.md) splits into scheme, host and path, and the host name goes to DNS, the lookup from name to address | [306](./306-dns-turning-names-into-addresses.md) [307](./307-urls-and-query-parameters.md) |
 | trust | a certificate, an ID card stamped by a trusted organization, says this public key is the shops | [319](./319-cryptographic-hashes-a-fingerprint-you-cant-reverse.md) [320](./320-digital-signatures-proof-a-message-came-from-the-key-holder.md) [321](./321-certificates-proving-whose-public-key-it-is.md) |
 | lock | the public key lock carries one secret key (newer TLS agrees it another way), and that key locks everything after | [317](./317-encryption-locking-data-so-only-a-key-opens-it.md) [318](./318-public-and-private-keys-locking-without-sharing-a-secret.md) [322](./322-encryption-in-transit-tls-and-https.md) |
 | message | a GET, a method meant only to read, with headers like the token | [308](./308-request-and-response-one-message-out-one-message-back.md) [309](./309-http-methods-get-asks-post-sends.md) [310](./310-http-headers-notes-attached-to-a-request.md) |
@@ -68,7 +68,7 @@ a 200, and json.loads turns the body into a dictionary whose status is cancelled
 2. the token expired mid run. the shop answers 401 with an error page, and the script calls json.loads on it before looking at the status. what error does the log show, and what should the script have done first?
 <details><summary>answer</summary>
 
-a JSON decode error, which hides the real problem. it should check the status code first, see the 401, and (since the token ran out) swap its refresh token, the longer lived key, for a new access token. the tempting answer is a 401 error in the log, but a script that doesnt check the status never raises one.
+a JSON decode error, which hides the real problem. it should check the status code first, see the 401, and (since the token ran out) swap its refresh token, the longer lived key, for a new access token. the tempting answer is a 401 error in the log, but common libraries like python requests only raise on a bad status if you ask them to, so this script never sees one.
 
 </details>
 

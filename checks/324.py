@@ -23,3 +23,9 @@ except json.JSONDecodeError:
     pass
 # the section ran from note 306 to 323, 18 notes, all linked in builds on
 assert len(range(306, 324)) == 18
+# source: https://www.rfc-editor.org/rfc/rfc9110.txt
+#   confirmed (opened this run): 401 "lacks valid authentication credentials for the target resource", 404 "did not find a current representation for the target resource", 500 "encountered an unexpected condition that prevented it from fulfilling the request"
+# audit: check yourself 2 said a script that doesnt check the status never raises a 401 error, but python urllib raises HTTPError on a 401 by itself (run this run). it now says common libraries like requests only raise if asked
+# source: https://requests.readthedocs.io/en/latest/api/
+#   confirmed (opened this run): Response.raise_for_status() "Raises HTTPError, if one occurred", so requests raises only when called
+# audit: DNS was used in the table with no gloss for a reader landing cold; it now says the lookup from name to address, as notes 306 and 310 do
