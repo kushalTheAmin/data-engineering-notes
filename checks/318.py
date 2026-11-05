@@ -42,3 +42,5 @@ assert 413 and 'fafda'.encode()[0] == 'fafda'.encode()[2]
 assert [k for k in range(1, 2000) if all(pow(x, k, n) == y for x, y in zip(sealed, plain))] == [413, 1193, 1973]
 # source: https://en.wikipedia.org/wiki/RSA_cryptosystem
 #   confirmed (opened this run): d is the modular inverse of e modulo lcm(p-1, q-1) = 780, so any d congruent to 413 mod 780 works
+# audit: the note said only 413, or 1193, but 1973 and every 413 + 780k work. it now says 413 plus any multiple of 780
+assert all(all(pow(x, 413 + 780 * j, n) == y for x, y in zip(sealed, plain)) for j in range(50))
