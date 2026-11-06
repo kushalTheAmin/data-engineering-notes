@@ -40,7 +40,7 @@ print(by_price(products[0]), by_name(products[0]))
 
 i assumed field would vanish once by() finished, since thats when its variables normally go away. but each getter carries its own field along, so by_price and by_name stay two different functions made by one.
 
-one gotcha: the getter looks field up when it runs, not when it was built. build three small functions in a loop that each return the loop counter i and they all see its final value, so calling them gives 2, 2, 2.
+one gotcha: the getter looks field up when it runs, not when it was built. build three small functions in a for i in range(3) loop that each return the loop counter i and they all see its final value, so calling them gives 2, 2, 2.
 
 ---
 prev: [337 functions as values, handing a function to another function](./337-functions-as-values-handing-a-function-to-another-function.md) | next: [339 decorators, the @ shorthand for wrapping a function](./339-decorators-the-at-shorthand-for-wrapping-a-function.md)

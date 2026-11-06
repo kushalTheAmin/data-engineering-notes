@@ -17,3 +17,10 @@ assert sorted((n, float(p)) for n, p in rows) == sorted((p["name"], p["price"]) 
 # late binding gotcha
 fs = [lambda: i for i in range(3)]
 assert [f() for f in fs] == [2, 2, 2]
+# audit: the 2, 2, 2 needs range(3); a loop over [1, 2, 3] gives 3, 3, 3
+fs = []
+for i in range(3): fs.append(lambda: i)
+assert [f() for f in fs] == [2, 2, 2]
+fs = []
+for i in [1, 2, 3]: fs.append(lambda: i)
+assert [f() for f in fs] == [3, 3, 3]
