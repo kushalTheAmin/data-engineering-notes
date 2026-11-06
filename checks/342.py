@@ -45,3 +45,16 @@ assert shop().execute("SELECT count(*) FROM orders").fetchone()[0] == 7
 # confirmed (opened this run): os.environ is a mapping of string keys and values representing the process environment, captured at python startup
 # source: https://docs.python.org/3/library/subprocess.html
 # confirmed (opened this run): by default a new process inherits the current process environment, env= replaces it
+# audit: os.environ is a mapping object, not a dict
+assert not isinstance(os.environ, dict)
+# audit: a deleted key stays in git history (real repo, git show of the old commit)
+g = tempfile.mkdtemp()
+def git(*a): return subprocess.run(["git", "-C", g, "-c", "user.name=t", "-c", "user.email=t@t", *a], capture_output=True, text=True).stdout
+git("init", "-q")
+open(os.path.join(g, "a.py"), "w").write("key = 'k_report_7f3a'\n")
+git("add", "a.py"); git("commit", "-qm", "one")
+open(os.path.join(g, "a.py"), "w").write("")
+git("add", "a.py"); git("commit", "-qm", "two")
+assert "k_report_7f3a" in git("show", "HEAD~1:a.py") and "k_report_7f3a" not in git("show", "HEAD:a.py")
+# source: https://docs.python.org/3/library/os.html
+# confirmed (opened this run): os.environ is "A mapping object where keys and values are strings that represent the process environment", so dictionary-like, not a dict

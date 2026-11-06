@@ -4,7 +4,7 @@ section: python for data work, part 18, ~2 min read
 
 [314](./314-api-keys-a-password-for-programs.md) said to keep an api key, the secret string a program sends to identify itself, out of your code. not where it goes instead. where does report.py read it from?
 
-an environment variable is a named piece of text, kept outside your code, handed to a program when it starts. python shows them as os.environ (os is short for operating system), a dictionary whose values are all text. here is report.py for the shop, the imaginary gujarati snack store these notes run on, run three ways in the [terminal](./049-the-terminal.md), $ marking the prompt:
+an environment variable is a named piece of text, kept outside your code, handed to a program when it starts. python shows them as os.environ (os is short for operating system), a dictionary-like object whose values are all text. here is report.py for the shop, the imaginary gujarati snack store these notes run on, run three ways in the [terminal](./049-the-terminal.md), $ marking the prompt:
 
 ```text
 report.py
@@ -38,7 +38,7 @@ KeyError: 'SHOP_API_KEY'. the second window is a different shell, the program re
 
 </details>
 
-2. the shop has 7 orders. you set ROW_LIMIT=5 but the script has a typo in the name it reads. what does this print, and why not 5?
+2. the shop has 7 orders. you set ROW_LIMIT=5, but the script reads limit = int(os.environ.get("ROW_LIMT", "100")), a typo, then prints min(limit, 7), the smaller of the two. what does it print, and why not 5?
 <details><summary>answer</summary>
 
 it prints 7. .get finds no ROW_LIMT, so it quietly uses the default 100, and min picks the 7 orders. no error.
