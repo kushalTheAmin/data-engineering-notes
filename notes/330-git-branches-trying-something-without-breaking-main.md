@@ -38,4 +38,4 @@ word clash: this branch isnt the branches of a tree in [280](./280-trees-data-th
 if you have uncommitted edits that the other branch would overwrite, git refuses to switch until you commit them. teams lean on this: keep one branch stable, do the experiments elsewhere ([pro git](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)).
 
 ---
-prev: [329 git, commits as snapshots of your code](./329-git-commits-as-snapshots-of-your-code.md) | next: not written yet
+prev: [329 git, commits as snapshots of your code](./329-git-commits-as-snapshots-of-your-code.md) | next: [331 pushing and pulling, sharing code through a remote](./331-pushing-and-pulling-sharing-code-through-a-remote.md)

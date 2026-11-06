@@ -63,6 +63,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | character | one letter, digit, space or symbol, stored as one number | [007](./notes/007-text-is-numbers.md) |
 | CHECK | a column rule: refuse any row where its test is false | [217](./notes/217-check-a-rule-every-value-must-pass.md) |
 | client | a program that sends a request and waits for the answer | [086](./notes/086-client-and-server.md) |
+| clone (git) | copies a whole remote repository to your machine, with its history | [331](./notes/331-pushing-and-pulling-sharing-code-through-a-remote.md) |
 | COALESCE | returns the first value in its list that is not null | [116](./notes/116-coalesce-a-fallback-when-a-value-is-null.md) |
 | code point | the number Unicode gives one character, written like U+0AA2 | [009](./notes/009-unicode.md) |
 | cohort | customers who first showed up in the same month | [201](./notes/201-cohorts-the-month-each-customer-first-showed-up.md) |
@@ -312,6 +313,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | optional field | a field a record may leave out without being rejected | [077](./notes/077-required-vs-optional-fields.md) |
 | OR | joins two tests, keeping a row if either is true | [108](./notes/108-and-or-combining-two-tests.md) |
 | ORDER BY | sorts the returned rows by a column, later columns only break ties | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
+| origin | the usual nickname git gives the remote you cloned from | [331](./notes/331-pushing-and-pulling-sharing-code-through-a-remote.md) |
 | orphan row | a row whose foreign key matches no row in the other table | [094](./notes/094-what-a-foreign-key-stops.md) |
 | outer side | the table a join reads once, row by row | [298](./notes/298-nested-loop-join-for-each-outer-row-search-the-inner-side.md) |
 | overflow | a result too big for its bit size, wrapping or erroring | [016](./notes/016-overflow.md) |
@@ -350,6 +352,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | processor | the CPU, the part of the computer doing tiny steps on numbers | [035](./notes/035-the-processor.md) |
 | program | a file of bytes on disk that can be run | [050](./notes/050-processes.md) |
 | public key | the half of a key pair you hand to anyone | [318](./notes/318-public-and-private-keys-locking-without-sharing-a-secret.md) |
+| pull (git) | download new commits from the remote and combine them with yours | [331](./notes/331-pushing-and-pulling-sharing-code-through-a-remote.md) |
+| push (git) | upload your new commits to the remote | [331](./notes/331-pushing-and-pulling-sharing-code-through-a-remote.md) |
 | PyPI | the public shelf of python packages, the Python Package Index | [327](./notes/327-packages-and-pip-installing-code-other-people-wrote.md) |
 | query | one request sent to a database, naming the result you want | [101](./notes/101-sql-you-describe-the-result.md) |
 | query parameter | a key=value filter after the ? in a URL | [307](./notes/307-urls-and-query-parameters.md) |
@@ -367,6 +371,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | relationship | how rows in one table connect to rows in another | [092](./notes/092-relationships-one-customer-many-orders.md) |
 | relative path | a path with no leading slash, begun at the working directory | [053](./notes/053-absolute-vs-relative-paths.md) |
 | remainder | what is left after dividing, written % | [277](./notes/277-hash-functions-turning-anything-into-a-number-in-a-fixed-range.md) |
+| remote | a copy of the repository on a server others can reach | [331](./notes/331-pushing-and-pulling-sharing-code-through-a-remote.md) |
 | repeatable read | Postgres level: one picture, taken at the first query, kept all transaction | [240](./notes/240-repeatable-read-rows-dont-change-under-you-mid-transaction.md) |
 | repeating fraction | digits past the point that loop forever, so no exact finite form | [018](./notes/018-why-0-1-has-no-exact-binary-form.md) |
 | replay | reading the log forward and redoing changes the table files lack | [234](./notes/234-replaying-the-log-after-a-crash.md) |
@@ -514,3 +519,4 @@ every term these notes have built, in plain words, with the note that built it. 
 | XML | a text format wrapping each value in opening and closing tags | [072](./notes/072-xml.md) |
 | YAML | a text format where indentation shows nesting, dashes start list items | [073](./notes/073-yaml.md) |
 | YAML trap | a bare word like no read as a boolean, so quote text | [074](./notes/074-yaml-traps.md) |
+
