@@ -22,3 +22,10 @@ except TypeError as e:
 f = open(os.path.join(tempfile.mkdtemp(), "x"), "w")
 assert isinstance(f, io.TextIOWrapper) and callable(f.write) and callable(f.close)
 f.close()
+# source: https://docs.python.org/3/tutorial/classes.html
+# confirmed (opened this run): "the call x.f() is exactly equivalent to MyClass.f(x)" and "the instance object is passed as the first argument of the function"
+assert Order.total.__name__ == "total"
+class O2:
+    def total(self): return 5
+o = O2()
+assert o.total() == O2.total(o) == 5
