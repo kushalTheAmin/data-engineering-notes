@@ -121,6 +121,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | dead row version | an ended version no open snapshot can still need | [304](./notes/304-vacuum-how-postgres-cleans-up-old-row-versions.md) |
 | deadlock | two transactions each waiting for a lock the other holds | [244](./notes/244-deadlocks-two-transactions-waiting-on-each-other.md) |
 | decompress | rebuild the original bytes from compressed ones, costing processor work | [048](./notes/048-compression-trades-processor-for-space.md) |
+| decorator | a function that takes a function and returns a new one | [339](./notes/339-decorators-the-at-shorthand-for-wrapping-a-function.md) |
 | deduplicate | keep one row per thing when the data holds several | [194](./notes/194-removing-duplicates-with-row-number.md) |
 | DEFAULT | the value filled in when an insert leaves that column out | [215](./notes/215-not-null-and-default-required-columns-and-fallback-values.md) |
 | default frame | with ORDER BY in OVER, the first row through this one | [191](./notes/191-the-default-frame-trap.md) |
@@ -529,6 +530,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | with | opens something, runs a block, then closes it even after an error | [335](./notes/335-with-opening-and-closing-things-safely.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
 | worst case | the unluckiest input, like the wanted item sitting last | [269](./notes/269-big-o-in-plain-words-how-work-grows-as-data-grows.md) |
+| wrapper | the function a decorator returns, which calls the original inside | [339](./notes/339-decorators-the-at-shorthand-for-wrapping-a-function.md) |
 | write | any change to stored data, like an INSERT adding a row | [282](./notes/282-the-trade-off-faster-reads-usually-mean-slower-writes.md) |
 | write ahead log | the databases own list of changes, flushed before table files change | [233](./notes/233-the-write-ahead-log-write-down-the-plan-before-the-change.md) |
 | write buffer | memory where python parks small writes until the file closes | [335](./notes/335-with-opening-and-closing-things-safely.md) |

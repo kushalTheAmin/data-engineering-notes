@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 338
+notes so far: 339
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -384,3 +384,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [336 classes in one picture, data and functions together](./notes/336-classes-in-one-picture-data-and-functions-together.md): f.write hangs off the file itself; a class bundles data with the functions that use it, and the function is stored once
 - [337 functions as values, handing a function to another function](./notes/337-functions-as-values-handing-a-function-to-another-function.md): sorted orders products by price and nobody told it what a price is; a function is a value you can hand over
 - [338 returning a function, building a function inside a function](./notes/338-returning-a-function-building-a-function-inside-a-function.md): do i need a new key function for every field; one function can build them, and each remembers its own field
+- [339 decorators, the @ shorthand for wrapping a function](./notes/339-decorators-the-at-shorthand-for-wrapping-a-function.md): how do you make a function log its calls without editing it; @ is plain assignment to a wrapper

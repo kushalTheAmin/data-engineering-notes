@@ -43,4 +43,4 @@ i assumed field would vanish once by() finished, since thats when its variables 
 one gotcha: the getter looks field up when it runs, not when it was built. build three small functions in a loop that each return the loop counter i and they all see its final value, so calling them gives 2, 2, 2.
 
 ---
-prev: [337 functions as values, handing a function to another function](./337-functions-as-values-handing-a-function-to-another-function.md) | next: not written yet
+prev: [337 functions as values, handing a function to another function](./337-functions-as-values-handing-a-function-to-another-function.md) | next: [339 decorators, the @ shorthand for wrapping a function](./339-decorators-the-at-shorthand-for-wrapping-a-function.md)
