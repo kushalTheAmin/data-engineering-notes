@@ -38,6 +38,11 @@ try:
     assert "! [rejected]" in r.stderr and "main -> main (fetch first)" in r.stderr
     assert "Updates were rejected because the remote contains work that you do not" in r.stderr
     assert "have locally" in r.stderr
+    # audit: with no pull settings, a plain pull on diverged branches stops and asks how to combine the work
+    clean = {k: v for k, v in env.items() if not k.startswith("GIT_CONFIG")}
+    clean.update(GIT_CONFIG_GLOBAL=os.devnull, GIT_CONFIG_NOSYSTEM="1")
+    r = subprocess.run(["git", "pull"], cwd=me, env=clean, capture_output=True, text=True)
+    assert r.returncode != 0 and "divergent branches" in r.stderr, r.stderr
     git(me, "pull", "--no-rebase", "--no-edit")
     msgs = git(me, "log", "--format=%s").stdout.splitlines()
     assert "add item count" in msgs and "add notes file" in msgs and "first report" in msgs
@@ -50,3 +55,7 @@ finally:
 
 # source: https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
 #   confirmed (opened this run): origin is the default name Git gives the server you cloned from; git pull fetches then merges; if someone pushes before you, your push is rejected
+
+# audit: a plain pull on diverged branches fails by default
+# source: https://git-scm.com/docs/git-pull
+#   confirmed (opened this run): the fast-forward-only update "fails if your local branch has diverged from the remote branch. This is the default."; "git pull --no-rebase runs git merge"
