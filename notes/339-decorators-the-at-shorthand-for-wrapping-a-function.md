@@ -4,7 +4,7 @@ section: python for data work, part 15, ~2 min read
 
 how do you make a function write down every time its called, without editing the function? you wrap it.
 
-a decorator is a function that takes a function and returns a new one, and @ is shorthand for the swap. putting @logged above def by_price means by_price = logged(by_price), run right after the def.
+a decorator is a function that takes a function and usually returns a new one, and @ is shorthand for the swap. putting @logged above def by_price means by_price = logged(by_price), run right after the def.
 
 the shop, the imaginary gujarati snack store these notes run on, has products, here a slice of 4 as [dictionaries](./278-hash-tables-how-a-dictionary-finds-a-key-without-searching.md), pythons name to value lookup. by_price is the key function from [337](./337-functions-as-values-handing-a-function-to-another-function.md), the one that gives sorted each items sort value. logged builds a wrapper, a closure (a function that keeps outer variables, from [338](./338-returning-a-function-building-a-function-inside-a-function.md)) that records the name, then calls the original it kept in fn.
 

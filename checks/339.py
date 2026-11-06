@@ -31,3 +31,10 @@ assert sorted((n, float(p)) for n, p in rows) == sorted((p["name"], p["price"]) 
 # confirmed: functools.wraps keeps the decorated function's __name__; without it the name would be 'wrapper'
 # source: https://docs.python.org/3/reference/compound_stmts.html
 # confirmed: decorator result is bound to the function name instead of the function object
+# audit: a decorator need not return a new function; whatever it returns is bound to the name
+def reg(fn): return fn
+@reg
+def f3(p): return 1
+assert f3.__name__ == "f3"
+# source: https://docs.python.org/3/reference/compound_stmts.html
+# confirmed (opened this run): "The result must be a callable, which is invoked with the function object as the only argument. The returned value is bound to the function name instead of the function object."
