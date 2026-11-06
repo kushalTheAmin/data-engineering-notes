@@ -27,3 +27,10 @@ assert all(isinstance(v, str) for v in next(csv.DictReader(io.StringIO("a\n104\n
 # source: https://docs.python.org/3/library/csv.html
 # confirmed (opened this run): DictReader "maps the information in each row to a dict whose keys are given by the optional fieldnames parameter"; if fieldnames is omitted, the values in the first row are used as the fieldnames
 assert next(csv.DictReader(io.StringIO("a,b\n1,2\n"))) == {"a": "1", "b": "2"}
+# audit: with newline='' a line break inside a quoted value stays part of that value
+import tempfile
+p = os.path.join(tempfile.mkdtemp(), "q.csv")
+with open(p, "w", newline="") as f: f.write('a,b\n1,"x\ny"\n')
+with open(p, newline="") as f: assert list(csv.DictReader(f)) == [{"a": "1", "b": "x\ny"}]
+# source: https://docs.python.org/3/library/csv.html
+# confirmed (opened this run): "If newline='' is not specified, newlines embedded inside quoted fields will not be interpreted correctly"
