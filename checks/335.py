@@ -20,3 +20,10 @@ assert r.stdout == "open, file size: 0\nclosed, file size: 14\nafter the error, 
 # source: https://docs.python.org/3/library/errno.html
 # confirmed: errno.EMFILE means Too many open files
 # audit: a 9000 byte write is visible before close, so small writes only are held back (buffer 8192 by default; docs: https://docs.python.org/3/library/functions.html#open)
+
+# audit: the note said python only scopes names inside functions, but classes and modules do too; the claim is now that a with block has no scope of its own
+with open(os.path.join(tempfile.mkdtemp(), "x"), "w") as _f:
+    pass
+assert _f.closed
+# source: https://docs.python.org/3/reference/executionmodel.html
+#   confirmed (opened this run): "The following are blocks: a module, a function body, and a class definition." (with is not listed, so names bound in it belong to the enclosing block)

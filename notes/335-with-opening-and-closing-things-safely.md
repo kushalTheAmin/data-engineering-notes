@@ -61,7 +61,7 @@ False
 True
 ```
 
-inside the block the file is still open, and f still exists after the block (python only scopes names inside functions), now closed. the tempting answer is a NameError on the last line, from expecting f to vanish with the block. it doesnt.
+inside the block the file is still open, and f still exists after the block (a with block, unlike a function, doesnt get its own scope for names), now closed. the tempting answer is a NameError on the last line, from expecting f to vanish with the block. it doesnt.
 
 </details>
 
