@@ -24,3 +24,10 @@ except TypeError:
     pass
 # source: https://docs.python.org/3/tutorial/errors.html
 # confirmed: Exception is a wildcard that catches almost everything; the common pattern is to print or log it and re-raise
+
+# audit: with pass instead of the append the note printed skipped: [] (not just total), so the line vanishes with no record
+src2 = ('PRICES = {"dhokla": 6.00, "masala chai": 3.00}\nlines = [("dhokla", 2), ("masalla chai", 2)]\n\n'
+        'total = 0\nskipped = []\nfor name, qty in lines:\n    try:\n        total += PRICES[name] * qty\n    except KeyError:\n        pass\n\n'
+        'print("total:", total)\nprint("skipped:", skipped)\n')
+r = subprocess.run([sys.executable, "-c", src2], capture_output=True, text=True)
+assert r.stdout == "total: 12.0\nskipped: []\n", r.stdout

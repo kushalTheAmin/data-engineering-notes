@@ -39,7 +39,7 @@ total: 12.0
 skipped: ['masalla chai']
 ```
 
-the last traceback line names the kind, KeyError, a dictionary lookup with a missing key. i assumed catching an error was the safe move, but the branch decides. replace the append with `pass`, which does nothing, and only total: 12.0 prints, with nothing to say a line vanished. the skipped list answers the question at the top.
+the last traceback line names the kind, KeyError, a dictionary lookup with a missing key. i assumed catching an error was the safe move, but the branch decides. replace the append with `pass`, which does nothing, and skipped stays [], with nothing to say a line vanished. the skipped list answers the question at the top.
 
 name the exact error you expect. an unexpected one, like a TypeError from a float price times a quantity that arrived as text, still crashes, and you want that. the [python docs](https://docs.python.org/3/tutorial/errors.html) say `except Exception` catches almost everything, and suggest printing the error then writing `raise` to pass it on.
 
