@@ -28,3 +28,6 @@ first = '{"order_id": 105, "status": "delivered"}\n'
 assert len(first) == 41
 # source: https://docs.python.org/3/library/json.html
 # confirmed (opened this run): json.load(fp) "Deserialize fp to a Python object", fp is a .read()-supporting file
+# source: https://docs.python.org/3/library/json.html
+# confirmed (opened this run): json.loads is "Identical to load(), but instead of a file-like object, deserialize s (a str, bytes or bytearray instance containing a JSON document)"
+assert json.loads('[1, 2]') == json.load(io.StringIO('[1, 2]'))
