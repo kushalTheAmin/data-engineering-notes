@@ -34,4 +34,4 @@ your friend pushed while you werent looking, so accepting your push would leave 
 i assumed the remote was the real project and my folder a copy, but git doesnt rank them, a default clone holds the full history ([pro git](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)). so a dead laptop isnt the end of the project.
 
 ---
-prev: [330 git branches, trying something without breaking main](./330-git-branches-trying-something-without-breaking-main.md) | next: not written yet
+prev: [330 git branches, trying something without breaking main](./330-git-branches-trying-something-without-breaking-main.md) | next: [332 merge conflicts, when git cant combine two edits](./332-merge-conflicts-when-git-cant-combine-two-edits.md)

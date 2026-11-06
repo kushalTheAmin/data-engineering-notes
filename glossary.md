@@ -80,6 +80,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | computed column | an expression in SELECT, worked out fresh for each row | [122](./notes/122-computed-columns-and-as.md) |
 | concatenate | glue two pieces of text into one, written with two bars | [125](./notes/125-concatenating-text-and-taking-pieces-of-it.md) |
 | conditional aggregation | a CASE inside an aggregate, so each row counts toward chosen totals | [148](./notes/148-conditional-aggregation-counting-several-things-in-one-pass.md) |
+| conflict markers | the <<<<<<<, ======= and >>>>>>> lines git writes into a conflicted file | [332](./notes/332-merge-conflicts-when-git-cant-combine-two-edits.md) |
 | connection | an open line from your program to a database | [102](./notes/102-a-database-in-one-file.md) |
 | consistency (ACID) | the ACID promise: declared rules still hold after every change | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | container | a program running in a walled-off box with all it needs | [208](./notes/208-containers-a-program-packed-with-everything-it-needs.md) |
@@ -272,6 +273,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | megabyte | 1000 kilobytes, a million bytes, written MB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | memory | the computers working space (RAM), emptied when the power goes off | [036](./notes/036-memory-vs-disk.md) |
 | merge | combining two sorted lists into one by taking the smaller front | [274](./notes/274-merging-two-sorted-lists-into-one.md) |
+| merge commit | a commit with two parents, joining two lines of work | [332](./notes/332-merge-conflicts-when-git-cant-combine-two-edits.md) |
+| merge conflict (git) | both branches changed the same lines, so git asks you to choose | [332](./notes/332-merge-conflicts-when-git-cant-combine-two-edits.md) |
 | merge join | Postgres join: sort both sides, walk them side by side once | [300](./notes/300-merge-join-walk-two-sorted-lists-side-by-side.md) |
 | merge sort | treat items as lists of one, merge pairs, repeat until one list | [275](./notes/275-merge-sort-split-down-to-single-items-then-merge-back-up.md) |
 | microsecond | a millionth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |

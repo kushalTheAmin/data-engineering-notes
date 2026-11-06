@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 331
+notes so far: 332
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -377,3 +377,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [329 git, commits as snapshots of your code](./notes/329-git-commits-as-snapshots-of-your-code.md): you broke the script and want yesterdays version back; a commit saves the whole project, not a list of edits
 - [330 git branches, trying something without breaking main](./notes/330-git-branches-trying-something-without-breaking-main.md): want to rewrite the script without losing the good snapshots; a branch is just a name on a commit
 - [331 pushing and pulling, sharing code through a remote](./notes/331-pushing-and-pulling-sharing-code-through-a-remote.md): you and a friend both changed report.py; a push gets rejected until you pull their commit first
+- [332 merge conflicts, when git cant combine two edits](./notes/332-merge-conflicts-when-git-cant-combine-two-edits.md): you and a friend edited the same line; git writes both versions into the file and makes you choose
