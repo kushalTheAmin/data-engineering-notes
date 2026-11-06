@@ -59,4 +59,4 @@ the tempting answer is 5, from assuming the setting was read.
 </details>
 
 ---
-prev: [341 reading JSON in python, the whole file at once](./341-reading-json-in-python-the-whole-file-at-once.md) | next: not written yet
+prev: [341 reading JSON in python, the whole file at once](./341-reading-json-in-python-the-whole-file-at-once.md) | next: [343 calling an API from python, status first, then parse](./343-calling-an-api-from-python-status-first-then-parse.md)

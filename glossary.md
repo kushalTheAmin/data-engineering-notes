@@ -211,6 +211,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | HTTP | rules the web uses: a text request, then a text response | [308](./notes/308-request-and-response-one-message-out-one-message-back.md) |
 | HTTP header | one Name: value line between a messages first line and blank line | [310](./notes/310-http-headers-notes-attached-to-a-request.md) |
 | HTTP method | the first word of a request, saying what kind of action | [309](./notes/309-http-methods-get-asks-post-sends.md) |
+| HTTPError | error python raises when a response has a 4xx or 5xx status | [343](./notes/343-calling-an-api-from-python-status-first-then-parse.md) |
 | HTTPS | HTTP sent through a TLS lock, the wire shows locked bytes | [322](./notes/322-encryption-in-transit-tls-and-https.md) |
 | ILIKE | LIKE that ignores upper and lower case | [113](./notes/113-like-matching-text-patterns.md) |
 | image | the frozen packed box a container starts from, never changes | [209](./notes/209-images-and-containers-the-packed-box-and-the-running-copy.md) |
@@ -487,6 +488,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | third normal form | every column is about the key and nothing but the key | [261](./notes/261-third-normal-form-nothing-but-the-key.md) |
 | three valued logic | a test is true, false or unknown, and a null gives unknown | [114](./notes/114-three-valued-logic-true-false-and-unknown.md) |
 | time of day | a clock reading with no day attached | [027](./notes/027-dates-and-times-apart.md) |
+| timeout | seconds a program waits for a reply before giving up | [343](./notes/343-calling-an-api-from-python-status-first-then-parse.md) |
 | TLS | the protocol that does a handshake, then locks all traffic | [322](./notes/322-encryption-in-transit-tls-and-https.md) |
 | token | key string the server hands out, often with an expiry | [315](./notes/315-tokens-that-expire-a-key-with-a-shelf-life.md) |
 | top N per group | keep the first N rows of each group: number inside, filter outside | [193](./notes/193-top-n-per-group.md) |
@@ -517,6 +519,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | upper | a function turning every letter to upper case | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | upsert | an INSERT that updates the row instead if its key exists | [224](./notes/224-upsert-insert-or-update-in-one-statement.md) |
 | URL | one text string holding scheme, host, port, path and query | [307](./notes/307-urls-and-query-parameters.md) |
+| urlopen | python function that sends a request and returns the response | [343](./notes/343-calling-an-api-from-python-status-first-then-parse.md) |
 | UTC | the one clock everyone measures against, with no daylight saving | [024](./notes/024-utc.md) |
 | UTF-8 | a way to store each code point as 1 to 4 bytes | [010](./notes/010-utf-8.md) |
 | VACUUM | Postgres command that frees dead row versions for reuse | [304](./notes/304-vacuum-how-postgres-cleans-up-old-row-versions.md) |
