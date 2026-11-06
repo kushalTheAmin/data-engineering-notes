@@ -53,4 +53,4 @@ Extra data: line 2 column 1 (char 41)
 json.loads is the same thing for text already in a variable. it sees record 1, then hits line 2, raises an error and hands back nothing. so you parse each line on its own, looping over a real file line by line like the csv reader did.
 
 ---
-prev: [340 reading a csv in python, row by row](./340-reading-a-csv-in-python-row-by-row.md) | next: not written yet
+prev: [340 reading a csv in python, row by row](./340-reading-a-csv-in-python-row-by-row.md) | next: [342 environment variables, settings that live outside the code](./342-environment-variables-settings-that-live-outside-the-code.md)

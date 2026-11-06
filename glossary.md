@@ -151,6 +151,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | encryption key (not a database key) | a secret number the lock uses to scramble and unscramble | [317](./notes/317-encryption-locking-data-so-only-a-key-opens-it.md) |
 | entity | a kind of thing you keep facts about, drawn as one table | [098](./notes/098-entity-relationship-diagrams.md) |
 | entity relationship diagram | a picture of boxes for tables and lines for foreign keys | [098](./notes/098-entity-relationship-diagrams.md) |
+| environment variable | a named piece of text handed to a program when it starts | [342](./notes/342-environment-variables-settings-that-live-outside-the-code.md) |
 | epoch | the starting line, 1 January 1970 UTC, that unix time counts from | [025](./notes/025-unix-time.md) |
 | exact decimal | a type keeping decimal digits exactly, like DECIMAL(6, 2) | [022](./notes/022-exact-decimal-types.md) |
 | exact tie | an answer halfway between two floats, rounded to the one ending 0 | [020](./notes/020-why-0-1-plus-0-2-is-not-0-3.md) |
@@ -331,6 +332,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | ORDER BY | sorts the returned rows by a column, later columns only break ties | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
 | origin | the usual nickname git gives the remote you cloned from | [331](./notes/331-pushing-and-pulling-sharing-code-through-a-remote.md) |
 | orphan row | a row whose foreign key matches no row in the other table | [094](./notes/094-what-a-foreign-key-stops.md) |
+| os.environ | pythons dictionary-like view of its environment variables, values all text | [342](./notes/342-environment-variables-settings-that-live-outside-the-code.md) |
 | outer side | the table a join reads once, row by row | [298](./notes/298-nested-loop-join-for-each-outer-row-search-the-inner-side.md) |
 | overflow | a result too big for its bit size, wrapping or erroring | [016](./notes/016-overflow.md) |
 | package | a bundle of python modules other people wrote and shared | [327](./notes/327-packages-and-pip-installing-code-other-people-wrote.md) |
