@@ -48,4 +48,4 @@ i expected sorted to need a whole rule for comparing two products, but it only w
 max and min take key= the same way, so max(products, key=by_price) gives the kaju katli dictionary, the priciest product.
 
 ---
-prev: [336 classes in one picture, data and functions together](./336-classes-in-one-picture-data-and-functions-together.md) | next: not written yet
+prev: [336 classes in one picture, data and functions together](./336-classes-in-one-picture-data-and-functions-together.md) | next: [338 returning a function, building a function inside a function](./338-returning-a-function-building-a-function-inside-a-function.md)

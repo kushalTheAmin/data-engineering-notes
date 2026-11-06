@@ -66,6 +66,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | class | a blueprint bundling data with the functions that use it | [336](./notes/336-classes-in-one-picture-data-and-functions-together.md) |
 | client | a program that sends a request and waits for the answer | [086](./notes/086-client-and-server.md) |
 | clone (git) | copies a whole remote repository to your machine, with its history | [331](./notes/331-pushing-and-pulling-sharing-code-through-a-remote.md) |
+| closure | a function that keeps the outer variables it was built with | [338](./notes/338-returning-a-function-building-a-function-inside-a-function.md) |
 | COALESCE | returns the first value in its list that is not null | [116](./notes/116-coalesce-a-fallback-when-a-value-is-null.md) |
 | code point | the number Unicode gives one character, written like U+0AA2 | [009](./notes/009-unicode.md) |
 | cohort | customers who first showed up in the same month | [201](./notes/201-cohorts-the-month-each-customer-first-showed-up.md) |
