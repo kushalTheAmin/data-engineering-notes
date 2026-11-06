@@ -4,7 +4,7 @@ section: python for data work, part 6, ~2 min read
 
 you want to rewrite the shop report script, but the three good snapshots from [329](./329-git-commits-as-snapshots-of-your-code.md) have to stay safe. copying the whole [folder](./040-folders-and-paths.md) works, but git has a cheaper way.
 
-a branch is a name that points at one commit, and a new commit moves only the branch you are standing on. the shop is the imaginary gujarati snack store these notes run on, and this is its report, in the [terminal](./049-the-terminal.md), with a risky rewrite on a new branch:
+a branch is a name that points at one commit, and a new commit moves only the branch you are standing on. here is the shop, the imaginary gujarati snack store these notes run on, in the [terminal](./049-the-terminal.md), with a risky report rewrite on a new branch:
 
 ```text
 $ git branch
@@ -14,8 +14,8 @@ $ echo 'print("customers: 5")' > report.py
 $ git add report.py
 $ git commit -m "try a rewrite"
 $ git log --oneline --all --decorate
-1c7c5fd (main) add notes file
 bd6972e (HEAD -> rewrite) try a rewrite
+1c7c5fd (main) add notes file
 647663e add item count
 bf699e9 first report
 $ git switch main
@@ -29,13 +29,13 @@ print("items: 13")
 | main | 1c7c5fd |
 | rewrite | bd6972e |
 
-switch -c makes a branch and moves onto it, and HEAD -> in the log marks the branch you are on. the rewrite commit sits one step ahead of main, which stayed put. after switching back, git rewrites your folder to match main, so report.py has its two lines again. the rewrite commit still exists, on the other name. your ids will differ, same as in 329.
+switch -c makes a branch and moves onto it, and the * in git branch and HEAD -> in the log mark the branch you are on. the rewrite commit sits one step ahead of main. after switching back, git rewrites your folder to match main, so report.py has its two lines again, while the rewrite commit lives on under its own name. your ids will differ, as in 329.
 
-i assumed a branch was a copy of the project, but it is one commit id, stored as a 41 byte file in a default repository (git may pack it later), so making one is fast ([pro git](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)). main is the usual name of the first branch, older setups say master.
+i assumed a branch was a copy of the project, but it is one commit id, stored as a 41 byte file in a default repository (git may pack it later), so making one is fast ([pro git](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)). git itself still names the first branch master unless configured, so if git branch shows master, read master for main.
 
 word clash: this branch isnt the branches of a tree in [280](./280-trees-data-that-branches.md), its a label on a commit.
 
-if you have uncommitted edits that the other branch would overwrite, git refuses to switch until you commit them. teams lean on this: keep one branch stable, do the experiments elsewhere ([pro git](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)).
+if uncommitted edits would be overwritten by the other branch, git refuses to switch until you commit them. teams keep one branch stable and experiment elsewhere ([pro git](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)).
 
 ---
 prev: [329 git, commits as snapshots of your code](./329-git-commits-as-snapshots-of-your-code.md) | next: [331 pushing and pulling, sharing code through a remote](./331-pushing-and-pulling-sharing-code-through-a-remote.md)

@@ -28,8 +28,9 @@ try:
     open(p, "w").write('print("customers: 5")\n')
     git(d, "add", "report.py"); git(d, "commit", "-q", "-m", "try a rewrite")
     log = git(d, "log", "--oneline", "--all", "--decorate").stdout.splitlines()
-    assert log == ["1c7c5fd (main) add notes file", "bd6972e (HEAD -> rewrite) try a rewrite",
-                   "647663e add item count", "bf699e9 first report"], log
+    # these fixed timestamps tie, so log order here is arbitrary; the order is asserted below with real, rising times
+    assert sorted(log) == sorted(["1c7c5fd (main) add notes file", "bd6972e (HEAD -> rewrite) try a rewrite",
+                                  "647663e add item count", "bf699e9 first report"]), log
     # table: where each branch points
     assert git(d, "rev-parse", "--short", "main").stdout.strip() == "1c7c5fd"
     assert git(d, "rev-parse", "--short", "rewrite").stdout.strip() == "bd6972e"
@@ -58,6 +59,24 @@ try:
 finally:
     shutil.rmtree(d)
 
+# audit: the note listed main above the newer rewrite commit, which only happens when timestamps tie. with rising times the newest commit prints first
+d3 = tempfile.mkdtemp()
+try:
+    def at(day):
+        e = dict(env, GIT_AUTHOR_DATE=f"2026-01-0{day}T10:00:00 +0000", GIT_COMMITTER_DATE=f"2026-01-0{day}T10:00:00 +0000")
+        return e
+    def g3(*a, e=env):
+        r = subprocess.run(["git", *a], cwd=d3, env=e, capture_output=True, text=True); assert r.returncode == 0, r.stderr; return r.stdout
+    g3("init", "-q", "-b", "main")
+    for i, m in enumerate(["first report", "add item count", "add notes file"], 1):
+        open(os.path.join(d3, "f"), "a").write(m + "\n"); g3("add", "f"); g3("commit", "-q", "-m", m, e=at(i))
+    g3("switch", "-q", "-c", "rewrite"); open(os.path.join(d3, "f"), "w").write("x\n"); g3("add", "f"); g3("commit", "-q", "-m", "try a rewrite", e=at(4))
+    g3("switch", "-q", "main")
+    order = [l.split(" ", 1)[1].replace("(HEAD -> main) ", "").replace("(main) ", "").replace("(HEAD -> rewrite) ", "").replace("(rewrite) ", "") for l in g3("log", "--oneline", "--all", "--decorate").splitlines()]
+    assert order == ["try a rewrite", "add notes file", "add item count", "first report"], order
+finally:
+    shutil.rmtree(d3)
+
 # source: https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
 #   confirmed (opened this run): "Creating a new branch is as quick and simple as writing 41 bytes to a file (40 characters and a newline)"; the default branch name in Git is master
 # source: https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
@@ -66,3 +85,7 @@ finally:
 #   confirmed (opened this run): Git won't let you switch branches if uncommitted changes conflict with the branch you're checking out
 # source: https://git-scm.com/docs/git-pack-refs
 #   confirmed (opened this run): refs are stored under $GIT_DIR/refs, and git pack-refs puts them into $GIT_DIR/packed-refs, usually removing the loose refs
+
+# audit: stock git names the first branch master, so the note's * main only appears if init.defaultBranch is set
+# source: https://git-scm.com/docs/git-init
+#   confirmed (opened this run): "fall back to the default name (currently master, but this will change to main when Git 3.0 is released). The default name can be customized via the init.defaultBranch configuration variable."
