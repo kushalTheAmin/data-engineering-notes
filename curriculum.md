@@ -3,10 +3,10 @@
 the map from zero to data engineer. one checkbox is one atom: one idea small enough for a 2 minute note. big concepts are already broken into several atoms in the order you need them, and a box still gets split further if it turns out bigger than it looks. arcs run in order, boxes inside an arc run in order, and each arc ends with a capstone that assembles its atoms. a ★ marks a concept that is important or easy to get wrong, so its note ends with check yourself questions. every capstone gets them too.
 
 ## THREAD
-baton: 335 said python parks small writes in a write buffer until the file closes, so a size check right after write shows 0 bytes, and with closes the file when its block ends, even after an exception, but lines written before the error stay (046s rename trick is what makes a write all or nothing). the next box is classes, and should start from open() handing back an object you call write and close on.
-last visuals: python block with its output of a write buffer and a with block cut short by an error plus two hidden answers (with), text block of a traceback plus a python block with its output of a loop that skips a bad line and two hidden answers (errors in scripts), mermaid flowchart of the review loop plus a text block of a diff and two hidden answers (pull requests), table of one file as start, mine and friend versions per line plus a text block of the conflicted file and two hidden answers (merge conflicts), mermaid sequenceDiagram of you, remote and friend plus a text block of the rejected push message and no quiz (pushing and pulling)
-last exits: forward (with), stops (errors in scripts), stops (pull requests), stops (merge conflicts), forward (pushing and pulling)
-last reactions: i assumed write meant the bytes were on disk but python parks them in memory until close, i assumed catching an error was the safe move but the branch decides, i assumed a pull request was a git command, but git never stores it, i assumed git understood the code, but it only compares lines of text, i assumed the remote was the real project and my folder a copy, but git doesnt rank them, i assumed a branch was a copy of the project, but it is a 41 byte file holding one commit id
+baton: 336 said a class bundles data (attributes) with functions (methods), that o105.total() is shorthand for Order.total(o105) with the object landing in self, and that the file from open() in 335 is an object of a class python ships. the next box is functions as values, and should start from a function being something you can hand around like the object o105.
+last visuals: python block with its output of an Order class and two objects (classes), python block with its output of a write buffer and a with block cut short by an error plus two hidden answers (with), text block of a traceback plus a python block with its output of a loop that skips a bad line and two hidden answers (errors in scripts), mermaid flowchart of the review loop plus a text block of a diff and two hidden answers (pull requests), table of one file as start, mine and friend versions per line plus a text block of the conflicted file and two hidden answers (merge conflicts), mermaid sequenceDiagram of you, remote and friend plus a text block of the rejected push message and no quiz (pushing and pulling)
+last exits: stops (classes), forward (with), stops (errors in scripts), stops (pull requests), stops (merge conflicts), forward (pushing and pulling)
+last reactions: i assumed o105.total() was a function living inside o105, but there is one total kept on the class, i assumed write meant the bytes were on disk but python parks them in memory until close, i assumed catching an error was the safe move but the branch decides, i assumed a pull request was a git command, but git never stores it, i assumed git understood the code, but it only compares lines of text, i assumed the remote was the real project and my folder a copy, but git doesnt rank them, i assumed a branch was a copy of the project, but it is a 41 byte file holding one commit id
 
 ## NOTES
 log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept failed check: one line on why
@@ -489,7 +489,7 @@ after this arc: you can write, run and test real python scripts that move data b
 - [x] pull requests: asking for a review before merging ★ (note 333)
 - [x] errors in scripts: catching them without hiding them ★ (note 334)
 - [x] with: opening and closing things safely ★ (note 335)
-- [ ] classes in one picture: data and functions together
+- [x] classes in one picture: data and functions together (note 336)
 - [ ] functions as values: passing and returning functions
 - [ ] decorators: the @ shorthand for wrapping a function ★
 - [ ] reading a CSV in python, row by row

@@ -89,4 +89,4 @@ one line. with closes the file on the error, which pushes the kaju katli line ou
 </details>
 
 ---
-prev: [334 errors in scripts, catching them without hiding them](./334-errors-in-scripts-catching-them-without-hiding-them.md) | next: not written yet
+prev: [334 errors in scripts, catching them without hiding them](./334-errors-in-scripts-catching-them-without-hiding-them.md) | next: [336 classes in one picture, data and functions together](./336-classes-in-one-picture-data-and-functions-together.md)

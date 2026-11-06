@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 335
+notes so far: 336
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -381,3 +381,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [333 pull requests, asking for a review before merging](./notes/333-pull-requests-asking-for-a-review-before-merging.md): git can merge in one command, so why review first? a pull request lives on the site, not in git
 - [334 errors in scripts, catching them without hiding them](./notes/334-errors-in-scripts-catching-them-without-hiding-them.md): the script printed 12.0, the real total is 18.0; a try that swallows an error hides the missing line
 - [335 with, opening and closing things safely](./notes/335-with-opening-and-closing-things-safely.md): the file size says 0 bytes after a write; python holds writes in memory until close, and with closes even after an error
+- [336 classes in one picture, data and functions together](./notes/336-classes-in-one-picture-data-and-functions-together.md): f.write hangs off the file itself; a class bundles data with the functions that use it, and the function is stored once

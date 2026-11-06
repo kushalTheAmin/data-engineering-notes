@@ -26,7 +26,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | asymmetric encryption | two different keys: one locks, only the other unlocks | [318](./notes/318-public-and-private-keys-locking-without-sharing-a-secret.md) |
 | atomic | happening whole or not at all, never half done | [046](./notes/046-writing-safely.md) |
 | atomicity | the ACID promise: all of a transaction happens, or none of it | [229](./notes/229-acid-four-promises-a-database-makes.md) |
-| attribute | one fact about one entity, stored as a column | [255](./notes/255-entities-and-attributes.md) |
+| attribute (data model) | one fact about one entity, stored as a column | [255](./notes/255-entities-and-attributes.md) |
+| attribute (python) | a value stored on an object, like o105.status | [336](./notes/336-classes-in-one-picture-data-and-functions-together.md) |
 | authorization code flow | OAuth steps: login at the shop, one time code, swap for token | [316](./notes/316-oauth-in-one-picture-a-token-without-the-password.md) |
 | autovacuum | background Postgres job that runs VACUUM and ANALYZE for you | [304](./notes/304-vacuum-how-postgres-cleans-up-old-row-versions.md) |
 | avg | the average of a column, its sum divided by how many values | [140](./notes/140-sum-and-avg-adding-up-and-averaging.md) |
@@ -62,6 +63,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | chaining | each slot holds a small list, so shared slots still fit | [279](./notes/279-collisions-when-two-keys-land-in-the-same-spot.md) |
 | character | one letter, digit, space or symbol, stored as one number | [007](./notes/007-text-is-numbers.md) |
 | CHECK | a column rule: refuse any row where its test is false | [217](./notes/217-check-a-rule-every-value-must-pass.md) |
+| class | a blueprint bundling data with the functions that use it | [336](./notes/336-classes-in-one-picture-data-and-functions-together.md) |
 | client | a program that sends a request and waits for the answer | [086](./notes/086-client-and-server.md) |
 | clone (git) | copies a whole remote repository to your machine, with its history | [331](./notes/331-pushing-and-pulling-sharing-code-through-a-remote.md) |
 | COALESCE | returns the first value in its list that is not null | [116](./notes/116-coalesce-a-fallback-when-a-value-is-null.md) |
@@ -279,6 +281,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | merge conflict (git) | both branches changed the same lines, so git asks you to choose | [332](./notes/332-merge-conflicts-when-git-cant-combine-two-edits.md) |
 | merge join | Postgres join: sort both sides, walk them side by side once | [300](./notes/300-merge-join-walk-two-sorted-lists-side-by-side.md) |
 | merge sort | treat items as lists of one, merge pairs, repeat until one list | [275](./notes/275-merge-sort-split-down-to-single-items-then-merge-back-up.md) |
+| method | a function stored on a class, called on one of its objects | [336](./notes/336-classes-in-one-picture-data-and-functions-together.md) |
 | microsecond | a millionth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | millisecond | a thousandth of a second | [026](./notes/026-seconds-milliseconds-microseconds.md) |
 | min | returns the smallest non-null value in a column, or the earliest date | [142](./notes/142-min-and-max-the-smallest-and-biggest-value.md) |
@@ -309,6 +312,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | NULLS FIRST | the ORDER BY option that puts missing values at the start | [119](./notes/119-where-nulls-land-when-you-sort.md) |
 | NULLS LAST | the ORDER BY option that puts missing values at the end | [119](./notes/119-where-nulls-land-when-you-sort.md) |
 | OAuth | how an app gets a token for someone without their password | [316](./notes/316-oauth-in-one-picture-a-token-without-the-password.md) |
+| object (python) | one thing built from a class, holding its own data | [336](./notes/336-classes-in-one-picture-data-and-functions-together.md) |
 | OFFSET (rows) | skips this many result rows before returning any | [120](./notes/120-limit-and-offset-paging-through-rows.md) |
 | offset (time zones) | how far a clock sits ahead of or behind UTC, like +05:30 | [028](./notes/028-time-zone-offsets.md) |
 | ON | the join test that decides which pairs of rows are kept | [157](./notes/157-on-how-a-join-decides-which-rows-match.md) |
@@ -417,6 +421,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | SELECT FOR UPDATE | a read that also locks the rows it returns until commit | [243](./notes/243-select-for-update-locking-on-purpose.md) |
 | SELECT star | the shortcut for every column, in the tables order | [105](./notes/105-select-star-every-column.md) |
 | selectivity | share of a tables rows that a condition keeps | [294](./notes/294-selectivity-when-an-index-doesnt-help.md) |
+| self | a methods first parameter: the object it was called on | [336](./notes/336-classes-in-one-picture-data-and-functions-together.md) |
 | self join | a table joined to a second copy of itself under another alias | [168](./notes/168-self-join-a-table-joined-to-itself.md) |
 | semi join | keeps left rows that have a match, once each, never copies | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
 | Seq Scan | Postgres name for a full table scan in a plan | [285](./notes/285-full-table-scan-reading-every-page.md) |
