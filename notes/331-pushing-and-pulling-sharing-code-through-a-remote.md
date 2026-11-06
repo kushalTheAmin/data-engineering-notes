@@ -4,7 +4,7 @@ section: python for data work, part 7, ~2 min read
 
 your commits from [329](./329-git-commits-as-snapshots-of-your-code.md) sit in one folder on one laptop. how does a teammate get them, and what happens if you both change the shop report at once?
 
-a remote is another copy of the repository on a server everyone can reach, usually a site like GitHub. push uploads your new [commits](./329-git-commits-as-snapshots-of-your-code.md) (saved snapshots) to it, pull downloads commits other people pushed. here is a day with report.py, for the shop, the imaginary gujarati snack store these notes run on:
+a remote is another copy of the repository (the project folder git tracks) on a server everyone can reach, usually a site like GitHub. push uploads your new [commits](./329-git-commits-as-snapshots-of-your-code.md) (saved snapshots) to it, pull downloads commits other people pushed. here is a day with report.py, for the shop, the imaginary gujarati snack store these notes run on:
 
 ```mermaid
 sequenceDiagram
