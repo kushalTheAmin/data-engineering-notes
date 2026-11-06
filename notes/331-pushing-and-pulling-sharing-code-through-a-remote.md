@@ -31,7 +31,7 @@ hint: Updates were rejected because the remote contains work that you do not hav
 
 your friend pushed while you werent looking, so accepting your push would leave their commit out of the history. git makes you pull first. pull is two steps, fetch (download the new commits) then merge (combine both lines of work). on a fresh setup git stops that pull and asks how to combine the work, and git pull --no-rebase answers with a merge. what a merge does when you both edited the same line is a later note.
 
-i assumed the remote was the real project and my folder a copy, but git doesnt rank them, every clone holds the full history ([pro git](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes)). so a dead laptop isnt the end of the project.
+i assumed the remote was the real project and my folder a copy, but git doesnt rank them, a default clone holds the full history ([pro git](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)). so a dead laptop isnt the end of the project.
 
 ---
 prev: [330 git branches, trying something without breaking main](./330-git-branches-trying-something-without-breaking-main.md) | next: not written yet

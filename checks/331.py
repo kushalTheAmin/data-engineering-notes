@@ -59,3 +59,19 @@ finally:
 # audit: a plain pull on diverged branches fails by default
 # source: https://git-scm.com/docs/git-pull
 #   confirmed (opened this run): the fast-forward-only update "fails if your local branch has diverged from the remote branch. This is the default."; "git pull --no-rebase runs git merge"
+
+# audit: the note said every clone holds the full history, but a shallow clone does not, and the cited page never said it. it now says a default clone, sourced to the page that does
+root2 = tempfile.mkdtemp()
+try:
+    src = os.path.join(root2, "src")
+    git(root2, "init", "-q", "-b", "main", src)
+    for i in range(3):
+        open(os.path.join(src, "f"), "a").write(f"{i}\n"); git(src, "add", "f"); git(src, "commit", "-q", "-m", str(i))
+    git(root2, "clone", "-q", "file://" + src, os.path.join(root2, "full"))
+    git(root2, "clone", "-q", "--depth", "1", "file://" + src, os.path.join(root2, "shallow"))
+    assert git(os.path.join(root2, "full"), "rev-list", "--count", "HEAD").stdout.strip() == "3"
+    assert git(os.path.join(root2, "shallow"), "rev-list", "--count", "HEAD").stdout.strip() == "1"
+finally:
+    shutil.rmtree(root2)
+# source: https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
+#   confirmed (opened this run): "Every version of every file for the history of the project is pulled down by default when you run git clone."
