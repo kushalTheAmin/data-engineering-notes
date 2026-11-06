@@ -108,4 +108,4 @@ each call to sorted or min runs the key once per item, so 3 and 3. the tempting 
 </details>
 
 ---
-prev: [338 returning a function, building a function inside a function](./338-returning-a-function-building-a-function-inside-a-function.md) | next: not written yet
+prev: [338 returning a function, building a function inside a function](./338-returning-a-function-building-a-function-inside-a-function.md) | next: [340 reading a csv in python, row by row](./340-reading-a-csv-in-python-row-by-row.md)

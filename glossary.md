@@ -105,6 +105,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | crows feet | line end marks on an ERD showing how many rows match | [099](./notes/099-crows-feet-reading-one-and-many.md) |
 | cryptographic hash | a hash with a fixed-size output, no undoing, any change scrambles it | [319](./notes/319-cryptographic-hashes-a-fingerprint-you-cant-reverse.md) |
 | CSV | a text file, usually one row per line, values split by commas | [062](./notes/062-csv-rows-and-columns-separated-by-commas.md) |
+| csv reader | walks a csv file forward, handing out one row per step | [340](./notes/340-reading-a-csv-in-python-row-by-row.md) |
 | CTE | a named inner query written first with WITH, alive for one statement | [180](./notes/180-ctes-naming-each-step-with-with.md) |
 | ctid | a rows address in Postgres: page number, then slot | [284](./notes/284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md) |
 | curving up (growth) | 10 times the data costs 100 times the steps | [271](./notes/271-curving-up-when-10-times-the-data-means-100-times-the-steps.md) |
@@ -133,6 +134,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | depth | the number of levels in a tree, from the root down | [281](./notes/281-balanced-trees-why-the-depth-stays-small.md) |
 | DESC | sort direction: biggest first, instead of the default smallest first | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
 | dialect | one databases own version of SQL, with its own spellings and rules | [135](./notes/135-one-language-many-dialects.md) |
+| DictReader | csv reader making each row a dictionary keyed by the header | [340](./notes/340-reading-a-csv-in-python-row-by-row.md) |
 | diff | the lines a change removed (-) and added (+) | [333](./notes/333-pull-requests-asking-for-a-review-before-merging.md) |
 | digital signature | a fingerprint locked with the private key, checkable with the public one | [320](./notes/320-digital-signatures-proof-a-message-came-from-the-key-holder.md) |
 | dirty read | reading another transactions change before it is committed | [236](./notes/236-dirty-reads.md) |
