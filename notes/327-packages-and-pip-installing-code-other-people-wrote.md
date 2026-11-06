@@ -34,7 +34,7 @@ DuckDB, a small database program for tables, is just a package like this. the `-
 
 i assumed the install name and the import name were always the same. they arent: you run pip install pyyaml, then write import yaml ([docs](https://pyyaml.org/wiki/PyYAMLDocumentation)).
 
-PyPI is open to any python developer to publish on ([packaging glossary](https://packaging.python.org/en/latest/glossary/)), so installing a package means running a strangers code on your machine. check the spelling.
+PyPI is open to any python developer to publish on ([packaging glossary](https://packaging.python.org/en/latest/glossary/)), so using a package means running a strangers code on your machine. check the spelling.
 
 by default everything you install lands in one shared place, and the next note is about why that gets painful once two projects want different versions of the same package.
 
