@@ -38,3 +38,10 @@ def f3(p): return 1
 assert f3.__name__ == "f3"
 # source: https://docs.python.org/3/reference/compound_stmts.html
 # confirmed (opened this run): "The result must be a callable, which is invoked with the function object as the only argument. The returned value is bound to the function name instead of the function object."
+# audit: sorted and min call the key function once per item
+calls = []
+def k(x): calls.append(x); return x
+sorted([3, 1, 2], key=k); assert len(calls) == 3
+min([3, 1, 2], key=k); assert len(calls) == 6
+# source: https://docs.python.org/3/howto/sorting.html
+# confirmed (opened this run): "the key function is called exactly once for each input record"
