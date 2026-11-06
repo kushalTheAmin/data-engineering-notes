@@ -58,3 +58,8 @@ git("add", "a.py"); git("commit", "-qm", "two")
 assert "k_report_7f3a" in git("show", "HEAD~1:a.py") and "k_report_7f3a" not in git("show", "HEAD:a.py")
 # source: https://docs.python.org/3/library/os.html
 # confirmed (opened this run): os.environ is "A mapping object where keys and values are strings that represent the process environment", so dictionary-like, not a dict
+# audit: NAME=value before a command sets it for that command only (bash)
+out = subprocess.run(["bash", "-c", "SHOP_API_KEY=x python3 -I -c 'import os;print(os.environ.get(\"SHOP_API_KEY\"))'; python3 -I -c 'import os;print(os.environ.get(\"SHOP_API_KEY\"))'"], capture_output=True, text=True, env={"PATH": os.environ["PATH"]}).stdout.split()
+assert out == ["x", "None"], out
+# source: https://www.gnu.org/software/bash/manual/html_node/Environment.html
+# confirmed (opened this run): variable assignments before a simple command "are part of that command's environment for as long as it executes. These assignment statements affect only the environment seen by that command"
