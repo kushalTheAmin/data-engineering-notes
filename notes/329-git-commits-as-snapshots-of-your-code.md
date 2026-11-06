@@ -63,4 +63,4 @@ no. the first id changes, so the second changes, so the third does. each id is m
 </details>
 
 ---
-prev: [328 venvs, one set of installed packages per project](./328-venvs-one-set-of-installed-packages-per-project.md) | next: not written yet
+prev: [328 venvs, one set of installed packages per project](./328-venvs-one-set-of-installed-packages-per-project.md) | next: [330 git branches, trying something without breaking main](./330-git-branches-trying-something-without-breaking-main.md)

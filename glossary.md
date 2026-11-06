@@ -48,6 +48,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | bit | one tiny switch inside a computer, written as 0 or 1 | [002](./notes/002-bits.md) |
 | block | a fixed chunk of bytes, often 4096, a disk reads at once | [044](./notes/044-disks-read-in-blocks.md) |
 | boolean | a value with only two states, true or false | [023](./notes/023-true-and-false-the-boolean.md) |
+| branch (git) | a name pointing at one commit, moved forward by new commits | [330](./notes/330-git-branches-trying-something-without-breaking-main.md) |
 | buffer hit | a page found already in memory, so no disk trip | [303](./notes/303-the-buffer-pool-keeping-hot-pages-in-memory.md) |
 | buffer pool | memory where Postgres keeps copies of pages it already read | [303](./notes/303-the-buffer-pool-keeping-hot-pages-in-memory.md) |
 | build (hash join) | loading the inner side into a hash table, once | [299](./notes/299-hash-join-build-a-hash-table-then-look-up-each-row.md) |

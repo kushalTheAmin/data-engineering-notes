@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 329
+notes so far: 330
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -375,3 +375,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [327 packages and pip, installing code other people wrote](./notes/327-packages-and-pip-installing-code-other-people-wrote.md): import json works with no setup, so why does importing anything else fail? pip, PyPI, and the install name vs import name gotcha
 - [328 venvs, one set of installed packages per project](./notes/328-venvs-one-set-of-installed-packages-per-project.md): a fresh venv cant see the duckdb installed outside it, on purpose, so each project gets its own versions
 - [329 git, commits as snapshots of your code](./notes/329-git-commits-as-snapshots-of-your-code.md): you broke the script and want yesterdays version back; a commit saves the whole project, not a list of edits
+- [330 git branches, trying something without breaking main](./notes/330-git-branches-trying-something-without-breaking-main.md): want to rewrite the script without losing the good snapshots; a branch is just a name on a commit
