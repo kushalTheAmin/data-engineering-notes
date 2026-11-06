@@ -29,9 +29,9 @@ print("items: 13")
 | main | 1c7c5fd |
 | rewrite | bd6972e |
 
-switch -c makes a branch and moves onto it. the rewrite commit sits one step ahead of main, which never moved. after switching back, git rewrites the files in your folder to match main, so report.py has its two lines again. the rewrite commit isnt gone, it just belongs to the other name. your ids will differ, same as in 329.
+switch -c makes a branch and moves onto it, and HEAD -> in the log marks the branch you are on. the rewrite commit sits one step ahead of main, which stayed put. after switching back, git rewrites your folder to match main, so report.py has its two lines again. the rewrite commit still exists, on the other name. your ids will differ, same as in 329.
 
-i assumed a branch was a copy of the project, but it is a 41 byte file holding one commit id, so making one is instant ([pro git](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)). main is the usual name of the first branch, older setups say master.
+i assumed a branch was a copy of the project, but it is one commit id, stored as a 41 byte file in a default repository (git may pack it later), so making one is fast ([pro git](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)). main is the usual name of the first branch, older setups say master.
 
 word clash: this branch isnt the branches of a tree in [280](./280-trees-data-that-branches.md), its a label on a commit.
 

@@ -39,6 +39,17 @@ try:
     # the branch is a 41 byte file: 40 hex characters and a newline
     ref = os.path.join(d, ".git", "refs", "heads", "rewrite")
     assert os.path.getsize(ref) == 41 and open(ref).read().strip() == git(d, "rev-parse", "rewrite").stdout.strip()
+    # audit: 41 bytes holds for sha1 loose refs only; sha256 refs are 65 bytes, and pack-refs removes the loose file
+    git(d, "pack-refs", "--all")
+    assert not os.path.exists(ref) and "refs/heads/rewrite" in open(os.path.join(d, ".git", "packed-refs")).read()
+    d2 = tempfile.mkdtemp()
+    try:
+        git(d2, "init", "-q", "-b", "main", "--object-format=sha256")
+        open(os.path.join(d2, "f"), "w").write("x\n")
+        git(d2, "add", "f"); git(d2, "commit", "-q", "-m", "m")
+        assert os.path.getsize(os.path.join(d2, ".git", "refs", "heads", "main")) == 65
+    finally:
+        shutil.rmtree(d2)
     # uncommitted edit that the other branch would overwrite: switch is refused
     open(p, "a").write("x\n")
     r = git(d, "switch", "rewrite", ok=False)
@@ -53,3 +64,5 @@ finally:
 #   confirmed (opened this run): many developers keep only entirely stable code in their master branch and use other branches for topic work
 # source: https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 #   confirmed (opened this run): Git won't let you switch branches if uncommitted changes conflict with the branch you're checking out
+# source: https://git-scm.com/docs/git-pack-refs
+#   confirmed (opened this run): refs are stored under $GIT_DIR/refs, and git pack-refs puts them into $GIT_DIR/packed-refs, usually removing the loose refs
