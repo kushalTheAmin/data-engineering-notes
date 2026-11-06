@@ -39,4 +39,4 @@ __init__ (double underscores mark it special) runs when you build one, and self.
 the file in [335](./335-with-opening-and-closing-things-safely.md) is an object of a class python ships with, and write and close are its methods.
 
 ---
-prev: [335 with, opening and closing things safely](./335-with-opening-and-closing-things-safely.md) | next: not written yet
+prev: [335 with, opening and closing things safely](./335-with-opening-and-closing-things-safely.md) | next: [337 functions as values, handing a function to another function](./337-functions-as-values-handing-a-function-to-another-function.md)

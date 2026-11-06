@@ -175,6 +175,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | full run order (of a query) | FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY, LIMIT | [153](./notes/153-the-full-run-order-with-group-by-and-having.md) |
 | full table scan | reading every page of a table and testing every row | [285](./notes/285-full-table-scan-reading-every-page.md) |
 | function | SQL that takes a value and returns a new one | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
+| function (python) | a value you can store, pass to other functions, or call | [337](./notes/337-functions-as-values-handing-a-function-to-another-function.md) |
 | functional dependency | one column decides another: each value gives exactly one value | [258](./notes/258-functional-dependency-when-one-column-decides-another.md) |
 | gap (between islands) | the empty days between two runs of days with orders | [195](./notes/195-gaps-and-islands-date-minus-row-number.md) |
 | generate_series | a function in FROM making one row per step, stop included | [197](./notes/197-generate-series-a-column-of-consecutive-days.md) |
@@ -243,6 +244,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | junction table | a table with one row per pair, pointing at both sides | [097](./notes/097-junction-tables.md) |
 | kernel | the core of the operating system, shared by containers | [208](./notes/208-containers-a-program-packed-with-everything-it-needs.md) |
 | key constraint | a key rule declared in CREATE TABLE, enforced on every insert | [218](./notes/218-key-constraints-primary-key-and-references-in-create-table.md) |
+| key function | a function sorted calls once per item to get its sort value | [337](./notes/337-functions-as-values-handing-a-function-to-another-function.md) |
 | key pair | a public key and a private key made together | [318](./notes/318-public-and-private-keys-locking-without-sharing-a-secret.md) |
 | kibibyte | 1024 bytes, the unambiguous 1024 based unit, written KiB | [038](./notes/038-1000-or-1024.md) |
 | kilobyte | 1000 bytes, written KB | [033](./notes/033-kilobytes-to-terabytes.md) |
