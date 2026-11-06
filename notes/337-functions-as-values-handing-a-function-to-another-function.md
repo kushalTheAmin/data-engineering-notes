@@ -43,7 +43,7 @@ except TypeError as e:
 by_price() missing 1 required positional argument: 'p'
 ```
 
-i expected sorted to need a whole rule for comparing two products, but it only wants a function that turns one product into a number. and it calls it once per product, 4 calls, not once per comparison (the python docs say so). the third print is the parentheses trap: by_price() runs the function with nothing to look at, so it fails before sorted even starts.
+i expected sorted to need a whole rule for comparing two products, but it only wants a function that turns one product into something comparable, here a number. and it calls it once per product, 4 calls, not once per comparison (the python docs say so). the third print is the parentheses trap: by_price() runs the function with nothing to look at, so it fails before sorted even starts.
 
 max and min take key= the same way, so max(products, key=by_price) gives the kaju katli dictionary, the priciest product.
 

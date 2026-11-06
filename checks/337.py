@@ -14,3 +14,5 @@ assert r.stdout.split("\n")[1] == "4", r.stdout
 # source: https://docs.python.org/3/howto/sorting.html
 # confirmed: the key function is called exactly once for each input record
 assert max(rows, key=lambda r: r[1])[0] == 'kaju katli'
+# audit: key can return any comparable value, not only a number; 338 sorts by a name string
+assert [p["name"] for p in sorted([{"name": "b"}, {"name": "a"}], key=lambda p: p["name"])] == ["a", "b"]
