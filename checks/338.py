@@ -24,3 +24,7 @@ assert [f() for f in fs] == [2, 2, 2]
 fs = []
 for i in [1, 2, 3]: fs.append(lambda: i)
 assert [f() for f in fs] == [3, 3, 3]
+# source: https://docs.python.org/3/faq/programming.html
+# confirmed (opened this run): lambdas defined in a loop all return the last value because the name is "accessed when the lambda is called, not when it is defined"
+# source: https://docs.python.org/3/reference/datamodel.html
+# confirmed (opened this run): function.__closure__ holds the cells with the bindings of the outer names the function uses
