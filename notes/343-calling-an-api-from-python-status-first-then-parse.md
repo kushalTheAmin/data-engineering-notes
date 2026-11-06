@@ -51,9 +51,9 @@ print(get("/orders/999", key))
 (404, 'no such order')
 ```
 
-only the 200 body is JSON (200 fine, 401 unknown caller, 404 not found), and the 401 and 404 bodies are plain text. so json.loads runs only on the good path, status first, parse second. parse first and you get a JSON error that hides the real problem, the key. the built in urlopen also raises HTTPError, (an error that stops the script) on any 4xx or 5xx, which is why the [try](./334-errors-in-scripts-catching-them-without-hiding-them.md) is there. the popular requests package does the opposite: it hands you the response, and raises only if you call raise_for_status().
+only the 200 body is JSON (200 fine, 401 unknown caller, 404 no such order), and the 401 and 404 bodies are plain text. so json.loads runs only on the good path, status first, parse second. parse first and you get a JSON error that hides the real problem, the key. urlopen also raises HTTPError, (an error that stops the script) on any 4xx or 5xx, which is why the [try](./334-errors-in-scripts-catching-them-without-hiding-them.md) is there. the popular requests package does the opposite: a bad status comes back as a response, and raises only if you call raise_for_status().
 
-timeout=5 gives up after 5 seconds. without it urlopen waits forever on a silent server, so a nightly job never finishes. would you notice?
+timeout=5 gives up when the server stays silent for 5 seconds. without it urlopen waits forever on a silent server, so a nightly job never finishes. would you notice?
 
 ### check yourself
 
