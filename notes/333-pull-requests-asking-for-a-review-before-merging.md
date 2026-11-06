@@ -15,7 +15,7 @@ flowchart LR
     C -->|approves| E[merge into main]
 ```
 
-the site shows a diff, the lines your branch removed (-) and added (+) compared to main:
+the site shows a diff, the lines your branch removed (-) and added (+) since it split off from main:
 
 ```text
 report.py

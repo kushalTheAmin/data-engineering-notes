@@ -51,3 +51,16 @@ def line2(new_a, new_b):
     return subprocess.run(["git", "merge", "--no-edit", "pr2"], cwd=d, env=env, capture_output=True, text=True)
 assert "CONFLICT" in line2("khandvi", "jalebi").stdout
 assert "CONFLICT" not in line2("khandvi", "khandvi").stdout
+
+# audit: the note said the pull request diff is compared to main, but a pull request shows a three-dot diff against the merge base, so it does not change when main moves
+# source: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests
+#   confirmed (opened this run): "Pull requests on GitHub show a three-dot diff." (merge base to the topic branch)
+d4 = tempfile.mkdtemp()
+git(d4, "init", "-q", "-b", "main")
+open(d4 + "/report.py", "w").write('print("orders: 7")\nprint("items: 13")\n'); git(d4, "add", "."); git(d4, "commit", "-q", "-m", "a")
+git(d4, "switch", "-q", "-c", "rewrite")
+open(d4 + "/report.py", "w").write('print("customers: 5")\n'); git(d4, "commit", "-qam", "b")
+git(d4, "switch", "-q", "main")
+open(d4 + "/other.txt", "w").write("x\n"); git(d4, "add", "."); git(d4, "commit", "-q", "-m", "main moves on")
+assert "other.txt" in git(d4, "diff", "main", "rewrite")          # two-dot: main's new file leaks in
+assert "other.txt" not in git(d4, "diff", "main...rewrite")       # three-dot, what a pull request shows
