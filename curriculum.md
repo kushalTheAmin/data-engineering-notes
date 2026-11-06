@@ -490,7 +490,8 @@ after this arc: you can write, run and test real python scripts that move data b
 - [x] errors in scripts: catching them without hiding them ★ (note 334)
 - [x] with: opening and closing things safely ★ (note 335)
 - [x] classes in one picture: data and functions together (note 336)
-- [ ] functions as values: passing and returning functions
+- [ ] functions as values: passing a function to another function
+- [ ] returning a function: a function that builds a function
 - [ ] decorators: the @ shorthand for wrapping a function ★
 - [ ] reading a CSV in python, row by row
 - [ ] reading JSON in python
