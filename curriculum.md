@@ -484,7 +484,8 @@ after this arc: you can write, run and test real python scripts that move data b
 - [x] git: commits as snapshots of your code ★ (note 329)
 - [x] git branches: trying something without breaking main (note 330)
 - [x] pushing and pulling: sharing code through a remote (note 331)
-- [ ] pull requests and merge conflicts ★
+- [ ] merge conflicts: when git cant combine two edits ★
+- [ ] pull requests: asking for a review before merging ★
 - [ ] errors in scripts: catching them without hiding them ★
 - [ ] with: opening and closing things safely ★
 - [ ] classes in one picture: data and functions together
