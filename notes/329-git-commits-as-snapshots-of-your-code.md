@@ -4,7 +4,7 @@ section: python for data work, part 5, ~2 min read
 
 you edit the shop report script from [328](./328-venvs-one-set-of-installed-packages-per-project.md), it breaks, and you want yesterdays version back. a folder has no undo for that.
 
-git is a tool that saves snapshots of a project [folder](./040-folders-and-paths.md), and a commit is one saved snapshot with a short message. here is report.py, a script you run as in [326](./326-running-a-python-script-from-the-terminal.md), saved three times in the [terminal](./049-the-terminal.md) for the shop, the imaginary gujarati snack store these notes run on:
+git is a tool that saves snapshots of a project [folder](./040-folders-and-paths.md), and a commit is one saved snapshot with a short message. here is report.py, a [script](./326-running-a-python-script-from-the-terminal.md), saved three times in the [terminal](./049-the-terminal.md) for the shop, the imaginary gujarati snack store these notes run on:
 
 ```text
 $ git init
@@ -31,13 +31,13 @@ print("orders: 7")
 | 647663e | add item count | report.py |
 | 1c7c5fd | add notes file | report.py, notes.txt |
 
-echo > writes a file and >> adds a line to its end. git init starts tracking the folder, git add picks which files go into the next snapshot, git commit saves it. the log lists commits newest first; each id is a [fingerprint](./319-cryptographic-hashes-a-fingerprint-you-cant-reverse.md), a short code made from the snapshot, message and previous commits id. git show with an id and a file name prints the file as it was then.
+echo > writes a file and >> adds a line to its end. git init makes the folder a repository with nothing saved yet, git add picks which files go into the next snapshot, git commit saves it (set your name and email with git config first). the log lists commits newest first; each id is a [fingerprint](./319-cryptographic-hashes-a-fingerprint-you-cant-reverse.md), a short code made from the snapshot, message, previous commits id, author and time, so yours will differ. git show with an id and a file name prints the file as it was then.
 
-word clash: a git commit isnt the database COMMIT of [228](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md), which keeps a batch of changes, and this snapshot is copied files, not the query view of [250](./250-transaction-snapshots-what-your-transaction-is-allowed-to-see.md).
+word clash: a git commit isnt the database COMMIT of [228](./228-commit-and-rollback-keeping-or-undoing-a-transaction.md), which keeps a batch of changes, and this snapshot is files, not the query view of [250](./250-transaction-snapshots-what-your-transaction-is-allowed-to-see.md).
 
-i assumed git kept a list of edits. it doesnt, each commit is the whole project, and unchanged files are reused, not copied again ([pro git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)). a diff, the list of edits, is worked out by comparing snapshots.
+i assumed git kept a list of edits, but each commit is the whole project, and unchanged files are reused, not copied again ([pro git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)). a diff, the list of edits, comes from comparing snapshots.
 
-every id includes the one before it, so changing an old commit changes every id after it. the next one is about trying a risky change without touching your good snapshot.
+every id includes the one before it, so changing an old commit changes every id after it. next: trying a risky change without touching your good snapshot.
 
 ### check yourself
 
