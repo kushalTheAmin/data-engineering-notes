@@ -149,6 +149,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | exact decimal | a type keeping decimal digits exactly, like DECIMAL(6, 2) | [022](./notes/022-exact-decimal-types.md) |
 | exact tie | an answer halfway between two floats, rounded to the one ending 0 | [020](./notes/020-why-0-1-plus-0-2-is-not-0-3.md) |
 | EXCEPT | keeps first query rows missing from the second, order matters | [183](./notes/183-intersect-and-except.md) |
+| exception | python stopping a line it cant do, unless a try catches it | [334](./notes/334-errors-in-scripts-catching-them-without-hiding-them.md) |
 | EXCLUDED | in an upsert, the row you tried to insert | [224](./notes/224-upsert-insert-or-update-in-one-statement.md) |
 | EXISTS | true when the inner query returns at least one row | [178](./notes/178-exists-and-not-exists-asking-whether-a-matching-row-exists.md) |
 | EXPLAIN | Postgres command that shows the plan it would use for a query | [285](./notes/285-full-table-scan-reading-every-page.md) |
@@ -476,12 +477,14 @@ every term these notes have built, in plain words, with the note that built it. 
 | token | key string the server hands out, often with an expiry | [315](./notes/315-tokens-that-expire-a-key-with-a-shelf-life.md) |
 | top N per group | keep the first N rows of each group: number inside, filter outside | [193](./notes/193-top-n-per-group.md) |
 | torn write | a write cut off partway, leaving some new blocks and some old | [045](./notes/045-torn-writes.md) |
+| traceback | the trail of lines python prints when an exception stops a script | [334](./notes/334-errors-in-scripts-catching-them-without-hiding-them.md) |
 | trade off | anything speeding up reads must be kept up on every write | [282](./notes/282-the-trade-off-faster-reads-usually-mean-slower-writes.md) |
 | transaction | a group of changes that all happen or none do | [227](./notes/227-transactions-all-or-nothing.md) |
 | tree | nodes linked parent to children, a lookup follows one path down | [280](./notes/280-trees-data-that-branches.md) |
 | trigger | a rule the database runs by itself on every write | [247](./notes/247-keeping-the-new-column-in-sync-with-a-trigger.md) |
 | trim | a function cutting spaces off both ends of text | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | TRUNCATE | removes every row at once and keeps the empty table | [226](./notes/226-drop-and-truncate-emptying-a-table-vs-removing-it.md) |
+| try/except | python code that catches one named kind of exception and carries on | [334](./notes/334-errors-in-scripts-catching-them-without-hiding-them.md) |
 | TRY_CAST | CAST that gives null instead of an error when conversion fails | [133](./notes/133-casts-that-fail-and-try-cast.md) |
 | twos complement | binary where the leftmost place is negative, so one zero | [014](./notes/014-twos-complement.md) |
 | type by use | choose a type by what you do with the value | [263](./notes/263-choosing-column-types-by-what-you-do-with-the-value.md) |

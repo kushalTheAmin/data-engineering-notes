@@ -50,4 +50,4 @@ it now conflicts with main, the same clash as in 332. you resolve it by hand and
 
 
 ---
-prev: [332 merge conflicts, when git cant combine two edits](./332-merge-conflicts-when-git-cant-combine-two-edits.md) | next: not written yet
+prev: [332 merge conflicts, when git cant combine two edits](./332-merge-conflicts-when-git-cant-combine-two-edits.md) | next: [334 errors in scripts, catching them without hiding them](./334-errors-in-scripts-catching-them-without-hiding-them.md)
