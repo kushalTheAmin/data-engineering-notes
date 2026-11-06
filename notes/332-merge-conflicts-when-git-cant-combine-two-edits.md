@@ -55,4 +55,4 @@ git accepts it, the tempting answer that it refuses is wrong. python3 stops with
 
 
 ---
-prev: [331 pushing and pulling, sharing code through a remote](./331-pushing-and-pulling-sharing-code-through-a-remote.md) | next: not written yet
+prev: [331 pushing and pulling, sharing code through a remote](./331-pushing-and-pulling-sharing-code-through-a-remote.md) | next: [333 pull requests, asking for a review before merging](./333-pull-requests-asking-for-a-review-before-merging.md)

@@ -129,6 +129,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | depth | the number of levels in a tree, from the root down | [281](./notes/281-balanced-trees-why-the-depth-stays-small.md) |
 | DESC | sort direction: biggest first, instead of the default smallest first | [117](./notes/117-order-by-sorting-by-one-or-more-columns.md) |
 | dialect | one databases own version of SQL, with its own spellings and rules | [135](./notes/135-one-language-many-dialects.md) |
+| diff | the lines a change removed (-) and added (+) | [333](./notes/333-pull-requests-asking-for-a-review-before-merging.md) |
 | digital signature | a fingerprint locked with the private key, checkable with the public one | [320](./notes/320-digital-signatures-proof-a-message-came-from-the-key-holder.md) |
 | dirty read | reading another transactions change before it is committed | [236](./notes/236-dirty-reads.md) |
 | disk | storage like an SSD or hard drive, keeping bytes without power | [036](./notes/036-memory-vs-disk.md) |
@@ -356,6 +357,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | program | a file of bytes on disk that can be run | [050](./notes/050-processes.md) |
 | public key | the half of a key pair you hand to anyone | [318](./notes/318-public-and-private-keys-locking-without-sharing-a-secret.md) |
 | pull (git) | download new commits from the remote and combine them with yours | [331](./notes/331-pushing-and-pulling-sharing-code-through-a-remote.md) |
+| pull request | a proposal on the remote to merge a branch, open for review | [333](./notes/333-pull-requests-asking-for-a-review-before-merging.md) |
 | push (git) | upload your new commits to the remote | [331](./notes/331-pushing-and-pulling-sharing-code-through-a-remote.md) |
 | PyPI | the public shelf of python packages, the Python Package Index | [327](./notes/327-packages-and-pip-installing-code-other-people-wrote.md) |
 | query | one request sent to a database, naming the result you want | [101](./notes/101-sql-you-describe-the-result.md) |

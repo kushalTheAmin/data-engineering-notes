@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 332
+notes so far: 333
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -378,3 +378,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [330 git branches, trying something without breaking main](./notes/330-git-branches-trying-something-without-breaking-main.md): want to rewrite the script without losing the good snapshots; a branch is just a name on a commit
 - [331 pushing and pulling, sharing code through a remote](./notes/331-pushing-and-pulling-sharing-code-through-a-remote.md): you and a friend both changed report.py; a push gets rejected until you pull their commit first
 - [332 merge conflicts, when git cant combine two edits](./notes/332-merge-conflicts-when-git-cant-combine-two-edits.md): you and a friend edited the same line; git writes both versions into the file and makes you choose
+- [333 pull requests, asking for a review before merging](./notes/333-pull-requests-asking-for-a-review-before-merging.md): git can merge in one command, so why review first? a pull request lives on the site, not in git
