@@ -33,3 +33,21 @@ git(d, "commit", "-qam", "b")
 out = git(d, "diff", "main", "rewrite")
 lines = [l for l in out.split("\n") if l and l[0] in "+-" and not l.startswith(("+++", "---"))]
 assert lines == ['-print("orders: 7")', '-print("items: 13")', '+print("customers: 5")'], lines
+
+# audit: a pull request merging only after approval is not a rule, and two pull requests that change a line to the same text do not conflict
+# source: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews
+#   confirmed (opened this run): "Repository administrators can require approvals before pull requests are merged." (so approval is optional)
+# source: https://git-scm.com/docs/git-merge
+#   confirmed (opened this run): a line is "cleanly resolved because both sides changed the same way"
+def line2(new_a, new_b):
+    d = tempfile.mkdtemp()
+    base = 'print("orders: 7")\nprint("top snack: dhokla")\nprint("items: 13")\n'
+    git(d, "init", "-q", "-b", "main")
+    open(d + "/report.py", "w").write(base); git(d, "add", "."); git(d, "commit", "-q", "-m", "a")
+    for br, new in (("pr1", new_a), ("pr2", new_b)):
+        git(d, "switch", "-q", "-c", br, "main")
+        open(d + "/report.py", "w").write(base.replace("dhokla", new)); git(d, "commit", "-qam", br)
+    git(d, "switch", "-q", "main"); git(d, "merge", "-q", "--no-edit", "pr1")
+    return subprocess.run(["git", "merge", "--no-edit", "pr2"], cwd=d, env=env, capture_output=True, text=True)
+assert "CONFLICT" in line2("khandvi", "jalebi").stdout
+assert "CONFLICT" not in line2("khandvi", "khandvi").stdout

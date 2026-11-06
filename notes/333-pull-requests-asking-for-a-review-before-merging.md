@@ -24,7 +24,7 @@ report.py
 + print("customers: 5")
 ```
 
-a reviewer spots it: your rewrite dropped the orders and items lines. you dont open a new request. you commit a fix and push to the same branch, and the open pull request picks up the new commit by itself. only after approval does the branch merge, with the same merge as in [332](./332-merge-conflicts-when-git-cant-combine-two-edits.md).
+a reviewer spots it: your rewrite dropped the orders and items lines. you dont open a new request. you commit a fix and push to the same branch, and the open pull request picks up the new commit by itself. once it is approved (a team can require that), the branch merges, for example with the same merge as in [332](./332-merge-conflicts-when-git-cant-combine-two-edits.md).
 
 i assumed a pull request was a git command, but git never stores it. the request and the review live on the site, and the branch is plain git underneath.
 
@@ -41,7 +41,7 @@ commit the fix on the same branch and push it. the pull request follows the bran
 
 </details>
 
-2. two pull requests both change line 2 of report.py ("top snack: dhokla"). the first one merges into main. what happens to the second?
+2. two pull requests both change line 2 of report.py ("top snack: dhokla") to different text. the first one merges into main. what happens to the second?
 <details><summary>answer</summary>
 
 it now conflicts with main, the same clash as in 332. you resolve it by hand and push the result to its branch. the tempting answer is that the second merges fine because each was approved, but approval says nothing about whether main moved under it.
