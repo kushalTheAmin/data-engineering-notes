@@ -33,7 +33,7 @@ delivered: 2 2
 
 i expected json.load to hand me a reader like the csv one, but it hands back the finished list, so the second count is 2 again. and order_id came back as a number, where the csv gave text. json keeps its types, as [067](./067-json-types.md) showed.
 
-the price is memory, the working space where your program keeps its data. the whole file sits there before your first loop runs, painful for a huge file of millions of orders. one reason big exports are often [JSON lines](./069-json-lines.md), one record per line, which can be read a line at a time. json.load cant read those whole:
+the price is memory, the working space where your program keeps its data. the whole file sits there before your first loop runs, painful for a huge file of millions of orders. one reason some big exports are [JSON lines](./069-json-lines.md), one record per line, which can be read a line at a time. json.load cant read those whole:
 
 ```python
 import json

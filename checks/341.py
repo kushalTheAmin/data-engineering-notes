@@ -31,3 +31,5 @@ assert len(first) == 41
 # source: https://docs.python.org/3/library/json.html
 # confirmed (opened this run): json.loads is "Identical to load(), but instead of a file-like object, deserialize s (a str, bytes or bytearray instance containing a JSON document)"
 assert json.loads('[1, 2]') == json.load(io.StringIO('[1, 2]'))
+# source: https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-json
+# confirmed (opened this run): "BigQuery lets you load newline-delimited JSON (ndJSON) data from Cloud Storage", so some big exports and loads use JSON lines
