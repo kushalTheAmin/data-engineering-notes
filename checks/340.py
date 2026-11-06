@@ -24,3 +24,6 @@ assert len(list(rd)) == 1 and len(list(rd)) == 0
 assert all(isinstance(v, str) for v in next(csv.DictReader(io.StringIO("a\n104\n"))).values())
 # source: https://docs.python.org/3/library/csv.html
 # confirmed: file objects should be opened with newline=''
+# source: https://docs.python.org/3/library/csv.html
+# confirmed (opened this run): DictReader "maps the information in each row to a dict whose keys are given by the optional fieldnames parameter"; if fieldnames is omitted, the values in the first row are used as the fieldnames
+assert next(csv.DictReader(io.StringIO("a,b\n1,2\n"))) == {"a": "1", "b": "2"}
