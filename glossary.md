@@ -244,6 +244,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | JSON object | curly braces around name: value pairs, like a dictionary | [067](./notes/067-json-types.md) |
 | JSON path | a $.name address telling a query which value to pull out | [205](./notes/205-querying-json-inside-a-column.md) |
 | JSON types | the six kinds of value: string, number, boolean, null, object, array | [067](./notes/067-json-types.md) |
+| json.load | reads a whole JSON file into python values in one go | [341](./notes/341-reading-json-in-python-the-whole-file-at-once.md) |
 | jump | asking for a file position directly, called seek in python | [043](./notes/043-reading-start-to-end-vs-jumping.md) |
 | junction table | a table with one row per pair, pointing at both sides | [097](./notes/097-junction-tables.md) |
 | kernel | the core of the operating system, shared by containers | [208](./notes/208-containers-a-program-packed-with-everything-it-needs.md) |

@@ -41,4 +41,4 @@ newline="" in open is what the python docs ask for with csv files, so a line bre
 the payoff is memory, where your program keeps its data. a loop holds one row at a time, so a huge file still reads, while list(reader), which collects every row, holds them all at once.
 
 ---
-prev: [339 decorators, the @ shorthand for wrapping a function](./339-decorators-the-at-shorthand-for-wrapping-a-function.md) | next: not written yet
+prev: [339 decorators, the @ shorthand for wrapping a function](./339-decorators-the-at-shorthand-for-wrapping-a-function.md) | next: [341 reading JSON in python, the whole file at once](./341-reading-json-in-python-the-whole-file-at-once.md)
