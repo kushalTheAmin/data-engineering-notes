@@ -78,4 +78,4 @@ no, it crashes with a TypeError, because 6.0 times text makes no sense and TypeE
 </details>
 
 ---
-prev: [333 pull requests, asking for a review before merging](./333-pull-requests-asking-for-a-review-before-merging.md) | next: not written yet
+prev: [333 pull requests, asking for a review before merging](./333-pull-requests-asking-for-a-review-before-merging.md) | next: [335 with, opening and closing things safely](./335-with-opening-and-closing-things-safely.md)

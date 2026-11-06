@@ -518,10 +518,12 @@ every term these notes have built, in plain words, with the note that built it. 
 | window | the rows a window function sees while working on one row | [185](./notes/185-over-the-window-a-function-looks-through.md) |
 | window frame | the slice of the window a function uses for one row | [190](./notes/190-window-frames-rows-between.md) |
 | window function | a calculation across rows that keeps every row, like sum with OVER | [184](./notes/184-window-functions-a-total-next-to-every-row.md) |
+| with | opens something, runs a block, then closes it even after an error | [335](./notes/335-with-opening-and-closing-things-safely.md) |
 | working directory | the folder a process stands in, where bare names are looked up | [052](./notes/052-the-working-directory.md) |
 | worst case | the unluckiest input, like the wanted item sitting last | [269](./notes/269-big-o-in-plain-words-how-work-grows-as-data-grows.md) |
 | write | any change to stored data, like an INSERT adding a row | [282](./notes/282-the-trade-off-faster-reads-usually-mean-slower-writes.md) |
 | write ahead log | the databases own list of changes, flushed before table files change | [233](./notes/233-the-write-ahead-log-write-down-the-plan-before-the-change.md) |
+| write buffer | memory where python parks small writes until the file closes | [335](./notes/335-with-opening-and-closing-things-safely.md) |
 | xmax | stamp on a row version: the transaction that ended it | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
 | xmin | stamp on a row version: the transaction that created it | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
 | XML | a text format wrapping each value in opening and closing tags | [072](./notes/072-xml.md) |
