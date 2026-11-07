@@ -4,7 +4,7 @@ section: python for data work, part 22, ~2 min read
 
 i filtered 4 orders down to the delivered ones and the row labels came back as 0 and 3. where did 1 and 2 go, and why didnt it renumber?
 
-filtering in pandas is [WHERE](./106-where-keeping-only-the-rows-that-match.md) (keep only rows whose condition is true) written as df[df["status"] == "delivered"]. the inner part compares every row at once and gives a mask, a column of True and False, one per row. the outer brackets keep the True rows. here is the same 4 order slice of the shop, the imaginary gujarati snack store, as the [dataframe](./345-a-dataframe-a-table-in-memory.md) in 345 (a table held in memory):
+filtering in pandas is [WHERE](./106-where-keeping-only-the-rows-that-match.md) (keep only rows whose condition is true) written as df[df["status"] == "delivered"]. the inner part compares every row at once and gives a mask, a column of True and False, one per row. the outer brackets keep the True rows. here is the same 4 order slice of the shop, the imaginary gujarati snack store, as the [dataframe](./345-a-dataframe-a-table-in-memory.md) in 345 (a table held in memory by pandas, a python package for data analysis):
 
 | label | order_id | customer_id | status | mask |
 |---|---|---|---|---|

@@ -31,3 +31,6 @@ except Exception:
 import ast
 _e = ast.parse("a == 1 & b == 2", mode="eval").body
 assert isinstance(_e.comparators[0], ast.BinOp) and isinstance(_e.comparators[0].op, ast.BitAnd)
+# audit: pandas was never glossed here, so a reader landing from search met the word cold
+# source: https://pandas.pydata.org/
+# confirmed (opened this run): "pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language"
