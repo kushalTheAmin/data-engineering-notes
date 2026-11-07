@@ -42,4 +42,4 @@ what got me is the last line. i expected adding up a column to need a loop like 
 the catch is the same one [340](./340-reading-a-csv-in-python-row-by-row.md) hit with list(reader), which loads every csv row into a list: all of it sits in memory at once. a 50 gigabyte file will not fit in a dataframe on a laptop.
 
 ---
-prev: [344 practice, dedupe and count orders in plain python](./344-practice-dedupe-and-count-orders-in-plain-python.md) | next: not written yet
+prev: [344 practice, dedupe and count orders in plain python](./344-practice-dedupe-and-count-orders-in-plain-python.md) | next: [346 filter rows in pandas, next to WHERE](./346-filter-rows-in-pandas-next-to-where.md)

@@ -282,6 +282,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | lower | a function turning every letter to lower case | [124](./notes/124-text-functions-lower-upper-length-and-trim.md) |
 | made up id | a number handed out by the database, meaningless outside it | [088](./notes/088-natural-keys-vs-made-up-ids.md) |
 | many to many | rows on each side can match many rows on the other | [096](./notes/096-why-many-to-many-cant-live-in-either-table.md) |
+| mask | a True or False per row, saying which rows a filter keeps | [346](./notes/346-filter-rows-in-pandas-next-to-where.md) |
 | materialized view | a view that stores its answer instead of rerunning the query | [181](./notes/181-views-a-saved-query-with-a-name.md) |
 | max | returns the biggest non-null value in a column, or the latest date | [142](./notes/142-min-and-max-the-smallest-and-biggest-value.md) |
 | median | the middle value once sorted, or the average of the two middles | [149](./notes/149-median-the-middle-value-after-sorting.md) |
