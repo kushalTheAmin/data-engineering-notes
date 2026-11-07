@@ -45,4 +45,4 @@ i kept reading pythons plain and as the same thing as AND. but and wants one [Tr
 next you pick columns and sort, the SELECT and ORDER BY half.
 
 ---
-prev: [345 a dataframe, a table in memory](./345-a-dataframe-a-table-in-memory.md) | next: not written yet
+prev: [345 a dataframe, a table in memory](./345-a-dataframe-a-table-in-memory.md) | next: [347 select columns and sort in pandas, next to SELECT and ORDER BY](./347-select-columns-and-sort-in-pandas-next-to-select-and-order-by.md)

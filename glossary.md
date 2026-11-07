@@ -442,6 +442,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | sequence | a counter the database keeps outside any table, only moving forward | [219](./notes/219-sequences-where-made-up-ids-come-from.md) |
 | serializable | strictest level: results match some one-at-a-time order of transactions | [241](./notes/241-serializable-as-if-one-at-a-time-and-retrying-the-failures.md) |
 | serialization failure | error 40001: Postgres refuses a transaction so the app must retry it | [241](./notes/241-serializable-as-if-one-at-a-time-and-retrying-the-failures.md) |
+| Series (pandas) | one column of a dataframe, taken out on its own | [347](./notes/347-select-columns-and-sort-in-pandas-next-to-select-and-order-by.md) |
 | server | a program that listens on a port and answers requests | [086](./notes/086-client-and-server.md) |
 | session (clicks) | a run of one persons clicks, a long silence starts the next | [199](./notes/199-session-starts-flag-the-click-after-a-long-gap.md) |
 | session (database) | one connections conversation with the database, with its own settings | [212](./notes/212-connections-and-sessions-one-conversation-with-the-database.md) |
@@ -457,6 +458,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | snapshot (git) | the whole project folder as it was at one commit | [329](./notes/329-git-commits-as-snapshots-of-your-code.md) |
 | snapshot (Postgres) | a note of which transactions had finished when a query began | [250](./notes/250-transaction-snapshots-what-your-transaction-is-allowed-to-see.md) |
 | soft delete | marking a row gone with a deleted_at time instead of removing it | [266](./notes/266-soft-deletes-marking-a-row-gone-instead-of-removing-it.md) |
+| sort_values | the pandas method that sorts rows by one or more columns | [347](./notes/347-select-columns-and-sort-in-pandas-next-to-select-and-order-by.md) |
 | splitting into tables | one table per kind of thing, other tables keep only its id | [091](./notes/091-splitting-into-tables.md) |
 | SQL | the language you send a database to ask for rows | [101](./notes/101-sql-you-describe-the-result.md) |
 | SQL dump | a text file of SQL commands that rebuilds a database when run | [103](./notes/103-your-first-query-against-the-shop.md) |
