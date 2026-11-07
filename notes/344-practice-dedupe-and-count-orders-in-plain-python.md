@@ -172,4 +172,4 @@ only Asha moved. Bhavin has 2 rows but 1 city, so counting rows says 2 customers
 </details>
 
 ---
-prev: [343 calling an API from python, status first, then parse](./343-calling-an-api-from-python-status-first-then-parse.md) | next: not written yet
+prev: [343 calling an API from python, status first, then parse](./343-calling-an-api-from-python-status-first-then-parse.md) | next: [345 a dataframe, a table in memory](./345-a-dataframe-a-table-in-memory.md)

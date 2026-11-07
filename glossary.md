@@ -113,6 +113,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | data type | the kind of value a field allows, like text or number | [076](./notes/076-data-types-in-a-schema.md) |
 | database | a program that owns the data files, changing them only on request | [082](./notes/082-a-database-guards-the-data.md) |
 | database server | a database that runs as its own program and answers clients | [211](./notes/211-a-database-server-postgres-where-most-app-data-lives.md) |
+| dataframe | a table held in memory: rows, named columns, one type per column | [345](./notes/345-a-dataframe-a-table-in-memory.md) |
 | date | a calendar day with no time of day | [027](./notes/027-dates-and-times-apart.md) |
 | date part | one piece of a date, like its year, as a number | [126](./notes/126-date-parts-pulling-out-the-year-month-and-day.md) |
 | date spine | every day you want as rows, with the data left joined on | [198](./notes/198-date-spines-a-left-join-that-keeps-the-empty-days.md) |
@@ -218,6 +219,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | import | runs a module file once and hands your code its names | [325](./notes/325-modules-and-imports-using-code-from-other-files.md) |
 | IN | keeps a row if its value equals any item in a list | [111](./notes/111-in-matching-against-a-list.md) |
 | index (database) | a separate sorted list of values, each with its rows address | [286](./notes/286-index-a-sorted-shortcut-to-rows.md) |
+| index (pandas) | the row labels down a dataframes left side, not a shortcut | [345](./notes/345-a-dataframe-a-table-in-memory.md) |
 | index lookup | walk from root page down, one child per page, to the row | [288](./notes/288-one-lookup-traced-through-a-b-tree.md) |
 | index overhead | what each index adds: disk pages, plus one entry per insert | [293](./notes/293-what-indexes-cost-slower-writes-and-more-disk.md) |
 | index-only scan | Postgres answering a query from the index without visiting the table | [292](./notes/292-covering-index-when-the-index-alone-has-the-answer.md) |
@@ -339,6 +341,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | package | a bundle of python modules other people wrote and shared | [327](./notes/327-packages-and-pip-installing-code-other-people-wrote.md) |
 | page (Postgres) | a fixed 8192 byte chunk of a table file, packed with rows | [284](./notes/284-how-postgres-keeps-a-table-on-disk-rows-packed-into-pages.md) |
 | page split | a full page divides in two and its parent gains a signpost | [289](./notes/289-how-a-b-tree-stays-balanced-as-rows-arrive.md) |
+| pandas | a python package that gives you dataframes | [345](./notes/345-a-dataframe-a-table-in-memory.md) |
 | parent folder | the folder holding this one, written .. in a path | [053](./notes/053-absolute-vs-relative-paths.md) |
 | partial dependency | a column decided by only part of a two column key | [260](./notes/260-second-normal-form-nothing-about-half-the-key.md) |
 | partition (window functions) | one group of rows sharing a value, inside a window | [186](./notes/186-partition-by-a-separate-window-per-group.md) |
