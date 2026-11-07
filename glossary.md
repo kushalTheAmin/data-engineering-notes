@@ -145,6 +145,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | double counting | a sum repeating a value because a fan out copied its row | [165](./notes/165-double-counting-why-sums-after-a-fan-out-lie.md) |
 | doubled quote | two quotes in a row inside a quoted value, meaning one quote | [064](./notes/064-quotes-inside-quotes-and-newlines-inside-values.md) |
 | DROP TABLE | removes a table itself, its rows and its columns | [226](./notes/226-drop-and-truncate-emptying-a-table-vs-removing-it.md) |
+| dropna (pandas) | groupby setting: True drops rows with a missing key, False keeps them | [348](./notes/348-groupby-in-pandas-next-to-group-by.md) |
 | DuckDB | a database that runs inside your program, keeping data in one file | [102](./notes/102-a-database-in-one-file.md) |
 | durability | the ACID promise: once COMMIT says done, a crash cant undo it | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | embedded newline | a line ending inside a quoted csv value, not ending the row | [064](./notes/064-quotes-inside-quotes-and-newlines-inside-values.md) |
@@ -196,6 +197,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | group (GROUP BY) | all rows sharing one value of the grouped column, aggregated together | [143](./notes/143-group-by-one-group-per-value.md) |
 | GROUP BY | makes one group per different value, then one aggregate row each | [143](./notes/143-group-by-one-group-per-value.md) |
 | GROUP BY rule | every SELECT column must be grouped or inside an aggregate | [145](./notes/145-the-group-by-rule-every-column-is-grouped-or-aggregated.md) |
+| groupby (pandas) | pandas GROUP BY: one group per key value, then an aggregate each | [348](./notes/348-groupby-in-pandas-next-to-group-by.md) |
 | grouping by several columns | one group per different combination of the values, only combinations that exist | [144](./notes/144-grouping-by-more-than-one-column.md) |
 | grouping() | gives 1 on a made-up total row, 0 on a real group | [152](./notes/152-rollup-subtotals-and-grand-totals.md) |
 | handshake (TLS) | the opening exchange where browser and server agree a secret key | [322](./notes/322-encryption-in-transit-tls-and-https.md) |

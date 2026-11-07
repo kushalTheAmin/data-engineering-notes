@@ -46,4 +46,4 @@ the labels, the numbers down the left, travel with their rows: 2, 0, 3, 1. and d
 a table in SQL (the language for asking databases questions) has [no promised order](./118-no-order-by-no-promised-order.md) unless you ask. a dataframe always has one, so sort_values really moves rows.
 
 ---
-prev: [346 filter rows in pandas, next to WHERE](./346-filter-rows-in-pandas-next-to-where.md) | next: not written yet
+prev: [346 filter rows in pandas, next to WHERE](./346-filter-rows-in-pandas-next-to-where.md) | next: [348 groupby in pandas, next to GROUP BY](./348-groupby-in-pandas-next-to-group-by.md)

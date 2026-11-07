@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 347
+notes so far: 348
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -393,3 +393,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [345 a dataframe, a table in memory](./notes/345-a-dataframe-a-table-in-memory.md): every count in 344 was a loop; pd.DataFrame turns the same list of dictionaries into a table that sums a column by itself
 - [346 filter rows in pandas, next to WHERE](./notes/346-filter-rows-in-pandas-next-to-where.md): the filtered orders came back labelled 0 and 3; a mask of True and False picks the rows and survivors keep their labels
 - [347 select columns and sort in pandas, next to SELECT and ORDER BY](./notes/347-select-columns-and-sort-in-pandas-next-to-select-and-order-by.md): df["status"] and df[["status"]] print differently; one pair of brackets gives a column, two give a table, and sort_values moves rows with their labels
+- [348 groupby in pandas, next to GROUP BY](./notes/348-groupby-in-pandas-next-to-group-by.md): customer_id turned into the row labels after a groupby, and pandas silently drops a group whose key is missing, so Esha vanishes and 5 customers count as 4
