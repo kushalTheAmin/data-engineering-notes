@@ -63,3 +63,8 @@ out = subprocess.run(["bash", "-c", "SHOP_API_KEY=x python3 -I -c 'import os;pri
 assert out == ["x", "None"], out
 # source: https://www.gnu.org/software/bash/manual/html_node/Environment.html
 # confirmed (opened this run): variable assignments before a simple command "are part of that command's environment for as long as it executes. These assignment statements affect only the environment seen by that command"
+# audit: export sets a variable for programs started from that shell, not for a second shell
+out = subprocess.run(["bash", "-c", "export SHOP_API_KEY=k; python3 -I -c 'import os;print(os.environ.get(\"SHOP_API_KEY\"))'; env -i PATH=\"$PATH\" bash -c 'python3 -I -c \"import os;print(os.environ.get(\\\"SHOP_API_KEY\\\"))\"'"], capture_output=True, text=True, env={"PATH": os.environ["PATH"]}).stdout.split()
+assert out == ["k", "None"], out
+# source: https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html
+# confirmed (opened this run): export "Mark each name to be passed to subsequently executed commands in the environment"
