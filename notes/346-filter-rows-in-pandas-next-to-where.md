@@ -38,7 +38,7 @@ print(len(df))
 
 the labels 0 and 3 are the pandas index from 345, and a row keeps its label when it survives a filter. the original df is untouched, still 4 rows, you just got a new dataframe back.
 
-for [AND](./108-and-or-combining-two-tests.md) you write & and for OR you write |, with each test in its own parentheses. the pandas docs say why: & binds tighter than ==, so without parentheses python reads the test wrong.
+for [AND](./108-and-or-combining-two-tests.md) you write & and for OR you write |, with each test in its own parentheses. the pandas docs say why: python does the & before the ==, so without parentheses it reads the test wrong.
 
 i kept reading pythons plain and as the same thing as AND. but and wants one [True or False](./023-true-and-false-the-boolean.md), and a mask holds four, so pandas raises a ValueError instead of guessing.
 

@@ -27,3 +27,7 @@ except Exception:
     pass
 # source: https://pandas.pydata.org/docs/user_guide/indexing.html
 # opened this run: boolean indexing uses | for or, & for and, ~ for not, and these must be grouped with parentheses because python would evaluate df['A'] > 2 & df['B'] < 3 as df['A'] > (2 & df['B']) < 3
+# audit: python does & before ==, so a == 1 & b == 2 groups 1 & b first
+import ast
+_e = ast.parse("a == 1 & b == 2", mode="eval").body
+assert isinstance(_e.comparators[0], ast.BinOp) and isinstance(_e.comparators[0].op, ast.BitAnd)
