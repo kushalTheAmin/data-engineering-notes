@@ -68,3 +68,6 @@ out = subprocess.run(["bash", "-c", "export SHOP_API_KEY=k; python3 -I -c 'impor
 assert out == ["k", "None"], out
 # source: https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html
 # confirmed (opened this run): export "Mark each name to be passed to subsequently executed commands in the environment"
+# audit: the note says NAME=value before a command works in bash or zsh; only bash was sourced
+# source: https://manpages.debian.org/testing/zsh-common/zshmisc.1.en.html
+# confirmed (opened this run): in a zsh simple command "the parameter assignments modify the environment of the command when it is executed"
