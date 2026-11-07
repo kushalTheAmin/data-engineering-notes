@@ -44,3 +44,7 @@ assert con.execute("SELECT count(*), count(DISTINCT o.order_id) FROM orders o JO
 # audit: a missing value only appears when a row goes unmatched, which an outer merge also does, so the note says here only the left merge has one
 _o = pd.DataFrame({"customer_id": [1, 2, 3]}).merge(pd.DataFrame({"order_id": [1, 2], "customer_id": [1, 9]}), how="outer", on="customer_id")
 assert str(_o["order_id"].dtype) == "float64"
+# audit: the note says Esha was gone from the default merge and Asha got 3 rows, neither was asserted
+assert "Esha" not in set(inner["name"]) and "Esha" in set(left["name"])
+assert (inner["name"] == "Asha").sum() == 3 and (left["name"] == "Asha").sum() == 3
+assert con.execute("SELECT count(*) FROM orders WHERE customer_id = 1").fetchone()[0] == 3
