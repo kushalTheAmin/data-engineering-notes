@@ -32,7 +32,7 @@ print(con.execute("SELECT name, city FROM customers ORDER BY name").df())
 
 fetchone takes the next unread row, fetchall takes every row not yet read. so the first call took Asha, the second took the other two, and the third found nothing left. like the csv reader in [340](./340-reading-a-csv-in-python-row-by-row.md), the result only remembers how far you have read.
 
-each row is a tuple, a fixed list of values, so you reach city by position, [103](./103-your-first-query-against-the-shop.md) showed the same. Eshas missing city is None, python for [NULL](./031-null.md). asking for a [dataframe](./345-a-dataframe-a-table-in-memory.md) with .df() gives column names instead, and Eshas city turns into NaN, the same missing marker as in [349](./349-merging-dataframes-joins-again.md).
+each row is a tuple, a fixed list of values, so row[1] is the city, and [103](./103-your-first-query-against-the-shop.md) showed rows coming back as tuples. Eshas missing city is None, python for [NULL](./031-null.md). asking for a [dataframe](./345-a-dataframe-a-table-in-memory.md) with .df() gives column names instead, and Eshas city turns into NaN (not a number, how pandas marks a missing value, as in [349](./349-merging-dataframes-joins-again.md)).
 
 what got me is that an empty list looks exactly like a query that matched nothing. a helper that fetches once to log a count and again to build the report quietly reports zero.
 

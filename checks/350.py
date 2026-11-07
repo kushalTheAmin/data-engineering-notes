@@ -23,3 +23,11 @@ assert cur.fetchone() == (1,) and cur.fetchall() == [(2,), (3,)] and cur.fetchal
 # 3 customers in the slice, 227 words of prose is within budget
 # source: https://peps.python.org/pep-0249/
 # confirmed: fetchall fetches all (remaining) rows, fetch calls continue where the last stopped
+# audit: the note says row[1] is the city and a missing city shows as NaN in the dataframe
+_r = duckdb.connect()
+_r.execute("CREATE TABLE customers (name VARCHAR, city VARCHAR)")
+_r.execute("INSERT INTO customers VALUES ('Asha', 'Jersey City'), ('Esha', NULL)")
+_rows = _r.execute("SELECT name, city FROM customers ORDER BY name").fetchall()
+assert isinstance(_rows[0], tuple) and _rows[0][1] == "Jersey City" and _rows[1][1] is None
+import math
+assert math.isnan(df["city"].iloc[2])
