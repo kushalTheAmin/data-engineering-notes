@@ -41,3 +41,6 @@ assert con.execute("SELECT count(*), count(DISTINCT o.order_id) FROM orders o JO
 # confirmed: how default 'inner', left keeps keys from left frame like a SQL left outer join
 # source: https://pandas.pydata.org/docs/user_guide/missing_data.html
 # confirmed: an int64 series reindexed with a gap gets NaN and becomes float64
+# audit: a missing value only appears when a row goes unmatched, which an outer merge also does, so the note says here only the left merge has one
+_o = pd.DataFrame({"customer_id": [1, 2, 3]}).merge(pd.DataFrame({"order_id": [1, 2], "customer_id": [1, 9]}), how="outer", on="customer_id")
+assert str(_o["order_id"].dtype) == "float64"

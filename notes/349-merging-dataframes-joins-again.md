@@ -36,7 +36,7 @@ print(inner["order_id"].dtype, left["order_id"].dtype)
 int64 float64
 ```
 
-the left merge has 8 rows, the same 8 as 159, and Eshas order_id is NaN, not a number, a float pandas uses in a number column where SQL (the language for asking databases questions) has [NULL](./031-null.md), a missing value. i expected the ids to stay whole numbers, but NaN is a float (a number with a decimal point, [019](./019-floating-point.md)), so one missing value (and only a left merge with an unmatched row has one, the inner one stayed int64) turned the whole column into 104.0, 105.0. int64 is whole numbers, float64 has decimals.
+the left merge has 8 rows, the same 8 as 159, and Eshas order_id is NaN, not a number, a float pandas uses in a number column where SQL (the language for asking databases questions) has [NULL](./031-null.md), a missing value. i expected the ids to stay whole numbers, but NaN is a float (a number with a decimal point, [019](./019-floating-point.md)), so one missing value (here only the left merge has an unmatched row, the inner one stayed int64) turned the whole column into 104.0, 105.0. int64 is whole numbers, float64 has decimals.
 
 a merge [fans out](./164-fan-out-when-a-join-multiplies-rows.md) (copies a row per match) just like a join, Asha got 3 rows. compare len before and after every merge. it is how a report quietly counts 13 orders when there are 7, after merging in the items.
 
