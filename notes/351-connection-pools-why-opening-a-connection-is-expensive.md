@@ -6,7 +6,7 @@ a script of mine ran one tiny query per page load and it still felt slow. the qu
 
 a connection pool is a handful of [connections](./102-a-database-in-one-file.md) (open lines to the database) that get opened once and kept open. your code borrows one for a query and hands it back, instead of opening a fresh one each time. [350](./350-connecting-python-to-a-database-a-result-you-read-once.md) did connect, execute, fetch, and connect looked free.
 
-it isnt free. a new line needs several waits before your first query: reach the server, the [TLS handshake](./322-encryption-in-transit-tls-and-https.md) (agreeing a secret key) if the line is locked, then logging in. each wait is a [round trip](./323-latency-and-bandwidth-slow-vs-narrow.md). Postgres also starts a new server process per connection. here are toy numbers for the shop, the imaginary gujarati snack store these notes run on: opening takes 150 ms (3 waits), a query takes 50 ms (1 wait), a message out and back.
+it isnt free. a new line needs several waits before your first query: reach the server, the [TLS handshake](./322-encryption-in-transit-tls-and-https.md) (agreeing a secret key) if locked, then logging in. each wait is a [round trip](./323-latency-and-bandwidth-slow-vs-narrow.md). Postgres also starts a new server process per connection. here are toy numbers for the shop, the imaginary gujarati snack store these notes run on: opening takes 150 ms (3 waits), a query takes 50 ms (1 wait),.
 
 ```python
 OPEN, QUERY = 150, 50   # ms, toy numbers: opening is 3 waits, a query is 1
