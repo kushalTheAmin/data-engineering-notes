@@ -99,6 +99,7 @@ log of runs that failed the gate, newest last. format: YYYY-MM-DD: concept faile
 2026-11-05: repo baseline failed gate setup: python3 here is 3.11 with no duckdb, plain pip targets python 3.13 and python3 -m pip install duckdb timed out after 100s, so the gate could not run; no note written, needs a fix outside this run
 2026-11-06: repo baseline failed checks/127.py, 201.py, 202.py: duckdb 1.4.5 (python3 -m pip install "duckdb<1.5") returns DATE not TIMESTAMP from date_trunc on a DATE so 3 type asserts fail; no note written, needs a fix outside this run
 
+2026-11-07: repo baseline failed checks/030.py, 041.py, 268.py, 316 to 320: python3 on PATH is 3.11 and python3 -m pip gives duckdb 2.0.0 (plus pandas), which removed fetchone on relations and breaks 13 checks in all; no note written (select and sort in pandas next), needs a fix outside this run
 ## arc 1: data at the atom level
 after this arc: you know what a computer actually stores when it "saves" an order
 
