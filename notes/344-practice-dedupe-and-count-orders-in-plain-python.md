@@ -44,7 +44,7 @@ unhashable type: 'dict'
 5 4
 ```
 
-a dictionary cant be a key, because its contents can change ([python docs](https://docs.python.org/3/glossary.html) say mutable containers like dictionaries are not hashable). so the row becomes a tuple first. a retry after a timeout is how real duplicates show up, since the first call may have worked and only the reply got lost.
+a dictionary cant be a key, because its contents can change ([python docs](https://docs.python.org/3/glossary.html) say mutable containers like dictionaries are not hashable). so the row becomes a tuple first. a retry after a timeout is one way real duplicates show up, since the first call may have worked and only the reply got lost.
 
 ### check yourself
 

@@ -50,3 +50,6 @@ except TypeError as e:
 # source: https://docs.python.org/3/glossary.html
 # confirmed (opened this run): "mutable containers (such as lists or dictionaries) are not [hashable]"; hashability makes an object usable as a dictionary key; tuples are hashable if their elements are
 assert hash(("1", "Jersey City")) is not None
+# audit: a retry is one cause of duplicates, not the only one (the note now says one way)
+# source: https://docs.stripe.com/api/idempotent_requests
+# confirmed (opened this run): idempotency keys exist "for safely retrying requests without accidentally performing the same operation twice ... if a connection error occurs, you can safely repeat the request without risk of creating a second object", so a retried request can create a second object
