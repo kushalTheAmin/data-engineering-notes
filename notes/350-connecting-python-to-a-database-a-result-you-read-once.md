@@ -39,4 +39,4 @@ what got me is that an empty list looks exactly like a query that matched nothin
 python has a standard way for code to talk to databases, written up as PEP 249, and it says fetchall returns the remaining rows. sqlite3, built into python, behaves the same.
 
 ---
-prev: [349 merging dataframes, joins again](./349-merging-dataframes-joins-again.md) | next: not written yet
+prev: [349 merging dataframes, joins again](./349-merging-dataframes-joins-again.md) | next: [351 connection pools, why opening a connection is expensive](./351-connection-pools-why-opening-a-connection-is-expensive.md)

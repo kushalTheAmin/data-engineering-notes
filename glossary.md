@@ -85,6 +85,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | conditional aggregation | a CASE inside an aggregate, so each row counts toward chosen totals | [148](./notes/148-conditional-aggregation-counting-several-things-in-one-pass.md) |
 | conflict markers | the <<<<<<<, ======= and >>>>>>> lines git writes into a conflicted file | [332](./notes/332-merge-conflicts-when-git-cant-combine-two-edits.md) |
 | connection | an open line from your program to a database | [102](./notes/102-a-database-in-one-file.md) |
+| connection pool | a few connections kept open and lent out, not opened per query | [351](./notes/351-connection-pools-why-opening-a-connection-is-expensive.md) |
 | consistency (ACID) | the ACID promise: declared rules still hold after every change | [229](./notes/229-acid-four-promises-a-database-makes.md) |
 | container | a program running in a walled-off box with all it needs | [208](./notes/208-containers-a-program-packed-with-everything-it-needs.md) |
 | Content-Type | header naming the format of the body, like application/json | [313](./notes/313-json-over-http-the-answer-is-text-until-you-parse-it.md) |
