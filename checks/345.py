@@ -10,3 +10,14 @@ assert sum(r[0] for r in got) == 418  # the sum in the note
 assert (len(got), len(got[0])) == (4, 3)  # shape: 4 rows, 3 columns
 # source: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html
 # opened this run: DataFrame is "Two-dimensional, size-mutable, potentially heterogeneous tabular data", so columns can differ in type
+# the dataframe claims, run for real
+import pandas as pd
+df = pd.DataFrame([dict(order_id=a, customer_id=b, status=c) for a, b, c in got])
+assert df.shape == (4, 3) and int(df["order_id"].sum()) == 418 and list(df.index) == [0, 1, 2, 3]
+assert str(df["order_id"].dtype) == "int64"  # a whole number column stays whole numbers
+# "usually one type": a column can hold mixed values (dtype object), so one type per column is not a rule
+assert pd.DataFrame({"a": [1, "x", 2.5]})["a"].tolist() == [1, "x", 2.5]
+# source: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.shape.html
+# opened this run: shape "Return a tuple representing the dimensionality of the DataFrame", rows and columns counts
+# source: https://pandas.pydata.org/docs/getting_started/install.html
+# opened this run: pandas can be installed from PyPI with pip install pandas
