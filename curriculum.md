@@ -499,7 +499,8 @@ after this arc: you can write, run and test real python scripts that move data b
 - [x] calling an API from python ★ (note 343)
 - [x] practice: dedupe and count orders in plain python ★ (note 344)
 - [x] a dataframe: a table in memory (note 345)
-- [ ] filter, select and sort in pandas, next to the SQL
+- [ ] filter rows in pandas, next to WHERE
+- [ ] select columns and sort in pandas, next to SELECT and ORDER BY
 - [ ] groupby in pandas ★
 - [ ] merging dataframes: joins again ★
 - [ ] connecting python to a database
