@@ -95,4 +95,4 @@ the 2 unrated orders have a missing key, so they get dropped: 3 groups and 3 cou
 </details>
 
 ---
-prev: [347 select columns and sort in pandas, next to SELECT and ORDER BY](./347-select-columns-and-sort-in-pandas-next-to-select-and-order-by.md) | next: not written yet
+prev: [347 select columns and sort in pandas, next to SELECT and ORDER BY](./347-select-columns-and-sort-in-pandas-next-to-select-and-order-by.md) | next: [349 merging dataframes, joins again](./349-merging-dataframes-joins-again.md)

@@ -291,6 +291,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | megabyte | 1000 kilobytes, a million bytes, written MB | [033](./notes/033-kilobytes-to-terabytes.md) |
 | memory | the computers working space (RAM), emptied when the power goes off | [036](./notes/036-memory-vs-disk.md) |
 | merge | combining two sorted lists into one by taking the smaller front | [274](./notes/274-merging-two-sorted-lists-into-one.md) |
+| merge (pandas) | a pandas join on a column, inner unless how=left | [349](./notes/349-merging-dataframes-joins-again.md) |
 | merge commit | a commit with two parents, joining two lines of work | [332](./notes/332-merge-conflicts-when-git-cant-combine-two-edits.md) |
 | merge conflict (git) | both branches changed the same lines, so git asks you to choose | [332](./notes/332-merge-conflicts-when-git-cant-combine-two-edits.md) |
 | merge join | Postgres join: sort both sides, walk them side by side once | [300](./notes/300-merge-join-walk-two-sorted-lists-side-by-side.md) |
@@ -305,6 +306,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | MVCC | Postgres never overwrites a row, an UPDATE writes a new version | [249](./notes/249-mvcc-an-update-writes-a-new-row-version.md) |
 | naming convention | habits for naming tables and columns so others can guess them | [264](./notes/264-naming-conventions-names-people-can-guess.md) |
 | nan | not a number, what 0 / 0 gives in DuckDB | [130](./notes/130-nullif-and-dividing-by-zero.md) |
+| nan (pandas) | a float marking a missing value, turning int columns to floats | [349](./notes/349-merging-dataframes-joins-again.md) |
 | nanosecond | a billionth of a second | [037](./notes/037-disk-is-slow.md) |
 | natural key | a real world value that already tells rows apart, like an email | [088](./notes/088-natural-keys-vs-made-up-ids.md) |
 | negative zero | a second zero pattern, with the sign bit set | [013](./notes/013-negative-numbers-sign-bit.md) |
