@@ -502,6 +502,7 @@ every term these notes have built, in plain words, with the note that built it. 
 | TRUNCATE | removes every row at once and keeps the empty table | [226](./notes/226-drop-and-truncate-emptying-a-table-vs-removing-it.md) |
 | try/except | python code that catches one named kind of exception and carries on | [334](./notes/334-errors-in-scripts-catching-them-without-hiding-them.md) |
 | TRY_CAST | CAST that gives null instead of an error when conversion fails | [133](./notes/133-casts-that-fail-and-try-cast.md) |
+| tuple (python) | a fixed list of values, safe to use as a dictionary key | [344](./notes/344-practice-dedupe-and-count-orders-in-plain-python.md) |
 | twos complement | binary where the leftmost place is negative, so one zero | [014](./notes/014-twos-complement.md) |
 | type by use | choose a type by what you do with the value | [263](./notes/263-choosing-column-types-by-what-you-do-with-the-value.md) |
 | UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING | frame option meaning every row of the window, no limit either way | [191](./notes/191-the-default-frame-trap.md) |

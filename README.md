@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 343
+notes so far: 344
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -389,3 +389,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [341 reading JSON in python, the whole file at once](./notes/341-reading-json-in-python-the-whole-file-at-once.md): a csv reader goes empty after one loop, does JSON; json.load hands back the finished list in one go
 - [342 environment variables, settings that live outside the code](./notes/342-environment-variables-settings-that-live-outside-the-code.md): where does report.py read the api key from if not the code; the operating system hands every process a list of texts
 - [343 calling an API from python, status first, then parse](./notes/343-calling-an-api-from-python-status-first-then-parse.md): i expected a 404 to come back as an answer i could check; urlopen raises instead, and only the 200 body is JSON
+- [344 practice, dedupe and count orders in plain python](./notes/344-practice-dedupe-and-count-orders-in-plain-python.md): a retry sends 2 orders twice and the count says 9 not 7; same 5 feed rows leave 4 or 3 depending on which dedupe rule you pick

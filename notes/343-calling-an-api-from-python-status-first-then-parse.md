@@ -80,4 +80,4 @@ it prints 2. the JSON number came back as a python int, so the math works. the t
 </details>
 
 ---
-prev: [342 environment variables, settings that live outside the code](./342-environment-variables-settings-that-live-outside-the-code.md) | next: not written yet
+prev: [342 environment variables, settings that live outside the code](./342-environment-variables-settings-that-live-outside-the-code.md) | next: [344 practice, dedupe and count orders in plain python](./344-practice-dedupe-and-count-orders-in-plain-python.md)
