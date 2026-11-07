@@ -60,7 +60,7 @@ timeout=5 gives up when the server stays silent for 5 seconds. without it urlope
 1. you delete the try and except from get, then call get("/orders/101", "k_report_7f3"), the key one character short. what does the call do?
 <details><summary>answer</summary>
 
-it raises HTTPError (HTTP Error 401) and the script stops there, so no tuple comes back and json.loads never runs. the tempting answer is (401, 'unknown caller'), but that tuple only exists because the except builds it.
+it raises HTTPError (HTTP Error 401) and the script stops there, so no pair comes back and json.loads never runs. the tempting answer is (401, 'unknown caller'), but that pair only exists because the except builds it.
 
 </details>
 
