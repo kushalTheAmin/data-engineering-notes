@@ -74,4 +74,4 @@ order 105 fans out to 3 rows, so the inner merge has 1 + 3 = 4. the left merge a
 </details>
 
 ---
-prev: [348 groupby in pandas, next to GROUP BY](./348-groupby-in-pandas-next-to-group-by.md) | next: not written yet
+prev: [348 groupby in pandas, next to GROUP BY](./348-groupby-in-pandas-next-to-group-by.md) | next: [350 connecting python to a database, a result you read once](./350-connecting-python-to-a-database-a-result-you-read-once.md)

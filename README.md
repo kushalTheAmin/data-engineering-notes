@@ -4,7 +4,7 @@ learning data engineering from the very bottom, one concept at a time, in public
 
 start here: [001 data is facts written down](./notes/001-data-is-facts-and-numbers.md)
 
-notes so far: 349
+notes so far: 350
 
 the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary.md) | the shop data: [data/shop.sql](./data/shop.sql) | every fix: [CORRECTIONS.md](./CORRECTIONS.md)
 
@@ -395,3 +395,4 @@ the map: [curriculum.md](./curriculum.md) | every term: [glossary.md](./glossary
 - [347 select columns and sort in pandas, next to SELECT and ORDER BY](./notes/347-select-columns-and-sort-in-pandas-next-to-select-and-order-by.md): df["status"] and df[["status"]] print differently; one pair of brackets gives a column, two give a table, and sort_values moves rows with their labels
 - [348 groupby in pandas, next to GROUP BY](./notes/348-groupby-in-pandas-next-to-group-by.md): customer_id turned into the row labels after a groupby, and pandas silently drops a group whose key is missing, so Esha vanishes and 5 customers count as 4
 - [349 merging dataframes, joins again](./notes/349-merging-dataframes-joins-again.md): cust.merge drops Esha like an inner join, how="left" keeps her, and the one NaN turns every order id into a decimal
+- [350 connecting python to a database, a result you read once](./notes/350-connecting-python-to-a-database-a-result-you-read-once.md): the second fetchall on the same query came back as an empty list, no error, because a result only remembers how far you have read

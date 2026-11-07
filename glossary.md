@@ -166,6 +166,8 @@ every term these notes have built, in plain words, with the note that built it. 
 | explode | turning a record holding a list into one row per list item | [071](./notes/071-exploding-lists-into-many-rows.md) |
 | expression index | an index built on a functions result, like lower(name) | [295](./notes/295-functions-on-a-column-why-the-index-gets-skipped.md) |
 | fan out | a join keeping a left row once per matching right row | [164](./notes/164-fan-out-when-a-join-multiplies-rows.md) |
+| fetchall | gets every row of a query result not yet read | [350](./notes/350-connecting-python-to-a-database-a-result-you-read-once.md) |
+| fetchone | gets the next unread row of a result, one at a time | [350](./notes/350-connecting-python-to-a-database-a-result-you-read-once.md) |
 | field | one fact every row has a spot for, like city | [079](./notes/079-a-table-rows-are-records-columns-are-fields.md) |
 | file | a name plus a list of bytes in order, kept on disk | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
 | file extension | the letters after the dot in a name, just a label | [039](./notes/039-a-file-is-a-named-list-of-bytes.md) |
